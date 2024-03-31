@@ -113,8 +113,17 @@ body {
 }
 
 a {
-    color: var(--ant-color-link);
+    --color-link: var(--ant-color-link);
+    color: var(--color-link);
     text-decoration: none;
+}
+
+a:hover {
+    --color-link: var(--ant-color-primary-text-hover);
+}
+
+a:visited {
+    --color-link: var(--ant-color-link);
 }
 
 p {
