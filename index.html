@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh" xmlns="http://www.w3.org/1999/html">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          content="width=device-width, initial-scale=0.92, minimum-scale=0.92">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>所见皆是Minecraft - MCiSEE</title>
     <meta property="og:type" content="website">
@@ -23,32 +23,62 @@
     <meta name="twitter:image:alt" content="所见皆是Minecraft">
     <link rel="shortcut icon" href="assets/icon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/main.css">
+    <script src="scripts/jquery-3.7.1.min.js"></script>
+    <script src="scripts/current-device.min.js"></script>
+    <script src="scripts/DOMConstructor.js"></script>
+    <script src="data/launcher.js"></script>
 </head>
 
 <body>
 <main>
     <div class="page-content">
         <div class="introduction">
-            <h1 class="page-title">所见皆是<i>Minecraft</i></h1>
-            <p>玩家们可以从这里挖掘Minecraft常用资源，例如软件。</p>
+            <h1 class="page-title first-title">所见皆是<i>Minecraft</i></h1>
+            <p>玩家们可以从这里挖掘Minecraft常用资源，例如软件等。</p>
             <p>欢迎各位来 <a href="https://github.com/teaSummer/MCiSEE" target="_blank">GitHub 项目</a> 做出贡献 或
                 点击Star！</p>
             <p>我们需要玩家们一同共享更多有趣的资源！</p>
         </div>
-        <div class="resource">
-            <h3 class="page-title">软件</h3>
-            <label class="resource-label" for="launcher">启动器</label>
-            <select name="launcher" id="launcher">
-                <option value="no">不需要</option>
-                <option value="Minecraft">官方启动器</option>
-                <option value="HMCL">HMCL</option>
-                <option value="PCL">PCL</option>
-                <option value="both">HMCL+PCL</option>
-                <option value="BakaXL">BakaXL</option>
-                <option value="ColorMC">ColorMC</option>
-                <option value="all">全部</option>
+        <hr>
+        <div class="device">
+            <h3 class="page-title">设备</h3>
+            <label for="device" class="tip">自动判断，可手动选择</label>
+            <select name="device" id="device">
+                <option>Android</option>
+                <option>iOS</option>
+                <option>Windows 7/8/8.1</option>
+                <option>Windows 10/11</option>
+                <option>macOS</option>
+                <option disabled hidden>不支持</option>
+                <option selected disabled hidden>未知</option>
             </select>
-            <h3>....</h3>
+        </div>
+        <div class="resource" id="resource-container">
+            <div class="config">
+                <h3 class="page-title">配置</h3>
+                <label><input type="checkbox" checked> GitHub 文件使用
+                    <a title="Github Proxy" href="https://mirror.ghproxy.com" target="_blank">代理加速</a>
+                    下载
+                </label>
+            </div>
+            <div class="app">
+                <h3 class="page-title">软件</h3>
+                <div class="label">启动器（<b>Java版</b>）</div>
+                <div id="launcher-container" class="device-diff"></div>
+                <div class="goto">
+                    <a class="button data-url-launcher" href="" target="_blank"
+                       style="display: none;">跳转启动器网站</a>
+                </div>
+                <div class="download">
+                    <a class="button data-download-launcher" href="" rel="noopener noreferrer" style="display: none;">↓
+                        下载稳定版</a>
+                    <a class="button data-dev-download-launcher" href="" rel="noopener noreferrer"
+                       style="display: none;">↓ 下载开发版</a>
+                </div>
+            </div>
+            <div class="ellipse">
+                <h3>....</h3>
+            </div>
         </div>
     </div>
 </main>
@@ -66,6 +96,8 @@
         </div>
     </div>
 </footer>
+<script src="scripts/main.js"></script>
+<script>deviceChanged();</script>
 </body>
 
 </html>

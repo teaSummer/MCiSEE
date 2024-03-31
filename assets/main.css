@@ -102,36 +102,48 @@
     --ant-box-shadow-card: 0 1px 2px -2px rgba(0, 0, 0, 0.16), 0 3px 6px 0 rgba(0, 0, 0, 0.12), 0 5px 12px 4px rgba(0, 0, 0, 0.09);
 }
 
-html, body {
-    height: 100%;
-    min-height: 100%;
-}
-
 body {
     font-family: var(--ant-font-family);
     position: relative;
 }
 
 a {
-    --color-link: var(--ant-color-link);
-    color: var(--color-link);
+    color: var(--ant-color-link);
     text-decoration: none;
 }
 
 a:hover {
-    --color-link: var(--ant-color-primary-text-hover);
-}
-
-a:visited {
-    --color-link: var(--ant-color-link);
+    color: var(--ant-color-link-hover);
+    text-decoration: underline;
 }
 
 a:active {
-    --color-link: var(--ant-color-primary-text-active);
+    color: var(--ant-color-link-active);
+}
+
+a.button {
+    margin-top: 14px;
+    padding: 8px 16px;
+    font-size: 1rem;
+    background-color: #2d46b9;
+    border: none;
+    display: inline-block;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+}
+
+a.button:hover {
+    background-color: #233690;
+}
+
+a.button:active {
+    background-color: #324ecd;
 }
 
 p {
     margin: 0.75rem 0;
+    margin-bottom: 1rem;
 }
 
 h1 {
@@ -140,6 +152,18 @@ h1 {
 
 h3 {
     font-size: 1.6rem;
+}
+
+hr {
+    margin: 24px 0;
+    border: none;
+    height: 1px;
+    background-color: #30363d;
+}
+
+label, div.label {
+    display: block;
+    margin: 0.25rem 0;
 }
 
 select {
@@ -155,20 +179,32 @@ select {
 }
 
 footer {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     text-align: center;
     font-size: 14px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+}
+
+footer p {
+    margin-bottom: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
 }
 
+.resource>div+div,
+.device+.resource {
+    margin-top: 1rem;
+}
+
 .page-title {
     margin: 0.5rem 0;
+    margin-top: 1rem;
+}
+
+.first-title {
+    margin: 1rem;
+    margin-left: 0.25rem;
 }
 
 .page-content {
@@ -187,7 +223,35 @@ h1, h2, h3, h4, h5, h6 {
     border: #3e97eb;
 }
 
-.resource-label {
-    display: block;
-    margin: 0.25rem 0;
+.tip {
+    color: rgba(0, 0, 0, 0.45);
+}
+
+
+@media (prefers-color-scheme: dark) {
+    body, select, option, input {
+        color: #c9d1d9;
+        background-color: #0d1117;
+    }
+    a {
+        color: #2b7de8;
+    }
+    a:hover {
+        color: #58a6ff;
+    }
+    a:active {
+        color: #58a6ff;
+    }
+    a.button {
+        background-color: #1f6feb;
+    }
+    a.button:hover {
+        background-color: #1258c5;
+    }
+    a.button:active {
+        background-color: #367eed;
+    }
+    .tip {
+        color: rgba(255, 255, 255, 0.55);
+    }
 }
