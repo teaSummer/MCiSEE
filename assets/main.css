@@ -115,6 +115,25 @@ p {
     margin: 0.75rem 0;
 }
 
+h1 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+select {
+    min-width: 200px;
+    padding: 5px 12px;
+    font-size: 14px;
+    line-height: 20px;
+    vertical-align: middle;
+    background-color: #fff;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+}
+
 footer {
     margin-top: 1rem;
     text-align: center;
@@ -124,15 +143,27 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
 }
 
-.introduction {
-    padding: 1rem;
-}
-
 .page-title {
-    font-size: 1.75rem;
+    margin: 0.5rem 0;
 }
 
 .page-content {
     max-width: min(1000px, 100vw);
     margin: 0 auto;
+    padding: 1rem;
+}
+
+.checkbox {
+    width: 1rem;
+    height: 1rem;
+}
+
+.checkbox:checked+label::before {
+    background: #3e97eb;
+    border: #3e97eb;
+}
+
+.resource-label {
+    display: block;
+    margin: 0.25rem 0;
 }
