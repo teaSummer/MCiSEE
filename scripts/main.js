@@ -4,11 +4,11 @@ const supportedDevices = [
     [       'iOS',  'iOS'             ],
     [  'Windows7',  'Windows 7/8/8.1' ],
     [ 'Windows10',  'Windows 10/11'   ],
-    [     'macOS',  'macOS'           ]
+    [     'macOS',  'macOS'           ],
 ];
 DOMDeviceList.show();
 
-$('#launcher-container').html(DOMLauncherList.deviceList())
+$('#launcher-container').html(DOMLauncherList.deviceList());
 
 const deviceChanged = () => {
     for (const diffSelect of document.querySelectorAll('.device-diff select')) {
@@ -27,7 +27,7 @@ const launcherChanged = () => {
     for (const attribute of ['data-download', 'data-dev-download', 'data-url']) {
         let URL = event.target.options[event.target.selectedIndex].getAttribute(attribute);
         if (attribute.endsWith('download') && $('#proxy').get(0).checked && String(URL).startsWith('https://github.com/')) {
-            URL = "https://mirror.ghproxy.com/" + URL;
+            URL = 'https://mirror.ghproxy.com/' + URL;
         }
         const launcher = $(`.${attribute}-launcher`);
         launcher.hide();
@@ -38,3 +38,16 @@ const launcherChanged = () => {
     }
 }
 $('.launcher').change(launcherChanged);
+
+$('#proxy').change(() => {
+    if ($('#proxy').get(0).checked) {
+        $('.download>a.button').each((index, element) => {
+            const link = $(element).attr('href');
+            if (link.startsWith('https://github.com/')) $(element).attr('href', 'https://mirror.ghproxy.com/' + link);
+        })
+    } else {
+        $('.download>a.button').each((index, element) => {
+            $(element).attr('href', $(element).attr('href').replace(/^https:\/\/mirror\.ghproxy\.com\//, ''));
+        })
+    }
+});

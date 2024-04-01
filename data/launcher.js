@@ -1,3 +1,4 @@
+// 适用于安卓手机的启动器
 const AndroidLauncher = [
     {
         title: "FCL",
@@ -25,6 +26,7 @@ const AndroidLauncher = [
     }
 ];
 
+// 适用于苹果手机的启动器
 const iOSLauncher = [
     {
         title: "PojavLauncher",
@@ -34,6 +36,7 @@ const iOSLauncher = [
     }
 ];
 
+// 适用于 Windows 7/8/8.1 的启动器
 const Windows7Launcher = [
     {
         title: "Minecraft 启动器 (旧版)",
@@ -42,6 +45,7 @@ const Windows7Launcher = [
     }
 ];
 
+// 适用于 Windows 10/11 的启动器
 const Windows10Launcher = [
     {
         title: "Minecraft 启动器",
@@ -85,6 +89,7 @@ const Windows10Launcher = [
     }
 ];
 
+// 适用于苹果电脑的启动器
 const macOSLauncher = [
     {
         title: "Minecraft 启动器",
