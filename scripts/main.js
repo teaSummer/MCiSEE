@@ -25,7 +25,10 @@ $('#device').change(deviceChanged);
 
 const launcherChanged = () => {
     for (const attribute of ['data-download', 'data-dev-download', 'data-url']) {
-        const URL = event.target.options[event.target.selectedIndex].getAttribute(attribute);
+        let URL = event.target.options[event.target.selectedIndex].getAttribute(attribute);
+        if (attribute.endsWith('download') && $('#proxy').get(0).checked && String(URL).startsWith('https://github.com/')) {
+            URL = "https://mirror.ghproxy.com/" + URL;
+        }
         const launcher = $(`.${attribute}-launcher`);
         launcher.hide();
         if (URL) {
