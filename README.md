@@ -65,7 +65,7 @@
     version: "3.5.7",
     url: "https://github.com/HMCL-dev/HMCL",
     dev: {
-        download: ""https://github.com/HMCL-dev/HMCL/releases/download/v3.5.7.245/HMCL-3.5.7.245.exe",
+        download: "https://github.com/HMCL-dev/HMCL/releases/download/v3.5.7.245/HMCL-3.5.7.245.exe",
         version: "3.5.7.245"
     }
 }
