@@ -105,7 +105,6 @@
 
 body {
     font-family: var(--ant-font-family);
-    position: relative;
 }
 
 a {
@@ -123,14 +122,14 @@ a:active {
 }
 
 a.button {
+    color: #fff;
+    background-color: #2d46b9;
+    display: inline-block;
+    font-size: 1rem;
     margin-top: 14px;
     padding: 8px 16px;
-    font-size: 1rem;
-    background-color: #2d46b9;
     border: none;
-    display: inline-block;
     border-radius: 5px;
-    color: #fff;
     text-decoration: none;
 }
 
@@ -143,7 +142,7 @@ a.button:active {
 }
 
 p {
-    margin: 0.75rem 0;
+    margin-top: 0.75rem;
     margin-bottom: 1rem;
 }
 
@@ -160,11 +159,11 @@ h3 {
 }
 
 hr {
-    margin: 12px 0;
+    background-color: #30363d;
+    height: 1px;
+    margin-top: 12px;
     margin-bottom: 18px;
     border: none;
-    height: 1px;
-    background-color: #30363d;
 }
 
 div+hr {
@@ -178,21 +177,21 @@ label, div.label {
 }
 
 select {
-    min-width: 200px;
-    padding: 5px 12px;
-    font-size: 14px;
-    line-height: 20px;
-    vertical-align: middle;
     background-color: #fff;
+    font-size: 14px;
+    min-width: 200px;
+    line-height: 20px;
+    padding: 5px 12px;
     border: 1px solid #30363d;
     border-radius: 6px;
+    vertical-align: middle;
     outline: none;
 }
 
 footer {
+    font-size: 14px;
     margin-top: 1.5rem;
     text-align: center;
-    font-size: 14px;
 }
 
 footer p {
@@ -203,18 +202,15 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
 }
 
-.tip {
-    color: rgba(0, 0, 0, 0.45);
-}
-
-.resource>div+div,
-.device+.resource {
-    margin-top: 1rem;
+.page-content {
+    max-width: min(1000px, 100vw);
+    margin: 0 auto;
+    padding: 1rem;
 }
 
 .page-title {
-    margin: 0.5rem 0;
     margin-top: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .first-title {
@@ -222,10 +218,8 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: 0.25rem;
 }
 
-.page-content {
-    max-width: min(1000px, 100vw);
-    margin: 0 auto;
-    padding: 1rem;
+.tip {
+    color: rgba(0, 0, 0, 0.45);
 }
 
 .checkbox {
@@ -233,13 +227,18 @@ h1, h2, h3, h4, h5, h6 {
     height: 1rem;
 }
 
-.checkbox:checked+label::before {
-    background: #3e97eb;
-    border: #3e97eb;
-}
-
 .page-views-count-title {
     margin-bottom: 16px;
+}
+
+.checkbox:checked+label::before {
+    background-color: #3e97eb;
+    border-color: #3e97eb;
+}
+
+.resource>div+div,
+.device+.resource {
+    margin-top: 1rem;
 }
 
 
