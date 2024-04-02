@@ -41,42 +41,36 @@
         </div>
         <hr>
         <div class="device">
-            <h3 class="page-title">设备</h3>
+            <h2 class="page-title">设备</h2>
             <label for="device" class="tip">自动判断，可手动选择</label>
-            <select name="device" id="device">
-                <option>Android</option>
-                <option>iOS</option>
-                <option>Windows 7/8/8.1</option>
-                <option>Windows 10/11</option>
-                <option>macOS</option>
-                <option disabled hidden>不支持</option>
-                <option selected disabled hidden>未知</option>
-            </select>
+            <select name="device" id="device"></select>
         </div>
         <div class="resource" id="resource-container">
             <div class="config">
-                <h3 class="page-title">配置</h3>
-                <label><input id="proxy" type="checkbox" checked> GitHub 文件使用
-                    <a title="Github Proxy" href="https://mirror.ghproxy.com" target="_blank">代理加速</a>
-                    下载
+                <h2 class="page-title">配置</h2>
+                <label>
+                    <input id="proxy" type="checkbox" checked> GitHub 文件使用
+                    <a title="Github Proxy" href="https://mirror.ghproxy.com" target="_blank">代理加速</a> 下载
                 </label>
             </div>
             <div class="app">
-                <h3 class="page-title">软件</h3>
+                <h2 class="page-title">软件</h2>
                 <div class="label">启动器（<b>Java版</b>）</div>
                 <div id="launcher-container" class="device-diff"></div>
                 <div class="goto">
-                    <a class="button data-url-launcher" href="" target="_blank"
+                    <a class="button data-url-launcher" href="" title="跳转 Github 仓库地址，或跳转官网地址"
+                       target="_blank"
                        style="display: none;">跳转启动器网站</a>
                 </div>
-                <div class="download">
-                    <a class="button data-download-launcher" href="" style="display: none;">↓
-                        下载最新稳定版</a>
-                    <a class="button data-dev-download-launcher" href="" style="display: none;">↓ 下载最新开发版</a>
+                <div class="launcher-download">
+                    <a class="button data-download-launcher" href="" title="下载尽可能新的稳定正式版"
+                       style="display: none;">↓ 下载最新稳定版</a>
+                    <a class="button data-dev-download-launcher" href="" title="下载尽可能新的开发测试版"
+                       style="display: none;">↓ 下载最新开发版</a>
                 </div>
             </div>
             <div class="ellipse">
-                <h3>....</h3>
+                <h2>....</h2>
             </div>
         </div>
     </div>
@@ -84,6 +78,16 @@
 <footer>
     <div class="page-content">
         <div class="footer-content">
+            <h2>统计信息</h2>
+            <hr>
+            <div class="info">
+                <div class="page-views-count">
+                    <h3 class="page-views-count-title">访问计数</h3>
+                    <img src="https://badges.toozhao.com/badges/01HTFPN35M6ETEFBVAP3SEWRKG/green.svg"
+                         alt="访问计数">
+                </div>
+            </div>
+            <hr>
             <p>
                 <a href="https://github.com/teaSummer/MCiSEE" target="_blank">GitHub</a> |
                 <a href="https://github.com/teaSummer/MCiSEE/blob/main/README.md" target="_blank">为此项目做出贡献</a>

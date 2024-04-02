@@ -41,12 +41,12 @@ $('.launcher').change(launcherChanged);
 
 $('#proxy').change(() => {
     if ($('#proxy').get(0).checked) {
-        $('.download>a.button').each((index, element) => {
+        $('.launcher-download>a.button').each((index, element) => {
             const link = $(element).attr('href');
             if (link.startsWith('https://github.com/')) $(element).attr('href', 'https://mirror.ghproxy.com/' + link);
         })
     } else {
-        $('.download>a.button').each((index, element) => {
+        $('.launcher-download>a.button').each((index, element) => {
             $(element).attr('href', $(element).attr('href').replace(/^https:\/\/mirror\.ghproxy\.com\//, ''));
         })
     }

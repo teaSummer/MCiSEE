@@ -151,20 +151,30 @@ h1 {
     font-size: 2rem;
 }
 
-h3 {
+h2 {
     font-size: 1.6rem;
 }
 
+h3 {
+    font-size: 1.2rem;
+}
+
 hr {
-    margin: 24px 0;
+    margin: 12px 0;
+    margin-bottom: 18px;
     border: none;
     height: 1px;
     background-color: #30363d;
 }
 
+div+hr {
+    margin: 24px 0;
+}
+
 label, div.label {
     display: block;
     margin: 0.25rem 0;
+    user-select: none;
 }
 
 select {
@@ -191,6 +201,10 @@ footer p {
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
+}
+
+.tip {
+    color: rgba(0, 0, 0, 0.45);
 }
 
 .resource>div+div,
@@ -224,8 +238,8 @@ h1, h2, h3, h4, h5, h6 {
     border: #3e97eb;
 }
 
-.tip {
-    color: rgba(0, 0, 0, 0.45);
+.page-views-count-title {
+    margin-bottom: 16px;
 }
 
 
