@@ -1,4 +1,5 @@
 # MCiSEE
+![](https://img.shields.io/badge/license-CC--BY--SA--4.0-green)[![Page Views Count](https://badges.toozhao.com/badges/01HTFPN35M6ETEFBVAP3SEWRKG/green.svg)](https://badges.toozhao.com/stats/01HTFPN35M6ETEFBVAP3SEWRKG)
 
 **所见皆是*Minecraft*，让获取MC资源更加轻便！**
 
@@ -24,7 +25,7 @@
 
 ### 如何更改数据？
 
-在仓库中找到 [data](data) 文件夹，可以里面找到所有数据的脚本文件，数据使用数组呈现。
+在仓库中找到 [data](data) 文件夹，可以里面找到所有数据的脚本文件，数据通过数组呈现。
 
 **添加新的数据时，不要漏写数据之间的分隔符号！**
 
@@ -34,9 +35,9 @@
 |-------------|-------|------------------------|
 | launcher.js | 启动器列表 | [跳转](data/launcher.js) |
 
-打开文件后，你将看到一些常量，例如 `AndroidLauncher` 等。
+打开文件后，你将看到一些常量，例如 AndroidLauncher 等。
 
-不用害怕，常量的前一行是注解，这将会告诉你它的用途。
+不用害怕，常量的前一行是注释，它将会告诉你常量的用途。
 
 常量的值是一个数组，每一项都是对象。对象有以下属性：
 
@@ -46,13 +47,26 @@
 | `download` | String | 填写稳定版（正式版）下载地址 URL，优先填写下载源。                      |
 | `version`  | String | 可选。填写稳定版版本号，可填 `latest`，仅在 `download` 保持版本最新时使用。 |
 | `url`      | String | 可选。GitHub 仓库地址 URL，如果没有公开的开源仓库，填写官网地址 URL。       |
-| `dev`      | Object | 可选。填写关于开发版的信息，具体见下文。                             |
+| `dev`      | Object | 可选。填写关于开发版的信息，尽量不要提供只在 `Action` 中出现的版本，具体见下文。    |
 
-`dev` 是一个对象，它包含以下属性：
+`dev` 是一个对象，它有以下属性：
 
 | 属性键名称      | 属性值类型  | 属性值描述                                            |
 |------------|--------|--------------------------------------------------|
 | `download` | String | 填写开发版（测试版）下载地址 URL，优先填写下载源。                      |
 | `version`  | String | 可选。填写开发版版本号，可填 `latest`，仅在 `download` 保持版本最新时使用。 |
 
+示例如下：
 
+``` js
+{
+    title: "HMCL",
+    download: "https://github.com/HMCL-dev/HMCL/releases/download/release-3.5.7/HMCL-3.5.7.exe",
+    version: "3.5.7",
+    url: "https://github.com/HMCL-dev/HMCL",
+    dev: {
+        download: ""https://github.com/HMCL-dev/HMCL/releases/download/v3.5.7.245/HMCL-3.5.7.245.exe",
+        version: "3.5.7.245"
+    }
+}
+```
