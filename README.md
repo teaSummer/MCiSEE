@@ -47,7 +47,7 @@
 | `download` | String | 填写稳定版（正式版）下载地址 URL，优先填写下载源。                      |
 | `version`  | String | 可选。填写稳定版版本号，可填 `latest`，仅在 `download` 保持版本最新时使用。 |
 | `url`      | String | 可选。GitHub 仓库地址 URL，如果没有公开的开源仓库，填写官网地址 URL。       |
-| `dev`      | Object | 可选。填写关于开发版的信息，尽量不提供只在 `Actions` 的版本，具体见下文。       |
+| `dev`      | Object | 可选。填写关于开发版的信息，尽量不提供只在 Actions 中的版本，具体见下文。        |
 
 `dev` 是一个对象，它有以下属性：
 
