@@ -6,11 +6,11 @@ class DOMLauncherList {
             title: "未命名",
             subtitle: item.title,
             download: "https://www.example.com",
-            version: "1.0.0",
+            version: "1.0.x",
             url: "https://www.example.com",
             dev: {
                 download: "https://www.example.com",
-                version: "1.0.0.1"
+                version: "1.0.x.x"
             },
             __domID: undefined,
             __domClass: undefined,
@@ -18,6 +18,8 @@ class DOMLauncherList {
         }
 
         let download, devDownload, url;
+        const version = item.version;
+        const devVersion = item.dev.version;
         try {
             download = new URL(item.download);
         } catch (error) {
@@ -39,11 +41,15 @@ class DOMLauncherList {
                 host: item.url
             }
         }
-        const convert = (URL, arg) => (URL == 'https://www.example.com/' || URL.host == '') ? '' : `${arg}="${URL}"`;
+        const convert = (URL, arg) => ((URL == 'https://www.example.com/' || URL.host == '') ? '' : `${arg}="${URL}"`);
+        const _title = `data-title="${item.title}"`;
         const _download = convert(download, 'data-download');
         const _devDownload = convert(devDownload, 'data-dev-download');
         const _url = convert(url, 'data-url');
-        return `<option title="${item.title}" ${_download} ${_devDownload} ${_url}>${item.subtitle}</option>`;
+        const _version = (version == '1.0.x' ? '' : `data-version="${version}"`);
+        const _devVersion = (devVersion == '1.0.x.x' ? '' : `data-dev-version="${devVersion}"`);
+        const properties = `${_title} ${_download} ${_devDownload} ${_version} ${_devVersion} ${_url}`;
+        return `<option ${properties}>${item.subtitle}</option>`;
     }
 
     static deviceList(target = '') {

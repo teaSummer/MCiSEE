@@ -23,16 +23,35 @@ $('#device').change(deviceChanged);
 
 const launcherChanged = (() => {
     for (const attribute of ['data-download', 'data-dev-download', 'data-url']) {
-        const target = $(event.target)[0];
-        let URL = $(target[target.selectedIndex]).attr(attribute);
-        if (attribute.endsWith('download') && $('#proxy').is(':checked') && String(URL).startsWith('https://github.com/')) {
-            URL = 'https://mirror.ghproxy.com/' + URL;
+        const target = $(event.target)[0][$(event.target)[0].selectedIndex];
+        const button = $(`.${attribute}-launcher`);
+        let URL = $(target).attr(attribute);
+        if (attribute.endsWith('download')) {
+            if ($('#proxy').is(':checked') && String(URL).startsWith('https://github.com/')) {
+                URL = 'https://mirror.ghproxy.com/' + URL;
+            }
+            if (attribute == 'data-download') {
+                const version = $(target).attr('data-version');
+                button.text('↓ 下载最新稳定版');
+                button.attr('title', '下载尽可能新的开发测试版');
+                if (version != 'latest') {
+                    button.text('↓ 下载稳定版 ' + version);
+                    button.attr('title', '下载稳定正式版 ' + version);
+                }
+            } else {
+                const devVersion = $(target).attr('data-dev-version');
+                button.text('↓ 下载最新开发版');
+                button.attr('title', '下载尽可能新的开发测试版');
+                if (devVersion != 'latest') {
+                    button.text('↓ 下载开发版 ' + devVersion);
+                    button.attr('title', '下载开发测试版 ' + devVersion);
+                }
+            }
         }
-        const launcher = $(`.${attribute}-launcher`);
-        launcher.hide();
+        button.hide();
         if (URL) {
-            launcher.attr('href', URL);
-            launcher.show();
+            button.attr('href', URL);
+            button.show();
         }
     }
 });
