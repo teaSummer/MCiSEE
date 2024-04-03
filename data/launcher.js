@@ -1,7 +1,7 @@
-// 适用于安卓手机的启动器
+// 适用于安卓手机/安卓平板的启动器
 const AndroidLauncher = [
     {
-        title: "FCL",
+        title: "Fold Craft Launcher",
         download: "https://github.com/FCL-Team/FoldCraftLauncher/releases/download/1.1.5.1/FCL-release-1.1.5.1-all.apk",
         version: "1.1.5.1",
         url: "https://github.com/FCL-Team/FoldCraftLauncher"
@@ -13,7 +13,8 @@ const AndroidLauncher = [
         url: "https://github.com/PojavLauncherTeam/PojavLauncher"
     },
     {
-        title: "HMCL-PE",
+        title: "Hello Minecraft! Launcher:Pocket Edition",
+        subtitle: "HMCL-PE",
         download: "https://github.com/HMCL-dev/HMCL-PE/releases/download/2.0.8/HMCLPE-release.apk",
         version: "2.0.8",
         url: "https://github.com/HMCL-dev/HMCL-PE"
@@ -26,7 +27,7 @@ const AndroidLauncher = [
     }
 ];
 
-// 适用于苹果手机的启动器
+// 适用于苹果手机/的启动器
 const iOSLauncher = [
     {
         title: "PojavLauncher",
@@ -54,7 +55,8 @@ const Windows10Launcher = [
         url: "https://www.minecraft.net/zh-hans"
     },
     {
-        title: "HMCL",
+        title: "Hello Minecraft! Launcher",
+        subtitle: "HMCL",
         download: "https://github.com/HMCL-dev/HMCL/releases/download/release-3.5.7/HMCL-3.5.7.exe",
         version: "3.5.7",
         url: "https://github.com/HMCL-dev/HMCL",
@@ -64,7 +66,8 @@ const Windows10Launcher = [
         }
     },
     {
-        title: "PCL2",
+        title: "Plain Craft Launcher 2",
+        subtitle: "PCL2",
         download: "http://lz.qaiu.top/parser?url=https://ltcat.lanzoum.com/i76Jk1q11eze",
         version: "2.6.15",
         url: "https://afdian.net/p/0164034c016c11ebafcb52540025c377"
@@ -97,7 +100,8 @@ const macOSLauncher = [
         url: "https://www.minecraft.net/zh-hans"
     },
     {
-        title: "HMCL",
+        title: "Hello Minecraft! Launcher",
+        subtitle: "HMCL",
         download: "https://github.com/HMCL-dev/HMCL/releases/download/release-3.5.7/HMCL-3.5.7.jar",
         version: "3.5.7",
         url: "https://github.com/HMCL-dev/HMCL",

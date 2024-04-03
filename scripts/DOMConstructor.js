@@ -4,6 +4,7 @@ class DOMLauncherList {
     static item(item) {
         item = {
             title: "未命名",
+            subtitle: item.title,
             download: "https://www.example.com",
             version: "1.0.0",
             url: "https://www.example.com",
@@ -42,7 +43,7 @@ class DOMLauncherList {
         const _download = convert(download, 'data-download');
         const _devDownload = convert(devDownload, 'data-dev-download');
         const _url = convert(url, 'data-url');
-        return `<option ${_download} ${_devDownload} ${_url}>${item.title}</option>`;
+        return `<option title="${item.title}" ${_download} ${_devDownload} ${_url}>${item.subtitle}</option>`;
     }
 
     static deviceList(target = '') {
