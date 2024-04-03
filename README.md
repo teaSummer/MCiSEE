@@ -61,7 +61,8 @@
 
 ``` js
 {
-    title: "HMCL",
+    title: "Hello Minecraft! Launcher",
+    subtitle: "HMCL",
     download: "https://github.com/HMCL-dev/HMCL/releases/download/release-3.5.7/HMCL-3.5.7.exe",
     version: "3.5.7",
     url: "https://github.com/HMCL-dev/HMCL",
