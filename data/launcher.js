@@ -27,7 +27,7 @@ const AndroidLauncher = [
     }
 ];
 
-// 适用于苹果手机/的启动器
+// 适用于苹果手机/苹果平板的启动器
 const iOSLauncher = [
     {
         title: "PojavLauncher",

@@ -49,7 +49,7 @@ class DOMLauncherList {
     static deviceList(target = '') {
         let dom = '';
         for (const [deviceName, supportedDevice] of supportedDevices) {
-            dom += `<select name="launcher" class="launcher ${deviceName}" style="display: none;">${
+            dom += `<select name="launcher" class="launcher ${deviceName}" hidden>${
                 this.list(eval(deviceName + 'Launcher'))
             }</select>`;
         }
@@ -77,34 +77,35 @@ class DOMDeviceList {
         $('#device').html(dom);
 
         const UA = navigator.userAgent;
-        const getDeviceIndex = () => {
+        const getDevice = () => {
             switch (device.os) {
                 case 'android':
-                    return 0;
+                    return 'Android';
                 case 'ios':
-                    return 1;
+                case 'ipad':
+                    return 'iOS';
                 case 'windows':
-                    if (UA.indexOf('Windows NT 6.1') > -1 || UA.indexOf('Windows 7') > -1 || UA.indexOf('Windows NT 8') > -1) return 2;
-                    if (UA.indexOf('Windows NT 10') > -1 || UA.indexOf('Windows NT 11') > -1) return 3;
-                    return 5;
+                    if (UA.indexOf('Windows NT 6.1') > -1 || UA.indexOf('Windows 7') > -1 || UA.indexOf('Windows NT 8') > -1) return 'Windows7';
+                    if (UA.indexOf('Windows NT 10') > -1 || UA.indexOf('Windows NT 11') > -1) return 'Windows10';
+                    return 'unsupported';
                 case 'macos':
-                    return 4;
+                    return 'macOS';
                 case 'unknown':
-                    return 6;
+                    return 'unknown';
                 default:
-                    return 5;
+                    return 'unsupported';
             }
         }
 
         $('#device').change(() => {
             $('#resource-container').show();
-            if ($('#device').get(0).selectedIndex > 4) {
+            if ($('#device')[0].selectedIndex > 4) {
                 $('#resource-container').hide();
             }
         });
 
-        $('#device').get(0).selectedIndex = getDeviceIndex();
-        if (getDeviceIndex() > 4) {
+        $("#device").val(getDevice());
+        if ($('#device')[0].selectedIndex > 4) {
             $('#resource-container').hide();
         }
     }
