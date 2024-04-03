@@ -10,7 +10,7 @@ DOMDeviceList.show();
 
 $('#launcher-container').html(DOMLauncherList.deviceList());
 
-const deviceChanged = () => {
+const deviceChanged = (() => {
     $('.device-diff select').each((index, element) => {
         $(element).hide();
         const select = $('.' + $('#device').val());
@@ -18,10 +18,10 @@ const deviceChanged = () => {
         select.show();
     });
     try { launcherChanged(); } catch (e) {}
-}
+});
 $('#device').change(deviceChanged);
 
-const launcherChanged = () => {
+const launcherChanged = (() => {
     for (const attribute of ['data-download', 'data-dev-download', 'data-url']) {
         const target = $(event.target)[0];
         let URL = $(target[target.selectedIndex]).attr(attribute);
@@ -35,10 +35,10 @@ const launcherChanged = () => {
             launcher.show();
         }
     }
-}
+});
 $('.launcher').change(launcherChanged);
 
-$('#proxy').change(() => {
+const proxyChanged = (() => {
     if ($('#proxy').is(':checked')) {
         $('.launcher-download>a.button').each((index, element) => {
             const link = $(element).attr('href');
@@ -50,3 +50,4 @@ $('#proxy').change(() => {
         })
     }
 });
+$('#proxy').change(proxyChanged);

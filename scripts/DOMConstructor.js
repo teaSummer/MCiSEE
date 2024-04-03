@@ -72,12 +72,12 @@ class DOMDeviceList {
         for (const [deviceName, supportedDevice] of supportedDevices) {
             dom += `<option value="${deviceName}">${supportedDevice}</option>`;
         }
-        dom += '<option value="unsupported" disabled hidden>不支持</option>' +
-        '<option value="unknown" selected disabled hidden>未知</option>';
+        dom += `<option value="unsupported" disabled hidden>不支持</option>
+                <option value="unknown" selected disabled hidden>未知</option>`;
         $('#device').html(dom);
 
         const UA = navigator.userAgent;
-        const getDevice = () => {
+        const getDevice = (() => {
             switch (device.os) {
                 case 'android':
                     return 'Android';
@@ -95,7 +95,7 @@ class DOMDeviceList {
                 default:
                     return 'unsupported';
             }
-        }
+        });
 
         $('#device').change(() => {
             $('#resource-container').show();
