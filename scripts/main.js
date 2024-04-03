@@ -33,7 +33,7 @@ const launcherChanged = (() => {
             if (attribute == 'data-download') {
                 const version = $(target).attr('data-version');
                 button.text('↓ 下载最新稳定版');
-                button.attr('title', '下载尽可能新的开发测试版');
+                button.attr('title', '下载尽可能新的稳定正式版');
                 if (version != 'latest') {
                     button.text('↓ 下载稳定版 ' + version);
                     button.attr('title', '下载稳定正式版 ' + version);
