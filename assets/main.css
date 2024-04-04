@@ -166,6 +166,14 @@ hr {
     border: none;
 }
 
+svg {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    padding-right: .2em;
+    vertical-align: middle;
+}
+
 div+hr {
     margin: 24px 0;
 }
@@ -266,6 +274,6 @@ h1, h2, h3, h4, h5, h6 {
         background-color: #367eed;
     }
     .tip {
-        color: rgba(255, 255, 255, 0.55);
+        color: rgba(255, 255, 255, 0.6);
     }
 }

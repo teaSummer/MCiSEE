@@ -110,7 +110,7 @@ class DOMDeviceList {
             }
         });
 
-        $("#device").val(getDevice());
+        $('#device').val(getDevice());
         if ($('#device')[0].selectedIndex > 4) {
             $('#resource-container').hide();
         }
