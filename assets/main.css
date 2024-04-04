@@ -166,19 +166,15 @@ hr {
     border: none;
 }
 
-.svg {
+svg {
     display: inline-block;
     width: 1em;
     height: 1em;
     vertical-align: middle;
 }
 
-.svg.left {
-    padding-left: 2px;
-}
-
 .svg.right {
-    padding-right: 1px;
+    padding-right: 3px;
 }
 
 div+hr {
