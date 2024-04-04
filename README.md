@@ -43,19 +43,19 @@
 
 | 属性键名称      | 属性值类型  | 属性值描述                                            |
 |------------|--------|--------------------------------------------------|
-| `title`    | String | 填写完整名称，例如启动器的完整名称等。                              |
-| `subtitle` | String | 可选。填写简写名称，如果不填写此属性，将与 `title` 的值保持一致。            |
-| `download` | String | 填写稳定版（正式版）下载地址 URL，优先填写下载源 URL。                  |
-| `version`  | String | 可选。填写稳定版版本号，可填 `latest`，仅在 `download` 保持版本最新时使用。 |
-| `url`      | String | 可选。GitHub 仓库地址 URL，如果没有公开的开源仓库，填写官网地址 URL。       |
-| `dev`      | Object | 可选。填写关于开发版的信息，见下文，尽量不提供只在 Actions 中的版本。          |
+| `title`    | String | 完整名称，例如启动器的完整名称等。                              |
+| `subtitle` | String | 可选。简写名称，若不填写此属性，将与 `title` 值保持一致。            |
+| `download` | String | 最新稳定版（正式版）下载地址 URL，优先填写下载源 URL。                  |
+| `version`  | String | 可选。最新稳定版版本号，可填 `latest`，仅在 `download` 保持版本最新时使用。 |
+| `url`      | String | 可选。GitHub 仓库地址 URL，若没有公开的开源仓库，填写官方网站地址 URL。       |
+| `dev`      | Object | 可选。开发版信息，见下文，尽量不提供只在 GitHub Actions 中出现的版本。          |
 
 `dev` 是一个对象，它有以下属性：
 
 | 属性键名称      | 属性值类型  | 属性值描述                                         |
 |------------|--------|-----------------------------------------------|
-| `download` | String | 填写开发版（测试版）下载地址 URL，优先填写下载源 URL。               |
-| `version`  | String | 填写开发版版本号，可填 `latest`，仅在 `download` 保持版本最新时使用。 |
+| `download` | String | 最新开发版（测试版）下载地址 URL，优先填写下载源 URL。               |
+| `version`  | String | 最新开发版版本号，可填 `latest`，仅在 `download` 保持版本最新时使用。 |
 
 示例如下：
 
