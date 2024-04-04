@@ -21,7 +21,7 @@
 2. 在您 Fork 的仓库内进行修改。
 3. 点击顶部【Pull requests】— 右上角【New pull request】—【Create pull request】。
 4. 填写标题和描述，说明您做了什么修改，然后提交 PR。
-5. 等待此项目所有者 [@teaSummer](https://github.com/teaSummer) 通过审核。
+5. 等待此项目所有者 [@teaSummer](https://github.com/teaSummer) 或 管理员 [@baiyuncode](https://github.com/baiyuncode) 通过审核。
 
 ### 如何更改数据？
 
