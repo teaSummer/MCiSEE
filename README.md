@@ -1,5 +1,5 @@
 # MCiSEE
-![](https://img.shields.io/badge/license-CC--BY--SA--4.0-green)[![Page Views Count](https://badges.toozhao.com/badges/01HTFPN35M6ETEFBVAP3SEWRKG/green.svg)](https://badges.toozhao.com/stats/01HTFPN35M6ETEFBVAP3SEWRKG)
+![](https://img.shields.io/badge/license-CC--BY--SA--4.0-green) [![Page Views Count](https://badges.toozhao.com/badges/01HTFPN35M6ETEFBVAP3SEWRKG/green.svg)](https://badges.toozhao.com/stats/01HTFPN35M6ETEFBVAP3SEWRKG)
 
 **所见皆是*Minecraft*，让获取MC资源更加轻便！**
 
@@ -75,4 +75,8 @@
 
 ### 贡献声明
 
-由于 `PCL2` 快照版本尚未公开，请勿提供 `dev` 属性。
+由于 `PCL2` 快照版本尚未公开，请勿提供其 `dev` 属性。
+
+## 依赖/引用的项目
+
+[netdisk-fast-download](https://github.com/qaiu/netdisk-fast-download) 网盘直链解析工具
