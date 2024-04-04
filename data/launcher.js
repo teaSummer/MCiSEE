@@ -2,8 +2,8 @@
 const AndroidLauncher = [
     {
         title: "Fold Craft Launcher",
-        download: "https://github.com/FCL-Team/FoldCraftLauncher/releases/download/1.1.5.1/FCL-release-1.1.5.1-all.apk",
-        version: "1.1.5.1",
+        download: "https://github.com/FCL-Team/FoldCraftLauncher/releases/download/1.1.6/FCL-release-1.1.6-all.apk",
+        version: "1.1.6",
         url: "https://github.com/FCL-Team/FoldCraftLauncher"
     },
     {
