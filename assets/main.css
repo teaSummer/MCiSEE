@@ -134,11 +134,11 @@ a.button {
 }
 
 a.button:hover {
-    background-color: #233690;
+    background-color: #1258c5;
 }
 
 a.button:active {
-    background-color: #324ecd;
+    background-color: #367eed;
 }
 
 p {
@@ -266,12 +266,6 @@ h1, h2, h3, h4, h5, h6 {
     }
     a.button {
         background-color: #1f6feb;
-    }
-    a.button:hover {
-        background-color: #1258c5;
-    }
-    a.button:active {
-        background-color: #367eed;
     }
     .tip {
         color: rgba(255, 255, 255, 0.6);
