@@ -123,7 +123,7 @@ a:active {
 
 a.button {
     color: #fff;
-    background-color: #2d46b9;
+    background-color: #1f6feb;
     display: inline-block;
     font-size: 1rem;
     margin-top: 14px;
@@ -263,9 +263,6 @@ h1, h2, h3, h4, h5, h6 {
     }
     a:active {
         color: #58a6ff;
-    }
-    a.button {
-        background-color: #1f6feb;
     }
     .tip {
         color: rgba(255, 255, 255, 0.6);
