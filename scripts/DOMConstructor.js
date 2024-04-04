@@ -63,7 +63,8 @@ class DOMLauncherList {
     }
 
     static list(items = []) {
-        let dom = '<option>【待选择】</option>';
+        if (items.length == 0) return '<option value="?">【无】</option>';
+        let dom = '<option value="?">【待选择】</option>';
         items.forEach(e => {
             dom += DOMLauncherList.item(e);
         });
@@ -84,34 +85,60 @@ class DOMDeviceList {
 
         const UA = navigator.userAgent;
         const getDevice = (() => {
-            switch (device.os) {
-                case 'android':
-                    return 'Android';
-                case 'ios':
-                case 'ipad':
-                    return 'iOS';
-                case 'windows':
-                    if (UA.indexOf('Windows NT 6.1') > -1 || UA.indexOf('Windows 7') > -1 || UA.indexOf('Windows NT 8') > -1) return 'Windows7';
-                    if (UA.indexOf('Windows NT 10') > -1 || UA.indexOf('Windows NT 11') > -1) return 'Windows10';
-                    return 'unsupported';
-                case 'macos':
-                    return 'macOS';
-                case 'unknown':
-                    return 'unknown';
+            const device = browser();
+            let AB;
+            if (device.architecture == 'x86') {
+                if (device.bitness == '64') {
+                    AB = 'X64';
+                }
+                else if (device.bitness == '32') {
+                    AB = 'X86';
+                }
+            }
+            else if (device.architecture == 'arm') {
+                if (device.bitness == '64') {
+                    AB = 'ARM64';
+                }
+                else if (device.bitness == '32') {
+                    AB = 'ARM32';
+                }
+            }
+            if (AB.startsWith('ARM')) AB = 'ARM';
+            switch (device.system) {
+                case 'Android':
+                case 'HarmonyOS':
+                case 'iOS':
+                case 'iPad':
+                case 'macOS':
+                    if (device.device == 'Desktop') return 'unsupported';
+                    return device.system;
+                case 'Windows':
+                    if (device.device != 'Desktop' || AB == 'ARM') return 'unsupported';
+                    switch (device.systemVersion) {
+                        case '10':
+                        case '11':
+                            return 'Windows10' + AB;
+                        case '7':
+                        case '8':
+                        case '8.1':
+                            return 'Windows7' + AB;
+                        default:
+                            return 'unsupported';
+                    };
                 default:
                     return 'unsupported';
             }
         });
 
+        const toHide = 6;
         $('#device').change(() => {
             $('#resource-container').show();
-            if ($('#device')[0].selectedIndex > 4) {
+            if ($('#device')[0].selectedIndex > toHide) {
                 $('#resource-container').hide();
             }
         });
-
         $('#device').val(getDevice());
-        if ($('#device')[0].selectedIndex > 4) {
+        if ($('#device')[0].selectedIndex > toHide) {
             $('#resource-container').hide();
         }
     }

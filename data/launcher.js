@@ -1,4 +1,4 @@
-// 适用于安卓手机/安卓平板的启动器
+// 适用于安卓手机/鸿蒙手机/安卓平板/鸿蒙平板的启动器
 const AndroidLauncher = [
     {
         title: "Fold Craft Launcher",
@@ -38,18 +38,8 @@ const iOSLauncher = [
     }
 ];
 
-// 适用于 Windows 7/8/8.1 的启动器
-const Windows7Launcher = [
-    {
-        title: "Minecraft 启动器 (旧版)",
-        version: "latest",
-        download: "https://aka.ms/minecraftClientWindows",
-        url: "https://www.minecraft.net/zh-hans"
-    }
-];
-
-// 适用于 Windows 10/11 的启动器
-const Windows10Launcher = [
+// 适用于 Windows 10/11 (x64) 的启动器
+const Windows10X64Launcher = [
     {
         title: "Minecraft 启动器",
         download: "https://aka.ms/minecraftClientGameCoreWindows",
@@ -94,6 +84,16 @@ const Windows10Launcher = [
     }
 ];
 
+// 适用于 Windows 7/8/8.1 (x64) 的启动器
+const Windows7X64Launcher = [
+    {
+        title: "Minecraft 启动器 (旧版)",
+        version: "latest",
+        download: "https://aka.ms/minecraftClientWindows",
+        url: "https://www.minecraft.net/zh-hans"
+    }
+];
+
 // 适用于苹果电脑的启动器
 const macOSLauncher = [
     {
@@ -119,4 +119,14 @@ const macOSLauncher = [
         version: "A24",
         url: "https://github.com/Coloryr/ColorMC"
     },
+];
+
+// 适用于 Windows 10/11 (x86) 的启动器
+const Windows10X86Launcher = [
+
+];
+
+// 适用于 Windows 7/8/8.1 (x86) 的启动器
+const Windows7X86Launcher = [
+
 ];

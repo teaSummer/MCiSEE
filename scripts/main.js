@@ -1,10 +1,12 @@
 const supportedDevices = [
-    // | 最早名称 |      显示名称      |
-    [   'Android',  'Android'         ],
-    [       'iOS',  'iOS/iPad'        ],
-    [  'Windows7',  'Windows 7/8/8.1' ],
-    [ 'Windows10',  'Windows 10/11'   ],
-    [     'macOS',  'macOS'           ],
+    // |   最早名称   |         显示名称         |
+    [      'Android',  'Android/HarmonyOS'     ],
+    [          'iOS',  'iOS/iPad'              ],
+    [ 'Windows10X64',  'Windows 10/11 (x64)'   ],
+    [  'Windows7X64',  'Windows 7/8/8.1 (x64)' ],
+    [        'macOS',  'macOS'                 ],
+    [ 'Windows10X86',  'Windows 10/11 (x86)'   ],
+    [  'Windows7X86',  'Windows 7/8/8.1 (x86)' ],
 ];
 DOMDeviceList.show();
 
@@ -14,7 +16,7 @@ const deviceChanged = (() => {
     $('.device-diff select').each((index, element) => {
         $(element).hide();
         const select = $('.' + $('#device').val());
-        select.val('【待选择】');
+        select.val('?');
         select.show();
     });
     try { launcherChanged(); } catch (e) {}
