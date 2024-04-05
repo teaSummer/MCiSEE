@@ -210,6 +210,10 @@ footer p {
     margin-bottom: 0;
 }
 
+select, option, input {
+    background-color: transparent;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
 }
@@ -278,23 +282,3 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.75rem;
     font-style: italic;
 }
-
-
-/*@media (prefers-color-scheme: light) {
-    body, select, option, input {
-        color: #c9d1d9;
-        background-color: #0d1117;
-    }
-    a {
-        color: #2b7de8;
-    }
-    a:hover {
-        color: #58a6ff;
-    }
-    a:active {
-        color: #0076ff;
-    }
-    .tip {
-        color: rgba(255, 255, 255, 0.6);
-    }
-}*/
