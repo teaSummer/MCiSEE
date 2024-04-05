@@ -60,9 +60,9 @@ const Windows10X64Launcher = [
     {
         title: "Plain Craft Launcher 2",
         subtitle: "PCL2",
-        download: "http://lz.qaiu.top/parser?url=https://ltcat.lanzoum.com/i76Jk1q11eze",
-        version: "2.6.15",
-        url: "https://afdian.net/p/0164034c016c11ebafcb52540025c377"
+        download: "http://lz.qaiu.top/parser?url=https://ltcat.lanzoum.com/i3Bzw1tz7xde",
+        version: "2.7.0",
+        url: "https://afdian.net/a/LTCat"
     },
     {
         title: "BakaXL",
