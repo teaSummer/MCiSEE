@@ -80,11 +80,3 @@
 ### 贡献声明
 
 由于 `PCL2` 快照版本尚未公开，请勿提供其 `dev` 属性。
-
-## 依赖/引用的项目
-
-[jQuery](https://github.com/jquery/jquery) New Wave JavaScript
-
-[browser](https://github.com/mumuy/browser) 浏览器检测工具
-
-[netdisk-fast-download](https://github.com/qaiu/netdisk-fast-download) 网盘直链解析工具
