@@ -11,7 +11,7 @@ const AndroidLauncher = [
         title: "PojavLauncher",
         download: "https://github.com/PojavLauncherTeam/PojavLauncher/actions/runs/8494081349/artifacts/1371938891",
         version: "Edelweiss",
-        url: "https://github.com/PojavLauncherTeam/PojavLauncher"
+        url: "http://lz.qaiu.top/parser?url=https://www.ilanzou.com/s/Hug7vEl"
     },
     {
         title: "Hello Minecraft! Launcher:Pocket Edition",
