@@ -108,17 +108,17 @@ body {
 }
 
 a {
-    color: var(--ant-color-link);
+    color: #006eff;
     text-decoration: none;
 }
 
 a:hover {
-    color: var(--ant-color-link-hover);
+    color: #2d87ff;
     text-decoration: underline;
 }
 
 a:active {
-    color: var(--ant-color-link-active);
+    color: #0058c4;
 }
 
 a.button {
@@ -203,6 +203,7 @@ footer {
     font-size: 14px;
     margin-top: 1.5rem;
     text-align: center;
+    background-image: linear-gradient(transparent, rgba(200, 220, 255, 0.7));
 }
 
 footer p {
@@ -225,6 +226,14 @@ h1, h2, h3, h4, h5, h6 {
     color: #5555ff;
 }
 
+#background {
+    background-image: url('https://bbs-archive.github.io/assets/body_bg-s5bm9D9f.jpg');
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
 .page-content {
     max-width: min(1000px, 100vw);
     margin: 0 auto;
@@ -242,7 +251,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tip {
-    color: rgba(0, 0, 0, 0.45);
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .checkbox {
@@ -271,7 +280,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-@media (prefers-color-scheme: dark) {
+/*@media (prefers-color-scheme: light) {
     body, select, option, input {
         color: #c9d1d9;
         background-color: #0d1117;
@@ -288,4 +297,4 @@ h1, h2, h3, h4, h5, h6 {
     .tip {
         color: rgba(255, 255, 255, 0.6);
     }
-}
+}*/
