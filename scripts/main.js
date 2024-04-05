@@ -28,7 +28,7 @@ const launcherChanged = (() => {
     const dataTitle = target.attr('data-title');
     $('#launcher-title').text('');
     if (dataTitle && dataTitle != target.val()) {
-        $('#launcher-title').text(`（${dataTitle}）`);
+        $('#launcher-title').text(dataTitle);
     }
     for (const attribute of ['data-download', 'data-dev-download', 'data-url']) {
         const button = $(`.${attribute}-launcher`);

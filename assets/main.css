@@ -252,6 +252,12 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 1rem;
 }
 
+.full-name {
+    margin-left: 6px;
+    font-size: 0.75rem;
+    font-style: italic;
+}
+
 
 @media (prefers-color-scheme: dark) {
     body, select, option, input {
