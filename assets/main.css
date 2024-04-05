@@ -213,6 +213,18 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
 }
 
+#ICP a {
+    color: #7575ff;
+}
+
+#ICP a:hover {
+    color: #9595ff;
+}
+
+#ICP a:active {
+    color: #5555ff;
+}
+
 .page-content {
     max-width: min(1000px, 100vw);
     margin: 0 auto;
@@ -271,7 +283,7 @@ h1, h2, h3, h4, h5, h6 {
         color: #58a6ff;
     }
     a:active {
-        color: #58a6ff;
+        color: #0076ff;
     }
     .tip {
         color: rgba(255, 255, 255, 0.6);
