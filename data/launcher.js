@@ -42,7 +42,7 @@ const iOSLauncher = [
 const Windows10X64Launcher = [
     {
         title: "Minecraft 启动器",
-        download: "https://aka.ms/minecraftClientGameCoreWindows",
+        download: "https://launcher.mojang.com/download/MinecraftInstaller.exe",
         version: "latest",
         url: "https://www.minecraft.net/zh-hans"
     },
@@ -89,7 +89,7 @@ const Windows7X64Launcher = [
     {
         title: "Minecraft 启动器 (旧版)",
         version: "latest",
-        download: "https://aka.ms/minecraftClientWindows",
+        download: "https://launcher.mojang.com/download/MinecraftInstaller.msi",
         url: "https://www.minecraft.net/zh-hans"
     }
 ];
@@ -98,7 +98,7 @@ const Windows7X64Launcher = [
 const macOSLauncher = [
     {
         title: "Minecraft 启动器",
-        download: "https://aka.ms/minecraftClientMac",
+        download: "https://launcher.mojang.com/download/Minecraft.dmg",
         version: "latest",
         url: "https://www.minecraft.net/zh-hans"
     },
