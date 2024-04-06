@@ -87,7 +87,7 @@ const WindowsLauncher = [
         title: "MultiMC",
         subtitle: "MMC",
         download: "https://files.multimc.org/downloads/mmc-develop-win32.zip",
-        version: "0.7.0",
+        version: "latest",
         url: "https://www.github.com/MultiMC/Launcher"
     },
     {
@@ -147,7 +147,7 @@ const macOSLauncher = [
         title: "MultiMC",
         subtitle: "MMC",
         download: "https://files.multimc.org/downloads/mmc-develop-osx64.tar.gz",
-        version: "0.7.0",
+        version: "latest",
         url: "https://www.github.com/MultiMC/Launcher"
     }
 ];
