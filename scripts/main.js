@@ -2,8 +2,7 @@ const supportedDevices = [
     // |   最早名称   |         显示名称         |
     [      'Android',  'Android/HarmonyOS' ],
     [          'iOS',  'iOS/iPad'          ],
-    [    'Windows10',  'Windows 10/11'     ],
-    [     'Windows7',  'Windows 7/8/8.1'   ],
+    [      'Windows',  'Windows'           ],
     [        'macOS',  'macOS'             ],
 ];
 DOMDeviceList.show();

@@ -38,8 +38,8 @@ const iOSLauncher = [
     }
 ];
 
-// 适用于 Windows 10/11 的启动器
-const Windows10Launcher = [
+// 适用于Windows电脑的启动器
+const WindowsLauncher = [
     {
         title: "Minecraft 启动器",
         download: "https://launcher.mojang.com/download/MinecraftInstaller.exe",
@@ -62,7 +62,7 @@ const Windows10Launcher = [
         subtitle: "PCL2",
         download: "https://lz.qaiu.top/parser?url=https://ltcat.lanzoum.com/i3Bzw1tz7xde",
         version: "2.7.0",
-        url: "https://afdian.net/a/LTCat"
+        url: "https://afdian.net/@LTCat"
     },
     {
         title: "BakaXL",
@@ -81,17 +81,20 @@ const Windows10Launcher = [
         download: "https://x19.gdl.netease.com/MCLauncher_1.14.0.36188.exe",
         version: "1.14.0.36188",
         url: "https://mc.163.com"
-    }
-];
-
-// 适用于 Windows 7/8/8.1 的启动器
-const Windows7Launcher = [
+    },
     {
         title: "Minecraft 启动器 (旧版)",
         version: "latest",
         download: "https://launcher.mojang.com/download/MinecraftInstaller.msi",
         url: "https://www.minecraft.net/zh-hans"
-    }
+    },
+    {
+        title: "Plain Craft Launcher 1",
+        subtitle: "PCL1",
+        download: "https://lz.qaiu.top/parser?url=https://www.ilanzou.com/s/TsX7sCZ",
+        version: "1.0.9",
+        url: "https://gitee.com/Cmbself/PCL1"
+    },
 ];
 
 // 适用于苹果电脑的启动器

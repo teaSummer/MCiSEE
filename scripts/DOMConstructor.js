@@ -87,26 +87,20 @@ class DOMDeviceList {
         const getDevice = (() => {
             const device = browser();
             switch (device.system) {
-                case 'Android':
                 case 'HarmonyOS':
-                case 'iOS':
+                    if (device.device == 'Desktop') return 'unsupported';
+                    return 'Android';
                 case 'iPad':
+                    if (device.device == 'Desktop') return 'unsupported';
+                    return 'iOS';
+                case 'Android':
+                case 'iOS':
                 case 'macOS':
                     if (device.device == 'Desktop') return 'unsupported';
                     return device.system;
                 case 'Windows':
                     if (device.device != 'Desktop') return 'unsupported';
-                    switch (device.systemVersion) {
-                        case '10':
-                        case '11':
-                            return 'Windows10';
-                        case '7':
-                        case '8':
-                        case '8.1':
-                            return 'Windows7';
-                        default:
-                            return 'unsupported';
-                    };
+                    return 'Windows';
                 default:
                     return 'unsupported';
             }
