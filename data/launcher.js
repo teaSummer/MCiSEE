@@ -1,4 +1,4 @@
-// 适用于安卓手机/鸿蒙手机/安卓平板/鸿蒙平板的启动器
+// 适用于 安卓手机/鸿蒙手机/安卓平板/鸿蒙平板 的启动器
 const AndroidLauncher = [
     {
         title: "Fold Craft Launcher",
@@ -28,7 +28,7 @@ const AndroidLauncher = [
     }
 ];
 
-// 适用于苹果手机/苹果平板的启动器
+// 适用于 苹果手机/苹果平板 的启动器
 const iOSLauncher = [
     {
         title: "PojavLauncher",
@@ -38,7 +38,7 @@ const iOSLauncher = [
     }
 ];
 
-// 适用于Windows电脑的启动器
+// 适用于 Windows电脑 的启动器
 const WindowsLauncher = [
     {
         title: "Minecraft 启动器",
@@ -88,7 +88,7 @@ const WindowsLauncher = [
         subtitle: "MMC",
         download: "https://files.multimc.org/downloads/mmc-develop-win32.zip",
         version: "latest",
-        url: "https://www.github.com/MultiMC/Launcher"
+        url: "https://github.com/MultiMC/Launcher"
     },
     {
         title: "我的世界启动器",
@@ -111,7 +111,7 @@ const WindowsLauncher = [
     }
 ];
 
-// 适用于苹果电脑的启动器
+// 适用于 苹果电脑 的启动器
 const macOSLauncher = [
     {
         title: "Minecraft 启动器",
@@ -148,6 +148,6 @@ const macOSLauncher = [
         subtitle: "MMC",
         download: "https://files.multimc.org/downloads/mmc-develop-osx64.tar.gz",
         version: "latest",
-        url: "https://www.github.com/MultiMC/Launcher"
+        url: "https://github.com/MultiMC/Launcher"
     }
 ];
