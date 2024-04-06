@@ -137,6 +137,13 @@ const macOSLauncher = [
         url: "https://github.com/Coloryr/ColorMC"
     },
     {
+        title: "X Minecraft Launcher",
+        subtitle: "XMCL",
+        download: "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.43.1/xmcl-0.43.1.dmg",
+        version: "0.43.1",
+        url: "https://github.com/voxelum/x-minecraft-launcher"
+    },
+    {
         title: "MultiMC",
         download: "https://files.multimc.org/downloads/mmc-develop-osx64.tar.gz",
         version: "0.7.0",
