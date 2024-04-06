@@ -77,6 +77,20 @@ const WindowsLauncher = [
         url: "https://github.com/Coloryr/ColorMC"
     },
     {
+        title: "X Minecraft Launcher",
+        subtitle: "XMCL",
+        download: "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.43.1/xmcl-0.43.1-win32-x64.zip",
+        version: "0.43.1",
+        url: "https://github.com/voxelum/x-minecraft-launcher"
+    },
+    {
+        title: "MultiMC",
+        subtitle: "MMC",
+        download: "https://files.multimc.org/downloads/mmc-develop-win32.zip",
+        version: "0.7.0",
+        url: "https://www.github.com/MultiMC/Launcher"
+    },
+    {
         title: "我的世界启动器",
         download: "https://x19.gdl.netease.com/MCLauncher_1.14.0.36188.exe",
         version: "1.14.0.36188",
@@ -94,7 +108,7 @@ const WindowsLauncher = [
         download: "https://lz.qaiu.top/parser?url=https://www.ilanzou.com/s/TsX7sCZ",
         version: "1.0.9",
         url: "https://gitee.com/Cmbself/PCL1"
-    },
+    }
 ];
 
 // 适用于苹果电脑的启动器
@@ -122,4 +136,10 @@ const macOSLauncher = [
         version: "A24",
         url: "https://github.com/Coloryr/ColorMC"
     },
+    {
+        title: "MultiMC",
+        download: "https://files.multimc.org/downloads/mmc-develop-osx64.tar.gz",
+        version: "0.7.0",
+        url: "https://www.github.com/MultiMC/Launcher"
+    }
 ];
