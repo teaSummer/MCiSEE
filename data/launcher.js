@@ -145,6 +145,7 @@ const macOSLauncher = [
     },
     {
         title: "MultiMC",
+        subtitle: "MMC",
         download: "https://files.multimc.org/downloads/mmc-develop-osx64.tar.gz",
         version: "0.7.0",
         url: "https://www.github.com/MultiMC/Launcher"
