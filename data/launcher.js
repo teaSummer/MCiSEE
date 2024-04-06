@@ -120,13 +120,3 @@ const macOSLauncher = [
         url: "https://github.com/Coloryr/ColorMC"
     },
 ];
-
-// 适用于 Windows 10/11 (x86) 的启动器
-const Windows10X86Launcher = [
-
-];
-
-// 适用于 Windows 7/8/8.1 (x86) 的启动器
-const Windows7X86Launcher = [
-
-];

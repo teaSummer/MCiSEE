@@ -86,24 +86,6 @@ class DOMDeviceList {
         const UA = navigator.userAgent;
         const getDevice = (() => {
             const device = browser();
-            let AB;
-            if (device.architecture == 'x86') {
-                if (device.bitness == '64') {
-                    AB = 'X64';
-                }
-                else if (device.bitness == '32') {
-                    AB = 'X86';
-                }
-            }
-            else if (device.architecture == 'arm') {
-                if (device.bitness == '64') {
-                    AB = 'ARM64';
-                }
-                else if (device.bitness == '32') {
-                    AB = 'ARM32';
-                }
-            }
-            if (AB.startsWith('ARM')) AB = 'ARM';
             switch (device.system) {
                 case 'Android':
                 case 'HarmonyOS':
@@ -113,15 +95,15 @@ class DOMDeviceList {
                     if (device.device == 'Desktop') return 'unsupported';
                     return device.system;
                 case 'Windows':
-                    if (device.device != 'Desktop' || AB == 'ARM') return 'unsupported';
+                    if (device.device != 'Desktop') return 'unsupported';
                     switch (device.systemVersion) {
                         case '10':
                         case '11':
-                            return 'Windows10' + AB;
+                            return 'Windows10';
                         case '7':
                         case '8':
                         case '8.1':
-                            return 'Windows7' + AB;
+                            return 'Windows7';
                         default:
                             return 'unsupported';
                     };
