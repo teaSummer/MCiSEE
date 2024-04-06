@@ -38,8 +38,8 @@ const iOSLauncher = [
     }
 ];
 
-// 适用于 Windows 10/11 (x64) 的启动器
-const Windows10X64Launcher = [
+// 适用于 Windows 10/11 的启动器
+const Windows10Launcher = [
     {
         title: "Minecraft 启动器",
         download: "https://launcher.mojang.com/download/MinecraftInstaller.exe",
@@ -84,8 +84,8 @@ const Windows10X64Launcher = [
     }
 ];
 
-// 适用于 Windows 7/8/8.1 (x64) 的启动器
-const Windows7X64Launcher = [
+// 适用于 Windows 7/8/8.1 的启动器
+const Windows7Launcher = [
     {
         title: "Minecraft 启动器 (旧版)",
         version: "latest",
