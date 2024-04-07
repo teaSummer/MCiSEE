@@ -84,17 +84,17 @@ const WindowsLauncher = [
         url: "https://github.com/voxelum/x-minecraft-launcher"
     },
     {
+        title: "我的世界启动器",
+        download: "https://x19.gdl.netease.com/MCLauncher_1.14.0.36188.exe",
+        version: "1.14.0.36188",
+        url: "https://mc.163.com"
+    },
+    {
         title: "MultiMC",
         subtitle: "MMC",
         download: "https://files.multimc.org/downloads/mmc-develop-win32.zip",
         version: "latest",
         url: "https://github.com/MultiMC/Launcher"
-    },
-    {
-        title: "我的世界启动器",
-        download: "https://x19.gdl.netease.com/MCLauncher_1.14.0.36188.exe",
-        version: "1.14.0.36188",
-        url: "https://mc.163.com"
     },
     {
         title: "Minecraft 启动器 (旧版)",
