@@ -108,14 +108,14 @@ class DOMDeviceList {
 
         const toHide = 6;
         $('#device').change(() => {
-            $('#resource-container').show();
+            $('.resource-container').show();
             if ($('#device')[0].selectedIndex > toHide) {
-                $('#resource-container').hide();
+                $('.resource-container').hide();
             }
         });
         $('#device').val(getDevice());
         if ($('#device')[0].selectedIndex > toHide) {
-            $('#resource-container').hide();
+            $('.resource-container').hide();
         }
     }
 }

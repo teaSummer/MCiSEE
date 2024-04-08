@@ -218,19 +218,19 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
 }
 
-#ICP a {
+.ICP a {
     color: #7575ff;
 }
 
-#ICP a:hover {
+.ICP a:hover {
     color: #9595ff;
 }
 
-#ICP a:active {
+.ICP a:active {
     color: #5555ff;
 }
 
-#background {
+.background {
     background-image: url('image/background.jpg');
     position: fixed;
     width: 100%;
@@ -272,8 +272,8 @@ h1, h2, h3, h4, h5, h6 {
     border-color: #3e97eb;
 }
 
-.resource>div+div,
-.device+.resource {
+.resource-container>div+div,
+.device-container+.resource-container {
     margin-top: 1rem;
 }
 

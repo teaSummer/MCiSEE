@@ -30,7 +30,7 @@
 </head>
 
 <body>
-<div id="background"></div>
+<div class="background"></div>
 <main>
     <div class="page-content">
         <div class="introduction">
@@ -41,25 +41,25 @@
             <p>这里也需要你们提供更多有趣的资源！</p>
         </div>
         <hr>
-        <div class="device">
+        <div class="device-container">
             <h2 class="page-title">设备</h2>
             <label for="device" class="tip">自动判断，可手动选择</label>
             <select name="device" id="device"></select>
         </div>
-        <div class="resource" id="resource-container">
+        <div class="resource-container">
             <div class="configure">
                 <h2 class="page-title">配置</h2>
                 <label>
-                    <input id="proxy" type="checkbox" checked> GitHub 文件使用
+                    <input class="proxy" type="checkbox" checked> GitHub 文件使用
                     <a title="GitHub Proxy 代理加速" href="https://mirror.ghproxy.com" target="_blank">代理加速</a> 下载
                 </label>
             </div>
-            <div class="app">
+            <div class="app-container">
                 <h2 class="page-title">软件</h2>
                 <div class="label">启动器（<b>Java版</b>）</div>
-                <div id="launcher-container" class="device-diff"></div>
-                <div id="launcher-title" class="full-name"></div>
-                <div id="launcher-goto">
+                <div class="launcher-container device-diff"></div>
+                <div class="launcher-title full-name"></div>
+                <div class="launcher-goto">
                     <a class="button data-url-launcher" title="跳转至GitHub仓库或官方网站" target="_blank"
                        style="display: none">跳转启动器网站<span class="svg">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -68,11 +68,12 @@
                         </svg></span>
                     </a>
                 </div>
-                <div id="launcher-download">
+                <div class="launcher-download">
                     <a class="button data-download-launcher" style="display: none"></a>
                     <a class="button data-dev-download-launcher" style="display: none"></a>
                 </div>
             </div>
+            <div class="forum"></div>
             <div class="ellipse">
                 <h2>....</h2>
             </div>
@@ -91,14 +92,14 @@
                 </div>
             </div>
             <hr>
-            <p id="ICP">
+            <p class="ICP">
                 <a href="https://icp.gov.moe/?keyword=20247837" target="_blank">萌ICP备20247837号</a>
             </p>
-            <p>
+            <p class="GitHub">
                 <a href="https://github.com/teaSummer/MCiSEE" target="_blank">GitHub</a> |
                 <a href="https://github.com/teaSummer/MCiSEE/blob/main/README.md" target="_blank">为此项目做出贡献</a>
             </p>
-            <p>
+            <p class="license">
                 本页面内容以 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"
                                 rel="noopener noreferrer">CC BY-NC-SA 4.0</a> 协议共享
             </p>
