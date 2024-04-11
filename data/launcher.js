@@ -60,8 +60,8 @@ const WindowsLauncher = [
     {
         title: "Plain Craft Launcher 2",
         subtitle: "PCL2",
-        download: "https://lz.qaiu.top/parser?url=https://ltcat.lanzoum.com/i3Bzw1tz7xde",
-        version: "2.7.0",
+        download: "https://lz.qaiu.top/parser?url=https://ltcat.lanzoum.com/ilOSm1uci9de",
+        version: "2.7.1 (2.7.1.1)",
         url: "https://afdian.net/@LTCat"
     },
     {
@@ -79,8 +79,8 @@ const WindowsLauncher = [
     {
         title: "X Minecraft Launcher",
         subtitle: "XMCL",
-        download: "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.43.2/xmcl-0.43.2-win32-x64.zip",
-        version: "0.43.2",
+        download: "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.43.3/xmcl-0.43.3-win32-x64.zip",
+        version: "0.43.3",
         url: "https://github.com/voxelum/x-minecraft-launcher"
     },
     {
@@ -139,8 +139,8 @@ const macOSLauncher = [
     {
         title: "X Minecraft Launcher",
         subtitle: "XMCL",
-        download: "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.43.2/xmcl-0.43.2.dmg",
-        version: "0.43.2",
+        download: "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.43.3/xmcl-0.43.3.dmg",
+        version: "0.43.3",
         url: "https://github.com/voxelum/x-minecraft-launcher"
     },
     {
