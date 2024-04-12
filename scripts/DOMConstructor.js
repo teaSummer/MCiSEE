@@ -55,7 +55,7 @@ class DOMLauncherList {
     static deviceList(target = '') {
         let dom = '';
         for (const [deviceName, supportedDevice] of supportedDevices) {
-            dom += `<select name="launcher" class="launcher ${deviceName}" hidden>${
+            dom += `<select name="launcher" class="launcher ${deviceName}" hidden="hidden">${
                 this.list(eval(deviceName + 'Launcher'))
             }</select>`;
         }
@@ -79,8 +79,8 @@ class DOMDeviceList {
         for (const [deviceName, supportedDevice] of supportedDevices) {
             dom += `<option value="${deviceName}">${supportedDevice}</option>`;
         }
-        dom += `<option value="unsupported" disabled hidden>不支持</option>
-                <option value="unknown" selected disabled hidden>未知</option>`;
+        dom += `<option value="unsupported" disabled="disabled" hidden="hidden">不支持</option>
+                <option value="unknown" selected="selected" disabled="disabled" hidden="hidden">未知</option>`;
         $('#device').html(dom);
 
         const UA = navigator.userAgent;

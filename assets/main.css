@@ -131,6 +131,7 @@ a.button {
     border: none;
     border-radius: 5px;
     text-decoration: none;
+    transition-duration: 0.15s;
 }
 
 a.button:hover {
@@ -187,6 +188,54 @@ label, div.label {
     user-select: none;
 }
 
+input[type="text"] {
+    font-size: 14px;
+    min-width: 190px;
+    line-height: 20px;
+    padding: 5px 12px;
+    border: 1px solid #30363d;
+    vertical-align: middle;
+    border-radius: 6px;
+    outline: none;
+}
+
+input[type="text"]::placeholder {
+    color: #000;
+}
+
+button {
+    color: #000;
+    background: transparent;
+    display: inline-block;
+    border: 2px solid #4290ef;
+    border-radius: 6px;
+    padding: 5px 12px;
+    font-size: 15px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    outline: none;
+}
+
+button:hover {
+    color: white;
+    background-color: #1b7eff;
+}
+
+button.disabled {
+    opacity: 0.5;
+    border: 2px solid #6a1111;
+    cursor: not-allowed;
+}
+
+button.disabled:hover {
+    opacity: 0.3;
+    color: #fff;
+    background-color: #6a1111;
+}
+
+
 select {
     background-color: #fff;
     font-size: 14px;
@@ -210,7 +259,7 @@ footer p {
     margin-bottom: 0;
 }
 
-select, option, input {
+select, option, input, button {
     background-color: transparent;
 }
 
