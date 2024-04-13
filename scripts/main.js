@@ -158,18 +158,18 @@ $('.searchable-input').typeahead(
             let URL;
             if (note == 'Wiki') URL = `https://zh.minecraft.wiki/api.php?action=opensearch&search=${search}&namespace=*&limit=11`;
             if (note == 'BWiki') URL = `https://wiki.biligame.com/mc/api.php?action=opensearch&search=${search}&namespace=*&limit=11`;
+            if (URL === void 0) return asyncResults([]);
             return $.ajax({
                 url: URL,
                 type: 'get',
                 cache: true,
-                data: {wiki: query},
+                data: {keyword: query},
                 dataType: "jsonp",
                 jsonp: "callback",
                 success: (result) => {
                     return asyncResults(result[1]);
                 }
             });
-            return asyncResults([]);
         }
     }
 );
