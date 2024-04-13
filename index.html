@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh" xmlns="http://www.w3.org/1999/html">
+<html lang="zh" style="color-scheme: light;">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=0.92, minimum-scale=0.92">
+    <meta name="viewport" content="width=device-width, initial-scale=0.92, minimum-scale=0.92">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>所见皆是Minecraft - MCiSEE</title>
     <meta property="og:type" content="website">
@@ -23,9 +22,11 @@
     <meta name="twitter:image:alt" content="所见皆是Minecraft">
     <link rel="shortcut icon" href="assets/icon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/main.css">
+    <link rel="stylesheet" href="assets/typeahead.css">
     <script src="scripts/jquery-3.7.1.min.js"></script>
     <script src="scripts/browser.min.js"></script>
     <script src="scripts/DOMConstructor.js"></script>
+    <script src="scripts/typeahead.bundle.js"></script>
     <script src="data/launcher.js"></script>
     <script src="data/searchable.js"></script>
 </head>
@@ -82,7 +83,7 @@
                     <div class="searchable-search">
                         <form class="searchable-form">
                             <label>
-                                <input class="searchable-input" type="text" placeholder=" ...">
+                                <input class="searchable-input" type="text" data-provide="typeahead" placeholder=" ...">
                                 <button class="searchable-button inline-block disabled" type="submit">搜索</button>
                             </label>
                         </form>
@@ -95,7 +96,7 @@
                     <div class="label">论坛</div>
                 </div>
             </div>
-            <div class="configure">
+            <div class="config-container">
                 <h2 class="page-title">配置</h2>
                 <label>
                     <input class="github-proxy" type="checkbox" checked="checked"> GitHub 文件使用
@@ -138,10 +139,6 @@
     </div>
 </footer>
 <script src="scripts/main.js"></script>
-<script>
-    deviceChanged();
-    searchableChanged({target: $('#searchable-list')});
-</script>
 </body>
 
 </html>

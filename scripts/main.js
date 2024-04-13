@@ -118,7 +118,7 @@ $('#searchable-list').change(searchableChanged);
 
 $('.searchable-form').submit((event) => {
     event.preventDefault();
-    const input = $('.searchable-input').val().trim()
+    const input = $('.searchable-input').val().trim();
     const search = encodeURI(input);
     console.log(searchKeyword);
     let url = searchKeyword.replace(encodeURI('<T>'), search);
@@ -127,7 +127,6 @@ $('.searchable-form').submit((event) => {
     }
     if (input != '') createSuperLabel(url, 'searchable-search');
 });
-
 $('.searchable-input').on('input', ((event) => {
     $('.searchable-button').removeClass('disabled');
     if ($('.searchable-input').val().trim() == '') {
@@ -143,8 +142,42 @@ $('.searchable-direct').change(() => {
 if (localStorage.getItem('github-proxy') == 'false') $('.github-proxy').attr('checked', false);
 if (localStorage.getItem('searchable-direct') == 'false') $('.searchable-direct').attr('checked', false);
 
+$('.searchable-input').typeahead(
+    {
+        hint: false,
+        highlight: true,
+        minLength: 1
+    },
+    {
+        name: 'searchable-data',
+        async: true,
+        limit: 10,
+        source: (query, syncResults, asyncResults) => {
+            let note = $( $('#searchable-list')[0][$('#searchable-list')[0].selectedIndex] ).attr('data-note');
+            let search = encodeURI($('.searchable-input').val().trim());
+            let URL;
+            if (note == 'Wiki') URL = `https://zh.minecraft.wiki/api.php?action=opensearch&search=${search}&namespace=*&limit=11`;
+            if (note == 'BWiki') URL = `https://wiki.biligame.com/mc/api.php?action=opensearch&search=${search}&namespace=*&limit=11`;
+            return $.ajax({
+                url: URL,
+                type: 'get',
+                cache: true,
+                data: {wiki: query},
+                dataType: "jsonp",
+                jsonp: "callback",
+                success: (result) => {
+                    return asyncResults(result[1]);
+                }
+            });
+            return asyncResults([]);
+        }
+    }
+);
+
 
 $(document).ready(() => {
+    deviceChanged();
+    searchableChanged({target: $('#searchable-list')});
     $('.wait').show();
     $('.wait').removeClass('wait');
 });
