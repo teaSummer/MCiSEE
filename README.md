@@ -86,7 +86,7 @@
 |-----------|--------|------------------------------|
 | `title`   | String | 站点名称。                        |
 | `search`  | String | 搜索后跳转的地址 URL，使用 `<T>` 表示关键词。 |
-| `note`    | String | 可选。备注。                       |
+| `note`    | String | 备注。                          |
 | `explain` | String | 可选。备注的具体含义。                  |
 | `url`     | String | 可选。站点具体地址 URL。               |
 
