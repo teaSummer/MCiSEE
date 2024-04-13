@@ -274,6 +274,10 @@ h1, h2, h3, h4, h5, h6 {
     color: #5555ff;
 }
 
+.larger {
+    font-size: larger;
+}
+
 .background {
     background-image: url('image/background.jpg');
     position: fixed;
