@@ -200,13 +200,12 @@ input[type="text"] {
 }
 
 input[type="text"]::placeholder {
-    color: #000;
+    color: rgba(0, 0, 0, 0.5);
 }
 
 button {
     color: #fff;
     background-color: #1b7eff !important;
-    display: inline-block;
     border: 2px solid #1b7eff;
     border-radius: 6px;
     padding: 5px 12px;
@@ -262,6 +261,10 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
 }
 
+.tip {
+    color: rgba(0, 0, 0, 0.5);
+}
+
 .ICP a {
     color: #7575ff;
 }
@@ -274,8 +277,8 @@ h1, h2, h3, h4, h5, h6 {
     color: #5555ff;
 }
 
-.larger {
-    font-size: larger;
+.inline-block {
+    display: inline-block !important;
 }
 
 .background {
@@ -297,13 +300,15 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0.5rem;
 }
 
+.full-name {
+    margin-left: 6px;
+    font-size: 0.75rem;
+    font-style: italic;
+}
+
 .first-title {
     margin: 1rem;
     margin-left: 0.25rem;
-}
-
-.tip {
-    color: rgba(0, 0, 0, 0.5);
 }
 
 .checkbox {
@@ -311,22 +316,20 @@ h1, h2, h3, h4, h5, h6 {
     height: 1rem;
 }
 
-.page-views-count-title {
-    margin-bottom: 16px;
-}
-
 .checkbox:checked+label::before {
     background-color: #3e97eb;
     border-color: #3e97eb;
 }
 
+.searchable-goto {
+    margin-left: 3px;
+}
+
+.page-views-count-title {
+    margin-bottom: 16px;
+}
+
 .resource-container>div+div,
 .device-container+.resource-container {
     margin-top: 1rem;
-}
-
-.full-name {
-    margin-left: 6px;
-    font-size: 0.75rem;
-    font-style: italic;
 }

@@ -9,6 +9,7 @@ const supportedDevices = [
 ];
 DOMDeviceList.show();
 
+
 const createSuperLabel = ((url, id) => {
     const a = `<a href="" target="_blank" id="${id}">`;
     $('body').after(a);
@@ -18,8 +19,6 @@ const createSuperLabel = ((url, id) => {
     aElement.remove();
 });
 
-$('.launcher-list').html(DOMLauncherList.deviceList());
-$('#searchable-list').html(DOMSearchableList.list(searchable));
 
 const deviceChanged = ((event) => {
     $('.device-diff select').each((index, element) => {
@@ -31,6 +30,9 @@ const deviceChanged = ((event) => {
     try { launcherChanged(); } catch (e) {}
 });
 $('#device').change(deviceChanged);
+
+
+$('.launcher-list').html(DOMLauncherList.deviceList());
 
 const launcherChanged = ((event) => {
     const target = $( $(event.target)[0][$(event.target)[0].selectedIndex] );
@@ -83,6 +85,7 @@ const launcherChanged = ((event) => {
 });
 $('.launcher').change(launcherChanged);
 
+
 const proxyChanged = ((event) => {
     localStorage.setItem('github-proxy', $('.github-proxy').is(':checked'));
     try {
@@ -100,29 +103,23 @@ const proxyChanged = ((event) => {
 });
 $('.github-proxy').change(proxyChanged);
 
+
+$('#searchable-list').html(DOMSearchableList.list(searchable));
+
 const searchableChanged = ((event) => {
     const target = $( $(event.target)[0][$(event.target)[0].selectedIndex] );
     searchKeyword = target.attr('data-search');
     const note = target.attr('data-note');
     const explain = target.attr('data-explain');
-    console.log(note, explain);
-    if (note) {
-        $('.searchable-label').html(`${target.attr('data-title')}（<a href="${target.attr('data-url')}" title="${explain}" target="_blank">${note} <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path></svg></a>）`);
-    }
+    $('.searchable-input').attr('placeholder', ` 从 ${note} 中搜索 ...`);
+    $('.searchable-label').html(`<a class="searchable-goto" href="${target.attr('data-url')}" title="${explain}" target="_blank">跳转 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path></svg></a>`);
 });
 $('#searchable-list').change(searchableChanged);
-
-$('.searchable-input').on('input', ((event) => {
-    $('.searchable-button').removeClass('disabled');
-    if ($('.searchable-input').val().trim() == '') {
-        $('.searchable-button').addClass('disabled');
-    }
-}));
 
 $('.searchable-form').submit((event) => {
     event.preventDefault();
     const input = $('.searchable-input').val().trim()
-    const search = encodeURI(decodeURI(input));
+    const search = encodeURI(input);
     console.log(searchKeyword);
     let url = searchKeyword.replace(encodeURI('<T>'), search);
     if ($('.searchable-direct').is(':checked') && url.indexOf('&fulltext=search') != -1) {
@@ -131,9 +128,23 @@ $('.searchable-form').submit((event) => {
     if (input != '') createSuperLabel(url, 'searchable-search');
 });
 
+$('.searchable-input').on('input', ((event) => {
+    $('.searchable-button').removeClass('disabled');
+    if ($('.searchable-input').val().trim() == '') {
+        $('.searchable-button').addClass('disabled');
+    }
+}));
+
 $('.searchable-direct').change(() => {
     localStorage.setItem('searchable-direct', $('.searchable-direct').is(':checked'));
 });
 
+
 if (localStorage.getItem('github-proxy') == 'false') $('.github-proxy').attr('checked', false);
 if (localStorage.getItem('searchable-direct') == 'false') $('.searchable-direct').attr('checked', false);
+
+
+$(document).ready(() => {
+    $('.wait').show();
+    $('.wait').removeClass('wait');
+});
