@@ -27,6 +27,7 @@
     <script src="scripts/browser.min.js"></script>
     <script src="scripts/DOMConstructor.js"></script>
     <script src="data/launcher.js"></script>
+    <script src="data/searchable.js"></script>
 </head>
 
 <body>
@@ -70,20 +71,17 @@
             </div>
             <div class="website-container">
                 <h2 class="page-title">网站</h2>
-                <div class="wiki-container">
-                    <div class="label">维基百科（<a href="https://zh.minecraft.wiki" target="_blank"
-                                                   title="中文 Minecraft Wiki">Wiki
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
-                                  fill="currentColor"></path>
-                        </svg>
-                    </a>）
-                    </div>
-                    <div class="wiki-search">
-                        <form class="wiki-form">
+                <div class="searchable-container">
+                    <div class="label">— 搜索 —</div>
+                    <label for="searchable-list">
+                        <select name="searchable-list" id="searchable-list"></select>
+                    </label>
+                    <div class="label searchable-label"></div>
+                    <div class="searchable-search">
+                        <form class="searchable-form">
                             <label>
-                                <input class="wiki-input" type="text" placeholder=" ..." required="required" pattern=".*\S">
-                                <button class="wiki-button disabled" type="submit">搜索</button>
+                                <input class="searchable-input" type="text" placeholder=" ...">
+                                <button class="searchable-button disabled" type="submit">搜索</button>
                             </label>
                         </form>
                     </div>
@@ -102,7 +100,7 @@
                     <a title="GitHub Proxy 代理加速" href="https://mirror.ghproxy.com" target="_blank">代理加速</a> 下载
                 </label>
                 <label>
-                    <input class="wiki-direct" type="checkbox" checked="checked"> Wiki 搜索后尽可能自动进入详情页
+                    <input class="searchable-direct" type="checkbox" checked="checked"> Wiki 搜索后尽可能自动进入详情页
                 </label>
             </div>
             <div class="ellipse">
@@ -138,7 +136,10 @@
     </div>
 </footer>
 <script src="scripts/main.js"></script>
-<script>deviceChanged();</script>
+<script>
+    deviceChanged();
+    searchableChanged({target: $('#searchable-list')});
+</script>
 </body>
 
 </html>

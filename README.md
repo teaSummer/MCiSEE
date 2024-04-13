@@ -1,4 +1,5 @@
 # MCiSEE
+
 ![](https://img.shields.io/badge/license-CC--BY--SA--4.0-green) [![Page Views Count](https://badges.toozhao.com/badges/01HTFPN35M6ETEFBVAP3SEWRKG/green.svg)](https://badges.toozhao.com/stats/01HTFPN35M6ETEFBVAP3SEWRKG)
 
 **所见皆是*Minecraft*，让获取MC资源更加轻便！**
@@ -11,7 +12,8 @@
 
 欢迎各位对此项目做出贡献，教程可在下方查看，Fork 后进行修改，感谢每一位贡献者的 PR！
 
-**注意：请确保您 Fork 的仓库为最新，可通过自己仓库页面的【Sync fork】更新后再提交 PR！旧版仓库的合并会带来很多麻烦，感谢您的支持！**
+**注意：请确保您 Fork 的仓库为最新，可通过自己仓库页面的【Sync fork】更新后再提交 PR！旧版仓库的合并会带来很多麻烦，感谢您的支持！
+**
 
 ## 贡献教程
 
@@ -31,7 +33,7 @@
 
 `data` 目录下的文件列表：
 
-| 文件名         | 数据含义             | 链接                     |
+| 文件名         | 数据含义             | 文件                     |
 |-------------|------------------|------------------------|
 | launcher.js | 启动器列表（**Java版**） | [查看](data/launcher.js) |
 
@@ -63,7 +65,7 @@
 
 示例如下：
 
-``` js
+``` javascript
 {
     title: "Hello Minecraft! Launcher",
     subtitle: "HMCL",
@@ -77,9 +79,24 @@
 }
 ```
 
+### searchable.js
+
+对象有以下属性：
+
+| 属性键名称     | 属性值类型  | 属性值描述                        |
+|-----------|--------|------------------------------|
+| `title`   | String | 站点名称。                        |
+| `search`  | String | 搜索后跳转的地址 URL，使用 `<T>` 表示关键词。 |
+| `note`    | String | 可选。备注。                       |
+| `explain` | String | 可选。备注的具体含义。                  |
+| `url`     | String | 可选。站点具体地址 URL。               |
+
+...
+
 ### 贡献声明
 
 若要提供启动器，请遵循以下要求：
+
 1. 启动器至今仍在更新/维护，或 `更适合旧设备`（限制 **2个/设备**）。
 2. 启动器使用人群基数大、范围广。按照主流程度排序（官方启动器优先）。
 3. 下拉菜单从上到下排序：`官方` > `国内第三方` > `网易` > `国外第三方` > `更适合旧设备`。

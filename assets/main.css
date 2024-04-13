@@ -204,10 +204,10 @@ input[type="text"]::placeholder {
 }
 
 button {
-    color: #000;
-    background: transparent;
+    color: #fff;
+    background-color: #1b7eff !important;
     display: inline-block;
-    border: 2px solid #4290ef;
+    border: 2px solid #1b7eff;
     border-radius: 6px;
     padding: 5px 12px;
     font-size: 15px;
@@ -219,20 +219,15 @@ button {
 }
 
 button:hover {
-    color: white;
-    background-color: #1b7eff;
+    opacity: 0.7 !important;
 }
 
 button.disabled {
-    opacity: 0.5;
-    border: 2px solid #6a1111;
-    cursor: not-allowed;
-}
-
-button.disabled:hover {
-    opacity: 0.3;
     color: #fff;
-    background-color: #6a1111;
+    background-color: #6a1111 !important;
+    border: 2px solid #6a1111;
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 

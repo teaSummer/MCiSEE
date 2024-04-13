@@ -1,3 +1,5 @@
+let searchKeyword = '';
+
 const supportedDevices = [
     // |   最早名称   |         显示名称         |
     [      'Android',  'Android/HarmonyOS' ],
@@ -8,17 +10,16 @@ const supportedDevices = [
 DOMDeviceList.show();
 
 const createSuperLabel = ((url, id) => {
-    let a = document.createElement("a");
-    a.setAttribute("href", url);
-    a.setAttribute("target", "_blank");
-    a.setAttribute("id", id);
-    if(!document.getElementById(id)) {
-        document.body.appendChild(a);
-    }
-    a.click();
+    const a = `<a href="" target="_blank" id="${id}">`;
+    $('body').after(a);
+    const aElement = $(`#${id}`);
+    aElement.attr('href', url);
+    aElement[0].click();
+    aElement.remove();
 });
 
 $('.launcher-list').html(DOMLauncherList.deviceList());
+$('#searchable-list').html(DOMSearchableList.list(searchable));
 
 const deviceChanged = ((event) => {
     $('.device-diff select').each((index, element) => {
@@ -83,32 +84,56 @@ const launcherChanged = ((event) => {
 $('.launcher').change(launcherChanged);
 
 const proxyChanged = ((event) => {
-    if ($('.github-proxy').is(':checked')) {
-        $('.launcher-download>a.button').each((index, element) => {
-            const link = $(element).attr('href');
-            if (link.startsWith('https://github.com/')) $(element).attr('href', 'https://mirror.ghproxy.com/' + link);
-        });
-    } else {
-        $('.launcher-download>a.button').each((index, element) => {
-            $(element).attr('href', $(element).attr('href').replace(/^https:\/\/mirror\.ghproxy\.com\//, ''));
-        });
-    }
+    localStorage.setItem('github-proxy', $('.github-proxy').is(':checked'));
+    try {
+        if ($('.github-proxy').is(':checked')) {
+            $('.launcher-download>a.button').each((index, element) => {
+                const link = $(element).attr('href');
+                if (link.startsWith('https://github.com/')) $(element).attr('href', 'https://mirror.ghproxy.com/' + link);
+            });
+        } else {
+            $('.launcher-download>a.button').each((index, element) => {
+                $(element).attr('href', $(element).attr('href').replace(/^https:\/\/mirror\.ghproxy\.com\//, ''));
+            });
+        }
+    } catch (e) {}
 });
 $('.github-proxy').change(proxyChanged);
 
-$('.wiki-input').on('input', ((event) => {
-    $('.wiki-button').removeClass('disabled');
-    if ($('.wiki-input').val().trim() == '') {
-        $('.wiki-button').addClass('disabled');
+const searchableChanged = ((event) => {
+    const target = $( $(event.target)[0][$(event.target)[0].selectedIndex] );
+    searchKeyword = target.attr('data-search');
+    const note = target.attr('data-note');
+    const explain = target.attr('data-explain');
+    console.log(note, explain);
+    if (note) {
+        $('.searchable-label').html(`${target.attr('data-title')}（<a href="${target.attr('data-url')}" title="${explain}" target="_blank">${note} <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" fill="currentColor"></path></svg></a>）`);
+    }
+});
+$('#searchable-list').change(searchableChanged);
+
+$('.searchable-input').on('input', ((event) => {
+    $('.searchable-button').removeClass('disabled');
+    if ($('.searchable-input').val().trim() == '') {
+        $('.searchable-button').addClass('disabled');
     }
 }));
 
-$('.wiki-form').submit((event) => {
+$('.searchable-form').submit((event) => {
     event.preventDefault();
-    const search = encodeURI(decodeURI($('.wiki-input').val()));
-    let url = `https://zh.minecraft.wiki/?search=${search}&title=Special%3A%E6%90%9C%E7%B4%A2&fulltext=search}`;
-    if ($('.wiki-direct').is(':checked')) {
+    const input = $('.searchable-input').val().trim()
+    const search = encodeURI(decodeURI(input));
+    console.log(searchKeyword);
+    let url = searchKeyword.replace(encodeURI('<T>'), search);
+    if ($('.searchable-direct').is(':checked') && url.indexOf('&fulltext=search') != -1) {
         url = url.replace(/&[^&]*$/, '');
     }
-    if ($('.wiki-input').val().trim() != '') createSuperLabel(url, 'wiki-search');
+    if (input != '') createSuperLabel(url, 'searchable-search');
 });
+
+$('.searchable-direct').change(() => {
+    localStorage.setItem('searchable-direct', $('.searchable-direct').is(':checked'));
+});
+
+if (localStorage.getItem('github-proxy') == 'false') $('.github-proxy').attr('checked', false);
+if (localStorage.getItem('searchable-direct') == 'false') $('.searchable-direct').attr('checked', false);

@@ -72,6 +72,55 @@ class DOMLauncherList {
     }
 }
 
+class DOMSearchableList {
+    constructor() {}
+
+    static item(item) {
+        item = {
+            title: "未命名",
+            search: "https://www.example.com",
+            note: "",
+            explain: "",
+            url: "https://www.example.com",
+            __domID: undefined,
+            __domClass: undefined,
+            ...item
+        }
+
+        let search, url;
+        try {
+            search = new URL(item.search);
+        } catch (error) {
+            search = {
+                host: item.search
+            }
+        }
+        try {
+            url = new URL(item.url);
+        } catch (error) {
+            url = {
+                host: item.url
+            }
+        }
+        const convert = (URL, arg) => ((URL == 'https://www.example.com/' || URL.host == '') ? '' : `${arg}="${URL}"`);
+        const _title = `data-title="${item.title}"`;
+        const _search = convert(search, 'data-search');
+        const _note = `data-note="${item.note}"`;
+        const _explain = `data-explain="${item.explain}"`;
+        const _url = convert(url, 'data-url');
+        const properties = `${_title} ${_search} ${_note} ${_explain} ${_url}`;
+        return `<option ${properties}>${item.title}${item.note == '' ? '' : `（${item.note}）`}</option>`;
+    }
+
+    static list(items = []) {
+        if (items.length == 0) return '<option value="?">【无】</option>';
+        let dom = '';
+        items.forEach(e => {
+            dom += DOMSearchableList.item(e);
+        });
+        return dom;
+    }
+}
 
 class DOMDeviceList {
     static show() {
