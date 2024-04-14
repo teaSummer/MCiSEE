@@ -210,7 +210,7 @@ const autoFolding = function(event) {
     };
 };
 
-let realLauncherSelect;
+let realSelect;
 const autoFoldingChanged = function() {
     localStorage.setItem('auto-folding', $('.auto-folding').is(':checked'));
     $('select.normal').off('mouseenter').off('mouseleave').attr('disabled', false);
@@ -218,14 +218,18 @@ const autoFoldingChanged = function() {
         $('select.normal').hover(
             // mouseenter - 展开
             function() {
-                realLauncherSelect = $(this).val();
+                realSelect = $(this).val();
                 $(this).removeClass('fold').addClass('unfold');
                 autoFolding({target: this});
             },
             // mouseleave - 折叠
             function() {
-                $(this).val(realLauncherSelect);
-                launcherChanged({target: this});
+                $(this).val(realSelect);
+                if ($(this)[0].id == 'device-list') {
+                    deviceChanged({target: this});
+                } else if ($(this).hasClass('launcher-list')) {
+                    launcherChanged({target: this});
+                }
                 $(this).removeClass('unfold').addClass('fold');
                 autoFolding({target: this});
             }
@@ -245,7 +249,7 @@ $('.launcher-list option').mouseenter(function() {
 });
 $('select.normal option').click(function() {
     const parent = $(this).parent();
-    realLauncherSelect = $(parent).val();
+    realSelect = $(parent).val();
     parent.removeClass('unfold').addClass('fold');
     autoFolding({target: parent});
 });
