@@ -240,6 +240,11 @@ select {
     border-radius: 6px;
     vertical-align: middle;
     outline: none;
+    overflow-y: auto;
+}
+
+option:checked {
+    font-weight: bold;
 }
 
 footer {
@@ -275,6 +280,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .ICP a:active {
     color: #5555ff;
+}
+
+.min-width-215 {
+    min-width: 215px;
 }
 
 .inline-block {

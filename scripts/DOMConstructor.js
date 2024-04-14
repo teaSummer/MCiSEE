@@ -41,7 +41,9 @@ class DOMLauncherList {
                 host: item.url
             }
         }
-        const convert = (URL, arg) => ((URL == 'https://www.example.com/' || URL.host == '') ? '' : `${arg}="${URL}"`);
+        const convert = function(URL, arg) {
+            return (URL == 'https://www.example.com/' || URL.host == '') ? '' : `${arg}="${URL}"`;
+        };
         const _title = `data-title="${item.title}"`;
         const _download = convert(download, 'data-download');
         const _devDownload = convert(devDownload, 'data-dev-download');
@@ -55,7 +57,7 @@ class DOMLauncherList {
     static deviceList(target = '') {
         let dom = '';
         for (const [deviceName, supportedDevice] of supportedDevices) {
-            dom += `<select name="launcher" class="launcher ${deviceName}" hidden="hidden">${
+            dom += `<select name="launcher" class="launcher ${deviceName} fold" hidden="hidden">${
                 this.list(eval(deviceName + 'Launcher'))
             }</select>`;
         }
@@ -65,7 +67,7 @@ class DOMLauncherList {
     static list(items = []) {
         if (items.length == 0) return '<option value="?">【无】</option>';
         let dom = '<option value="?">【待选择】</option>';
-        items.forEach(e => {
+        items.forEach(function(e) {
             dom += DOMLauncherList.item(e);
         });
         return dom;
@@ -102,7 +104,9 @@ class DOMSearchableList {
                 host: item.url
             }
         }
-        const convert = (URL, arg) => ((URL == 'https://www.example.com/' || URL.host == '') ? '' : `${arg}="${URL}"`);
+        const convert = function(URL, arg) {
+            return (URL == 'https://www.example.com/' || URL.host == '') ? '' : `${arg}="${URL}"`;
+        };
         const _title = `data-title="${item.title}"`;
         const _search = convert(search, 'data-search');
         const _note = `data-note="${item.note}"`;
@@ -115,7 +119,7 @@ class DOMSearchableList {
     static list(items = []) {
         if (items.length == 0) return '<option value="?">【无】</option>';
         let dom = '';
-        items.forEach(e => {
+        items.forEach(function(e) {
             dom += DOMSearchableList.item(e);
         });
         return dom;
@@ -130,10 +134,10 @@ class DOMDeviceList {
         }
         dom += `<option value="unsupported" disabled="disabled" hidden="hidden">不支持</option>
                 <option value="unknown" selected="selected" disabled="disabled" hidden="hidden">未知</option>`;
-        $('#device').html(dom);
+        $('#device-list').html(dom);
 
         const UA = navigator.userAgent;
-        const getDevice = (() => {
+        const getDevice = function() {
             const device = browser();
             switch (device.system) {
                 case 'HarmonyOS':
@@ -153,17 +157,17 @@ class DOMDeviceList {
                 default:
                     return 'unsupported';
             }
-        });
+        };
 
-        const toHide = 6;
-        $('#device').change(() => {
+        const toHide = 3;
+        $('#device-list').change(function() {
             $('.resource-container').show();
-            if ($('#device')[0].selectedIndex > toHide) {
+            if ($(this)[0].selectedIndex > toHide) {
                 $('.resource-container').hide();
             }
         });
-        $('#device').val(getDevice());
-        if ($('#device')[0].selectedIndex > toHide) {
+        $('#device-list').val(getDevice());
+        if ($('#device-list')[0].selectedIndex > toHide) {
             $('.resource-container').hide();
         }
     }
