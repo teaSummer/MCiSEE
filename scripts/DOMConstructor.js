@@ -57,7 +57,7 @@ class DOMLauncherList {
     static deviceList(target = '') {
         let dom = '';
         for (const [deviceName, supportedDevice] of supportedDevices) {
-            dom += `<select name="launcher-list" class="launcher-list ${deviceName} fold" style="display: none;">${
+            dom += `<select name="launcher-list" class="launcher-list ${deviceName} normal fold" style="display: none;">${
                 this.list(eval(deviceName + 'Launcher'))
             }</select>`;
         }

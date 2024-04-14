@@ -10,8 +10,8 @@
     --ant-color-error: #ff4d4f;
     --ant-color-info: #1677ff;
     --ant-color-link: #1677ff;
-    --ant-color-text-base: #000;
-    --ant-color-bg-base: #fff;
+    --ant-color-text-base: #000000;
+    --ant-color-bg-base: #ffffff;
 
     --ant-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     --ant-font-family-code: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
@@ -27,7 +27,7 @@
     --ant-color-text-heading: rgba(0, 0, 0, 0.88);
     --ant-color-text-label: rgba(0, 0, 0, 0.65);
     --ant-color-text-description: rgba(0, 0, 0, 0.45);
-    --ant-color-text-light-solid: #fff;
+    --ant-color-text-light-solid: #ffffff;
 
     --ant-color-fill: rgba(0, 0, 0, 0.15);
     --ant-color-fill-secondary: rgba(0, 0, 0, 0.06);
@@ -122,7 +122,7 @@ a:active {
 }
 
 a.button {
-    color: #fff;
+    color: #ffffff;
     background-color: #1f6feb;
     display: inline-block;
     font-size: 1rem;
@@ -204,7 +204,7 @@ input[type="text"]::placeholder {
 }
 
 button {
-    color: #fff;
+    color: #ffffff;
     background-color: #1b7eff !important;
     border: 2px solid #1b7eff;
     border-radius: 6px;
@@ -222,7 +222,7 @@ button:hover {
 }
 
 button.disabled {
-    color: #fff;
+    color: #ffffff;
     background-color: #6a1111 !important;
     border: 2px solid #6a1111;
     opacity: 0.5;
@@ -231,7 +231,7 @@ button.disabled {
 
 
 select {
-    background-color: #fff;
+    background-color: #ffffff;
     font-size: 14px;
     min-width: 200px;
     line-height: 20px;
@@ -241,6 +241,11 @@ select {
     vertical-align: middle;
     outline: none;
     overflow-y: auto;
+}
+
+select:disabled, select:disabled option {
+    color: #000000;
+    opacity: 1;
 }
 
 option:checked {

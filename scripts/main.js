@@ -210,22 +210,27 @@ const autoFolding = function(event) {
     };
 };
 
+let realLauncherSelect;
 const autoFoldingChanged = function() {
     localStorage.setItem('auto-folding', $('.auto-folding').is(':checked'));
-    $('select').off('mouseenter').off('mouseleave');
+    $('select.normal').off('mouseenter').off('mouseleave').attr('disabled', false);
     if ($('.auto-folding').is(':checked')) {
-        $('select').hover(
+        $('select.normal').hover(
+            // mouseenter - 展开
             function() {
-                if ($(this).hasClass('keep')) return;
+                realLauncherSelect = $(this).val();
                 $(this).removeClass('fold').addClass('unfold');
                 autoFolding({target: this});
             },
+            // mouseleave - 折叠
             function() {
-                if ($(this).hasClass('keep')) return;
+                $(this).val(realLauncherSelect);
+                launcherChanged({target: this});
                 $(this).removeClass('unfold').addClass('fold');
                 autoFolding({target: this});
             }
         );
+        $('select.normal').attr('disabled', true);
     };
 };
 $('#device-list option').mouseenter(function() {
@@ -238,12 +243,11 @@ $('.launcher-list option').mouseenter(function() {
     parent.val($(this).val());
     launcherChanged({target: parent});
 });
-$('option').click(function() {
+$('select.normal option').click(function() {
     const parent = $(this).parent();
-    if (!$(parent).hasClass('keep')) {
-        parent.removeClass('unfold').addClass('fold');
-        autoFolding({target: parent});
-    }
+    realLauncherSelect = $(parent).val();
+    parent.removeClass('unfold').addClass('fold');
+    autoFolding({target: parent});
 });
 $('.auto-folding').change(autoFoldingChanged);
 
