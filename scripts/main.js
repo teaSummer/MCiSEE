@@ -241,6 +241,7 @@ $('#device-list option').mouseenter(function() {
     const parent = $(this).parent();
     parent.val($(this).val());
     deviceChanged({target: parent});
+    launcherChanged({target: $('.launcher-list')});
 });
 $('select.launcher-list option').mouseenter(function() {
     const parent = $(this).parent();
