@@ -33,7 +33,7 @@ const deviceChanged = function() {
 $('#device-list').change(deviceChanged);
 
 
-$('.launcher-list').html(DOMLauncherList.deviceList());
+$('div.launcher-list').html(DOMLauncherList.deviceList());
 
 const launcherChanged = function(event) {
     const target = $( $(event.target)[0][$(event.target)[0].selectedIndex] );
@@ -82,7 +82,7 @@ const launcherChanged = function(event) {
         };
     };
 };
-$('.launcher-list').change(launcherChanged);
+$('select.launcher-list').change(launcherChanged);
 
 
 const proxyChanged = function() {
@@ -242,7 +242,7 @@ $('#device-list option').mouseenter(function() {
     parent.val($(this).val());
     deviceChanged({target: parent});
 });
-$('.launcher-list option').mouseenter(function() {
+$('select.launcher-list option').mouseenter(function() {
     const parent = $(this).parent();
     parent.val($(this).val());
     launcherChanged({target: parent});
