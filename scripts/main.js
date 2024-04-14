@@ -35,8 +35,8 @@ $('#device-list').change(deviceChanged);
 
 $('.launcher-list').html(DOMLauncherList.deviceList());
 
-const launcherChanged = function() {
-    const target = $( $(this)[0][$(this)[0].selectedIndex] );
+const launcherChanged = function(event) {
+    const target = $( $(event.target)[0][$(event.target)[0].selectedIndex] );
     const dataTitle = target.attr('data-title');
     $('.launcher-title').text('');
     if (dataTitle && dataTitle != target.val()) {
@@ -82,7 +82,7 @@ const launcherChanged = function() {
         };
     };
 };
-$('.launcher').change(launcherChanged);
+$('.launcher-list').change(launcherChanged);
 
 
 const proxyChanged = function() {
@@ -212,7 +212,7 @@ const autoFolding = function(event) {
 
 const autoFoldingChanged = function() {
     localStorage.setItem('auto-folding', $('.auto-folding').is(':checked'));
-    $('select').off('mouseenter mouseleave');
+    $('select').off('mouseenter').off('mouseleave');
     if ($('.auto-folding').is(':checked')) {
         $('select').hover(
             function() {
@@ -228,6 +228,23 @@ const autoFoldingChanged = function() {
         );
     };
 };
+$('#device-list option').mouseenter(function() {
+    const parent = $(this).parent();
+    parent.val($(this).val());
+    deviceChanged({target: parent});
+});
+$('.launcher-list option').mouseenter(function() {
+    const parent = $(this).parent();
+    parent.val($(this).val());
+    launcherChanged({target: parent});
+});
+$('option').click(function() {
+    const parent = $(this).parent();
+    if (!$(parent).hasClass('keep')) {
+        parent.removeClass('unfold').addClass('fold');
+        autoFolding({target: parent});
+    }
+});
 $('.auto-folding').change(autoFoldingChanged);
 
 $(document).ready(function() {
