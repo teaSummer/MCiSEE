@@ -120,7 +120,6 @@ $('.searchable-form').submit((event) => {
     event.preventDefault();
     const input = $('.searchable-input').val().trim();
     const search = encodeURI(input);
-    console.log(searchKeyword);
     let url = searchKeyword.replace(encodeURI('<T>'), search);
     if ($('.searchable-direct').is(':checked') && url.indexOf('&fulltext=search') != -1) {
         url = url.replace(/&[^&]*$/, '');
@@ -142,6 +141,7 @@ $('.searchable-direct').change(() => {
 if (localStorage.getItem('github-proxy') == 'false') $('.github-proxy').attr('checked', false);
 if (localStorage.getItem('searchable-direct') == 'false') $('.searchable-direct').attr('checked', false);
 
+$.support.cors = true;
 $('.searchable-input').typeahead(
     {
         hint: false,
@@ -156,16 +156,22 @@ $('.searchable-input').typeahead(
             let note = $( $('#searchable-list')[0][$('#searchable-list')[0].selectedIndex] ).attr('data-note');
             let search = encodeURI($('.searchable-input').val().trim());
             let URL;
-            if (note == 'Wiki') URL = `https://zh.minecraft.wiki/api.php?action=opensearch&search=${search}&namespace=*&limit=11`;
-            if (note == 'BWiki') URL = `https://wiki.biligame.com/mc/api.php?action=opensearch&search=${search}&namespace=*&limit=11`;
-            if (URL === void 0) return asyncResults([]);
+            switch (note) {
+                case 'Wiki':
+                    URL = `https://zh.minecraft.wiki/api.php?action=opensearch&search=${search}&namespace=*&limit=11`;
+                    break;
+                case 'BWiki':
+                    URL = `https://wiki.biligame.com/mc/api.php?action=opensearch&search=${search}&namespace=*&limit=11`;
+                    break;
+                default:
+                    return asyncResults([]);
+            }
             return $.ajax({
                 url: URL,
                 type: 'get',
                 cache: true,
                 data: {keyword: query},
                 dataType: "jsonp",
-                jsonp: "callback",
                 success: (result) => {
                     return asyncResults(result[1]);
                 }
