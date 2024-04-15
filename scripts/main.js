@@ -176,10 +176,10 @@ $('.searchable-input').typeahead(
                 let URL;
                 switch (note) {
                     case 'Wiki':
-                        URL = `https://zh.minecraft.wiki/api.php?action=opensearch&search=${search}&namespace=*&limit=11`;
+                        URL = `https://zh.minecraft.wiki/api.php?action=opensearch&search=${search}&limit=11`;
                         break;
                     case 'BWiki':
-                        URL = `https://wiki.biligame.com/mc/api.php?action=opensearch&search=${search}&namespace=*&limit=11`;
+                        URL = `https://wiki.biligame.com/mc/api.php?action=opensearch&search=${search}&limit=11`;
                         break;
                     default:
                         return asyncResults([]);
