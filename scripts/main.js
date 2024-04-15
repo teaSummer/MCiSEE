@@ -20,6 +20,10 @@ const createSuperLabel = function(url, id) {
     aElement.remove();
 };
 
+const checkedOption = function(selectElement) {
+    return $( $(selectElement)[0][$(selectElement)[0].selectedIndex] );
+};
+
 
 const deviceChanged = function() {
     $('.device-diff select').each(function(index, element) {
@@ -36,15 +40,15 @@ $('#device-list').change(deviceChanged);
 $('div.launcher-list').html(DOMLauncherList.deviceList());
 
 const launcherChanged = function(event) {
-    const target = $( $(event.target)[0][$(event.target)[0].selectedIndex] );
-    const dataTitle = target.attr('data-title');
+    const checked = checkedOption(event.target);
+    const dataTitle = checked.attr('data-title');
     $('.launcher-title').text('');
-    if (dataTitle && dataTitle != target.val()) {
+    if (dataTitle && dataTitle != checked.val()) {
         $('.launcher-title').text(dataTitle);
     };
     for (const attribute of ['data-download', 'data-dev-download', 'data-url']) {
         const button = $(`.${attribute}-launcher`);
-        let URL = target.attr(attribute);
+        let URL = checked.attr(attribute);
         if (attribute.endsWith('download')) {
             if ($('.github-proxy').is(':checked') && String(URL).startsWith('https://github.com/')) {
                 URL = 'https://mirror.ghproxy.com/' + URL;
@@ -57,7 +61,7 @@ const launcherChanged = function(event) {
                 };
             };
             if (attribute == 'data-download') {
-                const version = target.attr('data-version');
+                const version = checked.attr('data-version');
                 button.html(downloadSVG + '下载最新稳定版');
                 button.attr('title', '下载尽可能新的稳定正式版');
                 if (version != 'latest') {
@@ -66,7 +70,7 @@ const launcherChanged = function(event) {
                 };
                 emptyrm(version);
             } else {
-                const devVersion = target.attr('data-dev-version');
+                const devVersion = checked.attr('data-dev-version');
                 button.html(downloadSVG + '下载最新开发版');
                 button.attr('title', '下载尽可能新的开发测试版');
                 if (devVersion != 'latest') {
@@ -106,12 +110,12 @@ $('.github-proxy').change(proxyChanged);
 $('#searchable-list').html(DOMSearchableList.list(searchable));
 
 const searchableChanged = function(event) {
-    const target = $( $(event.target)[0][$(event.target)[0].selectedIndex] );
-    searchKeyword = target.attr('data-search');
-    const note = target.attr('data-note');
-    const explain = target.attr('data-explain');
+    const checked = checkedOption(event.target);
+    searchKeyword = checked.attr('data-search');
+    const note = checked.attr('data-note');
+    const explain = checked.attr('data-explain');
     $('.searchable-input').attr('placeholder', ` 从 ${note} 中搜索 ...`);
-    $('.searchable-label').html(`<a class="searchable-goto" href="${target.attr('data-url')}" title="${explain}" target="_blank">跳转 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path></svg></a>`);
+    $('.searchable-label').html(`<a class="searchable-goto" href="${checked.attr('data-url')}" title="${explain}" target="_blank">跳转 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path></svg></a>`);
 };
 $('#searchable-list').change(searchableChanged);
 
@@ -167,7 +171,7 @@ $('.searchable-input').typeahead(
         source: function(query, syncResults, asyncResults) {
             setTimeout(function() {
                 if (!searchableComposition) return asyncResults([]);
-                let note = $( $('#searchable-list')[0][$('#searchable-list')[0].selectedIndex] ).attr('data-note');
+                let note = checkedOption('#searchable-list').attr('data-note');
                 let search = encodeURI($('.searchable-input').val().trim());
                 let URL;
                 switch (note) {
@@ -219,7 +223,7 @@ const autoFoldingChanged = function() {
             // mouseenter - 展开
             function() {
                 if ($('select.normal.unfold').length > 0) return;
-                const setBold = $( $(this)[0][$(this)[0].selectedIndex] ).text();
+                const setBold = checkedOption(this).text();
                 realSelect = $(this).val();
                 $(this).children().removeClass('bold');
                 $(this).find(`option:contains(${setBold})`).map(function() {
