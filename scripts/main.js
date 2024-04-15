@@ -219,7 +219,12 @@ const autoFoldingChanged = function() {
             // mouseenter - 展开
             function() {
                 if ($('select.normal.unfold').length > 0) return;
+                const setBold = $( $(this)[0][$(this)[0].selectedIndex] ).text();
                 realSelect = $(this).val();
+                $(this).children().removeClass('bold');
+                $(this).find(`option:contains(${setBold})`).map(function() {
+                    if ($(this).text() == setBold) $(this).addClass('bold');
+                });
                 $(this).removeClass('fold').addClass('unfold');
                 autoFolding({target: this});
             },
