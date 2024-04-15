@@ -22,6 +22,7 @@ const createSuperLabel = function(url, id) {
 
 
 const deviceChanged = function() {
+    if ($('select.normal.unfold').length > 0) return;
     $('.device-diff select').each(function(index, element) {
         $(element).hide();
         const select = $('.' + $('#device-list').val());
@@ -218,12 +219,14 @@ const autoFoldingChanged = function() {
         $('select.normal').hover(
             // mouseenter - 展开
             function() {
+                if ($('select.normal.unfold').length > 0) return;
                 realSelect = $(this).val();
                 $(this).removeClass('fold').addClass('unfold');
                 autoFolding({target: this});
             },
             // mouseleave - 折叠
             function() {
+                if ($('select.normal.unfold').length != 1) return;
                 $(this).val(realSelect);
                 if ($(this)[0].id == 'device-list') {
                     deviceChanged({target: this});
