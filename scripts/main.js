@@ -22,7 +22,6 @@ const createSuperLabel = function(url, id) {
 
 
 const deviceChanged = function() {
-    if ($('select.normal.unfold').length > 0) return;
     $('.device-diff select').each(function(index, element) {
         $(element).hide();
         const select = $('.' + $('#device-list').val());
