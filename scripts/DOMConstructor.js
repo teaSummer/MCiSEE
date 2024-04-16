@@ -80,8 +80,8 @@ class DOMSearchableList {
     static item(item) {
         item = {
             title: "未命名",
+            subtitle: item.title,
             search: "https://www.example.com",
-            note: "",
             explain: "",
             url: "https://www.example.com",
             __domID: undefined,
@@ -109,11 +109,11 @@ class DOMSearchableList {
         };
         const _title = `data-title="${item.title}"`;
         const _search = convert(search, 'data-search');
-        const _note = `data-note="${item.note}"`;
+        const _subtitle = `data-subtitle="${item.subtitle}"`;
         const _explain = `data-explain="${item.explain}"`;
         const _url = convert(url, 'data-url');
-        const properties = `${_title} ${_search} ${_note} ${_explain} ${_url}`;
-        return `<option ${properties}>${item.title}${item.note == '' ? '' : `（${item.note}）`}</option>`;
+        const properties = `${_title} ${_search} ${_subtitle} ${_explain} ${_url}`;
+        return `<option ${properties}>${item.title}${item.subtitle == '' || item.subtitle == item.title ? '' : ` (${item.subtitle})`}</option>`;
     }
 
     static list(items = []) {

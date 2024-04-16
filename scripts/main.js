@@ -112,9 +112,9 @@ $('#searchable-list').html(DOMSearchableList.list(searchable));
 const searchableChanged = function(event) {
     const checked = checkedOption(event.target);
     searchKeyword = checked.attr('data-search');
-    const note = checked.attr('data-note');
+    const subtitle = checked.attr('data-subtitle');
     const explain = checked.attr('data-explain');
-    $('.searchable-input').attr('placeholder', ` 从 ${note} 中搜索 ...`);
+    $('.searchable-input').attr('placeholder', ` 从 ${subtitle} 中搜索 ...`);
     $('.searchable-label').html(`<a class="searchable-goto" href="${checked.attr('data-url')}" title="${explain}" target="_blank">跳转 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path></svg></a>`);
 };
 $('#searchable-list').change(searchableChanged);
@@ -124,7 +124,7 @@ $('.searchable-form').submit(function(event) {
     const input = $('.searchable-input').val().trim();
     const search = encodeURI(input);
     let url = searchKeyword.replace(encodeURI('<T>'), search);
-    if ($('.searchable-direct').is(':checked') && url.indexOf('&fulltext=search') != -1) {
+    if ($('.searchable-direct').is(':checked') && url.indexOf('&fulltext=') != -1) {
         url = url.replace(/&[^&]*$/, '');
     };
     if (input != '') createSuperLabel(url, 'searchable-search');
@@ -171,10 +171,10 @@ $('.searchable-input').typeahead(
         source: function(query, syncResults, asyncResults) {
             setTimeout(function() {
                 if (!searchableComposition) return asyncResults([]);
-                let note = checkedOption('#searchable-list').attr('data-note');
+                let subtitle = checkedOption('#searchable-list').attr('data-subtitle');
                 let search = encodeURI($('.searchable-input').val().trim());
                 let URL;
-                switch (note) {
+                switch (subtitle) {
                     case 'Wiki':
                         URL = `https://zh.minecraft.wiki/api.php?action=opensearch&search=${search}&limit=11`;
                         break;
