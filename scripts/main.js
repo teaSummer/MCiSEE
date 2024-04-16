@@ -181,6 +181,12 @@ $('.searchable-input').typeahead(
                     case 'BWiki':
                         URL = `https://wiki.biligame.com/mc/api.php?action=opensearch&search=${search}&limit=11`;
                         break;
+                    case 'MineWiki':
+                        URL = `https://minewiki.net/api.php?action=opensearch&search=${search}&limit=11`;
+                        break;
+                    case 'MinePlugin':
+                        URL = `https://mineplugin.org/api.php?action=opensearch&search=${search}&limit=11`;
+                        break;
                     default:
                         return asyncResults([]);
                 };
@@ -191,7 +197,10 @@ $('.searchable-input').typeahead(
                     data: {keyword: query},
                     dataType: "jsonp",
                     success: function(result) {
-                        return asyncResults(result[1]);
+                        if (result.length > 1 && Array.isArray(result[1])) {
+                            result = result[1];
+                        };
+                        return asyncResults(result);
                     }
                 }, 0);
             });

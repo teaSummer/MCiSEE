@@ -9,7 +9,7 @@ const AndroidLauncher = [
     },
     {
         title: "PojavLauncher",
-        download: "https://lz.qaiu.top/parser?url=https://www.ilanzou.com/s/Hug7vE",
+        download: "https://lz.qaiu.top/parser?url=https://share.feijipan.com/s/xpA9fMeC",
         version: "Edelweiss",
         url: "https://github.com/PojavLauncherTeam/PojavLauncher"
     },
@@ -105,7 +105,7 @@ const WindowsLauncher = [
     {
         title: "Plain Craft Launcher 1",
         subtitle: "PCL1",
-        download: "https://lz.qaiu.top/parser?url=https://www.ilanzou.com/s/TsX7sCZ",
+        download: "https://lz.qaiu.top/parser?url=https://indragon.lanzoue.com/iPF341vfkzsb&pwd=pcl1",
         version: "1.0.9",
         url: "https://gitee.com/Cmbself/PCL1"
     }
