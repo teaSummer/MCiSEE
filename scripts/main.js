@@ -113,9 +113,9 @@ const searchableChanged = function(event) {
     const checked = checkedOption(event.target);
     searchKeyword = checked.attr('data-search');
     const subtitle = checked.attr('data-subtitle');
-    const explain = checked.attr('data-explain');
+    const note = checked.attr('data-note');
     $('.searchable-input').attr('placeholder', ` 从 ${subtitle} 中搜索 ...`);
-    $('.searchable-label').html(`<a class="searchable-goto" href="${checked.attr('data-url')}" title="${explain}" target="_blank">跳转 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path></svg></a>`);
+    $('.searchable-label').html(`<a class="searchable-goto" href="${checked.attr('data-url')}" title="${note}" target="_blank">跳转 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path></svg></a>`);
 };
 $('#searchable-list').change(searchableChanged);
 
