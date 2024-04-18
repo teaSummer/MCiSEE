@@ -95,10 +95,10 @@
 
 ``` javascript
 {
-    title: "维基百科",
+    title: "维基百科: 原站",
+    subtitle: "Wiki",
     search: "https://zh.minecraft.wiki/?search=<T>&title=Special%3A%E6%90%9C%E7%B4%A2&fulltext=search",
-    note: "Wiki",
-    explain: "中文 Minecraft Wiki",
+    note: "中文 Minecraft Wiki",
     url: "https://zh.minecraft.wiki"
 }
 ```
