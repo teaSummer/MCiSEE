@@ -1,5 +1,5 @@
 class DOMLauncherList {
-    constructor() {}
+    constructor() {};
 
     static item(item) {
         item = {
@@ -15,7 +15,7 @@ class DOMLauncherList {
             __domID: undefined,
             __domClass: undefined,
             ...item
-        }
+        };
 
         let download, devDownload, url;
         const version = item.version;
@@ -25,22 +25,22 @@ class DOMLauncherList {
         } catch (error) {
             download = {
                 host: item.download
-            }
-        }
+            };
+        };
         try {
             devDownload = new URL(item.dev.download);
         } catch (error) {
             devDownload = {
                 host: item.dev.download
-            }
-        }
+            };
+        };
         try {
             url = new URL(item.url);
         } catch (error) {
             url = {
                 host: item.url
-            }
-        }
+            };
+        };
         const convert = function(URL, arg) {
             return (URL == 'https://www.example.com/' || URL.host == '') ? '' : `${arg}="${URL}"`;
         };
@@ -52,7 +52,7 @@ class DOMLauncherList {
         const _devVersion = (devVersion == '1.0.x.x' ? '' : `data-dev-version="${devVersion}"`);
         const properties = `${_title} ${_download} ${_devDownload} ${_version} ${_devVersion} ${_url}`;
         return `<option ${properties}>${item.subtitle}</option>`;
-    }
+    };
 
     static deviceList(target = '') {
         let dom = '';
@@ -60,9 +60,9 @@ class DOMLauncherList {
             dom += `<select name="launcher-list" class="launcher-list ${deviceName} normal fold" style="display: none;">${
                 this.list(eval(deviceName + 'Launcher'))
             }</select>`;
-        }
+        };
         return dom;
-    }
+    };
 
     static list(items = []) {
         if (items.length == 0) return '<option value="?">【无】</option>';
@@ -71,11 +71,11 @@ class DOMLauncherList {
             dom += DOMLauncherList.item(e);
         });
         return dom;
-    }
-}
+    };
+};
 
 class DOMSearchableList {
-    constructor() {}
+    constructor() {};
 
     static item(item) {
         item = {
@@ -87,7 +87,7 @@ class DOMSearchableList {
             __domID: undefined,
             __domClass: undefined,
             ...item
-        }
+        };
 
         let search, url;
         try {
@@ -95,15 +95,15 @@ class DOMSearchableList {
         } catch (error) {
             search = {
                 host: item.search
-            }
-        }
+            };
+        };
         try {
             url = new URL(item.url);
         } catch (error) {
             url = {
                 host: item.url
-            }
-        }
+            };
+        };
         const convert = function(URL, arg) {
             return (URL == 'https://www.example.com/' || URL.host == '') ? '' : `${arg}="${URL}"`;
         };
@@ -114,7 +114,7 @@ class DOMSearchableList {
         const _url = convert(url, 'data-url');
         const properties = `${_title} ${_search} ${_subtitle} ${_note} ${_url}`;
         return `<option ${properties}>${item.title}${item.subtitle == '' || item.subtitle == item.title ? '' : ` (${item.subtitle})`}</option>`;
-    }
+    };
 
     static list(items = []) {
         if (items.length == 0) return '<option value="?">【无】</option>';
@@ -123,15 +123,17 @@ class DOMSearchableList {
             dom += DOMSearchableList.item(e);
         });
         return dom;
-    }
-}
+    };
+};
 
 class DOMDeviceList {
+    constructor() {};
+
     static show() {
         let dom = '';
         for (const [deviceName, supportedDevice] of supportedDevices) {
             dom += `<option value="${deviceName}">${supportedDevice}</option>`;
-        }
+        };
         dom += `<option value="unsupported" disabled="disabled" hidden="hidden">不支持</option>
                 <option value="unknown" selected="selected" disabled="disabled" hidden="hidden">未知</option>`;
         $('#device-list').html(dom);
@@ -156,7 +158,7 @@ class DOMDeviceList {
                     return 'Windows';
                 default:
                     return 'unsupported';
-            }
+            };
         };
 
         const toHide = 3;
@@ -164,11 +166,11 @@ class DOMDeviceList {
             $('.resource-container').show();
             if ($(this)[0].selectedIndex > toHide) {
                 $('.resource-container').hide();
-            }
+            };
         });
         $('#device-list').val(getDevice());
         if ($('#device-list')[0].selectedIndex > toHide) {
             $('.resource-container').hide();
-        }
-    }
-}
+        };
+    };
+};

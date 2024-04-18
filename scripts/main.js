@@ -1,7 +1,7 @@
 let searchKeyword = '';
 
 const supportedDevices = [
-    // |   最早名称   |         显示名称         |
+    // |   最早名称   |       显示名称       |
     [      'Android',  'Android/HarmonyOS' ],
     [          'iOS',  'iOS/iPad'          ],
     [      'Windows',  'Windows'           ],
