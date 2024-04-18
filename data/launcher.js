@@ -3,8 +3,8 @@ const AndroidLauncher = [
     {
         title: "Fold Craft Launcher",
         subtitle: "FCL",
-        download: "https://github.com/FCL-Team/FoldCraftLauncher/releases/download/1.1.6/FCL-release-1.1.6-all.apk",
-        version: "1.1.6",
+        download: "https://github.com/FCL-Team/FoldCraftLauncher/releases/download/1.1.6.1/FCL-release-1.1.6.1-all.apk",
+        version: "1.1.6.1",
         url: "https://github.com/FCL-Team/FoldCraftLauncher"
     },
     {
@@ -53,8 +53,8 @@ const WindowsLauncher = [
         version: "3.5.7",
         url: "https://github.com/HMCL-dev/HMCL",
         dev: {
-            download: "https://github.com/HMCL-dev/HMCL/releases/download/v3.5.7.245/HMCL-3.5.7.245.exe",
-            version: "3.5.7.245"
+            download: "https://github.com/HMCL-dev/HMCL/releases/download/v3.5.7.246/HMCL-3.5.7.246.exe",
+            version: "3.5.7.246"
         }
     },
     {
@@ -79,8 +79,8 @@ const WindowsLauncher = [
     {
         title: "X Minecraft Launcher",
         subtitle: "XMCL",
-        download: "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.43.3/xmcl-0.43.3-win32-x64.zip",
-        version: "0.43.3",
+        download: "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.44.0/xmcl-0.44.0-win32-x64.zip",
+        version: "0.44.0",
         url: "https://github.com/voxelum/x-minecraft-launcher"
     },
     {
@@ -126,8 +126,8 @@ const macOSLauncher = [
         version: "3.5.7",
         url: "https://github.com/HMCL-dev/HMCL",
         dev: {
-            download: "https://github.com/HMCL-dev/HMCL/releases/download/v3.5.7.245/HMCL-3.5.7.245.jar",
-            version: "3.5.7.245"
+            download: "https://github.com/HMCL-dev/HMCL/releases/download/v3.5.7.246/HMCL-3.5.7.246.jar",
+            version: "3.5.7.246"
         }
     },
     {
@@ -139,8 +139,8 @@ const macOSLauncher = [
     {
         title: "X Minecraft Launcher",
         subtitle: "XMCL",
-        download: "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.43.3/xmcl-0.43.3.dmg",
-        version: "0.43.3",
+        download: "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.44.0/xmcl-0.44.0.dmg",
+        version: "0.44.0",
         url: "https://github.com/voxelum/x-minecraft-launcher"
     },
     {
