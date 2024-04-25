@@ -182,7 +182,7 @@ div+hr {
     margin: 24px 0;
 }
 
-label, div.label {
+label, .label {
     display: block;
     margin: 0.25rem 0;
     user-select: none;
