@@ -40,6 +40,13 @@ const searchable = [
         url: "https://ca.projectxero.top/idlist/#release-vanilla/global/"
     },
     {
+        title: "Java版ID表",
+        subtitle: "MCID",
+        search: "http://mcid.lingningyu.cn/?searchName=<T>",
+        note: "我的世界方块与物品ID表 JE1.20 - 伶宁域",
+        url: "http://mcid.lingningyu.cn"
+    },
+    {
         title: "开发者百科",
         subtitle: "MineWiki",
         search: "https://minewiki.net/index.php?search=<T>&title=%E7%89%B9%E6%AE%8A%3A%E6%90%9C%E7%B4%A2&fulltext=1",

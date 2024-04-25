@@ -173,36 +173,30 @@ $('.searchable-input').typeahead(
                 if (!searchableComposition) return asyncResults([]);
                 let subtitle = checkedOption('#searchable-list').attr('data-subtitle');
                 let search = encodeURI($('.searchable-input').val().trim());
-                let URL;
-                switch (subtitle) {
-                    case 'Wiki':
-                        URL = `https://zh.minecraft.wiki/api.php?action=opensearch&search=${search}&limit=11`;
-                        break;
-                    case 'BWiki':
-                        URL = `https://wiki.biligame.com/mc/api.php?action=opensearch&search=${search}&limit=11`;
-                        break;
-                    case 'MineWiki':
-                        URL = `https://minewiki.net/api.php?action=opensearch&search=${search}&limit=11`;
-                        break;
-                    case 'MinePlugin':
-                        URL = `https://mineplugin.org/api.php?action=opensearch&search=${search}&limit=11`;
-                        break;
-                    default:
-                        return asyncResults([]);
+                const API = {
+                    Wiki: `https://zh.minecraft.wiki/api.php?action=opensearch&search=${search}&limit=11`,
+                    BWiki: `https://wiki.biligame.com/mc/api.php?action=opensearch&search=${search}&limit=11`,
+                    MCID: `http://mcid.lingningyu.cn/api/?category=BAI&json=allID`,
+                    MineWiki: `https://minewiki.net/api.php?action=opensearch&search=${search}&limit=11`,
+                    MinePlugin: `https://mineplugin.org/api.php?action=opensearch&search=${search}&limit=11`
                 };
-                return $.ajax({
-                    url: URL,
-                    type: 'get',
-                    cache: true,
-                    data: {keyword: query},
-                    dataType: "jsonp",
-                    success: function(result) {
-                        if (result.length > 1 && Array.isArray(result[1])) {
-                            result = result[1];
-                        };
-                        return asyncResults(result);
-                    }
-                }, 0);
+                const URL = API[subtitle];
+                if (URL) {
+                    return $.ajax({
+                        url: URL,
+                        type: 'get',
+                        cache: true,
+                        data: {keyword: query},
+                        dataType: "jsonp",
+                        success: function(result) {
+                            if (result.length > 1 && Array.isArray(result[1])) {
+                                result = result[1];
+                            };
+                            return asyncResults(result);
+                        }
+                    }, 0);
+                };
+                return asyncResults([]);
             });
         }
     }
