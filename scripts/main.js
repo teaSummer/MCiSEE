@@ -176,7 +176,6 @@ $('.searchable-input').typeahead(
                 const API = {
                     Wiki: `https://zh.minecraft.wiki/api.php?action=opensearch&search=${search}&limit=11`,
                     BWiki: `https://wiki.biligame.com/mc/api.php?action=opensearch&search=${search}&limit=11`,
-                    MCID: `http://mcid.lingningyu.cn/api/?category=BAI&json=allID`,
                     MineWiki: `https://minewiki.net/api.php?action=opensearch&search=${search}&limit=11`,
                     MinePlugin: `https://mineplugin.org/api.php?action=opensearch&search=${search}&limit=11`
                 };
