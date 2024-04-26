@@ -141,6 +141,10 @@ class DOMDeviceList {
         const UA = navigator.userAgent;
         const getDevice = function() {
             const device = browser();
+            if (device.device != 'Desktop') {
+                $('.auto-folding').hide();
+                localStorage.removeItem('auto-folding');
+            }
             switch (device.system) {
                 case 'HarmonyOS':
                     if (device.device == 'Desktop') return 'unsupported';
