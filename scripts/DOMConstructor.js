@@ -142,7 +142,7 @@ class DOMDeviceList {
         const getDevice = function() {
             const device = browser();
             if (device.device != 'Desktop') {
-                $('.auto-folding').hide();
+                $('.auto-folding').parent().hide();
                 localStorage.removeItem('auto-folding');
             }
             switch (device.system) {
