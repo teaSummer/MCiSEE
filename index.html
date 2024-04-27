@@ -35,7 +35,7 @@
 <div class="background"></div>
 <main class="wait" style="display: none;">
     <div class="page-content">
-        <div class="introduction">
+        <div class="introduction" id="介绍">
             <h1 class="page-title first-title">所见皆是<i>Minecraft</i></h1>
             <p>玩家们可以从这里挖掘Minecraft常用资源，例如软件等。</p>
             <p>欢迎各位来 <a href="https://github.com/teaSummer/MCiSEE" target="_blank">GitHub 项目</a> 做出贡献 或
@@ -43,15 +43,15 @@
             <p>这里也需要你们提供更多有趣的资源！</p>
         </div>
         <hr>
-        <div class="device-container">
+        <div class="device-container" id="设备">
             <h2 class="page-title">设备</h2>
             <label for="device-list" class="tip">自动判断，可手动选择</label>
             <select class="normal fold" name="device-list" id="device-list" data-max-size=""></select>
         </div>
-        <div class="resource-container">
+        <div class="resource-container" id="软件">
             <div class="app-container">
                 <h2 class="page-title">软件</h2>
-                <div class="launcher-container">
+                <div class="launcher-container" id="启动器">
                     <div class="label">启动器（<b>Java版</b>）</div>
                     <div class="launcher-list device-diff"></div>
                     <div class="launcher-title full-name"></div>
@@ -72,9 +72,9 @@
                     </div>
                 </div>
             </div>
-            <div class="website-container">
+            <div class="website-container" id="网站">
                 <h2 class="page-title">网站</h2>
-                <div class="searchable-container">
+                <div class="searchable-container" id="快速查询">
                     <div class="label">快速查询</div>
                     <label class="inline-block" for="searchable-list">
                         <select class="keep unfold min-width-215" name="searchable-list" id="searchable-list"></select>
@@ -89,14 +89,14 @@
                         </form>
                     </div>
                 </div>
-                <div class="utility-container">
+                <div class="utility-container" id="实用类">
                     <div class="label">实用类</div>
                 </div>
-                <div class="forum-container">
+                <div class="forum-container" id="论坛">
                     <div class="label">论坛</div>
                 </div>
             </div>
-            <div class="config-container">
+            <div class="config-container" id="配置">
                 <h2 class="page-title">配置</h2>
                 <label>
                     <input class="auto-folding" type="checkbox"> 自动展开下拉菜单（如果允许）
