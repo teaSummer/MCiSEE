@@ -47,6 +47,12 @@ const searchable = [
         url: "http://mcid.lingningyu.cn"
     },
     {
+        title: "基岩版开发Wiki",
+        subtitle: "BEDW",
+        search: "https://wiki.mcbe-dev.net/w/index.php?search=<T>&title=Special%3A%E6%90%9C%E7%B4%A2&ns0=1&ns3000=1&ns3002=1&ns3004=1&ns3008=1&ns3010=1&fulltext=1",
+        url: "https://wiki.mcbe-dev.net"
+    },
+    {
         title: "插件百科",
         subtitle: "MinePlugin",
         search: "https://mineplugin.org/index.php?search=<T>&title=%E7%89%B9%E6%AE%8A%3A%E6%90%9C%E7%B4%A2&fulltext=1",
