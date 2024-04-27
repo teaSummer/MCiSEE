@@ -47,12 +47,6 @@ const searchable = [
         url: "http://mcid.lingningyu.cn"
     },
     {
-        title: "开发者百科",
-        subtitle: "MineWiki",
-        search: "https://minewiki.net/index.php?search=<T>&title=%E7%89%B9%E6%AE%8A%3A%E6%90%9C%E7%B4%A2&fulltext=1",
-        url: "https://minewiki.net"
-    },
-    {
         title: "插件百科",
         subtitle: "MinePlugin",
         search: "https://mineplugin.org/index.php?search=<T>&title=%E7%89%B9%E6%AE%8A%3A%E6%90%9C%E7%B4%A2&fulltext=1",
