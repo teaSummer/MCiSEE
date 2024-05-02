@@ -1,0 +1,64 @@
+pre {
+	/* display: flex;
+	flex-direction: column; */
+	padding: 12px;
+	background-color: #0693;
+	border-radius: 10px;
+}
+pre > h3, pre > a.button {
+	margin: 6px;
+	font-size: 16px;
+	font-family: --ant-font-family;
+}
+a.button {
+	user-select: none;
+	cursor: pointer;
+	&::after {
+		color: white;
+		display: inline-block;
+		content: url('image/extarnalLink.svg');
+		width: 16px;
+		height: 16px;
+	}
+}
+a.传送锚点 {
+	user-select: none;
+	color: transparent;
+}
+main > div {
+	background-color: #2333;
+	border-radius: 10px;
+}
+details#目录 {
+	padding: 8px;
+	width: calc(16vw);
+	height: auto;
+	position: fixed;
+	border-radius: 10px;
+	top: calc(50vh);
+	right: calc(-16vw);
+	background-color: #456c;
+	/*@keyfarmes {}*/
+	transition: right 2s;
+	&:hover {
+		right: 0;
+	}
+	> * > * > a {
+		color: #ccc;
+	}
+	> dl > dt {
+		&::before {
+			content: "◆ ";
+		}
+	}
+	> dl > dd {
+		&::before {
+			margin-left: 6px;
+			content: "- ";
+		}
+	}
+}
+
+
+@media screen and (min-width: 1000px) {
+}
