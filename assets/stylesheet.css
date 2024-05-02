@@ -1,6 +1,6 @@
 pre {
     /* display: flex;
-	  flex-direction: column; */
+	flex-direction: column; */
     padding: 12px;
     background-color: #0693;
     border-radius: 10px;
@@ -10,7 +10,7 @@ pre>h3,
 pre>a.button {
     margin: 6px;
     font-size: 16px;
-    font-family: --ant-font-family;
+    font-family: var(--ant-font-family);
 }
 
 a.button {
@@ -18,12 +18,13 @@ a.button {
     cursor: pointer;
 }
 
-a.button::after {
+a.button:not(.download)::after {
     color: white;
     display: inline-block;
-    content: url("image/extarnalLink.svg");
-    width: 16px;
-    height: 16px;
+    content: url('image/extarnalLink.svg');
+    width: 1em;
+    vertical-align: middle;
+    padding-left: 3px;
 }
 
 a.传送锚点 {
@@ -38,7 +39,7 @@ main>div {
 
 details#目录 {
     padding: 8px;
-    width: calc(16vw);
+    width: calc(20vw);
     height: auto;
     position: fixed;
     border-radius: 10px;
@@ -58,12 +59,12 @@ details#目录>*>*>a {
 }
 
 details#目录>dl>dt::before {
-    content: "◆ ";
+    content: '◆ ';
 }
 
 details#目录>dl>dd::before {
     margin-left: 6px;
-    content: "- ";
+    content: '- ';
 }
 
 @media screen and (min-width: 1000px) {}
