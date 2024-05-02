@@ -275,7 +275,7 @@ const pre_list = function(ele) {
     let lineBlocks = [];
     let retValue = '';
     for (let block of blocks) {
-        lineBlocks.push(block.replace(/\n\/\/ .+\n\/\/ .+\n/g, '').split('\n'));
+        lineBlocks.push(block.replace(/\n\/\/ .+\n\/\/ .+/g, '').split('\n'));
     };
     for (let block of lineBlocks) {
         for (let lineBlock = 0; lineBlock < block.length; lineBlock += 2) {
