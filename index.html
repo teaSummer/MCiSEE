@@ -28,15 +28,8 @@
     <script src="scripts/browser.min.js"></script>
     <script src="scripts/DOMConstructor.js"></script>
     <script src="scripts/typeahead.bundle.min.js"></script>
-    <script src="scripts/list.js"></script>
     <script src="data/launcher.js"></script>
     <script src="data/searchable.js"></script>
-    <!-- <style type="text/css">
-        /* 临时测试 */
-        textBlock {
-            color: #114514;
-        }
-    </style> -->
 </head>
 
 <body>
@@ -110,23 +103,19 @@
                 </div>
                 <div class="utility-website-container" id="实用网站">
                     <div class="label">实用网站<!--（样式设计中...）--></div>
-                    <pre class="utility-website-list" style="font-size: 15px; line-height: 1.25; white-space: pre-wrap;">
+                    <pre class="utility-website-list pre-flex">
 导航站：
 https://www.mcnav.net
 Minecraft官网：
 https://www.minecraft.net/zh-hans/
 网易我的世界官网：
 https://mc.163.com
-模组百科：
-https://www.mcmod.cn
 Inner Core手机版模组官网：
 https://icmods.mineprogramming.org
 官方知识库：
 https://feedback.minecraft.net/hc/en-us/section/
 MCPE资源下载站：
 https://mcpedl.com
-苦力怕论坛：
-https://klpbbs.com
 国际基岩版下载站 KLPBBS：
 https://mcapks.net
 国际基岩版下载站 MineBBS：
@@ -135,8 +124,6 @@ https://mc.minebbs.com
 https://www.chunkbase.com
 皮肤站：
 https://littleskin.cn
-中文维基百科：
-https://zh.minecraft.wiki
 皮肤网站：
 https://namemc.com
 网页版远古MC：
@@ -145,24 +132,12 @@ https://classic.minecraft.net
 https://mcpe-planet.com/downloads/
 官方基岩版开发者文档：
 https://learn.microsoft.com/zh-cn/minecraft/creator/
-基岩版ID表查询：
-https://ca.projectxero.top/idlist/
 官方基岩版更新公告：
 https://feedback.minecraft.net/hc/en-us/sections/360001185332-Beta-and-Preview-Information-and-Changelogs/
 官方Bug反馈网站：
 https://bugs.mojang.com
-中文论坛：
-https://www.minebbs.com
-香港社区：
-https://www.minecraft-hk.com
-台湾论坛：
-https://forum.gamer.com.tw/A.php?bsn=18673
-日本论坛：
-https://minecraftforum.jp
-插件百科：
-https://mineplugin.org
-开发者开发百科：
-https://minewiki.net
+// 开发者开发百科：
+// https://minewiki.net
 MC风格艺术字：
 https://textcraft.net
 在线地图转换器：
@@ -175,8 +150,6 @@ https://minecraft.tools
 https://mcuuid.net
 皮肤查询：
 https://mcskinsearch.com
-CurseForge：
-https://www.curseforge.com
 服务器列表：
 https://www.mclists.cn
 低多边形3D模型编辑器：
@@ -186,7 +159,27 @@ https://www.fansmc.com
 装饰性头颅：
 https://www.minecraft-heads.com
 
-便于开发的6个网站 (By Dislink)：
+—— 可供快速查询的网站 ——
+维基百科: 原站：
+https://zh.minecraft.wiki
+维基百科: 镜像站：
+https://wiki.biligame.com/mc/
+CurseForge：
+https://www.curseforge.com/minecraft/
+Modrinth：
+https://modrinth.com
+MC百科：
+https://mcmod.cn
+基岩版ID表：
+https://ca.projectxero.top/idlist/#release-vanilla/global/
+Java版ID表：
+http://mcid.lingningyu.cn
+基岩版开发Wiki：
+https://wiki.mcbe-dev.net
+插件百科：
+https://mineplugin.org
+
+—— 便于开发的6个网站 (By Dislink) ——
 ① Midi音乐转换为播放音乐的bdump v3结构文件：
 https://dislink.github.io/midi2bdx/
 ② Midi音乐转换为播放音乐的行为包（指令包）：
@@ -202,7 +195,20 @@ https://dislink.github.io/mcfunction2bdx/</pre>
                 </div>
                 <div class="forum-container" id="论坛">
                     <div class="label">论坛</div>
-                    <pre>这里还没有内容呢~</pre>
+                    <pre class="forum-list pre-flex">
+—— 简体中文论坛 ——
+MineBBS：
+https://www.minebbs.com
+苦力怕论坛：
+https://klpbbs.com
+
+—— 其它论坛 ——
+香港社区：
+https://www.minecraft-hk.com
+台湾论坛：
+https://forum.gamer.com.tw/A.php?bsn=18673
+日本论坛：
+https://minecraftforum.jp</pre>
                 </div>
             </div>
             <div class="config-container" id="配置">
@@ -252,9 +258,6 @@ https://dislink.github.io/mcfunction2bdx/</pre>
     </div>
 </footer>
 <script src="scripts/main.js"></script>
-<script>
-    $(document).ready(list(document.getElementsByTagName("pre")[1]));
-</script>
 </body>
 
 </html>

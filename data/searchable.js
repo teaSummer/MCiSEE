@@ -18,7 +18,7 @@ const searchable = [
         title: "CurseForge",
         search: "https://www.curseforge.com/minecraft/search?page=1&pageSize=20&sortBy=relevancy&search=q",
         note: "Minecraft Mods & Modpacks",
-        url: "https://www.curseforge.com/minecraft"
+        url: "https://www.curseforge.com/minecraft/"
     },
     {
         title: "Modrinth",
