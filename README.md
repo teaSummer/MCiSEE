@@ -111,7 +111,9 @@
 
 ### 贡献声明
 
-若要提供启动器，请遵循以下要求：
+提供任何内容，都需要按照主流程度排序，谢谢。
+
+提供启动器，请遵循以下要求：
 
 1. 启动器至今仍在更新/维护，或 `更适合旧设备`（限制 **2个/设备**）。
 2. 启动器使用人群基数大、范围广。另外，官方启动器优先。
@@ -119,6 +121,12 @@
 4. `国内第三方` 限制 **6个/设备**，`国外第三方` 限制 **3个/设备**。
 5. 另外，由于 `PCL2` 快照版本尚未公开，请勿提供其 `dev` 属性。
 
-提供任何内容，都需要按照主流程度排序，谢谢。
+## 统计信息
 
-如果认为以上任意内容有不妥，可以随时反馈。
+### 贡献者
+
+[![Contrib](https://contrib.rocks/image?repo=teaSummer/MCiSEE)](https://github.com/teaSummer/MCiSEE/graphs/contributors)
+
+### 星星历史图
+
+[![Stargazers over time](https://starchart.cc/teaSummer/MCiSEE.svg?variant=adaptive)](https://starchart.cc/teaSummer/MCiSEE)
