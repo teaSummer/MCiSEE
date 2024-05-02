@@ -1,6 +1,6 @@
 pre {
-    /* display: flex;
-	flex-direction: column; */
+/* display: flex;
+flex-direction: column; */
     padding: 12px;
     background-color: #0693;
     border-radius: 10px;
@@ -67,4 +67,9 @@ details#目录>dl>dd::before {
     content: '- ';
 }
 
-@media screen and (min-width: 1000px) {}
+@media (max-width: 768px) {
+    pre {
+        display: flex;
+        flex-direction: column;
+    }
+}
