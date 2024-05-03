@@ -301,7 +301,17 @@ const pre_list = function(ele) {
 };
 
 
+const hashChanged = function() {
+    $(decodeURI(location.hash) + '>*:first-child').css('border', '3px solid gray').addClass('hash');
+};
+$(window).on('hashchange', function() {
+    $('.hash').css('border', 'none').removeClass('hash');
+    hashChanged();
+});
+
+
 $(document).ready(function() {
+    hashChanged();
     deviceChanged();
     autoFoldingChanged();
     searchableChanged({target: $('#searchable-list')});

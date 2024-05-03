@@ -281,6 +281,10 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
 }
 
+div[id]>*:first-child {
+    width: max-content;
+}
+
 .tip {
     color: rgba(0, 0, 0, 0.5);
 }
@@ -299,6 +303,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .min-width-215 {
     min-width: 215px;
+}
+
+.margin-top-20 {
+    margin-top: 20px;
 }
 
 .inline-block {
@@ -356,4 +364,83 @@ h1, h2, h3, h4, h5, h6 {
 .resource-container>div+div,
 .device-container+.resource-container {
     margin-top: 1rem;
+}
+
+
+.pre-flex {
+    background-color: #0693;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 15px;
+    line-height: 1.25;
+    white-space: pre-wrap;
+}
+
+.pre-flex>h3,
+.pre-flex>a.button {
+    margin: 6px;
+    font-size: 16px;
+    font-family: var(--ant-font-family);
+}
+
+a.button {
+    user-select: none;
+    cursor: pointer;
+}
+
+a.button:not(.download)::after {
+    content: '';
+    color: white;
+    display: inline-block;
+    content: url('image/extarnalLink.svg');
+    width: 1em;
+    vertical-align: middle;
+    padding-left: 3px;
+}
+
+a.传送锚点 {
+    user-select: none;
+    color: transparent;
+}
+
+main>div {
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+#目录 {
+    padding: 8px;
+    width: calc(20vw);
+    height: auto;
+    position: fixed;
+    border-radius: 10px;
+    top: calc(50vh);
+    right: calc(-16vw);
+    background-color: #456c;
+    /* @keyfarmes {} */
+    transition: right 2s;
+}
+
+#目录:hover {
+    right: 0;
+}
+
+#目录 a {
+    color: #ccc;
+}
+
+#目录 dt::before {
+    content: '◆ ';
+}
+
+#目录 dd::before {
+    content: '- ';
+    margin-left: 6px;
+}
+
+@media (max-width: 768px) {
+    .pre-flex {
+        display: flex;
+        flex-direction: column;
+    }
 }

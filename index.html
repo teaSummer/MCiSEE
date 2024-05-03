@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.92, minimum-scale=0.92">
+    <meta name="viewport" content="width=device-width, initial-scale=0.9, minimum-scale=0.9">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>所见皆是Minecraft - MCiSEE</title>
     <meta property="og:type" content="website">
@@ -23,7 +23,6 @@
     <link rel="shortcut icon" href="assets/icon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/main.css">
     <link rel="stylesheet" href="assets/typeahead.css">
-    <link rel="stylesheet" type="text/css" href="assets/stylesheet.css">
     <script src="scripts/jquery-3.7.1.min.js"></script>
     <script src="scripts/browser.min.js"></script>
     <script src="scripts/DOMConstructor.js"></script>
@@ -32,23 +31,23 @@
     <script src="data/searchable.js"></script>
 </head>
 
-<body>
+<body class="page-body">
 <div class="background"></div>
 <main class="wait" style="display: none;">
     <details id="目录">
         <summary>目录</summary>
         <dl>
-            <dt><a href="#top">顶部</a></dt>
+            <dt><a href="#顶部">顶部</a></dt>
             <dd><a href="#设备">设备</a></dd>
             <dd><a href="#软件">软件</a></dd>
             <dd><a href="#网站">网站</a></dd>
             <dd><a href="#配置">配置</a></dd>
-            <dt><a href="#bottom">底部</a></dt>
+            <dt><a href="#底部">底部</a></dt>
         </dl>
     </details>
     <div class="page-content">
         <div class="introduction" id="介绍">
-            <a class="传送锚点" id="top"></a>
+            <a class="传送锚点" id="顶部"></a>
             <h1 class="page-title first-title">所见皆是<i>Minecraft</i></h1>
             <p>玩家们可以从这里挖掘Minecraft常用资源，例如软件等。</p>
             <p>欢迎各位来 <a href="https://github.com/teaSummer/MCiSEE" target="_blank">GitHub 项目</a> 做出贡献 或
@@ -102,20 +101,20 @@
                     </div>
                 </div>
                 <div class="utility-website-container" id="实用网站">
-                    <div class="label">实用网站<!--（样式设计中...）--></div>
+                    <div class="label margin-top-20">实用网站<!--（样式设计中...）--></div>
                     <pre class="utility-website-list pre-flex">
 + 无类别
 导航站：
 https://www.mcnav.net
-Minecraft官网：
+Minecraft 官网：
 https://www.minecraft.net/zh-hans/
+MC教育版官网：
+https://education.minecraft.net
 网易我的世界官网：
 https://mc.163.com
-Inner Core手机版模组官网：
+Inner Core基岩版模组引擎：
 https://icmods.mineprogramming.org
-官方知识库：
-https://feedback.minecraft.net/hc/en-us/section/
-MCPE资源下载站：
+MCPEDL资源下载站：
 https://mcpedl.com
 国际基岩版下载站 KLPBBS：
 https://mcapks.net
@@ -125,7 +124,7 @@ https://mc.minebbs.com
 https://www.chunkbase.com
 皮肤站：
 https://littleskin.cn
-皮肤网站：
+正版玩家皮肤查询：
 https://namemc.com
 网页版远古MC：
 https://classic.minecraft.net
@@ -133,19 +132,23 @@ https://classic.minecraft.net
 https://mcpe-planet.com/downloads/
 官方基岩版开发者文档：
 https://learn.microsoft.com/zh-cn/minecraft/creator/
+Minecraft Feedback：
+https://feedback.minecraft.net
+官方知识库：
+https://feedback.minecraft.net/hc/en-us/section/
 官方基岩版更新公告：
 https://feedback.minecraft.net/hc/en-us/sections/360001185332-Beta-and-Preview-Information-and-Changelogs/
-官方Bug反馈网站：
+Bug反馈官网：
 https://bugs.mojang.com
 // 开发者开发百科：
 // https://minewiki.net
 MC风格艺术字：
 https://textcraft.net
-在线地图转换器：
+在线转换查询地图：
 https://chunker.app
 建筑辅助：
 https://minecraftshapes.com
-工具站：
+工具网站：
 https://minecraft.tools
 正版玩家信息查询：
 https://mcuuid.net
@@ -195,7 +198,7 @@ https://dislink.github.io/text2mcfunction/
 https://dislink.github.io/mcfunction2bdx/</pre>
                 </div>
                 <div class="forum-container" id="论坛">
-                    <div class="label">论坛</div>
+                    <div class="label margin-top-20">论坛</div>
                     <pre class="forum-list pre-flex">
 + 简体中文论坛
 // MCBBS：
@@ -341,7 +344,7 @@ https://minecraftforum.jp</pre>
         </div>
     </div>
 </main>
-<a class="传送锚点" id="bottom"></a>
+<a class="传送锚点" id="底部"></a>
 <footer class="wait" style="display: none;">
     <div class="page-content">
         <div class="footer-content">
