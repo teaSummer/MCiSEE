@@ -270,24 +270,29 @@ $('select.normal option').click(function() {
 $('.auto-folding').change(autoFoldingChanged);
 
 
-const pre_list = function(ele) {
-    let blocks = $(ele).html().split('\n\n');
-    let lineBlocks = [];
+const pre_list = function(element) {
+    const lineBlocks = [];
+    let blocks = $(element).html()
+            .replace(/\n +/g, '\n')
+            .replace(/^|\n\n/g, '\n\n+ ')
+            .trim()
+            .split('\n\n');
     let retValue = '';
     for (let block of blocks) {
-        lineBlocks.push(block.replace(/\n\/\/ .+\n\/\/ .+/g, '').split('\n'));
+        lineBlocks.push(block.replace(/^|\s#.+/g, '').split('\n'));
     };
     for (let block of lineBlocks) {
         for (let lineBlock = 0; lineBlock < block.length; lineBlock += 2) {
+            let nextBlock = block[lineBlock + 1];
             block[lineBlock] = block[lineBlock].split('：').join('');
-            if (typeof (block[lineBlock + 1]) == 'undefined') continue;
-            else if (!(block[lineBlock + 1].startsWith('http'))) {
-                block[lineBlock + 1] = block[lineBlock + 1].split('：').join('');
+            if (typeof nextBlock == 'undefined') continue;
+            else if (!(nextBlock.startsWith('http'))) {
+                nextBlock = nextBlock.split('：').join('');
                 if (lineBlock == 0) retValue += `<h3>${block[lineBlock]}</h3>`;
-                retValue += `<a class="button" href="${block[lineBlock + 2]}" target="_blank">${block[lineBlock + 1]}</a>`;
+                retValue += `<a class="button" href="${block[lineBlock + 2]}" target="_blank">${nextBlock}</a>`;
             }
             else {
-                retValue += `<a class="button" href="${block[lineBlock + 1]}" target="_blank">${block[lineBlock]}</a>`;
+                retValue += `<a class="button" href="${nextBlock}" target="_blank">${block[lineBlock]}</a>`;
             };
         };
         retValue += '<hr>';
@@ -296,7 +301,7 @@ const pre_list = function(ele) {
         .replace(/<lineBlock><textBlock>/g, '<textBlock><lineBlock>')
         .replace(/<\/textBlock><\/lineBlock>/g, '</lineBlock></textBlock>')
         .replace(/<hr>$/, '');
-    $(ele).html(retValue);
+    $(element).html(retValue);
     return retValue;
 };
 
