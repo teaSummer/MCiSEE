@@ -321,7 +321,7 @@ $(document).ready(function() {
     autoFoldingChanged();
     searchableChanged({target: $('#searchable-list')});
     $('.pre-flex').each(function(index, element){
-        return pre_list(element);
+        pre_list(element);
     });
     $('select').each(function(index, element) {
         autoFolding({target: element});
