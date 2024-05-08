@@ -273,10 +273,10 @@ $('.auto-folding').change(autoFoldingChanged);
 const pre_list = function(element) {
     const lineBlocks = [];
     let blocks = $(element).html()
-            .replace(/\n +/g, '\n')
-            .replace(/^|\n\n/g, '\n\n+ ')
-            .trim()
-            .split('\n\n');
+        .replace(/\n +/g, '\n')
+        .replace(/^|\n\n/g, '\n\n+ ')
+        .trim()
+        .split('\n\n');
     let retValue = '';
     for (let block of blocks) {
         lineBlocks.push(block.replace(/^|\s#.+/g, '').split('\n'));
@@ -320,7 +320,9 @@ $(document).ready(function() {
     deviceChanged();
     autoFoldingChanged();
     searchableChanged({target: $('#searchable-list')});
-    $(".pre-flex").each((index, element) => pre_list(element));
+    $('.pre-flex').each(function(index, element){
+        return pre_list(element);
+    });
     $('select').each(function(index, element) {
         autoFolding({target: element});
     });
