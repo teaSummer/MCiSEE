@@ -411,14 +411,13 @@ main>div {
 
 #目录 {
     padding: 8px;
-    width: calc(20vw);
+    width: calc(16vw);
     height: auto;
     position: fixed;
     border-radius: 10px;
     top: calc(50vh);
-    right: calc(-16vw);
+    right: calc(-15vw);
     background-color: #456c;
-    /* @keyfarmes {} */
     transition: right 2s;
 }
 
@@ -440,6 +439,9 @@ main>div {
 }
 
 @media (max-width: 768px) {
+    #目录 {
+        width: calc(20vw);
+    }
     .pre-flex {
         display: flex;
         flex-direction: column;
