@@ -358,8 +358,12 @@ div[id]>*:first-child {
     margin-left: 3px;
 }
 
-.page-views-count-title {
-    margin-bottom: 16px;
+.article h3 {
+    margin: 16px 0;
+}
+
+.article h3:first-child {
+    margin-top: 0;
 }
 
 .resource-container>div+div,
