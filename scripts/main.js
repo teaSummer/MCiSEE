@@ -308,15 +308,19 @@ const pre_list = function(element) {
 const hashChanged = function() {
     if (location.hash == '') return;
     const element = decodeURI(location.hash);
-    if (element == '#全部展开') {
-        $('.page-content').find('details').attr('open', true);
+    try {
+        if (element == '#全部展开') {
+            $('.page-content').find('details').attr('open', true);
+        }
+        else if (element.endsWith('-展开')) {
+            $(element.slice(0, -3)).find('details').attr('open', true);
+        }
+        else if ($(element).html().startsWith('<summary>')) {
+            $(element).attr('open', true);
+        }
+        else $(`${element}>*:first-child`).css('border', '3px solid gray').addClass('hash');
     }
-    else if (element.endsWith('-展开')) {
-        $(element.slice(0, -3)).find('details').attr('open', true);
-    }
-    else if ($(element).html().startsWith('<summary>')) {
-        $(element).attr('open', true);
-    } else $(`${element}>*:first-child`).css('border', '3px solid gray').addClass('hash');
+    catch (e) {};
 };
 $(window).on('hashchange', function() {
     $('.hash').css('border', 'none').removeClass('hash');
