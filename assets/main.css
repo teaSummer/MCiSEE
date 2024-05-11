@@ -366,6 +366,12 @@ div[id]>*:first-child {
     margin-top: 0;
 }
 
+.article img {
+    height: auto;
+    width: auto;
+    max-width: calc(min(100vw, 800px) - 4rem);
+}
+
 .resource-container>div+div,
 .device-container+.resource-container {
     margin-top: 1rem;
