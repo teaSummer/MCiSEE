@@ -387,8 +387,8 @@ div[id]>*:first-child {
     white-space: pre-wrap;
 }
 
-.pre-flex>h3,
-.pre-flex>a.button {
+.pre-flex details,
+.pre-flex a.button {
     margin: 6px;
     font-size: 16px;
     font-family: var(--ant-font-family);

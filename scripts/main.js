@@ -274,7 +274,6 @@ const pre_list = function(element) {
     const lineBlocks = [];
     let blocks = $(element).html()
         .replace(/\n +/g, '\n')
-        .replace(/^|\n\n/g, '\n\n+ ')
         .trim()
         .split('\n\n');
     let retValue = '';
@@ -288,14 +287,14 @@ const pre_list = function(element) {
             if (typeof nextBlock == 'undefined') continue;
             else if (!(nextBlock.startsWith('http'))) {
                 nextBlock = nextBlock.split('：').join('');
-                if (lineBlock == 0) retValue += `<h3>${block[lineBlock]}</h3>`;
+                if (lineBlock == 0) retValue += `<details><summary>${block[lineBlock]}</summary>`;
                 retValue += `<a class="button" href="${block[lineBlock + 2]}" target="_blank">${nextBlock}</a>`;
             }
             else {
                 retValue += `<a class="button" href="${nextBlock}" target="_blank">${block[lineBlock]}</a>`;
             };
         };
-        retValue += '<hr>';
+        retValue += '</details><hr>';
     };
     retValue = retValue
         .replace(/<lineBlock><textBlock>/g, '<textBlock><lineBlock>')
