@@ -372,6 +372,13 @@ div[id]>*:first-child {
     max-width: calc(min(100vw, 800px) - 4rem);
 }
 
+.to-fold, .to-unfold {
+    font-size: 0.8rem;
+    position: relative;
+    bottom: 5px;
+    right: 1px;
+}
+
 .resource-container>div+div,
 .device-container+.resource-container {
     margin-top: 1rem;
@@ -409,7 +416,7 @@ a.button:not(.download)::after {
     padding-left: 3px;
 }
 
-a.传送锚点 {
+.传送锚点 {
     user-select: none;
     color: transparent;
 }

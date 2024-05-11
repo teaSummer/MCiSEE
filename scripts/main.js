@@ -308,12 +308,23 @@ const pre_list = function(element) {
 const hashChanged = function() {
     if (location.hash == '') return;
     const element = decodeURI(location.hash);
+    const slicedElement = element.slice(0, -3);
     try {
         if (element == '#全部展开') {
             $('.page-content').find('details').attr('open', true);
         }
+        else if (element == '#全部收起') {
+            $('.page-content').find('details').attr('open', false);
+        }
         else if (element.endsWith('-展开')) {
-            $(element.slice(0, -3)).find('details').attr('open', true);
+            $(slicedElement).find('details').attr('open', true);
+            $(slicedElement).find('.to-fold').show();
+            $(slicedElement).find('.to-unfold').hide();
+        }
+        else if (element.endsWith('-收起')) {
+            $(slicedElement).find('details').attr('open', false);
+            $(slicedElement).find('.to-unfold').show();
+            $(slicedElement).find('.to-fold').hide();
         }
         else if ($(element).html().startsWith('<summary>')) {
             $(element).attr('open', true);
