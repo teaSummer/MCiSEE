@@ -287,7 +287,7 @@ const pre_list = function(element) {
             if (typeof nextBlock == 'undefined') continue;
             else if (!(nextBlock.startsWith('http'))) {
                 nextBlock = nextBlock.split('：').join('');
-                if (lineBlock == 0) retValue += `<details><summary>${block[lineBlock]}</summary>`;
+                if (lineBlock == 0) retValue += `<details id="${block[lineBlock].replace(/ .+/, '')}"><summary>${block[lineBlock]}</summary>`;
                 retValue += `<a class="button" href="${block[lineBlock + 2]}" target="_blank">${nextBlock}</a>`;
             }
             else {
@@ -306,7 +306,17 @@ const pre_list = function(element) {
 
 
 const hashChanged = function() {
-    $(decodeURI(location.hash) + '>*:first-child').css('border', '3px solid gray').addClass('hash');
+    if (location.hash == '') return;
+    const element = decodeURI(location.hash);
+    if (element == '#全部展开') {
+        $('.page-content').find('details').attr('open', true);
+    }
+    else if (element.endsWith('-展开')) {
+        $(element.slice(0, -3)).find('details').attr('open', true);
+    }
+    else if ($(element).html().startsWith('<summary>')) {
+        $(element).attr('open', true);
+    } else $(`${element}>*:first-child`).css('border', '3px solid gray').addClass('hash');
 };
 $(window).on('hashchange', function() {
     $('.hash').css('border', 'none').removeClass('hash');
@@ -315,13 +325,13 @@ $(window).on('hashchange', function() {
 
 
 $(document).ready(function() {
-    hashChanged();
     deviceChanged();
     autoFoldingChanged();
     searchableChanged({target: $('#searchable-list')});
     $('.pre-flex').each(function(index, element){
         pre_list(element);
     });
+    hashChanged();
     $('select').each(function(index, element) {
         autoFolding({target: element});
     });

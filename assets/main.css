@@ -425,7 +425,7 @@ main>div {
     height: auto;
     position: fixed;
     border-radius: 10px;
-    top: calc(50vh);
+    top: calc(35vh);
     right: calc(-15vw);
     background-color: #456c;
     transition: right 2s;
