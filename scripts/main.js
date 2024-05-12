@@ -301,7 +301,7 @@ const pre_list = function(element) {
                 nextBlock = nextBlock.split('：').join('');
                 if (lineBlock == 0) {
                     if (thisBlock.endsWith('[open]')) {
-                        retValue += `<details id="${thisBlock.replace('[open]', '').replace(/ .+/, '')}" open><summary>${thisBlock.replace('[open]', '')}</summary>`;
+                        retValue += `<details class="keep" id="${thisBlock.replace('[open]', '').replace(/ .+/, '')}" open><summary>${thisBlock.replace('[open]', '')}</summary>`;
                     }
                     else retValue += `<details id="${thisBlock.replace(/ .+/, '')}"><summary>${thisBlock}</summary>`;
                 }
@@ -327,8 +327,8 @@ const hashChanged = function() {
     let hash = decodeURI(location.hash);
     const slicedHash = hash.slice(0, -3);
     try {
-        if (hash == '#全部展开') $('.page-content').find('details').attr('open', true);
-        if (hash == '#全部收起') $('.page-content').find('details').attr('open', false);
+        if (hash == '#全部展开') $('.page-content').find('details:not(.keep)').attr('open', true);
+        if (hash == '#全部收起') $('.page-content').find('details:not(.keep)').attr('open', false);
         if (hash.endsWith('-展开')) {
             $(slicedHash).find('details').attr('open', true);
             $(slicedHash).find('.to-fold').show();
@@ -336,7 +336,7 @@ const hashChanged = function() {
             location.hash = slicedHash;
         }
         if (hash.endsWith('-收起')) {
-            $(slicedHash).find('details').attr('open', false);
+            $(slicedHash).find('details:not(.keep)').attr('open', false);
             $(slicedHash).find('.to-unfold').show();
             $(slicedHash).find('.to-fold').hide();
             hash = slicedHash;
