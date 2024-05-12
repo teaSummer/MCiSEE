@@ -153,13 +153,13 @@ $('.searchable-direct').change(function() {
 });
 
 
-const config = function (className) {
-    if (localStorage.getItem(className) == 'true') $('.' + className).attr('checked', true);
-    else $('.' + className).attr('checked', false);
+const config = function (...classNames) {
+    for (const className of classNames) {
+        if (localStorage.getItem(className) == 'true') $('.' + className).attr('checked', true);
+        else $('.' + className).attr('checked', false);
+    };
 };
-config('auto-folding');
-config('github-proxy');
-config('searchable-direct');
+config('auto-folding', 'github-proxy', 'searchable-direct');
 
 
 $.support.cors = true;
@@ -312,25 +312,25 @@ const pre_list = function(element) {
 
 const hashChanged = function() {
     if (location.hash == '') return;
-    let element = decodeURI(location.hash);
-    const slicedElement = element.slice(0, -3);
+    let hash = decodeURI(location.hash);
+    const slicedHash = hash.slice(0, -3);
     try {
-        if (element == '#全部展开') $('.page-content').find('details').attr('open', true);
-        if (element == '#全部收起') $('.page-content').find('details').attr('open', false);
-        if (element.endsWith('-展开')) {
-            $(slicedElement).find('details').attr('open', true);
-            $(slicedElement).find('.to-fold').show();
-            $(slicedElement).find('.to-unfold').hide();
-            element = slicedElement;
+        if (hash == '#全部展开') $('.page-content').find('details').attr('open', true);
+        if (hash == '#全部收起') $('.page-content').find('details').attr('open', false);
+        if (hash.endsWith('-展开')) {
+            $(slicedHash).find('details').attr('open', true);
+            $(slicedHash).find('.to-fold').show();
+            $(slicedHash).find('.to-unfold').hide();
+            location.hash = hash.slice(0, -3);
         }
-        if (element.endsWith('-收起')) {
-            $(slicedElement).find('details').attr('open', false);
-            $(slicedElement).find('.to-unfold').show();
-            $(slicedElement).find('.to-fold').hide();
-            element = slicedElement;
+        if (hash.endsWith('-收起')) {
+            $(slicedHash).find('details').attr('open', false);
+            $(slicedHash).find('.to-unfold').show();
+            $(slicedHash).find('.to-fold').hide();
+            hash = slicedHash;
         }
-        if ($(element).html().startsWith('<summary>')) $(element).attr('open', true);
-        else $(`${element}>*:first-child`).css('border', '3px solid gray').addClass('hash');
+        if ($(hash).html().startsWith('<summary>')) $(hash).attr('open', true);
+        else $(`${hash}>*:first-child`).css('border', '3px solid gray').addClass('hash');
     }
     catch (e) {};
 };
