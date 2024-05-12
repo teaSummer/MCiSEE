@@ -23,8 +23,10 @@ const AndroidLauncher = [
     {
         title: "ColorMC",
         download: "https://github.com/Coloryr/ColorMC.Android/releases/download/A21/colormc-a21-android.zip",
-        version: "A21",
-        url: "https://github.com/Coloryr/ColorMC.Android"
+        dev: {
+            version: "A21",
+            url: "https://github.com/Coloryr/ColorMC.Android"
+        }
     }
 ];
 
