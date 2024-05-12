@@ -39,7 +39,7 @@ $('#device-list').change(deviceChanged);
 
 $('div.launcher-list').html(DOMLauncherList.deviceList());
 
-const launcherChanged = function(event) {
+const launcherChanged = function(event = {target: $('.launcher-list')}) {
     const checked = checkedOption(event.target);
     const dataTitle = checked.attr('data-title');
     $('.launcher-title').text('');
@@ -109,7 +109,7 @@ $('.github-proxy').change(proxyChanged);
 
 $('#searchable-list').html(DOMSearchableList.list(searchable));
 
-const searchableChanged = function(event) {
+const searchableChanged = function(event = {target: $('#searchable-list')}) {
     const checked = checkedOption(event.target);
     searchKeyword = checked.attr('data-search');
     const subtitle = checked.attr('data-subtitle');
@@ -153,9 +153,14 @@ $('.searchable-direct').change(function() {
 });
 
 
-if (localStorage.getItem('auto-folding') == 'true') $('.auto-folding').attr('checked', true);
-if (localStorage.getItem('github-proxy') == 'false') $('.github-proxy').attr('checked', false);
-if (localStorage.getItem('searchable-direct') == 'false') $('.searchable-direct').attr('checked', false);
+const config = function (className) {
+    if (localStorage.getItem(className) == 'true') $('.' + className).attr('checked', true);
+    else $('.' + className).attr('checked', false);
+};
+config('auto-folding');
+config('github-proxy');
+config('searchable-direct');
+
 
 $.support.cors = true;
 $('.searchable-input').typeahead(
@@ -254,7 +259,7 @@ $('#device-list option').mouseenter(function() {
     const parent = $(this).parent();
     parent.val($(this).val());
     deviceChanged({target: parent});
-    launcherChanged({target: $('.launcher-list')});
+    launcherChanged();
 });
 $('select.launcher-list option').mouseenter(function() {
     const parent = $(this).parent();
@@ -307,28 +312,24 @@ const pre_list = function(element) {
 
 const hashChanged = function() {
     if (location.hash == '') return;
-    const element = decodeURI(location.hash);
+    let element = decodeURI(location.hash);
     const slicedElement = element.slice(0, -3);
     try {
-        if (element == '#全部展开') {
-            $('.page-content').find('details').attr('open', true);
-        }
-        else if (element == '#全部收起') {
-            $('.page-content').find('details').attr('open', false);
-        }
-        else if (element.endsWith('-展开')) {
+        if (element == '#全部展开') $('.page-content').find('details').attr('open', true);
+        if (element == '#全部收起') $('.page-content').find('details').attr('open', false);
+        if (element.endsWith('-展开')) {
             $(slicedElement).find('details').attr('open', true);
             $(slicedElement).find('.to-fold').show();
             $(slicedElement).find('.to-unfold').hide();
+            element = slicedElement;
         }
-        else if (element.endsWith('-收起')) {
+        if (element.endsWith('-收起')) {
             $(slicedElement).find('details').attr('open', false);
             $(slicedElement).find('.to-unfold').show();
             $(slicedElement).find('.to-fold').hide();
+            element = slicedElement;
         }
-        else if ($(element).html().startsWith('<summary>')) {
-            $(element).attr('open', true);
-        }
+        if ($(element).html().startsWith('<summary>')) $(element).attr('open', true);
         else $(`${element}>*:first-child`).css('border', '3px solid gray').addClass('hash');
     }
     catch (e) {};
@@ -339,11 +340,12 @@ $(window).on('hashchange', function() {
 });
 
 
+
 $(document).ready(function() {
     deviceChanged();
     autoFoldingChanged();
-    searchableChanged({target: $('#searchable-list')});
-    $('.pre-flex').each(function(index, element){
+    searchableChanged();
+    $('.pre-flex').each(function(index, element) {
         pre_list(element);
     });
     hashChanged();
