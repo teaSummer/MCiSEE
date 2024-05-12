@@ -11,6 +11,12 @@ DOMDeviceList.show();
 $('#device-list').attr('data-max-size', supportedDevices.length);
 
 
+if (history.scrollRestoration) {
+    history.scrollRestoration = 'manual';
+};
+
+
+
 const createSuperLabel = function(url, id) {
     const a = `<a href="" target="_blank" id="${id}">`;
     $('body').after(a);
@@ -353,4 +359,6 @@ $(document).ready(function() {
         autoFolding({target: element});
     });
     $('.wait').removeAttr('class').removeAttr('style');
+    try { document.querySelector(decodeURI(location.hash)).scrollIntoView(); }
+    catch (e) {};
 });
