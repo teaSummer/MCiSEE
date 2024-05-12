@@ -294,15 +294,21 @@ const pre_list = function(element) {
     for (let block of lineBlocks) {
         for (let lineBlock = 0; lineBlock < block.length; lineBlock += 2) {
             let nextBlock = block[lineBlock + 1];
-            block[lineBlock] = block[lineBlock].split('：').join('');
+            let thisBlock = block[lineBlock];
+            thisBlock = thisBlock.split('：').join('');
             if (typeof nextBlock == 'undefined') continue;
             else if (!(nextBlock.startsWith('http'))) {
                 nextBlock = nextBlock.split('：').join('');
-                if (lineBlock == 0) retValue += `<details id="${block[lineBlock].replace(/ .+/, '')}"><summary>${block[lineBlock]}</summary>`;
+                if (lineBlock == 0) {
+                    if (thisBlock.endsWith('[open]')) {
+                        retValue += `<details id="${thisBlock.replace('[open]', '').replace(/ .+/, '')}" open><summary>${thisBlock.replace('[open]', '')}</summary>`;
+                    }
+                    else retValue += `<details id="${thisBlock.replace(/ .+/, '')}"><summary>${thisBlock}</summary>`;
+                }
                 retValue += `<a class="button" href="${block[lineBlock + 2]}" target="_blank">${nextBlock}</a>`;
             }
             else {
-                retValue += `<a class="button" href="${nextBlock}" target="_blank">${block[lineBlock]}</a>`;
+                retValue += `<a class="button" href="${nextBlock}" target="_blank">${thisBlock}</a>`;
             };
         };
         retValue += '</details><hr>';
