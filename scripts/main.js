@@ -321,7 +321,7 @@ const hashChanged = function() {
             $(slicedHash).find('details').attr('open', true);
             $(slicedHash).find('.to-fold').show();
             $(slicedHash).find('.to-unfold').hide();
-            location.hash = hash.slice(0, -3);
+            location.hash = slicedHash;
         }
         if (hash.endsWith('-收起')) {
             $(slicedHash).find('details').attr('open', false);
