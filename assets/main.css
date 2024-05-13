@@ -4,6 +4,8 @@
 }
 
 :root {
+    scroll-behavior: smooth;
+
     --ant-color-primary: #1677ff;
     --ant-color-success: #52c41a;
     --ant-color-warning: #faad14;
