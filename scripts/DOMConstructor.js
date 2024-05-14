@@ -167,14 +167,14 @@ class DOMDeviceList {
 
         const toHide = 3;
         $('#device-list').change(function() {
-            $('.resource-container').show();
+            $('.app-container').show();
             if ($(this)[0].selectedIndex > toHide) {
-                $('.resource-container').hide();
+                $('.app-container').hide();
             };
         });
         $('#device-list').val(getDevice());
         if ($('#device-list')[0].selectedIndex > toHide) {
-            $('.resource-container').hide();
+            $('.app-container').hide();
         };
     };
 };
