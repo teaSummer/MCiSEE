@@ -1,0 +1,19 @@
+name: 仓库镜像
+on: push
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: 推送至 Gitee
+        uses: Yikun/hub-mirror-action@master
+        with:
+          src: github/MCiSEE
+          dst: gitee/MCiSEE
+          dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
+          dst_token: ${{ secrets.GITEE_TOKEN }}
+          account_type: user
+          clone_style: https
+          force_update: true
+          timeout: '301s'
