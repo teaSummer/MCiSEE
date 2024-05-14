@@ -353,7 +353,18 @@ $(window).on('hashchange', function() {
 
 
 
+let CSForum = '简体中文论坛：';
+for (const forum of db_forums) {
+    if (forum.state == 'up') {
+        CSForum += '\n' + forum.title + '：\n' + forum.url;
+    };
+};
+
+
+
 $(document).ready(function() {
+    $('.utility-website-list').text(utilityWebsite);
+    $('.forum-list').text(CSForum + otherForum);
     deviceChanged();
     autoFoldingChanged();
     searchableChanged();
