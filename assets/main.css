@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    transition: all 2s;
 }
 
 :root {
@@ -430,18 +431,31 @@ main>div {
 
 #目录 {
     padding: 8px;
-    width: calc(16vw);
-    height: auto;
+    width: calc(18vw);
+    /* height: auto; */
+    max-height: 20px;
     position: fixed;
     border-radius: 10px;
     top: calc(35vh);
     right: calc(-15vw);
     background-color: #456c;
-    transition: right 2s;
+    user-select: none;
+}
+#目录>dl {
+    margin-top: 20px;
+    margin-left: 12px;
+    opacity: 0;
+    transition: opacity 1.2s;
+    pointer-events: none;
 }
 
 #目录:hover {
     right: 0;
+    max-height: 1000px;
+}
+#目录:hover>dl {
+    opacity: 1;
+    pointer-events: unset;
 }
 
 #目录 a {
@@ -449,11 +463,11 @@ main>div {
 }
 
 #目录 dt::before {
-    content: '◆ ';
+    content: '◼ ';
 }
 
 #目录 dd::before {
-    content: '- ';
+    content: '◻ ';
     margin-left: 6px;
 }
 
