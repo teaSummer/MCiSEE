@@ -298,7 +298,7 @@ const pre_list = function(element) {
             thisBlock = thisBlock.split('：').join('');
             if (typeof nextBlock == 'undefined') continue;
             else if (!(nextBlock.startsWith('http'))) {
-                nextBlock = nextBlock.split('：').join('');
+                nextBlock = nextBlock.replace(/\:|\：/, '');
                 if (lineBlock == 0) {
                     if (thisBlock.endsWith('[open]')) {
                         retValue += `<details class="keep" id="${thisBlock.replace('[open]', '').replace(/ .+/, '')}" open><summary>${thisBlock.replace('[open]', '')}</summary>`;
