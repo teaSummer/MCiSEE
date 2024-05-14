@@ -1,4 +1,4 @@
-name: 仓库镜像
+name: 镜像仓库
 on: push
 
 jobs:
