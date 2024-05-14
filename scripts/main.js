@@ -342,12 +342,12 @@ const hashChanged = function() {
             hash = slicedHash;
         }
         if ($(hash).html().startsWith('<summary>')) $(hash).attr('open', true);
-        else $(`${hash}>*:first-child`).css('border', '3px solid gray').addClass('hash');
+        else $(`${hash}>*:first-child`).addClass('hash');
     }
     catch (e) {};
 };
 $(window).on('hashchange', function() {
-    $('.hash').css('border', 'none').removeClass('hash');
+    $('.hash').removeClass('hash');
     hashChanged();
 });
 

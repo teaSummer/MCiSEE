@@ -246,6 +246,10 @@ select {
     overflow-y: auto;
 }
 
+option {
+    transition: none;
+}
+
 select.normal.unfold option.bold {
     font-weight: bold;
 }
@@ -303,6 +307,11 @@ div[id]>*:first-child {
 
 .ICP a:active {
     color: #5555ff;
+}
+
+.hash {
+    transition: border 0s;
+    border: 2.5px solid gray;
 }
 
 .min-width-215 {
