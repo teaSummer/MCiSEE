@@ -113,6 +113,7 @@ body {
 a {
     color: #006eff;
     text-decoration: none;
+    transition: none;
 }
 
 a:hover {
