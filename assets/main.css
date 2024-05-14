@@ -135,7 +135,7 @@ a.button {
     border: none;
     border-radius: 5px;
     text-decoration: none;
-    transition-duration: 0.15s;
+    transition: all 0.15s;
 }
 
 a.button:hover {
@@ -217,7 +217,7 @@ button {
     text-align: center;
     vertical-align: middle;
     cursor: pointer;
-    transition-duration: 0.3s;
+    transition: all 0.3s;
     outline: none;
 }
 
