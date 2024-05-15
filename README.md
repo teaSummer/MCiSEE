@@ -26,7 +26,7 @@
 
 ### 如何更改数据？
 
-在仓库中找到 [data](data) 文件夹，可以里面找到所有数据的脚本文件，数据通过数组呈现。
+在仓库中找到 [data](data) 文件夹，里面可以找到所有数据文件。
 
 **添加新的数据时，不要漏写数据之间的分隔符号！**
 
@@ -36,6 +36,7 @@
 |---------------|------------------|--------------------------|
 | launcher.js   | 启动器列表（**Java版**） | [查看](data/launcher.js)   |
 | searchable.js | 可供快速查询的网站列表      | [查看](data/searchable.js) |
+| website.js    | 网站列表             | [查看](data/website.js)    |
 
 打开文件后，你将看到一些常量，例如 AndroidLauncher 等。
 
@@ -81,6 +82,8 @@
 }
 ```
 
+---
+
 ### searchable.js
 
 对象有以下属性：
@@ -105,7 +108,26 @@
 }
 ```
 
-...
+---
+
+### website.js
+
+示例如下：
+
+``` javascript
+{
+    "官方网站 (©Mojang/©微软)": {
+        "Minecraft": "https://www.minecraft.net",
+        "Minecraft教育版": "https://education.minecraft.net",
+        "漏洞追踪器(反馈Bug)": "https://bugs.mojang.com",
+        "基岩版开发者文档": "https://learn.microsoft.com/minecraft/creator/",
+        "Feedback": "https://feedback.minecraft.net",
+        "知识库": "https://feedback.minecraft.net/hc/categories/115000410252-Knowledge-Base",
+        "远古版网页MC": "https://classic.minecraft.net",
+        "Minecraft Forge": "https://www.minecraftforge.net"
+    }
+}
+```
 
 ---
 
