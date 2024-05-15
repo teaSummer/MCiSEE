@@ -170,6 +170,10 @@ hr {
     border: none;
 }
 
+summary {
+    user-select: none;
+}
+
 svg {
     display: inline-block;
     width: 1em;
@@ -413,7 +417,7 @@ a.button:not(.download)::after {
     content: '';
     color: white;
     display: inline-block;
-    content: url('icon/extarnalLink.svg');
+    content: url('icon/linkIcon.svg');
     width: 1em;
     vertical-align: middle;
     padding-left: 3px;
