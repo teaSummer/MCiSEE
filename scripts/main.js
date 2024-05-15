@@ -283,42 +283,22 @@ $('.auto-folding').change(autoFoldingChanged);
 
 const pre_list = function(element) {
     const lineBlocks = [];
-    let blocks = $(element).html()
-        .replace(/\n +/g, '\n')
-        .trim()
-        .split('\n\n');
+    let blocks = JSON.parse($(element).html());
     let retValue = '';
+    console.log(blocks);
     for (let block of blocks) {
-        lineBlocks.push(block.replace(/^|\s#.+/g, '').split('\n'));
-    };
-    for (let block of lineBlocks) {
-        for (let lineBlock = 0; lineBlock < block.length; lineBlock += 2) {
-            let nextBlock = block[lineBlock + 1];
-            let thisBlock = block[lineBlock];
-            thisBlock = thisBlock.split('：').join('');
-            if (typeof nextBlock == 'undefined') continue;
-            else if (!(nextBlock.startsWith('http'))) {
-                nextBlock = nextBlock.replace(/\:|\：/, '');
-                if (lineBlock == 0) {
-                    if (thisBlock.endsWith('[open]')) {
-                        retValue += `<details class="keep" id="${thisBlock.replace('[open]', '').replace(/ .+/, '')}" open><summary>${thisBlock.replace('[open]', '')}</summary>`;
-                    }
-                    else retValue += `<details id="${thisBlock.replace(/ .+/, '')}"><summary>${thisBlock}</summary>`;
-                }
-                retValue += `<a class="button" href="${block[lineBlock + 2]}" target="_blank">${nextBlock}</a>`;
-            }
-            else {
-                retValue += `<a class="button" href="${nextBlock}" target="_blank">${thisBlock}</a>`;
-            };
+        const title = Object.keys(block)[0];
+        if (title.endsWith('[open]')) {
+            retValue += `<details class="keep" id="${title.replace('[open]', '').replace(/ .+/, '')}" open><summary>${title.replace('[open]', '')}</summary>`;
+        }
+        else retValue += `<details id="${title.replace(/ .+/, '')}"><summary>${title}</summary>`;
+        for (const [key, value] of Object.entries(block[title])) {
+            retValue += `<a class="button" href="${value}" target="_blank">${key}</a>`;
         };
         retValue += '</details><hr>';
     };
-    retValue = retValue
-        .replace(/<lineBlock><textBlock>/g, '<textBlock><lineBlock>')
-        .replace(/<\/textBlock><\/lineBlock>/g, '</lineBlock></textBlock>')
-        .replace(/<hr>$/, '');
+    retValue = retValue.replace(/<hr>$/, '');
     $(element).html(retValue);
-    return retValue;
 };
 
 
@@ -353,18 +333,18 @@ $(window).on('hashchange', function() {
 
 
 
-let CSForum = '简体中文论坛：';
+const CSForum = [{"简体中文论坛": {}}];
 for (const forum of db_forums) {
     if (forum.state == 'up') {
-        CSForum += '\n' + forum.title + '：\n' + forum.url;
+        CSForum[0]["简体中文论坛"][forum.title] = forum.url;
     };
 };
 
 
 
 $(document).ready(function() {
-    $('.utility-website-list').text(utilityWebsite);
-    $('.forum-list').text(CSForum + otherForum);
+    $('.utility-website-list').text(JSON.stringify(utilityWebsite));
+    $('.forum-list').text(JSON.stringify([].concat.apply(CSForum, otherForum)));
     deviceChanged();
     autoFoldingChanged();
     searchableChanged();
