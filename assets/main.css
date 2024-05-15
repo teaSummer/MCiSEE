@@ -113,7 +113,6 @@ body {
 a {
     color: #006eff;
     text-decoration: none;
-    transition: none;
 }
 
 a:hover {
@@ -135,7 +134,7 @@ a.button {
     border: none;
     border-radius: 5px;
     text-decoration: none;
-    transition: all 0.15s;
+    transition-duration: 0.15s;
 }
 
 a.button:hover {
@@ -217,7 +216,7 @@ button {
     text-align: center;
     vertical-align: middle;
     cursor: pointer;
-    transition: all 0.3s;
+    transition-duration: 0.3s;
     outline: none;
 }
 
@@ -245,10 +244,6 @@ select {
     vertical-align: middle;
     outline: none;
     overflow-y: auto;
-}
-
-option {
-    transition: none;
 }
 
 select.normal.unfold option.bold {
@@ -308,11 +303,6 @@ div[id]>*:first-child {
 
 .ICP a:active {
     color: #5555ff;
-}
-
-.hash {
-    transition: border 0s;
-    border: 2.5px solid gray;
 }
 
 .min-width-215 {
@@ -423,7 +413,7 @@ a.button:not(.download)::after {
     content: '';
     color: white;
     display: inline-block;
-    content: url('image/extarnalLink.svg');
+    content: url('icon/extarnalLink.svg');
     width: 1em;
     vertical-align: middle;
     padding-left: 3px;
@@ -441,14 +431,14 @@ main>div {
 
 #目录 {
     padding: 8px;
-    width: calc(18vw);
+    width: calc(8vw);
     /* height: auto; */
     max-height: 20px;
     position: fixed;
     border-radius: 10px;
     top: calc(35vh);
-    right: calc(-15vw);
-    background-color: #456c;
+    right: calc(-6vw);
+    background-color: rgba(9, 73, 136, 0.452);
     user-select: none;
 }
 #目录>dl {
@@ -472,18 +462,25 @@ main>div {
     color: #ccc;
 }
 
+@font-face {
+    font-family: "Segoe UI Emoji";
+    src: url("font/seguiemj.ttf");
+}
 #目录 dt::before {
-    content: '◼ ';
+    content: "◼ ";
+    font-family: "Segoe UI Emoji";
 }
 
 #目录 dd::before {
-    content: '◻ ';
+    content: "◻ ";
     margin-left: 6px;
+    font-family: "Segoe UI Emoji";
 }
 
 @media (max-width: 768px) {
     #目录 {
-        width: calc(20vw);
+        width: calc(26vw);
+        right: calc(-16vw);
     }
     .pre-flex {
         display: flex;
