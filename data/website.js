@@ -175,7 +175,7 @@ const utilityWebsite = `
 
 
 
-// 论坛列表 (除简体中文)
+// 论坛列表 (不含 简体中文论坛)
 const otherForum = `
 
 其它论坛
