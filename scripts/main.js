@@ -11,12 +11,14 @@ DOMDeviceList.show();
 $('#device-list').attr('data-max-size', supportedDevices.length);
 
 
+// 不记录历史滚动位置
 if (history.scrollRestoration) {
     history.scrollRestoration = 'manual';
 };
 
 
 
+// 创建超文本标签（并点击）
 const createSuperLabel = function(url, id) {
     const a = `<a href="" target="_blank" id="${id}">`;
     $('body').after(a);
@@ -26,6 +28,7 @@ const createSuperLabel = function(url, id) {
     aElement.remove();
 };
 
+// 获取下拉菜单选中项
 const checkedOption = function(selectElement) {
     return $( $(selectElement)[0][$(selectElement)[0].selectedIndex] );
 };
@@ -125,6 +128,7 @@ const searchableChanged = function(event = {target: $('#searchable-list')}) {
 };
 $('#searchable-list').change(searchableChanged);
 
+// 表单提交处理
 $('.searchable-form').submit(function(event) {
     event.preventDefault();
     const input = $('.searchable-input').val().trim();
@@ -136,6 +140,7 @@ $('.searchable-form').submit(function(event) {
     if (input != '') createSuperLabel(url, 'searchable-search');
 });
 
+// 拼写完成校验
 let searchableComposition = true;
 $('.searchable-input').on('compositionstart', function() {
     searchableComposition = false;
@@ -159,6 +164,7 @@ $('.searchable-direct').change(function() {
 });
 
 
+// 同步配置
 const config = function (...classNames) {
     for (const className of classNames) {
         if (localStorage.getItem(className) == 'true') $('.' + className).attr('checked', true);
@@ -168,6 +174,7 @@ const config = function (...classNames) {
 config('auto-folding', 'github-proxy', 'searchable-direct');
 
 
+// 获取候选词
 $.support.cors = true;
 $('.searchable-input').typeahead(
     {
@@ -261,6 +268,7 @@ const autoFoldingChanged = function() {
         $('select.normal').attr('disabled', true);
     };
 };
+// 启用自动展开下拉菜单后
 $('#device-list option').mouseenter(function() {
     const parent = $(this).parent();
     parent.val($(this).val());
@@ -285,7 +293,6 @@ const pre_list = function(element) {
     const lineBlocks = [];
     let blocks = JSON.parse($(element).html());
     let retValue = '';
-    console.log(blocks);
     for (let block of blocks) {
         const title = Object.keys(block)[0];
         if (title.endsWith('[open]')) {
@@ -302,6 +309,7 @@ const pre_list = function(element) {
 };
 
 
+// URL哈希属性监听
 const hashChanged = function() {
     if (location.hash == '') return;
     let hash = decodeURI(location.hash);
@@ -333,6 +341,7 @@ $(window).on('hashchange', function() {
 
 
 
+// 获取正常状态的简体中文论坛
 const CSForum = [{"简体中文论坛": {}}];
 for (const forum of db_forums) {
     if (forum.state == 'up') {
@@ -342,6 +351,7 @@ for (const forum of db_forums) {
 
 
 
+// 页面加载完成事件
 $(document).ready(function() {
     $('.utility-website-list').text(JSON.stringify(utilityWebsite));
     $('.forum-list').text(JSON.stringify([].concat.apply(CSForum, otherForum)));
