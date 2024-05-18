@@ -26,8 +26,8 @@ const utilityWebsite = [
             "网易我的世界官网": "https://mc.163.com",
             "Inner Core基岩版模组引擎": "https://icmods.mineprogramming.org",
             "MCPEDL资源下载站": "https://mcpedl.com",
-            "地图查询网站": "https://www.chunkbase.com",
             "LittleSkin皮肤站": "https://littleskin.cn",
+            "皮肤改色器": "https://www.mcskinrecolor.com",
             "筛选皮肤": "https://mcskinsearch.com",
             "Nova Skin皮肤编辑器": "https://minecraft.novaskin.me",
             "通过名称查询皮肤": "https://namemc.com",
@@ -35,21 +35,29 @@ const utilityWebsite = [
             "基岩版地球素材资源": "https://mcpe-planet.com",
             // "开发者开发百科": "https://minewiki.net",
             "MC风格艺术字": "https://textcraft.net",
+            "多彩像素文本": "https://colorize.fun/minecraft",
             "指令生成器(MC百科)": "https://www.mcmod.cn/tools/cbcreator/",
             "命令生成器(MetaMo)": "https://mc.metamo.cn/gmct/",
             "地图转换器": "https://chunker.app",
             "地图查看网站": "https://www.chunkbase.com",
+            "史莱姆区块查找": "https://mclt.cn",
+            "图片生成地图": "https://mc-map.djfun.de",
+            "像素画生成器": "https://rebane2001.com/mapartcraft/zh-Hans",
+            "地图种子查询": "https://www.mcseeder.com",
             "建筑辅助": "https://minecraftshapes.com",
+            "超多实用工具": "https://www.gamergeeks.net",
             "工具网站": "https://minecraft.tools",
             "正版玩家信息查询": "https://mcuuid.net",
+            "Aternos免费开服": "https://aternos.org",
             "服务器列表(大陆)Ⅰ": "https://www.mclists.cn",
             "服务器列表(大陆)Ⅱ": "https://www.fwqlist.com",
             "找服网": "https://www.fansmc.com",
-            "低多边形3D模型编辑器": "https://www.blockbench.net",
+            "3D模型编辑器BlockBench": "https://www.blockbench.net",
             "装饰性头颅": "https://www.minecraft-heads.com",
             "基岩版文档": "https://bedrock.dev",
             "基岩版维基百科": "https://wiki.bedrock.dev",
-            "DigMinecraft教程": "https://www.digminecraft.com"
+            "DigMinecraft教程": "https://www.digminecraft.com",
+            "预览盔甲纹饰": "https://armortrims.com"
         }
     },
     {
@@ -93,7 +101,8 @@ const utilityWebsite = [
             "Midi音乐转换为可视化音符瀑布流mcpack行为包": "https://dislink.github.io/midi2tiles/",
             "各种图片转换为放置方块的mcpack行为包": "https://dislink.github.io/img2mcfunction/",
             "文字转换为粒子画的mcpack行为包": "https://dislink.github.io/text2mcfunction/",
-            "mcfunction文件转换为bdump v3结构文件": "https://dislink.github.io/mcfunction2bdx/"
+            "mcfunction文件转换为bdump v3结构文件": "https://dislink.github.io/mcfunction2bdx/",
+            "命令自动补全": "https://mact.mcisee.top"
         }
     },
     {

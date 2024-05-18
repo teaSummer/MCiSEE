@@ -9,7 +9,7 @@ const AndroidLauncher = [
     },
     {
         title: "PojavLauncher",
-        download: "https://lz.qaiu.top/parser?url=https://share.feijipan.com/s/xpA9fMeC",
+        download: "https://share.feijipan.com/s/xpA9fMeC",
         version: "Edelweiss",
         url: "https://github.com/PojavLauncherTeam/PojavLauncher"
     },
@@ -62,8 +62,8 @@ const WindowsLauncher = [
     {
         title: "Plain Craft Launcher 2",
         subtitle: "PCL2",
-        download: "https://lz.qaiu.top/parser?url=https://ltcat.lanzoum.com/ilOSm1uci9de",
-        version: "2.7.1 (2.7.1.1)",
+        download: "https://ltcat.lanzoum.com/i8BsW1z0eoch",
+        version: "2.7.3",
         url: "https://afdian.net/@LTCat"
     },
     {
@@ -74,7 +74,7 @@ const WindowsLauncher = [
     },
     {
         title: "ColorMC",
-        download: "https://github.com/Coloryr/ColorMC/releases/download/A24/colormc-x64-aot.msi",
+        download: "https://github.com/Coloryr/ColorMC/releases/download/A24/colormc-x64.msi",
         version: "A24",
         url: "https://github.com/Coloryr/ColorMC"
     },
@@ -99,6 +99,20 @@ const WindowsLauncher = [
         url: "https://github.com/MultiMC/Launcher"
     },
     {
+        title: "Prism Launcher",
+        subtitle: "Prism",
+        download: "https://github.com/PrismLauncher/PrismLauncher/releases/download/8.3/PrismLauncher-Windows-MSVC-Setup-8.3.exe",
+        version: "8.3",
+        url: "https://github.com/PrismLauncher/PrismLauncher"
+    },
+    {
+        title: "Salwyrr Launcher",
+        subtitle: "Salwyrr",
+        download: "https://appsdl-overwolf-com.akamaized.net/prod/apps/ehdhabenpndnlfhfchfacfmnkhmnmigdjjlkeimc/1.0.4/setup.exe",
+        version: "1.0.4",
+        url: "https://www.salwyrr.com"
+    },
+    {
         title: "Minecraft 启动器 (旧版)",
         version: "latest",
         download: "https://launcher.mojang.com/download/MinecraftInstaller.msi",
@@ -107,7 +121,7 @@ const WindowsLauncher = [
     {
         title: "Plain Craft Launcher 1",
         subtitle: "PCL1",
-        download: "https://lz.qaiu.top/parser?url=https://indragon.lanzoue.com/iPF341vfkzsb&pwd=pcl1",
+        download: "https://indragon.lanzoue.com/iPF341vfkzsb&pwd=pcl1",
         version: "1.0.9",
         url: "https://gitee.com/Cmbself/PCL1"
     }
@@ -134,7 +148,7 @@ const macOSLauncher = [
     },
     {
         title: "ColorMC",
-        download: "https://github.com/Coloryr/ColorMC/releases/download/A24/colormc-a24-1-x86_64-aot.pkg.tar.zst",
+        download: "https://github.com/Coloryr/ColorMC/releases/download/A24/colormc-a24-1-x86_64.pkg.tar.zst",
         version: "A24",
         url: "https://github.com/Coloryr/ColorMC"
     },
@@ -151,8 +165,61 @@ const macOSLauncher = [
         download: "https://files.multimc.org/downloads/mmc-develop-osx64.tar.gz",
         version: "latest",
         url: "https://github.com/MultiMC/Launcher"
+    },
+    {
+        title: "Prism Launcher",
+        subtitle: "Prism",
+        download: "https://github.com/PrismLauncher/PrismLauncher/releases/download/8.3/PrismLauncher-macOS-8.3.zip",
+        version: "8.3",
+        url: "https://github.com/PrismLauncher/PrismLauncher"
+    },
+    {
+        title: "Salwyrr Launcher",
+        subtitle: "Salwyrr",
+        download: "https://www.salwyrr.com/4/Salwyrr%20Minecraft%20Launcher%204.jar",
+        version: "4",
+        url: "https://www.salwyrr.com"
     }
 ];
 
 // 适用于 Linux系统 的启动器
-const LinuxLauncher = [];
+const LinuxLauncher = [
+    {
+        title: "Hello Minecraft! Launcher",
+        subtitle: "HMCL",
+        download: "https://github.com/HMCL-dev/HMCL/releases/download/release-3.5.8/HMCL-3.5.8.sh",
+        version: "3.5.8",
+        url: "https://github.com/HMCL-dev/HMCL",
+        dev: {
+            download: "https://github.com/HMCL-dev/HMCL/releases/download/v3.5.7.247/HMCL-3.5.7.247.sh",
+            version: "3.5.7.247"
+        }
+    },
+    {
+        title: "ColorMC",
+        download: "https://github.com/Coloryr/ColorMC/releases/download/A24/colormc-a24-linux-x64.deb",
+        version: "A24",
+        url: "https://github.com/Coloryr/ColorMC"
+    },
+    {
+        title: "X Minecraft Launcher",
+        subtitle: "XMCL",
+        download: "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.44.5/xmcl-0.44.5-arm64.deb",
+        version: "0.44.5",
+        url: "https://github.com/voxelum/x-minecraft-launcher"
+    },
+    {
+        title: "Prism Launcher",
+        subtitle: "Prism",
+        download: "https://github.com/PrismLauncher/PrismLauncher/releases/download/8.3/PrismLauncher-Linux-x86_64.AppImage",
+        version: "8.3",
+        url: "https://github.com/PrismLauncher/PrismLauncher"
+    },
+    {
+        title: "Salwyrr Launcher",
+        subtitle: "Salwyrr",
+        download: "https://www.salwyrr.com/4/Salwyrr%20Minecraft%20Launcher%204.jar",
+        version: "4",
+        url: "https://www.salwyrr.com"
+    }
+];
