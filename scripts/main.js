@@ -6,6 +6,7 @@ const supportedDevices = [
     [          'iOS',  'iOS/iPad'          ],
     [      'Windows',  'Windows'           ],
     [        'macOS',  'macOS'             ],
+    [        'Linux',  'Linux'             ],
 ];
 DOMDeviceList.show();
 $('#device-list').attr('data-max-size', supportedDevices.length);

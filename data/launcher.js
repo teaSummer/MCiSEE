@@ -153,3 +153,6 @@ const macOSLauncher = [
         url: "https://github.com/MultiMC/Launcher"
     }
 ];
+
+// 适用于 Linux系统 的启动器
+const LinuxLauncher = [];

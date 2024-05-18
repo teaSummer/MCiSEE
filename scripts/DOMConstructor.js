@@ -67,7 +67,7 @@ class DOMLauncherList {
     };
 
     static list(items = []) {
-        if (items.length == 0) return '<option value="?">【无】</option>';
+        if (items.length == 0) return '<option value="?">【暂无】</option>';
         let dom = '<option value="?">【待选择】</option>';
         items.forEach(function(e) {
             dom += DOMLauncherList.item(e);
@@ -167,7 +167,7 @@ class DOMDeviceList {
             };
         };
 
-        const toHide = 3;
+        const toHide = 4;
         $('#device-list').change(function() {
             $('.app-container').show();
             if ($(this)[0].selectedIndex > toHide) {
