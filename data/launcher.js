@@ -121,7 +121,7 @@ const WindowsLauncher = [
     {
         title: "Plain Craft Launcher 1",
         subtitle: "PCL1",
-        download: "https://indragon.lanzoue.com/iPF341vfkzsb&pwd=pcl1",
+        download: "https://share.feijipan.com/s/kwAt8rhZ",
         version: "1.0.9",
         url: "https://gitee.com/Cmbself/PCL1"
     }
