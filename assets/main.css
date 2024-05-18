@@ -250,6 +250,11 @@ select {
     overflow-y: auto;
 }
 
+option {
+    /* 为适配功能：自动展开下拉菜单 */
+    transition: none;
+}
+
 select.normal.unfold option.bold {
     font-weight: bold;
 }

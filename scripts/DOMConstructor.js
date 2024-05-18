@@ -47,10 +47,12 @@ class DOMLauncherList {
         const _title = `data-title="${item.title}"`;
         const _download = convert(download, 'data-download');
         const _devDownload = convert(devDownload, 'data-dev-download');
+        const _backupDownload = convert(download, 'data-backup-download');
+        const _backupDevDownload = convert(devDownload, 'data-backup-dev-download');
         const _url = convert(url, 'data-url');
         const _version = (version == '1.0.x' ? '' : `data-version="${version}"`);
         const _devVersion = (devVersion == '1.0.x.x' ? '' : `data-dev-version="${devVersion}"`);
-        const properties = `${_title} ${_download} ${_devDownload} ${_version} ${_devVersion} ${_url}`;
+        const properties = `${_title} ${_download} ${_devDownload} ${_version} ${_devVersion} ${_url} ${_backupDownload} ${_backupDevDownload}`;
         return `<option ${properties}>${item.subtitle}</option>`;
     };
 
