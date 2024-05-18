@@ -77,7 +77,7 @@ const launcherChanged = function(event = {target: $('.launcher-list')}) {
                     button.html(downloadSVG + '下载稳定版 ' + version);
                     button.attr('title', '下载稳定正式版 ' + version);
                 };
-                button.attr('data-backup-href', checked.attr('data-backup-dev-download'));
+                button.attr('data-backup-href', checked.attr('data-backup-download'));
                 emptyrm(version);
             } else {
                 const devVersion = checked.attr('data-dev-version');
@@ -87,7 +87,7 @@ const launcherChanged = function(event = {target: $('.launcher-list')}) {
                     button.html(downloadSVG + '下载开发版 ' + devVersion);
                     button.attr('title', '下载开发测试版 ' + devVersion);
                 };
-                button.attr('data-backup-href', checked.attr('data-backup-download'));
+                button.attr('data-backup-href', checked.attr('data-backup-dev-download'));
                 emptyrm(devVersion);
             };
         };
