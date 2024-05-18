@@ -4,12 +4,20 @@ const utilityWebsite = [
         "官方网站 (©Mojang/©微软)": {
             "Minecraft": "https://www.minecraft.net",
             "Minecraft教育版": "https://education.minecraft.net",
+            "去Xbox购买正版": "https://www.xbox.com/zh-CN/games/store/minecraft-java-bedrock-edition-for-pc/9NXP44L49SHJ/0010",
             "漏洞追踪器(反馈Bug)": "https://bugs.mojang.com",
             "基岩版开发者文档": "https://learn.microsoft.com/minecraft/creator/",
             "Feedback": "https://feedback.minecraft.net",
             "知识库": "https://feedback.minecraft.net/hc/categories/115000410252-Knowledge-Base",
             "远古版网页MC": "https://classic.minecraft.net",
             "Minecraft Forge": "https://www.minecraftforge.net"
+        }
+    },
+    {
+        "祝MC十五周年快乐！": {
+            "15周年庆典": "https://www.minecraft.net/zh-hans/15th-anniversary",
+            "领取苦力怕披风": "https://www.minecraft.net/zh-hans/15th-anniversary?mcRef=redeemCape",
+            "去Xbox购买正版": "https://www.xbox.com/zh-CN/games/store/minecraft-java-bedrock-edition-for-pc/9NXP44L49SHJ/0010"
         }
     },
     {
