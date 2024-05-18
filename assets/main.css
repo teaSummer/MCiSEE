@@ -440,6 +440,7 @@ main>div {
     max-height: 20px;
     position: fixed;
     border-radius: 10px;
+    transition: all 1.5s;
     top: calc(35vh);
     right: calc(-6vw);
     background-color: rgba(9, 73, 136, 0.452);
@@ -449,7 +450,7 @@ main>div {
     margin-top: 20px;
     margin-left: 12px;
     opacity: 0;
-    transition: opacity 1.2s;
+    transition: opacity 0.8s !important;
     pointer-events: none;
 }
 
