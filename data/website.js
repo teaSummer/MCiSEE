@@ -14,7 +14,7 @@ const utilityWebsite = [
         }
     },
     {
-        "祝MC十五周年快乐！": {
+        "祝MC十五周年快乐！[open]": {
             "15周年庆典": "https://www.minecraft.net/zh-hans/15th-anniversary",
             "领取苦力怕披风": "https://www.minecraft.net/zh-hans/15th-anniversary?mcRef=redeemCape",
             "去Xbox购买正版": "https://www.xbox.com/zh-CN/games/store/minecraft-java-bedrock-edition-for-pc/9NXP44L49SHJ/0010"
