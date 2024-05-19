@@ -1,0 +1,22 @@
+name: 网站部署
+on:
+  push:
+   branches:
+      main
+
+jobs:
+  deploy_job:
+      runs-on: ubuntu-latest
+      name: 部署到服务器
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v2
+        - name: 部署文件
+          uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+          with:
+            username: ${{ secrets.FTP_USERNAME }}
+            password: ${{ secrets.FTP_PASSWORD }}
+            server: ${{ secrets.FTP_SERVER }}
+            port: ${{ secrets.FTP_PORT }}
+            remote_path: '/www/wwwroot/mcisee.top'
+            sftp_only: true
