@@ -15,7 +15,7 @@ jobs:
           uses: wlixcc/SFTP-Deploy-Action@v1.2.4
           with:
             username: ${{ secrets.FTP_USERNAME }}
-            password: ${{ secrets.FTP_PASSWORD }}
+            ssh_private_key: ${{ secrets.PRIVATE_KEY }}
             server: ${{ secrets.FTP_SERVER }}
             port: ${{ secrets.FTP_PORT }}
             remote_path: '/www/wwwroot/mcisee.top'
