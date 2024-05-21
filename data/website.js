@@ -74,7 +74,7 @@ const utilityWebsite = [
     },
     {
         "非简体中文 (与无类别相关)": {
-            "文字渐变文字生成器": "https://colorize.fun/minecraft",
+            "文字渐变颜色生成器": "https://colorize.fun/minecraft",
             "指令工具(台湾)": "https://new.kukuo.tw/tools/",
             "最好的服务器": "https://minecraft-mp.com",
             "服务器列表": "https://mcl.ist",
