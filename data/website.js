@@ -35,7 +35,7 @@ const utilityWebsite = [
             "基岩版地球素材资源": "https://mcpe-planet.com",
             // "开发者开发百科": "https://minewiki.net",
             "MC风格艺术字": "https://textcraft.net",
-            "渐变文字生成器": "https://mcg.tuanzi.ink",
+            "文字渐变颜色生成器": "https://mcg.tuanzi.ink",
             "指令生成器(MC百科)": "https://www.mcmod.cn/tools/cbcreator/",
             "命令生成器(MetaMo)": "https://mc.metamo.cn/gmct/",
             "地图转换器": "https://chunker.app",
@@ -74,7 +74,7 @@ const utilityWebsite = [
     },
     {
         "非简体中文 (与无类别相关)": {
-            "渐变文字生成器": "https://colorize.fun/minecraft",
+            "文字渐变文字生成器": "https://colorize.fun/minecraft",
             "指令工具(台湾)": "https://new.kukuo.tw/tools/",
             "最好的服务器": "https://minecraft-mp.com",
             "服务器列表": "https://mcl.ist",
