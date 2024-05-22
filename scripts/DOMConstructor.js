@@ -22,24 +22,18 @@ class DOMLauncherList {
         const devVersion = item.dev.version;
         try {
             download = new URL(item.download);
-        } catch (error) {
-            download = {
-                host: item.download
-            };
+        } catch (e) {
+            download = {host: item.download};
         };
         try {
             devDownload = new URL(item.dev.download);
-        } catch (error) {
-            devDownload = {
-                host: item.dev.download
-            };
+        } catch (e) {
+            devDownload = {host: item.dev.download};
         };
         try {
             url = new URL(item.url);
-        } catch (error) {
-            url = {
-                host: item.url
-            };
+        } catch (e) {
+            url = {host: item.url};
         };
         const convert = function(URL, arg) {
             return (URL == 'https://www.example.com/' || URL.host == '') ? '' : `${arg}="${URL}"`;
@@ -94,17 +88,13 @@ class DOMSearchableList {
         let search, url;
         try {
             search = new URL(item.search);
-        } catch (error) {
-            search = {
-                host: item.search
-            };
+        } catch (e) {
+            search = {host: item.search};
         };
         try {
             url = new URL(item.url);
-        } catch (error) {
-            url = {
-                host: item.url
-            };
+        } catch (e) {
+            url = {host: item.url};
         };
         const convert = function(URL, arg) {
             return (URL == 'https://www.example.com/' || URL.host == '') ? '' : `${arg}="${URL}"`;
@@ -162,6 +152,11 @@ class DOMDeviceList {
                 case 'Windows':
                     if (device.device != 'Desktop') return 'unsupported';
                     return 'Windows';
+                case 'Linux':
+                case 'Ubuntu':
+                case 'FreeBSD':
+                case 'Debian':
+                    return 'Linux';
                 default:
                     return 'unsupported';
             };
