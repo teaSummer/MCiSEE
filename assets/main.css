@@ -281,10 +281,12 @@ mdui-select {
     padding: 1px 0;
     line-height: 20px;
     vertical-align: middle;
+    -webkit-tap-highlight-color: transparent;
 }
 
 mdui-menu-item {
     padding: 4px 12px;
+    -webkit-tap-highlight-color: transparent;
 }
 
 
