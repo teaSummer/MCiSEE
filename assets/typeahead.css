@@ -75,7 +75,7 @@ html {
 }
 
 .tt-hint {
-    color: #999
+    color: #999;
 }
 
 .tt-menu {
@@ -92,6 +92,7 @@ html {
     padding: 3px 20px;
     font-size: 1rem;
     line-height: 24px;
+    transition: none;
 }
 
 .tt-suggestion:hover {
@@ -103,11 +104,14 @@ html {
 .tt-suggestion.tt-cursor {
     color: #fff;
     background-color: #0097cf;
-
 }
 
 .tt-suggestion p {
     margin: 0;
+}
+
+.tt-highlight {
+    transition: none;
 }
 
 .gist {
