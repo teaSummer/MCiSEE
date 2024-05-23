@@ -1,12 +1,12 @@
 let searchKeyword = '';
 
 const supportedDevices = [
-    // |   最早名称   |       显示名称       |
-    [      'Android',  'Android/HarmonyOS' ],
-    [          'iOS',  'iOS/iPad'          ],
-    [      'Windows',  'Windows'           ],
-    [        'macOS',  'macOS'             ],
-    [        'Linux',  'Linux'             ],
+    // |   最早名称   |       显示名称       |           描述           |
+    [      'Android',  'Android/HarmonyOS', '安卓/鸿蒙 - 手机/平板'     ],
+    [          'iOS',  'iOS/iPad'         , '苹果 - 手机/平板'         ],
+    [      'Windows',  'Windows'          , 'Windows - 电脑'          ],
+    [        'macOS',  'macOS'            , '苹果 - 电脑'              ],
+    [        'Linux',  'Linux'            , '含Ubuntu/FreeBSD/Debian' ],
 ];
 DOMDeviceList.show();
 $('#device-list').attr('data-max-size', supportedDevices.length);
@@ -44,7 +44,6 @@ const deviceChanged = function() {
     });
     try { launcherChanged(); } catch (e) {};
 };
-$('#device-list').change(deviceChanged);
 
 
 $('div.launcher-list').html(DOMLauncherList.deviceList());
@@ -255,7 +254,7 @@ const autoFoldingChanged = function() {
                 $(this).removeClass('fold').addClass('unfold');
                 autoFolding({target: this});
             },
-            // mouseleave - 折叠
+            // mouseleave - 收起
             function() {
                 if ($('select.normal.unfold').length != 1) return;
                 $(this).val(realSelect);
@@ -367,6 +366,17 @@ $(document).ready(function() {
     hashChanged();
     $('select').each(function(index, element) {
         autoFolding({target: element});
+    });
+    $('#device-list').each(function(index, element) {
+        const e = $(element).find('.custom-item');
+        $(element).children().click(function() {
+            const value = $(this).attr('label');
+            $('#device-list').val(value);
+            deviceChanged();
+            $('#device-list').val($(this).find('div div:first-child').text());
+            $(element).click();
+
+        });
     });
     $('.wait').removeAttr('class').removeAttr('style');
     try { document.querySelector(decodeURI(location.hash)).scrollIntoView(); }

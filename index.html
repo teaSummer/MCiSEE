@@ -39,7 +39,9 @@
     <meta name="twitter:image:alt" content="所见皆是Minecraft">
     <link rel="shortcut icon" href="assets/icon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/main.css">
+    <link rel="stylesheet" href="assets/mdui.css">
     <link rel="stylesheet" href="assets/typeahead.css">
+    <script src="scripts/mdui.global.js"></script>
     <script src="scripts/jquery-3.7.1.min.js"></script>
     <script src="scripts/browser.min.js"></script>
     <script src="scripts/DOMConstructor.js"></script>
@@ -87,7 +89,7 @@
         <div class="device-container" id="设备">
             <h2 class="page-title">设备</h2>
             <label for="device-list" class="tip">自动判断，可手动选择</label>
-            <select class="normal fold" name="device-list" id="device-list" data-max-size=""></select>
+            <mdui-select class="normal fold" name="device-list" id="device-list" data-max-size="" placement="bottom" variant="outlined" required="required"></mdui-select>
         </div>
         <div class="resource-container" id="资源">
             <div class="app-container" id="软件">

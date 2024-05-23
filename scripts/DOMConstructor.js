@@ -123,11 +123,11 @@ class DOMDeviceList {
 
     static show() {
         let dom = '';
-        for (const [deviceName, supportedDevice] of supportedDevices) {
-            dom += `<option value="${deviceName}">${supportedDevice}</option>`;
+        for (const [deviceName, supportedDevice, description] of supportedDevices) {
+            dom += `<mdui-menu-item label="${deviceName}"><div slot="custom"><div>${supportedDevice}</div><div class="secondary">${description}</div></div></mdui-menu-item>`;
         };
-        dom += `<option value="unsupported" disabled="disabled" hidden="hidden">不支持</option>
-                <option value="unknown" selected="selected" disabled="disabled" hidden="hidden">未知</option>`;
+        dom += `<mdui-menu-item value="unsupported" disabled="disabled" hidden="hidden"><div slot="custom" class="custom-item"><div>不支持</div></div></mdui-menu-item>
+                <mdui-menu-item value="unknown" selected="selected" disabled="disabled" hidden="hidden"><div slot="custom" class="custom-item"><div>未知</div></div></mdui-menu-item>`;
         $('#device-list').html(dom);
 
         const UA = navigator.userAgent;

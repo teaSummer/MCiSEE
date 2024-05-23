@@ -274,6 +274,30 @@ select.normal.unfold option:checked {
     color: #ffffff;
 }
 
+mdui-select {
+    background-color: transparent;
+    font-size: 14px;
+    width: 200px;
+    padding: 1px 0;
+    line-height: 20px;
+    vertical-align: middle;
+}
+
+mdui-menu-item {
+    padding: 4px 12px;
+}
+
+
+mdui-menu-item .secondary {
+    display: none;
+    color: #888;
+    font-size: 13px;
+}
+
+mdui-menu-item:hover .secondary {
+    display: block;
+}
+
 footer {
     font-size: 14px;
     margin-top: 1.5rem;
