@@ -9,7 +9,6 @@ const supportedDevices = [
     [        'Linux',  'Linux'            , '含Ubuntu/FreeBSD/Debian' ],
 ];
 DOMDeviceList.show();
-$('#device-list').attr('data-max-size', supportedDevices.length);
 
 
 // 不记录历史滚动位置
@@ -358,6 +357,9 @@ $(document).ready(function() {
     $('.utility-website-list').text(JSON.stringify(utilityWebsite));
     $('.forum-list').text(JSON.stringify([].concat.apply(CSForum, otherForum)));
     deviceChanged();
+    supportedDevices.forEach(function(deviceInfo) {
+        if (deviceInfo[0] == $('#device-list').val()) $('#device-list').val((deviceInfo[1]));
+    });
     autoFoldingChanged();
     searchableChanged();
     $('.pre-flex').each(function(index, element) {
@@ -375,7 +377,6 @@ $(document).ready(function() {
             deviceChanged();
             $('#device-list').val($(this).find('div div:first-child').text());
             $(element).click();
-
         });
     });
     $('.wait').removeAttr('class').removeAttr('style');
