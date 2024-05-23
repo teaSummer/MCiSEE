@@ -1,0 +1,20 @@
+on:
+  push:
+    branches:
+      main
+jobs:
+    deploy_job:
+      runs-on: ubuntu-latest
+      name: deploy (test)
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v4
+        - name: Deploy file
+          uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+          with:
+            username: ${{ secrets.FTP_USERNAME }}
+            password: ${{ secrets.FTP_PASSWORD }}
+            server: ${{ secrets.FTP_SERVER }}
+            port: ${{ secrets.FTP_PORT }}
+            remote_path: '/www/wwwroot/mcisee.top'
+            sftp_only: true
