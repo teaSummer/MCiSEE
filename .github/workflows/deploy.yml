@@ -16,6 +16,7 @@ jobs:
         key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
         command: |
-          echo -----------------------
+          echo ===============================================================
           cd /www/wwwroot/mcisee.top
           git pull origin
+          echo ===============================================================
