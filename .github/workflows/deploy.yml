@@ -1,4 +1,4 @@
-name: remote ssh command
+name: 部署网站
 on:
   push:
     branches:
@@ -6,10 +6,10 @@ on:
 
 jobs:
   deploy:
-    name: Deploy
+    name: 远程命令
     runs-on: ubuntu-latest
     steps:
-    - name: executing remote ssh commands
+    - name: 通过执行命令进行部署
       uses: fifsky/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
@@ -17,4 +17,4 @@ jobs:
         port: ${{ secrets.PORT }}
         command: |
           cd /www/wwwroot/mcisee.top
-          ls -a
+          git pull origin
