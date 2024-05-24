@@ -16,3 +16,4 @@ jobs:
             user: ${{ secrets.FTP_USERNAME }}
             password: ${{ secrets.FTP_PASSWORD }}
             exclude: ".git/"
+            delete: true
