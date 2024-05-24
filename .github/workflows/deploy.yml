@@ -6,15 +6,16 @@ on:
 
 jobs:
   deploy:
-    name: 远程命令
+    name: 远程部署
     runs-on: ubuntu-latest
     steps:
-    - name: 通过执行命令进行部署
+    - name: 执行远程命令
       uses: fifsky/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
         key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
         command: |
+          echo -----------------------
           cd /www/wwwroot/mcisee.top
           git pull origin
