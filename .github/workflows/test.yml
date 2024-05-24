@@ -2,17 +2,18 @@ on:
   push:
     branches:
       main
+
 jobs:
     deploy_job:
       runs-on: ubuntu-latest
       name: deploy (test)
       steps:
-        - name: Checkout
-          uses: actions/checkout@v4
+        - uses: actions/checkout@v4
         - name: Deploy file
           uses: modern-dev/ftp-mirror@v2
           with:
+            server: ${{ secrets.FTP_SERVER }}
             user: ${{ secrets.FTP_USERNAME }}
             password: ${{ secrets.FTP_PASSWORD }}
-            server: ${{ secrets.FTP_SERVER }}
             remote_dir: "/www/wwwroot/mcisee.top"
+            delete: true
