@@ -2,7 +2,7 @@ name: 部署网站
 on:
   push:
     branches:
-      main
+      [ main ]
 
 jobs:
   deploy:
@@ -13,8 +13,8 @@ jobs:
       uses: fifsky/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
-        key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
+        key: ${{ secrets.KEY }}
         command: |
           echo ===============================================================
           cd /www/wwwroot/mcisee.top
