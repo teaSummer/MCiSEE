@@ -15,3 +15,4 @@ jobs:
             server: ${{ secrets.FTP_SERVER }}
             user: ${{ secrets.FTP_USERNAME }}
             password: ${{ secrets.FTP_PASSWORD }}
+            exclude: ".git/"
