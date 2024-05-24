@@ -9,7 +9,7 @@ jobs:
       name: deploy (test)
       steps:
         - uses: actions/checkout@v4
-        - name: Deploy file
+        - name: Deploy files
           uses: modern-dev/ftp-mirror@v2
           with:
             server: ${{ secrets.FTP_SERVER }}
