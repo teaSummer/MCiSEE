@@ -10,12 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: executing remote ssh commands
-      uses: appleboy/ssh-action@v1.0.3
+      uses: fifsky/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        PASSWORD: ${{ secrets.PASSWORD }}
+        key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
-        script: |
+        command: |
           cd /www/wwwroot/mcisee.top
           ls -a
