@@ -9,12 +9,12 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
-    - name: executing remote ssh commands using password
+    - name: executing remote ssh commands
       uses: appleboy/ssh-action@v1.0.3
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
+        key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
         script: |
           cd /www/wwwroot/mcisee.top
