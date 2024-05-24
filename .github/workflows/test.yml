@@ -10,11 +10,9 @@ jobs:
         - name: Checkout
           uses: actions/checkout@v4
         - name: Deploy file
-          uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+          uses: modern-dev/ftp-mirror@v2
           with:
-            username: ${{ secrets.FTP_USERNAME }}
+            user: ${{ secrets.FTP_USERNAME }}
             password: ${{ secrets.FTP_PASSWORD }}
             server: ${{ secrets.FTP_SERVER }}
-            port: ${{ secrets.FTP_PORT }}
-            remote_path: '/www/wwwroot/mcisee.top'
-            sftp_only: true
+            remote_dir: "/www/wwwroot/mcisee.top"
