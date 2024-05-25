@@ -34,7 +34,12 @@ const createSuperLabel = function(url, id) {
 
 // 获取下拉菜单选中项
 const checkedOption = function(selectElement) {
-    if (selectElement.value) return $(selectElement).find(`mdui-menu-item[data-subtitle="${selectElement.value}"]`);
+    const SEIncludes = function (str) { return $(selectElement).html().indexOf(str) != -1; };
+    if (selectElement.value) {
+        if (SEIncludes('searchable-list')) {
+            return $(selectElement).find(`mdui-menu-item[data-subtitle="${selectElement.value}"]`);
+        };
+    };
     return $( $(selectElement)[0][$(selectElement)[0].selectedIndex] );
 };
 
@@ -55,7 +60,7 @@ $('div.launcher-list').html(DOMLauncherList.deviceList());
 
 
 // 监听启动器选择项
-const launcherChanged = function(event = {target: $('.launcher-list')}) {
+const launcherChanged = function(event = {target: $('select.launcher-list')}) {
     const checked = checkedOption(event.target);
     const dataTitle = checked.attr('data-title');
     $('.launcher-title').text('');
