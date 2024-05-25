@@ -307,7 +307,7 @@ $(document).ready(function() {
     $('.utility-website-list').text(JSON.stringify(utilityWebsite));
     $('.forum-list').text(JSON.stringify([].concat.apply(CSForum, otherForum)));
     // 缓存处理
-    if (localStorage.getItem('searchable-checked')) $('#searchable-list').val(localStorage.getItem('searchable-checked'))
+    if (localStorage.getItem('searchable-checked') != void 0) $('#searchable-list').val(localStorage.getItem('searchable-checked'))
     else $('#searchable-list').val('Wiki');
     // 设备
     deviceChanged();
