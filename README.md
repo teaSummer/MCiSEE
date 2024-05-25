@@ -1,6 +1,6 @@
 # MCiSEE
 
-![](https://img.shields.io/badge/license-CC--BY--SA--4.0-green) [![Page Views Count](https://badges.toozhao.com/badges/01HTFPN35M6ETEFBVAP3SEWRKG/green.svg)](https://badges.toozhao.com/stats/01HTFPN35M6ETEFBVAP3SEWRKG) [![网站](https://github.com/teaSummer/MCiSEE/actions/workflows/deploy.yml/badge.svg)](https://github.com/teaSummer/MCiSEE/actions/workflows/deploy.yml)
+![](https://img.shields.io/badge/license-CC--BY--SA--4.0-green) [![Page Views Count](https://badges.toozhao.com/badges/01HTFPN35M6ETEFBVAP3SEWRKG/green.svg)](https://badges.toozhao.com/stats/01HTFPN35M6ETEFBVAP3SEWRKG) [![网站](https://github.com/teaSummer/MCiSEE/actions/workflows/deploy.yml/badge.svg)](https://github.com/teaSummer/MCiSEE/actions/workflows/deploy.yml) ![GitHub Repo stars](https://img.shields.io/github/stars/teaSummer/MCiSEE?style=flat)
 
 **所见皆是*Minecraft*，让获取MC资源更加轻便！**
 
