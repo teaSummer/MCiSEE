@@ -36,7 +36,7 @@ const createSuperLabel = function(url, id) {
 const checkedOption = function(selectElement) {
     const SEIncludes = function (str) { return $(selectElement).html().indexOf(str) != -1; };
     if (selectElement.value) {
-        if (SEIncludes('Wiki')) {
+        if (SEIncludes('Wiki') || SEIncludes('Launcher')) {
             return $(selectElement).find(`mdui-menu-item[data-subtitle="${selectElement.value}"]`);
         };
     };
@@ -45,10 +45,10 @@ const checkedOption = function(selectElement) {
 
 
 const deviceChanged = function() {
-    $('.device-diff select').each(function(index, element) {
+    $('.device-diff mdui-select').each(function(index, element) {
         $(element).hide();
-        const select = $('.' + $('#device-list').val());
-        select.val('?');
+        const select = $('.' + $('.device-list').val());
+        select.val('【待选择】');
         select.show();
     });
     try { launcherChanged(); } catch (e) {};
@@ -60,7 +60,7 @@ $('div.launcher-list').html(DOMLauncherList.deviceList());
 
 
 // 监听启动器选择项
-const launcherChanged = function(event = {target: $('select.launcher-list')}) {
+const launcherChanged = function(event = {target: $('mdui-select.launcher-list')}) {
     const checked = checkedOption(event.target);
     const dataTitle = checked.attr('data-title');
     $('.launcher-title').text('');
@@ -109,7 +109,6 @@ const launcherChanged = function(event = {target: $('select.launcher-list')}) {
         };
     };
 };
-$('select.launcher-list').change(launcherChanged);
 
 
 // 监听代理是否勾选
@@ -132,10 +131,10 @@ $('.github-proxy').change(proxyChanged);
 
 
 // 应用快速查询
-$('#searchable-list').html(DOMSearchableList.list(searchable));
+$('.searchable-list').html(DOMSearchableList.list(searchable));
 
 // 监听快速查询选择项
-const searchableChanged = function(event = {target: $('#searchable-list')}) {
+const searchableChanged = function(event = {target: $('.searchable-list')}) {
     const checked = checkedOption(event.target);
     searchKeyword = checked.attr('data-search');
     const subtitle = checked.attr('data-subtitle');
@@ -145,9 +144,9 @@ const searchableChanged = function(event = {target: $('#searchable-list')}) {
     $('.searchable-label').html(`<a class="searchable-goto" href="${checked.attr('data-url')}" title="${note}" target="_blank">跳转 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path></svg></a>`);
     localStorage.setItem('searchable-checked', event.target.value);
     countSeachable += 1;
-    if (countSeachable > 2) $('#searchable-list').click();
+    if (countSeachable > 2) $('.searchable-list').click();
 };
-$('#searchable-list').change(searchableChanged);
+$('.searchable-list').change(searchableChanged);
 
 
 // 快速查询 表单提交处理
@@ -313,20 +312,30 @@ $(document).ready(function() {
     $('.forum-list').text(JSON.stringify([].concat.apply(CSForum, otherForum)));
     // 缓存处理
     const searchableChecked = localStorage.getItem('searchable-checked');
-    if (searchableChecked == 'undefined' || searchableChecked == void 0) $('#searchable-list').val('Wiki');
-    else $('#searchable-list').val(searchableChecked);
+    if (searchableChecked == 'undefined' || searchableChecked == void 0) $('.searchable-list').val('Wiki');
+    else $('.searchable-list').val(searchableChecked);
     // 设备
     deviceChanged();
     supportedDevices.forEach(function(deviceInfo) {
-        if (deviceInfo[0] == $('#device-list').val()) $('#device-list').val((deviceInfo[1]));
+        if (deviceInfo[0] == $('.device-list').val()) $('.device-list').val((deviceInfo[1]));
     });
-    $('#device-list').each(function(index, element) {
-        const e = $(element).find('.custom-item');
+    $('.device-list').each(function(index, element) {
         $(element).children().click(function() {
             const value = $(this).attr('label');
-            $('#device-list').val(value);
+            $('.device-list').val(value);
             deviceChanged();
-            $('#device-list').val($(this).find('div div:first-child').text());
+            $('.device-list').val($(this).find('div div:first-child').text());
+            $(element).click();
+        });
+    });
+    // 启动器
+    $('mdui-select.launcher-list').each(function(index, element) {
+        $(element).val('【待选择】');
+        $(element).children().click(function() {
+            const value = $(this).attr('label');
+            $('mdui-select.launcher-list').val(value);
+            launcherChanged({target: element});
+            $('mdui-select.launcher-list').val($(this).find('div div:first-child').text());
             $(element).click();
         });
     });

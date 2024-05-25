@@ -38,7 +38,8 @@ class DOMLauncherList {
         const convert = function(URL, arg) {
             return (URL == 'https://www.example.com/' || URL.host == '') ? '' : `${arg}="${URL}"`;
         };
-        const _title = `data-title="${item.title}"`;
+        const _title = item.title == item.subtitle ? '' : `data-title="${item.title}"`;
+        const _subtitle = `data-subtitle="${item.subtitle}"`;
         const _download = convert(download, 'data-download');
         const _devDownload = convert(devDownload, 'data-dev-download');
         const _backupDownload = convert(download, 'data-backup-download');
@@ -46,26 +47,27 @@ class DOMLauncherList {
         const _url = convert(url, 'data-url');
         const _version = (version == '1.0.x' ? '' : `data-version="${version}"`);
         const _devVersion = (devVersion == '1.0.x.x' ? '' : `data-dev-version="${devVersion}"`);
-        const properties = `${_title} ${_download} ${_devDownload} ${_version} ${_devVersion} ${_url} ${_backupDownload} ${_backupDevDownload}`;
-        return `<option ${properties}>${item.subtitle}</option>`;
+        const properties = `${_title} ${_subtitle} ${_download} ${_devDownload} ${_version} ${_devVersion} ${_url} ${_backupDownload} ${_backupDevDownload}`;
+        return `<mdui-menu-item label="${item.subtitle}" ${properties}><div slot="custom" class="custom-item"><div>${item.subtitle}</div><div class="secondary">${_title.slice(12, -1)}</div></div></mdui-menu-item>`;
     };
 
     static deviceList(target = '') {
         let dom = '';
         for (const [deviceName, supportedDevice] of supportedDevices) {
-            dom += `<select name="launcher-list" class="launcher-list ${deviceName}" style="display: none;">${
+            dom += `<mdui-select name="launcher-list" class="launcher-list ${deviceName}" style="/*display: none;" value="?" placement="bottom" variant="outlined" required>${
                 this.list(eval(deviceName + 'Launcher'))
-            }</select>`;
+            }</mdui-select>`;
         };
         return dom;
     };
 
     static list(items = []) {
-        if (items.length == 0) return '<option value="?">【暂无】</option>';
-        let dom = '<option value="?">【待选择】</option>';
+        let dom = '';
+        // let dom = '<mdui-menu-item value="?"><div slot="custom" class="custom-item" hidden><div>【待选择】</div></div></mdui-menu-item>';
         items.forEach(function(e) {
             dom += DOMLauncherList.item(e);
         });
+        dom += '<mdui-menu-item label="?" disabled hidden><div slot="custom" class="custom-item"><div>【待选择】</div></div></mdui-menu-item>';
         return dom;
     };
 };
@@ -128,7 +130,7 @@ class DOMDeviceList {
         };
         dom += `<mdui-menu-item value="unsupported" disabled hidden><div slot="custom" class="custom-item"><div>不支持</div></div></mdui-menu-item>
                 <mdui-menu-item value="unknown" selected disabled hidden><div slot="custom" class="custom-item"><div>未知</div></div></mdui-menu-item>`;
-        $('#device-list').html(dom);
+        $('.device-list').html(dom);
 
         const UA = navigator.userAgent;
         const getDevice = function() {
@@ -159,14 +161,14 @@ class DOMDeviceList {
         };
 
         const toHide = 4;
-        $('#device-list').change(function() {
+        $('.device-list').change(function() {
             $('.app-container').show();
             if ($(this)[0].selectedIndex > toHide) {
                 $('.app-container').hide();
             };
         });
-        $('#device-list').val(getDevice());
-        if ($('#device-list')[0].selectedIndex > toHide) {
+        $('.device-list').val(getDevice());
+        if ($('.device-list')[0].selectedIndex > toHide) {
             $('.app-container').hide();
         };
     };
