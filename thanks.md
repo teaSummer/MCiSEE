@@ -2,11 +2,13 @@
 
 诚心感谢所有贡献以及支持我们的个人/组织/项目等。
 
+
 ## 发电感谢
 
 | 人员         | 贡献    |
 |------------|-------|
 | baiyuncode | 捐赠服务器 |
+
 
 ## 依赖/引用的项目
 
@@ -15,26 +17,36 @@
 ### 网站主体
 
 [jQuery](https://github.com/jquery/jquery) JavaScript框架
+
 [browser](https://github.com/mumuy/browser) 浏览器检测工具
+
 [MDUI](https://github.com/zdhxiong/mdui) 纹理样式设计
+
 [typeahead.js](https://github.com/twitter/typeahead.js) 关键词自动补全
+
 [BBSPK](https://github.com/LYOfficial/BBSPK) 新兴我的世界论坛晋级赛
 
 ### 页脚/文档
 
 [Shields.io](https://github.com/badges/shields) 简洁图章图标
+
 [Badger](https://badges.toozhao.com) 网站访问次数统计
+
 [BBSPK](https://github.com/LYOfficial/BBSPK) 新兴我的世界论坛晋级赛
+
 [Contrib](https://github.com/lacolaco/contributors-img) 贡献者图像
+
 [Star Charts](https://github.com/caarlos0/starcharts) 星星历史图
 
 ### 工作流
 
 [SSH Action](https://github.com/fifsky/ssh-action) 远程SSH执行命令
 
+
 ## 贡献者
 
 [![Contrib](https://contrib.rocks/image?repo=teaSummer/MCiSEE)](https://github.com/teaSummer/MCiSEE/graphs/contributors)
+
 
 ## 写在最后
 
