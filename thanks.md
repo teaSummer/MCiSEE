@@ -28,7 +28,7 @@
 
 [BBSPK](https://github.com/LYOfficial/BBSPK) 新兴我的世界论坛晋级赛
 
-### 页脚/文档
+### 页脚/文档/404页面
 
 [Shields.io](https://github.com/badges/shields) 简洁图章图标
 
@@ -40,6 +40,8 @@
 
 [Star Charts](https://github.com/caarlos0/starcharts) 星星历史图
 
+[MCBBS](https://www.mcbbs.net) 404页面
+
 ### 工作流
 
 [SSH Action](https://github.com/fifsky/ssh-action) 远程SSH执行命令
@@ -48,6 +50,13 @@
 ## 贡献者
 
 [![Contrib](https://contrib.rocks/image?repo=teaSummer/MCiSEE)](https://github.com/teaSummer/MCiSEE/graphs/contributors)
+
+
+## 协议
+
+开源协议：[GPL-3.0 license](LICENSE)
+
+知识共享协议：[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 
 ## 写在最后
