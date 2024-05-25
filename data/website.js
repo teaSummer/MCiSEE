@@ -11,7 +11,7 @@ const utilityWebsite = [
             "知识库": "https://feedback.minecraft.net/hc/categories/115000410252-Knowledge-Base",
             "远古版网页MC": "https://classic.minecraft.net",
             "Minecraft Forge": "https://www.minecraftforge.net",
-            "基岩版专用服务器 (仅最新正式版/预览版)": "https://www.minecraft.net/zh-hans/download/server/bedrock"
+            "基岩版专用服务器": "https://www.minecraft.net/zh-hans/download/server/bedrock"
         }
     },
     {
@@ -77,24 +77,24 @@ const utilityWebsite = [
     },
     {
         "服务端 (无特殊说明均为Java版)": {
-            "官方基岩版专用服务器 (仅最新正式版/预览版)": "https://www.minecraft.net/zh-hans/download/server/bedrock",
-            "MineBBS收集的基岩版专用服务器": "https://www.minebbs.com/bds/history",
-            "MineBBS收集的BDS预览版": "https://www.minebbs.com/resources/bedrock-dedicated-server-preview.4934/history",
-            "FastMirror (无极镜像)": "https://www.fastmirror.net/",
-            "极星镜像": "https://mirror.polars.cc/",
-            "MCVersions (提供Java版原版客户端/服务端)": "https://mcversions.net/",
+            "官方基岩版专用服务端": "https://www.minecraft.net/zh-hans/download/server/bedrock",
+            "MineBBS基岩版专用服务端": "https://www.minebbs.com/bds/history",
+            "MineBBS基岩版专用预览版服务端": "https://www.minebbs.com/resources/bedrock-dedicated-server-preview.4934/history",
+            "FastMirror (无极镜像)": "https://www.fastmirror.net",
+            "极星镜像": "https://mirror.polars.cc",
+            "MCVersions": "https://mcversions.net",
             "Akarin": "https://github.com/Akarin-project/Akarin",
             "Arclight": "https://github.com/IzzelAliz/Arclight",
-            "CatServer": "https://catmc.org/",
-            "CraftBukkit": "https://getbukkit.org/",
+            "CatServer": "https://catmc.org",
+            "CraftBukkit": "https://getbukkit.org",
             "Fabric Server": "https://fabricmc.net/use/server/",
-            "MohistMC": "https://mohistmc.com/",
-            "Nukkit (基岩版)": "https://cloudburstmc.org/",
-            "PaperMC": "https://papermc.io/",
-            "PocketMine (基岩版)": "https://pmmp.io/",
-            "Purpur": "https://purpurmc.org/",
-            "SpigotMC": "https://www.spigotmc.org/",
-            "Sponge": "https://spongepowered.org/",
+            "MohistMC": "https://mohistmc.com",
+            "Nukkit (基岩版)": "https://cloudburstmc.org",
+            "PaperMC": "https://papermc.io",
+            "PocketMine (基岩版)": "https://pmmp.io",
+            "Purpur": "https://purpurmc.org",
+            "SpigotMC": "https://www.spigotmc.org",
+            "Sponge": "https://spongepowered.org",
             "Tuinity": "https://github.com/Tuinity/Tuinity"
         }
     },
