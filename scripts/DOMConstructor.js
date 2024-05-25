@@ -53,7 +53,7 @@ class DOMLauncherList {
     static deviceList(target = '') {
         let dom = '';
         for (const [deviceName, supportedDevice] of supportedDevices) {
-            dom += `<select name="launcher-list" class="launcher-list ${deviceName} normal fold" style="display: none;">${
+            dom += `<select name="launcher-list" class="launcher-list ${deviceName}" style="display: none;">${
                 this.list(eval(deviceName + 'Launcher'))
             }</select>`;
         };
@@ -105,11 +105,11 @@ class DOMSearchableList {
         const _note = `data-note="${item.note}"`;
         const _url = convert(url, 'data-url');
         const properties = `${_title} ${_search} ${_subtitle} ${_note} ${_url}`;
-        return `<option ${properties}>${item.title}${item.subtitle == '' || item.subtitle == item.title ? '' : ` (${item.subtitle})`}</option>`;
+        return `<mdui-menu-item value="${item.subtitle}" ${properties}><div slot="custom" class="custom-item"><div>${item.title}${item.subtitle == '' || item.subtitle == item.title ? '' : ` (${item.subtitle})`}</div></div></mdui-menu-item>`;
     };
 
     static list(items = []) {
-        if (items.length == 0) return '<option value="?">【无】</option>';
+        if (items.length == 0) return '<mdui-menu-item value="?"><div slot="custom" class="custom-item"><div>【无】</div></div></mdui-menu-item>';
         let dom = '';
         items.forEach(function(e) {
             dom += DOMSearchableList.item(e);
@@ -133,10 +133,6 @@ class DOMDeviceList {
         const UA = navigator.userAgent;
         const getDevice = function() {
             const device = browser();
-            if (device.device != 'Desktop') {
-                $('.auto-folding').parent().hide();
-                localStorage.removeItem('auto-folding');
-            }
             switch (device.system) {
                 case 'HarmonyOS':
                     if (device.device == 'Desktop') return 'unsupported';

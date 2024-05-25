@@ -134,7 +134,10 @@ a.button {
     border: none;
     border-radius: 5px;
     text-decoration: none;
-    transition-duration: 0.15s;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 a.button:hover {
@@ -440,12 +443,6 @@ div[id]>*:first-child {
     margin: 6px;
     font-size: 16px;
     font-family: var(--ant-font-family);
-}
-
-a.button {
-    user-select: none;
-    cursor: pointer;
-    transition: background 1.2s;
 }
 
 a.button:not(.download)::after {

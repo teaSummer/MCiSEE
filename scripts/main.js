@@ -1,5 +1,9 @@
 let searchKeyword = '';
+let searchableSubtitle = '';
 
+let countSeachable = 0;
+
+// 所有已支持设备
 const supportedDevices = [
     // |   最早名称   |       显示名称       |           描述           |
     [      'Android',  'Android/HarmonyOS', '安卓/鸿蒙 - 手机/平板'     ],
@@ -30,6 +34,7 @@ const createSuperLabel = function(url, id) {
 
 // 获取下拉菜单选中项
 const checkedOption = function(selectElement) {
+    if (selectElement.value) return $(selectElement).find(`mdui-menu-item[data-subtitle="${selectElement.value}"]`);
     return $( $(selectElement)[0][$(selectElement)[0].selectedIndex] );
 };
 
@@ -45,8 +50,11 @@ const deviceChanged = function() {
 };
 
 
+// 应用启动器
 $('div.launcher-list').html(DOMLauncherList.deviceList());
 
+
+// 监听启动器选择项
 const launcherChanged = function(event = {target: $('.launcher-list')}) {
     const checked = checkedOption(event.target);
     const dataTitle = checked.attr('data-title');
@@ -99,6 +107,7 @@ const launcherChanged = function(event = {target: $('.launcher-list')}) {
 $('select.launcher-list').change(launcherChanged);
 
 
+// 监听代理是否勾选
 const proxyChanged = function() {
     localStorage.setItem('github-proxy', $('.github-proxy').is(':checked'));
     try {
@@ -117,19 +126,26 @@ const proxyChanged = function() {
 $('.github-proxy').change(proxyChanged);
 
 
+// 应用快速查询
 $('#searchable-list').html(DOMSearchableList.list(searchable));
 
+// 监听快速查询选择项
 const searchableChanged = function(event = {target: $('#searchable-list')}) {
     const checked = checkedOption(event.target);
     searchKeyword = checked.attr('data-search');
     const subtitle = checked.attr('data-subtitle');
+    searchableSubtitle = subtitle;
     const note = checked.attr('data-note');
     $('.searchable-input').attr('placeholder', ` 从 ${subtitle} 中搜索 ...`);
     $('.searchable-label').html(`<a class="searchable-goto" href="${checked.attr('data-url')}" title="${note}" target="_blank">跳转 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path></svg></a>`);
+    localStorage.setItem('searchable-checked', event.target.value);
+    countSeachable += 1;
+    if (countSeachable > 2) $('#searchable-list').click();
 };
 $('#searchable-list').change(searchableChanged);
 
-// 表单提交处理
+
+// 快速查询 表单提交处理
 $('.searchable-form').submit(function(event) {
     event.preventDefault();
     const input = $('.searchable-input').val().trim();
@@ -141,7 +157,7 @@ $('.searchable-form').submit(function(event) {
     if (input != '') createSuperLabel(url, 'searchable-search');
 });
 
-// 拼写完成校验
+// 快速查询 拼写完成校验
 let searchableComposition = true;
 $('.searchable-input').on('compositionstart', function() {
     searchableComposition = false;
@@ -160,19 +176,20 @@ $('.searchable-input').on('input', function() {
     }, 0);
 });
 
+// 监听快速查询是否勾选
 $('.searchable-direct').change(function() {
     localStorage.setItem('searchable-direct', $('.searchable-direct').is(':checked'));
 });
 
 
-// 同步配置
+// 配置初始化
 const config = function (...classNames) {
     for (const className of classNames) {
         if (localStorage.getItem(className) == 'true') $('.' + className).attr('checked', true);
         else $('.' + className).attr('checked', false);
     };
 };
-config('auto-folding', 'github-proxy', 'searchable-direct');
+config('github-proxy', 'searchable-direct');
 
 
 // 获取候选词
@@ -190,7 +207,7 @@ $('.searchable-input').typeahead(
         source: function(query, syncResults, asyncResults) {
             setTimeout(function() {
                 if (!searchableComposition) return asyncResults([]);
-                let subtitle = checkedOption('#searchable-list').attr('data-subtitle');
+                let subtitle = searchableSubtitle;
                 let search = encodeURI($('.searchable-input').val().trim());
                 const API = {
                     Wiki: `https://zh.minecraft.wiki/api.php?action=opensearch&search=${search}&limit=11`,
@@ -221,75 +238,7 @@ $('.searchable-input').typeahead(
 );
 
 
-const autoFolding = function(event) {
-    const element = $(event.target);
-    if (element.hasClass("fold")) {
-        element.removeAttr('size');
-    };
-    if (element.hasClass("unfold")) {
-        const maxSize = element.attr('data-max-size');
-        let size = element.children().length;
-        if (size > maxSize) size = maxSize;
-        element.focus();
-        element.attr('size', size);
-    };
-};
-
-let realSelect;
-const autoFoldingChanged = function() {
-    localStorage.setItem('auto-folding', $('.auto-folding').is(':checked'));
-    $('select.normal').off('mouseenter').off('mouseleave').attr('disabled', false);
-    if ($('.auto-folding').is(':checked')) {
-        $('select.normal').hover(
-            // mouseenter - 展开
-            function() {
-                if ($('select.normal.unfold').length > 0) return;
-                const setBold = checkedOption(this).text();
-                realSelect = $(this).val();
-                $(this).children().removeClass('bold');
-                $(this).find(`option:contains(${setBold})`).map(function() {
-                    if ($(this).text() == setBold) $(this).addClass('bold');
-                });
-                $(this).removeClass('fold').addClass('unfold');
-                autoFolding({target: this});
-            },
-            // mouseleave - 收起
-            function() {
-                if ($('select.normal.unfold').length != 1) return;
-                $(this).val(realSelect);
-                if ($(this)[0].id == 'device-list') {
-                    deviceChanged({target: this});
-                } else if ($(this).hasClass('launcher-list')) {
-                    launcherChanged({target: this});
-                }
-                $(this).removeClass('unfold').addClass('fold');
-                autoFolding({target: this});
-            }
-        );
-        $('select.normal').attr('disabled', true);
-    };
-};
-// 启用自动展开下拉菜单后
-$('#device-list option').mouseenter(function() {
-    const parent = $(this).parent();
-    parent.val($(this).val());
-    deviceChanged({target: parent});
-    launcherChanged();
-});
-$('select.launcher-list option').mouseenter(function() {
-    const parent = $(this).parent();
-    parent.val($(this).val());
-    launcherChanged({target: parent});
-});
-$('select.normal option').click(function() {
-    const parent = $(this).parent();
-    realSelect = $(parent).val();
-    parent.removeClass('unfold').addClass('fold');
-    autoFolding({target: parent});
-});
-$('.auto-folding').change(autoFoldingChanged);
-
-
+// 网站板块生成
 const pre_list = function(element) {
     const lineBlocks = [];
     let blocks = JSON.parse($(element).html());
@@ -354,20 +303,16 @@ for (const forum of db_forums) {
 
 // 页面加载完成事件
 $(document).ready(function() {
+    // 网站列表
     $('.utility-website-list').text(JSON.stringify(utilityWebsite));
     $('.forum-list').text(JSON.stringify([].concat.apply(CSForum, otherForum)));
+    // 缓存处理
+    if (localStorage.getItem('searchable-checked')) $('#searchable-list').val(localStorage.getItem('searchable-checked'))
+    else $('#searchable-list').val('Wiki');
+    // 设备
     deviceChanged();
     supportedDevices.forEach(function(deviceInfo) {
         if (deviceInfo[0] == $('#device-list').val()) $('#device-list').val((deviceInfo[1]));
-    });
-    autoFoldingChanged();
-    searchableChanged();
-    $('.pre-flex').each(function(index, element) {
-        pre_list(element);
-    });
-    hashChanged();
-    $('select').each(function(index, element) {
-        autoFolding({target: element});
     });
     $('#device-list').each(function(index, element) {
         const e = $(element).find('.custom-item');
@@ -379,6 +324,13 @@ $(document).ready(function() {
             $(element).click();
         });
     });
+    // 快速查询
+    searchableChanged();
+    $('.pre-flex').each(function(index, element) {
+        pre_list(element);
+    });
+    // 最后处理
+    hashChanged();
     $('.wait').removeAttr('class').removeAttr('style');
     try { document.querySelector(decodeURI(location.hash)).scrollIntoView(); }
     catch (e) {};

@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.9, minimum-scale=0.9">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>所见皆是Minecraft - MCiSEE</title>
-    <!-- begin pwa支持 -->
+    <!-- [begin] pwa支持 -->
     <link rel="manifest" href="manifest.json">
-
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="application-name" content="MCiSEE">
@@ -17,12 +16,11 @@
     <meta name="msapplication-navbutton-color" content="#92c3fe">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="msapplication-starturl" content="/">
-
     <link rel="icon" type="image/png" sizes="192x192" href="assets/icon/appiconRound.png">
     <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="assets/icon/appiconRound.png">
     <link rel="icon" type="image/png" sizes="192x192" href="assets/icon/appiconSquare.png">
     <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="assets/icon/appiconSquare.png">
-    <!-- end pwa支持 -->
+    <!-- [ end ] pwa支持 -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="所见皆是Minecraft - MCiSEE">
     <meta property="og:description" content="所见皆是Minecraft，让获取MC资源更加轻便！">
@@ -89,7 +87,7 @@
         <div class="device-container" id="设备">
             <h2 class="page-title">设备</h2>
             <label for="device-list" class="tip">自动判断，可手动选择</label>
-            <mdui-select class="normal fold" name="device-list" id="device-list" placement="bottom" variant="outlined" required></mdui-select>
+            <mdui-select name="device-list" id="device-list" placement="bottom" variant="outlined" required></mdui-select>
         </div>
         <div class="resource-container" id="资源">
             <div class="app-container" id="软件">
@@ -113,7 +111,7 @@
                 <div class="searchable-container" id="快速查询">
                     <div class="label">快速查询</div>
                     <label class="inline-block" for="searchable-list">
-                        <select class="keep unfold min-width-215" name="searchable-list" id="searchable-list"></select>
+                        <mdui-select class="min-width-215" name="searchable-list" id="searchable-list" placement="bottom" variant="outlined" required></mdui-select>
                     </label>
                     <div class="label searchable-label inline-block"></div>
                     <div class="searchable-search">
@@ -140,9 +138,6 @@
             </div>
             <div class="config-container" id="配置">
                 <h2 class="page-title">配置</h2>
-                <label>
-                    <input class="auto-folding" type="checkbox"> 自动展开下拉菜单（如果允许）
-                </label>
                 <label>
                     <input class="github-proxy" type="checkbox" checked> GitHub 文件使用
                     <a href="https://sciproxy.com" target="_blank">下载加速</a> 下载
