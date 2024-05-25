@@ -10,7 +10,7 @@ const utilityWebsite = [
             "Feedback": "https://feedback.minecraft.net",
             "知识库": "https://feedback.minecraft.net/hc/categories/115000410252-Knowledge-Base",
             "远古版网页MC": "https://classic.minecraft.net",
-            "Minecraft Forge": "https://www.minecraftforge.net",
+            "Forge模组加载器": "https://www.minecraftforge.net",
             "基岩版专用服务器": "https://www.minecraft.net/zh-hans/download/server/bedrock"
         }
     },
