@@ -187,13 +187,14 @@ $('.searchable-direct').change(function() {
 
 
 // 配置初始化
-const config = function (...classNames) {
-    for (const className of classNames) {
-        if (localStorage.getItem(className) == 'true') $('.' + className).attr('checked', true);
-        else $('.' + className).attr('checked', false);
+const config = function (...settings) {
+    for (const [option, defaultValue] of Object.entries(settings)) {
+        if (localStorage.getItem(option) === void 0) localStorage.setItem(option, defaultValue);
+        if (localStorage.getItem(option) == 'true') $('.' + option).attr('checked', true);
+        else $('.' + option).attr('checked', false);
     };
 };
-config('github-proxy', 'searchable-direct');
+config({'github-proxy': true}, {'searchable-direct': true});
 
 
 // 获取候选词
