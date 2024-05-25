@@ -35,8 +35,9 @@ const createSuperLabel = function(url, id) {
 // 获取下拉菜单选中项
 const checkedOption = function(selectElement) {
     const SEIncludes = function (str) { return $(selectElement).html().indexOf(str) != -1; };
+    console.log($(selectElement).html());
     if (selectElement.value) {
-        if (SEIncludes('searchable-list')) {
+        if (SEIncludes('Wiki')) {
             return $(selectElement).find(`mdui-menu-item[data-subtitle="${selectElement.value}"]`);
         };
     };
