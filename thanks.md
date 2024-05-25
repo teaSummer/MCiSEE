@@ -65,4 +65,4 @@
 
 同样感谢每一位 Watcher 与 Stargazer！
 
-更多的感谢来自 Issue、Pull Request 和 Comment！
+更多的感谢来自 Issues、Pull Requests 和 Comments！
