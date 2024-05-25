@@ -16,12 +16,12 @@ const db_forums = [
     {
         title: "最MC",
         url: "http://www.zuimc.com",
-        state: "up",
+        state: "failure",
         createdAt: "2013/04/18",
         updatedAt: "2024/04/20",
         hasICP: "yes",
         hasNetSec: "yes",
-        note: "网站处于待出售状态，暂停新用户注册，用户活动基本停止。网站屏蔽了大量机房 IP，存在误伤。",
+        note: "网站处于待出售状态，暂停新用户注册，用户活动基本停止。网站屏蔽了大量机房 IP，存在误伤。现访问出现数据库错误。",
         reference: []
     },
     {
@@ -472,22 +472,22 @@ const db_forums = [
     {
         title: "SimpBBS",
         url: "https://www.simpbbs.com",
-        state: "down",
+        state: "up",
         createdAt: "2023/10/28",
-        updatedAt: "2024/05/07",
+        updatedAt: "2024/05/24",
         hasICP: "no",
         hasNetSec: "no",
-        note: "非大陆服务器。502无法访问。",
+        note: "非大陆服务器，访问极其缓慢。",
         reference: []
     },
     {
         title: "HiMCBBS",
-        url: "https://www.himcbbs.cn",
-        state: "down",
+        url: "https://www.himcbbs.com",
+        state: "up",
         createdAt: "2024/01/28",
-        updatedAt: "2024/05/18",
+        updatedAt: "2024/05/24",
         hasICP: "yes",
-        hasNetSec: "no",
+        hasNetSec: "in_progress",
         note: "主营Java版，含基岩版。",
         reference: [
             {
@@ -499,11 +499,7 @@ const db_forums = [
                 url: "https://www.bilibili.com/video/BV13r42187th/"
             },
             {
-                title: "HiMCBBS大更新 快来加入我们~",
-                url: "https://www.bilibili.com/video/BV1VA4m1P7Dy/"
-            },
-            {
-                title: "MCBBS没了，找不到资源？MC老玩家们组成的论坛欢迎你！已备案不跑路~",
+                title: "MCBBS没了，找不到资源？MC老玩家们组成的论坛欢迎你！",
                 url: "https://www.bilibili.com/video/BV1iK421Y7RQ/"
             },
             {
@@ -778,7 +774,7 @@ const db_forums = [
         url: "https://weianxq.com",
         state: "down",
         createdAt: "2024/03/03",
-        updatedAt: "2024/05/17",
+        updatedAt: "2024/05/24",
         hasICP: "yes",
         hasNetSec: "yes",
         note: "",
@@ -897,7 +893,7 @@ const db_forums = [
         ]
     },
     {
-        title: "贝塔MC(BetaMC)",
+        title: "BetaMC",
         url: "https://www.betamc.cn",
         state: "up",
         createdAt: "2024/03/22",
@@ -1147,6 +1143,14 @@ const db_forums_ex = [
         url: "https://mcbbs-reborn.aismc.bid/",
         updatedAt: "2024/04/28",
         note: "你说得对，但是 MCBBS 浴火重生计划是你需要找回失散的 “MCBBS” 帮 MCBBS 打赢复活赛的计划。（Vue.js + canvas 实现的页面小游戏）",
+        reference: []
+    },
+    {
+        title: "MCBBSv50纪念站",
+        url: "https://v50.mcbbs.rip/",
+        archiveUrl: "",
+        updatedAt: "2024/05/24",
+        note: "v我50，复活牢坛",
         reference: []
     }
 ];
