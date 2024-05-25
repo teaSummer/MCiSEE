@@ -307,8 +307,8 @@ $(document).ready(function() {
     $('.utility-website-list').text(JSON.stringify(utilityWebsite));
     $('.forum-list').text(JSON.stringify([].concat.apply(CSForum, otherForum)));
     // 缓存处理
-    if (localStorage.getItem('searchable-checked') != void 0) $('#searchable-list').val(localStorage.getItem('searchable-checked'))
-    else $('#searchable-list').val('Wiki');
+    if (localStorage.getItem('searchable-checked') == 'undefined') $('#searchable-list').val('Wiki');
+    else $('#searchable-list').val(localStorage.getItem('searchable-checked'));
     // 设备
     deviceChanged();
     supportedDevices.forEach(function(deviceInfo) {
