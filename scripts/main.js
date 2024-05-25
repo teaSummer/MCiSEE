@@ -308,7 +308,7 @@ $(document).ready(function() {
     $('.forum-list').text(JSON.stringify([].concat.apply(CSForum, otherForum)));
     // 缓存处理
     const searchableChecked = localStorage.getItem('searchable-checked');
-    if (searchableChecked === 'undefined' || searchableChecked === void 0) $('#searchable-list').val('Wiki');
+    if (searchableChecked == 'undefined' || searchableChecked == void 0) $('#searchable-list').val('Wiki');
     else $('#searchable-list').val(searchableChecked);
     // 设备
     deviceChanged();
