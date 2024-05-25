@@ -78,8 +78,8 @@ const utilityWebsite = [
     {
         "服务端 (无特殊说明均为Java版)": {
             "官方基岩版专用服务端": "https://www.minecraft.net/zh-hans/download/server/bedrock",
-            "MineBBS基岩版专用服务端": "https://www.minebbs.com/bds/history",
-            "MineBBS基岩版专用预览版服务端": "https://www.minebbs.com/resources/bedrock-dedicated-server-preview.4934/history",
+            "(MineBBS收集)基岩版专用服务端": "https://www.minebbs.com/bds/history",
+            "(MineBBS收集)基岩版专用预览版服务端": "https://www.minebbs.com/resources/bedrock-dedicated-server-preview.4934/history",
             "FastMirror (无极镜像)": "https://www.fastmirror.net",
             "极星镜像": "https://mirror.polars.cc",
             "MCVersions": "https://mcversions.net",
