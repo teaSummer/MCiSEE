@@ -68,8 +68,33 @@ const utilityWebsite = [
             "mcfa版本库 (@zihao_il)": "https://bbk.endyun.ltd/main",
             "mcfw版本库 (MCAppx)": "https://www.mcappx.com",
             "mcarc版本库 (@Hottampist)": "https://mcarc.github.io",
+            "星月Minecraft版本库": "https://spectrollay.github.io/minecraft_repository/",
+            // "星月Minecraft版本库测试版": "https://spectrollay.github.io/minecraft_repository_test/",
             // -- 以下需要魔法才能访问 --
             // "互联网档案馆上的alpha版本库": "https://archive.org/details/MCPEAlpha"
+        }
+    },
+    {
+        "服务端 (无特殊说明均为Java版)": {
+            "官方基岩版专用服务器 (仅最新正式版/预览版)": "https://www.minecraft.net/zh-hans/download/server/bedrock",
+            "MineBBS收集的基岩版专用服务器": "https://www.minebbs.com/bds/history",
+            "MineBBS收集的BDS预览版": "https://www.minebbs.com/resources/bedrock-dedicated-server-preview.4934/history",
+            "FastMirror (无极镜像)": "https://www.fastmirror.net/",
+            "极星镜像": "https://mirror.polars.cc/",
+            "MCVersions (提供Java版原版客户端/服务端)": "https://mcversions.net/",
+            "Akarin": "https://github.com/Akarin-project/Akarin",
+            "Arclight": "https://github.com/IzzelAliz/Arclight",
+            "CatServer": "https://catmc.org/",
+            "CraftBukkit": "https://getbukkit.org/",
+            "Fabric Server": "https://fabricmc.net/use/server/",
+            "MohistMC": "https://mohistmc.com/",
+            "Nukkit (基岩版)": "https://cloudburstmc.org/",
+            "PaperMC": "https://papermc.io/",
+            "PocketMine (基岩版)": "https://pmmp.io/",
+            "Purpur": "https://purpurmc.org/",
+            "SpigotMC": "https://www.spigotmc.org/",
+            "Sponge": "https://spongepowered.org/",
+            "Tuinity": "https://github.com/Tuinity/Tuinity"
         }
     },
     {

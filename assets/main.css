@@ -445,6 +445,7 @@ div[id]>*:first-child {
 a.button {
     user-select: none;
     cursor: pointer;
+    transition: background 1.2s;
 }
 
 a.button:not(.download)::after {
