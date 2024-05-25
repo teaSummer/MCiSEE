@@ -1,4 +1,4 @@
-name: 部署网站
+name: 网站
 on:
   push:
     branches:
