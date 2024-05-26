@@ -424,6 +424,10 @@ div[id]>*:first-child {
     right: 1px;
 }
 
+.searchable-button {
+    vertical-align: top;
+}
+
 .resource-container>div+div,
 .device-container+.resource-container {
     margin-top: 1rem;
