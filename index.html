@@ -39,6 +39,7 @@
     <link rel="stylesheet" href="assets/main.css">
     <link rel="stylesheet" href="assets/mdui.css">
     <link rel="stylesheet" href="assets/typeahead.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
     <script src="scripts/mdui.global.js"></script>
     <script src="scripts/jquery-3.7.1.min.js"></script>
     <script src="scripts/browser.min.js"></script>
@@ -87,7 +88,8 @@
         <div class="device-container" id="设备">
             <h2 class="page-title">设备</h2>
             <label for="device-list" class="tip">自动判断，可手动选择</label>
-            <mdui-select class="device-list" name="device-list" id="device-list" placement="bottom" variant="outlined" required></mdui-select>
+            <mdui-select class="device-list" name="device-list" id="device-list" placement="bottom" variant="outlined"
+                         required></mdui-select>
         </div>
         <div class="resource-container" id="资源">
             <div class="app-container" id="软件">
@@ -102,7 +104,8 @@
                     </div>
                     <div class="launcher-download">
                         <a class="button download data-download-launcher" target="_blank" style="display: none;"></a>
-                        <a class="button download data-dev-download-launcher" target="_blank" style="display: none;"></a>
+                        <a class="button download data-dev-download-launcher" target="_blank"
+                           style="display: none;"></a>
                     </div>
                 </div>
             </div>
@@ -111,14 +114,19 @@
                 <div class="searchable-container" id="快速查询">
                     <div class="label">快速查询</div>
                     <label class="inline-block" for="searchable-list">
-                        <mdui-select class="searchable-list min-width-215" name="searchable-list" id="searchable-list" placement="bottom" variant="outlined" required></mdui-select>
+                        <mdui-select class="searchable-list min-width-215" name="searchable-list" id="searchable-list"
+                                     placement="bottom" variant="outlined" required></mdui-select>
                     </label>
                     <div class="label searchable-label inline-block"></div>
                     <div class="searchable-search">
                         <form class="searchable-form">
                             <label>
-                                <input class="searchable-input" type="text" data-provide="typeahead" placeholder=" ...">
-                                <button class="searchable-button inline-block disabled" type="submit">搜索</button>
+                                <mdui-text-field class="searchable-input" type="text" data-provide="typeahead"
+                                                 placeholder=" ...." variant="outlined">
+                                    <mdui-button-icon slot="end-icon" icon="search"
+                                                      class="searchable-button inline-block"
+                                                      type="submit" disabled></mdui-button-icon>
+                                </mdui-text-field>
                             </label>
                         </form>
                     </div>

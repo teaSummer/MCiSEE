@@ -424,8 +424,12 @@ div[id]>*:first-child {
     right: 1px;
 }
 
+.searchable-input {
+    max-width: 230px;
+}
+
 .searchable-button {
-    vertical-align: top;
+    transition: all 0.1s;
 }
 
 .resource-container>div+div,
