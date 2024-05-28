@@ -425,11 +425,11 @@ div[id]>*:first-child {
 }
 
 .searchable-input {
-    max-width: 230px;
+    max-width: 245px;
 }
 
 .searchable-button {
-    transition: all 0.1s;
+    transition: all 0.15s;
 }
 
 .resource-container>div+div,
