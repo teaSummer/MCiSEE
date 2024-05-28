@@ -223,7 +223,7 @@ $('.searchable-input').typeahead(
                 };
                 const URL = API[subtitle];
                 if (URL) {
-                    // $('.searchable-button').attr('loading', true);  // 在获取候选词时显示加载动画（进行中）
+                    $('.searchable-button').attr('loading', true);  // 在获取候选词时显示加载动画（进行中）
                     return $.ajax({
                         url: URL,
                         type: 'get',
@@ -234,7 +234,7 @@ $('.searchable-input').typeahead(
                             if (result.length > 1 && Array.isArray(result[1])) {
                                 result = result[1];
                             };
-                            // $('.searchable-button').removeAttr('loading');  // 在获取候选词时显示加载动画（已完成）
+                            $('.searchable-button').removeAttr('loading');  // 在获取候选词时显示加载动画（已完成）
                             return asyncResults(result);
                         }
                     }, 0);
