@@ -184,9 +184,7 @@ $('.searchable-input').on('input', function() {
 
 // 快速查询 清空搜索框
 $('.searchable-clear').click(function() {
-    $('.searchable-input').val('');
-    $('.searchable-button').attr('disabled', true);
-    $(this).attr('hidden', true);
+    $('.searchable-input').trigger('input');
 });
 
 // 监听快速查询是否勾选
