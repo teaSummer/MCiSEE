@@ -122,10 +122,12 @@
                         <form class="searchable-form">
                             <label>
                                 <mdui-text-field class="searchable-input" type="text" data-provide="typeahead"
-                                                 placeholder=" ...." variant="outlined">
+                                                 placeholder=" ...." variant="outlined" value="">
                                     <mdui-button-icon slot="end-icon" icon="search"
-                                                      class="searchable-button inline-block"
-                                                      type="submit" disabled></mdui-button-icon>
+                                                      class="searchable-button inline-block" type="submit"
+                                                      disabled></mdui-button-icon>
+                                    <mdui-button-icon slot="end-icon" icon="clear" class="searchable-clear inline-block"
+                                                      type="reset" disabled hidden></mdui-button-icon>
                                 </mdui-text-field>
                             </label>
                         </form>

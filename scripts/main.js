@@ -165,20 +165,28 @@ $('.searchable-form').submit(function(event) {
 let searchableComposition = true;
 $('.searchable-input').on('compositionstart', function() {
     searchableComposition = false;
-})
+});
 $('.searchable-input').on('compositionend', function() {
     searchableComposition = true;
-})
+});
 $('.searchable-input').on('input', function() {
     let _this = this;
     setTimeout(function() {
-        $('.searchable-button').attr('disabled', true);
+        $('.searchable-button, .searchable-clear').attr('disabled', true);
         if (!searchableComposition) return;
-        $('.searchable-button').attr('disabled', false);
+        $('.searchable-button, .searchable-clear').attr('disabled', false);
         if ($('.searchable-input').val().trim() == '') {
             $('.searchable-button').attr('disabled', true);
-        };
+            $('.searchable-clear').attr('hidden', true);
+        } else $('.searchable-clear').removeAttr('hidden');
     }, 0);
+});
+
+// 快速查询 清空搜索框
+$('.searchable-clear').click(function() {
+    $('.searchable-input').val('');
+    $('.searchable-button').attr('disabled', true);
+    $(this).attr('hidden', true);
 });
 
 // 监听快速查询是否勾选
@@ -199,7 +207,6 @@ config({'github-proxy': true}, {'searchable-direct': true});
 
 
 // 获取候选词
-$.support.cors = true;
 $('.searchable-input').typeahead(
     {
         hint: false,
@@ -223,7 +230,7 @@ $('.searchable-input').typeahead(
                 };
                 const URL = API[subtitle];
                 if (URL) {
-                    $('.searchable-button').attr('loading', true);  // 在获取候选词时显示加载动画（进行中）
+                    $('.searchable-clear').attr('loading', true);  // 在获取候选词时显示加载动画（进行中）
                     return $.ajax({
                         url: URL,
                         type: 'get',
@@ -234,7 +241,7 @@ $('.searchable-input').typeahead(
                             if (result.length > 1 && Array.isArray(result[1])) {
                                 result = result[1];
                             };
-                            $('.searchable-button').removeAttr('loading');  // 在获取候选词时显示加载动画（已完成）
+                            $('.searchable-clear').removeAttr('loading');  // 在获取候选词时显示加载动画（已完成）
                             return asyncResults(result);
                         }
                     }, 0);

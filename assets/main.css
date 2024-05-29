@@ -198,7 +198,7 @@ label, .label {
     user-select: none;
 }
 
-input[type="text"] {
+input[type='text'] {
     font-size: 14px;
     min-width: 190px;
     line-height: 20px;
@@ -209,7 +209,7 @@ input[type="text"] {
     outline: none;
 }
 
-input[type="text"]::placeholder {
+input[type='text']::placeholder {
     color: rgba(0, 0, 0, 0.5);
 }
 
@@ -425,11 +425,15 @@ div[id]>*:first-child {
 }
 
 .searchable-input {
-    max-width: 245px;
+    max-width: 255px;
 }
 
-.searchable-button {
+.searchable-button, .searchable-clear {
     transition: all 0.15s;
+}
+
+.searchable-clear[hidden] {
+    display: none !important;
 }
 
 .resource-container>div+div,
@@ -487,6 +491,7 @@ main>div {
     background-color: rgba(9, 73, 136, 0.452);
     user-select: none;
 }
+
 #目录>dl {
     margin-top: 20px;
     margin-left: 12px;
@@ -508,19 +513,20 @@ main>div {
     color: #ccc;
 }
 
-@font-face {
-    font-family: "Segoe UI Emoji";
-    src: url("font/seguiemj.ttf");
-}
 #目录 dt::before {
-    content: "◼ ";
-    font-family: "Segoe UI Emoji";
+    content: '◼ ';
+    font-family: 'Segoe UI Emoji';
 }
 
 #目录 dd::before {
-    content: "◻ ";
+    content: '◻ ';
     margin-left: 6px;
-    font-family: "Segoe UI Emoji";
+    font-family: 'Segoe UI Emoji';
+}
+
+@font-face {
+    font-family: 'Segoe UI Emoji';
+    src: url('font/seguiemj.ttf');
 }
 
 @media (max-width: 768px) {
