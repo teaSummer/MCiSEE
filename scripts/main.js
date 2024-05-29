@@ -243,6 +243,10 @@ $('.searchable-input').typeahead(
                             };
                             $('.searchable-clear').removeAttr('loading');  // 在获取候选词时显示加载动画（已完成）
                             return asyncResults(result);
+                        },
+                        error: function() {
+                            $('.searchable-clear').removeAttr('loading');  // 在获取候选词时显示加载动画（已完成）
+                            return asyncResults([]);
                         }
                     }, 0);
                 };
