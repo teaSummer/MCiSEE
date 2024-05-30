@@ -69,7 +69,7 @@ const utilityWebsite = [
         "国际基岩版版本库": {
             "mcapks (KLPBBS)": "https://mcapks.net",
             "mcdl版本库 (MineBBS)": "https://mc.minebbs.com",
-            "甘泉版本库 (原像素科技)":" https://mcbbk.blmcpia.com",
+            // "甘泉版本库 (原像素科技)":" https://mcbbk.blmcpia.com", // 貌似似了(全国ping不通),不要问我 -- 屑xs留
             "mcfa版本库 (@zihao_il)": "https://bbk.endyun.ltd/main",
             "mcfw版本库 (MCAppx)": "https://www.mcappx.com",
             "mcarc版本库 (@Hottampist)": "https://mcarc.github.io",
