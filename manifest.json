@@ -6,6 +6,7 @@
 	"scope": "/",
 	"lang": "zh",
 	"theme_color": "#92c3fe",
+	"background_color": "#92c3fe",
 	"display": "standalone",
 	"icons": [{
 		"src": "assets/icon/appiconRound.png",
@@ -15,5 +16,9 @@
 		"src": "assets/icon/appiconSquare.png",
 		"sizes": "192x192",
 		"type": "image/png"
+	},{
+		"src": "assets/icon/favicon.ico",
+		"sizes": "128x128",
+		"type": "image/x-icon"
 	}]
 }
