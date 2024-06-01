@@ -2,204 +2,211 @@
 <html lang="zh" style="color-scheme: light;">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.9, minimum-scale=0.9">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>所见皆是Minecraft - MCiSEE</title>
-    <!-- [begin] pwa支持 -->
-    <link rel="manifest" href="manifest.json">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="MCiSEE">
-    <meta name="apple-mobile-web-app-title" content="MCiSEE">
-    <meta name="theme-color" content="#92c3fe">
-    <meta name="msapplication-navbutton-color" content="#92c3fe">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="msapplication-starturl" content="/">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/icon/appiconRound.png">
-    <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="assets/icon/appiconRound.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/icon/appiconSquare.png">
-    <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="assets/icon/appiconSquare.png">
-    <!-- [ end ] pwa支持 -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="所见皆是Minecraft - MCiSEE">
-    <meta property="og:description" content="所见皆是Minecraft，让获取MC资源更加轻便！">
-    <meta property="og:image" content="">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="所见皆是Minecraft">
-    <meta property="og:url" content="https://mcisee.top">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="所见皆是Minecraft - MCiSEE">
-    <meta name="twitter:description" content="所见皆是Minecraft，让获取MC资源更加轻便！">
-    <meta name="twitter:image" content="">
-    <meta name="twitter:image:alt" content="所见皆是Minecraft">
-    <link rel="shortcut icon" href="assets/icon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="assets/main.css">
-    <link rel="stylesheet" href="assets/mdui.css">
-    <link rel="stylesheet" href="assets/typeahead.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
-    <script src="scripts/mdui.global.js"></script>
-    <script src="scripts/jquery-3.7.1.min.js"></script>
-    <script src="scripts/browser.min.js"></script>
-    <script src="scripts/DOMConstructor.js"></script>
-    <script src="scripts/typeahead.jquery.min.js"></script>
-    <script src="scripts/forums.js"></script>
-    <script src="data/launcher.js"></script>
-    <script src="data/searchable.js"></script>
-    <script src="data/website.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=0.9, minimum-scale=0.9">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>所见皆是Minecraft - MCiSEE</title>
+	<!-- [begin] pwa支持 -->
+	<link rel="manifest" href="manifest.json">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="application-name" content="MCiSEE">
+	<meta name="apple-mobile-web-app-title" content="MCiSEE">
+	<meta name="theme-color" content="#92c3fe">
+	<meta name="msapplication-navbutton-color" content="#92c3fe">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="msapplication-starturl" content="/">
+	<link rel="shortcut icon" sizes="128x128" href="assets/icon/favicon.ico" type="image/x-icon">
+	<link rel="icon" type="image/png" sizes="192x192" href="assets/icon/appiconRound.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="192x192" href="assets/icon/appiconRound.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="assets/icon/appiconSquare.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="192x192" href="assets/icon/appiconSquare.png">
+	<!-- [ end ] pwa支持 -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="所见皆是Minecraft - MCiSEE">
+	<meta property="og:description" content="所见皆是Minecraft，让获取MC资源更加轻便！">
+	<meta property="og:image" content="">
+	<meta property="og:image:type" content="image/png">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+	<meta property="og:image:alt" content="所见皆是Minecraft">
+	<meta property="og:url" content="https://mcisee.top">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="所见皆是Minecraft - MCiSEE">
+	<meta name="twitter:description" content="所见皆是Minecraft，让获取MC资源更加轻便！">
+	<meta name="twitter:image" content="">
+	<meta name="twitter:image:alt" content="所见皆是Minecraft">
+	<link rel="stylesheet" href="assets/main.css">
+	<link rel="stylesheet" href="assets/mdui.css">
+	<link rel="stylesheet" href="assets/typeahead.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+	<script src="scripts/mdui.global.js"></script>
+	<script src="scripts/jquery-3.7.1.min.js"></script>
+	<script src="scripts/browser.min.js"></script>
+	<script src="scripts/DOMConstructor.js"></script>
+	<script src="scripts/typeahead.jquery.min.js"></script>
+	<script src="scripts/forums.js"></script>
+	<script src="data/launcher.js"></script>
+	<script src="data/searchable.js"></script>
+	<script src="data/website.js"></script>
 </head>
 
 <body class="page-body">
 <div class="background"></div>
 <main class="wait" style="display: none;">
-    <sidebar id="目录">
-        <info>目录</info>
-        <dl>
-            <dt><a href="#顶部">顶部</a></dt>
-            <dt><a href="#设备">设备</a></dt>
-            <dt><a href="#软件">软件</a></dt>
-            <dd><a href="#启动器">启动器</a></dd>
-            <dt><a href="#网站">网站</a></dt>
-            <dd><a href="#快速查询">快速查询</a></dd>
-            <dd><a href="#实用网站">实用网站</a></dd>
-            <dd><a href="#论坛">论坛</a></dd>
-            <dt><a href="#配置">配置</a></dt>
-            <dt><a href="#底部">底部</a></dt>
-        </dl>
-    </sidebar>
-    <div class="page-content">
-        <div class="introduction" id="介绍">
-            <a class="传送锚点" id="顶部"></a>
-            <h1 class="page-title first-title">所见皆是<i>Minecraft</i></h1>
-            <p>玩家们可以从这里挖掘Minecraft常用资源，例如软件等。</p>
-            <p>欢迎各位来 <a href="https://github.com/teaSummer/MCiSEE" target="_blank">GitHub 项目</a>
-                做出贡献 或 点击
-                <svg aria-hidden="true" height="16" viewBox="0 0 16 16" width="16" data-view-component="true"
-                     class="octicon octicon-star d-inline-block mr-2">
-                    <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"></path>
-                </svg>
-                Star！
-            </p>
-            <p>这里也需要你们提供更多有趣的资源！</p>
-        </div>
-        <hr>
-        <div class="device-container" id="设备">
-            <h2 class="page-title">设备</h2>
-            <label for="device-list" class="tip">自动判断，可手动选择</label>
-            <mdui-select class="device-list" name="device-list" id="device-list" placement="bottom" variant="outlined"
-                         required></mdui-select>
-        </div>
-        <div class="resource-container" id="资源">
-            <div class="app-container" id="软件">
-                <h2 class="page-title">软件</h2>
-                <div class="launcher-container" id="启动器">
-                    <div class="label">启动器（<b>Java版</b>）</div>
-                    <div class="launcher-list device-diff"></div>
-                    <div class="launcher-title full-name"></div>
-                    <div class="launcher-goto">
-                        <a class="button data-url-launcher" title="跳转至GitHub仓库或官方网站" target="_blank"
-                           style="display: none;">跳转启动器网站</a>
-                    </div>
-                    <div class="launcher-download">
-                        <a class="button download data-download-launcher" target="_blank" style="display: none;"></a>
-                        <a class="button download data-dev-download-launcher" target="_blank"
-                           style="display: none;"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="website-container" id="网站">
-                <h2 class="page-title">网站</h2>
-                <div class="searchable-container" id="快速查询">
-                    <div class="label">快速查询</div>
-                    <label class="inline-block" for="searchable-list">
-                        <mdui-select class="searchable-list min-width-215" name="searchable-list" id="searchable-list"
-                                     placement="bottom" variant="outlined" required></mdui-select>
-                    </label>
-                    <div class="label searchable-label inline-block"></div>
-                    <div class="searchable-search">
-                        <form class="searchable-form">
-                            <label>
-                                <mdui-text-field class="searchable-input" type="text" data-provide="typeahead"
-                                                 placeholder=" ...." variant="outlined" value="">
-                                    <mdui-button-icon slot="end-icon" icon="search"
-                                                      class="searchable-button inline-block" type="submit"
-                                                      disabled></mdui-button-icon>
-                                    <mdui-button-icon slot="end-icon" icon="clear" class="searchable-clear inline-block"
-                                                      type="reset" disabled hidden></mdui-button-icon>
-                                </mdui-text-field>
-                            </label>
-                        </form>
-                    </div>
-                </div>
-                <div class="utility-website-container" id="实用网站">
-                    <div class="label margin-top-20">实用网站<!--（样式设计中...）--></div>
-                    <a class="to-unfold" href="#实用网站-展开">展开...</a>
-                    <a class="to-fold" href="#实用网站-收起" style="display: none;">收起</a>
-                    <pre class="utility-website-list pre-flex"></pre>
-                </div>
-                <div class="forum-container" id="论坛">
-                    <div class="label margin-top-20">论坛</div>
-                    <a class="to-unfold" href="#论坛-展开">展开...</a>
-                    <a class="to-fold" href="#论坛-收起" style="display: none;">收起</a>
-                    <pre class="forum-list pre-flex"></pre>
-                </div>
-            </div>
-            <div class="config-container" id="配置">
-                <h2 class="page-title">配置</h2>
-                <label>
-                    <input class="github-proxy" type="checkbox" checked> GitHub 文件使用
-                    <a href="https://sciproxy.com" target="_blank">下载加速</a> 下载
-                </label>
-                <label>
-                    <input class="searchable-direct" type="checkbox" checked> 快速查询尽可能自动进入详情页
-                </label>
-            </div>
-            <div class="ellipse">
-                <h2>....</h2>
-            </div>
-        </div>
-    </div>
+	<sidebar id="目录">
+		<info>目录</info>
+		<dl>
+			<dt><a href="#顶部">顶部</a></dt>
+			<dt><a href="#设备">设备</a></dt>
+			<dt><a href="#软件">软件</a></dt>
+			<dd><a href="#启动器">启动器</a></dd>
+			<dt><a href="#网站">网站</a></dt>
+			<dd><a href="#快速查询">快速查询</a></dd>
+			<dd><a href="#实用网站">实用网站</a></dd>
+			<dd><a href="#论坛">论坛</a></dd>
+			<dt><a href="#配置">配置</a></dt>
+			<dt><a href="#底部">底部</a></dt>
+		</dl>
+	</sidebar>
+	<div class="page-content">
+		<div class="introduction" id="介绍">
+			<a class="传送锚点" id="顶部"></a>
+			<h1 class="page-title first-title">所见皆是<i>Minecraft</i></h1>
+			<p>玩家们可以从这里挖掘Minecraft常用资源，例如软件等。</p>
+			<p>欢迎各位来 <a href="https://github.com/teaSummer/MCiSEE" target="_blank">GitHub 项目</a>
+				做出贡献 或 点击
+				<svg aria-hidden="true" height="16" viewBox="0 0 16 16" width="16" data-view-component="true"
+					 class="octicon octicon-star d-inline-block mr-2">
+					<path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"></path>
+				</svg>
+				Star！
+			</p>
+			<p>这里也需要你们提供更多有趣的资源！</p>
+		</div>
+		<hr>
+		<div class="device-container" id="设备">
+			<h2 class="page-title">设备</h2>
+			<label for="device-list" class="tip">自动判断，可手动选择</label>
+			<mdui-select class="device-list" name="device-list" id="device-list" placement="bottom" variant="outlined"
+						 required></mdui-select>
+		</div>
+		<div class="resource-container" id="资源">
+			<div class="app-container" id="软件">
+				<h2 class="page-title">软件</h2>
+				<div class="launcher-container" id="启动器">
+					<div class="label">启动器（<b>Java版</b>）</div>
+					<div class="launcher-list device-diff"></div>
+					<div class="launcher-title full-name"></div>
+					<div class="launcher-goto">
+						<a class="button data-url-launcher" title="跳转至GitHub仓库或官方网站" target="_blank"
+						   style="display: none;">跳转启动器网站</a>
+					</div>
+					<div class="launcher-download">
+						<a class="button download data-download-launcher" target="_blank" style="display: none;"></a>
+						<a class="button download data-dev-download-launcher" target="_blank"
+						   style="display: none;"></a>
+					</div>
+				</div>
+			</div>
+			<div class="website-container" id="网站">
+				<h2 class="page-title">网站</h2>
+				<div class="searchable-container" id="快速查询">
+					<div class="label">快速查询</div>
+					<label class="inline-block" for="searchable-list">
+						<mdui-select class="searchable-list min-width-215" name="searchable-list" id="searchable-list"
+									 placement="bottom" variant="outlined" required></mdui-select>
+					</label>
+					<div class="label searchable-label inline-block"></div>
+					<div class="searchable-search">
+						<form class="searchable-form">
+							<label>
+								<mdui-text-field class="searchable-input" type="text" data-provide="typeahead"
+												 placeholder=" ...." variant="outlined" value="">
+									<mdui-button-icon slot="end-icon" icon="search"
+													  class="searchable-button inline-block" type="submit"
+													  disabled></mdui-button-icon>
+									<mdui-button-icon slot="end-icon" icon="clear" class="searchable-clear inline-block"
+													  type="reset" disabled hidden></mdui-button-icon>
+								</mdui-text-field>
+							</label>
+						</form>
+					</div>
+				</div>
+				<div class="utility-website-container" id="实用网站">
+					<div class="label margin-top-20">实用网站<!--（样式设计中...）--></div>
+					<a class="to-unfold" href="#实用网站-展开">展开...</a>
+					<a class="to-fold" href="#实用网站-收起" style="display: none;">收起</a>
+					<pre class="utility-website-list pre-flex"></pre>
+				</div>
+				<div class="forum-container" id="论坛">
+					<div class="label margin-top-20">论坛</div>
+					<a class="to-unfold" href="#论坛-展开">展开...</a>
+					<a class="to-fold" href="#论坛-收起" style="display: none;">收起</a>
+					<pre class="forum-list pre-flex"></pre>
+				</div>
+			</div>
+			<div class="config-container" id="配置">
+				<h2 class="page-title">配置</h2>
+				<label>
+					<input class="github-proxy" type="checkbox" checked> GitHub 文件使用
+					<a href="https://sciproxy.com" target="_blank">下载加速</a> 下载
+				</label>
+				<label>
+					<input class="searchable-direct" type="checkbox" checked> 快速查询尽可能自动进入详情页
+				</label>
+			</div>
+			<div class="ellipse">
+				<h2>....</h2>
+			</div>
+		</div>
+	</div>
 </main>
 <a class="传送锚点" id="底部"></a>
 <footer class="wait" style="display: none;">
-    <div class="page-content">
-        <div class="footer-content">
-            <h2>统计信息</h2>
-            <hr>
-            <div class="article">
-                <h3>访问计数</h3>
-                <p style="text-align: center;">
-                    <img src="https://badges.toozhao.com/badges/01HTFPN35M6ETEFBVAP3SEWRKG/green.svg" alt="访问计数">
-                </p>
+	<div class="page-content">
+		<div class="footer-content">
+			<h2>统计信息</h2>
+			<hr>
+			<div class="article">
+				<h3>访问计数</h3>
+				<p style="text-align: center;">
+					<img src="https://badges.toozhao.com/badges/01HTFPN35M6ETEFBVAP3SEWRKG/green.svg" alt="访问计数">
+				</p>
 
-                <h3>贡献者</h3>
-                <p style="text-align: center;">
-                    <img src="https://contrib.rocks/image?repo=teaSummer/MCiSEE" alt="贡献者">
-                </p>
+				<h3>贡献者</h3>
+				<p style="text-align: center;">
+					<img src="https://contrib.rocks/image?repo=teaSummer/MCiSEE" alt="贡献者">
+				</p>
 
-                <h3>GitHub 星星历史图</h3>
-                <p style="text-align: center;">
-                    <img src="https://starchart.cc/teaSummer/MCiSEE.svg?variant=adaptive" alt="GitHub 星星历史图">
-                </p>
-            </div>
-            <hr>
-            <p class="ICP">
-                <a href="https://icp.gov.moe/?keyword=20247837" target="_blank">萌ICP备20247837号</a>
-            </p>
-            <p class="GitHub">
-                <a href="https://github.com/teaSummer/MCiSEE" target="_blank">GitHub</a> |
-                <a href="https://github.com/teaSummer/MCiSEE/blob/main/README.md" target="_blank">为此项目做出贡献</a>
-            </p>
-            <p class="license">
-                本页面内容以 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"
-                                rel="noopener noreferrer">CC BY-NC-SA 4.0</a> 协议共享
-            </p>
-        </div>
-    </div>
+				<h3>GitHub 星星历史图</h3>
+				<p style="text-align: center;">
+					<img src="https://starchart.cc/teaSummer/MCiSEE.svg?variant=adaptive" alt="GitHub 星星历史图">
+				</p>
+			</div>
+			<hr>
+			<p class="ICP">
+				<a href="https://icp.gov.moe/?keyword=20247837" target="_blank">萌ICP备20247837号</a>
+			</p>
+			<p class="GitHub">
+				<a href="https://github.com/teaSummer/MCiSEE" target="_blank">GitHub</a> |
+				<a href="https://github.com/teaSummer/MCiSEE/blob/main/README.md" target="_blank">为此项目做出贡献</a>
+			</p>
+			<p class="license">
+				本页面内容以 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"
+								rel="noopener noreferrer">CC BY-NC-SA 4.0</a> 协议共享
+			</p>
+		</div>
+	</div>
 </footer>
 <script src="scripts/main.js"></script>
+<!-- 机翻,效果不太好( -->
+<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/xnx3/translate@v3/translate.js/translate.js"></script>
+<script type="text/javascript">
+	translate.language.setLocal("chinese_simplified");
+	translate.service.use("client.edge");
+	translate.execute();
+</script> -->
 </body>
 
 </html>
