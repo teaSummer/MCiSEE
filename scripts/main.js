@@ -1,7 +1,7 @@
 let searchKeyword = '';
 let searchableSubtitle = '';
 
-const countSearchable = 0;
+let countSearchable = 0;
 
 // 所有已支持设备
 const supportedDevices = [
