@@ -1,25 +1,25 @@
 // 适用于 安卓手机/鸿蒙手机/安卓平板/鸿蒙平板 的启动器
 const AndroidLauncher = [
-    /* {
+    {
         title: "Fold Craft Launcher",
         subtitle: "FCL",
         download: "https://github.com/FCL-Team/FoldCraftLauncher/releases/download/1.1.6.2/FCL-release-1.1.6.2-all.apk",
         version: "1.1.6.2",
         url: "https://github.com/FCL-Team/FoldCraftLauncher"
-    }, */
+    },
     {
         title: "PojavLauncher",
         download: "https://share.feijipan.com/s/xpA9fMeC",
         version: "Edelweiss",
         url: "https://github.com/PojavLauncherTeam/PojavLauncher"
     },
-    /* {
+    {
         title: "Hello Minecraft! Launcher:Pocket Edition",
         subtitle: "HMCL-PE",
         download: "https://github.com/HMCL-dev/HMCL-PE/releases/download/2.0.8/HMCLPE-release.apk",
         version: "2.0.8",
         url: "https://github.com/HMCL-dev/HMCL-PE"
-    }, */
+    },
     {
         title: "ColorMC",
         url: "https://github.com/Coloryr/ColorMC.Android",
@@ -32,12 +32,12 @@ const AndroidLauncher = [
 
 // 适用于 苹果手机/苹果平板 的启动器
 const iOSLauncher = [
-    /* {
+    {
         title: "PojavLauncher",
         download: "https://github.com/PojavLauncherTeam/PojavLauncher_iOS/releases/download/v2.2/net.kdt.pojavlauncher-2.2-ios.ipa",
         version: "v2.2 Deepslate",
         url: "https://github.com/PojavLauncherTeam/PojavLauncher_iOS"
-    } */
+    }
 ];
 
 // 适用于 Windows电脑 的启动器
@@ -48,7 +48,7 @@ const WindowsLauncher = [
         version: "latest",
         url: "https://www.minecraft.net/zh-hans"
     },
-    /* {
+    {
         title: "Hello Minecraft! Launcher",
         subtitle: "HMCL",
         download: "https://github.com/HMCL-dev/HMCL/releases/download/release-3.5.8/HMCL-3.5.8.exe",
@@ -58,7 +58,7 @@ const WindowsLauncher = [
             download: "https://github.com/HMCL-dev/HMCL/releases/download/v3.5.8.248/HMCL-3.5.8.248.exe",
             version: "3.5.8.248"
         }
-    }, */
+    },
     {
         title: "Plain Craft Launcher 2",
         subtitle: "PCL2",
@@ -77,14 +77,14 @@ const WindowsLauncher = [
         download: "https://github.com/Coloryr/ColorMC/releases/download/A24/colormc-x64.msi",
         version: "A24",
         url: "https://github.com/Coloryr/ColorMC"
-    },/* 
+    },
     {
         title: "X Minecraft Launcher",
         subtitle: "XMCL",
         download: "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.44.6/xmcl-0.44.6-win32-x64.zip",
         version: "0.44.6",
         url: "https://github.com/voxelum/x-minecraft-launcher"
-    }, */
+    },
     {
         title: "我的世界启动器",
         download: "https://x19.gdl.netease.com/MCLauncher_1.14.0.36188.exe",
@@ -98,13 +98,13 @@ const WindowsLauncher = [
         version: "latest",
         url: "https://github.com/MultiMC/Launcher"
     },
-    /* {
+    {
         title: "Prism Launcher",
         subtitle: "Prism",
         download: "https://github.com/PrismLauncher/PrismLauncher/releases/download/8.3/PrismLauncher-Windows-MSVC-Setup-8.3.exe",
         version: "8.3",
         url: "https://github.com/PrismLauncher/PrismLauncher"
-    }, */
+    },
     {
         title: "Salwyrr Launcher",
         subtitle: "Salwyrr",
@@ -135,7 +135,7 @@ const macOSLauncher = [
         version: "latest",
         url: "https://www.minecraft.net/zh-hans"
     },
-    /* {
+    {
         title: "Hello Minecraft! Launcher",
         subtitle: "HMCL",
         download: "https://github.com/HMCL-dev/HMCL/releases/download/release-3.5.8/HMCL-3.5.8.jar",
@@ -145,20 +145,20 @@ const macOSLauncher = [
             download: "https://github.com/HMCL-dev/HMCL/releases/download/v3.5.8.248/HMCL-3.5.8.248.jar",
             version: "3.5.8.248"
         }
-    }, */
+    },
     {
         title: "ColorMC",
         download: "https://github.com/Coloryr/ColorMC/releases/download/A24/colormc-a24-1-x86_64.pkg.tar.zst",
         version: "A24",
         url: "https://github.com/Coloryr/ColorMC"
     },
-    /* {
+    {
         title: "X Minecraft Launcher",
         subtitle: "XMCL",
         download: "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.44.6/xmcl-0.44.6.dmg",
         version: "0.44.6",
         url: "https://github.com/voxelum/x-minecraft-launcher"
-    }, */
+    },
     {
         title: "MultiMC",
         subtitle: "MMC",
@@ -195,7 +195,7 @@ const LinuxLauncher = [
             version: "3.5.8.248"
         }
     },
-    /* {
+    {
         title: "ColorMC",
         download: "https://github.com/Coloryr/ColorMC/releases/download/A24/colormc-a24-linux-x64.deb",
         version: "A24",
@@ -214,7 +214,7 @@ const LinuxLauncher = [
         download: "https://github.com/PrismLauncher/PrismLauncher/releases/download/8.3/PrismLauncher-Linux-x86_64.AppImage",
         version: "8.3",
         url: "https://github.com/PrismLauncher/PrismLauncher"
-    }, */
+    },
     {
         title: "Salwyrr Launcher",
         subtitle: "Salwyrr",
