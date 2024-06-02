@@ -1,7 +1,7 @@
 let searchKeyword = '';
 let searchableSubtitle = '';
 
-let countSeachable = 0;
+let countSearchable = 0;
 
 // 所有已支持设备
 const supportedDevices = [
@@ -45,7 +45,7 @@ const checkedOption = function(selectElement) {
 
 
 const deviceChanged = function() {
-    $('.device-diff mdui-select').each(function(index, element) {
+    $('div.launcher-list mdui-select').each(function(index, element) {
         $(element).hide();
         const select = $('.' + $('.device-list').val());
         select.val('【待选择】');
@@ -143,8 +143,8 @@ const searchableChanged = function(event = {target: $('.searchable-list')}) {
     $('.searchable-input').attr('placeholder', ` 从 ${subtitle} 中搜索 ....`);
     $('.searchable-label').html(`<a class="searchable-goto" href="${checked.attr('data-url')}" title="${note}" target="_blank">跳转 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path></svg></a>`);
     localStorage.setItem('searchable-checked', event.target.value);
-    countSeachable += 1;
-    if (countSeachable > 2) $('.searchable-list').click();
+    countSearchable += 1;
+    if (countSearchable > 2) $('.searchable-list').click();
 };
 $('.searchable-list').change(searchableChanged);
 

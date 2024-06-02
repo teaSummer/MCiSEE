@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=0.9, minimum-scale=0.9">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>所见皆是Minecraft - MCiSEE</title>
-	<!-- [begin] pwa支持 -->
+	<!-- pwa: backward support -->
 	<link rel="manifest" href="manifest.json">
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-capable" content="yes">
@@ -21,7 +21,7 @@
 	<link rel="apple-touch-icon" type="image/png" sizes="192x192" href="assets/icon/appiconRound.png">
 	<link rel="icon" type="image/png" sizes="192x192" href="assets/icon/appiconSquare.png">
 	<link rel="apple-touch-icon" type="image/png" sizes="192x192" href="assets/icon/appiconSquare.png">
-	<!-- [ end ] pwa支持 -->
+	<!-- pwa: backward support -->
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="所见皆是Minecraft - MCiSEE">
 	<meta property="og:description" content="所见皆是Minecraft，让获取MC资源更加轻便！">
@@ -208,6 +208,18 @@
 	translate.service.use("client.edge");
 	translate.execute();
 </script> -->
+<!-- pwa: reg sw.js -->
+<script type="text/javascript">
+	// 如果浏览器支持 service worker 就注册 "sw.js"
+	if(navigator.serviceWorker) {
+		navigator.serviceWorker.register("sw.js").then(registration => {
+			console.log("Registered service worker at scope: ", registration.scope);
+		});
+	} else {
+		console.log("Browser is not support service worker, register process will cancel");
+	}
+</script>
+<!-- pwa: reg sw.js -->
 </body>
 
 </html>
