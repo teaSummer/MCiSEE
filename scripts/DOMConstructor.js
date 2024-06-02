@@ -22,17 +22,17 @@ class DOMLauncherList {
         const devVersion = item.dev.version;
         try {
             download = new URL(item.download);
-        } catch (e) {
+        } catch (err) {
             download = {host: item.download};
         };
         try {
             devDownload = new URL(item.dev.download);
-        } catch (e) {
+        } catch (err) {
             devDownload = {host: item.dev.download};
         };
         try {
             url = new URL(item.url);
-        } catch (e) {
+        } catch (err) {
             url = {host: item.url};
         };
         const convert = function(URL, arg) {
@@ -90,12 +90,12 @@ class DOMSearchableList {
         let search, url;
         try {
             search = new URL(item.search);
-        } catch (e) {
+        } catch (err) {
             search = {host: item.search};
         };
         try {
             url = new URL(item.url);
-        } catch (e) {
+        } catch (err) {
             url = {host: item.url};
         };
         const convert = function(URL, arg) {

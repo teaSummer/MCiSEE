@@ -26,7 +26,7 @@ if (history.scrollRestoration) {
 const createSuperLabel = function(url, id) {
     const a = `<a href="" target="_blank" id="${id}">`;
     $('body').after(a);
-    const aElement = $(`#${id}`);
+    const aElement = $('#' + id);
     aElement.attr('href', url);
     aElement[0].click();
     aElement.remove();
@@ -45,13 +45,13 @@ const checkedOption = function(selectElement) {
 
 
 const deviceChanged = function() {
-    $('div.launcher-list mdui-select').each(function(index, element) {
-        $(element).hide();
+    $('div.launcher-list mdui-select').each(function(i, e) {
+        $(e).hide();
         const select = $('.' + $('.device-list').val());
         select.val('【待选择】');
         select.show();
     });
-    try { launcherChanged(); } catch (e) {};
+    try { launcherChanged(); } catch (err) {};
 };
 
 
@@ -75,8 +75,8 @@ const launcherChanged = function(event = {target: $('mdui-select.launcher-list')
                 URL = 'https://sciproxy.com/' + URL;
             };
             const downloadSVG = '<span class="svg right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M320 336h76c55 0 100-21.21 100-75.6s-53-73.47-96-75.6C391.11 99.74 329 48 256 48c-69 0-113.44 45.79-128 91.2-60 5.7-112 35.88-112 98.4S70 336 136 336h56M192 400.1l64 63.9 64-63.9M256 224v224.03" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="56"></path></svg></span>';
-            const emptyrm = function(ver) {
-                if (ver === void 0) {
+            const removeEmpty = function(version) {
+                if (version === void 0) {
                     button.removeAttr('href').removeAttr('title').removeAttr('data-backup-href');
                     button.html('');
                 };
@@ -90,7 +90,7 @@ const launcherChanged = function(event = {target: $('mdui-select.launcher-list')
                     button.attr('title', '下载稳定正式版 ' + version);
                 };
                 button.attr('data-backup-href', checked.attr('data-backup-download'));
-                emptyrm(version);
+                removeEmpty(version);
             } else {
                 const devVersion = checked.attr('data-dev-version');
                 button.html(downloadSVG + '下载最新开发版');
@@ -100,7 +100,7 @@ const launcherChanged = function(event = {target: $('mdui-select.launcher-list')
                     button.attr('title', '下载开发测试版 ' + devVersion);
                 };
                 button.attr('data-backup-href', checked.attr('data-backup-dev-download'));
-                emptyrm(devVersion);
+                removeEmpty(devVersion);
             };
         };
         button.hide();
@@ -116,16 +116,16 @@ const proxyChanged = function() {
     localStorage.setItem('github-proxy', $('.github-proxy').is(':checked'));
     try {
         if ($('.github-proxy').is(':checked')) {
-            $('.launcher-download>a.button').each(function(index, element) {
-                const link = $(element).attr('href');
-                if (link.startsWith('https://github.com/')) $(element).attr('href', 'https://sciproxy.com/' + link);
+            $('.launcher-download>a.button').each(function(i, e) {
+                const link = $(e).attr('href');
+                if (link.startsWith('https://github.com/')) $(e).attr('href', 'https://sciproxy.com/' + link);
             });
         } else {
-            $('.launcher-download>a.button').each(function(index, element) {
-                $(element).attr('href', $(element).attr('data-backup-href'));
+            $('.launcher-download>a.button').each(function(i, e) {
+                $(e).attr('href', $(e).attr('data-backup-href'));
             });
         };
-    } catch (e) {};
+    } catch (err) {};
 };
 $('.github-proxy').change(proxyChanged);
 
@@ -234,7 +234,7 @@ $('.searchable-input').typeahead(
                         type: 'get',
                         cache: true,
                         data: {keyword: query},
-                        dataType: "jsonp",
+                        dataType: 'jsonp',
                         success: function(result) {
                             if (result.length > 1 && Array.isArray(result[1])) {
                                 result = result[1];
@@ -256,9 +256,9 @@ $('.searchable-input').typeahead(
 
 
 // 网站板块生成
-const pre_list = function(element) {
+const pre_list = function(e) {
     const lineBlocks = [];
-    let blocks = JSON.parse($(element).html());
+    let blocks = JSON.parse($(e).html());
     let retValue = '';
     for (let block of blocks) {
         const title = Object.keys(block)[0];
@@ -272,7 +272,7 @@ const pre_list = function(element) {
         retValue += '</details><hr>';
     };
     retValue = retValue.replace(/<hr>$/, '');
-    $(element).html(retValue);
+    $(e).html(retValue);
 };
 
 
@@ -298,8 +298,7 @@ const hashChanged = function() {
         }
         if ($(hash).html().startsWith('<summary>')) $(hash).attr('open', true);
         else $(`${hash}>*:first-child`).addClass('hash');
-    }
-    catch (e) {};
+    } catch (err) {};
 };
 $(window).on('hashchange', function() {
     $('.hash').removeClass('hash');
@@ -312,7 +311,7 @@ $(window).on('hashchange', function() {
 const CSForum = [{"简体中文论坛": {}}];
 for (const forum of db_forums) {
     if (forum.state == 'up') {
-        CSForum[0]["简体中文论坛"][forum.title] = forum.url;
+        CSForum[0]['简体中文论坛'][forum.title] = forum.url;
     };
 };
 
@@ -332,34 +331,33 @@ $(document).ready(function() {
     supportedDevices.forEach(function(deviceInfo) {
         if (deviceInfo[0] == $('.device-list').val()) $('.device-list').val((deviceInfo[1]));
     });
-    $('.device-list').each(function(index, element) {
-        $(element).children().click(function() {
+    $('.device-list').each(function(i, e) {
+        $(e).children().click(function() {
             const value = $(this).attr('label');
             $('.device-list').val(value);
             deviceChanged();
             $('.device-list').val($(this).find('div div:first-child').text());
-            $(element).click();
+            $(e).click();
         });
     });
     // 启动器
-    $('mdui-select.launcher-list').each(function(index, element) {
-        $(element).val('【待选择】');
-        $(element).children().click(function() {
+    $('mdui-select.launcher-list').each(function(i, e) {
+        $(e).val('【待选择】');
+        $(e).children().click(function() {
             const value = $(this).attr('label');
             $('mdui-select.launcher-list').val(value);
-            launcherChanged({target: element});
+            launcherChanged({target: e});
             $('mdui-select.launcher-list').val($(this).find('div div:first-child').text());
-            $(element).click();
+            $(e).click();
         });
     });
     // 快速查询
     searchableChanged();
-    $('.pre-flex').each(function(index, element) {
-        pre_list(element);
+    $('.pre-flex').each(function(i, e) {
+        pre_list(e);
     });
     // 最后处理
     hashChanged();
     $('.wait').removeAttr('class').removeAttr('style');
-    try { document.querySelector(decodeURI(location.hash)).scrollIntoView(); }
-    catch (e) {};
+    try { document.querySelector(decodeURI(location.hash)).scrollIntoView(); } catch (err) {};
 });
