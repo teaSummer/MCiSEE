@@ -1,7 +1,7 @@
 "use strict";
 
 // 缓存名
-const cacheName = "mcic-cache";
+const cacheName = "mcisee-cache";
 // 在线/离线起始页
 const startPage = "/";
 const offlinePage = "/";
