@@ -112,22 +112,30 @@
 
 ### website.js
 
-以分类作为键，值为一个对象。对象内以网站名称作为键，值为网站地址 URL。
+以分类（可能有 `[open]`）作为键，值为一个数组。
+
+在数组内，第一项为网站名称，第二项为网站地址 URL。
+
+如果分类后面有 `[open]`，则该分类默认展开。
 
 示例如下：
 
 ``` javascript
 {
-    "官方网站 (©Mojang/©微软)": {
-        "Minecraft": "https://www.minecraft.net",
-        "Minecraft教育版": "https://education.minecraft.net",
-        "漏洞追踪器(反馈Bug)": "https://bugs.mojang.com",
-        "基岩版开发者文档": "https://learn.microsoft.com/minecraft/creator/",
-        "Feedback": "https://feedback.minecraft.net",
-        "知识库": "https://feedback.minecraft.net/hc/categories/115000410252-Knowledge-Base",
-        "远古版网页MC": "https://classic.minecraft.net",
-        "Minecraft Forge": "https://www.minecraftforge.net"
-    }
+    // | 分类 |
+    "官方网站 (©Mojang/©微软)": [
+        // | 网站名称 |  网站地址 URL  |
+        ["Minecraft", "https://www.minecraft.net"],
+        ["Minecraft教育版", "https://education.minecraft.net"],
+        ["去Xbox购买正版", "https://www.xbox.com/zh-CN/games/store/minecraft-java-bedrock-edition-for-pc/9NXP44L49SHJ/0010"],
+        ["漏洞追踪器(反馈Bug)", "https://bugs.mojang.com"],
+        ["基岩版开发者文档", "https://learn.microsoft.com/minecraft/creator/"],
+        ["Feedback", "https://feedback.minecraft.net"],
+        ["知识库", "https://feedback.minecraft.net/hc/categories/115000410252-Knowledge-Base"],
+        ["远古版网页MC", "https://classic.minecraft.net"],
+        ["Forge模组加载器", "https://www.minecraftforge.net"],
+        ["基岩版专用服务端", "https://www.minecraft.net/zh-hans/download/server/bedrock"]
+    ]
 }
 ```
 
