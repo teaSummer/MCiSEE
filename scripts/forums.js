@@ -5,9 +5,10 @@ const db_forums = [
     {
         title: "MCBBS",
         url: "https://www.mcbbs.net",
-        state: "unknow",
+        state: "close",
         createdAt: "2010/10/30",
-        updatedAt: "2024/04/20",
+        closedAt: "2024/01/17",
+        updatedAt: "2024/06/05",
         hasICP: "yes",
         hasNetSec: "yes",
         note: "直属B站的我的世界中文论坛。",
@@ -16,7 +17,7 @@ const db_forums = [
     {
         title: "最MC",
         url: "http://www.zuimc.com",
-        state: "failure",
+        state: "up",
         createdAt: "2013/04/18",
         updatedAt: "2024/04/20",
         hasICP: "yes",
@@ -337,9 +338,10 @@ const db_forums = [
     {
         title: "MC-BBS",
         url: "https://mc-bbs.net",
-        state: "down",
+        state: "close",
         createdAt: "2022/08/30",
-        updatedAt: "2024/04/20",
+        closedAt: "2024/01/01",
+        updatedAt: "2024/06/05",
         hasICP: "no",
         hasNetSec: "no",
         note: "非大陆服务器。域名被墙。",
@@ -393,7 +395,7 @@ const db_forums = [
         hasICP: "no",
         hasNetSec: "no",
         note: "非大陆服务器。",
-        reference: [] 
+        reference: []
     },
     {
         title: "PiboPibo论坛",
@@ -859,9 +861,9 @@ const db_forums = [
     {
         title: "新世界中文论坛",
         url: "https://nwbbs.cn",
-        state: "up",
+        state: "failure",
         createdAt: "2024/03/16",
-        updatedAt: "2024/05/17",
+        updatedAt: "2024/06/05",
         hasICP: "no",
         hasNetSec: "no",
         note: "非大陆服务器。",
@@ -930,9 +932,9 @@ const db_forums = [
     {
         title: "土豆社区",
         url: "https://bbs2.potatokj.top",
-        state: "up",
+        state: "failure",
         createdAt: "2024/03/24",
-        updatedAt: "2024/05/17",
+        updatedAt: "2024/06/05",
         hasICP: "no",
         hasNetSec: "no",
         note: "非大陆服务器。大部分地区无法访问。",
@@ -952,9 +954,9 @@ const db_forums = [
     {
         title: "MCBBS 4th",
         url: "https://www.mcbbs.lol",
-        state: "up",
+        state: "down",
         createdAt: "2024/04/06",
-        updatedAt: "2024/05/17",
+        updatedAt: "2024/06/05",
         hasICP: "no",
         hasNetSec: "no",
         note: "非大陆服务器。",
@@ -1125,11 +1127,17 @@ const db_forums_ex = [
         reference: []
     },
     {
-        title: "MCBBS 神教",
+        title: "⚡MCBBS 神教⚡",
         url: "https://mcbbs.xin/",
+        archiveUrl: "https://web.archive.org/web/20240601161142/https://mcbbs.xin/",
         updatedAt: "2024/04/12",
-        note: "MCBBS 纪念站",
-        reference: []
+        note: "MCBBS 纪念站，注意：此站不包含任何诈骗元素",
+        reference: [
+            {
+                title: "MCBBS 神教",
+                url: "https://github.com/YangLine/mcbbs.xin"
+            }
+        ]
     },
     {
         title: "MCBBS 还在寄吗？",
