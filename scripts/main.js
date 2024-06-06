@@ -266,7 +266,7 @@ const pre_list = function(e) {
             retValue += `<details class="keep" id="${title.replace('[open]', '').replace(/ .+/, '')}" open><summary>${title.replace('[open]', '')}</summary>`;
         }
         else retValue += `<details id="${title.replace(/ .+/, '')}"><summary>${title}</summary>`;
-        for (const [key, value] of Object.entries(block[title])) {
+        for (const [key, value] of block[title]) {
             retValue += `<a class="button" href="${value}" target="_blank">${key}</a>`;
         };
         retValue += '</details><hr>';
@@ -308,10 +308,10 @@ $(window).on('hashchange', function() {
 
 
 // 获取正常状态的简体中文论坛
-const CSForum = [{"简体中文论坛": {}}];
+const CSForum = [{"简体中文论坛": []}];
 for (const forum of db_forums) {
     if (forum.state == 'up') {
-        CSForum[0]['简体中文论坛'][forum.title] = forum.url;
+        CSForum[0]['简体中文论坛'].push([forum.title, forum.url]);
     };
 };
 

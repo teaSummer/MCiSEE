@@ -30,6 +30,7 @@ const AndroidLauncher = [
     }
 ];
 
+
 // 适用于 苹果手机/苹果平板 的启动器
 const iOSLauncher = [
     {
@@ -39,6 +40,7 @@ const iOSLauncher = [
         url: "https://github.com/PojavLauncherTeam/PojavLauncher_iOS"
     }
 ];
+
 
 // 适用于 Windows电脑 的启动器
 const WindowsLauncher = [
@@ -127,6 +129,7 @@ const WindowsLauncher = [
     }
 ];
 
+
 // 适用于 苹果电脑 的启动器
 const macOSLauncher = [
     {
@@ -181,6 +184,7 @@ const macOSLauncher = [
         url: "https://www.salwyrr.com"
     }
 ];
+
 
 // 适用于 Linux系统 的启动器
 const LinuxLauncher = [
