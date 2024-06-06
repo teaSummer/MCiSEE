@@ -38,7 +38,7 @@ const utilityWebsite = [
             ["通过名称查询皮肤", "https://namemc.com"],
             ["地球素材资源分享", "https://www.planetminecraft.com"],
             ["基岩版地球素材资源", "https://mcpe-planet.com"],
-            // "开发者开发百科", "https://minewiki.net"],
+            // ["开发者开发百科", "https://minewiki.net"],
             ["MC风格艺术字", "https://textcraft.net"],
             ["文字渐变颜色生成器", "https://mcg.tuanzi.ink"],
             ["指令生成器(MC百科)", "https://www.mcmod.cn/tools/cbcreator/"],
@@ -69,14 +69,14 @@ const utilityWebsite = [
         "国际基岩版版本库": [
             ["mcapks (KLPBBS)", "https://mcapks.net"],
             ["mcdl版本库 (MineBBS)", "https://mc.minebbs.com"],
-            // "甘泉版本库 (原像素科技)":" https://mcbbk.blmcpia.com"], // 貌似似了(全国ping不通),不要问我 -- 屑xs留
+            // ["甘泉版本库 (原像素科技)":" https://mcbbk.blmcpia.com"], // 貌似似了(全国ping不通),不要问我 -- 屑xs留
             ["mcfa版本库 (@zihao_il)", "https://bbk.endyun.ltd/main"],
             ["mcfw版本库 (MCAppx)", "https://www.mcappx.com"],
             ["mcarc版本库 (@Hottampist)", "https://mcarc.github.io"],
             ["星月Minecraft版本库", "https://spectrollay.github.io/minecraft_repository/"],
-            // "星月Minecraft版本库测试版", "https://spectrollay.github.io/minecraft_repository_test/"],
+            // ["星月Minecraft版本库测试版", "https://spectrollay.github.io/minecraft_repository_test/"],
             // -- 以下需要魔法才能访问 --
-            // "互联网档案馆上的alpha版本库", "https://archive.org/details/MCPEAlpha"]
+            // ["互联网档案馆上的alpha版本库", "https://archive.org/details/MCPEAlpha"]
         ]
     },
     {
