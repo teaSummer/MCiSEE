@@ -32,7 +32,7 @@ self.addEventListener('activate', function(e) {
     console.log('PWA Service Worker is activating.');
     e.waitUntil(
         caches.keys().then(function(keyList) {
-            return Promise.all(keyList.map(function(key) {caches.delete(key);
+            return Promise.all(keyList.map(function(key) {
                 if ( key !== cacheName ) {
                     console.log(`PWA old caches are removed. (key: ${key})`);
                     return caches.delete(key);
