@@ -201,7 +201,7 @@ const LinuxLauncher = [
     },
     {
         title: "ColorMC",
-        download: "https://github.co/Coloryr/ColorMC/releases/download/A24/colormc-a24-linux-x64.deb",
+        download: "https://github.com/Coloryr/ColorMC/releases/download/A24/colormc-a24-linux-x64.deb",
         version: "A24",
         url: "https://github.com/Coloryr/ColorMC"
     },
