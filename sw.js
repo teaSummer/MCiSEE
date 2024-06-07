@@ -103,7 +103,7 @@ self.addEventListener('fetch', function(e) {
 });
 
 // Check if the request url is in neverCacheUrls.
-// 检测当前 url 是否存在不缓存项
+// 检测当前 url 是否存在于不缓存项
 function checkNeverCacheList(url) {
     if ( this.match(url) ) {
         return false;
