@@ -64,8 +64,8 @@ const WindowsLauncher = [
     {
         title: "Plain Craft Launcher 2",
         subtitle: "PCL2",
-        download: "https://ltcat.lanzoum.com/i8BsW1z0eoch",
-        version: "2.7.3",
+        download: "https://ltcat.lanzoum.com/iamN4216c2od",
+        version: "2.7.4",
         url: "https://afdian.net/@LTCat"
     },
     {
