@@ -83,8 +83,8 @@ const WindowsLauncher = [
     {
         title: "X Minecraft Launcher",
         subtitle: "XMCL",
-        download: "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.44.6/xmcl-0.44.6-win32-x64.zip",
-        version: "0.44.6",
+        download: "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.44.7/xmcl-0.44.7-win32-x64.zip",
+        version: "0.44.7",
         url: "https://github.com/voxelum/x-minecraft-launcher"
     },
     {
@@ -158,8 +158,8 @@ const macOSLauncher = [
     {
         title: "X Minecraft Launcher",
         subtitle: "XMCL",
-        download: "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.44.6/xmcl-0.44.6.dmg",
-        version: "0.44.6",
+        download: "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.44.7/xmcl-0.44.7.dmg",
+        version: "0.44.7",
         url: "https://github.com/voxelum/x-minecraft-launcher"
     },
     {
@@ -201,15 +201,15 @@ const LinuxLauncher = [
     },
     {
         title: "ColorMC",
-        download: "https://github.com/Coloryr/ColorMC/releases/download/A24/colormc-a24-linux-x64.deb",
+        download: "https://github.co/Coloryr/ColorMC/releases/download/A24/colormc-a24-linux-x64.deb",
         version: "A24",
         url: "https://github.com/Coloryr/ColorMC"
     },
     {
         title: "X Minecraft Launcher",
         subtitle: "XMCL",
-        download: "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.44.6/xmcl-0.44.6-arm64.deb",
-        version: "0.44.6",
+        download: "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.44.7/xmcl-0.44.7-arm64.deb",
+        version: "0.44.7",
         url: "https://github.com/voxelum/x-minecraft-launcher"
     },
     {
