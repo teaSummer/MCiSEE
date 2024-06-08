@@ -157,6 +157,7 @@ const searchableChanged = function(event = {target: $('.searchable-list')}) {
     localStorage.setItem('searchable-checked', event.target.value);
     countSearchable += 1;
     if (countSearchable > 2) $('.searchable-list').click();
+    i18n();
 };
 $('.searchable-list').change(searchableChanged);
 
