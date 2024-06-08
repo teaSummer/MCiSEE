@@ -200,14 +200,6 @@
     </div>
 </footer>
 <script>
-    // pwa: reg sw.js
-    if (navigator.serviceWorker) {
-        navigator.serviceWorker.register('sw.js').then(registration => {
-            console.log('Registered Service Worker at the scope: ', registration.scope);
-        });
-    } else {
-        console.log('Your browser is not support Service Worker, the register process is cancelled.');
-    };
     // internationalization
     al.setLangProp(['locales/zh-CN.yml'], function() {
         al.load('zh-CN');
