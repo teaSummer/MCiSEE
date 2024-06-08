@@ -253,11 +253,6 @@ select {
     overflow-y: auto;
 }
 
-option {
-    /* 为适配功能：自动展开下拉菜单 */
-    transition: none;
-}
-
 select.normal.unfold option.bold {
     font-weight: bold;
 }
@@ -466,6 +461,10 @@ a.button:not(.download)::after {
     width: 1em;
     vertical-align: middle;
     padding-left: 3px;
+}
+
+.by-inline * {
+    display: inline;
 }
 
 .传送锚点 {

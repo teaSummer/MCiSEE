@@ -35,8 +35,8 @@ class DOMLauncherList {
         } catch (err) {
             url = {host: item.url};
         };
-        const convert = function(URL, arg) {
-            return (URL == 'https://www.example.com/' || URL.host == '') ? '' : `${arg}="${URL}"`;
+        const convert = function(url, arg) {
+            return (url == 'https://www.example.com/' || url.host == '') ? '' : `${arg}="${url}"`;
         };
         const _title = item.title == item.subtitle ? '' : `data-title="${item.title}"`;
         const _subtitle = `data-subtitle="${item.subtitle}"`;
@@ -98,8 +98,8 @@ class DOMSearchableList {
         } catch (err) {
             url = {host: item.url};
         };
-        const convert = function(URL, arg) {
-            return (URL == 'https://www.example.com/' || URL.host == '') ? '' : `${arg}="${URL}"`;
+        const convert = function(url, arg) {
+            return (url == 'https://www.example.com/' || url.host == '') ? '' : `${arg}="${url}"`;
         };
         const _title = `data-title="${item.title}"`;
         const _search = convert(search, 'data-search');
@@ -111,7 +111,6 @@ class DOMSearchableList {
     };
 
     static list(items = []) {
-        if (items.length == 0) return '<mdui-menu-item value="?"><div slot="custom" class="custom-item"><div>【无】</div></div></mdui-menu-item>';
         let dom = '';
         items.forEach(function(e) {
             dom += DOMSearchableList.item(e);

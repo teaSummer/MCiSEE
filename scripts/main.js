@@ -34,9 +34,9 @@ const createSuperLabel = function(url, id) {
 
 // 获取下拉菜单选中项
 const checkedOption = function(selectElement) {
-    const SEIncludes = function (str) { return $(selectElement).html().indexOf(str) != -1; };
+    const selectInclude = (str) => ( $(selectElement).html().indexOf(str) != -1 );
     if (selectElement.value) {
-        if (SEIncludes('Wiki') || SEIncludes('Launcher')) {
+        if (selectInclude('Wiki') || selectInclude('Launcher')) {
             return $(selectElement).find(`mdui-menu-item[data-subtitle="${selectElement.value}"]`);
         };
     };
@@ -69,10 +69,10 @@ const launcherChanged = function(event = {target: $('mdui-select.launcher-list')
     };
     for (const attribute of ['data-download', 'data-dev-download', 'data-url']) {
         const button = $(`.${attribute}-launcher`);
-        let URL = checked.attr(attribute);
+        let url = checked.attr(attribute);
         if (attribute.endsWith('download')) {
-            if ($('.github-proxy').is(':checked') && String(URL).startsWith('https://github.com/')) {
-                URL = 'https://sciproxy.com/' + URL;
+            if ($('.github-proxy').is(':checked') && String(url).startsWith('https://github.com/')) {
+                url = 'https://sciproxy.com/' + url;
             };
             const downloadSVG = '<span class="svg right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M320 336h76c55 0 100-21.21 100-75.6s-53-73.47-96-75.6C391.11 99.74 329 48 256 48c-69 0-113.44 45.79-128 91.2-60 5.7-112 35.88-112 98.4S70 336 136 336h56M192 400.1l64 63.9 64-63.9M256 224v224.03" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="56"></path></svg></span>';
             const removeEmpty = function(version) {
@@ -104,8 +104,8 @@ const launcherChanged = function(event = {target: $('mdui-select.launcher-list')
             };
         };
         button.hide();
-        if (URL) {
-            button.attr('href', URL).show();
+        if (url) {
+            button.attr('href', url).show();
         };
     };
 };
@@ -141,7 +141,7 @@ const searchableChanged = function(event = {target: $('.searchable-list')}) {
     searchableSubtitle = subtitle;
     const note = checked.attr('data-note');
     $('.searchable-input').attr('placeholder', ` 从 ${subtitle} 中搜索 ....`);
-    $('.searchable-label').html(`<a class="searchable-goto" href="${checked.attr('data-url')}" title="${note}" target="_blank">跳转 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path></svg></a>`);
+    $('.searchable-label').html(`<a class="searchable-goto by-inline" href="${checked.attr('data-url')}" title="${note}" target="_blank"><p al="goto"></p> <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path></svg></a>`);
     localStorage.setItem('searchable-checked', event.target.value);
     countSearchable += 1;
     if (countSearchable > 2) $('.searchable-list').click();
@@ -194,9 +194,9 @@ $('.searchable-direct').change(function() {
 
 
 // 配置初始化
-const config = function (...settings) {
-    for (const [option, defaultValue] of Object.entries(settings)) {
-        if (localStorage.getItem(option) === void 0) localStorage.setItem(option, defaultValue);
+const config = function(...settings) {
+    for (const [option, defaultVal] of Object.entries(settings)) {
+        if (localStorage.getItem(option) === void 0) localStorage.setItem(option, defaultVal);
         if (localStorage.getItem(option) == 'true') $('.' + option).attr('checked', true);
         else $('.' + option).attr('checked', false);
     };
@@ -217,20 +217,22 @@ $('.searchable-input').typeahead(
         limit: 10,
         source: function(query, syncResults, asyncResults) {
             setTimeout(function() {
-                if (!searchableComposition) return asyncResults([]);
+                if (!searchableComposition) return;
                 let subtitle = searchableSubtitle;
                 let search = encodeURI($('.searchable-input').val().trim());
-                const API = {
+                // API
+                const api = {
                     Wiki: `https://zh.minecraft.wiki/api.php?action=opensearch&search=${search}&limit=11`,
                     BWiki: `https://wiki.biligame.com/mc/api.php?action=opensearch&search=${search}&limit=11`,
                     BEDW: `https://wiki.mcbe-dev.net/w/api.php?action=opensearch&search=${search}&namespace=0%7C3000%7C3002%7C3004%7C3008%7C3010&limit=11`,
                     MinePlugin: `https://mineplugin.org/api.php?action=opensearch&search=${search}&limit=11`
                 };
-                const URL = API[subtitle];
-                if (URL) {
+                const url = api[subtitle];
+                if (url) {
+                    // 获取候选词
                     $('.searchable-clear').attr('loading', true);  // 在获取候选词时显示加载动画（进行中）
                     return $.ajax({
-                        url: URL,
+                        url: url,
                         type: 'get',
                         cache: true,
                         data: {keyword: query},
@@ -244,11 +246,9 @@ $('.searchable-input').typeahead(
                         },
                         error: function() {
                             $('.searchable-clear').removeAttr('loading');  // 在获取候选词时显示加载动画（已完成）
-                            return asyncResults([]);
                         }
                     }, 0);
                 };
-                return asyncResults([]);
             });
         }
     }
@@ -259,20 +259,22 @@ $('.searchable-input').typeahead(
 const pre_list = function(e) {
     const lineBlocks = [];
     let blocks = JSON.parse($(e).html());
-    let retValue = '';
+    let dom = '';
     for (let block of blocks) {
-        const title = Object.keys(block)[0];
-        if (title.endsWith('[open]')) {
-            retValue += `<details class="keep" id="${title.replace('[open]', '').replace(/ .+/, '')}" open><summary>${title.replace('[open]', '')}</summary>`;
+        // 获取分类并处理
+        const category = Object.keys(block)[0];
+        if (category.endsWith('[open]')) {
+            dom += `<details class="keep" id="${category.replace('[open]', '').replace(/ .+/, '')}" open><summary>${category.replace('[open]', '')}</summary>`;
         }
-        else retValue += `<details id="${title.replace(/ .+/, '')}"><summary>${title}</summary>`;
-        for (const [key, value] of block[title]) {
-            retValue += `<a class="button" href="${value}" target="_blank">${key}</a>`;
+        else dom += `<details id="${category.replace(/ .+/, '')}"><summary>${category}</summary>`;
+        // 生成元素
+        for (const [title, url] of block[category]) {
+            dom += `<a class="button" href="${url}" target="_blank">${title}</a>`;
         };
-        retValue += '</details><hr>';
+        dom += '</details><hr>';
     };
-    retValue = retValue.replace(/<hr>$/, '');
-    $(e).html(retValue);
+    dom = dom.replace(/<hr>$/, '');
+    $(e).html(dom);
 };
 
 
