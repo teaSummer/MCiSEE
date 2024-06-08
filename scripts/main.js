@@ -358,12 +358,12 @@ $(document).ready(function() {
     $('.pre-flex').each(function(i, e) {
         pre_list(e);
     });
-    // 最后处理
-    hashChanged();
-    $('.wait').removeAttr('class').removeAttr('style');
-    try { document.querySelector(decodeURI(location.hash)).scrollIntoView(); } catch (err) {};
     // 国际化 (internationalization)
     al.setLangProp(['locales/zh-CN.yml'], function() {
         al.load('zh-CN');
     }, {url: true, yaml: true});
+    // 最后处理
+    hashChanged();
+    $('.wait').removeAttr('class').removeAttr('style');
+    try { document.querySelector(decodeURI(location.hash)).scrollIntoView(); } catch (err) {};
 });
