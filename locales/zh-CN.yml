@@ -9,9 +9,16 @@ data:
   description.3: 这里也需要你们提供更多有趣的资源！
   device.title: 设备
   device.tip: 自动判断，可手动选择
+  device.Android: 安卓/鸿蒙 - 手机/平板
+  device.iOS: 苹果 - 手机/平板
+  device.Windows: Windows - 电脑
+  device.macOS: 苹果 - 电脑
+  device.Linux: Linux - 含Linux发行版
+  device.unsupported: 不支持
+  device.unknown: 未知
   app.title: 软件
   launcher.title: 启动器（<b>Java版</b>）
-  launcher.goto: '<a class="button data-url-launcher" title="跳转至GitHub仓库或官方网站" target="_blank" style="display: none;">跳转启动器网站</a>'
+  launcher.unselected: 【待选择】
   website.title: 网站
   searchable.title: 快速查询
   utilityWebsite.title: 实用网站
@@ -45,3 +52,9 @@ data:
   content.website.forum: 论坛
   content.config: 配置
   content.bottom: 底部
+  download.release.latest: |-
+    <a class="button download data-download-launcher" target="_blank" title="下载尽可能新的稳定正式版"
+    data-backup-href="${linkDownload}" href="${linkUrl}">${downloadSVG}下载最新稳定版</a>
+  download.preRelease.latest: |-
+    <a class="button download data-dev-download-launcher" target="_blank" title="下载尽可能新的开发测试版"
+    data-backup-href="${linkDevDownload}" href="${linkDevUrl}">${downloadSVG}下载最新开发版</a>

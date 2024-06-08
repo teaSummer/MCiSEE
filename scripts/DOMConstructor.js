@@ -3,7 +3,7 @@ class DOMLauncherList {
 
     static item(item) {
         item = {
-            title: "未命名",
+            title: "Launcher",
             subtitle: item.title,
             download: "https://www.example.com",
             version: "1.0.x",
@@ -63,11 +63,10 @@ class DOMLauncherList {
 
     static list(items = []) {
         let dom = '';
-        // let dom = '<mdui-menu-item value="?"><div slot="custom" class="custom-item" hidden><div>【待选择】</div></div></mdui-menu-item>';
         items.forEach(function(e) {
             dom += DOMLauncherList.item(e);
         });
-        dom += '<mdui-menu-item label="?" disabled hidden><div slot="custom" class="custom-item"><div>【待选择】</div></div></mdui-menu-item>';
+        dom += '<mdui-menu-item label="?" disabled hidden><div slot="custom" class="custom-item"><div al="launcher.unselected"></div></div></mdui-menu-item>';
         return dom;
     };
 };
@@ -77,7 +76,7 @@ class DOMSearchableList {
 
     static item(item) {
         item = {
-            title: "未命名",
+            title: "Searchable",
             subtitle: item.title,
             search: "https://www.example.com",
             note: "",
@@ -125,10 +124,10 @@ class DOMDeviceList {
     static show() {
         let dom = '';
         for (const [deviceName, supportedDevice, description] of supportedDevices) {
-            dom += `<mdui-menu-item label="${deviceName}"><div slot="custom"><div>${supportedDevice}</div><div class="secondary">${description}</div></div></mdui-menu-item>`;
+            dom += `<mdui-menu-item label="${deviceName}"><div slot="custom"><div>${supportedDevice}</div><div class="secondary" al="device.${deviceName}"></div></div></mdui-menu-item>`;
         };
-        dom += `<mdui-menu-item value="unsupported" disabled hidden><div slot="custom" class="custom-item"><div>不支持</div></div></mdui-menu-item>
-                <mdui-menu-item value="unknown" selected disabled hidden><div slot="custom" class="custom-item"><div>未知</div></div></mdui-menu-item>`;
+        dom += `<mdui-menu-item value="unsupported" disabled hidden><div slot="custom" class="custom-item"><div al="device.unsupported"></div></div></mdui-menu-item>
+                <mdui-menu-item value="unknown" selected disabled hidden><div slot="custom" class="custom-item"><div al="device.unknown"></div></div></mdui-menu-item>`;
         $('.device-list').html(dom);
 
         const UA = navigator.userAgent;

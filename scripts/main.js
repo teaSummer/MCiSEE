@@ -2,15 +2,16 @@ let searchKeyword = '';
 let searchableSubtitle = '';
 
 let countSearchable = 0;
+const downloadSVG = '<span class="svg right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M320 336h76c55 0 100-21.21 100-75.6s-53-73.47-96-75.6C391.11 99.74 329 48 256 48c-69 0-113.44 45.79-128 91.2-60 5.7-112 35.88-112 98.4S70 336 136 336h56M192 400.1l64 63.9 64-63.9M256 224v224.03" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="56"></path></svg></span>';
 
 // 所有已支持设备
 const supportedDevices = [
-    // |   最早名称   |       显示名称       |           描述           |
-    [      'Android',  'Android/HarmonyOS', '安卓/鸿蒙 - 手机/平板'     ],
-    [          'iOS',  'iOS/iPad'         , '苹果 - 手机/平板'         ],
-    [      'Windows',  'Windows'          , 'Windows - 电脑'          ],
-    [        'macOS',  'macOS'            , '苹果 - 电脑'              ],
-    [        'Linux',  'Linux'            , '含Linux发行版' ],
+    // |   最早名称   |       显示名称       |
+    [      'Android',  'Android/HarmonyOS' ],
+    [          'iOS',  'iOS/iPad'          ],
+    [      'Windows',  'Windows'           ],
+    [        'macOS',  'macOS'             ],
+    [        'Linux',  'Linux'             ],
 ];
 DOMDeviceList.show();
 
@@ -19,6 +20,13 @@ DOMDeviceList.show();
 if (history.scrollRestoration) {
     history.scrollRestoration = 'manual';
 };
+
+
+const i18n = function() {
+    al.setLangProp(['locales/zh-CN.yml'], function() {
+        al.load();
+    }, {url: true, yaml: true});
+}
 
 
 
@@ -74,7 +82,6 @@ const launcherChanged = function(event = {target: $('mdui-select.launcher-list')
             if ($('.github-proxy').is(':checked') && String(url).startsWith('https://github.com/')) {
                 url = 'https://sciproxy.com/' + url;
             };
-            const downloadSVG = '<span class="svg right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M320 336h76c55 0 100-21.21 100-75.6s-53-73.47-96-75.6C391.11 99.74 329 48 256 48c-69 0-113.44 45.79-128 91.2-60 5.7-112 35.88-112 98.4S70 336 136 336h56M192 400.1l64 63.9 64-63.9M256 224v224.03" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="56"></path></svg></span>';
             const removeEmpty = function(version) {
                 if (version === void 0) {
                     button.removeAttr('href').removeAttr('title').removeAttr('data-backup-href');
@@ -83,9 +90,11 @@ const launcherChanged = function(event = {target: $('mdui-select.launcher-list')
             };
             if (attribute == 'data-download') {
                 const version = checked.attr('data-version');
-                button.html(downloadSVG + '下载最新稳定版');
-                button.attr('title', '下载尽可能新的稳定正式版');
+                window.linkUrl = url;
+                window.linkDownload = checked.attr('data-backup-download');
+                button.parent().attr('al', 'download.release.latest');
                 if (version != 'latest') {
+                    button.parent().removeAttr('al');
                     button.html(downloadSVG + '下载稳定版 ' + version);
                     button.attr('title', '下载稳定正式版 ' + version);
                 };
@@ -93,9 +102,11 @@ const launcherChanged = function(event = {target: $('mdui-select.launcher-list')
                 removeEmpty(version);
             } else {
                 const devVersion = checked.attr('data-dev-version');
-                button.html(downloadSVG + '下载最新开发版');
-                button.attr('title', '下载尽可能新的开发测试版');
+                window.linkDevUrl = url;
+                window.linkDevDownload = checked.attr('data-backup-dev-download');
+                button.parent().attr('al', 'download.preRelease.latest');
                 if (devVersion != 'latest') {
+                    button.parent().removeAttr('al');
                     button.html(downloadSVG + '下载开发版 ' + devVersion);
                     button.attr('title', '下载开发测试版 ' + devVersion);
                 };
@@ -108,6 +119,7 @@ const launcherChanged = function(event = {target: $('mdui-select.launcher-list')
             button.attr('href', url).show();
         };
     };
+    i18n();
 };
 
 
@@ -359,9 +371,7 @@ $(document).ready(function() {
         pre_list(e);
     });
     // 国际化 (internationalization)
-    al.setLangProp(['locales/zh-CN.yml'], function() {
-        al.load('zh-CN');
-    }, {url: true, yaml: true});
+    i18n();
     // 最后处理
     hashChanged();
     $('.wait').removeAttr('class').removeAttr('style');
