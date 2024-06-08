@@ -253,23 +253,9 @@ select {
     overflow-y: auto;
 }
 
-select.normal.unfold option.bold {
-    font-weight: bold;
-}
-
-select:disabled, select:disabled option {
+select:disabled {
     color: #000000;
     opacity: 1;
-}
-
-select.normal.fold option:checked,
-select.keep.unfold option:checked {
-    font-weight: bold !important;
-}
-
-select.normal.unfold option:checked {
-    background-color: #808080;
-    color: #ffffff;
 }
 
 mdui-select {
