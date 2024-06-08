@@ -209,9 +209,9 @@
         console.log('Your browser is not support Service Worker, the register process is cancelled.');
     };
     // internationalization
-    al.setLangProp(['locales/zh-CN.json'], function() {
+    al.setLangProp(['locales/zh-CN.yml'], function() {
         al.load('zh-CN');
-    }, true);
+    }, {url: true, yaml: true});
 </script>
 <script src="scripts/main.js"></script>
 <!-- machine translation, not good -->
