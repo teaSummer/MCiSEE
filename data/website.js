@@ -143,9 +143,11 @@ const utilityWebsite = [
             ["Fabric", "https://fabricmc.net"],
             ["Quilt", "https://quiltmc.org"],
             ["LiteLoader", "http://www.liteloader.com"],
-            ["Iris Shaders", "https://irisshaders.net"],
+            ["Rift", "https://www.curseforge.com/minecraft/mc-mods/rift"],
+            ["Iris", "https://www.irisshaders.dev"],
             ["OptiFine", "https://www.optifine.net"],
-            ["OptiFine(中文)", "https://optifine.cn"]
+            ["OptiFine(中文)", "https://optifine.cn"],
+            ["Canvas", "https://modrinth.com/mod/canvas"]
         ]
     },
     {
@@ -155,7 +157,8 @@ const utilityWebsite = [
             ["饼盒", "https://mc.xzwmc.com"],
             ["PMINE工具箱", "https://pmine.org"],
             ["FreeDayO工具箱", "https://love-kogasa.github.io/FJST/"],
-            ["命令自动补全", "https://mact.mcisee.top"]
+            ["命令自动补全", "https://mact.mcisee.top"],
+            ["MCPack清单生成器", "https://mcpack.mcisee.top"]
         ]
     }
 ];
