@@ -92,7 +92,7 @@ const launcherChanged = function(event = {target: $('mdui-select.launcher-list')
                 const version = checked.attr('data-version');
                 window.linkUrl = url;
                 window.linkDownload = checked.attr('data-backup-download');
-                button.parent().attr('al', 'download.release.latest');
+                button.parent().attr('al', 'launcher.release.latest');
                 if (version != 'latest') {
                     button.parent().removeAttr('al');
                     button.html(downloadSVG + '下载稳定版 ' + version);
@@ -104,7 +104,7 @@ const launcherChanged = function(event = {target: $('mdui-select.launcher-list')
                 const devVersion = checked.attr('data-dev-version');
                 window.linkDevUrl = url;
                 window.linkDevDownload = checked.attr('data-backup-dev-download');
-                button.parent().attr('al', 'download.preRelease.latest');
+                button.parent().attr('al', 'launcher.preRelease.latest');
                 if (devVersion != 'latest') {
                     button.parent().removeAttr('al');
                     button.html(downloadSVG + '下载开发版 ' + devVersion);

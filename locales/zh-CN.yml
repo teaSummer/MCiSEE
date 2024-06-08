@@ -52,9 +52,9 @@ data:
   content.website.forum: 论坛
   content.config: 配置
   content.bottom: 底部
-  download.release.latest: |-
+  launcher.release.latest: |-
     <a class="button download data-download-launcher" target="_blank" title="下载尽可能新的稳定正式版"
     data-backup-href="${linkDownload}" href="${linkUrl}">${downloadSVG}下载最新稳定版</a>
-  download.preRelease.latest: |-
+  launcher.preRelease.latest: |-
     <a class="button download data-dev-download-launcher" target="_blank" title="下载尽可能新的开发测试版"
     data-backup-href="${linkDevDownload}" href="${linkDevUrl}">${downloadSVG}下载最新开发版</a>
