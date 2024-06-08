@@ -10,7 +10,7 @@ const supportedDevices = [
     [          'iOS',  'iOS/iPad'         , '苹果 - 手机/平板'         ],
     [      'Windows',  'Windows'          , 'Windows - 电脑'          ],
     [        'macOS',  'macOS'            , '苹果 - 电脑'              ],
-    [        'Linux',  'Linux'            , '含Ubuntu/FreeBSD/Debian' ],
+    [        'Linux',  'Linux'            , '含Linux发行版' ],
 ];
 DOMDeviceList.show();
 

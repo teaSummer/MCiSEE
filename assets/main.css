@@ -282,6 +282,8 @@ mdui-menu-item .secondary {
     display: none;
     color: #888;
     font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 mdui-menu-item:hover .secondary {
