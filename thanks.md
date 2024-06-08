@@ -30,6 +30,8 @@
 
 [Material Icons](https://fonts.googleapis.com/icon?family=Material+Icons) 纹理样式字体图标
 
+[AutoLang](https://github.com/TheChuan1503/AutoLang) 自动语言检测
+
 ### 页脚/文档/404页面
 
 [Shields.io](https://github.com/badges/shields) 简洁图章图标
