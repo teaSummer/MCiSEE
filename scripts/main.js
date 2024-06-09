@@ -22,9 +22,9 @@ if (history.scrollRestoration) {
 };
 
 
-const i18n = function() {
+const i18n = function(callback = function () {}) {
     al.setLangProp(['locales/zh-CN.yml'], function() {
-        al.load();
+        al.load(void 0, al.mode.HTML, callback);
     }, {url: true, yaml: true});
 }
 
@@ -369,9 +369,10 @@ $(document).ready(function() {
         pre_list(e);
     });
     // 国际化 (internationalization)
-    i18n();
-    // 最后处理
-    hashChanged();
-    $('.wait').removeAttr('class').removeAttr('style');
-    try { document.querySelector(decodeURI(location.hash)).scrollIntoView(); } catch (err) {};
+    i18n(function() {
+        // 最后处理
+        hashChanged();
+        $('.wait').removeAttr('class').removeAttr('style');
+        try { document.querySelector(decodeURI(location.hash)).scrollIntoView(); } catch (err) {};
+    });
 });
