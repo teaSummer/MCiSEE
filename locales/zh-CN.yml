@@ -2,15 +2,16 @@ language: zh-CN
 
 data:
   head.title: 所见皆是Minecraft - MCiSEE
-  GitHub: GitHub
   description.title: 所见皆是<i>Minecraft</i>
   description.1: 玩家们可以从这里挖掘Minecraft常用资源，例如软件等。
   description.2: |-
-    欢迎各位来 <a href="https://GitHub.com/teaSummer/MCiSEE" target="_blank">{GitHub} 项目</a>
+    欢迎各位来 <a href="https://GitHub.com/teaSummer/MCiSEE" target="_blank">GitHub 项目</a>
     {contribute} 或 点击 Star
   description.3: 这里也需要你们提供更多有趣的资源！
-  forThisProject: 为此项目
+  BedrockEdition: 基岩版
+  JavaEdition: Java版
   contribute: 做出贡献
+  forThisProject: 为此项目
   contributeForThisProject: '{forThisProject}{contribute}'
   device: 设备
   device.tip: 自动判断，可手动选择
@@ -24,8 +25,6 @@ data:
   unselected: 【待选择】
   app: 软件
   launcher: 启动器
-  BedrockEdition: 基岩版
-  JavaEdition: Java版
   launcherOnlyJavaEdition: '{launcher}（<b>{JavaEdition}</b>）'
   website: 网站
   searchable: 快速查询
@@ -37,14 +36,13 @@ data:
   unfold: 展开...
   fold: 收起
   GitHubProxy: |-
-    {GitHub} 文件使用 <a href="https://sciproxy.com" target="_blank">下载加速</a>
-    {download}
+    GitHub 文件使用 <a href="https://sciproxy.com" target="_blank">下载加速</a> {download}
   searchableDirect: 快速查询尽可能自动进入详情页
   ellipsis: ....
-  footerInfo: 统计信息
+  statistics: 统计信息
   pageViews: 访问计数
   contributors: 贡献者
-  stargazersOverTime: '{GitHub} 星星历史图'
+  stargazersOverTime: 'GitHub 星星历史图'
   ICP: <a href="https://icp.gov.moe/?keyword=20247837" target="_blank">萌ICP备20247837号</a>
   license.1: 本页面内容以
   license.2: 协议共享
