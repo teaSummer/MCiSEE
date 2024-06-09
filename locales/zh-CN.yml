@@ -24,7 +24,9 @@ data:
   unselected: 【待选择】
   app: 软件
   launcher: 启动器
-  launcherOnlyJavaEdition: '{launcher}（<b>Java版</b>）'
+  BedrockEdition: 基岩版
+  JavaEdition: Java版
+  launcherOnlyJavaEdition: '{launcher}（<b>{JavaEdition}</b>）'
   website: 网站
   searchable: 快速查询
   utilityWebsite: 实用网站
