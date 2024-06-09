@@ -45,7 +45,8 @@ const iOSLauncher = [
 // 适用于 Windows电脑 的启动器
 const WindowsLauncher = [
     {
-        title: "Minecraft 启动器",
+        title: "*国际版* Minecraft 启动器",
+        subtitle: "Minecraft 启动器",
         download: "https://launcher.mojang.com/download/MinecraftInstaller.exe",
         version: "latest",
         url: "https://www.minecraft.net/zh-hans"
@@ -88,10 +89,11 @@ const WindowsLauncher = [
         url: "https://github.com/voxelum/x-minecraft-launcher"
     },
     {
-        title: "我的世界启动器",
+        title: "*中国版* 我的世界启动器",
+        subtitle: "我的世界启动器",
         download: "https://x19.gdl.netease.com/MCLauncher_1.14.0.36188.exe",
         version: "1.14.0.36188",
-        url: "https://mc.163.com"
+        url: "https://mc.163.com",
     },
     {
         title: "MultiMC",
@@ -115,7 +117,8 @@ const WindowsLauncher = [
         url: "https://www.salwyrr.com"
     },
     {
-        title: "Minecraft 启动器 (旧版)",
+        title: "*国际版* Minecraft 启动器 (旧版)",
+        subtitle: "Minecraft 启动器 (旧版)",
         version: "latest",
         download: "https://launcher.mojang.com/download/MinecraftInstaller.msi",
         url: "https://www.minecraft.net/zh-hans"

@@ -1,42 +1,42 @@
 language: zh-CN
 data:
-  meta.title: 所见皆是Minecraft - MCiSEE
+  head.title: 所见皆是Minecraft - MCiSEE
   description.title: 所见皆是<i>Minecraft</i>
   description.1: 玩家们可以从这里挖掘Minecraft常用资源，例如软件等。
   description.2: |-
     欢迎各位来 <a href="https://github.com/teaSummer/MCiSEE" target="_blank">GitHub 项目</a>
-    做出贡献 或 点击
+    做出贡献 或 点击 Star
   description.3: 这里也需要你们提供更多有趣的资源！
-  device.title: 设备
+  device: 设备
   device.tip: 自动判断，可手动选择
-  device.Android: 安卓/鸿蒙 - 手机/平板
-  device.iOS: 苹果 - 手机/平板
-  device.Windows: Windows - 电脑
-  device.macOS: 苹果 - 电脑
-  device.Linux: Linux - 含Linux发行版
-  device.unsupported: 不支持
-  device.unknown: 未知
-  app.title: 软件
-  launcher.title: 启动器（<b>Java版</b>）
-  launcher.unselected: 【待选择】
-  website.title: 网站
-  searchable.title: 快速查询
-  utilityWebsite.title: 实用网站
-  forum.title: 论坛
+  tip.Android: 安卓/鸿蒙 - 手机/平板
+  tip.iOS: 苹果 - 手机/平板
+  tip.Windows: Windows - 电脑
+  tip.macOS: 苹果 - 电脑
+  tip.Linux: Linux - 含Linux发行版
+  unsupported: 不支持
+  unknown: 未知
+  app: 软件
+  launcher: 启动器（<b>Java版</b>）
+  unselected: 【待选择】
+  website: 网站
+  searchable: 快速查询
+  utilityWebsite: 实用网站
+  forum: 论坛
   goto: 跳转
   unfold: 展开...
   fold: 收起
-  config.title: 配置
-  config.1: |-
+  config: 配置
+  githubProxy: |-
     GitHub 文件使用 <a href="https://sciproxy.com" target="_blank">下载加速</a>
     下载
-  config.2: 快速查询尽可能自动进入详情页
+  searchableDirect: 快速查询尽可能自动进入详情页
   ellipsis: ....
-  footer.title: 统计信息
-  article.1: 访问计数
-  article.2: 贡献者
-  article.3: GitHub 星星历史图
-  ICP: <a href="https://icp.gov.moe/?keyword=20247837" target="_blank">萌ICP备20247837号</a>
+  footerInfo: 统计信息
+  pageViews: 访问计数
+  contributors: 贡献者
+  stargazersOverTime: GitHub 星星历史图
+  icp: <a href="https://icp.gov.moe/?keyword=20247837" target="_blank">萌ICP备20247837号</a>
   github: GitHub
   contribute: 为此项目做出贡献
   license.1: 本页面内容以
@@ -52,6 +52,12 @@ data:
   content.website.forum: 论坛
   content.config: 配置
   content.bottom: 底部
+  launcher.release: |-
+    <a class="button download data-download-launcher" target="_blank" title="下载稳定正式版 ${linkVersion}"
+    data-backup-href="${linkDownload}" href="${linkUrl}">${downloadSVG}下载稳定版 ${linkVersion}</a>
+  launcher.preRelease: |-
+    <a class="button download data-dev-download-launcher" target="_blank" title="下载开发测试版 ${linkDevVersion}"
+    data-backup-href="${linkDevDownload}" href="${linkDevUrl}">${downloadSVG}下载开发版 ${linkDevVersion}</a>
   launcher.release.latest: |-
     <a class="button download data-download-launcher" target="_blank" title="下载尽可能新的稳定正式版"
     data-backup-href="${linkDownload}" href="${linkUrl}">${downloadSVG}下载最新稳定版</a>

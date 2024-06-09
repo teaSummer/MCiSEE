@@ -66,7 +66,7 @@ class DOMLauncherList {
         items.forEach(function(e) {
             dom += DOMLauncherList.item(e);
         });
-        dom += '<mdui-menu-item label="?" disabled hidden><div slot="custom" class="custom-item"><div al="launcher.unselected"></div></div></mdui-menu-item>';
+        dom += '<mdui-menu-item label="?" disabled hidden><div slot="custom" class="custom-item"><div al="unselected"></div></div></mdui-menu-item>';
         return dom;
     };
 };
@@ -124,10 +124,10 @@ class DOMDeviceList {
     static show() {
         let dom = '';
         for (const [deviceName, supportedDevice, description] of supportedDevices) {
-            dom += `<mdui-menu-item label="${deviceName}"><div slot="custom"><div>${supportedDevice}</div><div class="secondary" al="device.${deviceName}"></div></div></mdui-menu-item>`;
+            dom += `<mdui-menu-item label="${deviceName}"><div slot="custom"><div>${supportedDevice}</div><div class="secondary" al="tip.${deviceName}"></div></div></mdui-menu-item>`;
         };
-        dom += `<mdui-menu-item value="unsupported" disabled hidden><div slot="custom" class="custom-item"><div al="device.unsupported"></div></div></mdui-menu-item>
-                <mdui-menu-item value="unknown" selected disabled hidden><div slot="custom" class="custom-item"><div al="device.unknown"></div></div></mdui-menu-item>`;
+        dom += `<mdui-menu-item value="unsupported" disabled hidden><div slot="custom" class="custom-item"><div al="unsupported"></div></div></mdui-menu-item>
+                <mdui-menu-item value="unknown" selected disabled hidden><div slot="custom" class="custom-item"><div al="unknown"></div></div></mdui-menu-item>`;
         $('.device-list').html(dom);
 
         const UA = navigator.userAgent;

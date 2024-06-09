@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.9, minimum-scale=0.9">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title al="meta.title"></title>
+    <title al="head.title"></title>
     <!-- pwa: manifest -->
     <link rel="manifest" href="manifest.json">
     <!-- [start] pwa: backward support -->
@@ -78,7 +78,6 @@
             <p al="description.1"></p>
             <p class="by-inline">
                 <text al="description.2"></text>
-                <text>Star</text>
                 <svg aria-hidden="true" height="16" viewBox="0 0 16 16" width="16" data-view-component="true"
                      class="octicon octicon-star d-inline-block mr-2">
                     <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"></path>
@@ -88,16 +87,16 @@
         </div>
         <hr>
         <div class="device-container" id="设备">
-            <h2 class="page-title" al="device.title"></h2>
+            <h2 class="page-title" al="device"></h2>
             <label class="tip" al="device.tip"></label>
             <mdui-select class="device-list" name="device-list" id="device-list" placement="bottom" variant="outlined"
                          required></mdui-select>
         </div>
         <div class="resource-container" id="资源">
             <div class="app-container" id="软件">
-                <h2 class="page-title" al="app.title"></h2>
+                <h2 class="page-title" al="app"></h2>
                 <div class="launcher-container" id="启动器">
-                    <div class="label" al="launcher.title"></div>
+                    <div class="label" al="launcher"></div>
                     <div class="launcher-list device-diff"></div>
                     <div class="launcher-title full-name"></div>
                     <div class="launcher-goto">
@@ -117,9 +116,9 @@
                 </div>
             </div>
             <div class="website-container" id="网站">
-                <h2 class="page-title" al="website.title"></h2>
+                <h2 class="page-title" al="website"></h2>
                 <div class="searchable-container" id="快速查询">
-                    <div class="label" al="searchable.title"></div>
+                    <div class="label" al="searchable"></div>
                     <label class="inline-block">
                         <mdui-select class="searchable-list min-width-215" name="searchable-list" id="searchable-list"
                                      placement="bottom" variant="outlined" required></mdui-select>
@@ -141,27 +140,27 @@
                     </div>
                 </div>
                 <div class="utility-website-container" id="实用网站">
-                    <div class="label margin-top-20" al="utilityWebsite.title"></div>
+                    <div class="label margin-top-20" al="utilityWebsite"></div>
                     <a class="to-unfold" href="#实用网站-展开" al="unfold"></a>
                     <a class="to-fold" href="#实用网站-收起" style="display: none;" al="fold"></a>
                     <pre class="utility-website-list pre-flex"></pre>
                 </div>
                 <div class="forum-container" id="论坛">
-                    <div class="label margin-top-20" al="forum.title"></div>
+                    <div class="label margin-top-20" al="forum"></div>
                     <a class="to-unfold" href="#论坛-展开" al="unfold"></a>
                     <a class="to-fold" href="#论坛-收起" style="display: none;" al="fold"></a>
                     <pre class="forum-list pre-flex"></pre>
                 </div>
             </div>
             <div class="config-container" id="配置">
-                <h2 class="page-title" al="config.title"></h2>
+                <h2 class="page-title" al="config"></h2>
                 <label>
                     <input class="github-proxy" type="checkbox" checked>
-                    <text al="config.1"></text>
+                    <text al="githubProxy"></text>
                 </label>
                 <label>
                     <input class="searchable-direct" type="checkbox" checked>
-                    <text al="config.2"></text>
+                    <text al="searchableDirect"></text>
                 </label>
             </div>
             <div class="ellipsis">
@@ -174,26 +173,26 @@
 <footer class="wait" style="display: none;">
     <div class="page-content">
         <div class="footer-content">
-            <h2 al="footer.title"></h2>
+            <h2 al="footerInfo"></h2>
             <hr>
             <div class="article">
-                <h3 al="article.1"></h3>
+                <h3 al="pageViews"></h3>
                 <p style="text-align: center;">
                     <img src="https://badges.toozhao.com/badges/01HTFPN35M6ETEFBVAP3SEWRKG/green.svg" alt="Page Views">
                 </p>
 
-                <h3 al="article.2"></h3>
+                <h3 al="contributors"></h3>
                 <p style="text-align: center;">
                     <img src="https://contrib.rocks/image?repo=teaSummer/MCiSEE" alt="Contributors">
                 </p>
 
-                <h3 al="article.3"></h3>
+                <h3 al="stargazersOverTime"></h3>
                 <p style="text-align: center;">
                     <img src="https://starchart.cc/teaSummer/MCiSEE.svg?variant=adaptive" alt="Stargazers Over Time">
                 </p>
             </div>
             <hr>
-            <p class="ICP" al="ICP"></p>
+            <p class="ICP" al="icp"></p>
             <p class="GitHub">
                 <a href="https://github.com/teaSummer/MCiSEE" target="_blank" al="github"></a> |
                 <a href="https://github.com/teaSummer/MCiSEE/blob/main/README.md" target="_blank" al="contribute"></a>

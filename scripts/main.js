@@ -85,32 +85,29 @@ const launcherChanged = function(event = {target: $('mdui-select.launcher-list')
             const removeEmpty = function(version) {
                 if (version === void 0) {
                     button.removeAttr('href').removeAttr('title').removeAttr('data-backup-href');
-                    button.html('');
+                    button.html('')
+                    button.parent().removeAttr('al');
                 };
             };
             if (attribute == 'data-download') {
                 const version = checked.attr('data-version');
+                window.linkVersion = version;
                 window.linkUrl = url;
                 window.linkDownload = checked.attr('data-backup-download');
                 button.parent().attr('al', 'launcher.release.latest');
                 if (version != 'latest') {
-                    button.parent().removeAttr('al');
-                    button.html(downloadSVG + '下载稳定版 ' + version);
-                    button.attr('title', '下载稳定正式版 ' + version);
+                    button.parent().attr('al', 'launcher.release');
                 };
-                button.attr('data-backup-href', checked.attr('data-backup-download'));
                 removeEmpty(version);
             } else {
                 const devVersion = checked.attr('data-dev-version');
+                window.linkDevVersion = devVersion;
                 window.linkDevUrl = url;
                 window.linkDevDownload = checked.attr('data-backup-dev-download');
                 button.parent().attr('al', 'launcher.preRelease.latest');
                 if (devVersion != 'latest') {
-                    button.parent().removeAttr('al');
-                    button.html(downloadSVG + '下载开发版 ' + devVersion);
-                    button.attr('title', '下载开发测试版 ' + devVersion);
+                    button.parent().attr('al', 'launcher.preRelease');
                 };
-                button.attr('data-backup-href', checked.attr('data-backup-dev-download'));
                 removeEmpty(devVersion);
             };
         };
