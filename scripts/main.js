@@ -55,9 +55,13 @@ const checkedOption = function(selectElement) {
 const deviceChanged = function() {
     $('div.launcher-list mdui-select').each(function(i, e) {
         $(e).hide();
-        const select = $('.' + $('.device-list').val());
-        select.val('【待选择】');
-        select.show();
+        try {
+            const select = $('.' + $('.device-list').val());
+            select.val('【待选择】');
+            select.show();
+        } catch (err) {
+            $('.app-container').hide();
+        };
     });
     try { launcherChanged(); } catch (err) {};
 };

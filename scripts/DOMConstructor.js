@@ -159,12 +159,6 @@ class DOMDeviceList {
         };
 
         const toHide = 4;
-        $('.device-list').change(function() {
-            $('.app-container').show();
-            if ($(this)[0].selectedIndex > toHide) {
-                $('.app-container').hide();
-            };
-        });
         $('.device-list').val(getDevice());
         if ($('.device-list')[0].selectedIndex > toHide) {
             $('.app-container').hide();
