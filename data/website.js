@@ -22,7 +22,7 @@ const utilityWebsite = [
             // | 网站名称 |  网站地址 URL  |
             ["15周年庆典", "https://www.minecraft.net/15th-anniversary"],
             ["领取苦力怕披风", "https://www.minecraft.net/15th-anniversary?mcRef=redeemCape"],
-            ["去Xbox购买正版", "https://www.xbox.com/games/store/minecraft-java-bedrock-edition-for-pc/9NXP44L49SHJ/0010"]
+            ["去Xbox半价购买正版", "https://www.xbox.com/games/store/minecraft-java-bedrock-edition-for-pc/9NXP44L49SHJ/0010"]
         ]
     },
     {
