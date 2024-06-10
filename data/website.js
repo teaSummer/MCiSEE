@@ -42,7 +42,6 @@ const utilityWebsite = [
             ["MC风格艺术字", "https://textcraft.net"],
             ["文字渐变颜色生成器", "https://mcg.tuanzi.ink"],
             ["指令生成器(MC百科)", "https://www.mcmod.cn/tools/cbcreator/"],
-            ["命令生成器(MetaMo)", "https://mc.metamo.cn/gmct/"],
             ["地图转换器", "https://chunker.app"],
             ["地图查看网站", "https://www.chunkbase.com"],
             ["史莱姆区块查找", "https://mclt.cn"],
@@ -50,10 +49,12 @@ const utilityWebsite = [
             ["像素画生成器", "https://rebane2001.com/mapartcraft/zh-Hans"],
             ["地图种子查询", "https://www.mcseeder.com"],
             ["建筑辅助", "https://minecraftshapes.com"],
-            ["超多实用工具", "https://www.gamergeeks.net"],
+            ["超多工具(GamerGeeks)", "https://www.gamergeeks.net"],
             ["工具网站", "https://minecraft.tools"],
+            ["在线工具(元魔幻界)", "https://mc.metamo.cn/tool/"],
             ["正版玩家信息查询", "https://mcuuid.net"],
             ["Aternos免费开服", "https://aternos.org"],
+            ["简幻欢公益面板服", "https://simpfun.cn"],
             ["服务器列表(大陆)Ⅰ", "https://www.mclists.cn"],
             ["服务器列表(大陆)Ⅱ", "https://www.fwqlist.com"],
             ["找服网", "https://www.fansmc.com"],
@@ -127,13 +128,15 @@ const utilityWebsite = [
     },
     {
         "开源网站 (有助于开发者)": [
+            ["数据包生成器", "https://misode.github.io/"],
             ["Midi音乐转换为播放音乐的bdump v3结构文件", "https://dislink.github.io/midi2bdx/"],
             ["Midi音乐转换为播放音乐的mcpack行为包", "https://dislink.github.io/midi2mcfunction/"],
             ["Midi音乐转换为可视化音符瀑布流mcpack行为包", "https://dislink.github.io/midi2tiles/"],
             ["各种图片转换为放置方块的mcpack行为包", "https://dislink.github.io/img2mcfunction/"],
             ["文字转换为粒子画的mcpack行为包", "https://dislink.github.io/text2mcfunction/"],
             ["mcfunction文件转换为bdump v3结构文件", "https://dislink.github.io/mcfunction2bdx/"],
-            ["命令自动补全", "https://mact.mcisee.top"]
+            ["命令自动补全", "https://mact.mcisee.top"],
+            ["MCPack清单生成器", "https://mcpack.mcisee.top"]
         ]
     },
     {
