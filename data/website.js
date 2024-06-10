@@ -26,22 +26,33 @@ const utilityWebsite = [
         ]
     },
     {
-        "无类别": [
+        "无类别 (暂未分类)": [
             ["导航网", "https://www.mcnav.net"],
             ["网易我的世界官网", "https://mc.163.com"],
             ["Inner Core基岩版模组引擎", "https://icmods.mineprogramming.org"],
             ["MCPEDL资源下载站", "https://mcpedl.com"],
             ["LittleSkin皮肤站", "https://littleskin.cn"],
-            ["皮肤改色器", "https://www.mcskinrecolor.com"],
             ["筛选皮肤", "https://mcskinsearch.com"],
-            ["Nova Skin皮肤编辑器", "https://minecraft.novaskin.me"],
-            ["通过名称查询皮肤", "https://namemc.com"],
             ["地球素材资源分享", "https://www.planetminecraft.com"],
             ["基岩版地球素材资源", "https://mcpe-planet.com"],
-            // ["开发者开发百科", "https://minewiki.net"],
+            ["服务器列表(大陆)Ⅰ", "https://www.mclists.cn"],
+            ["服务器列表(大陆)Ⅱ", "https://www.fwqlist.com"],
+            ["找服网", "https://www.fansmc.com"],
+            ["最好的服务器", "https://minecraft-mp.com"],
+            ["服务器列表", "https://mcl.ist"],
+            ["服务器列表(台湾)", "https://www.mc-list.xyz"],
+            ["服务器列表(日本)", "https://minecraft.jp"]
+        ]
+    },
+    {
+        "工具箱": [
+            ["通过名称查询皮肤", "https://namemc.com"],
             ["MC风格艺术字", "https://textcraft.net"],
-            ["文字渐变颜色生成器", "https://mcg.tuanzi.ink"],
+            ["渐变颜色生成器", "https://mcg.tuanzi.ink"],
             ["指令生成器(MC百科)", "https://www.mcmod.cn/tools/cbcreator/"],
+            ["指令工具(台湾)", "https://new.kukuo.tw/tools/"],
+            ["SMCFcper", "https://smcfcper.off.gs"],
+            ["命令自动补全", "https://mact.mcisee.top"],
             ["地图转换器", "https://chunker.app"],
             ["地图查看网站", "https://www.chunkbase.com"],
             ["史莱姆区块查找", "https://mclt.cn"],
@@ -52,18 +63,37 @@ const utilityWebsite = [
             ["超多工具(GamerGeeks)", "https://www.gamergeeks.net"],
             ["工具网站", "https://minecraft.tools"],
             ["在线工具(元魔幻界)", "https://mc.metamo.cn/tool/"],
+            ["皮肤改色器", "https://www.mcskinrecolor.com"],
+            ["Nova Skin皮肤编辑器", "https://minecraft.novaskin.me"],
             ["正版玩家信息查询", "https://mcuuid.net"],
             ["Aternos免费开服", "https://aternos.org"],
             ["简幻欢公益面板服", "https://simpfun.cn"],
-            ["服务器列表(大陆)Ⅰ", "https://www.mclists.cn"],
-            ["服务器列表(大陆)Ⅱ", "https://www.fwqlist.com"],
-            ["找服网", "https://www.fansmc.com"],
             ["3D模型编辑器BlockBench", "https://www.blockbench.net"],
+            ["数据包生成器", "https://misode.github.io/"],
+            ["Midi音乐转换为播放音乐的bdump v3结构文件", "https://dislink.github.io/midi2bdx/"],
+            ["Midi音乐转换为播放音乐的mcpack行为包", "https://dislink.github.io/midi2mcfunction/"],
+            ["Midi音乐转换为可视化音符瀑布流mcpack行为包", "https://dislink.github.io/midi2tiles/"],
+            ["各种图片转换为放置方块的mcpack行为包", "https://dislink.github.io/img2mcfunction/"],
+            ["文字转换为粒子画的mcpack行为包", "https://dislink.github.io/text2mcfunction/"],
+            ["mcfunction文件转换为bdump v3结构文件", "https://dislink.github.io/mcfunction2bdx/"],
+            ["MCPack清单生成器", "https://mcpack.mcisee.top"],
             ["装饰性头颅", "https://www.minecraft-heads.com"],
+            ["预览盔甲纹饰", "https://armortrims.com"],
+            ["多彩文字生成器", "https://colorize.fun/minecraft"]
+        ]
+    },
+    {
+        "百科全书": [
+            // ["开发者开发百科", "https://minewiki.net"],
+            ["官方基岩版开发者文档", "https://learn.microsoft.com/minecraft/creator/"],
+            ["基岩版开发Wiki", "https://wiki.mcbe-dev.net"],
             ["基岩版文档", "https://bedrock.dev"],
             ["基岩版维基百科", "https://wiki.bedrock.dev"],
-            ["DigMinecraft教程", "https://www.digminecraft.com"],
-            ["预览盔甲纹饰", "https://armortrims.com"]
+            ["插件百科", "https://mineplugin.org"],
+            ["维基百科: 原站", "https://zh.minecraft.wiki"],
+            ["维基百科: 镜像站", "https://wiki.biligame.com/mc/"],
+            ["MC百科", "https://mcmod.cn"],
+            ["DigMinecraft教程", "https://www.digminecraft.com"]
         ]
     },
     {
@@ -77,7 +107,7 @@ const utilityWebsite = [
             ["星月Minecraft版本库", "https://spectrollay.github.io/minecraft_repository/"],
             // ["星月Minecraft版本库测试版", "https://spectrollay.github.io/minecraft_repository_test/"],
             // -- 以下需要魔法才能访问 --
-            // ["互联网档案馆上的alpha版本库", "https://archive.org/details/MCPEAlpha"]
+            // ["Alpha版本库 (存档)", "https://archive.org/details/MCPEAlpha"]
         ]
     },
     {
@@ -104,16 +134,6 @@ const utilityWebsite = [
         ]
     },
     {
-        "非简体中文 (与无类别相关)": [
-            ["文字渐变颜色生成器", "https://colorize.fun/minecraft"],
-            ["指令工具(台湾)", "https://new.kukuo.tw/tools/"],
-            ["最好的服务器", "https://minecraft-mp.com"],
-            ["服务器列表", "https://mcl.ist"],
-            ["服务器列表(台湾)", "https://www.mc-list.xyz"],
-            ["服务器列表(日本)", "https://minecraft.jp"]
-        ]
-    },
-    {
         "快查网站 (可供快速查询的网站)": [
             ["维基百科: 原站", "https://zh.minecraft.wiki"],
             ["维基百科: 镜像站", "https://wiki.biligame.com/mc/"],
@@ -124,19 +144,6 @@ const utilityWebsite = [
             ["Java版ID表", "http://mcid.lingningyu.cn"],
             ["基岩版开发Wiki", "https://wiki.mcbe-dev.net"],
             ["插件百科", "https://mineplugin.org"]
-        ]
-    },
-    {
-        "开源网站 (有助于开发者)": [
-            ["数据包生成器", "https://misode.github.io/"],
-            ["Midi音乐转换为播放音乐的bdump v3结构文件", "https://dislink.github.io/midi2bdx/"],
-            ["Midi音乐转换为播放音乐的mcpack行为包", "https://dislink.github.io/midi2mcfunction/"],
-            ["Midi音乐转换为可视化音符瀑布流mcpack行为包", "https://dislink.github.io/midi2tiles/"],
-            ["各种图片转换为放置方块的mcpack行为包", "https://dislink.github.io/img2mcfunction/"],
-            ["文字转换为粒子画的mcpack行为包", "https://dislink.github.io/text2mcfunction/"],
-            ["mcfunction文件转换为bdump v3结构文件", "https://dislink.github.io/mcfunction2bdx/"],
-            ["命令自动补全", "https://mact.mcisee.top"],
-            ["MCPack清单生成器", "https://mcpack.mcisee.top"]
         ]
     },
     {
