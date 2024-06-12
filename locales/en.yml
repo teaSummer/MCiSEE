@@ -1,0 +1,77 @@
+language: en
+# Translation by XiaozhiSans
+data:
+  head.title: Wow, It's All Minecraft - MCiSEE
+  description.title: Wow, It's All <i>Minecraft</i>
+  description.1: 'Players can find something about <i>Minecraft</i> from here. For example: softwares.'
+  description.2: |-
+    {contribute} of <a href="https://github.com/teaSummer/MCiSEE" target="_blank">our GitHub Repo</a>!
+    And don't forget star!
+  description.3: Here also need you provide something intersting!
+  BedrockEdition: Bedrock Edition
+  JavaEdition: Java Edition
+  contribute: Become a contributor
+  forThisProject: of our project
+  contributeForThisProject: '{contribute} {forThisProject}'
+  device: Device
+  device.tip: Auto identify, you can choose by urself
+  Android.tip: 'Android/HarmonyOS - Phone/Table'
+  iOS.tip: 'iOS - Phone/Table'
+  Windows.tip: 'Windows - PC'
+  macOS.tip: 'Mac - PC'
+  Linux.tip: 'Linux - Includ Linux releases'
+  unsupported: Unsupport
+  unknown: Unknown
+  unselected: '[wating for select]'
+  app: Softwares
+  launcher: Launchers
+  launcherOnlyJavaEdition: '{launcher}（<b>{JavaEdition}</b>）'
+  website: Websites
+  searchable: Fast search
+  utilityWebsite: Helpful Websites
+  forum: BBS
+  config: Options
+  goto: GO!
+  download: Download!
+  unfold: more...
+  fold: less
+  GitHubProxy: |-
+    Speedup the GitHub with <a href="https://sciproxy.com" target="_blank">sciproxy.com</a> proxy
+  searchableDirect: '{searchable}: Keep auto enter detail page as much as possible'
+  ellipsis: ....
+  statistics: Insights
+  pageViews: 'Visitors count:'
+  contributors: 'Contributors {forThisProject}'
+  stargazersOverTime: 'Stars {forThisProject}'
+  ICP: '<a href="https://icp.gov.moe/?keyword=20247837" target="_blank">Moe ICP Record: 20247837</a>'
+  license.1: This page is licensed under 
+  license.2: '📑'
+  content: Quick Access
+  content.top: Top
+  content.device: '{device}'
+  content.app: '{app}'
+  content.app.launcher: '{launcher}'
+  content.website: '{website}'
+  content.website.searchable: '{searchable}'
+  content.website.utilityWebsite: '{utilityWebsite}'
+  content.website.forum: '{forum}'
+  content.config: '{config}'
+  content.bottom: Bottom
+  latest: Latest
+  latest.note: The latest version
+  release: Stable
+  release.note: The stable release version
+  preRelease: Dev
+  preRelease.note: The most unstable version, 'cause still in devlopment
+  launcher.release: |-
+    <a class="button download data-download-launcher" target="_blank" title="{download}{release.note} ${linkVersion}"
+    data-backup-href="${linkDownload}" href="${linkUrl}">${downloadSVG}{download}{release} ${linkVersion}</a>
+  launcher.release.latest: |-
+    <a class="button download data-download-launcher" target="_blank" title="{download}{latest.note}{release.note}"
+    data-backup-href="${linkDownload}" href="${linkUrl}">${downloadSVG}{download}{latest}{release}</a>
+  launcher.preRelease: |-
+    <a class="button download data-dev-download-launcher" target="_blank" title="{download}{preRelease.note} ${linkDevVersion}"
+    data-backup-href="${linkDevDownload}" href="${linkDevUrl}">${downloadSVG}{download}{preRelease} ${linkDevVersion}</a>
+  launcher.preRelease.latest: |-
+    <a class="button download data-dev-download-launcher" target="_blank" title="{download}{latest.note}{preRelease.note}"
+    data-backup-href="${linkDevDownload}" href="${linkDevUrl}">${downloadSVG}{download}{latest}{preRelease}</a>

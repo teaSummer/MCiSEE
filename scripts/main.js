@@ -23,7 +23,7 @@ if (history.scrollRestoration) {
 
 
 const i18n = function(callback = function () {}) {
-    al.setLangProp(['locales/zh-CN.yml'], function() {
+    al.setLangProp(['locales/zh-CN.yml','locales/en.yml'], function() {
         al.load(void 0, al.mode.HTML, callback);
     }, {url: true, yaml: true});
 }
