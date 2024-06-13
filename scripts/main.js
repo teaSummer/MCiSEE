@@ -22,8 +22,12 @@ if (history.scrollRestoration) {
 };
 
 
-const i18n = function(callback = function () {}) {
+const i18n = function(callback = () => {}) {
     al.setLangProp(['locales/zh-CN.yml','locales/en.yml'], function() {
+        al.setDefaultCountry({
+            en: "en",
+            zh: "zh-CN"
+        });
         al.load(void 0, al.mode.HTML, callback);
     }, {url: true, yaml: true});
 }
