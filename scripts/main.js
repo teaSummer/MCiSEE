@@ -22,12 +22,9 @@ if (history.scrollRestoration) {
 };
 
 
+// 国际化 (internationalization)
 const i18n = function(callback = () => {}) {
     al.setLangProp(['locales/zh-CN.yml','locales/en.yml'], function() {
-        al.setDefaultCountry({
-            en: "en",
-            zh: "zh-CN"
-        });
         al.load(void 0, al.mode.HTML, callback);
     }, {url: true, yaml: true});
 }
@@ -376,7 +373,11 @@ $(document).ready(function() {
     $('.pre-flex').each(function(i, e) {
         pre_list(e);
     });
-    // 国际化 (internationalization)
+    // 国际化 (internationalization) 准备进行
+    al.setDefaultCountry({
+        en: 'en',
+        zh: 'zh-CN'
+    });
     i18n(function() {
         // 最后处理
         hashChanged();

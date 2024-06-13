@@ -37,7 +37,7 @@ data:
   fold: 收起
   GitHubProxy: |-
     GitHub 文件使用 <a href="https://sciproxy.com" target="_blank">下载加速</a> {download}
-  searchableDirect: 快速查询尽可能自动进入详情页
+  searchableDirect: '{searchable}尽可能自动进入详情页'
   ellipsis: ....
   statistics: 统计信息
   pageViews: 访问计数

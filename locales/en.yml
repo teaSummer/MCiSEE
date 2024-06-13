@@ -3,50 +3,50 @@ language: en
 data:
   head.title: Wow, It's All Minecraft - MCiSEE
   description.title: Wow, It's All <i>Minecraft</i>
-  description.1: 'Players can find something about <i>Minecraft</i> from here. For example: softwares.'
+  description.1: "Here come Minecraft resources for players. How about Apps?"
   description.2: |-
-    {contribute} of <a href="https://github.com/teaSummer/MCiSEE" target="_blank">our GitHub Repo</a>!
-    And don't forget star!
-  description.3: Here also need you provide something intersting!
+    Welcome to contribute for <a href="https://github.com/teaSummer/MCiSEE" target="_blank">GitHub Repo</a>!
+    Please give us a star
+  description.3: Enjoy and share more interesting with everyone!
   BedrockEdition: Bedrock Edition
   JavaEdition: Java Edition
-  contribute: Become a contributor
-  forThisProject: of our project
+  contribute: Be a contributor
+  forThisProject: of GitHub Repo
   contributeForThisProject: '{contribute} {forThisProject}'
-  device: Device
-  device.tip: Auto identify, you can choose by urself
+  device: Devices
+  device.tip: Auto identify, or choose by yourself
   Android.tip: 'Android/HarmonyOS - Phone/Table'
   iOS.tip: 'iOS - Phone/Table'
   Windows.tip: 'Windows - PC'
   macOS.tip: 'Mac - PC'
-  Linux.tip: 'Linux - Includ Linux releases'
-  unsupported: Unsupport
+  Linux.tip: 'Linux - Include Linux releases'
+  unsupported: Unsupported
   unknown: Unknown
-  unselected: '[wating for select]'
-  app: Softwares
+  unselected: '[waiting for select]'
+  app: Apps
   launcher: Launchers
   launcherOnlyJavaEdition: '{launcher}（<b>{JavaEdition}</b>）'
   website: Websites
-  searchable: Fast search
-  utilityWebsite: Helpful Websites
-  forum: BBS
+  searchable: Quicker Search
+  utilityWebsite: Useful Websites
+  forum: Forums
   config: Options
-  goto: GO!
-  download: Download!
-  unfold: more...
-  fold: less
+  goto: Go!
+  download: Download
+  unfold: More...
+  fold: Less
   GitHubProxy: |-
     Speedup the GitHub with <a href="https://sciproxy.com" target="_blank">sciproxy.com</a> proxy
   searchableDirect: '{searchable}: Keep auto enter detail page as much as possible'
   ellipsis: ....
-  statistics: Insights
-  pageViews: 'Visitors count:'
-  contributors: 'Contributors {forThisProject}'
-  stargazersOverTime: 'Stars {forThisProject}'
-  ICP: '<a href="https://icp.gov.moe/?keyword=20247837" target="_blank">Moe ICP Record: 20247837</a>'
+  statistics: Statistics
+  pageViews: Page Views
+  contributors: Contributors
+  stargazersOverTime: Stargazers Over Time
+  ICP: ''
   license.1: This page is licensed under 
-  license.2: '📑'
-  content: Quick Access
+  license.2: 📑
+  content: Content
   content.top: Top
   content.device: '{device}'
   content.app: '{app}'
@@ -58,20 +58,20 @@ data:
   content.config: '{config}'
   content.bottom: Bottom
   latest: Latest
-  latest.note: The latest version
+  latest.note: (Latest)
   release: Stable
-  release.note: The stable release version
+  release.note: the stable release version
   preRelease: Dev
-  preRelease.note: The most unstable version, 'cause still in devlopment
+  preRelease.note: the developing beta version
   launcher.release: |-
-    <a class="button download data-download-launcher" target="_blank" title="{download}{release.note} ${linkVersion}"
-    data-backup-href="${linkDownload}" href="${linkUrl}">${downloadSVG}{download}{release} ${linkVersion}</a>
+    <a class="button download data-download-launcher" target="_blank" title="{download} {release.note} ${linkVersion}"
+    data-backup-href="${linkDownload}" href="${linkUrl}">${downloadSVG}{download} {release} ${linkVersion}</a>
   launcher.release.latest: |-
-    <a class="button download data-download-launcher" target="_blank" title="{download}{latest.note}{release.note}"
-    data-backup-href="${linkDownload}" href="${linkUrl}">${downloadSVG}{download}{latest}{release}</a>
+    <a class="button download data-download-launcher" target="_blank" title="{download} {release.note} {latest.note}"
+    data-backup-href="${linkDownload}" href="${linkUrl}">${downloadSVG}{download} {latest} {release}</a>
   launcher.preRelease: |-
-    <a class="button download data-dev-download-launcher" target="_blank" title="{download}{preRelease.note} ${linkDevVersion}"
-    data-backup-href="${linkDevDownload}" href="${linkDevUrl}">${downloadSVG}{download}{preRelease} ${linkDevVersion}</a>
+    <a class="button download data-dev-download-launcher" target="_blank" title="{download} {preRelease.note} ${linkDevVersion}"
+    data-backup-href="${linkDevDownload}" href="${linkDevUrl}">${downloadSVG} {download} {preRelease} ${linkDevVersion}</a>
   launcher.preRelease.latest: |-
-    <a class="button download data-dev-download-launcher" target="_blank" title="{download}{latest.note}{preRelease.note}"
-    data-backup-href="${linkDevDownload}" href="${linkDevUrl}">${downloadSVG}{download}{latest}{preRelease}</a>
+    <a class="button download data-dev-download-launcher" target="_blank" title="{download} {preRelease.note} {latest.note}"
+    data-backup-href="${linkDevDownload}" href="${linkDevUrl}">${downloadSVG} {download} {latest} {preRelease}</a>
