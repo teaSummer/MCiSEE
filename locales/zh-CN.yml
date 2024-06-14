@@ -42,7 +42,7 @@ data:
   statistics: 统计信息
   pageViews: 访问计数
   contributors: 贡献者
-  stargazersOverTime: 'GitHub 星星历史图'
+  starsOverTime: 'GitHub 星星历史图'
   ICP: <a href="https://icp.gov.moe/?keyword=20247837" target="_blank">萌ICP备20247837号</a>
   license.1: 本页面内容以
   license.2: 协议共享

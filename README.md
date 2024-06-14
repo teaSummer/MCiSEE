@@ -14,6 +14,7 @@
 
 **注意：请确保您 Fork 的仓库为最新，可通过自己仓库页面的【Sync fork】更新后再提交 PR！旧版仓库的合并会带来很多麻烦，感谢您的支持！**
 
+
 ## 贡献教程
 
 **您需要拥有一个 GitHub 账号！**
@@ -159,9 +160,11 @@
 
 感谢您的贡献。
 
+
 ## 感谢
 
 详见 [thanks.md](thanks.md) 文件。
+
 
 ## 统计信息
 
@@ -171,4 +174,11 @@
 
 ### 星星历史图
 
-[![Stargazers over time](https://starchart.cc/teaSummer/MCiSEE.svg?variant=adaptive)](https://starchart.cc/teaSummer/MCiSEE)
+[![Stars over time](https://starchart.cc/teaSummer/MCiSEE.svg?variant=adaptive)](https://starchart.cc/teaSummer/MCiSEE)
+
+
+## 协议
+
+开源协议：[GPL-3.0 license](LICENSE)
+
+知识共享协议：[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
