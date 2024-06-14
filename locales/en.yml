@@ -3,7 +3,7 @@ language: en
 data:
   head.title: Wow, It's All Minecraft - MCiSEE
   description.title: Wow, It's All <i>Minecraft</i>
-  description.1: "Here come Minecraft resources for players. How about Apps?"
+  description.1: Here come Minecraft resources for players. How about Apps?
   description.2: |-
     Welcome to contribute for <a href="https://github.com/teaSummer/MCiSEE" target="_blank">GitHub Repo</a>!
     Please give us a star
@@ -15,11 +15,11 @@ data:
   contributeForThisProject: '{contribute} {forThisProject}'
   device: Devices
   device.tip: Auto identify, or choose by yourself
-  Android.tip: 'Android/HarmonyOS - Phone/Table'
-  iOS.tip: 'iOS - Phone/Table'
-  Windows.tip: 'Windows - PC'
-  macOS.tip: 'Mac - PC'
-  Linux.tip: 'Linux - Include Linux releases'
+  Android.tip: Android/HarmonyOS - Phone/Table
+  iOS.tip: iOS - Phone/Table
+  Windows.tip: Windows - PC
+  macOS.tip: Mac - PC
+  Linux.tip: Linux - Include Linux releases
   unsupported: Unsupported
   unknown: Unknown
   unselected: '[waiting for select]'
