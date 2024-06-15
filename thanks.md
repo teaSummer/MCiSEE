@@ -59,6 +59,13 @@
 [![Contrib](https://contrib.rocks/image?repo=teaSummer/MCiSEE)](https://github.com/teaSummer/MCiSEE/graphs/contributors)
 
 
+## 翻译人员
+
+[teaSummer](https://github.com/teaSummer) 简体中文
+
+[XiaozhiSans](https://github.com/XiaozhiSans),[teaSummer](https://github.com/teaSummer) English(英语)
+
+
 ## 写在最后
 
 感谢大家的支持！望来日携手并进，实现更好的 Minecraft！
@@ -131,7 +138,6 @@ Special thanks to: [GitHub](https://github.com) and [Gitee](https://gitee.com) (
 [teaSummer](https://github.com/teaSummer) 简体中文(Chinese Simplified)
 
 [XiaozhiSans](https://github.com/XiaozhiSans),[teaSummer](https://github.com/teaSummer) English
-
 
 
 ## Words in the End
