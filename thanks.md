@@ -7,9 +7,9 @@ The list is in no particular order.
 
 ## Thanks for Donation
 
-| Person     | Contribution       |
-|------------|--------------------|
-| baiyuncode | Donate the server. |
+| Person                                              | Donation |
+|-----------------------------------------------------|----------|
+| GitHub: [baiyuncode](https://github.com/baiyuncode) | A server |
 
 
 ## Dependent/Referenced Projects
