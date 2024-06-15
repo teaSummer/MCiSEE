@@ -56,7 +56,7 @@
 
 ## 贡献者
 
-[![Contrib](https://contrib.rocks/image?repo=teaSummer/MCiSEE)](https://github.com/teaSummer/MCiSEE/graphs/contributors)
+[![Contributors](https://contrib.rocks/image?repo=teaSummer/MCiSEE)](https://github.com/teaSummer/MCiSEE/graphs/contributors)
 
 
 ## 翻译人员
