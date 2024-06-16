@@ -58,8 +58,8 @@ const WindowsLauncher = [
         version: "3.5.8",
         url: "https://github.com/HMCL-dev/HMCL",
         dev: {
-            download: "https://github.com/HMCL-dev/HMCL/releases/download/v3.5.8.248/HMCL-3.5.8.248.exe",
-            version: "3.5.8.248"
+            download: "https://github.com/HMCL-dev/HMCL/releases/download/v3.5.8.249/HMCL-3.5.8.249.exe",
+            version: "3.5.8.249"
         }
     },
     {
@@ -84,8 +84,8 @@ const WindowsLauncher = [
     {
         title: "X Minecraft Launcher",
         subtitle: "XMCL",
-        download: "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.44.7/xmcl-0.44.7-win32-x64.zip",
-        version: "0.44.7",
+        download: "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.44.8/xmcl-0.44.8-win32-x64.zip",
+        version: "0.44.8",
         url: "https://github.com/voxelum/x-minecraft-launcher"
     },
     {
@@ -148,8 +148,8 @@ const macOSLauncher = [
         version: "3.5.8",
         url: "https://github.com/HMCL-dev/HMCL",
         dev: {
-            download: "https://github.com/HMCL-dev/HMCL/releases/download/v3.5.8.248/HMCL-3.5.8.248.jar",
-            version: "3.5.8.248"
+            download: "https://github.com/HMCL-dev/HMCL/releases/download/v3.5.8.249/HMCL-3.5.8.249.jar",
+            version: "3.5.8.249"
         }
     },
     {
@@ -161,8 +161,8 @@ const macOSLauncher = [
     {
         title: "X Minecraft Launcher",
         subtitle: "XMCL",
-        download: "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.44.7/xmcl-0.44.7.dmg",
-        version: "0.44.7",
+        download: "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.44.8/xmcl-0.44.8.dmg",
+        version: "0.44.8",
         url: "https://github.com/voxelum/x-minecraft-launcher"
     },
     {
@@ -198,8 +198,8 @@ const LinuxLauncher = [
         version: "3.5.8",
         url: "https://github.com/HMCL-dev/HMCL",
         dev: {
-            download: "https://github.com/HMCL-dev/HMCL/releases/download/v3.5.8.248/HMCL-3.5.8.248.sh",
-            version: "3.5.8.248"
+            download: "https://github.com/HMCL-dev/HMCL/releases/download/v3.5.8.249/HMCL-3.5.8.249.sh",
+            version: "3.5.8.249"
         }
     },
     {
@@ -211,8 +211,8 @@ const LinuxLauncher = [
     {
         title: "X Minecraft Launcher",
         subtitle: "XMCL",
-        download: "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.44.7/xmcl-0.44.7-arm64.deb",
-        version: "0.44.7",
+        download: "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.44.8/xmcl-0.44.8-arm64.deb",
+        version: "0.44.8",
         url: "https://github.com/voxelum/x-minecraft-launcher"
     },
     {
