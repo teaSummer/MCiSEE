@@ -1,4 +1,4 @@
-name: 网站
+name: Website
 on:
   push:
     branches:
@@ -6,10 +6,10 @@ on:
 
 jobs:
   deploy:
-    name: 远程部署
+    name: Deploy
     runs-on: ubuntu-latest
     steps:
-    - name: 执行远程命令
+    - name: Remote SSH Command
       uses: fifsky/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
