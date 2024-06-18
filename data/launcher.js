@@ -163,7 +163,7 @@ const macOSLauncher = [
         subtitle: "XMCL",
         download: "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.44.8/xmcl-0.44.8.dmg",
         version: "0.44.8",
-        url: "https://github.com/voxelum/x-minecraft-launcher"
+        url: "https://github.com/Voxelum/x-minecraft-launcher"
     },
     {
         title: "MultiMC",
