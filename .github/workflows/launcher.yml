@@ -1,8 +1,9 @@
 name: Launcher
 run-name: Update Version
+
 on:
   schedule:
-    - cron: '0 0 */ * *'
+    - cron: "0 0 * * *"
 
 jobs:
   get:
