@@ -89,6 +89,13 @@ const WindowsLauncher = [
         url: "https://github.com/voxelum/x-minecraft-launcher"
     },
     {
+        title: "LabyMod Launcher",
+        subtitle: "LabyMod",
+        download: "https://releases.r2.labymod.net/launcher/win32/x64/LabyModLauncherSetup-latest.exe",
+        version: "latest",
+        url: "https://labymod.net"
+    },
+    {
         title: "*中国版* 我的世界启动器",
         subtitle: "我的世界启动器",
         download: "https://x19.gdl.netease.com/MCLauncher_1.14.0.36188.exe",
@@ -166,6 +173,13 @@ const macOSLauncher = [
         url: "https://github.com/Voxelum/x-minecraft-launcher"
     },
     {
+        title: "LabyMod Launcher",
+        subtitle: "LabyMod",
+        download: "https://releases.r2.labymod.net/launcher/darwin/x64/LabyMod%20Launcher-latest-x64.dmg",
+        version: "latest",
+        url: "https://labymod.net"
+    },
+    {
         title: "MultiMC",
         subtitle: "MMC",
         download: "https://files.multimc.org/downloads/mmc-develop-osx64.tar.gz",
@@ -214,6 +228,13 @@ const LinuxLauncher = [
         download: "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.44.8/xmcl-0.44.8-arm64.deb",
         version: "0.44.8",
         url: "https://github.com/voxelum/x-minecraft-launcher"
+    },
+    {
+        title: "LabyMod Launcher",
+        subtitle: "LabyMod",
+        download: "https://releases.r2.labymod.net/launcher/linux/x64/labymodlauncher_latest_amd64.deb",
+        version: "latest",
+        url: "https://labymod.net"
     },
     {
         title: "Prism Launcher",
