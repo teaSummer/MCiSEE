@@ -16,6 +16,12 @@ jobs:
         include:
           - subtitle: HMCL
             url: https://github.com/HMCL-dev/HMCL
+          - subtitle: HMCL-PE
+            url: https://github.com/HMCL-dev/HMCL-PE
+          - subtitle: PCL2
+            url: https://github.com/Hex-Dragon/PCL2
+          - subtitle: FCL
+            url: https://github.com/FCL-Team/FoldCraftLauncher
           - subtitle: XMCL
             url: https://github.com/Voxelum/x-minecraft-launcher
     steps:
