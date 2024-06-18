@@ -44,14 +44,14 @@ jobs:
           
           ## GET Latest Stable ${{ matrix.subtitle }}
           if [ ${{ matrix.subtitle }} = HMCL ]; then
-            LATEST_STABLE_VERSION=`cat releases | sed -n '/"tag_name":."release-/p' | sed -n 1p | sed 's/^.*release-\|",$//g' | sed 's/\./\\\\./g'`
+            LATEST_STABLE_VERSION=`cat releases.json | sed -n '/"tag_name":."release-/p' | sed -n 1p | sed 's/^.*release-\|",$//g' | sed 's/\./\\\\./g'`
           else
-            LATEST_STABLE_VERSION=`cat latest | jq .tag_name | sed 's/^"v\?\|"$//g' | sed 's/\./\\\\./g'`
+            LATEST_STABLE_VERSION=`cat latest.json | jq .tag_name | sed 's/^"v\?\|"$//g' | sed 's/\./\\\\./g'`
           fi
           
           ## GET Latest Dev ${{ matrix.subtitle }}
           if [ ${#LAST_DEV_VERSION} != 0 ]; then
-            LATEST_DEV_VERSION=`cat releases | sed -n '/"tag_name":/p' | sed -n 1p | sed 's/^.*:."v\?\|",$//g' | sed 's/\./\\\\./g'`
+            LATEST_DEV_VERSION=`cat releases.json | sed -n '/"tag_name":/p' | sed -n 1p | sed 's/^.*:."v\?\|",$//g' | sed 's/\./\\\\./g'`
             if [ $LATEST_DEV_VERSION = $LATEST_STABLE_VERSION ]; then
               unset LATEST_DEV_VERSION
             fi
