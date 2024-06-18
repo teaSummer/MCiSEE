@@ -209,14 +209,14 @@ $('.searchable-direct').change(function() {
 
 
 // 配置初始化
-const config = function(...settings) {
+const config = function(settings) {
     for (const [option, defaultVal] of Object.entries(settings)) {
         if (localStorage.getItem(option) === void 0) localStorage.setItem(option, defaultVal);
         if (localStorage.getItem(option) == 'true') $('.' + option).attr('checked', true);
         else $('.' + option).attr('checked', false);
     };
 };
-config({'github-proxy': true}, {'searchable-direct': true});
+config({'github-proxy': true, 'searchable-direct': true});
 
 
 // 获取候选词
