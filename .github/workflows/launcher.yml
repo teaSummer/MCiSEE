@@ -1,12 +1,9 @@
 name: Launcher
-run-name: Update Version
+run-name: Auto Update Version
 
 on:
   schedule:
     - cron: 0 0 * * *
-  push:
-    branches:
-      [ main ]
 
 jobs:
   get:
@@ -25,6 +22,8 @@ jobs:
             url: https://github.com/Hex-Dragon/PCL2
           - subtitle: FCL
             url: https://github.com/FCL-Team/FoldCraftLauncher
+          - subtitle: PojavLauncher
+            url: https://github.com/PojavLauncherTeam/PojavLauncher
           - subtitle: PojavLauncher
             url: https://github.com/PojavLauncherTeam/PojavLauncher_iOS
             device: iOS
@@ -50,13 +49,13 @@ jobs:
           fi
           
           ## Get Last Stable ${{ matrix.subtitle }}
-          LAST_STABLE_VERSION=`sed -n '/"${{ matrix.subtitle }}"/,/version:/p' launcher.js | sed -n '$p' | sed 's/^.*:."\|",$//g' | sed 's/\./\\\\./g'`
+          LAST_STABLE_VERSION=`sed -n '/"${{ matrix.subtitle }}"/,/version:/p' launcher.js | sed -n '$p' | sed 's/^.*:."v\?\|",$//g' | sed 's/\./\\\\./g'`
           
           ## Get Last Dev ${{ matrix.subtitle }}
-          LAST_DEV_VERSION=`sed -n '/"${{ matrix.subtitle }}"/,/}/p' launcher.js | sed -n '/dev:/,/version:/p' | sed -n '$p' | sed 's/^.*:."\|"$//g' | sed 's/\./\\\\./g'`
+          LAST_DEV_VERSION=`sed -n '/"${{ matrix.subtitle }}"/,/}/p' launcher.js | sed -n '/dev:/,/version:/p' | sed -n '$p' | sed 's/^.*:."\v\|"$//g' | sed 's/\./\\\\./g'`
           
           ## GET Latest Stable ${{ matrix.subtitle }}
-          if [ ${{ matrix.subtitle }} = HMCL ]; then
+          if [ '${{ matrix.subtitle }}' = HMCL ]; then
             LATEST_STABLE_VERSION=`cat releases.json | sed -n '/"tag_name":."release-/p' | sed -n 1p | sed 's/^.*release-\|",$//g' | sed 's/\./\\\\./g'`
           else
             LATEST_STABLE_VERSION=`cat latest.json | jq .tag_name | sed 's/^"v\?\|"$//g' | sed 's/\./\\\\./g'`
@@ -65,7 +64,7 @@ jobs:
           ## GET Latest Dev ${{ matrix.subtitle }}
           if [ ${#LAST_DEV_VERSION} != 0 ]; then
             LATEST_DEV_VERSION=`cat releases.json | sed -n '/"tag_name":/p' | sed -n 1p | sed 's/^.*:."v\?\|",$//g' | sed 's/\./\\\\./g'`
-            if [ $LATEST_DEV_VERSION = $LATEST_STABLE_VERSION ]; then
+            if [ "$LATEST_DEV_VERSION" = "$LATEST_STABLE_VERSION" ]; then
               unset LATEST_DEV_VERSION
             fi
           fi
@@ -77,21 +76,21 @@ jobs:
           # Update launcher.js
           ## Modified launcher.js (Local)
           if [ ${#LATEST_STABLE_VERSION} != 0 ]; then
-            if [ $LAST_STABLE_VERSION != $LATEST_STABLE_VERSION ]; then
+            if [ "$LAST_STABLE_VERSION" != "$LATEST_STABLE_VERSION" ]; then
               sed -i 's/'"$LAST_STABLE_VERSION"'\(\.[a-z]\|["/-]\)/'"$LATEST_STABLE_VERSION"'\1/g' data/launcher.js
               LATEST_STABLE_VERSION=`echo $LATEST_STABLE_VERSION | sed 's/\\\\././g'`
-              CHANGELOG='  ${{ matrix.subtitle }}(stable) to '$LATEST_STABLE_VERSION
+              CHANGELOG='  ${{ matrix.subtitle }}(stable) to '"$LATEST_STABLE_VERSION"
             fi
           fi
           if [ ${#LATEST_DEV_VERSION} != 0 ]; then
-            if [ $LAST_DEV_VERSION != $LATEST_DEV_VERSION ]; then
+            if [ "$LAST_DEV_VERSION" != "$LATEST_DEV_VERSION" ]; then
               sed -i 's/'"$LAST_DEV_VERSION"'\(\.[a-z]\|["/-]\)/'"$LATEST_DEV_VERSION"'\1/g' data/launcher.js
               LATEST_DEV_VERSION=`echo $LATEST_DEV_VERSION | sed 's/\\\\././g'`
               if [ ${#CHANGELOG} != 0 ]; then
                 CHANGELOG=${CHANGELOG}'
-            ${{ matrix.subtitle }}(dev) to '$LATEST_DEV_VERSION
+            ${{ matrix.subtitle }}(dev) to '"$LATEST_DEV_VERSION"
               else
-                CHANGELOG='  ${{ matrix.subtitle }}(dev) to '$LATEST_DEV_VERSION
+                CHANGELOG='  ${{ matrix.subtitle }}(dev) to '"$LATEST_DEV_VERSION"
               fi
             fi
           fi
@@ -109,6 +108,7 @@ jobs:
           
           [Auto] Update Launcher Version:
           '"$CHANGELOG"
+          git pull
       - name: Push Change
         if: ${{ steps.get_and_update.outcome == 'success' }}
         uses: ad-m/github-push-action@master
