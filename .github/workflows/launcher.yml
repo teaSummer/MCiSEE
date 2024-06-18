@@ -24,6 +24,7 @@ jobs:
             url: https://github.com/FCL-Team/FoldCraftLauncher
           - subtitle: PojavLauncher
             url: https://github.com/PojavLauncherTeam/PojavLauncher
+            device: Android
           - subtitle: PojavLauncher
             url: https://github.com/PojavLauncherTeam/PojavLauncher_iOS
             device: iOS
