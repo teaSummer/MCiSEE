@@ -42,9 +42,11 @@ jobs:
           wget -O latest.json $API/latest
           wget -O releases.json $API
 
-          ## Copy launcher.js (When Device Input)
+          ## Copy launcher.js
           if [ '${{ matrix.device }}' ]; then
             sed -n '/${{ matrix.device }}Launcher/,/]/p' data/launcher.js > launcher.js
+          else
+            cp data/launcher.js launcher.js
           fi
           
           ## Get Last Stable ${{ matrix.subtitle }}
