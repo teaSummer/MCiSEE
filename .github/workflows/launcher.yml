@@ -3,7 +3,10 @@ run-name: Update Version
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: 0 0 * * *
+  push:
+    branches:
+      [ main ]
 
 jobs:
   get:
@@ -22,6 +25,9 @@ jobs:
             url: https://github.com/Hex-Dragon/PCL2
           - subtitle: FCL
             url: https://github.com/FCL-Team/FoldCraftLauncher
+          - subtitle: PojavLauncher
+            url: https://github.com/PojavLauncherTeam/PojavLauncher_iOS
+            device: iOS
           - subtitle: XMCL
             url: https://github.com/Voxelum/x-minecraft-launcher
     steps:
@@ -35,12 +41,17 @@ jobs:
           API=`echo ${{ matrix.url }} | sed 's/:\/\/github\.com\//:\/\/api.github.com\/repos\//g' | sed 's/$/\/releases/g'`
           wget -O latest.json $API/latest
           wget -O releases.json $API
+
+          ## Copy launcher.js (When Device Input)
+          if [ '${{ matrix.device }}' ]; then
+            sed -n '/${{ matrix.device }}Launcher/,/]/p' data/launcher.js > launcher.js
+          fi
           
           ## Get Last Stable ${{ matrix.subtitle }}
-          LAST_STABLE_VERSION=`sed -n '/"${{ matrix.subtitle }}"/,/version:/p' data/launcher.js | sed -n '$p' | sed 's/^.*:."\|",$//g' | sed 's/\./\\\\./g'`
+          LAST_STABLE_VERSION=`sed -n '/"${{ matrix.subtitle }}"/,/version:/p' launcher.js | sed -n '$p' | sed 's/^.*:."\|",$//g' | sed 's/\./\\\\./g'`
           
           ## Get Last Dev ${{ matrix.subtitle }}
-          LAST_DEV_VERSION=`sed -n '/"${{ matrix.subtitle }}"/,/}/p' data/launcher.js | sed -n '/dev:/,/version:/p' | sed -n '$p' | sed 's/^.*:."\|"$//g' | sed 's/\./\\\\./g'`
+          LAST_DEV_VERSION=`sed -n '/"${{ matrix.subtitle }}"/,/}/p' launcher.js | sed -n '/dev:/,/version:/p' | sed -n '$p' | sed 's/^.*:."\|"$//g' | sed 's/\./\\\\./g'`
           
           ## GET Latest Stable ${{ matrix.subtitle }}
           if [ ${{ matrix.subtitle }} = HMCL ]; then
@@ -58,11 +69,11 @@ jobs:
           fi
           
           ## Remove Needless File
-          rm latest.json releases.json
+          rm latest.json releases.json launcher.js
           
           
           # Update launcher.js
-          ## Modified launcher.js
+          ## Modified launcher.js (Local)
           if [ ${#LATEST_STABLE_VERSION} != 0 ]; then
             if [ $LAST_STABLE_VERSION != $LATEST_STABLE_VERSION ]; then
               sed -i 's/'"$LAST_STABLE_VERSION"'\(\.[a-z]\|["/-]\)/'"$LATEST_STABLE_VERSION"'\1/g' data/launcher.js
