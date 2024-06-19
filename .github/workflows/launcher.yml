@@ -37,7 +37,6 @@ jobs:
       - uses: actions/checkout@main
       - name: Get ${{ matrix.subtitle }} Version & Update launcher.js
         id: get_and_update
-        continue-on-error: true
         run: |
           # Get ${{ matrix.subtitle }} Version
           ## Download JSON of API
@@ -79,7 +78,6 @@ jobs:
           
           
           # Update launcher.js
-          ## Modified launcher.js (Local)
           if [ '${{ matrix.device }}' ]; then
             DEVICE_STRING=' [${{ matrix.device }}]'
           else
@@ -108,22 +106,26 @@ jobs:
           fi
           if [ "$CHANGELOG" ]; then
             echo ===============================================================
-            echo $CHANGELOG
+            echo "$CHANGELOG"
             echo ===============================================================
+            echo "changelog=$CHANGELOG" >> $GITHUB_OUTPUT
           fi
-
-          ## Commit Change
+      - name: Commit Change
+        if: ${{ steps.get_and_update.outcome == 'success' }}
+        id: commit
+        continue-on-error: true
+        run: |
           git config --global user.name teaSummer
           git config --global user.email see_tea@outlook.com
-          git add .
-          git commit -m 'modified: update ${{ matrix.subtitle }}
+          git commit -am 'modified: update ${{ matrix.subtitle }}
           
           [Auto] Update Launcher Version:
-          '"$CHANGELOG
-          (Time: `date +'%F %X %Z'`)"
+          ${{ steps.get_and_update.outputs.changelog }}
+          '"(Time: `date +'%F %X %Z'`)"
           git pull --rebase
       - name: Push Change
-        if: ${{ steps.get_and_update.outcome == 'success' }}
+        if: ${{ steps.commit.outcome == 'success' }}
+        id: push
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.TOKEN }}
