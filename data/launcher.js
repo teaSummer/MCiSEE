@@ -10,7 +10,7 @@ const AndroidLauncher = [
     {
         title: "PojavLauncher",
         download: "https://share.feijipan.com/s/xpA9fMeC",
-        version: "Edelweiss",
+        version: "edelweiss",
         url: "https://github.com/PojavLauncherTeam/PojavLauncher"
     },
     {
@@ -36,7 +36,7 @@ const iOSLauncher = [
     {
         title: "PojavLauncher",
         download: "https://github.com/PojavLauncherTeam/PojavLauncher_iOS/releases/download/v2.2/net.kdt.pojavlauncher-2.2-ios.ipa",
-        version: "v2.2 Deepslate",
+        version: "2.2",
         url: "https://github.com/PojavLauncherTeam/PojavLauncher_iOS"
     }
 ];
