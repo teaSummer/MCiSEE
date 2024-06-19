@@ -136,3 +136,7 @@ jobs:
         with:
           github_token: ${{ secrets.TOKEN }}
           branch: main
+      - name: Deploy
+        if: ${{ steps.push.outcome == 'success' }}
+        id: deploy
+        uses: ./.github/workflows/deploy
