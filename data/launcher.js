@@ -59,7 +59,7 @@ const WindowsLauncher = [
         url: "https://github.com/HMCL-dev/HMCL",
         dev: {
             download: "https://github.com/HMCL-dev/HMCL/releases/download/v3.5.8.249/HMCL-3.5.8.249.exe",
-            version: "3.5.8.249"
+3.5.8.249"
         }
     },
     {
@@ -156,7 +156,7 @@ const macOSLauncher = [
         url: "https://github.com/HMCL-dev/HMCL",
         dev: {
             download: "https://github.com/HMCL-dev/HMCL/releases/download/v3.5.8.249/HMCL-3.5.8.249.jar",
-            version: "3.5.8.249"
+3.5.8.249"
         }
     },
     {
@@ -213,7 +213,7 @@ const LinuxLauncher = [
         url: "https://github.com/HMCL-dev/HMCL",
         dev: {
             download: "https://github.com/HMCL-dev/HMCL/releases/download/v3.5.8.249/HMCL-3.5.8.249.sh",
-            version: "3.5.8.249"
+3.5.8.249"
         }
     },
     {
