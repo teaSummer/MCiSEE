@@ -88,19 +88,21 @@ jobs:
           if [ "$LATEST_STABLE_VERSION" ]; then
             if [ "$LAST_STABLE_VERSION" != "$LATEST_STABLE_VERSION" ]; then
               sed -i 's/'"$LAST_STABLE_VERSION"'\(\.[a-z]\|["/-]\)/'"$LATEST_STABLE_VERSION"'\1/g' data/launcher.js
+              LAST_STABLE_VERSION=`echo $LAST_STABLE_VERSION | sed 's/\\\\././g'`
               LATEST_STABLE_VERSION=`echo $LATEST_STABLE_VERSION | sed 's/\\\\././g'`
-              CHANGELOG='  ${{ matrix.subtitle }}(stable) to '"$LATEST_STABLE_VERSION$DEVICE_STRING"
+              CHANGELOG='  ${{ matrix.subtitle }}(stable): '"$LAST_STABLE_VERSION => $LATEST_STABLE_VERSION$DEVICE_STRING"
             fi
           fi
           if [ "$LATEST_DEV_VERSION" ]; then
             if [ "$LAST_DEV_VERSION" != "$LATEST_DEV_VERSION" ]; then
               sed -i 's/'"$LAST_DEV_VERSION"'\(\.[a-z]\|["/-]\)/'"$LATEST_DEV_VERSION"'\1/g' data/launcher.js
+              LAST_DEV_VERSION=`echo $LAST_DEV_VERSION | sed 's/\\\\././g'`
               LATEST_DEV_VERSION=`echo $LATEST_DEV_VERSION | sed 's/\\\\././g'`
               if [ "$CHANGELOG" ]; then
                 CHANGELOG="${CHANGELOG}"'
-            ${{ matrix.subtitle }}(dev) to '"$LATEST_DEV_VERSION$DEVICE_STRING"
+            ${{ matrix.subtitle }}(dev): '"$LAST_DEV_VERSION => $LATEST_DEV_VERSION$DEVICE_STRING"
               else
-                CHANGELOG='  ${{ matrix.subtitle }}(dev) to '"$LATEST_DEV_VERSION$DEVICE_STRING"
+                CHANGELOG='  ${{ matrix.subtitle }}(dev): '"$LAST_DEV_VERSION => $LATEST_DEV_VERSION$DEVICE_STRING"
               fi
             fi
           fi
