@@ -16,8 +16,10 @@ jobs:
         include:
           - subtitle: HMCL
             url: https://github.com/HMCL-dev/HMCL
+            device: Windows|macOS|Linux
           - subtitle: HMCL-PE
             url: https://github.com/HMCL-dev/HMCL-PE
+            device: Android
           - subtitle: PCL2
             url: https://github.com/Hex-Dragon/PCL2
           - subtitle: FCL
