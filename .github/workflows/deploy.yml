@@ -9,7 +9,8 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
-    - name: Remote SSH Command
+    - name: Run remote commands
+      id: run
       uses: fifsky/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
@@ -18,5 +19,5 @@ jobs:
         command: |
           echo ===============================================================
           cd /www/wwwroot/mcisee.top
-          git pull origin
+          git pull
           echo ===============================================================
