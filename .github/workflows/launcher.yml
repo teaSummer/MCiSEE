@@ -12,6 +12,7 @@ jobs:
     continue-on-error: true
     strategy:
       fail-fast: false
+      max-parallel: 1
       matrix:
         include:
           - subtitle: HMCL
@@ -88,7 +89,7 @@ jobs:
             if [ "$LAST_STABLE_VERSION" != "$LATEST_STABLE_VERSION" ]; then
               sed -i 's/'"$LAST_STABLE_VERSION"'\(\.[a-z]\|["/-]\)/'"$LATEST_STABLE_VERSION"'\1/g' data/launcher.js
               LATEST_STABLE_VERSION=`echo $LATEST_STABLE_VERSION | sed 's/\\\\././g'`
-              CHANGELOG='  ${{ matrix.subtitle }}(stable) to '"$LATEST_STABLE_VERSION $DEVICE_STRING"
+              CHANGELOG='  ${{ matrix.subtitle }}(stable) to '"$LATEST_STABLE_VERSION$DEVICE_STRING"
             fi
           fi
           if [ "$LATEST_DEV_VERSION" ]; then
