@@ -88,7 +88,7 @@ jobs:
               sed -i 's/'"$LAST_STABLE_VERSION"'\(\.[a-z]\|["/-]\)/'"$LATEST_STABLE_VERSION"'\1/g' data/launcher.js
               LAST_STABLE_VERSION=`echo $LAST_STABLE_VERSION | sed 's/\\\\././g'`
               LATEST_STABLE_VERSION=`echo $LATEST_STABLE_VERSION | sed 's/\\\\././g'`
-              CHANGELOG='  ${{ matrix.subtitle }}(stable): '"$LAST_STABLE_VERSION => $LATEST_STABLE_VERSION$DEVICE_STRING"
+              CHANGELOG_E='  ${{ matrix.subtitle }}(stable): '"$LAST_STABLE_VERSION => $LATEST_STABLE_VERSION$DEVICE_STRING"
             fi
           fi
           if [ "$LATEST_DEV_VERSION" ]; then
@@ -96,19 +96,19 @@ jobs:
               sed -i 's/'"$LAST_DEV_VERSION"'\(\.[a-z]\|["/-]\)/'"$LATEST_DEV_VERSION"'\1/g' data/launcher.js
               LAST_DEV_VERSION=`echo $LAST_DEV_VERSION | sed 's/\\\\././g'`
               LATEST_DEV_VERSION=`echo $LATEST_DEV_VERSION | sed 's/\\\\././g'`
-              if [ "$CHANGELOG" ]; then
-                CHANGELOG="${CHANGELOG}"'
-            ${{ matrix.subtitle }}(dev): '"$LAST_DEV_VERSION => $LATEST_DEV_VERSION$DEVICE_STRING"
+              if [ "$CHANGELOG_E" ]; then
+                CHANGELOG_E="${CHANGELOG_E}"'#n  ${{ matrix.subtitle }}(dev): '"$LAST_DEV_VERSION => $LATEST_DEV_VERSION$DEVICE_STRING"
               else
-                CHANGELOG='  ${{ matrix.subtitle }}(dev): '"$LAST_DEV_VERSION => $LATEST_DEV_VERSION$DEVICE_STRING"
+                CHANGELOG_E='  ${{ matrix.subtitle }}(dev): '"$LAST_DEV_VERSION => $LATEST_DEV_VERSION$DEVICE_STRING"
               fi
             fi
           fi
-          if [ "$CHANGELOG" ]; then
+          if [ "$CHANGELOG_E" ]; then
+            CHANGELOG=`echo "$CHANGELOG_E" | sed 's/#n/\n/g'`
             echo ===============================================================
             echo "$CHANGELOG"
             echo ===============================================================
-            echo "changelog=$CHANGELOG" >> $GITHUB_OUTPUT
+            echo "changelog=$CHANGELOG_E" >> $GITHUB_OUTPUT
           fi
       - name: Commit Change
         id: commit
@@ -116,11 +116,12 @@ jobs:
         run: |
           git config --global user.name teaSummer
           git config --global user.email see_tea@outlook.com
+          CHANGELOG=`echo '${{ steps.get_and_update.outputs.changelog }}' | sed 's/#n/\n/g'`
           git commit -am 'modified: update ${{ matrix.subtitle }}
           
           [Auto] Update Launcher Version:
-          ${{ steps.get_and_update.outputs.changelog }}
-          '"(Time: `date +'%F %X %Z'`)"
+          '"$CHANGELOG
+          (Time: `date +'%F %X %Z'`)"
           git pull --rebase
       - name: Push Change
         if: ${{ steps.commit.outcome == 'success' }}
