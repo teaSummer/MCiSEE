@@ -105,14 +105,15 @@ jobs:
           fi
 
           ## Commit Change
-          git config --global user.email see_tea@outlook.com
           git config --global user.name teaSummer
+          git config --global user.email see_tea@outlook.com
           git add .
           git commit -m 'modified: update ${{ matrix.subtitle }}
           
           [Auto] Update Launcher Version:
-          '"$CHANGELOG"
-          git pull
+          '"$CHANGELOG
+          (Time: `date +'%F %X %Z'`)"
+          git pull --rebase
       - name: Push Change
         if: ${{ steps.get_and_update.outcome == 'success' }}
         uses: ad-m/github-push-action@master
