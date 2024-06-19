@@ -51,7 +51,11 @@
 
 ### 工作流
 
-[SSH Action](https://github.com/fifsky/ssh-action) 远程SSH执行命令
+[SSH Action](https://github.com/fifsky/ssh-action) 远程SSH命令
+
+[Checkout](https://github.com/actions/checkout) 签出仓库
+
+[Push Action](https://github.com/ad-m/github-push-action) 推送至仓库
 
 
 ## 贡献者
@@ -126,6 +130,10 @@ Special thanks to: [GitHub](https://github.com) and [Gitee](https://gitee.com) (
 ### Workflow
 
 [SSH Action](https://github.com/fifsky/ssh-action) Remote SSH Commands
+
+[Checkout](https://github.com/actions/checkout) checking out a repo
+
+[Push Action](https://github.com/ad-m/github-push-action) push to a repo
 
 
 ## Contributors
