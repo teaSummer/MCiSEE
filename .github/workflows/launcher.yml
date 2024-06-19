@@ -45,7 +45,7 @@ jobs:
           ## Copy launcher.js
           if [ '${{ matrix.device }}' ]; then
             DEVICE_LIST=`echo '${{ matrix.device }}' | sed 's/|/\\\\|/g'`
-            sed -n '/\('"$DEVICE_LIST"\)'Launcher/,/]/p' data/launcher.js > launcher.js
+            sed -n '/\('"$DEVICE_LIST"'\)Launcher/,/]/p' data/launcher.js > launcher.js
           else
             cp data/launcher.js launcher.js
           fi
@@ -54,7 +54,7 @@ jobs:
           LAST_STABLE_VERSION=`sed -n '/"${{ matrix.subtitle }}"/,/version:/p' launcher.js | sed -n '$p' | sed 's/^.*:."v\?\|",$//g' | sed 's/\./\\\\./g'`
           
           ## Get Last Dev ${{ matrix.subtitle }}
-          LAST_DEV_VERSION=`sed -n '/"${{ matrix.subtitle }}"/,/}/p' launcher.js | sed -n '/dev:/,/version:/p' | sed -n '$p' | sed 's/^.*:."\v\|"$//g' | sed 's/\./\\\\./g'`
+          LAST_DEV_VERSION=`sed -n '/"${{ matrix.subtitle }}"/,/}/p' launcher.js | sed -n '/dev:/,/version:/p' | sed -n '$p' | sed 's/^.*:."v\?\|"$//g' | sed 's/\./\\\\./g'`
           
           ## GET Latest Stable ${{ matrix.subtitle }}
           if [ '${{ matrix.subtitle }}' = HMCL ]; then
