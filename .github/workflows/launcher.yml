@@ -66,7 +66,7 @@ jobs:
           fi
           
           ## GET Latest Dev ${{ matrix.subtitle }}
-          if [ ${#LAST_DEV_VERSION} != 0 ]; then
+          if [ "$LAST_DEV_VERSION" ]; then
             LATEST_DEV_VERSION=`cat releases.json | sed -n '/"tag_name":/p' | sed -n 1p | sed 's/^.*:."v\?\|",$//g' | sed 's/\./\\\\./g'`
             if [ "$LATEST_DEV_VERSION" = "$LATEST_STABLE_VERSION" ]; then
               unset LATEST_DEV_VERSION
@@ -80,26 +80,26 @@ jobs:
           # Update launcher.js
           ## Modified launcher.js (Local)
           if [ '${{ matrix.device }}' ]; then
-            DEVICE_STRING="[$DEVICE_LIST]"
+            DEVICE_STRING=' [${{ matrix.device }}]'
           else
             DEVICE_STRING=''
           fi
-          if [ ${#LATEST_STABLE_VERSION} != 0 ]; then
+          if [ "$LATEST_STABLE_VERSION" ]; then
             if [ "$LAST_STABLE_VERSION" != "$LATEST_STABLE_VERSION" ]; then
               sed -i 's/'"$LAST_STABLE_VERSION"'\(\.[a-z]\|["/-]\)/'"$LATEST_STABLE_VERSION"'\1/g' data/launcher.js
               LATEST_STABLE_VERSION=`echo $LATEST_STABLE_VERSION | sed 's/\\\\././g'`
               CHANGELOG='  ${{ matrix.subtitle }}(stable) to '"$LATEST_STABLE_VERSION $DEVICE_STRING"
             fi
           fi
-          if [ ${#LATEST_DEV_VERSION} != 0 ]; then
+          if [ "$LATEST_DEV_VERSION" ]; then
             if [ "$LAST_DEV_VERSION" != "$LATEST_DEV_VERSION" ]; then
               sed -i 's/'"$LAST_DEV_VERSION"'\(\.[a-z]\|["/-]\)/'"$LATEST_DEV_VERSION"'\1/g' data/launcher.js
               LATEST_DEV_VERSION=`echo $LATEST_DEV_VERSION | sed 's/\\\\././g'`
-              if [ ${#CHANGELOG} != 0 ]; then
-                CHANGELOG=${CHANGELOG}'
-            ${{ matrix.subtitle }}(dev) to '"$LATEST_DEV_VERSION $DEVICE_STRING"
+              if [ "$CHANGELOG" ]; then
+                CHANGELOG="${CHANGELOG}"'
+            ${{ matrix.subtitle }}(dev) to '"$LATEST_DEV_VERSION$DEVICE_STRING"
               else
-                CHANGELOG='  ${{ matrix.subtitle }}(dev) to '"$LATEST_DEV_VERSION $DEVICE_STRING"
+                CHANGELOG='  ${{ matrix.subtitle }}(dev) to '"$LATEST_DEV_VERSION$DEVICE_STRING"
               fi
             fi
           fi
