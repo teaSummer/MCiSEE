@@ -111,7 +111,6 @@ jobs:
             echo "changelog=$CHANGELOG" >> $GITHUB_OUTPUT
           fi
       - name: Commit Change
-        if: ${{ steps.get_and_update.outcome == 'success' }}
         id: commit
         continue-on-error: true
         run: |
