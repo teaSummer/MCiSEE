@@ -275,6 +275,7 @@ const pre_list = function(e) {
     const lineBlocks = [];
     let blocks = JSON.parse($(e).html());
     let dom = '';
+    const importantPattern = /((半价|免费|公益|折扣|限时|特惠|热门|新品|热销|推荐|礼品|[一二两三四五六七八九]折|打折|促销|超值|全新|便宜)|\b(free|off|new|hot|recommend|top|discount|limit|cheap|present|gift)\b)/gi;
     for (let block of blocks) {
         // 获取分类并处理
         const category = Object.keys(block)[0];
@@ -284,9 +285,8 @@ const pre_list = function(e) {
         else dom += `<details id="${category.replace(/ .+/, '')}"><summary>${category}</summary>`;
         // 生成元素
         for (const [title, url] of block[category]) {
-            console.log(title)
-            if (/(半价|免费|公益|折扣|限时|特惠|热门|新品|热销|推荐|礼品|[一二两三四五六七八九]折|打折|促销|超值|全新|便宜)|\b(free|off|new|hot|recommend|top|discount|limit|cheap|present|gift)\b/i.test(title)) {
-                dom += `<a class="button important" href="${url}" target="_blank">${title}</a>`;
+            if (importantPattern.test(title)) {
+                dom += `<a class="button important" href="${url}" target="_blank">${title.replace(importantPattern, '<text style="font-weight: bold;">$1</text>')}</a>`;
             } else dom += `<a class="button" href="${url}" target="_blank">${title}</a>`;
         };
         dom += '</details><hr>';
