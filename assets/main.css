@@ -148,6 +148,18 @@ a.button:active {
     background-color: #367eed;
 }
 
+a.button.important {
+    background-color: #6a5acd;
+}
+
+a.button.important:hover {
+    background-color: #5143a9;
+}
+
+a.button.important:active {
+    background-color: #4c37ec;
+}
+
 p {
     margin-top: 0.75rem;
     margin-bottom: 1rem;
