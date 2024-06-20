@@ -29,8 +29,16 @@ jobs:
           - subtitle: PojavLauncher
             url: https://github.com/PojavLauncherTeam/PojavLauncher_iOS
             device: iOS
+          - subtitle: ColorMC
+            url: https://github.com/Coloryr/ColorMC
+            device: Windows|macOS|Linux
+          - subtitle: ColorMC
+            url: https://github.com/Coloryr/ColorMC.Android
+            device: Android
           - subtitle: XMCL
             url: https://github.com/Voxelum/x-minecraft-launcher
+          - subtitle: Prism
+            url: https://github.com/PrismLauncher/PrismLauncher
     steps:
       - uses: actions/checkout@main
       - name: Handle files
