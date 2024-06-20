@@ -155,6 +155,7 @@ jobs:
       - name: Run remote commands
         id: run
         uses: fifsky/ssh-action@master
+        continue-on-error: true
         with:
           host: ${{ secrets.HOST }}
           port: ${{ secrets.PORT }}
