@@ -3,7 +3,7 @@ run-name: Auto Update Version
 
 on:
   schedule:
-    - cron: 0 0 * * *
+    - cron: 0 16 * * *
 
 jobs:
   get:
