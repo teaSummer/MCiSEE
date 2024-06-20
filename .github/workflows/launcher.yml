@@ -136,7 +136,16 @@ jobs:
         with:
           github_token: ${{ secrets.TOKEN }}
           branch: main
-      - name: Deploy
+      - name: Deploy by running remote commands
         if: ${{ steps.push.outcome == 'success' }}
         id: deploy
-        uses: ./.github/workflows/deploy
+        uses: fifsky/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          port: ${{ secrets.PORT }}
+          key: ${{ secrets.KEY }}
+          command: |
+            echo ===============================================================
+            cd /www/wwwroot/mcisee.top
+            git pull
+            echo ===============================================================
