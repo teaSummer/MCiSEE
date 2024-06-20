@@ -95,7 +95,11 @@ const utilityWebsite = [
             ["维基百科: 原站", "https://zh.minecraft.wiki"],
             ["维基百科: 镜像站", "https://wiki.biligame.com/mc/"],
             ["MC百科", "https://mcmod.cn"],
-            ["DigMinecraft教程", "https://www.digminecraft.com"]
+            ["DigMinecraft教程", "https://www.digminecraft.com"],
+            ["MC开发者中文指南", "https://mouse0w0.github.io/MinecraftDeveloperGuide/"],
+            ["基岩版JSONUI文档", "https://mcbeui.netlify.app/"],
+            ["基岩版Script API文档", "https://projectxero.top/sapi/"],
+            // ["网易我的世界开发者官网", "https://mc.163.com/dev/]
         ]
     },
     {
