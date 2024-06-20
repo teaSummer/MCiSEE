@@ -6,8 +6,8 @@ on:
     - cron: 0 16 * * *
 
 jobs:
-  get:
-    name: Get Launcher Version
+  update:
+    name: Update Launcher
     runs-on: ubuntu-latest
     continue-on-error: true
     strategy:
@@ -45,7 +45,7 @@ jobs:
         id: handle
         run: |
           API=`echo ${{ matrix.url }} | sed 's/:\/\/github\.com\//:\/\/api.github.com\/repos\//g' | sed 's/$/\/releases/g'`
-          wget -O latest.json $API/latest
+          wget -O latest.json $API/latest || echo '{"tag_name":""}' > latest.json
           wget -O releases.json $API
           if [ '${{ matrix.device }}' ]; then
             DEVICE_LIST=`echo '${{ matrix.device }}' | sed 's/|/\\\\|/g'`
@@ -68,6 +68,9 @@ jobs:
           else
             LATEST_STABLE_VERSION=`cat latest.json | jq .tag_name | sed 's/^"v\?\|"$//gi' | sed 's/\./\\\\./g'`
           fi
+          if [ ${#LATEST_STABLE_VERSION} = 0 ]; then
+            unset LAST_STABLE_VERSION
+          fi
           
           # GET Latest Dev ${{ matrix.subtitle }}
           if [ "$LAST_DEV_VERSION" ]; then
@@ -85,8 +88,8 @@ jobs:
           echo "last_dev_version=$LAST_DEV_VERSION" >> $GITHUB_OUTPUT
           echo "latest_stable_version=$LATEST_STABLE_VERSION" >> $GITHUB_OUTPUT
           echo "latest_dev_version=$LATEST_DEV_VERSION" >> $GITHUB_OUTPUT
-      - name: Update launcher.js
-        id: update
+      - name: Modify launcher.js
+        id: modify
         run: |
           LAST_STABLE_VERSION='${{ steps.get.outputs.last_stable_version }}'
           LAST_DEV_VERSION='${{ steps.get.outputs.last_dev_version }}'
@@ -130,7 +133,7 @@ jobs:
         run: |
           git config --global user.name teaSummer
           git config --global user.email see_tea@outlook.com
-          CHANGELOG=`echo '${{ steps.update.outputs.changelog }}' | sed 's/#n/\n/g'`
+          CHANGELOG=`echo '${{ steps.modify.outputs.changelog }}' | sed 's/#n/\n/g'`
           git commit -am 'modified: update ${{ matrix.subtitle }}
           
           [Auto] Update Launcher Version:
@@ -147,4 +150,4 @@ jobs:
   deploy:
     name: Deploy
     uses: ./.github/workflows/deploy.yml
-    needs: get
+    needs: update
