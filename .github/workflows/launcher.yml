@@ -136,3 +136,7 @@ jobs:
         with:
           github_token: ${{ secrets.TOKEN }}
           branch: main
+  deploy:
+    name: Deploy
+    uses: ./.github/workflows/deploy.yml
+    needs: get
