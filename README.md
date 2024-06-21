@@ -164,7 +164,7 @@
 
 ## 感谢
 
-详见 [thanks.md](thanks.md) 文件。
+详见 [THANKS.md](THANKS.md) 文件。
 
 
 ## 统计信息
