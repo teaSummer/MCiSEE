@@ -77,8 +77,8 @@ const WindowsLauncher = [
     },
     {
         title: "ColorMC",
-        download: "https://github.com/Coloryr/ColorMC/releases/download/A24/colormc-x64.msi",
-        version: "A24",
+        download: "https://github.com/Coloryr/ColorMC/releases/download/A26/colormc-x64.msi",
+        version: "A26",
         url: "https://github.com/Coloryr/ColorMC"
     },
     {
@@ -161,8 +161,8 @@ const macOSLauncher = [
     },
     {
         title: "ColorMC",
-        download: "https://github.com/Coloryr/ColorMC/releases/download/A24/colormc-a24-1-x86_64.pkg.tar.zst",
-        version: "A24",
+        download: "https://github.com/Coloryr/ColorMC/releases/download/A26/colormc-A26-1-x86_64.pkg.tar.zst",
+        version: "A26",
         url: "https://github.com/Coloryr/ColorMC"
     },
     {
@@ -218,8 +218,8 @@ const LinuxLauncher = [
     },
     {
         title: "ColorMC",
-        download: "https://github.com/Coloryr/ColorMC/releases/download/A24/colormc-a24-linux-x64.deb",
-        version: "A24",
+        download: "https://github.com/Coloryr/ColorMC/releases/download/A26/colormc-A26-linux-x64.deb",
+        version: "A26",
         url: "https://github.com/Coloryr/ColorMC"
     },
     {
