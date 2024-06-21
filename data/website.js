@@ -31,7 +31,6 @@ const utilityWebsite = [
         "无类别 (暂未分类)": [
             ["导航网", "https://www.mcnav.net"],
             ["IMC.RE", "https://imc.re"],
-            ["Inner Core基岩版模组引擎", "https://icmods.mineprogramming.org"],
             ["MCPEDL资源下载站", "https://mcpedl.com"],
             ["LittleSkin皮肤站", "https://littleskin.cn"],
             ["筛选皮肤", "https://mcskinsearch.com"],
@@ -45,7 +44,11 @@ const utilityWebsite = [
             ["服务器列表", "https://mcl.ist"],
             ["服务器列表(台湾)", "https://www.mc-list.xyz"],
             ["服务器列表(日本)", "https://minecraft.jp"],
-            ["网易我的世界官网", "https://mc.163.com"]
+            ["网易我的世界官网", "https://mc.163.com"],
+            ["Inner Core 模组", "https://icmods.mineprogramming.org"],
+            ["BDSX", "https://github.com/bdsx/bdsx"],
+            ["LeviLamina", "https://levilamina.liteldev.com"],
+            ["Amethyst", "https://github.com/FrederoxDev/Amethyst"]
         ]
     },
     {
