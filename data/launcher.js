@@ -9,7 +9,7 @@ const AndroidLauncher = [
     },
     {
         title: "PojavLauncher",
-        download: "https://share.feijipan.com/s/xpA9fMeC",
+        download: "https://share.feijipan.com/s/QEBPJVqh",
         version: "foxglo",
         url: "https://github.com/PojavLauncherTeam/PojavLauncher"
     },
