@@ -1,9 +1,0 @@
-<?php
-//从前端获取要获取的软件名称
-//版本号之类的
-$name=$_GET["name"];
-$version=$_GET["version"];
-$content = file_get_contents("../data/launcher.js");
-$jxjson=json_decode($content,JSON_UNESCAPED_UNICODE);
-
->
