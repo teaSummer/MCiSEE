@@ -57,16 +57,16 @@ jobs:
         id: get
         run: |
           # Get Last Stable ${{ matrix.subtitle }}
-          LAST_STABLE_VERSION=`sed -n '/"${{ matrix.subtitle }}"/,/version:/p' launcher.js | sed -n '$p' | sed 's/^.*:."v\?\|",$//gi' | sed 's/\./\\\\./g'`
+          LAST_STABLE_VERSION=`sed -n '/"${{ matrix.subtitle }}"/,/version:/p' launcher.js | sed -n '$p' | sed 's/^.*:\s"\|",$//gi' | sed 's/\./\\\\./g'`
           
           # Get Last Dev ${{ matrix.subtitle }}
-          LAST_DEV_VERSION=`sed -n '/"${{ matrix.subtitle }}"/,/}/p' launcher.js | sed -n '/dev:/,/version:/p' | sed -n '$p' | sed 's/^.*:."v\?\|"$//gi' | sed 's/\./\\\\./g'`
+          LAST_DEV_VERSION=`sed -n '/"${{ matrix.subtitle }}"/,/}/p' launcher.js | sed -n '/dev:/,/version:/p' | sed -n '$p' | sed 's/^.*:\s"\|"$//gi' | sed 's/\./\\\\./g'`
           
           # GET Latest Stable ${{ matrix.subtitle }}
           if [ '${{ matrix.subtitle }}' = HMCL ]; then
-            LATEST_STABLE_VERSION=`cat releases.json | sed -n '/"tag_name":."release-/p' | sed -n 1p | sed 's/^.*release-\|",$//g' | sed 's/\./\\\\./g'`
+            LATEST_STABLE_VERSION=`cat releases.json | sed -n '/"tag_name":\s"release-/p' | sed -n 1p | sed 's/^.*release-\|",$//g' | sed 's/\./\\\\./g'`
           else
-            LATEST_STABLE_VERSION=`cat latest.json | jq .tag_name | sed 's/^"v\?\|"$//gi' | sed 's/\./\\\\./g'`
+            LATEST_STABLE_VERSION=`cat latest.json | jq .tag_name | sed 's/^"\|"$//gi' | sed 's/\./\\\\./g'`
           fi
           if [ ${#LATEST_STABLE_VERSION} = 0 ]; then
             unset LAST_STABLE_VERSION
@@ -74,7 +74,7 @@ jobs:
           
           # GET Latest Dev ${{ matrix.subtitle }}
           if [ "$LAST_DEV_VERSION" ]; then
-            LATEST_DEV_VERSION=`cat releases.json | sed -n '/"tag_name":/p' | sed -n 1p | sed 's/^.*:."v\?\|",$//gi' | sed 's/\./\\\\./g'`
+            LATEST_DEV_VERSION=`cat releases.json | sed -n '/"tag_name":/p' | sed -n 1p | sed 's/^.*:\s"\|",$//gi' | sed 's/\./\\\\./g'`
             if [ "$LATEST_DEV_VERSION" = "$LATEST_STABLE_VERSION" ]; then
               unset LATEST_DEV_VERSION
             fi
