@@ -112,8 +112,8 @@ const WindowsLauncher = [
     {
         title: "Prism Launcher",
         subtitle: "Prism",
-        download: "https://github.com/PrismLauncher/PrismLauncher/releases/download/8.3/PrismLauncher-Windows-MSVC-Setup-8.3.exe",
-        version: "8.3",
+        download: "https://github.com/PrismLauncher/PrismLauncher/releases/download/8.4/PrismLauncher-Windows-MSVC-Setup-8.4.exe",
+        version: "8.4",
         url: "https://github.com/PrismLauncher/PrismLauncher"
     },
     {
@@ -189,8 +189,8 @@ const macOSLauncher = [
     {
         title: "Prism Launcher",
         subtitle: "Prism",
-        download: "https://github.com/PrismLauncher/PrismLauncher/releases/download/8.3/PrismLauncher-macOS-8.3.zip",
-        version: "8.3",
+        download: "https://github.com/PrismLauncher/PrismLauncher/releases/download/8.4/PrismLauncher-macOS-8.4.zip",
+        version: "8.4",
         url: "https://github.com/PrismLauncher/PrismLauncher"
     },
     {
@@ -239,8 +239,8 @@ const LinuxLauncher = [
     {
         title: "Prism Launcher",
         subtitle: "Prism",
-        download: "https://github.com/PrismLauncher/PrismLauncher/releases/download/8.3/PrismLauncher-Linux-x86_64.AppImage",
-        version: "8.3",
+        download: "https://github.com/PrismLauncher/PrismLauncher/releases/download/8.4/PrismLauncher-Linux-x86_64.AppImage",
+        version: "8.4",
         url: "https://github.com/PrismLauncher/PrismLauncher"
     },
     {
