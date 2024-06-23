@@ -35,8 +35,8 @@ const AndroidLauncher = [
 const iOSLauncher = [
     {
         title: "PojavLauncher",
-        download: "https://github.com/PojavLauncherTeam/PojavLauncher_iOS/releases/download/v2.2/net.kdt.pojavlauncher-2.2-ios.ipa",
-        version: "2.2",
+        download: "https://github.com/PojavLauncherTeam/PojavLauncher_iOS/releases/download/vv2.2/net.kdt.pojavlauncher-v2.2-ios.ipa",
+        version: "v2.2",
         url: "https://github.com/PojavLauncherTeam/PojavLauncher_iOS"
     }
 ];
