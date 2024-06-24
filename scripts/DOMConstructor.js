@@ -4,7 +4,7 @@ class DOMLauncherList {
     static item(item) {
         item = {
             title: "Launcher",
-            subtitle: item.title,
+            abbr: item.title,
             download: "https://www.example.com",
             version: "1.0.x",
             url: "https://www.example.com",
@@ -38,8 +38,8 @@ class DOMLauncherList {
         const convert = function(url, arg) {
             return (url == 'https://www.example.com/' || url.host == '') ? '' : `${arg}="${url}"`;
         };
-        const _title = item.title == item.subtitle ? '' : `data-title="${item.title}"`;
-        const _subtitle = `data-subtitle="${item.subtitle}"`;
+        const _title = item.title == item.abbr ? '' : `data-title="${item.title}"`;
+        const _abbr = `data-abbr="${item.abbr}"`;
         const _download = convert(download, 'data-download');
         const _devDownload = convert(devDownload, 'data-dev-download');
         const _backupDownload = convert(download, 'data-backup-download');
@@ -47,8 +47,8 @@ class DOMLauncherList {
         const _url = convert(url, 'data-url');
         const _version = (version == '1.0.x' ? '' : `data-version="${version}"`);
         const _devVersion = (devVersion == '1.0.x.x' ? '' : `data-dev-version="${devVersion}"`);
-        const properties = `${_title} ${_subtitle} ${_download} ${_devDownload} ${_version} ${_devVersion} ${_url} ${_backupDownload} ${_backupDevDownload}`;
-        return `<mdui-menu-item label="${item.subtitle}" ${properties}><div slot="custom" class="custom-item"><div>${item.subtitle}</div><div class="secondary">${_title.slice(12, -1)}</div></div></mdui-menu-item>`;
+        const properties = `${_title} ${_abbr} ${_download} ${_devDownload} ${_version} ${_devVersion} ${_url} ${_backupDownload} ${_backupDevDownload}`;
+        return `<mdui-menu-item label="${item.abbr}" ${properties}><div slot="custom" class="custom-item"><div>${item.abbr}</div><div class="secondary">${_title.slice(12, -1)}</div></div></mdui-menu-item>`;
     };
 
     static deviceList(target = '') {
@@ -77,7 +77,7 @@ class DOMSearchableList {
     static item(item) {
         item = {
             title: "Searchable",
-            subtitle: item.title,
+            abbr: item.title,
             search: "https://www.example.com",
             note: "",
             url: "https://www.example.com",
@@ -102,11 +102,11 @@ class DOMSearchableList {
         };
         const _title = `data-title="${item.title}"`;
         const _search = convert(search, 'data-search');
-        const _subtitle = `data-subtitle="${item.subtitle}"`;
+        const _abbr = `data-abbr="${item.abbr}"`;
         const _note = `data-note="${item.note}"`;
         const _url = convert(url, 'data-url');
-        const properties = `${_title} ${_search} ${_subtitle} ${_note} ${_url}`;
-        return `<mdui-menu-item value="${item.subtitle}" ${properties}><div slot="custom" class="custom-item"><div>${item.title}${item.subtitle == '' || item.subtitle == item.title ? '' : ` (${item.subtitle})`}</div></div></mdui-menu-item>`;
+        const properties = `${_title} ${_search} ${_abbr} ${_note} ${_url}`;
+        return `<mdui-menu-item value="${item.abbr}" ${properties}><div slot="custom" class="custom-item"><div>${item.title}${item.abbr == '' || item.abbr == item.title ? '' : ` (${item.abbr})`}</div></div></mdui-menu-item>`;
     };
 
     static list(items = []) {

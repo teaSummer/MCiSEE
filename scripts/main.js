@@ -1,5 +1,5 @@
 let searchKeyword = '';
-let searchableSubtitle = '';
+let searchableAbbr = '';
 
 let countSearchable = 0;
 const downloadSVG = '<span class="svg right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M320 336h76c55 0 100-21.21 100-75.6s-53-73.47-96-75.6C391.11 99.74 329 48 256 48c-69 0-113.44 45.79-128 91.2-60 5.7-112 35.88-112 98.4S70 336 136 336h56M192 400.1l64 63.9 64-63.9M256 224v224.03" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="56"></path></svg></span>';
@@ -46,7 +46,7 @@ const checkedOption = function(selectElement) {
     const selectInclude = (str) => ( $(selectElement).html().indexOf(str) != -1 );
     if (selectElement.value) {
         if (selectInclude('Wiki') || selectInclude('Launcher')) {
-            return $(selectElement).find(`mdui-menu-item[data-subtitle="${selectElement.value}"]`);
+            return $(selectElement).find(`mdui-menu-item[data-abbr="${selectElement.value}"]`);
         };
     };
     return $( $(selectElement)[0][$(selectElement)[0].selectedIndex] );
@@ -151,10 +151,10 @@ $('.searchable-list').html(DOMSearchableList.list(searchable));
 const searchableChanged = function(event = {target: $('.searchable-list')}) {
     const checked = checkedOption(event.target);
     searchKeyword = checked.attr('data-search');
-    const subtitle = checked.attr('data-subtitle');
-    searchableSubtitle = subtitle;
+    const abbr = checked.attr('data-abbr');
+    searchableAbbr = abbr;
     const note = checked.attr('data-note');
-    $('.searchable-input').attr('placeholder', ` 从 ${subtitle} 中搜索 ....`);
+    $('.searchable-input').attr('placeholder', ` 从 ${abbr} 中搜索 ....`);
     $('.searchable-label').html(`<a class="searchable-goto by-inline" href="${checked.attr('data-url')}" title="${note}" target="_blank"><p al="goto"></p> <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path></svg></a>`);
     localStorage.setItem('searchable-checked', event.target.value);
     countSearchable += 1;
@@ -233,7 +233,7 @@ $('.searchable-input').typeahead(
         source: function(query, syncResults, asyncResults) {
             setTimeout(function() {
                 if (!searchableComposition) return;
-                let subtitle = searchableSubtitle;
+                let abbr = searchableAbbr;
                 let search = encodeURI($('.searchable-input').val().trim());
                 // API
                 const api = {
@@ -242,7 +242,7 @@ $('.searchable-input').typeahead(
                     BEDW: `https://wiki.mcbe-dev.net/w/api.php?action=opensearch&search=${search}&namespace=0%7C3000%7C3002%7C3004%7C3008%7C3010&limit=11`,
                     MinePlugin: `https://mineplugin.org/api.php?action=opensearch&search=${search}&limit=11`
                 };
-                const url = api[subtitle];
+                const url = api[abbr];
                 if (url) {
                     // 获取候选词
                     $('.searchable-clear').attr('loading', true);  // 在获取候选词时显示加载动画（进行中）
