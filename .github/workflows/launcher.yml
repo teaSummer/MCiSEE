@@ -4,6 +4,7 @@ run-name: Auto Update Version
 on:
   schedule:
     - cron: 0 16 * * *
+  workflow_dispatch:
 
 jobs:
   update:
