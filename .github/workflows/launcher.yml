@@ -65,7 +65,7 @@ jobs:
           
           # GET Latest Stable ${{ matrix.subtitle }}
           if [ '${{ matrix.subtitle }}' = HMCL ]; then
-            LATEST_STABLE_VERSION=`cat releases.json | sed -n '/"tag_name":\s*"release-/p' | sed -n 1p | sed 's/^.*release-/release-/g' | sed 's/",$//g' | sed 's/\./\\\\./g'`
+            LATEST_STABLE_VERSION=`cat releases.json | sed -n '/"tag_name":\s*"release-/p' | sed -n 1p | sed 's/^.*release-\|",$//g' | sed 's/\./\\\\./g'`
           else
             LATEST_STABLE_VERSION=`cat latest.json | jq .tag_name | sed 's/^"v\?\|"$//gi' | sed 's/\./\\\\./g'`
           fi
