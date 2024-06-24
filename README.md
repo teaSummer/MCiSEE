@@ -74,11 +74,11 @@
     title: "Hello Minecraft! Launcher",
     abbr: "HMCL",
     download: "https://github.com/HMCL-dev/HMCL/releases/download/release-3.5.8/HMCL-3.5.8.exe",
-    version: "release-3.5.8",
+    version: "3.5.8",
     url: "https://github.com/HMCL-dev/HMCL",
     dev: {
         download: "https://github.com/HMCL-dev/HMCL/releases/download/v3.5.8.249/HMCL-3.5.8.249.exe",
-        version: "v3.5.8.249"
+        version: "3.5.8.249"
     }
 }
 ```
