@@ -54,8 +54,8 @@ const WindowsLauncher = [
     {
         title: "Hello Minecraft! Launcher",
         subtitle: "HMCL",
-        download: "https://github.com/HMCL-dev/HMCL/releases/download/release-3.5.8/HMCL-3.5.8.exe",
-        version: "3.5.8",
+        download: "https://github.com/HMCL-dev/HMCL/releases/download/release-release-3.5.8/HMCL-release-3.5.8.exe",
+        version: "release-3.5.8",
         url: "https://github.com/HMCL-dev/HMCL",
         dev: {
             download: "https://github.com/HMCL-dev/HMCL/releases/download/vv3.5.8.249/HMCL-v3.5.8.249.exe",
@@ -151,8 +151,8 @@ const macOSLauncher = [
     {
         title: "Hello Minecraft! Launcher",
         subtitle: "HMCL",
-        download: "https://github.com/HMCL-dev/HMCL/releases/download/release-3.5.8/HMCL-3.5.8.jar",
-        version: "3.5.8",
+        download: "https://github.com/HMCL-dev/HMCL/releases/download/release-release-3.5.8/HMCL-release-3.5.8.jar",
+        version: "release-3.5.8",
         url: "https://github.com/HMCL-dev/HMCL",
         dev: {
             download: "https://github.com/HMCL-dev/HMCL/releases/download/vv3.5.8.249/HMCL-v3.5.8.249.jar",
@@ -208,8 +208,8 @@ const LinuxLauncher = [
     {
         title: "Hello Minecraft! Launcher",
         subtitle: "HMCL",
-        download: "https://github.com/HMCL-dev/HMCL/releases/download/release-3.5.8/HMCL-3.5.8.sh",
-        version: "3.5.8",
+        download: "https://github.com/HMCL-dev/HMCL/releases/download/release-release-3.5.8/HMCL-release-3.5.8.sh",
+        version: "release-3.5.8",
         url: "https://github.com/HMCL-dev/HMCL",
         dev: {
             download: "https://github.com/HMCL-dev/HMCL/releases/download/vv3.5.8.249/HMCL-v3.5.8.249.sh",
