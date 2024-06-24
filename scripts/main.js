@@ -286,7 +286,7 @@ const pre_list = function(e) {
         // 生成元素
         for (const [title, url] of block[category]) {
             if (importantPattern.test(title)) {
-                dom += `<a class="button important" href="${url}" target="_blank">${title.replace(importantPattern, '<text style="font-weight: bold;">$1</text>')}</a>`;
+                dom += `<a class="button important" href="${url}" target="_blank">${title.replace(importantPattern, '<text class="bold">$1</text>')}</a>`;
             } else dom += `<a class="button" href="${url}" target="_blank">${title}</a>`;
         };
         dom += '</details><hr>';
