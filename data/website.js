@@ -159,7 +159,7 @@ const utilityWebsite = [
             ["NeoForge", "https://neoforged.net"],
             ["Fabric", "https://fabricmc.net"],
             ["Quilt", "https://quiltmc.org"],
-            ["LiteLoader", "http://www.liteloader.com"],
+            ["LiteLoader", "https://www.liteloader.com"],
             ["Rift", "https://www.curseforge.com/minecraft/mc-mods/rift"],
             ["Iris", "https://www.irisshaders.dev"],
             ["OptiFine", "https://www.optifine.net"],
@@ -185,6 +185,7 @@ const utilityWebsite = [
 const otherForum = [
     {
         "其它论坛": [
+            ["国际论坛", "https://www.minecraftforum.net"],
             ["香港社区", "https://www.minecraft-hk.com"],
             ["台湾论坛", "https://forum.gamer.com.tw/A.php?bsn=18673"],
             ["基岩版台湾中文网", "https://forum.mcpe.tw"],
