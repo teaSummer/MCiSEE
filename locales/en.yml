@@ -36,7 +36,7 @@ data:
   unfold: More...
   fold: Less
   GitHubProxy: |-
-    Speedup the GitHub with <a href="https://sciproxy.com" target="_blank">sciproxy.com</a> proxy
+    Speedup the GitHub with <a href="https://mirror.ghproxy.com" target="_blank">mirror</a> proxy
   searchableDirect: '{searchable}: Auto access to the detail page when possible'
   ellipsis: ....
   statistics: Statistics

@@ -25,7 +25,7 @@ if (history.scrollRestoration) {
 // 国际化 (internationalization)
 const i18n = function(callback = () => {}) {
     al.setLangProp(['locales/zh-CN.yml','locales/en.yml'], function() {
-        al.load(void 0, al.mode.HTML, callback);
+        al.load('en', al.mode.HTML, callback);
     }, {url: true, yaml: true});
 }
 
@@ -85,7 +85,7 @@ const launcherChanged = function(event = {target: $('mdui-select.launcher-list')
         let url = checked.attr(attribute);
         if (attribute.endsWith('download')) {
             if ($('.github-proxy').is(':checked') && String(url).startsWith('https://github.com/')) {
-                url = 'https://sciproxy.com/' + url;
+                url = 'https://mirror.ghproxy.com/' + url;
             };
             const removeEmpty = function(version) {
                 if (version === void 0) {
@@ -132,7 +132,7 @@ const proxyChanged = function() {
         if ($('.github-proxy').is(':checked')) {
             $('.launcher-download>a.button').each(function(i, e) {
                 const link = $(e).attr('href');
-                if (link.startsWith('https://github.com/')) $(e).attr('href', 'https://sciproxy.com/' + link);
+                if (link.startsWith('https://github.com/')) $(e).attr('href', 'https://mirror.ghproxy.com/' + link);
             });
         } else {
             $('.launcher-download>a.button').each(function(i, e) {
