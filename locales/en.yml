@@ -22,7 +22,7 @@ data:
   Linux.tip: Linux - Include Linux releases
   unsupported: Unsupported
   unknown: Unknown
-  unselected: '[waiting for select]'
+  unselected: '[Press to select]'
   app: Apps
   launcher: Launchers
   launcherOnlyJavaEdition: '{launcher}（<b>{JavaEdition}</b>）'
@@ -37,7 +37,7 @@ data:
   fold: Less
   GitHubProxy: |-
     Speedup the GitHub with <a href="https://sciproxy.com" target="_blank">sciproxy.com</a> proxy
-  searchableDirect: '{searchable}: Keep auto enter detail page as much as possible'
+  searchableDirect: '{searchable}: Auto access to the detail page when possible'
   ellipsis: ....
   statistics: Statistics
   pageViews: Page Views
