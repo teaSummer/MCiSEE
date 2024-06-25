@@ -678,6 +678,10 @@ const db_forums = [
             {
                 title: "【黑曜石论坛】一个新兴的MC论坛",
                 url: "https://www.bilibili.com/video/BV1gM4m1D7Hq/"
+            },
+            {
+                title: "【黑曜石论坛】欢迎加入我的世界黑曜石论坛 请为我们提供一些建议！",
+                url: "https://www.bilibili.com/video/BV1vD421G7q6/"
             }
         ]
     },
@@ -775,7 +779,7 @@ const db_forums = [
     {
         title: "唯安侠",
         url: "https://weianxq.com",
-        state: "down",
+        state: "up",
         createdAt: "2024/03/03",
         updatedAt: "2024/05/24",
         hasICP: "yes",
