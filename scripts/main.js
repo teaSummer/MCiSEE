@@ -25,7 +25,7 @@ if (history.scrollRestoration) {
 // 国际化 (internationalization)
 const i18n = function(callback = () => {}) {
     al.setLangProp(['locales/zh-CN.yml','locales/en.yml'], function() {
-        al.load('en', al.mode.HTML, callback);
+        al.load(void 0, al.mode.HTML, callback);
     }, {url: true, yaml: true});
 }
 
