@@ -45,6 +45,7 @@ jobs:
       - name: Handle files
         id: handle
         run: |
+          git pull --rebase
           API=`echo ${{ matrix.url }} | sed 's/:\/\/github\.com\//:\/\/api.github.com\/repos\//g' | sed 's/$/\/releases/g'`
           wget -O latest.json $API/latest || echo '{"tag_name":""}' > latest.json
           wget -O releases.json $API
@@ -140,7 +141,6 @@ jobs:
           [Auto] Update Launcher Version:
           '"$CHANGELOG
           (Time: `date +'%F %X %Z'`)"
-          git pull --rebase
       - name: Push changes
         if: ${{ steps.commit.outcome == 'success' }}
         id: push
