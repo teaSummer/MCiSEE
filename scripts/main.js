@@ -58,7 +58,7 @@ const deviceChanged = function() {
         $(e).hide();
         try {
             const select = $('.' + $('.device-list').val());
-            select.val('【待选择】');
+            select.val('*待选择 Press to select');
             select.show();
         } catch (err) {
             $('.app-container').hide();
@@ -152,9 +152,8 @@ const searchableChanged = function(event = {target: $('.searchable-list')}) {
     const checked = checkedOption(event.target);
     searchKeyword = checked.attr('data-search');
     const abbr = checked.attr('data-abbr');
-    searchableAbbr = abbr;
+    window.linkSearchFrom = searchableAbbr = abbr;
     const note = checked.attr('data-note');
-    $('.searchable-input').attr('placeholder', ` 从 ${abbr} 中搜索 ....`);
     $('.searchable-label').html(`<a class="searchable-goto by-inline" href="${checked.attr('data-url')}" title="${note}" target="_blank"><p al="goto"></p> <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path></svg></a>`);
     localStorage.setItem('searchable-checked', event.target.value);
     countSearchable += 1;
@@ -362,7 +361,7 @@ $(document).ready(function() {
     });
     // 启动器
     $('mdui-select.launcher-list').each(function(i, e) {
-        $(e).val('【待选择】');
+        $(e).val('*待选择 Press to select');
         $(e).children().click(function() {
             const value = $(this).attr('label');
             $('mdui-select.launcher-list').val(value);

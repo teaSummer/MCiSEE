@@ -22,7 +22,7 @@ data:
   Linux.tip: Linux - Include Linux releases
   unsupported: Unsupported
   unknown: Unknown
-  unselected: '[Press to select]'
+  unselected: Press to select
   app: Apps
   launcher: Launchers
   launcherOnlyJavaEdition: '{launcher}（<b>{JavaEdition}</b>）'
@@ -31,8 +31,11 @@ data:
   utilityWebsite: Useful Websites
   forum: Forums
   config: Options
-  goto: Go!
+  goto: Just Go!
   download: Download
+  searchFrom: ' Search from ${linkSearchFrom} ....'
+  gotoLauncherWebsite: To launcher website
+  gotoLauncherWebsite.note: To GitHub Repo or official website
   unfold: More...
   fold: Less
   GitHubProxy: |-
