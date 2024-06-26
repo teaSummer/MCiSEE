@@ -12,8 +12,8 @@ class DOMLauncherList {
                 download: "https://www.example.com",
                 version: "1.0.x.x"
             },
-            __domID: undefined,
-            __domClass: undefined,
+            __domID: void 0,
+            __domClass: void 0,
             ...item
         };
 
@@ -81,8 +81,8 @@ class DOMSearchableList {
             search: "https://www.example.com",
             note: "",
             url: "https://www.example.com",
-            __domID: undefined,
-            __domClass: undefined,
+            __domID: void 0,
+            __domClass: void 0,
             ...item
         };
 
@@ -123,7 +123,7 @@ class DOMDeviceList {
 
     static show() {
         let dom = '';
-        for (const [deviceName, supportedDevice, description] of supportedDevices) {
+        for (const [deviceName, supportedDevice] of supportedDevices) {
             dom += `<mdui-menu-item label="${deviceName}"><div slot="custom"><div>${supportedDevice}</div><div class="secondary" al="${deviceName}.tip"></div></div></mdui-menu-item>`;
         };
         dom += `<mdui-menu-item value="unsupported" disabled hidden><div slot="custom" class="custom-item"><div al="unsupported"></div></div></mdui-menu-item>
