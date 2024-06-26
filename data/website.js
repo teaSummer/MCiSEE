@@ -5,7 +5,7 @@ const utilityWebsite = [
         "官方网站 (©Mojang/©微软)": [
             // | 网站名称 |  网站地址 URL  |
             ["Minecraft", "https://www.minecraft.net"],
-            ["Minecraft教育版", "https://education.minecraft.net"],
+            ["Minecraft教育版", "https://educommunity.minecraft.net/"], // education.minecraft.net 会 404 .. -.-# -- xs
             ["去Xbox购买正版", "https://www.xbox.com/zh-CN/games/store/minecraft-java-bedrock-edition-for-pc/9NXP44L49SHJ/0010"],
             ["漏洞追踪器(反馈Bug)", "https://bugs.mojang.com"],
             ["基岩版开发者文档", "https://learn.microsoft.com/minecraft/creator/"],
@@ -13,7 +13,10 @@ const utilityWebsite = [
             ["知识库", "https://feedback.minecraft.net/hc/categories/115000410252-Knowledge-Base"],
             ["远古版网页MC", "https://classic.minecraft.net"],
             ["Forge模组加载器", "https://www.minecraftforge.net"],
-            ["基岩版专用服务端", "https://www.minecraft.net/zh-hans/download/server/bedrock"]
+            ["基岩版专用服务端", "https://www.minecraft.net/zh-hans/download/server/bedrock"],
+            ["MC官方壁纸集","https://www.minecraft.net/collectibles/minecraft-collection"],
+            ["MC官方服务器列表", "https://findmcserver.com/"],
+            ["编程一小时教程", "https://code.org/minecraft"]
         ]
     },
     {
@@ -29,10 +32,12 @@ const utilityWebsite = [
             ["IMC.RE", "https://imc.re"],
             ["MCPEDL资源下载站", "https://mcpedl.com"],
             ["LittleSkin皮肤站", "https://littleskin.cn"],
+            ["红石皮肤站", "https://mcskin.com.cn/"],
             ["筛选皮肤", "https://mcskinsearch.com"],
             ["地球资源社区", "https://www.planetminecraft.com"],
             ["基岩版地球资源社区", "https://mcpe-planet.com"],
             ["资源包列表", "https://resourcepack.net"],
+            ["官方服务器列表", "https://findmcserver.com/"],
             ["服务器列表(大陆)Ⅰ", "https://www.mclists.cn"],
             ["服务器列表(大陆)Ⅱ", "https://www.fwqlist.com"],
             ["找服网", "https://www.fansmc.com"],
@@ -44,7 +49,14 @@ const utilityWebsite = [
             ["Inner Core 模组", "https://icmods.mineprogramming.org"],
             ["BDSX", "https://github.com/bdsx/bdsx"],
             ["LeviLamina", "https://levilamina.liteldev.com"],
-            ["Amethyst", "https://github.com/FrederoxDev/Amethyst"]
+            ["Amethyst", "https://github.com/FrederoxDev/Amethyst"],
+            ["MC官方壁纸集","https://www.minecraft.net/collectibles/minecraft-collection"],
+            ["MCC","https://mccteam.github.io/"],
+            ["9Minecraft", "https://www.9minecraft.net/"],
+            //["物理模组官网","https://minecraftphysicsmod.com/"] 我不知道该丢哪(
+            ["Eaglercraft", "https://eaglercraft.com/"],
+            ["MC.JS", "https://play.mc.js.cool/"],
+            ["Minecraft Shaders", "https://minecraftshader.com/"]
         ]
     },
     {
@@ -82,7 +94,10 @@ const utilityWebsite = [
             ["MCPack清单生成器", "https://mcpack.mcisee.top"],
             ["装饰性头颅", "https://www.minecraft-heads.com"],
             ["预览盔甲纹饰", "https://armortrims.com"],
-            ["多彩文字生成器", "https://colorize.fun/minecraft"]
+            ["多彩文字生成器", "https://colorize.fun/minecraft"],
+            ["bridge.", "https://bridge-core.app/"],
+            ["MCreator", "https://mcreator.net"],
+            ["Minecraft Dot", "https://www.minecraft-dot.pictures/"] // 很强,能把图片用mc的方块渲染 ∨w∨👍 -- xs
         ]
     },
     {
@@ -100,14 +115,16 @@ const utilityWebsite = [
             ["MC开发者中文指南", "https://mouse0w0.github.io/MinecraftDeveloperGuide/"],
             ["基岩版JSONUI文档", "https://mcbeui.netlify.app/"],
             ["基岩版Script API文档", "https://projectxero.top/sapi/"],
+            ["教育版编程一小时教程", "https://code.org/minecraft"]
             // ["网易我的世界开发者官网", "https://mc.163.com/dev/]
         ]
     },
     {
-        "国际基岩版版本库": [
+        "国际基岩版启动器/版本库": [
+            ["Bedrock Launcher Lite (PC)", "https://bedrocklauncher.github.io/"],
             ["mcapks (KLPBBS)", "https://mcapks.net"],
             ["mcdl版本库 (MineBBS)", "https://mc.minebbs.com"],
-            // ["甘泉版本库 (原像素科技)":" https://mcbbk.blmcpia.com"], // 貌似似了(全国ping不通),不要问我 -- 屑xs留
+            ["甘泉版本库 (原像素科技)", "https://mcbbk.blmcpia.com"], // 打赢复活赛了? -- 屑xs留
             ["mcfa版本库 (@zihao_il)", "https://bbk.endyun.ltd/main"],
             ["mcfw版本库 (MCAppx)", "https://www.mcappx.com"],
             ["mcarc版本库 (@Hottampist)", "https://mcarc.github.io"],
@@ -137,7 +154,9 @@ const utilityWebsite = [
             ["Purpur", "https://purpurmc.org"],
             ["SpigotMC", "https://www.spigotmc.org"],
             ["Sponge", "https://spongepowered.org"],
-            ["Tuinity", "https://github.com/Tuinity/Tuinity"]
+            ["Tuinity", "https://github.com/Tuinity/Tuinity"],
+            // == 咳咳,魔法 ==
+            // ["Docker 服务器模板", "https://hub.docker.com/r/itzg/minecraft-server/"]
         ]
     },
     {
