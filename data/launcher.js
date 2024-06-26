@@ -70,9 +70,10 @@ const WindowsLauncher = [
         url: "https://afdian.net/@LTCat"
     },
     {
-        title: "BakaXL",
+        title: "BakaXL Launcher",
+        abbr: "BakaXL",
         download: "https://contents.baka.zone/Release/BakaXL_Public_Ver_3.5.1.0.exe",
-        version: "3.51",
+        version: "3.5.1.0",
         url: "https://www.bakaxl.com"
     },
     {
