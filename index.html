@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="" style="color-scheme: light;">
+<html dir="auto" lang="" style="color-scheme: light;">
 
 <head>
     <meta charset="UTF-8">
@@ -101,7 +101,9 @@
                     <div class="launcher-title full-name"></div>
                     <div class="launcher-goto">
                         <a class="button data-url-launcher" target="_blank" style="display: none;"
-                           al-aplto="title: gotoLauncherWebsite.note"><text al="gotoLauncherWebsite"></text></a>
+                           al-aplto="title: gotoLauncherWebsite.note;">
+                            <text al="gotoLauncherWebsite"></text>
+                        </a>
                     </div>
                     <div class="launcher-download by-inline">
                         <div>
@@ -124,11 +126,32 @@
                                      placement="bottom" variant="outlined" required></mdui-select>
                     </label>
                     <div class="label searchable-label inline-block"></div>
+                    <div class="searchable-args">
+                        <div class="Modrinth gravity-block" style="display: none;">
+                            <mdui-select class="Modrinth-projectType arg min-width-190" name="Modrinth-projectType"
+                                         placement="bottom" variant="outlined" al-aplto="prefix: prefixType;" required>
+                                <mdui-menu-item value="mod" selected><div slot="custom" class="custom-item"><div al="mods"></div></div></mdui-menu-item>
+                                <mdui-menu-item value="plugin"><div slot="custom" class="custom-item"><div al="plugins"></div></div></mdui-menu-item>
+                                <mdui-menu-item value="datapack"><div slot="custom" class="custom-item"><div al="dataPacks"></div></div></mdui-menu-item>
+                                <mdui-menu-item value="shader"><div slot="custom" class="custom-item"><div al="shaders"></div></div></mdui-menu-item>
+                                <mdui-menu-item value="resourcepack"><div slot="custom" class="custom-item"><div al="resourcePacks"></div></div></mdui-menu-item>
+                                <mdui-menu-item value="modpack"><div slot="custom" class="custom-item"><div al="modpacks"></div></div></mdui-menu-item>
+                            </mdui-select>
+                            <mdui-select class="Modrinth-versions arg inline-block" name="Modrinth-versions"
+                                         variant="outlined" al-aplto="prefix: prefixVersions; data-value: all;"
+                                         multiple required>
+                                <mdui-menu-item value="?"><div slot="custom" class="custom-item"><div al="unknown"></div></div></mdui-menu-item>
+                                <mdui-menu-item value="all" hidden><div slot="custom" class="custom-item"><div al="all"></div></div></mdui-menu-item>
+                            </mdui-select>
+                            <mdui-button style="vertical-align: middle;" class="acquire-versions inline-block" icon="refresh"
+                                         al="acquire"></mdui-button>
+                        </div>
+                    </div>
                     <div class="searchable-search">
                         <form class="searchable-form">
                             <label>
                                 <mdui-text-field class="searchable-input" type="text" data-provide="typeahead"
-                                                 variant="outlined" value="" al-aplto="placeholder: searchFrom">
+                                                 variant="outlined" al-aplto="placeholder: searchFrom;">
                                     <mdui-button-icon slot="end-icon" icon="search"
                                                       class="searchable-button inline-block" type="submit"
                                                       disabled></mdui-button-icon>

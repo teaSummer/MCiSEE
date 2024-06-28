@@ -158,6 +158,8 @@ const searchableChanged = function(event = {target: $('.searchable-list')}) {
     localStorage.setItem('searchable-checked', event.target.value);
     countSearchable += 1;
     if (countSearchable > 2) $('.searchable-list').click();
+    $('.Modrinth').hide();
+    if (abbr == 'Modrinth') $('.Modrinth').show();
     i18n();
 };
 $('.searchable-list').change(searchableChanged);
@@ -168,9 +170,23 @@ $('.searchable-form').submit(function(event) {
     event.preventDefault();
     const input = $('.searchable-input').val().trim();
     const search = encodeURI(input);
-    let url = searchKeyword.replace(encodeURI('<T>'), search);
-    if ($('.searchable-direct').is(':checked') && url.indexOf('&fulltext=') != -1) {
-        url = url.replace(/&[^&]*$/, '');
+    if (searchableAbbr == 'Modrinth') {
+        const ver = $('.Modrinth-versions').val();
+        let versions = '';
+        if (ver != 'all' && ver != '?') {
+            versions = '&v=';
+            for (const v of ver) {
+                versions += `${v}&v=`
+            };
+            console.log(versions, ver);
+            versions = versions.slice(0, -3);
+        };
+        url = `https://modrinth.com/${$('.Modrinth-projectType').val()}s?q=${search}${versions}`;
+    } else {
+        let url = searchKeyword.replace(encodeURI('<T>'), search);
+        if ($('.searchable-direct').is(':checked') && url.indexOf('&fulltext=') != -1) {
+            url = url.replace(/&[^&]*$/, '');
+        };
     };
     if (input != '') createSuperLabel(url, 'searchable-search');
 });
@@ -206,6 +222,35 @@ $('.searchable-direct').change(function() {
     localStorage.setItem('searchable-direct', $('.searchable-direct').is(':checked'));
 });
 
+$('.Modrinth-versions').change(function() {
+    const val = $(this).val();
+    if (val.length == 0) $(this).val(['all']);
+    if (val.length >= 2 && val[val.length - 1] == 'all') $(this).val(val.slice(0, -1));
+});
+
+// 获取版本列表
+$('.acquire-versions').click(function() {
+    $(this).attr('loading', true).attr('disabled', true);
+    const releaseVersions = [];
+    $.ajax({
+        url: 'https://piston-meta.mojang.com/mc/game/version_manifest.json',
+        type: 'get',
+        cache: true,
+        dataType: 'json',
+        success: function(result) {
+            for (const v of result.versions) if (v.type == 'release') releaseVersions.push(v.id);
+            let dom = '';
+            for (const rv of releaseVersions) {
+                dom += `<mdui-menu-item class="version-item" value="${rv}"><div slot="custom" class="custom-item"><div>${rv}</div></div></mdui-menu-item>`;
+            };
+            dom += '<mdui-menu-item value="all" hidden><div slot="custom" class="custom-item"><div al="all"></div></div></mdui-menu-item>';
+            $('.Modrinth-versions').html(dom);
+            $('.Modrinth-versions').click();
+            i18n(() => $('.acquire-versions').removeAttr('loading').attr('disabled', false));
+        }
+    }, 0);
+});
+
 
 // 配置初始化
 const config = function(settings) {
@@ -215,7 +260,7 @@ const config = function(settings) {
         else $('.' + option).attr('checked', false);
     };
 };
-config({'github-proxy': true, 'searchable-direct': true});
+config({'github-proxy': (navigator.language == "zh-CN" ? true : false), 'searchable-direct': true});
 
 
 // 获取候选词
@@ -234,10 +279,26 @@ $('.searchable-input').typeahead(
                 if (!searchableComposition) return;
                 let abbr = searchableAbbr;
                 let search = encodeURI($('.searchable-input').val().trim());
+                let facets;
+                if (abbr == 'Modrinth') {
+                    let projectType = $('.Modrinth-projectType').val();
+                    const ver = $('.Modrinth-versions').val();
+                    let versions = '';
+                    if (ver == '?') return;
+                    if (ver != 'all') {
+                        versions = ',["versions:';
+                        for (const v of ver) {
+                            versions += `${v}","versions:`
+                        };
+                        versions = versions.slice(0, -12) + '"]';
+                    };
+                    facets = encodeURI(`[["categories:'forge'","categories:'fabric'","categories:'quilt'","categories:'liteloader'","categories:'modloader'","categories:'rift'","categories:'neoforge'"],["project_type:${projectType}"]${versions}]`);
+                };
                 // API
                 const api = {
                     Wiki: `https://zh.minecraft.wiki/api.php?action=opensearch&search=${search}&limit=11`,
                     BWiki: `https://wiki.biligame.com/mc/api.php?action=opensearch&search=${search}&limit=11`,
+                    Modrinth: `https://api.modrinth.com/v2/search?limit=11&index=relevance&query=${search}&facets=${facets}`,
                     BEDW: `https://wiki.mcbe-dev.net/w/api.php?action=opensearch&search=${search}&namespace=0%7C3000%7C3002%7C3004%7C3008%7C3010&limit=11`,
                     MinePlugin: `https://mineplugin.org/api.php?action=opensearch&search=${search}&limit=11`
                 };
@@ -249,20 +310,29 @@ $('.searchable-input').typeahead(
                         url: url,
                         type: 'get',
                         cache: true,
-                        data: {keyword: query},
-                        dataType: 'jsonp',
+                        dataType: (() => {
+                            if (abbr == 'Modrinth') return 'json';
+                            else return 'jsonp';
+                        })(),
                         success: function(result) {
                             if (result.length > 1 && Array.isArray(result[1])) {
                                 result = result[1];
                             };
+                            if (abbr == 'Modrinth') {
+                                let arr = [];
+                                result.hits.map(function(item) {
+                                    arr.push(item.title);
+                                });
+                                result = arr;
+                            };
                             $('.searchable-clear').removeAttr('loading');  // 在获取候选词时显示加载动画（已完成）
                             return asyncResults(result);
                         },
-                        error: function() {
+                        error: function(a) {
                             $('.searchable-clear').removeAttr('loading');  // 在获取候选词时显示加载动画（已完成）
                         }
                     }, 0);
-                };
+                }
             });
         }
     }
@@ -375,12 +445,20 @@ $(document).ready(function() {
     $('.pre-flex').each(function(i, e) {
         pre_list(e);
     });
+    $('.searchable-args .arg:not([multiple])').each(function(i, e) {
+        $(e).children().click(function() {
+            $(e).click();
+        });
+    });
     // 国际化 (internationalization) 准备进行
     al.setDefaultCountry({
         en: 'en',
         zh: 'zh-CN'
     });
     i18n(function() {
+        // 默认值初始化
+        $('.Modrinth-projectType').val('mod');
+        $('.Modrinth-versions').val(['all']);
         // 最后处理
         hashChanged();
         $('.wait').removeAttr('class').removeAttr('style');

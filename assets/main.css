@@ -281,7 +281,13 @@ mdui-select {
 mdui-menu-item {
     padding: 4px 12px;
     cursor: pointer;
+    transition: none;
     -webkit-tap-highlight-color: transparent;
+}
+
+mdui-menu-item.version-item {
+    padding: 0 15px;
+    font-size: 13px;
 }
 
 mdui-menu-item[hidden] {
@@ -353,8 +359,16 @@ div[id]>*:first-child {
     margin-top: 20px;
 }
 
+.inline {
+    display: inline !important;
+}
+
 .inline-block {
     display: inline-block !important;
+}
+
+.gravity-block>* {
+    display: block;
 }
 
 .background {
@@ -432,6 +446,10 @@ max-width: calc(min(100vw, 800px) - 4rem);
 
 .searchable-clear[hidden] {
     display: none !important;
+}
+
+.acquire-versions {
+    transition: all 0.1s;
 }
 
 .resource-container>div+div,

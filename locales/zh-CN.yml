@@ -36,6 +36,16 @@ data:
   searchFrom: ' 从 ${linkSearchFrom} 中搜索 ....'
   gotoLauncherWebsite: 跳转启动器网站
   gotoLauncherWebsite.note: 跳转至GitHub仓库或官方网站
+  prefixType: 类型
+  mods: 模组
+  plugins: 插件
+  dataPacks: 数据包
+  shaders: 光影
+  resourcePacks: 资源包
+  modpacks: 整合包
+  prefixVersions: 版本
+  all: 全部
+  acquire: 获取
   unfold: 展开...
   fold: 收起
   GitHubProxy: >-

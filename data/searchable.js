@@ -22,7 +22,7 @@ const searchable = [
     },
     {
         title: "Modrinth",
-        search: "https://modrinth.com/mods?q=<T>",
+        search: "",
         url: "https://modrinth.com"
     },
     {

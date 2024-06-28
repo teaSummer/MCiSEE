@@ -36,10 +36,21 @@ data:
   searchFrom: ' Search from ${linkSearchFrom} ....'
   gotoLauncherWebsite: To launcher website
   gotoLauncherWebsite.note: To GitHub Repo or official website
+  prefixType: 'Type: '
+  mods: Mods
+  plugins: Plugins
+  dataPacks: Data Packs
+  shaders: Shaders
+  resourcePacks: Resource Packs
+  modpacks: Modpacks
+  prefixVersions: 'Version: '
+  all: All
+  acquire: Acquire
   unfold: More...
   fold: Less
   GitHubProxy: >-
-    Speedup the GitHub with <a href="https://mirror.ghproxy.com" target="_blank">mirror</a> proxy
+    Speedup the GitHub with <a href="https://mirror.ghproxy.com" target="_blank">mirror proxy</a>
+    (for Chinese Mainland)
   searchableDirect: '{searchable}: Auto access to the detail page when possible'
   ellipsis: ....
   statistics: Statistics
