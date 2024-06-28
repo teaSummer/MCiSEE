@@ -292,7 +292,19 @@ $('.searchable-input').typeahead(
                         };
                         versions = versions.slice(0, -12) + '"]';
                     };
-                    facets = encodeURI(`[["categories:'forge'","categories:'fabric'","categories:'quilt'","categories:'liteloader'","categories:'modloader'","categories:'rift'","categories:'neoforge'"],["project_type:${projectType}"]${versions}]`);
+                    switch (projectType) {
+                        case 'mod':
+                            facets = encodeURI(`[["categories:'forge'","categories:'fabric'","categories:'quilt'","categories:'liteloader'","categories:'modloader'","categories:'rift'","categories:'neoforge'"],["project_type:mod"]${versions}]`);
+                            break;
+                        case 'plugin':
+                            facets = encodeURI(`[["categories:'bukkit'","categories:'spigot'","categories:'paper'","categories:'purpur'","categories:'sponge'","categories:'bungeecord'","categories:'waterfall'","categories:'velocity'","categories:'folia'"],["project_type:mod"]${versions}]`);
+                            break;
+                        case 'datapack':
+                            facets = encodeURI(`[["categories:'datapack'"],["project_type:mod"]${versions}]`);
+                            break;
+                        default:
+                            facets = encodeURI(`[["project_type:${projectType}"]${versions}]`);
+                    }
                 };
                 // API
                 const api = {
