@@ -182,6 +182,7 @@ $('.searchable-form').submit(function(event) {
             versions = versions.slice(0, -3);
         };
         url = `https://modrinth.com/${$('.Modrinth-projectType').val()}s?q=${search}${versions}`;
+        if ($('.Modrinth-projectType').val() == '') return;
     } else {
         let url = searchKeyword.replace(encodeURI('<T>'), search);
         if ($('.searchable-direct').is(':checked') && url.indexOf('&fulltext=') != -1) {
