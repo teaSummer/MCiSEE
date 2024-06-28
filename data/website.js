@@ -5,7 +5,7 @@ const utilityWebsite = [
         "官方网站 (©Mojang/©微软)": [
             // | 网站名称 |  网站地址 URL  |
             ["Minecraft", "https://www.minecraft.net"],
-            ["Minecraft教育版", "https://educommunity.minecraft.net/"], // education.minecraft.net 会 404 .. -.-# -- xs
+            ["Minecraft教育版", "https://educommunity.minecraft.net/"],
             ["去Xbox购买正版", "https://www.xbox.com/zh-CN/games/store/minecraft-java-bedrock-edition-for-pc/9NXP44L49SHJ/0010"],
             ["漏洞追踪器(反馈Bug)", "https://bugs.mojang.com"],
             ["基岩版开发者文档", "https://learn.microsoft.com/minecraft/creator/"],
@@ -14,29 +14,13 @@ const utilityWebsite = [
             ["远古版网页MC", "https://classic.minecraft.net"],
             ["Forge模组加载器", "https://www.minecraftforge.net"],
             ["基岩版专用服务端", "https://www.minecraft.net/zh-hans/download/server/bedrock"],
-            ["MC官方壁纸集","https://www.minecraft.net/collectibles/minecraft-collection"],
-            ["MC官方服务器列表", "https://findmcserver.com/"],
+            ["壁纸集","https://www.minecraft.net/collectibles/minecraft-collection"],
+            ["服务器列表", "https://findmcserver.com/"],
             ["编程一小时教程", "https://code.org/minecraft"]
         ]
     },
     {
-        // | 默认展开的分类[open] |
-        "祝MC十五周年快乐！[open]": [
-            // | 网站名称 |  网站地址 URL  |
-            ["15周年庆典", "https://www.minecraft.net/15th-anniversary"]
-        ]
-    },
-    {
         "无类别 (暂未分类)": [
-            ["导航网", "https://www.mcnav.net"],
-            ["IMC.RE", "https://imc.re"],
-            ["MCPEDL资源下载站", "https://mcpedl.com"],
-            ["LittleSkin皮肤站", "https://littleskin.cn"],
-            ["红石皮肤站", "https://mcskin.com.cn/"],
-            ["筛选皮肤", "https://mcskinsearch.com"],
-            ["地球资源社区", "https://www.planetminecraft.com"],
-            ["基岩版地球资源社区", "https://mcpe-planet.com"],
-            ["资源包列表", "https://resourcepack.net"],
             ["官方服务器列表", "https://findmcserver.com/"],
             ["服务器列表(大陆)Ⅰ", "https://www.mclists.cn"],
             ["服务器列表(大陆)Ⅱ", "https://www.fwqlist.com"],
@@ -50,18 +34,30 @@ const utilityWebsite = [
             ["BDSX", "https://github.com/bdsx/bdsx"],
             ["LeviLamina", "https://levilamina.liteldev.com"],
             ["Amethyst", "https://github.com/FrederoxDev/Amethyst"],
-            ["MC官方壁纸集","https://www.minecraft.net/collectibles/minecraft-collection"],
-            ["MCC","https://mccteam.github.io/"],
-            ["9Minecraft", "https://www.9minecraft.net/"],
-            //["物理模组官网","https://minecraftphysicsmod.com/"] 我不知道该丢哪(
+            ["官方壁纸集","https://www.minecraft.net/collectibles/minecraft-collection"],
+            // ["物理模组官网", "https://minecraftphysicsmod.com/"] 我不知道该丢哪(
             ["Eaglercraft", "https://eaglercraft.com/"],
-            ["MC.JS", "https://play.mc.js.cool/"],
-            ["Minecraft Shaders", "https://minecraftshader.com/"]
+            ["MC.JS", "https://play.mc.js.cool/"]
+        ]
+    },
+    {
+        "资源板块": [
+            ["导航网", "https://www.mcnav.net"],
+            ["MCPEDL资源下载站", "https://mcpedl.com"],
+            ["IMC.RE", "https://imc.re"],
+            ["地球资源社区", "https://www.planetminecraft.com"],
+            ["基岩版地球资源社区", "https://mcpe-planet.com"],
+            ["资源包列表", "https://resourcepack.net"],
+            ["LittleSkin皮肤站", "https://littleskin.cn"],
+            ["红石皮肤站", "https://mcskin.com.cn/"],
+            ["Minecraft Shaders", "https://minecraftshader.com/"],
+            ["9Minecraft", "https://www.9minecraft.net/"]
         ]
     },
     {
         "工具箱": [
             ["通过名称查询皮肤", "https://namemc.com"],
+            ["筛选皮肤", "https://mcskinsearch.com"],
             ["MC风格艺术字", "https://textcraft.net"],
             ["渐变颜色生成器", "https://mcg.tuanzi.ink"],
             ["指令生成器(MC百科)", "https://www.mcmod.cn/tools/cbcreator/"],
@@ -97,7 +93,8 @@ const utilityWebsite = [
             ["多彩文字生成器", "https://colorize.fun/minecraft"],
             ["bridge.", "https://bridge-core.app/"],
             ["MCreator", "https://mcreator.net"],
-            ["Minecraft Dot", "https://www.minecraft-dot.pictures/"] // 很强,能把图片用mc的方块渲染 ∨w∨👍 -- xs
+            ["Minecraft Dot", "https://www.minecraft-dot.pictures/"], // 很强,能把图片用mc的方块渲染 ∨w∨👍 -- xs
+            ["MCC客户端控制台","https://mccteam.github.io/"]
         ]
     },
     {
@@ -116,7 +113,7 @@ const utilityWebsite = [
             ["基岩版JSONUI文档", "https://mcbeui.netlify.app/"],
             ["基岩版Script API文档", "https://projectxero.top/sapi/"],
             ["教育版编程一小时教程", "https://code.org/minecraft"]
-            // ["网易我的世界开发者官网", "https://mc.163.com/dev/]
+            // ["网易我的世界开发者官网", "https://mc.163.com/dev/"]
         ]
     },
     {
