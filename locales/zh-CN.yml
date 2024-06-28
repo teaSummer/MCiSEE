@@ -4,7 +4,7 @@ data:
   head.title: 所见皆是Minecraft - MCiSEE
   description.title: 所见皆是<i>Minecraft</i>
   description.1: 玩家们可以从这里挖掘Minecraft常用资源，例如软件等。
-  description.2: |-
+  description.2: >-
     欢迎各位来 <a href="https://GitHub.com/teaSummer/MCiSEE" target="_blank">GitHub 项目</a>
     {contribute} 或 点击 Star
   description.3: 这里也需要你们提供更多有趣的资源！
@@ -38,7 +38,7 @@ data:
   gotoLauncherWebsite.note: 跳转至GitHub仓库或官方网站
   unfold: 展开...
   fold: 收起
-  GitHubProxy: |-
+  GitHubProxy: >-
     GitHub 文件使用 <a href="https://mirror.ghproxy.com" target="_blank">下载加速</a> {download}
   searchableDirect: '{searchable}：尽可能自动进入详情页'
   ellipsis: ....
@@ -66,15 +66,15 @@ data:
   release.note: 稳定正式版
   preRelease: 开发版
   preRelease.note: 开发测试版
-  launcher.release: |-
+  launcher.release: >-
     <a class="button download data-download-launcher" target="_blank" title="{download}{release.note} ${linkVersion}"
     data-backup-href="${linkDownload}" href="${linkUrl}">${downloadSVG}{download}{release} ${linkVersion}</a>
-  launcher.release.latest: |-
+  launcher.release.latest: >-
     <a class="button download data-download-launcher" target="_blank" title="{download}{latest.note}{release.note}"
     data-backup-href="${linkDownload}" href="${linkUrl}">${downloadSVG}{download}{latest}{release}</a>
-  launcher.preRelease: |-
+  launcher.preRelease: >-
     <a class="button download data-dev-download-launcher" target="_blank" title="{download}{preRelease.note} ${linkDevVersion}"
     data-backup-href="${linkDevDownload}" href="${linkDevUrl}">${downloadSVG}{download}{preRelease} ${linkDevVersion}</a>
-  launcher.preRelease.latest: |-
+  launcher.preRelease.latest: >-
     <a class="button download data-dev-download-launcher" target="_blank" title="{download}{latest.note}{preRelease.note}"
     data-backup-href="${linkDevDownload}" href="${linkDevUrl}">${downloadSVG}{download}{latest}{preRelease}</a>

@@ -4,7 +4,7 @@ data:
   head.title: Wow, It's All Minecraft - MCiSEE
   description.title: Wow, It's All <i>Minecraft</i>
   description.1: Here are Minecraft resources for players. How about "Apps"?
-  description.2: |-
+  description.2: >-
     Welcome to contribute for <a href="https://github.com/teaSummer/MCiSEE" target="_blank">GitHub Repo</a>!
     Please give us a star
   description.3: Enjoy and share more interesting with everyone!
@@ -38,7 +38,7 @@ data:
   gotoLauncherWebsite.note: To GitHub Repo or official website
   unfold: More...
   fold: Less
-  GitHubProxy: |-
+  GitHubProxy: >-
     Speedup the GitHub with <a href="https://mirror.ghproxy.com" target="_blank">mirror</a> proxy
   searchableDirect: '{searchable}: Auto access to the detail page when possible'
   ellipsis: ....
@@ -66,15 +66,15 @@ data:
   release.note: the stable release version
   preRelease: Dev
   preRelease.note: the developing beta version
-  launcher.release: |-
+  launcher.release: >-
     <a class="button download data-download-launcher" target="_blank" title="{download} {release.note} ${linkVersion}"
     data-backup-href="${linkDownload}" href="${linkUrl}">${downloadSVG}{download} {release} ${linkVersion}</a>
-  launcher.release.latest: |-
+  launcher.release.latest: >-
     <a class="button download data-download-launcher" target="_blank" title="{download} {release.note} {latest.note}"
     data-backup-href="${linkDownload}" href="${linkUrl}">${downloadSVG}{download} {latest} {release}</a>
-  launcher.preRelease: |-
+  launcher.preRelease: >-
     <a class="button download data-dev-download-launcher" target="_blank" title="{download} {preRelease.note} ${linkDevVersion}"
     data-backup-href="${linkDevDownload}" href="${linkDevUrl}">${downloadSVG} {download} {preRelease} ${linkDevVersion}</a>
-  launcher.preRelease.latest: |-
+  launcher.preRelease.latest: >-
     <a class="button download data-dev-download-launcher" target="_blank" title="{download} {preRelease.note} {latest.note}"
     data-backup-href="${linkDevDownload}" href="${linkDevUrl}">${downloadSVG} {download} {latest} {preRelease}</a>
