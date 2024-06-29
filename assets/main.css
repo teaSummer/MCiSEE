@@ -474,6 +474,8 @@ max-width: calc(min(100vw, 800px) - 4rem);
     font-family: var(--ant-font-family);
 }
 
+.noicon::after {display: none !important;}
+
 a.button:not(.download)::after {
     content: '';
     color: white;
@@ -505,7 +507,7 @@ main>div {
     max-height: 20px;
     position: fixed;
     border-radius: 10px;
-    transition: all 1.5s;
+    transition: all 1.2s;
     top: calc(35vh);
     right: calc(-6vw);
     background-color: rgba(9, 73, 136, 0.452);
@@ -516,7 +518,7 @@ main>div {
     margin-top: 20px;
     margin-left: 12px;
     opacity: 0;
-    transition: opacity 0.8s !important;
+    transition: opacity 0.65s !important;
     pointer-events: none;
 }
 
@@ -542,6 +544,56 @@ main>div {
     content: '◻ ';
     margin-left: 6px;
     font-family: 'Segoe UI Emoji';
+}
+
+hr {
+    margin-left: -1%;
+    width: 102%;
+}
+summary::marker {
+    font-size: 0; /** 笔记: 貌似只有设置字体大小才能干掉小三角 */
+}
+summary {
+    direction: rtl;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-left: 1.5em;
+}
+summary::after {
+    direction: rtl;
+    content: '';
+    position: absolute;
+    width: 1em; height: 1em;
+    margin: 0.2em 0 0 0.2em;
+    background: url(./icon/arrow.svg?fill=black) no-repeat;
+    background-size: 100% 100%;
+    transition: transform 0.2s;
+    transform: rotate(90deg);
+}
+details {
+    max-height: 1em;
+    transition: all 1s;
+}
+details>*:not(summary) {
+    opacity: 0;
+    pointer-events: none;
+}
+details[open] {
+    max-height: 1000px;
+}
+details[open]+hr {
+    background-color: #00f;
+}
+details[open]>*:not(summary) {
+    opacity: 1;
+    pointer-events: auto;
+}
+details[open]>summary::after {
+    transform: rotate(180deg);
+}
+pre:hover {
+    transition: background 0.5s;
+    background-color: #0099ff8e;
 }
 
 @font-face {

@@ -22,7 +22,7 @@ const utilityWebsite = [
     {
         "无类别 (暂未分类)": [
             ["官方服务器列表", "https://findmcserver.com/"],
-            ["服务器列表(大陆)Ⅰ", "https://www.mclists.cn"],
+            ["服务器列表(大陆)I", "https://www.mclists.cn"],
             ["服务器列表(大陆)Ⅱ", "https://www.fwqlist.com"],
             ["找服网", "https://www.fansmc.com"],
             ["最好的服务器", "https://minecraft-mp.com"],
@@ -43,7 +43,7 @@ const utilityWebsite = [
     {
         "资源板块": [
             ["导航网", "https://www.mcnav.net"],
-            ["MCPEDL资源下载站", "https://mcpedl.com"],
+            ["下载基岩版", "#基岩版启动器/版本库", false, "document.getElementById('基岩版启动器/版本库').open = true"],
             ["IMC.RE", "https://imc.re"],
             ["地球资源社区", "https://www.planetminecraft.com"],
             ["基岩版地球资源社区", "https://mcpe-planet.com"],
@@ -76,6 +76,8 @@ const utilityWebsite = [
             ["在线工具(元魔幻界)", "https://mc.metamo.cn/tool/"],
             ["皮肤改色器", "https://www.mcskinrecolor.com"],
             ["Nova Skin皮肤编辑器", "https://minecraft.novaskin.me"],
+            ["Nova Skin壁纸生成器", "https://wallpapers.novaskin.me"],
+            ["minepix.app 皮肤生成壁纸", "https://www.minepix.app/"], // 和上面那个(应该)差不多(? 区别在ui和cn的加载速度(
             ["正版玩家信息查询", "https://mcuuid.net"],
             ["Aternos免费开服", "https://aternos.org"],
             ["简幻欢公益面板服", "https://simpfun.cn"],
@@ -117,7 +119,7 @@ const utilityWebsite = [
         ]
     },
     {
-        "国际基岩版启动器/版本库": [
+        "基岩版启动器/版本库": [
             ["Bedrock Launcher Lite (PC)", "https://bedrocklauncher.github.io/"],
             ["mcapks (KLPBBS)", "https://mcapks.net"],
             ["mcdl版本库 (MineBBS)", "https://mc.minebbs.com"],

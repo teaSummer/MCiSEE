@@ -1,5 +1,5 @@
-let searchKeyword = '';
-let searchableAbbr = '';
+let searchKeyword = '', searchableAbbr = '';
+let debug = false;
 
 let countSearchable = 0;
 const downloadSVG = '<span class="svg right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M320 336h76c55 0 100-21.21 100-75.6s-53-73.47-96-75.6C391.11 99.74 329 48 256 48c-69 0-113.44 45.79-128 91.2-60 5.7-112 35.88-112 98.4S70 336 136 336h56M192 400.1l64 63.9 64-63.9M256 224v224.03" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="56"></path></svg></span>';
@@ -366,10 +366,12 @@ const pre_list = function(e) {
         }
         else dom += `<details id="${category.replace(/ .+/, '')}"><summary>${category}</summary>`;
         // 生成元素
-        for (const [title, url] of block[category]) {
+        for (const [title, url, isExterLink, clickEvent] of block[category]) {
+            (typeof isExterLink === "boolean" && !isExterLink)? dom += `<a class="button noicon" href="${url}" onclick="${clickEvent}">${title}</a>`: (() => {
             if (importantPattern.test(title)) {
-                dom += `<a class="button important" href="${url}" target="_blank">${title.replace(importantPattern, '<text class="bold">$1</text>')}</a>`;
-            } else dom += `<a class="button" href="${url}" target="_blank">${title}</a>`;
+                dom += `<a class="button important" href="${url}" target="_blank" onclick="${clickEvent}">${title.replace(importantPattern, '<text class="bold">$1</text>')}</a>`;
+            } else dom += `<a class="button" href="${url}" target="_blank" onclick="${clickEvent}">${title}</a>`;
+            })();
         };
         dom += '</details><hr>';
     };
@@ -477,4 +479,17 @@ $(document).ready(function() {
         $('.wait').removeAttr('class').removeAttr('style');
         try { document.querySelector(decodeURI(location.hash)).scrollIntoView(); } catch (err) {};
     });
+    $('#clickEffect').on("change", () => {
+        ($('#clickEffect')[0].checked)? (()=>{
+            let script = document.createElement('script');
+            script.id  = "ces";
+            script.type= "text/javascript";
+            script.src = "https://blog.xsawa.dev.tc/js/candy.min.js";
+            $('head')[0].appendChild(script);
+        })():$('#ces')[0].remove();
+    });
+    
 });
+
+const debugChange = (e = $('[visibleInDebugMode]')) => {for(let t of e){t.style.display = (debug)? "block": "none"}};
+debugChange(); /** 监听变更我就先咕咕咕了 ＜（＾－＾）＞ */
