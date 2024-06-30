@@ -143,21 +143,19 @@
                                 <mdui-menu-item value="?"><div slot="custom" class="custom-item"><div al="unknown"></div></div></mdui-menu-item>
                                 <mdui-menu-item value="all" hidden><div slot="custom" class="custom-item"><div al="all"></div></div></mdui-menu-item>
                             </mdui-select>
-                            <mdui-button style="vertical-align: middle;" class="acquire-versions inline-block"
-                                         icon="refresh" al="acquire"></mdui-button>
+                            <mdui-button class="acquire-versions inline-block" icon="refresh" al="acquire"></mdui-button>
                         </div>
                     </div>
                     <div class="searchable-search">
                         <form class="searchable-form">
-                            <label>
+                            <label style="display: flex;">
                                 <mdui-text-field class="searchable-input" type="text" data-provide="typeahead"
                                                  variant="outlined" al-aplto="placeholder: searchFrom;">
-                                    <mdui-button-icon slot="end-icon" icon="search"
-                                                      class="searchable-button inline-block" type="submit"
-                                                      disabled></mdui-button-icon>
                                     <mdui-button-icon slot="end-icon" icon="clear" class="searchable-clear inline-block"
                                                       type="reset" disabled hidden></mdui-button-icon>
                                 </mdui-text-field>
+                                <mdui-button class="search inline-block" style="margin: auto 4px;"
+                                             type="submit" icon="searchable-button" al="search"></mdui-button>
                             </label>
                         </form>
                     </div>

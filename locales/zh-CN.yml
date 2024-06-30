@@ -33,6 +33,7 @@ data:
   config: 配置
   goto: 跳转
   download: 下载
+  search: 搜索
   searchFrom: ' 从 ${linkSearchFrom} 中搜索 ....'
   gotoLauncherWebsite: 跳转启动器网站
   gotoLauncherWebsite.note: 跳转至GitHub仓库或官方网站

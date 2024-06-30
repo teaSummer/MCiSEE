@@ -33,6 +33,7 @@ data:
   config: Options
   goto: Just Go!
   download: Download
+  search: Search
   searchFrom: ' Search from ${linkSearchFrom} ....'
   gotoLauncherWebsite: To launcher website
   gotoLauncherWebsite.note: To GitHub Repo or official website

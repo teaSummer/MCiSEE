@@ -16,7 +16,7 @@ const searchable = [
     },
     {
         title: "CurseForge",
-        search: "https://www.curseforge.com/minecraft/search?page=1&pageSize=20&sortBy=relevancy&search=q",
+        search: "https://www.curseforge.com/minecraft/search?page=1&pageSize=20&sortBy=relevancy&search=<T>",
         note: "Minecraft Mods & Modpacks",
         url: "https://www.curseforge.com/minecraft/"
     },

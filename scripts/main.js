@@ -1,5 +1,4 @@
-let searchKeyword  = '',
-    searchableAbbr = '';
+let searchKeyword = '', searchableAbbr = '';
 
 const downloadSVG = '<span class="svg right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M320 336h76c55 0 100-21.21 100-75.6s-53-73.47-96-75.6C391.11 99.74 329 48 256 48c-69 0-113.44 45.79-128 91.2-60 5.7-112 35.88-112 98.4S70 336 136 336h56M192 400.1l64 63.9 64-63.9M256 224v224.03" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="56"></path></svg></span>';
 
@@ -149,6 +148,7 @@ $('.searchable-list').html(DOMSearchableList.list(searchable));
 // 监听快速查询选择项
 let countSearchable = 0;
 const searchableChanged = ((event = {target: $('.searchable-list')}) => {
+    // 处理“跳转”链接与输入框占位文本
     const checked = checkedOption(event.target);
     searchKeyword = checked.attr('data-search');
     const abbr = checked.attr('data-abbr');
@@ -172,6 +172,7 @@ $('.searchable-form').submit((event) => {
     event.preventDefault();
     const input = $('.searchable-input').val().trim();
     const search = encodeURI(input);
+    let url;
     if (searchableAbbr == 'Modrinth') {
         const ver = $('.Modrinth-versions').val();
         let versions = '';
@@ -183,20 +184,20 @@ $('.searchable-form').submit((event) => {
         url = `https://modrinth.com/${$('.Modrinth-projectType').val()}s?q=${search}${versions}`;
         if ($('.Modrinth-projectType').val() == '') return;
     } else {
-        let url = searchKeyword.replace(encodeURI('<T>'), search);
+        url = searchKeyword.replace(encodeURI('<T>'), search);
         if ($('.searchable-direct').is(':checked') && url.indexOf('&fulltext=') != -1) {
             url = url.replace(/&[^&]*$/, '');
         };
     };
-    if (input != '') createSuperLabel(url, 'searchable-search');
+    if (input) createSuperLabel(url, 'searchable-search');
 });
 
 // 快速查询 拼写完成校验
 let searchableComposition = true;
 $('.searchable-input').on('compositionstart', () => {searchableComposition = false});
 $('.searchable-input').on('compositionend'  , () => {searchableComposition = true });
-$('.searchable-input').on('input', function() {
-    let _this = this;
+// 快速查询 监听输入框内容
+$('.searchable-input').on('input', () => {
     setTimeout(() => {
         $('.searchable-button, .searchable-clear').attr('disabled', true);
         if (!searchableComposition) return;
@@ -218,6 +219,8 @@ $('.searchable-direct').change(() => {
     localStorage.setItem('searchable-direct', $('.searchable-direct').is(':checked'));
 });
 
+
+// 监听版本列表变化
 $('.Modrinth-versions').change(function() {
     const val = $(this).val();
     if (val.length == 0) $(this).val(['all']);
@@ -358,7 +361,7 @@ const pre_list = ((e) => {
         else dom += `<details id="${category.replace(/ .+/, '')}"><summary>${category}</summary>`;
         // 生成元素
         for (const [title, url] of block[category]) {
-            // 判断是否为外部链接
+            // 判断是否不为外部链接
             if (url.startsWith('#')) {
                 dom += `<a class="button noicon" href="${url}" onclick="hashChanged();">${title}</a>`;
             } else {
