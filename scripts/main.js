@@ -242,7 +242,7 @@ $('.acquire-versions').click(function() {
             dom += '<mdui-menu-item value="all" hidden><div slot="custom" class="custom-item"><div al="all"></div></div></mdui-menu-item>';
             $('.Modrinth-versions').html(dom);
             $('.Modrinth-versions').click();
-            i18n(() => $('.acquire-versions').removeAttr('loading').attr('disabled', false));
+            i18n(() => $('.acquire-versions').removeAttr('loading'));
         })
     }, 0);
 });
