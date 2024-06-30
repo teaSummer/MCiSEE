@@ -426,7 +426,7 @@ div[id]>*:first-child {
 .article img {
     height: auto;
     width: auto;
-max-width: calc(min(100vw, 800px) - 4rem);
+    max-width: calc(min(100vw, 800px) - 4rem);
 }
 
 .to-fold, .to-unfold {
@@ -551,7 +551,7 @@ hr {
     width: 102%;
 }
 summary::marker {
-    font-size: 0; /** 笔记: 貌似只有设置字体大小才能干掉小三角 */
+    font-size: 0; /** 设置字体大小以隐藏默认的小三角 */
 }
 summary {
     margin-left: 1.5em;
@@ -600,8 +600,8 @@ html {
 }
 
 @font-face {
-font-family: 'Segoe UI Emoji';
-src: url('font/seguiemj.ttf');
+    font-family: 'Segoe UI Emoji';
+    src: url('font/seguiemj.ttf');
 }
 
 @media (max-width: 768px) {

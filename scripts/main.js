@@ -1,10 +1,9 @@
-let searchKeyword = '', searchableAbbr = '';
-let debug = false;
+let searchKeyword  = '',
+    searchableAbbr = '';
 
-let countSearchable = 0;
 const downloadSVG = '<span class="svg right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M320 336h76c55 0 100-21.21 100-75.6s-53-73.47-96-75.6C391.11 99.74 329 48 256 48c-69 0-113.44 45.79-128 91.2-60 5.7-112 35.88-112 98.4S70 336 136 336h56M192 400.1l64 63.9 64-63.9M256 224v224.03" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="56"></path></svg></span>';
 
-// 所有已支持设备
+// 列出所有已支持的设备
 const supportedDevices = [
     // |   最早名称   |       显示名称       |
     [      'Android',  'Android/HarmonyOS' ],
@@ -23,26 +22,26 @@ if (history.scrollRestoration) {
 
 
 // 国际化 (internationalization)
-const i18n = function(callback = () => {}) {
-    al.setLangProp(['locales/zh-CN.yml','locales/en.yml'], function() {
+const i18n = ((callback = () => {}) => {
+    al.setLangProp(['locales/zh-CN.yml','locales/en.yml'], () => {
         al.load(void 0, al.mode.HTML, callback);
     }, {url: true, yaml: true});
-}
+});
 
 
 
 // 创建超文本标签（并点击）
-const createSuperLabel = function(url, id) {
+const createSuperLabel = ((url, id) => {
     const a = `<a href="" target="_blank" id="${id}">`;
     $('body').after(a);
     const aElement = $('#' + id);
     aElement.attr('href', url);
     aElement[0].click();
     aElement.remove();
-};
+});
 
 // 获取下拉菜单选中项
-const checkedOption = function(selectElement) {
+const checkedOption = ((selectElement) => {
     const selectInclude = (str) => ( $(selectElement).html().indexOf(str) != -1 );
     if (selectElement.value) {
         if (selectInclude('Wiki') || selectInclude('Launcher')) {
@@ -50,22 +49,22 @@ const checkedOption = function(selectElement) {
         };
     };
     return $( $(selectElement)[0][$(selectElement)[0].selectedIndex] );
-};
+});
 
 
-const deviceChanged = function() {
-    $('div.launcher-list mdui-select').each(function(i, e) {
+const deviceChanged = (() => {
+    $('div.launcher-list mdui-select').each((i, e) => {
         $(e).hide();
         try {
             const select = $('.' + $('.device-list').val());
-            select.val('*待选择 Press to select');
+            select.val('?');
             select.show();
-        } catch (err) {
+        } catch {
             $('.app-container').hide();
         };
     });
-    try { launcherChanged(); } catch (err) {};
-};
+    try { launcherChanged(); } catch {};
+});
 
 
 // 应用启动器
@@ -73,7 +72,7 @@ $('div.launcher-list').html(DOMLauncherList.deviceList());
 
 
 // 监听启动器选择项
-const launcherChanged = function(event = {target: $('mdui-select.launcher-list')}) {
+const launcherChanged = ((event = {target: $('mdui-select.launcher-list')}) => {
     const checked = checkedOption(event.target);
     const dataTitle = checked.attr('data-title');
     $('.launcher-title').text('');
@@ -87,17 +86,17 @@ const launcherChanged = function(event = {target: $('mdui-select.launcher-list')
             if ($('.github-proxy').is(':checked') && String(url).startsWith('https://github.com/')) {
                 url = 'https://mirror.ghproxy.com/' + url;
             };
-            const removeEmpty = function(version) {
+            const removeEmpty = ((version) => {
                 if (version === void 0) {
                     button.removeAttr('href').removeAttr('title').removeAttr('data-backup-href');
                     button.html('')
                     button.parent().removeAttr('al');
                 };
-            };
+            });
             if (attribute == 'data-download') {
                 const version = checked.attr('data-version');
-                window.linkVersion = version;
-                window.linkUrl = url;
+                window.linkVersion  = version;
+                window.linkUrl      = url;
                 window.linkDownload = checked.attr('data-backup-download');
                 button.parent().attr('al', 'launcher.release.latest');
                 if (version != 'latest') {
@@ -106,8 +105,8 @@ const launcherChanged = function(event = {target: $('mdui-select.launcher-list')
                 removeEmpty(version);
             } else {
                 const devVersion = checked.attr('data-dev-version');
-                window.linkDevVersion = devVersion;
-                window.linkDevUrl = url;
+                window.linkDevVersion  = devVersion;
+                window.linkDevUrl      = url;
                 window.linkDevDownload = checked.attr('data-backup-dev-download');
                 button.parent().attr('al', 'launcher.preRelease.latest');
                 if (devVersion != 'latest') {
@@ -122,25 +121,25 @@ const launcherChanged = function(event = {target: $('mdui-select.launcher-list')
         };
     };
     i18n();
-};
+});
 
 
 // 监听代理是否勾选
-const proxyChanged = function() {
+const proxyChanged = (() => {
     localStorage.setItem('github-proxy', $('.github-proxy').is(':checked'));
     try {
         if ($('.github-proxy').is(':checked')) {
-            $('.launcher-download>a.button').each(function(i, e) {
+            $('.launcher-download>a.button').each((i, e) => {
                 const link = $(e).attr('href');
                 if (link.startsWith('https://github.com/')) $(e).attr('href', 'https://mirror.ghproxy.com/' + link);
             });
         } else {
-            $('.launcher-download>a.button').each(function(i, e) {
+            $('.launcher-download>a.button').each((i, e) => {
                 $(e).attr('href', $(e).attr('data-backup-href'));
             });
         };
-    } catch (err) {};
-};
+    } catch {};
+});
 $('.github-proxy').change(proxyChanged);
 
 
@@ -148,7 +147,8 @@ $('.github-proxy').change(proxyChanged);
 $('.searchable-list').html(DOMSearchableList.list(searchable));
 
 // 监听快速查询选择项
-const searchableChanged = function(event = {target: $('.searchable-list')}) {
+let countSearchable = 0;
+const searchableChanged = ((event = {target: $('.searchable-list')}) => {
     const checked = checkedOption(event.target);
     searchKeyword = checked.attr('data-search');
     const abbr = checked.attr('data-abbr');
@@ -156,17 +156,19 @@ const searchableChanged = function(event = {target: $('.searchable-list')}) {
     const note = checked.attr('data-note');
     $('.searchable-label').html(`<a class="searchable-goto by-inline" href="${checked.attr('data-url')}" title="${note}" target="_blank"><p al="goto"></p> <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path></svg></a>`);
     localStorage.setItem('searchable-checked', event.target.value);
+    // 计数器
     countSearchable += 1;
     if (countSearchable > 2) $('.searchable-list').click();
+    // 显示 Modrinth 专用项
     $('.Modrinth').hide();
     if (abbr == 'Modrinth') $('.Modrinth').show();
     i18n();
-};
+});
 $('.searchable-list').change(searchableChanged);
 
 
 // 快速查询 表单提交处理
-$('.searchable-form').submit(function(event) {
+$('.searchable-form').submit((event) => {
     event.preventDefault();
     const input = $('.searchable-input').val().trim();
     const search = encodeURI(input);
@@ -175,10 +177,7 @@ $('.searchable-form').submit(function(event) {
         let versions = '';
         if (ver != 'all' && ver != '?') {
             versions = '&v=';
-            for (const v of ver) {
-                versions += `${v}&v=`
-            };
-            console.log(versions, ver);
+            for (const v of ver) versions += `${v}&v=`;
             versions = versions.slice(0, -3);
         };
         url = `https://modrinth.com/${$('.Modrinth-projectType').val()}s?q=${search}${versions}`;
@@ -194,32 +193,28 @@ $('.searchable-form').submit(function(event) {
 
 // 快速查询 拼写完成校验
 let searchableComposition = true;
-$('.searchable-input').on('compositionstart', function() {
-    searchableComposition = false;
-});
-$('.searchable-input').on('compositionend', function() {
-    searchableComposition = true;
-});
+$('.searchable-input').on('compositionstart', () => {searchableComposition = false});
+$('.searchable-input').on('compositionend'  , () => {searchableComposition = true });
 $('.searchable-input').on('input', function() {
     let _this = this;
-    setTimeout(function() {
+    setTimeout(() => {
         $('.searchable-button, .searchable-clear').attr('disabled', true);
         if (!searchableComposition) return;
         $('.searchable-button, .searchable-clear').attr('disabled', false);
         if ($('.searchable-input').val().trim() == '') {
             $('.searchable-button').attr('disabled', true);
-            $('.searchable-clear').attr('hidden', true);
+            $('.searchable-clear' ).attr('hidden'  , true);
         } else $('.searchable-clear').removeAttr('hidden');
     }, 0);
 });
 
 // 快速查询 清空搜索框
-$('.searchable-clear').click(function() {
+$('.searchable-clear').click(() => {
     $('.searchable-input').trigger('input').focus();
 });
 
 // 监听快速查询是否勾选
-$('.searchable-direct').change(function() {
+$('.searchable-direct').change(() => {
     localStorage.setItem('searchable-direct', $('.searchable-direct').is(':checked'));
 });
 
@@ -238,7 +233,7 @@ $('.acquire-versions').click(function() {
         type: 'get',
         cache: true,
         dataType: 'json',
-        success: function(result) {
+        success: ((result) => {
             for (const v of result.versions) if (v.type == 'release') releaseVersions.push(v.id);
             let dom = '';
             for (const rv of releaseVersions) {
@@ -248,19 +243,19 @@ $('.acquire-versions').click(function() {
             $('.Modrinth-versions').html(dom);
             $('.Modrinth-versions').click();
             i18n(() => $('.acquire-versions').removeAttr('loading').attr('disabled', false));
-        }
+        })
     }, 0);
 });
 
 
 // 配置初始化
-const config = function(settings) {
+const config = ((settings) => {
     for (const [option, defaultVal] of Object.entries(settings)) {
         if (localStorage.getItem(option) === void 0) localStorage.setItem(option, defaultVal);
         if (localStorage.getItem(option) == 'true') $('.' + option).attr('checked', true);
         else $('.' + option).attr('checked', false);
     };
-};
+});
 config({'github-proxy': (navigator.language == "zh-CN" ? true : false), 'searchable-direct': true});
 
 
@@ -275,8 +270,8 @@ $('.searchable-input').typeahead(
         name: 'searchable-data',
         async: true,
         limit: 10,
-        source: function(query, syncResults, asyncResults) {
-            setTimeout(function() {
+        source: ((query, syncResults, asyncResults) => {
+            setTimeout(() => {
                 if (!searchableComposition) return;
                 let abbr = searchableAbbr;
                 let search = encodeURI($('.searchable-input').val().trim());
@@ -288,9 +283,7 @@ $('.searchable-input').typeahead(
                     if (ver == '?') return;
                     if (ver != 'all') {
                         versions = ',["versions:';
-                        for (const v of ver) {
-                            versions += `${v}","versions:`
-                        };
+                        for (const v of ver) versions += `${v}","versions:`;
                         versions = versions.slice(0, -12) + '"]';
                     };
                     switch (projectType) {
@@ -327,38 +320,36 @@ $('.searchable-input').typeahead(
                             if (abbr == 'Modrinth') return 'json';
                             else return 'jsonp';
                         })(),
-                        success: function(result) {
+                        success: ((result) => {
                             if (result.length > 1 && Array.isArray(result[1])) {
                                 result = result[1];
                             };
                             if (abbr == 'Modrinth') {
                                 let arr = [];
-                                result.hits.map(function(item) {
-                                    arr.push(item.title);
-                                });
+                                result.hits.map((item) => arr.push(item.title));
                                 result = arr;
                             };
                             $('.searchable-clear').removeAttr('loading');  // 在获取候选词时显示加载动画（已完成）
                             return asyncResults(result);
-                        },
-                        error: function(a) {
+                        }),
+                        error: (() => {
                             $('.searchable-clear').removeAttr('loading');  // 在获取候选词时显示加载动画（已完成）
-                        }
+                        })
                     }, 0);
                 }
             });
-        }
+        })
     }
 );
 
 
 // 网站板块生成
-const pre_list = function(e) {
+const pre_list = ((e) => {
     const lineBlocks = [];
     let blocks = JSON.parse($(e).html());
     let dom = '';
     const importantPattern = /((半价|免费|公益|折扣|限时|特惠|热门|新品|热销|推荐|礼品|[一二两三四五六七八九]折|打折|促销|超值|全新|便宜|披风)|\b(free|off|new|hot|recommend|top|discount|limit|cheap|present|gift|cape)\b)/gi;
-    for (let block of blocks) {
+    for (const block of blocks) {
         // 获取分类并处理
         const category = Object.keys(block)[0];
         if (category.endsWith('[open]')) {
@@ -366,26 +357,31 @@ const pre_list = function(e) {
         }
         else dom += `<details id="${category.replace(/ .+/, '')}"><summary>${category}</summary>`;
         // 生成元素
-        for (const [title, url, isExterLink, clickEvent] of block[category]) {
-            (typeof isExterLink === "boolean" && !isExterLink)? dom += `<a class="button noicon" href="${url}" onclick="${clickEvent}">${title}</a>`: (() => {
-            if (importantPattern.test(title)) {
-                dom += `<a class="button important" href="${url}" target="_blank" onclick="${clickEvent}">${title.replace(importantPattern, '<text class="bold">$1</text>')}</a>`;
-            } else dom += `<a class="button" href="${url}" target="_blank" onclick="${clickEvent}">${title}</a>`;
-            })();
+        for (const [title, url] of block[category]) {
+            // 判断是否为外部链接
+            if (url.startsWith('#')) {
+                dom += `<a class="button noicon" href="${url}" onclick="hashChanged();">${title}</a>`;
+            } else {
+                if (importantPattern.test(title)) {
+                    dom += `<a class="button important" href="${url}" target="_blank">${title.replace(importantPattern, '<text class="bold">$1</text>')}</a>`;
+                } else dom += `<a class="button" href="${url}" target="_blank">${title}</a>`;
+            };
         };
         dom += '</details><hr>';
     };
     dom = dom.replace(/<hr>$/, '');
     $(e).html(dom);
-};
+});
 
 
 // URL哈希属性监听
-const hashChanged = function() {
+const hashChanged = (() => {
     if (location.hash == '') return;
-    let hash = decodeURI(location.hash);
+    let hash = decodeURI(location.hash).replace('/', '\\/');
     const slicedHash = hash.slice(0, -3);
+    // 自动展开/收起：<details> 元素
     try {
+        // 通过检测哈希属性
         if (hash == '#全部展开') $('.page-content').find('details:not(.keep)').attr('open', true);
         if (hash == '#全部收起') $('.page-content').find('details:not(.keep)').attr('open', false);
         if (hash.endsWith('-展开')) {
@@ -393,18 +389,19 @@ const hashChanged = function() {
             $(slicedHash).find('.to-fold').show();
             $(slicedHash).find('.to-unfold').hide();
             location.hash = slicedHash;
-        }
+        };
         if (hash.endsWith('-收起')) {
             $(slicedHash).find('details:not(.keep)').attr('open', false);
             $(slicedHash).find('.to-unfold').show();
             $(slicedHash).find('.to-fold').hide();
             hash = slicedHash;
-        }
+        };
+        // 通过检测 <summary> 元素
         if ($(hash).html().startsWith('<summary>')) $(hash).attr('open', true);
         else $(`${hash}>*:first-child`).addClass('hash');
-    } catch (err) {};
-};
-$(window).on('hashchange', function() {
+    } catch {};
+});
+$(window).on('hashchange', () => {
     $('.hash').removeClass('hash');
     hashChanged();
 });
@@ -422,7 +419,7 @@ for (const forum of db_forums) {
 
 
 // 页面加载完成事件
-$(document).ready(function() {
+$(document).ready(() => {
     // 网站列表
     $('.utility-website-list').text(JSON.stringify(utilityWebsite));
     $('.forum-list').text(JSON.stringify([].concat.apply(CSForum, otherForum)));
@@ -432,10 +429,10 @@ $(document).ready(function() {
     else $('.searchable-list').val(searchableChecked);
     // 设备
     deviceChanged();
-    supportedDevices.forEach(function(deviceInfo) {
+    supportedDevices.forEach((deviceInfo) => {
         if (deviceInfo[0] == $('.device-list').val()) $('.device-list').val((deviceInfo[1]));
     });
-    $('.device-list').each(function(i, e) {
+    $('.device-list').each((i, e) => {
         $(e).children().click(function() {
             const value = $(this).attr('label');
             $('.device-list').val(value);
@@ -445,8 +442,8 @@ $(document).ready(function() {
         });
     });
     // 启动器
-    $('mdui-select.launcher-list').each(function(i, e) {
-        $(e).val('*待选择 Press to select');
+    $('mdui-select.launcher-list').each((i, e) => {
+        $(e).val('');
         $(e).children().click(function() {
             const value = $(this).attr('label');
             $('mdui-select.launcher-list').val(value);
@@ -457,39 +454,40 @@ $(document).ready(function() {
     });
     // 快速查询
     searchableChanged();
-    $('.pre-flex').each(function(i, e) {
-        pre_list(e);
-    });
-    $('.searchable-args .arg:not([multiple])').each(function(i, e) {
-        $(e).children().click(function() {
-            $(e).click();
-        });
+    $('.pre-flex').each((i, e) => pre_list(e));
+    $('.searchable-args .arg:not([multiple])').each((i, e) => {
+        $(e).children().click(() => $(e).click());
     });
     // 国际化 (internationalization) 准备进行
     al.setDefaultCountry({
         en: 'en',
         zh: 'zh-CN'
     });
-    i18n(function() {
+    i18n(() => {
+        // 设备列表更新
+        deviceChanged();
         // 默认值初始化
         $('.Modrinth-projectType').val('mod');
         $('.Modrinth-versions').val(['all']);
         // 最后处理
         hashChanged();
         $('.wait').removeAttr('class').removeAttr('style');
-        try { document.querySelector(decodeURI(location.hash)).scrollIntoView(); } catch (err) {};
+        try { document.querySelector(decodeURI(location.hash)).scrollIntoView(); } catch {};
     });
+
+    // 点击特效
     $('#clickEffect').on("change", () => {
-        ($('#clickEffect')[0].checked)? (()=>{
+        if ($('#clickEffect')[0].checked) {
             let script = document.createElement('script');
             script.id  = "ces";
             script.type= "text/javascript";
             script.src = "https://blog.xsawa.dev.tc/js/candy.min.js";
             $('head')[0].appendChild(script);
-        })():$('#ces')[0].remove();
+        } else $('#ces')[0].remove();
     });
-    
 });
 
-const debugChange = (e = $('[visibleInDebugMode]')) => {for(let t of e){t.style.display = (debug)? "block": "none"}};
-debugChange(); /** 监听变更我就先咕咕咕了 ＜（＾－＾）＞ */
+// 调试
+let debug = false;
+const debugChange = (e = $('[visibleInDebugMode]')) => {for (const t of e) t.style.display = (debug ? "block": "none")};
+debugChange(); /* 监听变更我就先咕咕咕了 ＜（＾－＾）＞ --xs */

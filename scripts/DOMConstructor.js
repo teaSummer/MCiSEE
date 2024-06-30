@@ -35,9 +35,9 @@ class DOMLauncherList {
         } catch (err) {
             url = {host: item.url};
         };
-        const convert = function(url, arg) {
+        const convert = ((url, arg) => {
             return (url == 'https://www.example.com/' || url.host == '') ? '' : `${arg}="${url}"`;
-        };
+        });
         const _title = item.title == item.abbr ? '' : `data-title="${item.title}"`;
         const _abbr = `data-abbr="${item.abbr}"`;
         const _download = convert(download, 'data-download');
@@ -63,10 +63,10 @@ class DOMLauncherList {
 
     static list(items = []) {
         let dom = '';
-        items.forEach(function(e) {
+        items.forEach((e) => {
             dom += DOMLauncherList.item(e);
         });
-        dom += '<mdui-menu-item label="?" disabled hidden><div slot="custom" class="custom-item"><div al="unselected"></div></div></mdui-menu-item>';
+        dom += '<mdui-menu-item value="?" disabled hidden><div slot="custom" class="custom-item"><div al="unselected"></div></div></mdui-menu-item>';
         return dom;
     };
 };
@@ -97,9 +97,9 @@ class DOMSearchableList {
         } catch (err) {
             url = {host: item.url};
         };
-        const convert = function(url, arg) {
+        const convert = ((url, arg) => {
             return (url == 'https://www.example.com/' || url.host == '') ? '' : `${arg}="${url}"`;
-        };
+        });
         const _title = `data-title="${item.title}"`;
         const _search = convert(search, 'data-search');
         const _abbr = `data-abbr="${item.abbr}"`;
@@ -111,7 +111,7 @@ class DOMSearchableList {
 
     static list(items = []) {
         let dom = '';
-        items.forEach(function(e) {
+        items.forEach((e) => {
             dom += DOMSearchableList.item(e);
         });
         return dom;
@@ -131,7 +131,7 @@ class DOMDeviceList {
         $('.device-list').html(dom);
 
         const UA = navigator.userAgent;
-        const getDevice = function() {
+        const getDevice = (() => {
             const device = browser();
             switch (device.system) {
                 case 'HarmonyOS':
@@ -156,7 +156,7 @@ class DOMDeviceList {
                 default:
                     return 'unsupported';
             };
-        };
+        });
 
         const toHide = 4;
         $('.device-list').val(getDevice());

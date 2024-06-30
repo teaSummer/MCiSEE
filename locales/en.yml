@@ -22,7 +22,7 @@ data:
   Linux.tip: Linux - Include Linux releases
   unsupported: Unsupported
   unknown: Unknown
-  unselected: Press to select
+  unselected: '[ Press to select ]'
   app: Apps
   launcher: Launchers
   launcherOnlyJavaEdition: '{launcher}（<b>{JavaEdition}</b>）'
@@ -43,7 +43,7 @@ data:
   shaders: Shaders
   resourcePacks: Resource Packs
   modpacks: Modpacks
-  prefixVersions: 'Version: '
+  prefixVersions: 'Versions: '
   all: All
   acquire: Acquire
   unfold: More...

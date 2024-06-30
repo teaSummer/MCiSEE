@@ -35,7 +35,7 @@ const utilityWebsite = [
             ["LeviLamina", "https://levilamina.liteldev.com"],
             ["Amethyst", "https://github.com/FrederoxDev/Amethyst"],
             ["官方壁纸集","https://www.minecraft.net/collectibles/minecraft-collection"],
-            // ["物理模组官网", "https://minecraftphysicsmod.com/"] 我不知道该丢哪(
+            // ["物理模组官网", "https://minecraftphysicsmod.com/"], // 我不知道该丢哪( --xs
             ["Eaglercraft", "https://eaglercraft.com/"],
             ["MC.JS", "https://play.mc.js.cool/"]
         ]
@@ -43,7 +43,7 @@ const utilityWebsite = [
     {
         "资源板块": [
             ["导航网", "https://www.mcnav.net"],
-            ["下载基岩版", "#基岩版启动器/版本库", false, "document.getElementById('基岩版启动器/版本库').open = true"],
+            ["下载基岩版", "#基岩版启动器/版本库"],
             ["IMC.RE", "https://imc.re"],
             ["地球资源社区", "https://www.planetminecraft.com"],
             ["基岩版地球资源社区", "https://mcpe-planet.com"],
@@ -77,7 +77,7 @@ const utilityWebsite = [
             ["皮肤改色器", "https://www.mcskinrecolor.com"],
             ["Nova Skin皮肤编辑器", "https://minecraft.novaskin.me"],
             ["Nova Skin壁纸生成器", "https://wallpapers.novaskin.me"],
-            ["minepix.app 皮肤生成壁纸", "https://www.minepix.app/"], // 和上面那个(应该)差不多(? 区别在ui和cn的加载速度(
+            ["minepix.app 皮肤生成壁纸", "https://www.minepix.app/"], // 和上面那个应该差不多,区别在于UI和大陆地区的加载速度
             ["正版玩家信息查询", "https://mcuuid.net"],
             ["Aternos免费开服", "https://aternos.org"],
             ["简幻欢公益面板服", "https://simpfun.cn"],
@@ -95,7 +95,7 @@ const utilityWebsite = [
             ["多彩文字生成器", "https://colorize.fun/minecraft"],
             ["bridge.", "https://bridge-core.app/"],
             ["MCreator", "https://mcreator.net"],
-            ["Minecraft Dot", "https://www.minecraft-dot.pictures/"], // 很强,能把图片用mc的方块渲染 ∨w∨👍 -- xs
+            ["Minecraft Dot", "https://www.minecraft-dot.pictures/"], // 将图片用MC里的方块渲染 ∨w∨👍 -- xs
             ["MCC客户端控制台","https://mccteam.github.io/"]
         ]
     },
@@ -114,7 +114,7 @@ const utilityWebsite = [
             ["MC开发者中文指南", "https://mouse0w0.github.io/MinecraftDeveloperGuide/"],
             ["基岩版JSONUI文档", "https://mcbeui.netlify.app/"],
             ["基岩版Script API文档", "https://projectxero.top/sapi/"],
-            ["教育版编程一小时教程", "https://code.org/minecraft"]
+            ["教育版编程一小时教程", "https://code.org/minecraft"],
             // ["网易我的世界开发者官网", "https://mc.163.com/dev/"]
         ]
     },
@@ -123,7 +123,7 @@ const utilityWebsite = [
             ["Bedrock Launcher Lite (PC)", "https://bedrocklauncher.github.io/"],
             ["mcapks (KLPBBS)", "https://mcapks.net"],
             ["mcdl版本库 (MineBBS)", "https://mc.minebbs.com"],
-            ["甘泉版本库 (原像素科技)", "https://mcbbk.blmcpia.com"], // 打赢复活赛了? -- 屑xs留
+            ["甘泉版本库 (原像素科技)", "https://mcbbk.blmcpia.com"],
             ["mcfa版本库 (@zihao_il)", "https://bbk.endyun.ltd/main"],
             ["mcfw版本库 (MCAppx)", "https://www.mcappx.com"],
             ["mcarc版本库 (@Hottampist)", "https://mcarc.github.io"],
