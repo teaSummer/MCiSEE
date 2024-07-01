@@ -1,4 +1,5 @@
 let searchKeyword = '', searchableAbbr = '';
+let updateLayerNumber = 0;
 
 const downloadSVG = '<span class="svg right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M320 336h76c55 0 100-21.21 100-75.6s-53-73.47-96-75.6C391.11 99.74 329 48 256 48c-69 0-113.44 45.79-128 91.2-60 5.7-112 35.88-112 98.4S70 336 136 336h56M192 400.1l64 63.9 64-63.9M256 224v224.03" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="56"></path></svg></span>';
 
@@ -39,6 +40,41 @@ const createSuperLabel = ((url, id) => {
     aElement.remove();
 });
 
+// 更新提示 创建
+const createUpdateLayer = ((abbr, lastVersion, latestVersion, download, deviceInfo, flag) => {
+    ++updateLayerNumber;
+    const dom = `
+    <div class="update-layer update-layer-${updateLayerNumber}">
+      <div al="downloadedLauncherUpdate"></div>
+      <div>
+        <text class="abbr">${abbr}</text>
+        <text al="updatedTo"></text>
+        <text al="${flag}"></text>
+        <text class="latest-version">${latestVersion}</text><text al="exclamationMark"></text>
+      </div><div>
+        <text class="last-version">${lastVersion}</text>
+        <text> => </text>
+        <text class="latest-version">${latestVersion}</text>
+      </div><div>
+        <text>(${deviceInfo})</text>
+      </div>
+      <a class="download" href="${download}" target="_blank" al="download"></a>
+    </div>`;
+    $('sidebar').before(dom);
+});
+
+// 更新提示 删除
+const deleteUpdateLayer = function() {
+    const number = Number($(this).attr('class').split('update-layer-')[1]);
+    $(`.update-layer-${number}`).remove();
+    for (let i = number + 1; i < 1000; ++i) {
+        if ($(`.update-layer-${i}`).length) {
+            $(`.update-layer-${i}`).removeClass(`update-layer-${i}`).addClass(`update-layer-${i - 1}`);
+        } else break;
+    };
+};
+
+
 // 获取下拉菜单选中项
 const checkedOption = ((selectElement) => {
     const selectInclude = (str) => ( $(selectElement).html().indexOf(str) != -1 );
@@ -73,10 +109,13 @@ $('div.launcher-list').html(DOMLauncherList.deviceList());
 // 监听启动器选择项
 const launcherChanged = ((event = {target: $('mdui-select.launcher-list')}) => {
     const checked = checkedOption(event.target);
-    const dataTitle = checked.attr('data-title');
+    const title = checked.attr('data-title');
+    const abbr = checked.attr('data-abbr');
+    const device = checked.attr('data-device');
+    let version, devVersion;
     $('.launcher-title').text('');
-    if (dataTitle && dataTitle != checked.val()) {
-        $('.launcher-title').text(dataTitle);
+    if (title && title != checked.val()) {
+        $('.launcher-title').text(title);
     };
     for (const attribute of ['data-download', 'data-dev-download', 'data-url']) {
         const button = $(`.${attribute}-launcher`);
@@ -93,7 +132,7 @@ const launcherChanged = ((event = {target: $('mdui-select.launcher-list')}) => {
                 };
             });
             if (attribute == 'data-download') {
-                const version = checked.attr('data-version');
+                version = checked.attr('data-version');
                 window.linkVersion  = version;
                 window.linkUrl      = url;
                 window.linkDownload = checked.attr('data-backup-download');
@@ -103,7 +142,7 @@ const launcherChanged = ((event = {target: $('mdui-select.launcher-list')}) => {
                 };
                 removeEmpty(version);
             } else {
-                const devVersion = checked.attr('data-dev-version');
+                devVersion = checked.attr('data-dev-version');
                 window.linkDevVersion  = devVersion;
                 window.linkDevUrl      = url;
                 window.linkDevDownload = checked.attr('data-backup-dev-download');
@@ -119,7 +158,17 @@ const launcherChanged = ((event = {target: $('mdui-select.launcher-list')}) => {
             button.attr('href', url).show();
         };
     };
-    i18n();
+    i18n(() => {
+        // 监听启动器下载
+        $('.launcher-download .download').click(() => {
+            const set = ((version, stableOrDev) => {
+                localStorage.setItem(`last-${device}-${abbr}-${stableOrDev}-download`, version);
+            });
+            // 判断稳定版与开发版
+            if (version && version != 'latest') set(version, 'stable');
+            if (devVersion && devVersion != 'latest') set(devVersion, 'dev');
+        });
+    });
 });
 
 
@@ -154,10 +203,10 @@ const searchableChanged = ((event = {target: $('.searchable-list')}) => {
     const abbr = checked.attr('data-abbr');
     window.linkSearchFrom = searchableAbbr = abbr;
     const note = checked.attr('data-note');
-    $('.searchable-label').html(`<a class="searchable-goto by-inline" href="${checked.attr('data-url')}" title="${note}" target="_blank"><p al="goto"></p> <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path></svg></a>`);
+    $('.searchable-label').html(`<a class="searchable-goto gravity-inline" href="${checked.attr('data-url')}" title="${note}" target="_blank"><p al="goto"></p> <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path></svg></a>`);
     localStorage.setItem('searchable-checked', event.target.value);
     // 计数器
-    countSearchable += 1;
+    ++countSearchable;
     if (countSearchable > 2) $('.searchable-list').click();
     // 显示 Modrinth 专用项
     $('.Modrinth').hide();
@@ -444,7 +493,7 @@ $(document).ready(() => {
             $(e).click();
         });
     });
-    // 启动器
+    // 启动器 初始化
     $('mdui-select.launcher-list').each((i, e) => {
         $(e).val('');
         $(e).children().click(function() {
@@ -455,6 +504,28 @@ $(document).ready(() => {
             $(e).click();
         });
     });
+    // 启动器 检查更新
+    for (const [device, deviceInfo] of supportedDevices) {
+        for (const launcher of eval(device + 'Launcher')) {
+            if (launcher.hasOwnProperty('version')) {
+                const lastStableVersion   = localStorage.getItem(`last-${device}-${launcher.abbr}-stable-download`);
+                const latestStableVersion = launcher.version;
+                if (lastStableVersion && lastStableVersion != latestStableVersion) {
+                    createUpdateLayer(launcher.abbr, lastStableVersion, latestStableVersion, launcher.download, deviceInfo, 'release');
+                    console.log(`您下载过的启动器更新啦！\n${launcher.abbr} 已更新至稳定版 ${latestStableVersion}！\n[点此更新] (${deviceInfo})`);
+                };
+            };
+            if (launcher.hasOwnProperty('dev')) {
+                const lastDevVersion   = localStorage.getItem(`last-${device}-${launcher.abbr}-dev-download`);
+                const latestDevVersion = launcher.dev.version;
+                if (lastDevVersion && lastDevVersion != latestDevVersion) {
+                    createUpdateLayer(launcher.abbr, lastDevVersion, latestDevVersion, launcher.dev.download, deviceInfo, 'preRelease');
+                    console.log(`您下载过的启动器更新啦！\n${launcher.abbr} 已更新至开发版 ${latestDevVersion}！\n[点此更新] (${deviceInfo})`);
+                };
+            };
+        };
+    };
+    $('.update-layer').click(deleteUpdateLayer);
     // 快速查询
     searchableChanged();
     $('.pre-flex').each((i, e) => pre_list(e));

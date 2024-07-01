@@ -12,8 +12,6 @@ class DOMLauncherList {
                 download: "https://www.example.com",
                 version: "1.0.x.x"
             },
-            __domID: void 0,
-            __domClass: void 0,
             ...item
         };
 
@@ -47,15 +45,16 @@ class DOMLauncherList {
         const _url = convert(url, 'data-url');
         const _version = (version == '1.0.x' ? '' : `data-version="${version}"`);
         const _devVersion = (devVersion == '1.0.x.x' ? '' : `data-dev-version="${devVersion}"`);
-        const properties = `${_title} ${_abbr} ${_download} ${_devDownload} ${_version} ${_devVersion} ${_url} ${_backupDownload} ${_backupDevDownload}`;
+        const properties = `${_title} ${_abbr} ${_download} ${_devDownload} ${_version} ${_devVersion} ${_url} ${_backupDownload} ${_backupDevDownload} data-device="${linkDeviceName}"`;
         return `<mdui-menu-item label="${item.abbr}" ${properties}><div slot="custom" class="custom-item"><div>${item.abbr}</div><div class="secondary">${_title.slice(12, -1)}</div></div></mdui-menu-item>`;
     };
 
     static deviceList(target = '') {
         let dom = '';
-        for (const [deviceName, supportedDevice] of supportedDevices) {
-            dom += `<mdui-select name="launcher-list" class="launcher-list ${deviceName}" style="/*display: none;" value="?" placement="bottom" variant="outlined" required>${
-                this.list(eval(deviceName + 'Launcher'))
+        for (const [device, _] of supportedDevices) {
+            window.linkDeviceName = device;
+            dom += `<mdui-select name="launcher-list" class="launcher-list ${device}" style="/*display: none;" value="?" placement="bottom" variant="outlined" required>${
+                this.list(eval(device + 'Launcher'))
             }</mdui-select>`;
         };
         return dom;
@@ -81,8 +80,6 @@ class DOMSearchableList {
             search: "https://www.example.com",
             note: "",
             url: "https://www.example.com",
-            __domID: void 0,
-            __domClass: void 0,
             ...item
         };
 
@@ -123,8 +120,8 @@ class DOMDeviceList {
 
     static show() {
         let dom = '';
-        for (const [deviceName, supportedDevice] of supportedDevices) {
-            dom += `<mdui-menu-item label="${deviceName}"><div slot="custom"><div>${supportedDevice}</div><div class="secondary" al="${deviceName}.tip"></div></div></mdui-menu-item>`;
+        for (const [device, deviceInfo] of supportedDevices) {
+            dom += `<mdui-menu-item label="${device}"><div slot="custom"><div>${deviceInfo}</div><div class="secondary" al="${device}.tip"></div></div></mdui-menu-item>`;
         };
         dom += `<mdui-menu-item value="unsupported" disabled hidden><div slot="custom" class="custom-item"><div al="unsupported"></div></div></mdui-menu-item>
                 <mdui-menu-item value="unknown" selected disabled hidden><div slot="custom" class="custom-item"><div al="unknown"></div></div></mdui-menu-item>`;
