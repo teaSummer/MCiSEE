@@ -511,27 +511,6 @@ $(document).ready(() => {
             $(e).click();
         });
     });
-    // 启动器 检查更新
-    for (const [device, deviceInfo] of supportedDevices) {
-        for (const launcher of eval(device + 'Launcher')) {
-            const abbr = (launcher.abbr ? launcher.abbr : launcher.title);
-            if (launcher.hasOwnProperty('version')) {
-                const lastStableVersion   = localStorage.getItem(`last-${device}-${abbr}-stable-download`);
-                const latestStableVersion = launcher.version;
-                if (lastStableVersion && lastStableVersion != latestStableVersion) {
-                    createUpdateLayer(abbr, lastStableVersion, latestStableVersion, launcher.download, device, deviceInfo, 'release');
-                };
-            };
-            if (launcher.hasOwnProperty('dev')) {
-                const lastDevVersion   = localStorage.getItem(`last-${device}-${abbr}-dev-download`);
-                const latestDevVersion = launcher.dev.version;
-                if (lastDevVersion && lastDevVersion != latestDevVersion) {
-                    createUpdateLayer(abbr, lastDevVersion, latestDevVersion, launcher.dev.download, device, deviceInfo, 'preRelease');
-                };
-            };
-        };
-    };
-    $('.update-layer').click(deleteUpdateLayer);
     // 快速查询
     searchableChanged();
     $('.pre-flex').each((i, e) => pre_list(e));
@@ -546,6 +525,27 @@ $(document).ready(() => {
     i18n(() => {
         // 设备列表更新
         deviceChanged();
+        // 启动器 检查更新
+        for (const [device, deviceInfo] of supportedDevices) {
+            for (const launcher of eval(device + 'Launcher')) {
+                const abbr = (launcher.abbr ? launcher.abbr : launcher.title);
+                if (launcher.hasOwnProperty('version')) {
+                    const lastStableVersion   = localStorage.getItem(`last-${device}-${abbr}-stable-download`);
+                    const latestStableVersion = launcher.version;
+                    if (lastStableVersion && lastStableVersion != latestStableVersion) {
+                        createUpdateLayer(abbr, lastStableVersion, latestStableVersion, launcher.download, device, deviceInfo, 'release');
+                    };
+                };
+                if (launcher.hasOwnProperty('dev')) {
+                    const lastDevVersion   = localStorage.getItem(`last-${device}-${abbr}-dev-download`);
+                    const latestDevVersion = launcher.dev.version;
+                    if (lastDevVersion && lastDevVersion != latestDevVersion) {
+                        createUpdateLayer(abbr, lastDevVersion, latestDevVersion, launcher.dev.download, device, deviceInfo, 'preRelease');
+                    };
+                };
+            };
+        };
+        $('.update-layer').click(deleteUpdateLayer);
         // 默认值初始化
         $('.Modrinth-projectType').val('mod');
         $('.Modrinth-versions').val(['all']);
