@@ -41,26 +41,33 @@ const createSuperLabel = ((url, id) => {
 });
 
 // 更新提示 创建
-const createUpdateLayer = ((abbr, lastVersion, latestVersion, download, deviceInfo, flag) => {
+const createUpdateLayer = ((abbr, lastVersion, latestVersion, download, device, deviceInfo, flag) => {
     ++updateLayerNumber;
+    const stableOrDev = ((flag == 'release') ? 'stable' : 'dev');
     const dom = `
-    <div class="update-layer update-layer-${updateLayerNumber}">
-      <div al="downloadedLauncherUpdate"></div>
-      <div>
-        <text class="abbr">${abbr}</text>
-        <text al="updatedTo"></text>
-        <text al="${flag}"></text>
-        <text class="latest-version">${latestVersion}</text><text al="exclamationMark"></text>
-      </div><div>
-        <text class="last-version">${lastVersion}</text>
-        <text> => </text>
-        <text class="latest-version">${latestVersion}</text>
-      </div><div>
-        <text>(${deviceInfo})</text>
-      </div>
-      <a class="download" href="${download}" target="_blank" al="download"></a>
-    </div>`;
+      <div class="update-layer update-layer-${updateLayerNumber}">
+        <div al="downloadedLauncherUpdate"></div>
+        <div>
+          <text class="abbr">${abbr}</text>
+          <text al="updatedTo"></text>
+          <text al="${flag}"></text>
+          <text class="latest-version">${latestVersion}</text><text al="exclamationMark"></text>
+        </div><div>
+          <text class="last-version">${lastVersion}</text>
+          <text> => </text>
+          <text class="latest-version">${latestVersion}</text>
+        </div><div>
+          <text>(${deviceInfo})</text>
+        </div>
+        <a class="download" href="${download}" target="_blank" al="download"></a>
+      </div>`;
     $('sidebar').before(dom);
+    $(`.update-layer-${updateLayerNumber} .download`).click(() => {
+        const set = ((version, stableOrDev) => {
+            localStorage.setItem(`last-${device}-${abbr}-${stableOrDev}-download`, version);
+        });
+        set(latestVersion, stableOrDev);
+    });
 });
 
 // 更新提示 删除
@@ -512,14 +519,14 @@ $(document).ready(() => {
                 const lastStableVersion   = localStorage.getItem(`last-${device}-${abbr}-stable-download`);
                 const latestStableVersion = launcher.version;
                 if (lastStableVersion && lastStableVersion != latestStableVersion) {
-                    createUpdateLayer(abbr, lastStableVersion, latestStableVersion, launcher.download, deviceInfo, 'release');
+                    createUpdateLayer(abbr, lastStableVersion, latestStableVersion, launcher.download, device, deviceInfo, 'release');
                 };
             };
             if (launcher.hasOwnProperty('dev')) {
                 const lastDevVersion   = localStorage.getItem(`last-${device}-${abbr}-dev-download`);
                 const latestDevVersion = launcher.dev.version;
                 if (lastDevVersion && lastDevVersion != latestDevVersion) {
-                    createUpdateLayer(abbr, lastDevVersion, latestDevVersion, launcher.dev.download, deviceInfo, 'preRelease');
+                    createUpdateLayer(abbr, lastDevVersion, latestDevVersion, launcher.dev.download, device, deviceInfo, 'preRelease');
                 };
             };
         };
