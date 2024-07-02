@@ -54,7 +54,7 @@ const createUpdateLayer = ((abbr, lastVersion, latestVersion, download, device, 
           <text class="latest-version">${latestVersion}</text><text al="exclamationMark"></text>
         </div><div>
           <text class="last-version">${lastVersion}</text>
-          <text> => </text>
+          <text al="updateArrow"></text>
           <text class="latest-version">${latestVersion}</text>
         </div><div>
           <text>(${deviceInfo})</text>

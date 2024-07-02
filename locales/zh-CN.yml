@@ -35,6 +35,7 @@ data:
   download: 下载
   downloadedLauncherUpdate: 您下载过的启动器更新啦：
   updatedTo: 已更新至
+  updateArrow: ➔
   exclamationMark: ！
   search: 搜索
   searchFrom: ' 从 ${linkSearchFrom} 中搜索 ....'

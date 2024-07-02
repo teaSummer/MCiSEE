@@ -35,6 +35,7 @@ data:
   download: Download
   downloadedLauncherUpdate: 'Launcher Update (Downloaded):'
   updatedTo: updated to
+  updateArrow: ➔
   exclamationMark: '!'
   search: Search
   searchFrom: ' Search from ${linkSearchFrom} ....'
