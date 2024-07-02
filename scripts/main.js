@@ -507,20 +507,19 @@ $(document).ready(() => {
     // 启动器 检查更新
     for (const [device, deviceInfo] of supportedDevices) {
         for (const launcher of eval(device + 'Launcher')) {
+            const abbr = (launcher.abbr ? launcher.abbr : launcher.title);
             if (launcher.hasOwnProperty('version')) {
-                const lastStableVersion   = localStorage.getItem(`last-${device}-${launcher.abbr}-stable-download`);
+                const lastStableVersion   = localStorage.getItem(`last-${device}-${abbr}-stable-download`);
                 const latestStableVersion = launcher.version;
                 if (lastStableVersion && lastStableVersion != latestStableVersion) {
-                    createUpdateLayer(launcher.abbr, lastStableVersion, latestStableVersion, launcher.download, deviceInfo, 'release');
-                    console.log(`您下载过的启动器更新啦！\n${launcher.abbr} 已更新至稳定版 ${latestStableVersion}！\n[点此更新] (${deviceInfo})`);
+                    createUpdateLayer(abbr, lastStableVersion, latestStableVersion, launcher.download, deviceInfo, 'release');
                 };
             };
             if (launcher.hasOwnProperty('dev')) {
-                const lastDevVersion   = localStorage.getItem(`last-${device}-${launcher.abbr}-dev-download`);
+                const lastDevVersion   = localStorage.getItem(`last-${device}-${abbr}-dev-download`);
                 const latestDevVersion = launcher.dev.version;
                 if (lastDevVersion && lastDevVersion != latestDevVersion) {
-                    createUpdateLayer(launcher.abbr, lastDevVersion, latestDevVersion, launcher.dev.download, deviceInfo, 'preRelease');
-                    console.log(`您下载过的启动器更新啦！\n${launcher.abbr} 已更新至开发版 ${latestDevVersion}！\n[点此更新] (${deviceInfo})`);
+                    createUpdateLayer(abbr, lastDevVersion, latestDevVersion, launcher.dev.download, deviceInfo, 'preRelease');
                 };
             };
         };

@@ -36,7 +36,7 @@ class DOMLauncherList {
         const convert = ((url, arg) => {
             return (url == 'https://www.example.com/' || url.host == '') ? '' : `${arg}="${url}"`;
         });
-        const _title = item.title == item.abbr ? '' : `data-title="${item.title}"`;
+        const _title = ((item.title == item.abbr) ? '' : `data-title="${item.title}"`);
         const _abbr = `data-abbr="${item.abbr}"`;
         const _download = convert(download, 'data-download');
         const _devDownload = convert(devDownload, 'data-dev-download');
