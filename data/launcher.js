@@ -85,8 +85,8 @@ const WindowsLauncher = [
     {
         title: "X Minecraft Launcher",
         abbr: "XMCL",
-        download: "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.44.10/xmcl-0.44.10-win32-x64.zip",
-        version: "0.44.10",
+        download: "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.44.11/xmcl-0.44.11-win32-x64.zip",
+        version: "0.44.11",
         url: "https://github.com/voxelum/x-minecraft-launcher"
     },
     {
@@ -169,8 +169,8 @@ const macOSLauncher = [
     {
         title: "X Minecraft Launcher",
         abbr: "XMCL",
-        download: "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.44.10/xmcl-0.44.10.dmg",
-        version: "0.44.10",
+        download: "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.44.11/xmcl-0.44.11.dmg",
+        version: "0.44.11",
         url: "https://github.com/Voxelum/x-minecraft-launcher"
     },
     {
@@ -226,8 +226,8 @@ const LinuxLauncher = [
     {
         title: "X Minecraft Launcher",
         abbr: "XMCL",
-        download: "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.44.10/xmcl-0.44.10-arm64.deb",
-        version: "0.44.10",
+        download: "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.44.11/xmcl-0.44.11-arm64.deb",
+        version: "0.44.11",
         url: "https://github.com/voxelum/x-minecraft-launcher"
     },
     {
