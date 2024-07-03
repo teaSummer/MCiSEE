@@ -540,8 +540,8 @@ $(document).ready(() => {
         zh: 'zh-CN'
     });
     i18n(() => {
-        // 设备列表更新
-        deviceChanged();
+        // 启动器 初始化
+        $('mdui-select.launcher-list').each((i, e) => $(e).val('?'));
         // 启动器 检查更新
         if (!checkedUpdates) {
             checkedUpdates = true;
