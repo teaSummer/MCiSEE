@@ -181,6 +181,11 @@
                     <input class="searchable-direct" type="checkbox" checked>
                     <text al="searchableDirect"></text>
                 </label>
+                <label style="display: flex; align-items: center;">
+                    <text al="searchablePromptLength"></text>
+                    <mdui-slider class="inline-block searchable-prompt-length" name="searchable-prompt-length"
+                                 value="10" min="0" max="30"></mdui-slider>
+                </label>
                 <label visibleInDebugMode>
                     <input id="clickEffect" type="checkbox" onclick="this.disabled = true;">
                     <text al="clickEffect">clickEffect</text>

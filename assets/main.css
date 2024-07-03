@@ -459,6 +459,10 @@ div[id]>*:first-child {
     display: none !important;
 }
 
+.searchable-prompt-length {
+    width: 200px;
+}
+
 .acquire-versions {
     transition-duration: 0.1s;
 }

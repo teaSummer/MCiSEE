@@ -56,6 +56,7 @@ data:
   GitHubProxy: >-
     GitHub 文件使用 <a href="https://mirror.ghproxy.com" target="_blank">下载加速</a> {download}
   searchableDirect: '{searchable}：尽可能自动进入详情页'
+  searchablePromptLength: 候选词数(0-30)：
   ellipsis: ....
   statistics: 统计信息
   pageViews: 访问计数

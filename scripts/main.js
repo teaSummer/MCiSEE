@@ -284,6 +284,11 @@ $('.searchable-direct').change(() => {
     localStorage.setItem('searchable-direct', $('.searchable-direct').is(':checked'));
 });
 
+// 监听快速查询侯选词数修改
+$('.searchable-prompt-length').change(() => {
+    localStorage.setItem('searchable-prompt-length', $('.searchable-prompt-length').val());
+});
+
 
 // 监听版本列表变化
 $('.Modrinth-versions').change(function() {
@@ -319,12 +324,13 @@ $('.acquire-versions').click(function() {
 // 配置初始化
 const config = ((settings) => {
     for (const [option, defaultVal] of Object.entries(settings)) {
-        if (localStorage.getItem(option) === void 0) localStorage.setItem(option, defaultVal);
-        if (localStorage.getItem(option) == 'true') $('.' + option).attr('checked', true);
-        else $('.' + option).attr('checked', false);
+        if (localStorage.getItem(option) == null) localStorage.setItem(option, defaultVal);
+        if (localStorage.getItem(option) == 'true' ) $('.' + option).attr('checked', true );
+        else if (localStorage.getItem(option) == 'false') $('.' + option).attr('checked', false);
+        else $('.' + option).val(localStorage.getItem(option));
     };
 });
-config({'github-proxy': (navigator.language == "zh-CN" ? true : false), 'searchable-direct': true});
+config({'github-proxy': (navigator.language == "zh-CN" ? true : false), 'searchable-direct': true, 'searchable-prompt-length': '10'});
 
 
 // 获取候选词
@@ -335,9 +341,9 @@ $('.searchable-input').typeahead(
         minLength: 1
     },
     {
-        name: 'searchable-data',
+        name: 'searchable-prompt',
         async: true,
-        limit: 10,
+        limit: 100,  // 当前实际限制为 30
         source: ((query, syncResults, asyncResults) => {
             setTimeout(() => {
                 if (!searchableComposition) return;
@@ -370,11 +376,11 @@ $('.searchable-input').typeahead(
                 };
                 // API
                 const api = {
-                    Wiki: `https://zh.minecraft.wiki/api.php?action=opensearch&search=${search}&limit=11`,
-                    BWiki: `https://wiki.biligame.com/mc/api.php?action=opensearch&search=${search}&limit=11`,
-                    Modrinth: `https://api.modrinth.com/v2/search?limit=11&index=relevance&query=${search}&facets=${facets}`,
-                    BEDW: `https://wiki.mcbe-dev.net/w/api.php?action=opensearch&search=${search}&namespace=0%7C3000%7C3002%7C3004%7C3008%7C3010&limit=11`,
-                    MinePlugin: `https://mineplugin.org/api.php?action=opensearch&search=${search}&limit=11`
+                    Wiki: `https://zh.minecraft.wiki/api.php?action=opensearch&search=${search}&limit=30`,
+                    BWiki: `https://wiki.biligame.com/mc/api.php?action=opensearch&search=${search}&limit=30`,
+                    Modrinth: `https://api.modrinth.com/v2/search?limit=30&index=relevance&query=${search}&facets=${facets}`,
+                    BEDW: `https://wiki.mcbe-dev.net/w/api.php?action=opensearch&search=${search}&namespace=0%7C3000%7C3002%7C3004%7C3008%7C3010&limit=30`,
+                    MinePlugin: `https://mineplugin.org/api.php?action=opensearch&search=${search}&limit=30`
                 };
                 const url = api[abbr];
                 if (url) {
@@ -397,6 +403,7 @@ $('.searchable-input').typeahead(
                                 result.hits.map((item) => arr.push(item.title));
                                 result = arr;
                             };
+                            result = result.slice(0, $('.searchable-prompt-length').val());
                             $('.searchable-clear').removeAttr('loading');  // 在获取候选词时显示加载动画（已完成）
                             return asyncResults(result);
                         }),

@@ -57,6 +57,7 @@ data:
     Speedup the GitHub with <a href="https://mirror.ghproxy.com" target="_blank">mirror proxy</a>
     (for Chinese Mainland)
   searchableDirect: '{searchable}: Auto access to the detail page when possible'
+  searchablePromptLength: 'Prompt Words:'
   ellipsis: ....
   statistics: Statistics
   pageViews: Page Views
