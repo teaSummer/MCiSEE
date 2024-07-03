@@ -70,7 +70,6 @@ const createUpdateLayer = ((abbr, lastVersion, latestVersion, download, device, 
             localStorage.setItem(`last-${device}-${abbr}-${stableOrDev}-download`, version);
         });
         set(latestVersion, stableOrDev);
-        createSuperLabel(download, `download-launcher`);
     });
     if (updateLayerNumber) notificationCount = `(${updateLayerNumber})`;
 });
