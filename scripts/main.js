@@ -62,7 +62,7 @@ const createUpdateLayer = ((abbr, lastVersion, latestVersion, download, device, 
         </div><div>
           <text>(${deviceInfo})</text>
         </div>
-        <a class="download" href="${download}" target="_blank" al="download" ondragstart="return false;"></a>
+        <a class="download" href="${download}" target="_blank" al="download" ondragstart="event.dataTransfer.effectAllowed = 'none';"></a>
       </div>`;
     $('sidebar').before(dom);
     $(`.update-layer-${updateLayerNumber} .download`).click(() => {
