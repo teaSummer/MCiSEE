@@ -1,5 +1,7 @@
 let searchKeyword = '', searchableAbbr = '';
-let updateLayerNumber = 0;
+
+let notificationCount = '';
+let visibility = true;
 
 const downloadSVG = '<span class="svg right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M320 336h76c55 0 100-21.21 100-75.6s-53-73.47-96-75.6C391.11 99.74 329 48 256 48c-69 0-113.44 45.79-128 91.2-60 5.7-112 35.88-112 98.4S70 336 136 336h56M192 400.1l64 63.9 64-63.9M256 224v224.03" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="56"></path></svg></span>';
 
@@ -41,6 +43,7 @@ const createSuperLabel = ((url, id) => {
 });
 
 // 更新提示 创建
+let updateLayerNumber = 0;
 const createUpdateLayer = ((abbr, lastVersion, latestVersion, download, device, deviceInfo, flag) => {
     ++updateLayerNumber;
     const stableOrDev = ((flag == 'release') ? 'stable' : 'dev');
@@ -59,7 +62,7 @@ const createUpdateLayer = ((abbr, lastVersion, latestVersion, download, device, 
         </div><div>
           <text>(${deviceInfo})</text>
         </div>
-        <a class="download" href="${download}" target="_blank" al="download"></a>
+        <a class="download" href="${download}" target="_blank" al="download" ondragstart="return false;"></a>
       </div>`;
     $('sidebar').before(dom);
     $(`.update-layer-${updateLayerNumber} .download`).click(() => {
@@ -67,11 +70,18 @@ const createUpdateLayer = ((abbr, lastVersion, latestVersion, download, device, 
             localStorage.setItem(`last-${device}-${abbr}-${stableOrDev}-download`, version);
         });
         set(latestVersion, stableOrDev);
+        createSuperLabel(download, `download-launcher`);
     });
+    if (updateLayerNumber) notificationCount = `(${updateLayerNumber})`;
 });
 
 // 更新提示 删除
 const deleteUpdateLayer = function() {
+    --updateLayerNumber;
+    notificationCount = '';
+    if (updateLayerNumber) notificationCount = `(${updateLayerNumber})`;
+    i18n();
+
     const number = Number($(this).attr('class').split('update-layer-')[1]);
     $(`.update-layer-${number}`).remove();
     for (let i = number + 1; i < 1000; ++i) {
@@ -560,7 +570,7 @@ $(document).ready(() => {
     });
 
     // 点击特效
-    $('#clickEffect').on("change", () => {
+    $('#clickEffect').change(() => {
         if ($('#clickEffect')[0].checked) {
             let script = document.createElement('script');
             script.id  = "ces";
@@ -570,8 +580,19 @@ $(document).ready(() => {
         } else $('#ces')[0].remove();
     });
 });
+// 监听标签页切换事件
+$(document).on('visibilitychange', () => {
+    if (document.visibilityState == 'hidden') {
+        // 当前标签页隐藏
+        visibility = false;
+    };
+    if (document.visibilityState == 'visible') {
+        // 当前标签页显示
+        visibility = true;
+    };
+});
 
 // 调试
 let debug = false;
-const debugChange = (e = $('[visibleInDebugMode]')) => {for (const t of e) t.style.display = (debug ? "block": "none")};
+const debugChange = (e = $('[visibleInDebugMode]')) => {for (const t of e) t.style.display = (debug ? 'block': 'none')};
 debugChange(); /* 监听变更我就先咕咕咕了 ＜（＾－＾）＞ --xs */

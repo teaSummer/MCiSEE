@@ -1,7 +1,7 @@
 language: zh-CN
 
 data:
-  head.title: 所见皆是Minecraft - MCiSEE
+  head.title: ${notificationCount} 所见皆是Minecraft - MCiSEE
   description.title: 所见皆是<i>Minecraft</i>
   description.1: 玩家们可以从这里挖掘Minecraft常用资源，例如软件等。
   description.2: >-
@@ -82,14 +82,18 @@ data:
   preRelease: 开发版
   preRelease.note: 开发测试版
   launcher.release: >-
-    <a class="button download data-download-launcher" target="_blank" title="{download}{release.note} ${linkVersion}"
-    data-backup-href="${linkDownload}" href="${linkUrl}">${downloadSVG}{download}{release} ${linkVersion}</a>
+    <a class="button download data-download-launcher" target="_blank"
+    href="${linkUrl}" data-backup-href="${linkDownload}" ondragstart="return false;"
+    title="{download}{release.note} ${linkVersion}">${downloadSVG}{download}{release} ${linkVersion}</a>
   launcher.release.latest: >-
-    <a class="button download data-download-launcher" target="_blank" title="{download}{latest.note}{release.note}"
-    data-backup-href="${linkDownload}" href="${linkUrl}">${downloadSVG}{download}{latest}{release}</a>
+    <a class="button download data-download-launcher" target="_blank"
+    href="${linkUrl}" data-backup-href="${linkDownload}" ondragstart="return false;"
+    title="{download}{latest.note}{release.note}">${downloadSVG}{download}{latest}{release}</a>
   launcher.preRelease: >-
-    <a class="button download data-dev-download-launcher" target="_blank" title="{download}{preRelease.note} ${linkDevVersion}"
-    data-backup-href="${linkDevDownload}" href="${linkDevUrl}">${downloadSVG}{download}{preRelease} ${linkDevVersion}</a>
+    <a class="button download data-dev-download-launcher" target="_blank"
+    href="${linkDevUrl}"data-backup-href="${linkDevDownload}" ondragstart="return false;"
+    title="{download}{preRelease.note} ${linkDevVersion}">${downloadSVG}{download}{preRelease} ${linkDevVersion}</a>
   launcher.preRelease.latest: >-
-    <a class="button download data-dev-download-launcher" target="_blank" title="{download}{latest.note}{preRelease.note}"
-    data-backup-href="${linkDevDownload}" href="${linkDevUrl}">${downloadSVG}{download}{latest}{preRelease}</a>
+    <a class="button download data-dev-download-launcher" target="_blank"
+    href="${linkDevUrl}" data-backup-href="${linkDevDownload}" ondragstart="return false;"
+    title="{download}{latest.note}{preRelease.note}">${downloadSVG}{download}{latest}{preRelease}</a>

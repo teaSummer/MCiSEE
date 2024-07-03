@@ -226,8 +226,8 @@ input[type='text']::placeholder {
 
 button {
     color: #ffffff;
-    background-color: #1b7eff !important;
-    border: 2px solid #1b7eff;
+    background-color: #1f6feb !important;
+    border: 2px solid #1f6feb;
     border-radius: 6px;
     padding: 5px 12px;
     font-size: 15px;
@@ -239,7 +239,13 @@ button {
 }
 
 button:hover {
-    opacity: 70% !important;
+    background-color: #1258c5 !important;
+    border: 2px solid #1258c5;
+}
+
+button:active {
+    background-color: #367eed !important;
+    border: 2px solid #367eed;
 }
 
 button.disabled {
