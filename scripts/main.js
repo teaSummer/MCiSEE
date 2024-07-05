@@ -4,6 +4,7 @@ let notificationCount = '';
 let visibility = true;
 
 const downloadSVG = '<span class="svg right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M320 336h76c55 0 100-21.21 100-75.6s-53-73.47-96-75.6C391.11 99.74 329 48 256 48c-69 0-113.44 45.79-128 91.2-60 5.7-112 35.88-112 98.4S70 336 136 336h56M192 400.1l64 63.9 64-63.9M256 224v224.03" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="56"></path></svg></span>';
+const downloadMirror = ((url) => `https://ghproxy.cn/${url}`); // 针对大陆地区 | for Chinese Mainland
 
 // 列出所有已支持的设备
 const supportedDevices = [
@@ -138,7 +139,7 @@ const launcherChanged = ((event = {target: $('mdui-select.launcher-list')}) => {
         let url = checked.attr(attribute);
         if (attribute.endsWith('download')) {
             if ($('.github-proxy').is(':checked') && String(url).startsWith('https://github.com/')) {
-                url = 'https://mirror.ghproxy.com/' + url;
+                url = downloadMirror(url);
             };
             const removeEmpty = ((version) => {
                 if (version === void 0) {
@@ -194,8 +195,8 @@ const proxyChanged = (() => {
     try {
         if ($('.github-proxy').is(':checked')) {
             $('.launcher-download>a.button').each((i, e) => {
-                const link = $(e).attr('href');
-                if (link.startsWith('https://github.com/')) $(e).attr('href', 'https://mirror.ghproxy.com/' + link);
+                const url = $(e).attr('href');
+                if (url.startsWith('https://github.com/')) $(e).attr('href', downloadMirror(url));
             });
         } else {
             $('.launcher-download>a.button').each((i, e) => {
