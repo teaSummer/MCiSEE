@@ -60,9 +60,8 @@ const createUpdateLayer = ((abbr, lastVersion, latestVersion, download, device, 
           <text class="last-version">${lastVersion}</text>
           <text al="updateArrow"></text>
           <text class="latest-version">${latestVersion}</text>
-        </div><div>
-          <text>(${deviceInfo})</text>
         </div>
+        <div>(${deviceInfo})</div>
         <a class="download" href="${download}" target="_blank" al="download" ondragstart="event.dataTransfer.effectAllowed = 'none';"></a>
       </div>`;
     $('sidebar').before(dom);
