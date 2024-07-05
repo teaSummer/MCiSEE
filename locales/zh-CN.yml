@@ -1,13 +1,16 @@
 language: zh-CN
 
 data:
-  head.title: ${notificationCount} 所见皆是Minecraft - MCiSEE
-  description.title: 所见皆是<i>Minecraft</i>
-  description.1: 玩家们可以从这里挖掘Minecraft常用资源，例如软件等。
-  description.2: >-
+  meta.image.alt: 所见皆是Minecraft
+  meta.title: '{meta.image.alt} - MCiSEE'
+  meta.description: 所见皆是Minecraft，让获取MC资源更加轻便！
+  head.title: ${notificationCount} {meta.title}
+  introduction.title: 所见皆是<i>Minecraft</i>
+  introduction.1: 玩家们可以从这里挖掘Minecraft常用资源，例如软件等。
+  introduction.2: >-
     欢迎各位来 <a href="https://github.com/teaSummer/MCiSEE" target="_blank">GitHub 项目</a>
     {contribute} 或 点击 Star
-  description.3: 这里也需要你们提供更多有趣的资源！
+  introduction.3: 这里也需要你们提供更多有趣的资源！
   BedrockEdition: 基岩版
   JavaEdition: Java版
   contribute: 做出贡献

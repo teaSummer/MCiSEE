@@ -1,13 +1,16 @@
 language: en
 
 data:
-  head.title: ${notificationCount} Wow, It's All Minecraft - MCiSEE
-  description.title: Wow, It's All <i>Minecraft</i>
-  description.1: Here are Minecraft resources for players. How about "Apps"?
-  description.2: >-
+  meta.image.alt: Wow, It's All Minecraft
+  meta.title: '{meta.image.alt} - MCiSEE'
+  meta.description: All of Minecraft, EASILY get Minecraft resources!
+  head.title: ${notificationCount} {meta.title}
+  introduction.title: Wow, It's All <i>Minecraft</i>
+  introduction.1: Here are Minecraft resources for players. How about "Apps"?
+  introduction.2: >-
     Welcome to contribute for <a href="https://github.com/teaSummer/MCiSEE" target="_blank">GitHub Repo</a>!
     Please give us a star
-  description.3: Enjoy and share more interesting with everyone!
+  introduction.3: Enjoy and share more interesting with everyone!
   BedrockEdition: Bedrock Edition
   JavaEdition: Java Edition
   contribute: Be a contributor
