@@ -136,7 +136,7 @@ jobs:
           git config --global user.name teaSummer
           git config --global user.email see_tea@outlook.com
           CHANGELOG=`echo '${{ steps.modify.outputs.changelog }}' | sed 's/#n/\n/g'`
-          git commit -am 'modified: update ${{ matrix.subtitle }}
+          git commit -am 'modify: update ${{ matrix.subtitle }}
           
           [Auto] Update Launcher Version:
           '"$CHANGELOG
