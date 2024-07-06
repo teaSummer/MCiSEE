@@ -63,7 +63,7 @@ data:
   searchablePromptLength: 'Prompt Words(0-30):'
   ellipsis: ....
   statistics: Statistics
-  pageViews: Page Views
+  visitorCount: Visitor Count
   contributors: Contributors
   starsOverTime: GitHub Stars Over Time
   ICP: ''

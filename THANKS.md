@@ -39,7 +39,7 @@
 
 [Shields.io](https://github.com/badges/shields) 简洁图章图标
 
-[Badger](https://badges.toozhao.com) 网站访问次数统计
+[Visitor Badge](https://github.com/jwenjian/visitor-badge) 访问次数统计
 
 [BBSPK](https://github.com/LYOfficial/BBSPK) 新兴我的世界论坛晋级赛
 
@@ -117,7 +117,7 @@ Special thanks to: [GitHub](https://github.com) and [Gitee](https://gitee.com) (
 
 [Shields.io](https://github.com/badges/shields) Concise, consistent, and legible badges
 
-[Badger](https://badges.toozhao.com) Page Views
+[Visitor Badge](https://github.com/jwenjian/visitor-badge) Count visitors
 
 [BBSPK](https://github.com/LYOfficial/BBSPK) 新兴我的世界论坛晋级赛
 

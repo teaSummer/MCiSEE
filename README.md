@@ -1,6 +1,6 @@
 # MCiSEE
 
-![](https://img.shields.io/badge/license-CC--BY--SA--4.0-green) ![](https://img.shields.io/github/stars/teaSummer/MCiSEE) [![Page Views](https://badges.toozhao.com/badges/01HTFPN35M6ETEFBVAP3SEWRKG/green.svg)](https://badges.toozhao.com/stats/01HTFPN35M6ETEFBVAP3SEWRKG)
+![](https://img.shields.io/badge/license-CC--BY--SA--4.0-green) ![](https://img.shields.io/github/stars/teaSummer/MCiSEE) ![](https://visitor-badge.laobi.icu/badge?page_id=teaSummer.MCiSEE)
 
 **所见皆是*Minecraft*，让获取MC资源更加轻便！**
 

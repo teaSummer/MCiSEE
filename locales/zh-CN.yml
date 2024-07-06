@@ -62,7 +62,7 @@ data:
   searchablePromptLength: 候选词数(0-30)：
   ellipsis: ....
   statistics: 统计信息
-  pageViews: 访问计数
+  visitorCount: 访问计数
   contributors: 贡献者
   starsOverTime: GitHub 星星历史图
   ICP: <a href="https://icp.gov.moe/?keyword=20247837" target="_blank">萌ICP备20247837号</a>
