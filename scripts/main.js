@@ -25,8 +25,13 @@ if (history.scrollRestoration) {
 
 
 // 国际化 (internationalization)
+al.setLangPropPath('locales');
+al.setDefaultCountry({
+    en: 'en',
+    zh: 'zh-CN'
+});
 const i18n = ((callback = () => {}) => {
-    al.setLangProp(['locales/zh-CN.yml','locales/en.yml'], () => {
+    al.setLangProp(['zh-CN.yml','en.yml'], () => {
         al.load(void 0, al.mode.HTML, callback);
     }, {url: true, yaml: true});
 });
@@ -535,10 +540,6 @@ $(document).ready(() => {
         $(e).children().click(() => $(e).click());
     });
     // 国际化 (internationalization) 准备进行
-    al.setDefaultCountry({
-        en: 'en',
-        zh: 'zh-CN'
-    });
     i18n(() => {
         // 启动器 初始化
         $('mdui-select.launcher-list').each((i, e) => $(e).val('?'));
