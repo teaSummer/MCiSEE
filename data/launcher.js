@@ -3,8 +3,8 @@ const AndroidLauncher = [
     {
         title: "Fold Craft Launcher",
         abbr: "FCL",
-        download: "https://github.com/FCL-Team/FoldCraftLauncher/releases/download/1.1.7.1/FCL-release-1.1.7.1-all.apk",
-        version: "1.1.7.1",
+        download: "https://github.com/FCL-Team/FoldCraftLauncher/releases/download/1.1.7.2/FCL-release-1.1.7.2-all.apk",
+        version: "1.1.7.2",
         url: "https://github.com/FCL-Team/FoldCraftLauncher"
     },
     {
@@ -85,8 +85,8 @@ const WindowsLauncher = [
     {
         title: "X Minecraft Launcher",
         abbr: "XMCL",
-        download: "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.44.11/xmcl-0.44.11-win32-x64.zip",
-        version: "0.44.11",
+        download: "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.44.12/xmcl-0.44.12-win32-x64.zip",
+        version: "0.44.12",
         url: "https://github.com/voxelum/x-minecraft-launcher"
     },
     {
@@ -169,8 +169,8 @@ const macOSLauncher = [
     {
         title: "X Minecraft Launcher",
         abbr: "XMCL",
-        download: "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.44.11/xmcl-0.44.11.dmg",
-        version: "0.44.11",
+        download: "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.44.12/xmcl-0.44.12.dmg",
+        version: "0.44.12",
         url: "https://github.com/Voxelum/x-minecraft-launcher"
     },
     {
@@ -226,8 +226,8 @@ const LinuxLauncher = [
     {
         title: "X Minecraft Launcher",
         abbr: "XMCL",
-        download: "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.44.11/xmcl-0.44.11-arm64.deb",
-        version: "0.44.11",
+        download: "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.44.12/xmcl-0.44.12-arm64.deb",
+        version: "0.44.12",
         url: "https://github.com/voxelum/x-minecraft-launcher"
     },
     {
