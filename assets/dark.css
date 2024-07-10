@@ -1,22 +1,22 @@
 @media (prefers-color-scheme: dark) {
     a {
-        color: #006eff;
+        color: #ff1493;
         text-decoration: none;
         transition-duration: 0.2s;
     }
 
     a:hover {
-        color: #2d87ff;
+        color: #ff1491c9;
         text-decoration: underline;
     }
 
     a:active {
-        color: #0058c4;
+        color: #ff1491a2;
     }
 
     a.button {
         color: #ffffff;
-        background-color: #1f6feb;
+        background-color: #075457;
         display: inline-block;
         font-size: 1rem;
         margin-top: 10px;
@@ -31,11 +31,11 @@
     }
 
     a.button:hover {
-        background-color: #1258c5;
+        background-color: #07545788;
     }
 
     a.button:active {
-        background-color: #367eed;
+        background-color: #0754572c;
     }
 
     a.button.important {
@@ -122,6 +122,10 @@
         opacity: 100%;
     }
 
+    sidebar {
+        background-color: #075457 !important;
+    }
+
     mdui-menu-item {
         background: var(--apple-color-black);
         padding: 4px 12px;
@@ -142,7 +146,7 @@
         font-size: 14px;
         margin-top: 1.5rem;
         text-align: center;
-        background-image: linear-gradient(transparent, rgba(0, 0, 139, 0.1));
+        background-image: linear-gradient(transparent, rgba(255, 20, 147, 0.1));
     }
 
     .tip {
@@ -179,7 +183,7 @@
 
 
     .pre-flex {
-        background-color: #0693;
+        background-color: /* #0693 */ #0000003f;
         padding: 12px;
         border-radius: 10px;
         font-size: 15px;
@@ -278,7 +282,7 @@
     }
 
     details[open]+hr {
-        background-color: #3131ff;
+        background-color: #075457;
     }
 
     details[open]>*:not(summary) {
@@ -309,7 +313,7 @@
         --mdui-color-on-surface-variant-light: 182, 186, 177 !important;
         --mdui-color-surface-container-light: 25, 30, 26, 0.9 !important;
         --mdui-color-on-surface-light: 227, 228, 224 !important;
-        --mdui-color-background-light: 1, 8, 255 !important;
+        --mdui-color-background-light: #ff1493 !important;
         --mdui-color-on-background-light: 227, 228, 224 !important;
     }
 
@@ -329,4 +333,6 @@
         color: inherit;
         transition-duration: 0.2s;
     }
+
+    #star {color: #ff0;}
 }
