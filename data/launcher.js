@@ -99,8 +99,6 @@ const WindowsLauncher = [
     {
         title: "*中国版* 我的世界启动器",
         abbr: "我的世界启动器",
-        download: "https://x19.gdl.netease.com/MCLauncher_1.14.0.36188.exe",
-        version: "1.14.0.36188",
         url: "https://mc.163.com"
     },
     {
