@@ -66,7 +66,7 @@ const WindowsLauncher = [
         title: "Plain Craft Launcher 2",
         abbr: "PCL2",
         download: "https://fastly.jsdelivr.net/gh/Hex-Dragon/PCL2@main/%E6%9C%80%E6%96%B0%E6%AD%A3%E5%BC%8F%E7%89%88.zip",
-        version: "2.7.4",
+        version: "2.8.2",
         url: "https://afdian.net/@LTCat"
     },
     {
