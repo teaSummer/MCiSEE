@@ -9,7 +9,7 @@ const AndroidLauncher = [
     },
     {
         title: "PojavLauncher",
-        download: "http://mcisee.top:6400/parser?url=https://share.feijipan.com/s/QEBPJVqh",
+        download: "http://38.6.221.91:6400/parser?url=https://share.feijipan.com/s/QEBPJVqh",
         version: "foxglo",
         url: "https://github.com/PojavLauncherTeam/PojavLauncher"
     },
@@ -132,7 +132,7 @@ const WindowsLauncher = [
     {
         title: "Plain Craft Launcher 1",
         abbr: "PCL1",
-        download: "http://mcisee.top:6400/parser?url=https://share.feijipan.com/s/kwAt8rhZ",
+        download: "http://38.6.221.91:6400/parser?url=https://share.feijipan.com/s/kwAt8rhZ",
         version: "1.0.9",
         url: "https://gitee.com/Cmbself/PCL1"
     }
