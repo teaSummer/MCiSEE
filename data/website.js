@@ -208,8 +208,8 @@ const otherForum = [
             ["台湾论坛", "https://forum.gamer.com.tw/A.php?bsn=18673"],
             ["基岩版台湾中文网", "https://forum.mcpe.tw"],
             ["韩国论坛", "https://www.koreaminecraft.net"],
-            ["日本论坛", "https://minecraftforum.jp"]
-            ["TNTMCBBS", "https://www.tntmcbbs.cn/"]
+            ["日本论坛", "https://minecraftforum.jp"],
+            ["TNTMCBBS", "https://www.tntmcbbs.cn/"],
             ["TNTMINECRAFT论坛", "https://tntminecraft.flarum.cloud"]
         ]
     },
