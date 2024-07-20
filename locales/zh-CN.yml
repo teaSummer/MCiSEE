@@ -60,6 +60,12 @@ data:
     GitHub 文件使用 <a href="https://ghproxy.cn" target="_blank">代理加速</a> {download}
   searchableDirect: '{searchable}：尽可能自动进入详情页'
   searchablePromptLength: 候选词数(0-30)：
+  default: 默认
+  daytime: 日间
+  nighttime: 夜间
+  systemTheme: 跟随系统
+  lightTheme: 浅色主题
+  darkTheme: 深色主题
   ellipsis: ....
   statistics: 统计信息
   visitorCount: 访问计数

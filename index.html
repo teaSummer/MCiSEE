@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.9, minimum-scale=0.9">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title al="head.title"></title>
+    <title al="head.title">所见皆是 Minecraft</title>
     <!-- pwa: manifest -->
     <link rel="manifest" href="manifest.json">
     <!-- [start] pwa: backward support -->
@@ -172,6 +172,25 @@
             <div class="config-container" id="配置">
                 <h2 class="page-title" al="config"></h2>
                 <label>
+                    <mdui-segmented-button-group class="theme" name="theme" selects="single" value="system" required>
+                        <mdui-tooltip al-aplto="content: systemTheme;" placement="top" openDelay="0" closeDelay="0">
+                            <mdui-segmented-button value="system" icon="settings_brightness" selected-icon="settings_brightness">
+                                <text al="default"></text>
+                            </mdui-segmented-button>
+                        </mdui-tooltip>
+                        <mdui-tooltip al-aplto="content: lightTheme;" placement="top" openDelay="0" closeDelay="0">
+                            <mdui-segmented-button value="light" icon="brightness_high" selected-icon="brightness_high">
+                                <text al="daytime"></text>
+                            </mdui-segmented-button>
+                        </mdui-tooltip>
+                        <mdui-tooltip al-aplto="content: darkTheme;" placement="top" openDelay="0" closeDelay="0">
+                            <mdui-segmented-button value="dark" icon="bedtime" selected-icon="bedtime">
+                                <text al="nighttime"></text>
+                            </mdui-segmented-button>
+                        </mdui-tooltip>
+                    </mdui-segmented-button-group>
+                </label>
+                <label>
                     <input class="github-proxy" type="checkbox" checked>
                     <text al="GitHubProxy"></text>
                 </label>
@@ -234,6 +253,7 @@
     </div>
 </footer>
 <script src="scripts/main.js"></script>
+<script src="scripts/theme.js" type="module"></script>
 <!-- machine translation, not good 👎🤓 -->
 <!-- <script src="https://cdn.jsdelivr.net/gh/xnx3/translate@v3/translate.js/translate.min.js"></script>
 <script>

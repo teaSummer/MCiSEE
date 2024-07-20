@@ -61,6 +61,12 @@ data:
     (for Chinese Mainland)
   searchableDirect: '{searchable}: Auto access to the detail page when possible'
   searchablePromptLength: 'Prompt Words(0-30):'
+  default: Default
+  daytime: Daytime
+  nighttime: Nighttime
+  systemTheme: System
+  lightTheme: Light Theme
+  darkTheme: Dark Theme
   ellipsis: ....
   statistics: Statistics
   visitorCount: Visitor Count
