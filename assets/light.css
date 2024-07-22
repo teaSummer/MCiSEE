@@ -277,6 +277,10 @@ a.button:not(.download)::after {
     color: #ccc;
 }
 
+summary::before {
+    background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="128" height="128" fill="black"%3E%3Cpath d="M472.064 272.448l-399.232 399.232c-22.08 22.08-22.08 57.792 0 79.872 22.016 22.016 57.792 22.08 79.872 0L512 392.256l359.296 359.296c22.016 22.016 57.792 22.08 79.872 0 22.08-22.08 22.016-57.792 0-79.872L551.936 272.448C529.856 250.432 494.144 250.432 472.064 272.448z"%3E%3C/path%3E%3C/svg%3E');
+}
+
 details[open]+hr {
     background-color: #00f;
 }
