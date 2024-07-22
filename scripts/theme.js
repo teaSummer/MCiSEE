@@ -27,6 +27,17 @@ const themeChanged = (() => {
                 $('[alt="Stars Over Time"]').attr('src', 'https://starchart.cc/teaSummer/MCiSEE.svg?background=%2300000000&axis=%23ffffff&line=%236b63ff');
             };
             break;
+        case 'classic':
+            const classic = new CSSStyleSheet();
+            classic.insertRule(`
+            div.background {
+                background-image: url("/assets/image/classic.png");
+                transform: none;
+                filter: none;
+            }`);
+            document.adoptedStyleSheets = [main, classic, light];
+            $('[alt="Stars Over Time"]').attr('src', 'https://starchart.cc/teaSummer/MCiSEE.svg?background=%2300000000&axis=%23101010&line=%236b63ff');
+            break;
     };
 });
 $('.theme').change(themeChanged);

@@ -63,9 +63,11 @@ data:
   default: 默认
   daytime: 日间
   nighttime: 夜间
+  classic: 经典
   systemTheme: 跟随系统
   lightTheme: 浅色主题
   darkTheme: 深色主题
+  earlyTheme: 早期主题
   ellipsis: ....
   statistics: 统计信息
   visitorCount: 访问计数

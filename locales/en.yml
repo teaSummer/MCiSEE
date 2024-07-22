@@ -64,9 +64,11 @@ data:
   default: Default
   daytime: Daytime
   nighttime: Nighttime
+  classic: Classic
   systemTheme: System
   lightTheme: Light Theme
   darkTheme: Dark Theme
+  earlyTheme: Early Theme
   ellipsis: ....
   statistics: Statistics
   visitorCount: Visitor Count
