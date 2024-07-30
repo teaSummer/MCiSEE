@@ -1,7 +1,4 @@
-import main from '../assets/main.css' with {type: 'css'};
-import light from '../assets/light.css' with {type: 'css'};
-import dark from '../assets/dark.css' with {type: 'css'};
-let system = light;
+let system = 'light';
 
 const themeChanged = (() => {
     const value = $('.theme').val();
@@ -12,18 +9,18 @@ const themeChanged = (() => {
     };
     switch (value) {
         case 'light':
-            document.adoptedStyleSheets = [main, light];
+            $('#theme').attr('href', '../assets/light.css');
             $('[alt="Stars Over Time"]').attr('src', 'https://starchart.cc/teaSummer/MCiSEE.svg?background=%2300000000&axis=%23101010&line=%236b63ff');
             break;
         case 'dark':
-            document.adoptedStyleSheets = [main, dark];
+            $('#theme').attr('href', '../assets/dark.css');
             $('[alt="Stars Over Time"]').attr('src', 'https://starchart.cc/teaSummer/MCiSEE.svg?background=%2300000000&axis=%23ffffff&line=%236b63ff');
             break;
         case 'system':
-            if (window.matchMedia('(prefers-color-scheme: dark)').matches) system = dark;
-            document.adoptedStyleSheets = [main, system];
+            if (window.matchMedia('(prefers-color-scheme: dark)').matches) system = 'dark';
+            $('#theme').attr('href', `../assets/${system}.css`);
             $('[alt="Stars Over Time"]').attr('src', 'https://starchart.cc/teaSummer/MCiSEE.svg?background=%2300000000&axis=%23101010&line=%236b63ff');
-            if (system == dark) {
+            if (system == 'dark') {
                 $('[alt="Stars Over Time"]').attr('src', 'https://starchart.cc/teaSummer/MCiSEE.svg?background=%2300000000&axis=%23ffffff&line=%236b63ff');
             };
             break;
@@ -31,11 +28,12 @@ const themeChanged = (() => {
             const classic = new CSSStyleSheet();
             classic.insertRule(`
             div.background {
-                background-image: url("/assets/image/classic.png");
+                background-image: url('../assets/image/classic.png');
                 transform: none;
                 filter: none;
             }`);
-            document.adoptedStyleSheets = [main, classic, light];
+            $('#theme').attr('href', '../assets/light.css');
+            document.adoptedStyleSheets = [classic];
             $('[alt="Stars Over Time"]').attr('src', 'https://starchart.cc/teaSummer/MCiSEE.svg?background=%2300000000&axis=%23101010&line=%236b63ff');
             break;
     };
@@ -45,7 +43,7 @@ themeChanged();
 
 // 监听变化
 $(window.matchMedia('(prefers-color-scheme: dark)')).change((event) => {
-    system = light;
-    if (event.matches) system = dark;
+    system = 'light';
+    if (event.matches) system = 'dark';
     if ($('.theme').val() == 'system') themeChanged();
 });
