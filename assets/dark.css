@@ -1,4 +1,3 @@
-
 a {
     color: #ff1493;
     text-decoration: none;
@@ -289,15 +288,6 @@ summary::before {
 
 details[open]+hr {
     background-color: #075457;
-}
-
-details[open]>*:not(summary) {
-    opacity: 100%;
-    pointer-events: auto;
-}
-
-details[open]>summary::before {
-    transform: rotate(180deg);
 }
 
 pre:hover:is(.apf) {

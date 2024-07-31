@@ -7,6 +7,7 @@ const themeChanged = (() => {
         $('.theme').val('system');
         return;
     };
+    localStorage.setItem('theme', value);
     switch (value) {
         case 'light':
             $('#theme').attr('href', 'assets/light.css');

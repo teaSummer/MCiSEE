@@ -345,6 +345,15 @@ details[open] {
     max-height: 1000px;
 }
 
+details[open]>*:not(summary) {
+    opacity: 100%;
+    pointer-events: auto;
+}
+
+details[open]>summary::before {
+    transform: rotate(180deg);
+}
+
 pre {
     transition: transform 0.6s linear;
 }

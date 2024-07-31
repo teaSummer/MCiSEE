@@ -335,7 +335,12 @@ const config = ((settings) => {
         else $('.' + option).val(localStorage.getItem(option));
     };
 });
-config({'github-proxy': (navigator.language == "zh-CN" ? true : false), 'searchable-direct': true, 'searchable-prompt-length': '10'});
+config({
+    'theme': 'system',
+    'github-proxy': (navigator.language == 'zh-CN' ? true : false),
+    'searchable-direct': true,
+    'searchable-prompt-length': '10'
+});
 
 
 // 获取候选词
@@ -377,7 +382,7 @@ $('.searchable-input').typeahead(
                             break;
                         default:
                             facets = encodeURI(`[["project_type:${projectType}"]${versions}]`);
-                    }
+                    };
                 };
                 // API
                 const api = {
@@ -580,9 +585,9 @@ $(document).ready(() => {
     $('#clickEffect').change(() => {
         if ($('#clickEffect')[0].checked) {
             let script = document.createElement('script');
-            script.id  = "ces";
-            script.type= "text/javascript";
-            script.src = "https://blog.xsawa.dev.tc/js/candy.min.js";
+            script.id  = 'ces';
+            script.type= 'text/javascript';
+            script.src = 'https://log.xsawa.dev.tc/js/candy.min.js';
             $('head')[0].appendChild(script);
         } else $('#ces')[0].remove();
     });
