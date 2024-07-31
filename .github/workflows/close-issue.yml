@@ -1,0 +1,30 @@
+name: 'Auto Close Issue'
+on:
+  schedule:
+    - cron: '0 0 19 9 *'
+
+jobs:
+  close:
+    name: 'Close issue #2'
+    permissions: write-all
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+      - name: 'Close issues'
+        run: gh issue close 2 --comment '由于审查超过60天，已修改至完成状态，如有疑问还请提出，谢谢。' 
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Delete workflow files
+        run: rm .github/workflows/close-issue.yml
+      - name: Commit changes
+        id: commit
+        run: |
+          git config --global user.name teaSummer
+          git config --global user.email see_tea@outlook.com
+          git commit -am 'chore: delete close-issue.yml'
+          git pull --rebase
+      - name: Push changes
+        if: ${{ steps.commit.outcome == 'success' }}
+        uses: ad-m/github-push-action@master
+        with:
+          branch: main
