@@ -359,8 +359,8 @@ pre {
 
 @media (min-width: 1200px) {
     .update-layer {
-        --layer-width: 260px;
-        --layer-height: 140px;
+        --layer-width: 260px !important;
+        --layer-height: 140px !important;
     }
 
     .update-layer div {

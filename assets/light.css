@@ -316,10 +316,4 @@ pre:hover:is(.apf) {
 a:hover, a:hover p, a:active, a:active p, footer p {
     filter: none;
     transition-duration: 0.2s;
-    mix-blend-mode: normal;
-}
-
-.update-layer *,
-.update-layer .download {
-    mix-blend-mode: normal;
 }
