@@ -35,7 +35,7 @@ const themeChanged = (() => {
                 transform: none;
                 filter: none;
             }`);
-            $('#theme').attr('href', '../assets/light.css');
+            $('#theme').attr('href', 'assets/light.css');
             document.adoptedStyleSheets.push(classic);
             $('[alt="Stars Over Time"]').attr('src', 'https://starchart.cc/teaSummer/MCiSEE.svg?background=%2300000000&axis=%23101010&line=%236b63ff');
             break;
