@@ -1,0 +1,31 @@
+// 适用于 安卓手机/鸿蒙手机/安卓平板/鸿蒙平板 的启动器
+[
+  {
+    "title": "Fold Craft Launcher",
+    "abbr": "FCL",
+    "download": "https://github.com/FCL-Team/FoldCraftLauncher/releases/download/1.1.7.3/FCL-release-1.1.7.3-all.apk",
+    "version": "1.1.7.3",
+    "url": "https://github.com/FCL-Team/FoldCraftLauncher"
+  },
+  {
+    "title": "PojavLauncher",
+    "download": "http://p.mcisee.top:6400/parser?url=https://share.feijipan.com/s/QEBPJVqh",
+    "version": "foxglo",
+    "url": "https://github.com/PojavLauncherTeam/PojavLauncher"
+  },
+  {
+    "title": "Hello Minecraft! Launcher:Pocket Edition",
+    "abbr": "HMCL-PE",
+    "download": "https://github.com/HMCL-dev/HMCL-PE/releases/download/2.0.8/HMCLPE-release.apk",
+    "version": "2.0.8",
+    "url": "https://github.com/HMCL-dev/HMCL-PE"
+  },
+  {
+    "title": "ColorMC",
+    "url": "https://github.com/Coloryr/ColorMC.Android",
+    "dev": {
+      "download": "https://github.com/Coloryr/ColorMC.Android/releases/download/A21/colormc-a21-android.zip",
+      "version": "A21"
+    }
+  }
+]

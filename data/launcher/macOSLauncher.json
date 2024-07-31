@@ -1,0 +1,61 @@
+// 适用于 苹果电脑 的启动器
+[
+  {
+    "title": "Minecraft 启动器",
+    "download": "https://launcher.mojang.com/download/Minecraft.dmg",
+    "version": "latest",
+    "url": "https://www.minecraft.net/zh-hans"
+  },
+  {
+    "title": "Hello Minecraft! Launcher",
+    "abbr": "HMCL",
+    "download": "https://github.com/HMCL-dev/HMCL/releases/download/release-3.5.8/HMCL-3.5.8.jar",
+    "version": "3.5.8",
+    "url": "https://github.com/HMCL-dev/HMCL",
+    "dev": {
+      "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.5.8.251/HMCL-3.5.8.251.jar",
+      "version": "3.5.8.251"
+    }
+  },
+  {
+    "title": "ColorMC",
+    "download": "https://github.com/Coloryr/ColorMC/releases/download/a28.2024.7.29-1/colormc-a28.2024.7.29-1-1-x86_64.pkg.tar.zst",
+    "version": "a28.2024.7.29-1",
+    "url": "https://github.com/Coloryr/ColorMC"
+  },
+  {
+    "title": "X Minecraft Launcher",
+    "abbr": "XMCL",
+    "download": "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.45.1/xmcl-0.45.1.dmg",
+    "version": "0.45.1",
+    "url": "https://github.com/Voxelum/x-minecraft-launcher"
+  },
+  {
+    "title": "LabyMod Launcher",
+    "abbr": "LabyMod",
+    "download": "https://releases.r2.labymod.net/launcher/darwin/x64/LabyMod%20Launcher-latest-x64.dmg",
+    "version": "latest",
+    "url": "https://labymod.net"
+  },
+  {
+    "title": "MultiMC",
+    "abbr": "MMC",
+    "download": "https://files.multimc.org/downloads/mmc-develop-osx64.tar.gz",
+    "version": "latest",
+    "url": "https://github.com/MultiMC/Launcher"
+  },
+  {
+    "title": "Prism Launcher",
+    "abbr": "Prism",
+    "download": "https://github.com/PrismLauncher/PrismLauncher/releases/download/8.4/PrismLauncher-macOS-8.4.zip",
+    "version": "8.4",
+    "url": "https://github.com/PrismLauncher/PrismLauncher"
+  },
+  {
+    "title": "Salwyrr Launcher",
+    "abbr": "Salwyrr",
+    "download": "https://www.salwyrr.com/4/Salwyrr%20Minecraft%20Launcher%204.jar",
+    "version": "4",
+    "url": "https://www.salwyrr.com"
+  }
+]

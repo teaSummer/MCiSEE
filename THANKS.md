@@ -35,6 +35,8 @@
 
 [AutoLang](https://github.com/TheChuan1503/AutoLang) 前端国际化库
 
+[JSON5](https://github.com/json5/json5) 面向人类的JSON
+
 ### 页脚/文档/404页面
 
 [Shields.io](https://github.com/badges/shields) 简洁图章图标
@@ -107,11 +109,13 @@ Special thanks to: [GitHub](https://github.com) and [Gitee](https://gitee.com) (
 
 [typeahead.js](https://github.com/twitter/typeahead.js) A fast and fully-featured autocomplete library
 
-[BBSPK](https://github.com/LYOfficial/BBSPK) 新兴我的世界论坛晋级赛
+[BBSPK](https://github.com/LYOfficial/BBSPK) Emerging MC Forums Promotion Tournament
 
 [Material Icons](https://github.com/google/material-design-icons) Material Design icons
 
 [AutoLang](https://github.com/TheChuan1503/AutoLang) Web Internationalization JS Lib
+
+[JSON5](https://github.com/json5/json5) JSON for humans
 
 ### Footer/Documents/404 Page
 
@@ -119,7 +123,7 @@ Special thanks to: [GitHub](https://github.com) and [Gitee](https://gitee.com) (
 
 [Visitor Badge](https://github.com/jwenjian/visitor-badge) Count visitors
 
-[BBSPK](https://github.com/LYOfficial/BBSPK) 新兴我的世界论坛晋级赛
+[BBSPK](https://github.com/LYOfficial/BBSPK) Emerging MC Forums Promotion Tournament
 
 [Contrib](https://github.com/lacolaco/contributors-img) Contributors images
 

@@ -1,0 +1,9 @@
+// 适用于 苹果手机/苹果平板 的启动器
+[
+    {
+        "title": "PojavLauncher",
+        "download": "https://github.com/PojavLauncherTeam/PojavLauncher_iOS/releases/download/v2.2/net.kdt.pojavlauncher-2.2-ios.ipa",
+        "version": "2.2",
+        "url": "https://github.com/PojavLauncherTeam/PojavLauncher_iOS"
+    }
+]
