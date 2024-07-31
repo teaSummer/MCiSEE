@@ -581,7 +581,7 @@ $(document).ready(() => {
         try { document.querySelector(decodeURI(location.hash)).scrollIntoView(); } catch {};
     });
 
-    // 点击特效
+    // 点击特效：此处包含外链地址，内容由XiaozhiSans提供。如果您需要使用，应先询问其意见。
     $('#clickEffect').change(() => {
         if ($('#clickEffect')[0].checked) {
             let script = document.createElement('script');
@@ -595,16 +595,16 @@ $(document).ready(() => {
 // 监听标签页切换事件
 $(document).on('visibilitychange', () => {
     if (document.visibilityState == 'hidden') {
-        // 当前标签页隐藏
+        // 当前标签页隐藏时
         visibility = false;
     };
     if (document.visibilityState == 'visible') {
-        // 当前标签页显示
+        // 当前标签页显示时
         visibility = true;
     };
 });
 
-// 调试
+// 调试模式 (Debug Mode)
 let debug = false;
 const debugChange = (e = $('[visibleInDebugMode]')) => {for (const t of e) t.style.display = (debug ? 'block': 'none')};
 debugChange(); /* 监听变更我就先咕咕咕了 ＜（＾－＾）＞ --xs */

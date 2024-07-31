@@ -226,6 +226,7 @@ div[id]>*:first-child {
     display: none !important;
 }
 
+
 .update-layer div:nth-child(2) {
     margin: -2px 0;
     margin-left: 25px;
@@ -246,6 +247,11 @@ div[id]>*:first-child {
     left: 10px;
     bottom: 10px;
     font-size: 15px;
+}
+
+.update-layer .last-version {
+    margin: -2px 0;
+    color: #aaaaaa;
 }
 
 .update-layer:not(.update-layer-1):not(.update-layer-2):not(.update-layer-3) {

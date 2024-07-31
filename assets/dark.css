@@ -224,29 +224,24 @@ a.button:not(.download)::after {
 }
 
 .update-layer a {
-    color: #0b5b9f;
+    color: #f4a460;
 }
 
 .update-layer a:hover {
-    color: #0e4777;
+    color: #f1b888;
 }
 
 .update-layer a:active {
-    color: #0089ff;
+    color: #ff7600;
 }
 
 .update-layer .abbr {
     margin: -2px 0;
-    color: #0000ff;
-}
-
-.update-layer .last-version {
-    margin: -2px 0;
-    color: #4c4c4c;
+    color: #e7e750;
 }
 
 .update-layer .latest-version {
-    color: #ff00ff;
+    color: #00cc00;
     margin: -2px 0;
     font-weight: bold;
 }

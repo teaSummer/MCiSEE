@@ -234,13 +234,8 @@ a.button:not(.download)::after {
     color: #ffff00;
 }
 
-.update-layer .last-version {
-    margin: -2px 0;
-    color: #b3b3b3;
-}
-
 .update-layer .latest-version {
-    color: #00ff00;
+    color: #00ee00;
     margin: -2px 0;
     font-weight: bold;
 }
