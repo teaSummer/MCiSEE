@@ -319,7 +319,7 @@ pre:hover:is(.apf) {
 
     --mdui-color-surface: 1, 8, 0, 0.2 !important;
     --mdui-color-on-surface-variant-light: 182, 186, 177 !important;
-    --mdui-color-surface-container-light: 25, 30, 26, 0.9 !important;
+    --mdui-color-surface-container-light: 17, 17, 17, 0.87 !important;
     --mdui-color-on-surface-light: 227, 228, 224 !important;
     --mdui-color-on-background-light: 227, 228, 224 !important;
 }
