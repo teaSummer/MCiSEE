@@ -36,9 +36,9 @@
 | 文件名                 | 数据含义             | 文件                             |
 |---------------------|------------------|--------------------------------|
 | launcher.json       | 启动器列表（**Java版**） | [查看](data/launcher.json)       |
+| otherForum.json     | 其他论坛列表           | [查看](data/otherForum.json)     |
 | searchable.json     | 可供快速查询的站点列表      | [查看](data/searchable.json)     |
 | utilityWebsite.json | 实用网站列表           | [查看](data/utilityWebsite.json) |
-| otherForum.json     | 其他论坛列表           | [查看](data/otherForum.json)     |
 
 打开文件后，你将看到一些常量，例如 AndroidLauncher 等。
 
@@ -83,6 +83,12 @@
   }
 }
 ```
+
+---
+
+### otherForum.json
+
+见 [utilityWebsite.json](#utilityWebsitejson)。
 
 ---
 
@@ -136,12 +142,6 @@
   ]
 }
 ```
-
----
-
-### otherForum.json
-
-与上文一致（utilityWebsite.json）。
 
 ---
 
