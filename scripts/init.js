@@ -1,6 +1,6 @@
 const init = ((file) => {
     return JSON5.parse($.ajax({
-        url: `data/${file}.json`,
+        url: `data/${file}.json5`,
         dataType: 'json',
         async: false
     }).responseText);

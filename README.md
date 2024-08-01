@@ -33,12 +33,12 @@
 
 `data` 目录下的文件列表：
 
-| 文件名                 | 数据含义             | 文件                             |
-|---------------------|------------------|--------------------------------|
-| launcher.json       | 启动器列表（**Java版**） | [查看](data/launcher.json)       |
-| otherForum.json     | 其他论坛列表           | [查看](data/otherForum.json)     |
-| searchable.json     | 可供快速查询的站点列表      | [查看](data/searchable.json)     |
-| utilityWebsite.json | 实用网站列表           | [查看](data/utilityWebsite.json) |
+| 文件名                  | 数据含义             | 文件                              |
+|----------------------|------------------|---------------------------------|
+| launcher.json5       | 启动器列表（**Java版**） | [查看](data/launcher.json5)       |
+| otherForum.json5     | 其他论坛列表           | [查看](data/otherForum.json5)     |
+| searchable.json5     | 可供快速查询的站点列表      | [查看](data/searchable.json5)     |
+| utilityWebsite.json5 | 实用网站列表           | [查看](data/utilityWebsite.json5) |
 
 打开文件后，你将看到一些常量，例如 AndroidLauncher 等。
 
@@ -48,7 +48,7 @@
 
 下面详细介绍了每个文件的数据。
 
-### launcher.json
+### launcher.json5
 
 对象有以下属性：
 
@@ -86,13 +86,13 @@
 
 ---
 
-### otherForum.json
+### otherForum.json5
 
-见段落 [utilityWebsite.json](#utilityWebsitejson)。
+见段落 [utilityWebsite.json5](#utilityWebsitejson5)。
 
 ---
 
-### searchable.json
+### searchable.json5
 
 对象有以下属性：
 
@@ -118,7 +118,7 @@
 
 ---
 
-### utilityWebsite.json
+### utilityWebsite.json5
 
 以分类作为键，值为一个数组。
 

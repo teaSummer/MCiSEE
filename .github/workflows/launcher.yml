@@ -51,18 +51,18 @@ jobs:
           wget -O releases.json $API
           if [ '${{ matrix.device }}' ]; then
             DEVICE_LIST=`echo '${{ matrix.device }}' | sed 's/|/\\\\|/g'`
-            sed -n '/\('"$DEVICE_LIST"'\)Launcher/,/]/p' data/launcher.json > launcher.json
+            sed -n '/\('"$DEVICE_LIST"'\)Launcher/,/]/p' data/launcher.json5 > launcher.json5
           else
-            cp data/launcher.json launcher.json
+            cp data/launcher.json5 launcher.json5
           fi
       - name: Get ${{ matrix.subtitle }} version
         id: get
         run: |
           # Get Last Stable ${{ matrix.subtitle }}
-          LAST_STABLE_VERSION=`sed -n '/"${{ matrix.subtitle }}"/,/"version":/p' launcher.json | sed -n '$p' | sed 's/^.*:\s*"v\?\|",$//gi' | sed 's/\./\\\\./g'`
+          LAST_STABLE_VERSION=`sed -n '/"${{ matrix.subtitle }}"/,/"version":/p' launcher.json5 | sed -n '$p' | sed 's/^.*:\s*"v\?\|",$//gi' | sed 's/\./\\\\./g'`
           
           # Get Last Dev ${{ matrix.subtitle }}
-          LAST_DEV_VERSION=`sed -n '/"${{ matrix.subtitle }}"/,/}/p' launcher.json | sed -n '/"dev":/,/"version":/p' | sed -n '$p' | sed 's/^.*:\s*"v\?\|"$//gi' | sed 's/\./\\\\./g'`
+          LAST_DEV_VERSION=`sed -n '/"${{ matrix.subtitle }}"/,/}/p' launcher.json5 | sed -n '/"dev":/,/"version":/p' | sed -n '$p' | sed 's/^.*:\s*"v\?\|"$//gi' | sed 's/\./\\\\./g'`
           
           # GET Latest Stable ${{ matrix.subtitle }}
           if [ '${{ matrix.subtitle }}' = HMCL ]; then
@@ -83,14 +83,14 @@ jobs:
           fi
           
           # Remove Needless Files
-          rm latest.json releases.json launcher.json
+          rm latest.json releases.json launcher.json5
           
           # Output
           echo "last_stable_version=$LAST_STABLE_VERSION" >> $GITHUB_OUTPUT
           echo "last_dev_version=$LAST_DEV_VERSION" >> $GITHUB_OUTPUT
           echo "latest_stable_version=$LATEST_STABLE_VERSION" >> $GITHUB_OUTPUT
           echo "latest_dev_version=$LATEST_DEV_VERSION" >> $GITHUB_OUTPUT
-      - name: Modify launcher.json
+      - name: Modify launcher.json5
         id: modify
         run: |
           LAST_STABLE_VERSION='${{ steps.get.outputs.last_stable_version }}'
@@ -104,7 +104,7 @@ jobs:
           fi
           if [ "$LATEST_STABLE_VERSION" ]; then
             if [ "$LAST_STABLE_VERSION" != "$LATEST_STABLE_VERSION" ]; then
-              sed -i 's/\([/"v-]\)'"$LAST_STABLE_VERSION"'\(\.[a-z]\|["/-]\)/\1'"$LATEST_STABLE_VERSION"'\2/gi' data/launcher.json
+              sed -i 's/\([/"v-]\)'"$LAST_STABLE_VERSION"'\(\.[a-z]\|["/-]\)/\1'"$LATEST_STABLE_VERSION"'\2/gi' data/launcher.json5
               LAST_STABLE_VERSION=`echo $LAST_STABLE_VERSION | sed 's/\\\\././g'`
               LATEST_STABLE_VERSION=`echo $LATEST_STABLE_VERSION | sed 's/\\\\././g'`
               CHANGELOG_E='  ${{ matrix.subtitle }}(stable): '"$LAST_STABLE_VERSION => $LATEST_STABLE_VERSION$DEVICE_STRING"
@@ -112,7 +112,7 @@ jobs:
           fi
           if [ "$LATEST_DEV_VERSION" ]; then
             if [ "$LAST_DEV_VERSION" != "$LATEST_DEV_VERSION" ]; then
-              sed -i 's/\([/"v-]\)'"$LAST_DEV_VERSION"'\(\.[a-z]\|["/-]\)/\1'"$LATEST_DEV_VERSION"'\2/gi' data/launcher.json
+              sed -i 's/\([/"v-]\)'"$LAST_DEV_VERSION"'\(\.[a-z]\|["/-]\)/\1'"$LATEST_DEV_VERSION"'\2/gi' data/launcher.json5
               LAST_DEV_VERSION=`echo $LAST_DEV_VERSION | sed 's/\\\\././g'`
               LATEST_DEV_VERSION=`echo $LATEST_DEV_VERSION | sed 's/\\\\././g'`
               if [ "$CHANGELOG_E" ]; then
