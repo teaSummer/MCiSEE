@@ -294,6 +294,7 @@ pre:hover:is(.apf) {
  */
 
 :root {
+    --mdui-color-surface: 254, 247, 255, 0.4 !important;
     --mdui-color-outline-light: 56, 54, 62, 0.7 !important;
 }
 

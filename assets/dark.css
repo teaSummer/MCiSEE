@@ -302,6 +302,7 @@ pre:hover:is(.apf) {
 :root {
     --apple-color-white: #d6d5da;
 
+    --mdui-color-surface: 1, 8, 0, 0.2 !important;
     --mdui-color-on-surface-variant-light: 182, 186, 177 !important;
     --mdui-color-surface-container-light: 25, 30, 26, 0.9 !important;
     --mdui-color-on-surface-light: 227, 228, 224 !important;
