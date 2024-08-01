@@ -291,6 +291,21 @@ pre:hover:is(.apf) {
     transform: scale(1.05) rotate(-2deg);
 }
 
+
+.tt-menu {
+    color: var(--apple-color-white);
+    background-color: #111d;
+}
+
+.tt-suggestion:hover {
+    background-color: #426dd0;
+}
+
+.tt-suggestion.tt-cursor {
+    background-color: #426dd0;
+}
+
+
 .background {
     background-image: url('image/dark.png');
 }
