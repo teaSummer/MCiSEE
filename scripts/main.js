@@ -339,7 +339,7 @@ config({
     'theme': 'system',
     'github-proxy': (navigator.language == 'zh-CN' ? true : false),
     'searchable-direct': true,
-    'searchable-prompt-length': '10'
+    'searchable-prompt-length': 10
 });
 
 
