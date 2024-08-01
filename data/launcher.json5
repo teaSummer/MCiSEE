@@ -1,5 +1,7 @@
 {
+  // ==============================================
   // 适用于 安卓手机/鸿蒙手机/安卓平板/鸿蒙平板 的启动器
+  // ==============================================
   "AndroidLauncher": [
     {
       "title": "Fold Craft Launcher",
@@ -30,7 +32,9 @@
       }
     }
   ],
+  // ==============================
   // 适用于 苹果手机/苹果平板 的启动器
+  // ==============================
   "iOSLauncher": [
     {
       "title": "PojavLauncher",
@@ -39,7 +43,9 @@
       "url": "https://github.com/PojavLauncherTeam/PojavLauncher_iOS"
     }
   ],
+  // ===========================
   // 适用于 Windows电脑 的启动器
+  // ===========================
   "WindowsLauncher": [
     {
       "title": "*国际版* Minecraft 启动器",
@@ -134,7 +140,9 @@
       "url": "https://gitee.com/Cmbself/PCL1"
     }
   ],
+  // =======================
   // 适用于 苹果电脑 的启动器
+  // =======================
   "macOSLauncher": [
     {
       "title": "Minecraft 启动器",
@@ -195,7 +203,9 @@
       "url": "https://www.salwyrr.com"
     }
   ],
+  // =========================
   // 适用于 Linux系统 的启动器
+  // =========================
   "LinuxLauncher": [
     {
       "title": "Hello Minecraft! Launcher",
