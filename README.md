@@ -33,11 +33,12 @@
 
 `data` 目录下的文件列表：
 
-| 文件名           | 数据含义             | 文件                       |
-|---------------|------------------|--------------------------|
-| launcher.js   | 启动器列表（**Java版**） | [查看](data/launcher.js)   |
-| searchable.js | 可供快速查询的站点列表      | [查看](data/searchable.js) |
-| website.js    | 网站列表             | [查看](data/website.js)    |
+| 文件名                 | 数据含义             | 文件                             |
+|---------------------|------------------|--------------------------------|
+| launcher.json       | 启动器列表（**Java版**） | [查看](data/launcher.json)       |
+| searchable.json     | 可供快速查询的站点列表      | [查看](data/searchable.json)     |
+| utilityWebsite.json | 实用网站列表           | [查看](data/utilityWebsite.json) |
+| otherForum.json     | 其他论坛列表           | [查看](data/otherForum.json)     |
 
 打开文件后，你将看到一些常量，例如 AndroidLauncher 等。
 
@@ -47,7 +48,7 @@
 
 下面详细介绍了每个文件的数据。
 
-### launcher.js
+### launcher.json
 
 对象有以下属性：
 
@@ -69,23 +70,23 @@
 
 示例如下：
 
-``` javascript
+``` json5
 {
-    title: "Hello Minecraft! Launcher",
-    abbr: "HMCL",
-    download: "https://github.com/HMCL-dev/HMCL/releases/download/release-3.5.8/HMCL-3.5.8.exe",
-    version: "3.5.8",
-    url: "https://github.com/HMCL-dev/HMCL",
-    dev: {
-        download: "https://github.com/HMCL-dev/HMCL/releases/download/v3.5.8.249/HMCL-3.5.8.249.exe",
-        version: "3.5.8.249"
-    }
+  "title": "Hello Minecraft! Launcher",
+  "abbr": "HMCL",
+  "download": "https://github.com/HMCL-dev/HMCL/releases/download/release-3.5.8/HMCL-3.5.8.exe",
+  "version": "3.5.8",
+  "url": "https://github.com/HMCL-dev/HMCL",
+  "dev": {
+    "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.5.8.251/HMCL-3.5.8.251.exe",
+    "version": "3.5.8.251"
+  }
 }
 ```
 
 ---
 
-### searchable.js
+### searchable.json
 
 对象有以下属性：
 
@@ -99,19 +100,19 @@
 
 示例如下：
 
-``` javascript
+``` json5
 {
-    title: "维基百科: 原站",
-    abbr: "Wiki",
-    search: "https://zh.minecraft.wiki/?search=<T>&title=Special%3A%E6%90%9C%E7%B4%A2&fulltext=search",
-    note: "中文 Minecraft Wiki",
-    url: "https://zh.minecraft.wiki"
+  "title": "维基百科: 原站",
+  "abbr": "Wiki",
+  "search": "https://zh.minecraft.wiki/?search=<T>&title=Special%3A%E6%90%9C%E7%B4%A2&fulltext=search",
+  "note": "中文 Minecraft Wiki",
+  "url": "https://zh.minecraft.wiki"
 }
 ```
 
 ---
 
-### website.js
+### utilityWebsite.json
 
 以分类作为键，值为一个数组。
 
@@ -121,24 +122,26 @@
 
 示例如下：
 
-``` javascript
+``` json5
 {
-    // | 分类 |
-    "官方网站 (©Mojang/©微软)": [
-        // | 网站名称 |  网站地址 URL  |
-        ["Minecraft", "https://www.minecraft.net"],
-        ["Minecraft教育版", "https://education.minecraft.net"],
-        ["去Xbox购买正版", "https://www.xbox.com/zh-CN/games/store/minecraft-java-bedrock-edition-for-pc/9NXP44L49SHJ/0010"],
-        ["漏洞追踪器(反馈Bug)", "https://bugs.mojang.com"],
-        ["基岩版开发者文档", "https://learn.microsoft.com/minecraft/creator/"],
-        ["Feedback", "https://feedback.minecraft.net"],
-        ["知识库", "https://feedback.minecraft.net/hc/categories/115000410252-Knowledge-Base"],
-        ["远古版网页MC", "https://classic.minecraft.net"],
-        ["Forge模组加载器", "https://www.minecraftforge.net"],
-        ["基岩版专用服务端", "https://www.minecraft.net/zh-hans/download/server/bedrock"]
-    ]
+  // | 分类 |
+  "官方网站 (©Mojang/©微软)": [
+    // | 网站名称 |  网站地址 URL  |
+    ["Minecraft", "https://www.minecraft.net"],
+    ["Minecraft教育版", "https://education.minecraft.net"],
+    ["漏洞追踪器(反馈Bug)", "https://bugs.mojang.com"],
+    ["基岩版开发者文档", "https://learn.microsoft.com/minecraft/creator/"],
+    ["Feedback", "https://feedback.minecraft.net"],
+    ["Forge模组加载器", "https://www.minecraftforge.net"]
+  ]
 }
 ```
+
+---
+
+### otherForum.json
+
+与上文一致（utilityWebsite.json）。
 
 ---
 

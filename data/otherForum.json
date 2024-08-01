@@ -1,7 +1,7 @@
-// 论坛列表 (不含 简体中文论坛)
+// 其他论坛列表
 [
   {
-    "其它论坛": [
+    "其他论坛": [
       ["国际论坛", "https://www.minecraftforum.net"],
       ["香港社区", "https://www.minecraft-hk.com"],
       ["台湾论坛", "https://forum.gamer.com.tw/A.php?bsn=18673"],
@@ -15,4 +15,4 @@
       ["新兴我的世界论坛晋级赛", "https://mcbbs.rip"]
     ]
   }
-];
+]
