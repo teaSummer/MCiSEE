@@ -57,8 +57,8 @@
     {
       "title": "Hello Minecraft! Launcher",
       "abbr": "HMCL",
-      "download": "https://github.com/HMCL-dev/HMCL/releases/download/release-3.5.8/HMCL-3.5.8.exe",
-      "version": "3.5.8",
+      "download": "https://github.com/HMCL-dev/HMCL/releases/download/release-3.5.9/HMCL-3.5.9.exe",
+      "version": "3.5.9",
       "url": "https://github.com/HMCL-dev/HMCL",
       "dev": {
         "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.5.8.251/HMCL-3.5.8.251.exe",
@@ -153,8 +153,8 @@
     {
       "title": "Hello Minecraft! Launcher",
       "abbr": "HMCL",
-      "download": "https://github.com/HMCL-dev/HMCL/releases/download/release-3.5.8/HMCL-3.5.8.jar",
-      "version": "3.5.8",
+      "download": "https://github.com/HMCL-dev/HMCL/releases/download/release-3.5.9/HMCL-3.5.9.jar",
+      "version": "3.5.9",
       "url": "https://github.com/HMCL-dev/HMCL",
       "dev": {
         "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.5.8.251/HMCL-3.5.8.251.jar",
@@ -210,8 +210,8 @@
     {
       "title": "Hello Minecraft! Launcher",
       "abbr": "HMCL",
-      "download": "https://github.com/HMCL-dev/HMCL/releases/download/release-3.5.8/HMCL-3.5.8.sh",
-      "version": "3.5.8",
+      "download": "https://github.com/HMCL-dev/HMCL/releases/download/release-3.5.9/HMCL-3.5.9.sh",
+      "version": "3.5.9",
       "url": "https://github.com/HMCL-dev/HMCL",
       "dev": {
         "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.5.8.251/HMCL-3.5.8.251.sh",
