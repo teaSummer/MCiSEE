@@ -35,10 +35,10 @@
 
 | 文件名                                            | 数据含义             | 文件                              |
 |------------------------------------------------|------------------|---------------------------------|
-| [#](#launcherjson5) launcher.json5             | 启动器列表（**Java版**） | [查看](data/launcher.json5)       |
-| [#](#otherForumjson5) otherForum.json5         | 其他论坛列表           | [查看](data/otherForum.json5)     |
-| [#](#searchablejson5) searchable.json5         | 可供快速查询的站点列表      | [查看](data/searchable.json5)     |
-| [#](#utilityWebsitejson5) utilityWebsite.json5 | 实用网站列表           | [查看](data/utilityWebsite.json5) |
+| [§](#launcherjson5) launcher.json5             | 启动器列表（**Java版**） | [查看](data/launcher.json5)       |
+| [§](#otherForumjson5) otherForum.json5         | 其他论坛列表           | [查看](data/otherForum.json5)     |
+| [§](#searchablejson5) searchable.json5         | 可供快速查询的站点列表      | [查看](data/searchable.json5)     |
+| [§](#utilityWebsitejson5) utilityWebsite.json5 | 实用网站列表           | [查看](data/utilityWebsite.json5) |
 
 打开文件后，你将看到一些常量，例如 AndroidLauncher 等。
 
