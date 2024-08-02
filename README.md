@@ -33,12 +33,12 @@
 
 `data` 目录下的文件列表：
 
-| 文件名                                            | 数据含义             | 文件                              |
-|------------------------------------------------|------------------|---------------------------------|
-| [§](#launcherjson5) launcher.json5             | 启动器列表（**Java版**） | [查看](data/launcher.json5)       |
-| [§](#otherForumjson5) otherForum.json5         | 其他论坛列表           | [查看](data/otherForum.json5)     |
-| [§](#searchablejson5) searchable.json5         | 可供快速查询的站点列表      | [查看](data/searchable.json5)     |
-| [§](#utilityWebsitejson5) utilityWebsite.json5 | 实用网站列表           | [查看](data/utilityWebsite.json5) |
+| 文件名                                                                               | 数据含义             | 文件                                                                         |
+|-----------------------------------------------------------------------------------|------------------|----------------------------------------------------------------------------|
+| [![](assets/doc/octicons/link-16.svg)](#launcherjson5) launcher.json5             | 启动器列表（**Java版**） | [![](assets/doc/octicons/link-external-16.svg)](data/launcher.json5)       |
+| [![](assets/doc/octicons/link-16.svg)](#otherForumjson5) otherForum.json5         | 其他论坛列表           | [![](assets/doc/octicons/link-external-16.svg)](data/otherForum.json5)     |
+| [![](assets/doc/octicons/link-16.svg)](#searchablejson5) searchable.json5         | 可供快速查询的站点列表      | [![](assets/doc/octicons/link-external-16.svg)](data/searchable.json5)     |
+| [![](assets/doc/octicons/link-16.svg)](#utilityWebsitejson5) utilityWebsite.json5 | 实用网站列表           | [![](assets/doc/octicons/link-external-16.svg)](data/utilityWebsite.json5) |
 
 打开文件后，你将看到一些常量，例如 AndroidLauncher 等。
 
