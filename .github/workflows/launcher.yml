@@ -133,8 +133,8 @@ jobs:
           [Auto] Update Launcher Version:
           '"$CHANGELOG
           (Time: `date +'%F %X %Z'`)"
-          EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
-          echo "message<<EOF"$'\n'"$MESSAGE"$'\n'EOF >> $GITHUB_OUTPUT
+          EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)  # To define the separator
+          echo "message<<EOF"$'\n'"$MESSAGE"$'\n'EOF >> $GITHUB_OUTPUT  # For the multi-line output
       - name: Commit & Push
         id: commit_and_push
         uses: stefanzweifel/git-auto-commit-action@master
