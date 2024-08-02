@@ -57,7 +57,7 @@
 
 [Checkout](https://github.com/actions/checkout) 签出仓库
 
-[Push Action](https://github.com/ad-m/github-push-action) 推送至仓库
+[git-auto-commit Action](https://github.com/stefanzweifel/git-auto-commit-action) 自动提交并推送更改
 
 
 ## 贡献者
@@ -135,9 +135,9 @@ Special thanks to: [GitHub](https://github.com) and [Gitee](https://gitee.com) (
 
 [SSH Action](https://github.com/fifsky/ssh-action) Remote SSH Commands
 
-[Checkout](https://github.com/actions/checkout) checking out a repo
+[Checkout](https://github.com/actions/checkout) Checking out a repo
 
-[Push Action](https://github.com/ad-m/github-push-action) push to a repo
+[git-auto-commit Action](https://github.com/stefanzweifel/git-auto-commit-action) Auto commit and push changes
 
 
 ## Contributors

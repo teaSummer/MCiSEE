@@ -16,15 +16,8 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Delete workflow files
         run: rm .github/workflows/close-issue.yml
-      - name: Commit changes
-        id: commit
-        run: |
-          git config --global user.name teaSummer
-          git config --global user.email see_tea@outlook.com
-          git commit -am 'chore: delete close-issue.yml'
-          git pull --rebase
-      - name: Push changes
-        if: ${{ steps.commit.outcome == 'success' }}
-        uses: ad-m/github-push-action@master
+      - name: Commit & Push
+        uses: stefanzweifel/git-auto-commit-action@master
         with:
+          commit_message: 'chore: delete close-issue.yml'
           branch: main
