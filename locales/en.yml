@@ -39,7 +39,6 @@ data:
   downloadedLauncherUpdate: 'Launcher Update (Downloaded):'
   updatedTo: 'has been updated:'
   updateArrow: ➔
-  exclamationMark: '!'
   search: Search
   searchFrom: ' Search from ${linkSearchFrom} ....'
   gotoLauncherWebsite: To launcher website

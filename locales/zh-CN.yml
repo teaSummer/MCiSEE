@@ -39,7 +39,6 @@ data:
   downloadedLauncherUpdate: 您下载过的启动器更新啦：
   updatedTo: 已发布新版本：
   updateArrow: ➔
-  exclamationMark: ！
   search: 搜索
   searchFrom: ' 从 ${linkSearchFrom} 中搜索 ....'
   gotoLauncherWebsite: 跳转启动器网站
