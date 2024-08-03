@@ -1,11 +1,3 @@
-let searchKeyword = '', searchableAbbr = '';
-
-let notificationCount = '';
-let visibility = true;
-
-const downloadSVG = '<span class="svg right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M320 336h76c55 0 100-21.21 100-75.6s-53-73.47-96-75.6C391.11 99.74 329 48 256 48c-69 0-113.44 45.79-128 91.2-60 5.7-112 35.88-112 98.4S70 336 136 336h56M192 400.1l64 63.9 64-63.9M256 224v224.03" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="56"></path></svg></span>';
-const downloadMirror = ((url) => `https://ghproxy.cn/${url}`); // 针对大陆地区 | for Chinese Mainland
-
 // 列出所有已支持的设备
 const supportedDevices = [
     // |   最早名称   |       显示名称       |
@@ -16,26 +8,6 @@ const supportedDevices = [
     [        'Linux',  'Linux'             ],
 ];
 DOMDeviceList.show();
-
-
-// 不记录历史滚动位置
-if (history.scrollRestoration) {
-    history.scrollRestoration = 'manual';
-};
-
-
-// 国际化 (internationalization)
-al.setLangPropPath('locales');
-al.setDefaultCountry({
-    en: 'en',
-    zh: 'zh-CN'
-});
-const i18n = ((callback = () => {}) => {
-    al.setLangProp(['zh-CN.yml','en.yml'], () => {
-        al.load(void 0, al.mode.HTML, callback);
-    }, {url: true, yaml: true});
-});
-
 
 
 // 创建超文本标签（并点击）
@@ -84,7 +56,6 @@ const deleteUpdateLayer = function() {
     --updateLayerNumber;
     notificationCount = '';
     if (updateLayerNumber) notificationCount = `(${updateLayerNumber})`;
-    i18n();
 
     const number = Number($(this).attr('class').split('update-layer-')[1]);
     $(`.update-layer-${number}`).remove();
@@ -571,6 +542,7 @@ $(document).ready(() => {
                 };
             };
             $('.update-layer').click(deleteUpdateLayer);
+            i18n();
         };
         // 默认值初始化
         $('.Modrinth-projectType').val('mod');
@@ -603,8 +575,3 @@ $(document).on('visibilitychange', () => {
         visibility = true;
     };
 });
-
-// 调试模式 (Debug Mode)
-let debug = false;
-const debugChange = (e = $('[visibleInDebugMode]')) => {for (const t of e) t.style.display = (debug ? 'block': 'none')};
-debugChange(); /* 监听变更我就先咕咕咕了 ＜（＾－＾）＞ --xs */
