@@ -30,16 +30,15 @@ const createUpdateLayer = ((abbr, lastVersion, latestVersion, download, device, 
         <div al="downloadedLauncherUpdate"></div>
         <div>
           <text class="abbr">${abbr}</text>
-          <text al="updatedTo"></text>
           <text al="${flag}"></text>
-          <text class="latest-version">${latestVersion}</text><text al="exclamationMark"></text>
+          <text al="updatedTo"></text>
         </div><div>
           <text class="last-version">${lastVersion}</text>
           <text al="updateArrow"></text>
           <text class="latest-version">${latestVersion}</text>
         </div>
         <div>(${deviceInfo})</div>
-        <a class="download" href="${download}" target="_blank" al="download" ondragstart="event.dataTransfer.effectAllowed = 'none';"></a>
+        <a class="download" href="${downloadMirror(download)}" data-backup-href="${download}" target="_blank" al="download" ondragstart="event.dataTransfer.effectAllowed = 'none';"></a>
       </div>`;
     $('sidebar').before(dom);
     $(`.update-layer-${updateLayerNumber} .download`).click(() => {
@@ -112,11 +111,8 @@ const launcherChanged = ((event = {target: $('mdui-select.launcher-list')}) => {
     };
     for (const attribute of ['data-download', 'data-dev-download', 'data-url']) {
         const button = $(`.${attribute}-launcher`);
-        let url = checked.attr(attribute);
+        const url = downloadMirror(checked.attr(attribute));
         if (attribute.endsWith('download')) {
-            if ($('.github-proxy').is(':checked') && String(url).startsWith('https://github.com/')) {
-                url = downloadMirror(url);
-            };
             const removeEmpty = ((version) => {
                 if (version === void 0) {
                     button.removeAttr('href').removeAttr('title').removeAttr('data-backup-href');
@@ -170,12 +166,12 @@ const proxyChanged = (() => {
     localStorage.setItem('github-proxy', $('.github-proxy').is(':checked'));
     try {
         if ($('.github-proxy').is(':checked')) {
-            $('.launcher-download>a.button').each((i, e) => {
+            $('.launcher-download a.button, .update-layer a.download').each((i, e) => {
                 const url = $(e).attr('href');
-                if (url.startsWith('https://github.com/')) $(e).attr('href', downloadMirror(url));
+                $(e).attr('href', downloadMirror(url));
             });
         } else {
-            $('.launcher-download>a.button').each((i, e) => {
+            $('.launcher-download a.button, .update-layer a.download').each((i, e) => {
                 $(e).attr('href', $(e).attr('data-backup-href'));
             });
         };
@@ -431,39 +427,6 @@ const pre_list = ((e) => {
 });
 
 
-// URL哈希属性监听
-const hashChanged = (() => {
-    if (location.hash == '') return;
-    let hash = decodeURI(location.hash).replace('/', '\\/');
-    const slicedHash = hash.slice(0, -3);
-    // 自动展开/收起：<details> 元素
-    try {
-        // 通过检测哈希属性
-        if (hash == '#全部展开') $('.page-content').find('details:not(.keep)').attr('open', true);
-        if (hash == '#全部收起') $('.page-content').find('details:not(.keep)').attr('open', false);
-        if (hash.endsWith('-展开')) {
-            $(slicedHash).find('details').attr('open', true);
-            $(slicedHash).find('.to-fold').show();
-            $(slicedHash).find('.to-unfold').hide();
-            location.hash = slicedHash;
-        };
-        if (hash.endsWith('-收起')) {
-            $(slicedHash).find('details:not(.keep)').attr('open', false);
-            $(slicedHash).find('.to-unfold').show();
-            $(slicedHash).find('.to-fold').hide();
-            hash = slicedHash;
-        };
-        // 通过检测 <summary> 元素
-        if ($(hash).html().startsWith('<summary>')) $(hash).attr('open', true);
-        else $(`${hash}>*:first-child`).addClass('hash');
-    } catch {};
-});
-$(window).on('hashchange', () => {
-    $('.hash').removeClass('hash');
-    hashChanged();
-});
-
-
 
 // 获取正常状态的简体中文论坛
 const CSForum = [{"简体中文论坛": []}];
@@ -543,6 +506,7 @@ $(document).ready(() => {
                 };
             };
             $('.update-layer').click(deleteUpdateLayer);
+            downloadClick();
             i18n();
         };
         // 默认值初始化
@@ -565,14 +529,18 @@ $(document).ready(() => {
         } else $('#ces')[0].remove();
     });
 });
-// 监听标签页切换事件
-$(document).on('visibilitychange', () => {
-    if (document.visibilityState == 'hidden') {
-        // 当前标签页隐藏时
-        visibility = false;
+
+
+// 调试模式 (Debug Mode)
+const debugCallback = (e = $('[visibleInDebugMode]')) => (debug.mode ? e.show() : e.hide());
+const debugChange = ((object) => {
+    const handler = {
+        defineProperty: (target, property, descriptor) => {
+            Reflect.defineProperty(target, property, descriptor);
+            debugCallback();
+        }
     };
-    if (document.visibilityState == 'visible') {
-        // 当前标签页显示时
-        visibility = true;
-    };
+    return new Proxy(object, handler);
 });
+const debug = debugChange({mode: false});
+debugCallback();

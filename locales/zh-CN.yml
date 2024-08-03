@@ -37,7 +37,7 @@ data:
   goto: 跳转
   download: 下载
   downloadedLauncherUpdate: 您下载过的启动器更新啦：
-  updatedTo: 已更新至
+  updatedTo: 已发布新版本：
   updateArrow: ➔
   exclamationMark: ！
   search: 搜索
@@ -69,6 +69,7 @@ data:
   darkTheme: 深色主题
   earlyTheme: 早期主题
   ellipsis: ....
+  startDownloading: 即将开始下载：
   statistics: 统计信息
   visitorCount: 访问计数
   contributors: 贡献者
@@ -94,18 +95,18 @@ data:
   preRelease: 开发版
   preRelease.note: 开发测试版
   launcher.release: >-
-    <a class="button download data-download-launcher" target="_blank"
-    href="${linkUrl}" data-backup-href="${linkDownload}" ondragstart="event.dataTransfer.effectAllowed = 'none';"
+    <a class="button download data-download-launcher" href="${linkUrl}"
+    data-backup-href="${linkDownload}" ondragstart="event.dataTransfer.effectAllowed = 'none';"
     title="{download}{release.note} ${linkVersion}">${downloadSVG}{download}{release} ${linkVersion}</a>
   launcher.release.latest: >-
-    <a class="button download data-download-launcher" target="_blank"
-    href="${linkUrl}" data-backup-href="${linkDownload}" ondragstart="event.dataTransfer.effectAllowed = 'none';"
+    <a class="button download data-download-launcher" href="${linkUrl}"
+    data-backup-href="${linkDownload}" ondragstart="event.dataTransfer.effectAllowed = 'none';"
     title="{download}{latest.note}{release.note}">${downloadSVG}{download}{latest}{release}</a>
   launcher.preRelease: >-
-    <a class="button download data-dev-download-launcher" target="_blank"
-    href="${linkDevUrl}"data-backup-href="${linkDevDownload}" ondragstart="event.dataTransfer.effectAllowed = 'none';"
+    <a class="button download data-dev-download-launcher" href="${linkDevUrl}"
+    data-backup-href="${linkDevDownload}" ondragstart="event.dataTransfer.effectAllowed = 'none';"
     title="{download}{preRelease.note} ${linkDevVersion}">${downloadSVG}{download}{preRelease} ${linkDevVersion}</a>
   launcher.preRelease.latest: >-
-    <a class="button download data-dev-download-launcher" target="_blank"
-    href="${linkDevUrl}" data-backup-href="${linkDevDownload}" ondragstart="event.dataTransfer.effectAllowed = 'none';"
+    <a class="button download data-dev-download-launcher" href="${linkDevUrl}"
+    data-backup-href="${linkDevDownload}" ondragstart="event.dataTransfer.effectAllowed = 'none';"
     title="{download}{latest.note}{preRelease.note}">${downloadSVG}{download}{latest}{preRelease}</a>
