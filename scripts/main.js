@@ -56,6 +56,7 @@ const deleteUpdateLayer = function() {
     --updateLayerNumber;
     notificationCount = '';
     if (updateLayerNumber) notificationCount = `(${updateLayerNumber})`;
+    i18n();
 
     const number = Number($(this).attr('class').split('update-layer-')[1]);
     $(`.update-layer-${number}`).remove();
