@@ -157,6 +157,7 @@ const launcherChanged = ((event = {target: $('mdui-select.launcher-list')}) => {
             if (version && version != 'latest') set(version, 'stable');
             if (devVersion && devVersion != 'latest') set(devVersion, 'dev');
         });
+        downloadClick();
     });
 });
 
