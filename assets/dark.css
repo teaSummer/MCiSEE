@@ -126,7 +126,6 @@ sidebar {
 }
 
 mdui-menu-item {
-    background: var(--apple-color-black);
     padding: 4px 12px;
     cursor: pointer;
     transition: none;
