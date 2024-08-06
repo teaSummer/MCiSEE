@@ -111,8 +111,9 @@ const launcherChanged = ((event = {target: $('mdui-select.launcher-list')}) => {
     };
     for (const attribute of ['data-download', 'data-dev-download', 'data-url']) {
         const button = $(`.${attribute}-launcher`);
-        const url = downloadMirror(checked.attr(attribute));
+        let url = checked.attr(attribute);
         if (attribute.endsWith('download')) {
+            url = downloadMirror(url);
             const removeEmpty = ((version) => {
                 if (version === void 0) {
                     button.removeAttr('href').removeAttr('title').removeAttr('data-backup-href');
