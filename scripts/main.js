@@ -398,12 +398,12 @@ $('.searchable-input').typeahead(
 );
 
 
-// 网站板块生成
+// 生成网站details板块
 const pre_list = ((e) => {
     const lineBlocks = [];
     let blocks = JSON.parse($(e).html());
     let dom = '';
-    const importantPattern = /((半价|免费|公益|折扣|限时|特惠|热门|新品|热销|推荐|礼品|[一二两三四五六七八九]折|打折|促销|超值|全新|便宜|披风)|\b(free|off|new|hot|recommend|top|discount|limit|cheap|present|gift|cape)\b)/gi;
+    const importantPattern = /((半价|免费|公益|折扣|限时|特惠|热门|新品|热销|促销|推荐|礼品|[一二两三四五六七八九]折|打折|超值|全新|便宜|披风)|\b(free|off|new|hot|recommend|top|discount|limit|cheap|present|gift|cape)\b)/gi;
     for (const block of blocks) {
         // 获取分类并处理
         const category = Object.keys(block)[0];
@@ -411,16 +411,22 @@ const pre_list = ((e) => {
             dom += `<details class="keep" id="${category.replace('[open]', '').replace(/ .+/, '')}" open><summary>${category.replace('[open]', '')}</summary>`;
         }
         else dom += `<details id="${category.replace(/ .+/, '')}"><summary>${category}</summary>`;
+        let content;
         // 生成元素
-        for (const [title, url] of block[category]) {
-            // 判断是否不为外部链接
+        for (const [title, url, description] of block[category]) {
+            let template = '|DOM|';
+            if (description) template = `<mdui-tooltip content="${description}">|DOM|</mdui-tooltip>`;
+            // 判断是否为内部链接
             if (url.startsWith('#')) {
-                dom += `<a class="button noicon" href="${url}" onclick="hashChanged();">${title}</a>`;
+                // 内部链接
+                content = `<a class="button noicon" href="${url}" onclick="hashChanged();">${title}</a>`;
             } else {
+                // 外部链接
                 if (importantPattern.test(title)) {
-                    dom += `<a class="button important" href="${url}" target="_blank">${title.replace(importantPattern, '<text class="bold">$1</text>')}</a>`;
-                } else dom += `<a class="button" href="${url}" target="_blank">${title}</a>`;
+                    content = `<a class="button important" href="${url}" target="_blank">${title.replace(importantPattern, '<text class="bold">$1</text>')}</a>`;
+                } else content = `<a class="button" href="${url}" target="_blank">${title}</a>`;
             };
+            dom += template.replace('|DOM|', content);
         };
         dom += '</details><hr>';
     };

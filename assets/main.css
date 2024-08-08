@@ -342,7 +342,7 @@ details {
     transition: all 1s;
 }
 
-details>*:not(summary) {
+details a.button {
     opacity: 0%;
     pointer-events: none;
 }
@@ -351,7 +351,7 @@ details[open] {
     max-height: 1000px;
 }
 
-details[open]>*:not(summary) {
+details[open] a.button {
     opacity: 100%;
     pointer-events: auto;
 }
