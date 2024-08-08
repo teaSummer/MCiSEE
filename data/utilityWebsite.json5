@@ -120,7 +120,7 @@
       ["DigMinecraft教程", "https://www.digminecraft.com"],
       ["MC开发者中文指南", "https://mouse0w0.github.io/MinecraftDeveloperGuide/"],
       ["基岩版JSONUI文档", "https://mcbeui.netlify.app/"],
-      ["基岩版Script API文档", "https://projectxero.top/sapi/"],
+      ["基岩版SAPI文档", "https://projectxero.top/sapi/", "Script API文档"],
       ["编程一小时教程", "https://code.org/minecraft", "教育版教程"],
       // ["网易我的世界开发者官网", "https://mc.163.com/dev/"]
     ]
@@ -128,16 +128,16 @@
   {
     "基岩版启动器/版本库": [
       ["Bedrock Launcher Lite", "https://bedrocklauncher.github.io/", "电脑端启动器"],
-      ["mcapks (KLPBBS)", "https://mcapks.net"],
-      ["mcdl版本库 (MineBBS)", "https://mc.minebbs.com"],
+      ["苦力怕论坛源", "https://mcapks.net", "mcapks版本库"],
+      ["MineBBS源", "https://mc.minebbs.com", "mcdl版本库"],
+      ["MCAppx源", "https://www.mcappx.com", "mcfw版本库"],
       ["甘泉版本库", "https://mcbbk.blmcpia.com", "原名像素科技"],
-      ["mcfa版本库 (@zihao_il)", "https://bbk.endyun.ltd/main"],
-      ["mcfw版本库 (MCAppx)", "https://www.mcappx.com"],
-      ["mcarc版本库 (@Hottampist)", "https://mcarc.github.io"],
-      ["星月Minecraft版本库", "https://spectrollay.github.io/minecraft_repository/"],
-      // ["星月Minecraft版本库测试版", "https://spectrollay.github.io/minecraft_repository_test/"],
+      ["mcfa版本库 ", "https://bbk.endyun.ltd/main", "由zihao_il维护"],
+      ["mcarc版本库", "https://mcarc.github.io", "由Hottampist维护"],
+      ["星月版本库", "https://spectrollay.github.io/minecraft_repository/", "星月Minecraft版本库"],
+      // ["星月版本库测试版", "https://spectrollay.github.io/minecraft_repository_test/", "星月Minecraft版本库测试版],
       // -- 以下需要魔法才能访问 --
-      // ["Alpha版本库 (存档)", "https://archive.org/details/MCPEAlpha"]
+      // ["Alpha版本库", "https://archive.org/details/MCPEAlpha", "存档"]
     ]
   },
   {
