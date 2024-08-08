@@ -8,8 +8,8 @@
       ["基岩版开发者文档", "https://learn.microsoft.com/minecraft/creator/"],
       ["Feedback", "https://feedback.minecraft.net"],
       ["知识库", "https://feedback.minecraft.net/hc/categories/115000410252-Knowledge-Base"],
-      ["远古版网页MC", "https://classic.minecraft.net"],
-      ["Forge模组加载器", "https://www.minecraftforge.net"],
+      ["远古版MC", "https://classic.minecraft.net", "网页版本"],
+      ["Forge", "https://www.minecraftforge.net", "模组加载器"],
       ["基岩版专用服务端", "https://www.minecraft.net/zh-hans/download/server/bedrock"],
       ["壁纸集","https://www.minecraft.net/collectibles/minecraft-collection"],
       ["服务器列表", "https://findmcserver.com/"],
@@ -116,7 +116,7 @@
       ["插件百科", "https://mineplugin.org"],
       ["维基百科: 原站", "https://zh.minecraft.wiki"],
       ["维基百科: 镜像站", "https://wiki.biligame.com/mc/"],
-      ["MC百科", "https://mcmod.cn"],
+      ["MC百科", "https://mcmod.cn", "mcmod.cn"],
       ["DigMinecraft教程", "https://www.digminecraft.com"],
       ["MC开发者中文指南", "https://mouse0w0.github.io/MinecraftDeveloperGuide/"],
       ["基岩版JSONUI文档", "https://mcbeui.netlify.app/"],
@@ -135,7 +135,7 @@
       ["mcfa版本库 ", "https://bbk.endyun.ltd/main", "由zihao_il维护"],
       ["mcarc版本库", "https://mcarc.github.io", "由Hottampist维护"],
       ["星月版本库", "https://spectrollay.github.io/minecraft_repository/", "星月Minecraft版本库"],
-      // ["星月版本库测试版", "https://spectrollay.github.io/minecraft_repository_test/", "星月Minecraft版本库测试版],
+      // ["星月版本库测试版", "https://spectrollay.github.io/minecraft_repository_test/", "星月Minecraft版本库测试版"],
       // -- 以下需要魔法才能访问 --
       // ["Alpha版本库", "https://archive.org/details/MCPEAlpha", "存档"]
     ]
@@ -180,16 +180,16 @@
   },
   {
     "加载器 (模组/光影)": [
-      ["Forge", "https://www.minecraftforge.net"],
-      ["NeoForge", "https://neoforged.net"],
-      ["Fabric", "https://fabricmc.net"],
-      ["Quilt", "https://quiltmc.org"],
-      ["LiteLoader", "https://www.liteloader.com"],
-      ["Rift", "https://www.curseforge.com/minecraft/mc-mods/rift"],
-      ["Iris", "https://www.irisshaders.dev"],
-      ["OptiFine", "https://www.optifine.net"],
-      ["OptiFine(中文)", "https://optifine.cn"],
-      ["Canvas", "https://modrinth.com/mod/canvas"]
+      ["Forge", "https://www.minecraftforge.net", "模组加载器"],
+      ["NeoForge", "https://neoforged.net", "模组加载器"],
+      ["Fabric", "https://fabricmc.net", "模组加载器"],
+      ["Quilt", "https://quiltmc.org", "模组加载器"],
+      ["LiteLoader", "https://www.liteloader.com", "模组加载器"],
+      ["Rift", "https://www.curseforge.com/minecraft/mc-mods/rift", "模组加载器"],
+      ["Iris", "https://www.irisshaders.dev", "光影加载器"],
+      ["OptiFine", "https://www.optifine.net", "光影加载器"],
+      ["OptiFine(中文)", "https://optifine.cn", "光影加载器"],
+      ["Canvas", "https://modrinth.com/mod/canvas", "光影加载器"]
     ]
   },
   {
