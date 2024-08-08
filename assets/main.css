@@ -318,8 +318,8 @@ hr {
     width: 102%;
 }
 
-summary::marker {
-    font-size: 0; /** 修改字体大小为0以隐藏默认的小三角 */
+summary {
+    display: block; /** 用于隐藏默认的小三角 */
 }
 
 summary {
