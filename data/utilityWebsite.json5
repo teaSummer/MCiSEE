@@ -6,7 +6,6 @@
       // | 网站名称 |  网站地址 URL  |
       ["Minecraft", "https://www.minecraft.net"],
       ["Minecraft教育版", "https://education.minecraft.net/"],
-      ["去Xbox购买正版", "https://www.xbox.com/zh-CN/games/store/minecraft-java-bedrock-edition-for-pc/9NXP44L49SHJ/0010"],
       ["漏洞追踪器(反馈Bug)", "https://bugs.mojang.com"],
       ["基岩版开发者文档", "https://learn.microsoft.com/minecraft/creator/"],
       ["Feedback", "https://feedback.minecraft.net"],
@@ -16,7 +15,18 @@
       ["基岩版专用服务端", "https://www.minecraft.net/zh-hans/download/server/bedrock"],
       ["壁纸集","https://www.minecraft.net/collectibles/minecraft-collection"],
       ["服务器列表", "https://findmcserver.com/"],
-      ["编程一小时教程", "https://code.org/minecraft"]
+      ["编程一小时教程", "https://code.org/minecraft"],
+      ["地下城 (Dungeons)", "https://minecraftdungeons.net/"],
+      ["传奇 (Legends)", "https://www.minecraft.net/about-legends"]
+    ]
+  },
+  {
+    "官方购买渠道": [
+      ["基岩版+Java版 (Windows)", "https://www.minecraft.net/zh-hans/store/minecraft-java-bedrock-edition-pc"],
+      ["基岩版 (Android)", "https://play.google.com/store/apps/details?id=com.mojang.minecraftpe&hl=zh_CN"],
+      ["基岩版 (iOS)", "https://apps.apple.com/cn/app/id479516143"],
+      ["基岩版 (Xbox)", "https://xbox.com/games/store/-/9MVXMVT8ZKWC"],
+      ["周边商城", "https://minecraftshop.com/"]
     ]
   },
   {
