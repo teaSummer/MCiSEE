@@ -33,8 +33,8 @@
 
 `data` 目录下的文件列表：
 
-| 文件名                                                                           | 数据含义             | 文件                                                                     |
-|-------------------------------------------------------------------------------|------------------|------------------------------------------------------------------------|
+| 文件名                                                                           | 数据含义             | 文件                                                                       |
+|-------------------------------------------------------------------------------|------------------|--------------------------------------------------------------------------|
 | [![](assets/icon/doc/link-16.svg)](#launcherjson5) launcher.json5             | 启动器列表（**Java版**） | [查看![](assets/icon/doc/link-external-16.svg)](data/launcher.json5)       |
 | [![](assets/icon/doc/link-16.svg)](#otherForumjson5) otherForum.json5         | 其他论坛列表           | [查看![](assets/icon/doc/link-external-16.svg)](data/otherForum.json5)     |
 | [![](assets/icon/doc/link-16.svg)](#searchablejson5) searchable.json5         | 可供快速查询的站点列表      | [查看![](assets/icon/doc/link-external-16.svg)](data/searchable.json5)     |
@@ -122,7 +122,11 @@
 
 以分类作为键，值为一个数组。
 
-在数组内，第一项为网站名称，第二项为网站地址 URL。
+在数组内，每项对应的描述：
+1. 第一项 - 网站名称。
+2. 第二项 - 网站地址 URL。
+3. 第三项 - 可选，网站简介。
+4. 第四项 - 可选，填 `true` 会将`网站简介`视为语言文件中的键。
 
 如果分类后面有 `[open]`，则该分类默认展开。
 
@@ -130,9 +134,7 @@
 
 ``` json5
 {
-  // | 分类 |
   "官方网站 (©Mojang/©微软)": [
-    // | 网站名称 |  网站地址 URL  |
     ["Minecraft", "https://www.minecraft.net"],
     ["Minecraft教育版", "https://education.minecraft.net"],
     ["漏洞追踪器(反馈Bug)", "https://bugs.mojang.com"],

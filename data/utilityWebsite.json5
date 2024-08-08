@@ -1,9 +1,7 @@
 // 实用网站列表
 [
   {
-    // | 分类 |
     "官方网站 (©Mojang/©微软)": [
-      // | 网站名称 |  网站地址 URL  |
       ["Minecraft", "https://www.minecraft.net"],
       ["Minecraft教育版", "https://education.minecraft.net/"],
       ["漏洞追踪器(反馈Bug)", "https://bugs.mojang.com"],

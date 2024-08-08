@@ -413,9 +413,10 @@ const pre_list = ((e) => {
         else dom += `<details id="${category.replace(/ .+/, '')}"><summary>${category}</summary>`;
         let content;
         // 生成元素
-        for (const [title, url, description] of block[category]) {
+        for (const [title, url, description, autoLang] of block[category]) {
             let template = '|DOM|';
-            if (description) template = `<mdui-tooltip content="${description}">|DOM|</mdui-tooltip>`;
+            if (autoLang && description) template = `<mdui-tooltip al-aplto="content: ${description};" placement="top">|DOM|</mdui-tooltip>`;
+            else if (description) template = `<mdui-tooltip content="${description}" placement="top">|DOM|</mdui-tooltip>`;
             // 判断是否为内部链接
             if (url.startsWith('#')) {
                 // 内部链接
