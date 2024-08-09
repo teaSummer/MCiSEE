@@ -49,7 +49,7 @@
   },
   {
     "资源板块": [
-      ["导航网", "https://www.mcnav.net"],
+      ["导航网", "https://www.mcnav.net", "MCNav"],
       ["下载基岩版", "#基岩版启动器/版本库", "含破解版"],
       ["IMC.RE", "https://imc.re"],
       ["地球资源社区", "https://www.planetminecraft.com"],
@@ -63,7 +63,7 @@
   },
   {
     "工具箱": [
-      ["通过名称查询皮肤", "https://namemc.com"],
+      ["NameMC", "https://namemc.com", "通过名称查询皮肤等"],
       ["筛选皮肤", "https://mcskinsearch.com"],
       ["MC风格艺术字", "https://textcraft.net"],
       ["渐变颜色生成器", "https://mcg.tuanzi.ink"],
@@ -126,18 +126,17 @@
     ]
   },
   {
-    "基岩版启动器/版本库": [
-      ["Bedrock Launcher Lite", "https://bedrocklauncher.github.io/", "电脑端启动器"],
-      ["苦力怕论坛源", "https://mcapks.net", "mcapks版本库"],
-      ["MineBBS源", "https://mc.minebbs.com", "mcdl版本库"],
-      ["MCAppx源", "https://www.mcappx.com", "mcfw版本库"],
+    "基岩版版本库/启动器": [
+      ["苦力怕论坛源", "https://mcapks.net", "MCAPKS版本库"],
+      ["MineBBS源", "https://mc.minebbs.com", "MCDL版本库"],
+      ["MCAppx源", "https://www.mcappx.com", "Minecraft for Windows版本库"],
       ["甘泉版本库", "https://mcbbk.blmcpia.com", "原名像素科技"],
-      ["mcfa版本库 ", "https://bbk.endyun.ltd/main", "由zihao_il维护"],
-      ["mcarc版本库", "https://mcarc.github.io", "由Hottampist维护"],
+      ["mcfa版本库 ", "https://bbk.endyun.ltd/main", "Minecraft for Android版本库"],
+      // ["mcarc版本库", "https://mcarc.github.io"], // 页面最新正式版停留于1.19.73且不含独有版本，不再推荐
       ["星月版本库", "https://spectrollay.github.io/minecraft_repository/", "星月Minecraft版本库"],
       // ["星月版本库测试版", "https://spectrollay.github.io/minecraft_repository_test/", "星月Minecraft版本库测试版"],
-      // -- 以下需要魔法才能访问 --
-      // ["Alpha版本库", "https://archive.org/details/MCPEAlpha", "存档"]
+      // ["Alpha版本库", "https://archive.org/details/MCPEAlpha", "(存档)"], // 需要魔法才能访问
+      ["电脑端启动器", "https://bedrocklauncher.github.io/", "Bedrock Launcher Lite"]
     ]
   },
   {
