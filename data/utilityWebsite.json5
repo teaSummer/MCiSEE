@@ -3,7 +3,7 @@
   {
     "官方网站 (©Mojang/©微软)": [
       ["Minecraft", "https://www.minecraft.net"],
-      ["Minecraft教育版", "https://education.minecraft.net/"],
+      ["Minecraft教育版", "https://education.minecraft.net/", "大陆访问可能会出现404"],
       ["漏洞追踪器", "https://bugs.mojang.com", "Mojira，用于反馈Bug"],
       ["基岩版开发者文档", "https://learn.microsoft.com/minecraft/creator/"],
       ["Feedback", "https://feedback.minecraft.net"],
@@ -50,7 +50,7 @@
   {
     "资源板块": [
       ["导航网", "https://www.mcnav.net", "MCNav"],
-      ["下载基岩版", "#基岩版启动器/版本库", "含破解版"],
+      ["下载基岩版", "#基岩版启动器/版本库", "含正版和破解版"],
       ["IMC.RE", "https://imc.re"],
       ["地球资源社区", "https://www.planetminecraft.com"],
       ["基岩版地球资源社区", "https://mcpe-planet.com"],
@@ -181,17 +181,17 @@
   },
   {
     "加载器 (模组/光影)": [
-      ["Forge", "https://www.minecraftforge.net", "模组加载器"],
-      ["NeoForge", "https://neoforged.net", "模组加载器"],
-      ["Fabric", "https://fabricmc.net", "模组加载器"],
-      ["Legacy Fabric", "https://legacyfabric.net/", "模组加载器"],
-      ["Quilt", "https://quiltmc.org", "模组加载器"],
-      ["LiteLoader", "https://www.liteloader.com", "模组加载器"],
-      ["Rift", "https://www.curseforge.com/minecraft/mc-mods/rift", "模组加载器"],
-      ["Iris", "https://www.irisshaders.dev", "光影加载器"],
-      ["OptiFine", "https://www.optifine.net", "光影加载器"],
-      ["OptiFine(中文)", "https://optifine.cn", "光影加载器"],
-      ["Canvas", "https://modrinth.com/mod/canvas", "光影加载器"]
+      ["Forge", "https://www.minecraftforge.net", "模组加载器(远古版本起)"],
+      ["NeoForge", "https://neoforged.net", "模组加载器(1.20.1+)"],
+      ["Fabric", "https://fabricmc.net", "模组加载器(1.14+)"],
+      ["Legacy Fabric", "https://legacyfabric.net/", "模组加载器(1.2.5-1.13.2)"],
+      ["Quilt", "https://quiltmc.org", "模组加载器(1.14+)"],
+      ["LiteLoader", "https://www.liteloader.com", "模组加载器(1.3.2-1.12.2)"],
+      ["Rift", "https://www.curseforge.com/minecraft/mc-mods/rift", "模组加载器(1.13-1.13.2)"],
+      ["Iris", "https://www.irisshaders.dev", "光影加载器(1.16+)"],
+      ["OptiFine", "https://www.optifine.net", "光影加载器(远古版本-1.20.6)"],
+      ["OptiFine(中文)", "https://optifine.cn", "光影加载器(远古版本-1.20.6)"],
+      ["Canvas", "https://modrinth.com/mod/canvas", "光影加载器(1.14-1.20.2)"]
     ]
   },
   {

@@ -137,6 +137,14 @@ div[id]>*:first-child {
     display: block;
 }
 
+.news {
+    width: calc((100vw - 1000px) / 2 - 5px);
+    top: 3%;
+    height: 80%;
+    background: rgba(17, 17, 17, 0.4);
+    position: fixed;
+}
+
 .page-content {
     max-width: min(1000px, 100vw);
     margin: 0 auto;
@@ -319,10 +327,7 @@ hr {
 }
 
 summary {
-    display: block; /** 用于隐藏默认的小三角 */
-}
-
-summary {
+    display: block; /* 用于隐藏默认的小三角 */
     margin-left: 1.5em;
 }
 
@@ -339,7 +344,7 @@ summary::before {
 
 details {
     max-height: 1em;
-    transition: all 1s;
+    transition: max-height 2s;
 }
 
 details a.button {
@@ -348,7 +353,7 @@ details a.button {
 }
 
 details[open] {
-    max-height: 1000px;
+    max-height: 2000px;
 }
 
 details[open] a.button {
