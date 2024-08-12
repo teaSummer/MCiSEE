@@ -57,6 +57,7 @@
       ["资源包列表", "https://resourcepack.net"],
       ["LittleSkin皮肤站", "https://littleskin.cn"],
       ["红石皮肤站", "https://mcskin.com.cn/"],
+      ["MCSkins.top", "https://mcskins.top"],
       ["Minecraft Shaders", "https://minecraftshader.com/"],
       ["9Minecraft", "https://www.9minecraft.net/"]
     ]
@@ -85,6 +86,7 @@
       ["皮肤编辑器", "https://minecraft.novaskin.me", "Nova Skin"],
       ["壁纸生成器", "https://wallpapers.novaskin.me", "Nova Skin"],
       ["皮肤生成壁纸", "https://www.minepix.app/", "minepix.app"], // 和上面那个应该差不多,区别在于UI和大陆地区的加载速度
+      ["皮肤生成头像", "https://mcskins.top/avatar-maker"],
       ["正版玩家信息查询", "https://mcuuid.net"],
       ["Aternos免费开服", "https://aternos.org"],
       ["简幻欢公益面板服", "https://simpfun.cn"],
@@ -122,7 +124,7 @@
       ["基岩版JSONUI文档", "https://mcbeui.netlify.app/"],
       ["基岩版SAPI文档", "https://projectxero.top/sapi/", "Script API文档"],
       ["编程一小时教程", "https://code.org/minecraft", "教育版教程"],
-      // ["网易我的世界开发者官网", "https://mc.163.com/dev/"]
+      ["网易我的世界开发指南", "https://mc.163.com/dev/guide.html"]
     ]
   },
   {
@@ -182,6 +184,7 @@
       ["Forge", "https://www.minecraftforge.net", "模组加载器"],
       ["NeoForge", "https://neoforged.net", "模组加载器"],
       ["Fabric", "https://fabricmc.net", "模组加载器"],
+      ["Legacy Fabric", "https://legacyfabric.net/", "模组加载器"],
       ["Quilt", "https://quiltmc.org", "模组加载器"],
       ["LiteLoader", "https://www.liteloader.com", "模组加载器"],
       ["Rift", "https://www.curseforge.com/minecraft/mc-mods/rift", "模组加载器"],

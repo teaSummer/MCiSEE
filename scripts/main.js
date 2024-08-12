@@ -535,7 +535,7 @@ $(document).ready(() => {
             script.type= 'text/javascript';
             script.src = 'https://log.xsawa.dev.tc/js/candy.min.js';
             $('head')[0].appendChild(script);
-        } else $('#ces')[0].remove();
+        } // 打开了就没有退路了awa 除非刷新页面awa
     });
 });
 
