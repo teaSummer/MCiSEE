@@ -415,13 +415,15 @@ const pre_list = ((e) => {
         // 生成元素
         for (const [_title, url, description, autoLang] of block[category]) {
             let template = '|DOM|';
+            const title = autoLang ? `al="${_title}">` : `>${_title}`;
             if (autoLang && description != '') template = `<mdui-tooltip al-aplto="content: ${description};" placement="top">|DOM|</mdui-tooltip>`;
             else if (description) template = `<mdui-tooltip content="${description}" placement="top">|DOM|</mdui-tooltip>`;
-            const title = autoLang ? `al="${_title}">` : `>${_title}`;
             // 判断是否为内部链接
             if (url.startsWith('#')) {
                 // 内部链接
                 content = `<a class="button noicon" href="${url}" onclick="hashChanged();" ${title}</a>`;
+                // 找不到合适的外部链接
+                if (url == '#') content = `<a class="button noicon" ${title}</a>`;
             } else {
                 // 外部链接
                 if (importantPattern.test(title)) {
