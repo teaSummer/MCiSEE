@@ -126,7 +126,7 @@ const db_forums = [
     {
         title: "像素工坊",
         url: "https://www.pixelecraft.com",
-        state: "down",
+        state: "up",
         createdAt: "2021/01/09",
         updatedAt: "2024/06/30",
         hasICP: "yes",
@@ -451,11 +451,43 @@ const db_forums = [
         ]
     },
     {
+        title: "HiMCBBS",
+        url: "https://www.himcbbs.com",
+        state: "up",
+        createdAt: "2023/08/12",
+        updatedAt: "2024/08/11",
+        hasICP: "yes",
+        hasNetSec: "in_progress",
+        note: "主营Java版，含基岩版。",
+        reference: [
+            {
+                title: "我要做一个可以平替MCBBS的论坛！！！快来加入我们吧~",
+                url: "https://www.bilibili.com/video/BV1n2421M7yt/"
+            },
+            {
+                title: "一个可以替代MCBBS的网站！",
+                url: "https://www.bilibili.com/video/BV13r42187th/"
+            },
+            {
+                title: "MCBBS没了，找不到资源？MC老玩家们组成的论坛欢迎你！",
+                url: "https://www.bilibili.com/video/BV1iK421Y7RQ/"
+            },
+            {
+                title: "HiMCBBS打赢复活赛！重新开站！",
+                url: "https://www.bilibili.com/video/BV12t421A7NK/"
+            },
+            {
+                title: "什么？这个论坛发资源能赚钱？？",
+                url: "https://www.bilibili.com/video/BV1JoYeeBEAf/"
+            }
+        ]
+    },
+    {
         title: "末影论坛",
         url: "https://enderbbs.wavemoe.com",
-        state: "up",
+        state: "failure",
         createdAt: "2023/08/28",
-        updatedAt: "2024/04/20",
+        updatedAt: "2024/08/10",
         hasICP: "no",
         hasNetSec: "no",
         note: "非大陆服务器。",
@@ -487,34 +519,6 @@ const db_forums = [
         hasNetSec: "no",
         note: "非大陆服务器。",
         reference: []
-    },
-    {
-        title: "HiMCBBS",
-        url: "https://www.himcbbs.com",
-        state: "up",
-        createdAt: "2024/01/28",
-        updatedAt: "2024/05/24",
-        hasICP: "yes",
-        hasNetSec: "in_progress",
-        note: "主营Java版，含基岩版。",
-        reference: [
-            {
-                title: "我要做一个可以平替MCBBS的论坛！！！快来加入我们吧~",
-                url: "https://www.bilibili.com/video/BV1n2421M7yt/"
-            },
-            {
-                title: "一个可以替代MCBBS的网站！",
-                url: "https://www.bilibili.com/video/BV13r42187th/"
-            },
-            {
-                title: "MCBBS没了，找不到资源？MC老玩家们组成的论坛欢迎你！",
-                url: "https://www.bilibili.com/video/BV1iK421Y7RQ/"
-            },
-            {
-                title: "HiMCBBS打赢复活赛！重新开站！",
-                url: "https://www.bilibili.com/video/BV12t421A7NK/"
-            }
-        ]
     },
     {
         title: "方块社区",
@@ -555,15 +559,14 @@ const db_forums = [
         reference: []
     },
     {
-        title: "CMCBBS",
-        url: "https://www.cmcbbs.cn",
-        state: "close",
+        title: "NMCBBS",
+        url: "https://www.nmcbbs.com",
+        state: "up",
         createdAt: "2024/02/20",
-        closedAt: "2024/04/05",
-        updatedAt: "2024/04/20",
+        updatedAt: "2024/08/09",
         hasICP: "no",
         hasNetSec: "no",
-        note: "因摄政被强制要求关站，已被墙。",
+        note: "前CMCBBS，因摄政被强制要求关站，已被墙。现更名为NMCBBS并使用新域名。",
         reference: [
             {
                 title: "@你的小蕉呀 的动态 - 哔哩哔哩",
@@ -615,7 +618,7 @@ const db_forums = [
     {
         title: "SodaMC",
         url: "https://sodamc.com",
-        state: "down",
+        state: "up",
         createdAt: "2024/02/20",
         updatedAt: "2024/06/30",
         hasICP: "yes",
@@ -883,12 +886,13 @@ const db_forums = [
     {
         title: "新世界中文论坛",
         url: "https://nwbbs.cn",
-        state: "up",
+        state: "close",
         createdAt: "2024/03/16",
-        updatedAt: "2024/06/30",
+        closedAt: "2024/08/03",
+        updatedAt: "2024/08/04",
         hasICP: "no",
         hasNetSec: "no",
-        note: "非大陆服务器。",
+        note: "非大陆服务器。因资金链断裂停止运营。",
         reference: [
             {
                 title: "MCBBS回来了？不！新世界中文论坛！",
@@ -1028,6 +1032,50 @@ const db_forums = [
         state: "up",
         createdAt: "2024/06/08",
         updatedAt: "2024/06/09",
+        hasICP: "no",
+        hasNetSec: "no",
+        note: "非大陆服务器。",
+        reference: []
+    },
+    {
+        title: "金苹果论坛",
+        url: "https://mcodw.com/",
+        state: "up",
+        createdAt: "2024/07/28",
+        updatedAt: "2024/08/03",
+        hasICP: "no",
+        hasNetSec: "no",
+        note: "非大陆服务器。",
+        reference: []
+    },
+    {
+        title: "CraftBBS",
+        url: "https://craftbbs.cn/",
+        state: "up",
+        createdAt: "2024/07/28",
+        updatedAt: "2024/08/10",
+        hasICP: "no",
+        hasNetSec: "no",
+        note: "非大陆服务器。",
+        reference: []
+    },
+    {
+        title: "STONE BBS",
+        url: "http://stonebbs.zryai.asia/",
+        state: "failure",
+        createdAt: "2024/07/29",
+        updatedAt: "2024/08/11",
+        hasICP: "no",
+        hasNetSec: "no",
+        note: "非大陆服务器。",
+        reference: []
+    },
+    {
+        title: "Minecraft Fans 论坛",
+        url: "https://mcbbs.fan/",
+        state: "up",
+        createdAt: "2024/08/04",
+        updatedAt: "2024/08/10",
         hasICP: "no",
         hasNetSec: "no",
         note: "非大陆服务器。",
