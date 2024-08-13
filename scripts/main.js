@@ -413,19 +413,20 @@ const pre_list = ((e) => {
         else dom += `<details id="${category.replace(/ .+/, '')}"><summary>${category}</summary>`;
         let content;
         // 生成元素
-        for (const [title, url, description, autoLang] of block[category]) {
+        for (const [_title, url, description, autoLang] of block[category]) {
             let template = '|DOM|';
-            if (autoLang && description) template = `<mdui-tooltip al-aplto="content: ${description};" placement="top">|DOM|</mdui-tooltip>`;
+            if (autoLang && description != '') template = `<mdui-tooltip al-aplto="content: ${description};" placement="top">|DOM|</mdui-tooltip>`;
             else if (description) template = `<mdui-tooltip content="${description}" placement="top">|DOM|</mdui-tooltip>`;
+            const title = autoLang ? `al="${_title}">` : `>${_title}`;
             // 判断是否为内部链接
             if (url.startsWith('#')) {
                 // 内部链接
-                content = `<a class="button noicon" href="${url}" onclick="hashChanged();">${title}</a>`;
+                content = `<a class="button noicon" href="${url}" onclick="hashChanged();" ${title}</a>`;
             } else {
                 // 外部链接
                 if (importantPattern.test(title)) {
-                    content = `<a class="button important" href="${url}" target="_blank">${title.replace(importantPattern, '<text class="bold">$1</text>')}</a>`;
-                } else content = `<a class="button" href="${url}" target="_blank">${title}</a>`;
+                    content = `<a class="button important" href="${url}" target="_blank" ${title.replace(importantPattern, '<text class="bold">$1</text>')}</a>`;
+                } else content = `<a class="button" href="${url}" target="_blank" ${title}</a>`;
             };
             dom += template.replace('|DOM|', content);
         };
