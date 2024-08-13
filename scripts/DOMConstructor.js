@@ -129,7 +129,7 @@ class DOMDeviceList {
 
         const UA = navigator.userAgent;
         const getDevice = (() => {
-            const device = browser();
+            const device = browser.parse();
             switch (device.system) {
                 case 'HarmonyOS':
                     if (device.device == 'Desktop') return 'unsupported';

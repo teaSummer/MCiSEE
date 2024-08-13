@@ -13,9 +13,11 @@
       ["基岩版专用服务端", "https://www.minecraft.net/zh-hans/download/server/bedrock"],
       ["壁纸集","https://www.minecraft.net/collectibles/minecraft-collection"],
       ["服务器列表", "https://findmcserver.com/"],
-      ["编程一小时教程", "https://code.org/minecraft"],
-      ["地下城 (Dungeons)", "https://minecraftdungeons.net/"],
-      ["传奇 (Legends)", "https://www.minecraft.net/about-legends"]
+      ["编程一小时教程", "https://code.org/minecraft", "教育版教程"],
+      ["地下城 (Dungeons)", "https://minecraft.net/dungeons", "Minecraft Dungeons\n一款动作/冒险角色扮演类电子游戏，现已停更"],
+      ["传奇 (Legends)", "https://minecraft.net/legends", "Minecraft Legends\n一款即时动作战略游戏，现已停更"],
+      ["Minecraft Earth", "#", "一款免费增强现实（AR）手游，现已停更\n官网不再维护"],
+      ["故事模式 (Story Mode)", "#", "Minecraft: Story Mode\n一款具有可点选性、叙事性、章节性的电子游戏，现已停更\n官网不再维护"]
     ]
   },
   {
@@ -33,14 +35,14 @@
       ["服务器列表(大陆)", "https://www.fwqlist.com", "fwqlist.com"],
       ["找服网", "https://www.fansmc.com"],
       ["最好的服务器", "https://minecraft-mp.com"],
-      ["服务器列表", "https://mcl.ist"],
+      ["服务器列表", "https://mcl.ist", "英文"],
       ["服务器列表(台湾)", "https://www.mc-list.xyz"],
       ["服务器列表(日本)", "https://minecraft.jp"],
       ["网易我的世界官网", "https://mc.163.com"],
       ["Inner Core 模组", "https://icmods.mineprogramming.org"],
-      ["BDSX", "https://github.com/bdsx/bdsx"],
-      ["LeviLamina", "https://levilamina.liteldev.com"],
-      ["Amethyst", "https://github.com/FrederoxDev/Amethyst"],
+      ["BDSX", "https://github.com/bdsx/bdsx", "BDS模组 (由Node.js编写)"],
+      ["LeviLamina", "https://levilamina.liteldev.com", "BDS模组加载器，轻量"],
+      ["Amethyst", "https://github.com/FrederoxDev/Amethyst", "基岩版客户端模组构建器"],
       ["官方壁纸集","https://www.minecraft.net/collectibles/minecraft-collection"],
       // ["物理模组官网", "https://minecraftphysicsmod.com/"], // 我不知道该丢哪( --xs
       ["Eaglercraft", "https://eaglercraft.com/"],
@@ -51,7 +53,7 @@
     "资源板块": [
       ["导航网", "https://www.mcnav.net", "MCNav"],
       ["下载基岩版", "#基岩版启动器/版本库", "含正版和破解版"],
-      ["IMC.RE", "https://imc.re"],
+      ["IMC.RE", "https://imc.re", "著名开发团队"],
       ["地球资源社区", "https://www.planetminecraft.com"],
       ["基岩版地球资源社区", "https://mcpe-planet.com"],
       ["资源包列表", "https://resourcepack.net"],
