@@ -36,10 +36,6 @@ h3 {
     font-size: 1.2rem;
 }
 
-summary {
-    user-select: none;
-}
-
 svg {
     display: inline-block;
     width: 1em;
@@ -327,8 +323,14 @@ hr {
 }
 
 summary {
+    user-select: none;
+    outline: none;
     display: block; /* 用于隐藏默认的小三角 */
     margin-left: 1.5em;
+}
+
+summary::-webkit-details-marker {
+    display: none; /* support chrome 89- */
 }
 
 summary::before {
