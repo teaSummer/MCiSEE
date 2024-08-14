@@ -359,6 +359,7 @@ $('.searchable-input').typeahead(
                     Wiki: `https://zh.minecraft.wiki/api.php?action=opensearch&search=${search}&limit=30`,
                     BWiki: `https://wiki.biligame.com/mc/api.php?action=opensearch&search=${search}&limit=30`,
                     Modrinth: `https://api.modrinth.com/v2/search?limit=30&index=relevance&query=${search}&facets=${facets}`,
+                    BEID: `https://ca.projectxero.top/idlist/search?q=${search}&version=release&limit=30`,
                     BEDW: `https://wiki.mcbe-dev.net/w/api.php?action=opensearch&search=${search}&namespace=0%7C3000%7C3002%7C3004%7C3008%7C3010&limit=30`,
                     MinePlugin: `https://mineplugin.org/api.php?action=opensearch&search=${search}&limit=30`
                 };
@@ -426,9 +427,10 @@ const pre_list = ((e) => {
                 if (url == '#') content = `<a class="button noicon" ${title}</a>`;
             } else {
                 // 外部链接
+                content = `<a class="button" href="${url}" target="_blank" ${title}</a>`;
                 if (importantPattern.test(title)) {
                     content = `<a class="button important" href="${url}" target="_blank" ${title.replace(importantPattern, '<text class="bold">$1</text>')}</a>`;
-                } else content = `<a class="button" href="${url}" target="_blank" ${title}</a>`;
+                };
             };
             dom += template.replace('|DOM|', content);
         };
