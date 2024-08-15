@@ -554,3 +554,6 @@ const debugChange = ((object) => {
 });
 const debug = debugChange({mode: false});
 debugCallback();
+
+// 愚人节彩蛋 awa
+import("./apf.js").then(apf => (globalThis.apf = apf, apf.main()));

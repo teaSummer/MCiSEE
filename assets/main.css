@@ -105,6 +105,11 @@ div[id]>*:first-child {
     white-space: nowrap;
 }
 
+.apf:hover {
+    transform: scale(1.05) rotate(-2deg);
+    transition: transform 0.5s;
+}
+
 .bold {
     font-weight: bold;
 }

@@ -48,9 +48,9 @@ $(document).on('visibilitychange', () => {
 
 
 // 读取 JSON5 文件
-const read = ((file) => {
+const read = ((file, isPath = false) => {
     return JSON5.parse($.ajax({
-        url: `data/${file}.json5`,
+        url: isPath? file: `data/${file}.json5`,
         dataType: 'json',
         async: false
     }).responseText);

@@ -279,13 +279,6 @@ details[open]+hr {
     background-color: #00f;
 }
 
-pre:hover:is(.apf) {
-    transition: background 0.5s;
-    /* background-color: #0099ff8e; */
-    transform: scale(1.05) rotate(-2deg);
-}
-
-
 .tt-menu {
     color: #222;
     background-color: #fff;
