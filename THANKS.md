@@ -1,5 +1,7 @@
 # 感谢大家 | THANK EVERYONE
 
+<img align="right" alt="MCiSEE" src="https://mcisee.top/assets/icon/appiconRound.png" title="MCiSEE" width="64">
+
 <details><br>
 <summary>简体中文</summary>
 
