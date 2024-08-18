@@ -314,6 +314,7 @@ details[open]+hr {
     --mdui-color-surface-container-light: 17, 17, 17, 0.87 !important;
     --mdui-color-on-surface-light: 227, 228, 224 !important;
     --mdui-color-on-background-light: 227, 228, 224 !important;
+    color-scheme: dark !important;
 }
 
 #目录 info {

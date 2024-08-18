@@ -372,6 +372,10 @@ details[open]>summary::before {
     transform: rotate(180deg);
 }
 
+details+hr {
+    transition: background-color 0.8s;
+}
+
 pre {
     transition: transform 0.6s linear;
 }
