@@ -40,7 +40,7 @@
       ["网易我的世界官网", "https://mc.163.com"],
       ["Inner Core 模组", "https://icmods.mineprogramming.org"],
       ["BDSX", "https://github.com/bdsx/bdsx", "BDS模组 (由Node.js编写)"],
-      ["LeviLamina", "https://levilamina.liteldev.com", "BDS模组加载器，轻量"],
+      ["LeviLamina", "https://levilamina.liteldev.com", "原LiteLoaderBDS\n轻量、模块化、多功能的BDS模组加载器"],
       ["Amethyst", "https://github.com/FrederoxDev/Amethyst", "基岩版客户端模组构建器"],
       ["官方壁纸集","https://www.minecraft.net/collectibles/minecraft-collection"],
       // ["物理模组官网", "https://minecraftphysicsmod.com/"], // 我不知道该丢哪( --xs
@@ -113,7 +113,7 @@
     "百科全书": [
       // ["开发者开发百科", "https://minewiki.net"],
       ["官方基岩版开发者文档", "https://learn.microsoft.com/minecraft/creator/", "了解如何使用附加组件修改 Minecraft。创建皮肤，设计独特的体验，发现最新功能，并发展您作为Minecraft创作者的技能。"],
-      ["基岩版开发Wiki", "https://wiki.mcbe-dev.net", "可以获取到各种关于基岩版开发的信息。"],
+      ["基岩版开发Wiki", "https://wiki.mcbe-dev.net", "可以获取到各种关于基岩版开发的信息"],
       ["基岩版文档", "https://bedrock.dev"],
       ["基岩版维基百科", "https://wiki.bedrock.dev"],
       ["插件百科", "https://mineplugin.org"],
@@ -135,36 +135,36 @@
       ["苦力怕论坛源", "https://mcapks.net", "MCAPKS版本库"],
       ["MineBBS源", "https://mc.minebbs.com", "MCDL版本库"],
       ["MCAppx源", "https://www.mcappx.com", "Minecraft for Windows版本库"],
-      ["甘泉版本库", "https://mcbbk.blmcpia.com", "原名像素科技"],
+      ["甘泉版本库", "https://mcbbk.blmcpia.com", "原像素科技"],
       ["mcfa版本库 ", "https://bbk.endyun.ltd/main", "Minecraft for Android版本库"],
       // ["mcarc版本库", "https://mcarc.github.io"], // 页面最新正式版停留于1.19.73且不含独有版本，不再推荐
       ["星月版本库", "https://spectrollay.github.io/minecraft_repository/", "星月Minecraft版本库"],
       // ["星月版本库测试版", "https://spectrollay.github.io/minecraft_repository_test/", "星月Minecraft版本库测试版"],
       // ["Alpha版本库", "https://archive.org/details/MCPEAlpha", "(存档)"], // 需要魔法才能访问
-      ["电脑端启动器", "https://bedrocklauncher.github.io/", "Bedrock Launcher Lite"]
+      ["电脑端启动器", "https://bedrocklauncher.github.io/", "Bedrock Launcher Lite，仅限Windows"]
     ]
   },
   {
     "服务端 (无特殊说明均为Java版)": [
-      ["官方基岩版专用服务端", "https://www.minecraft.net/zh-hans/download/server/bedrock"],
+      ["官方基岩版专用服务端", "https://www.minecraft.net/zh-hans/download/server/bedrock", "不支持插件"],
       ["基岩版专用服务端", "https://www.minebbs.com/bds/history", "由MineBBS收集"],
       ["基岩版专用预览版服务端", "https://www.minebbs.com/resources/bedrock-dedicated-server-preview.4934/history", "由MineBBS收集"],
       ["FastMirror (无极镜像)", "https://www.fastmirror.net"],
       ["极星镜像", "https://mirror.polars.cc"],
       ["MCVersions", "https://mcversions.net"],
-      ["Akarin", "https://github.com/Akarin-project/Akarin"],
+      ["Akarin", "https://github.com/Akarin-project/Akarin", "支持多线程。基于Paper，TorchSpigot的后作"],
       ["Arclight", "https://github.com/IzzelAliz/Arclight"],
-      ["CatServer", "https://catmc.org"],
-      ["CraftBukkit", "https://getbukkit.org"],
+      ["CatServer", "https://catmc.org", "稳定、支持Bukkit和Forge架构的老牌服务端。内含广告"],
+      ["CraftBukkit", "https://getbukkit.org", "更新快，插件核心的开山始祖。由BukkitMC团队开发，现由SpigotMC团队接管"],
       ["Fabric Server", "https://fabricmc.net/use/server/"],
-      ["MohistMC", "https://mohistmc.com"],
-      ["Nukkit (基岩版)", "https://cloudburstmc.org"],
-      ["PaperMC", "https://papermc.io"],
+      ["MohistMC", "https://mohistmc.com", "优化好、兼容Bukkit、Spigot、Paper的Forge服务端"],
+      ["Nukkit (基岩版)", "https://cloudburstmc.org", "支持插件，使用Java开发"],
+      ["Paper", "https://papermc.io", "速度快，优化好，安全性高，内置小型反作弊。由PaperMC团队开发，基于Spigot"],
       ["PocketMine (基岩版)", "https://pmmp.io"],
-      ["Purpur", "https://purpurmc.org"],
-      ["SpigotMC", "https://www.spigotmc.org"],
+      ["Purpur", "https://purpurmc.org", "极致优化、轻量，全兼容Bukkit架构。基于PutterFish"],
+      ["Spigot", "https://www.spigotmc.org", "老牌核心，稳定、更新快、安全性高。由SpigotMC团队开发，基于CraftBukkit"],
       ["Sponge", "https://spongepowered.org"],
-      ["Tuinity", "https://github.com/Tuinity/Tuinity"],
+      ["Tuinity", "https://github.com/Tuinity/Tuinity", "性能好。基于Paper"],
       // == 咳咳,魔法 ==
       // ["Docker 服务器模板", "https://hub.docker.com/r/itzg/minecraft-server/"]
     ]
