@@ -18,6 +18,4 @@ const giveUp = () => {
 	setTimeout(() => {document.querySelector("[al=\"startDownloading\"]").innerText = text}, 5500);
 }
 
-cfg.listenDate? (setInterval(main, 86400000)): 0; // 86400000 == 24h
-
 export {main, giveUp}

@@ -2,16 +2,16 @@
 [
   {
     "官方网站 (©Mojang/©微软)": [
-      ["Minecraft", "https://www.minecraft.net"],
-      ["Minecraft教育版", "https://education.minecraft.net/", "大陆访问可能会出现404"],
-      ["漏洞追踪器", "https://bugs.mojang.com", "Mojira，用于反馈Bug"],
-      ["基岩版开发者文档", "https://learn.microsoft.com/minecraft/creator/"],
+      ["Minecraft", "https://www.minecraft.net", "《我的世界》/《当个创世神》\n着重于让玩家探索、交互并改变一个动态生成1m³大小方块的世界"],
+      ["Minecraft教育版", "https://education.minecraft.net/", "Minecraft特别为教室使用而设计的教学版本（大陆访问可能会出现404）"],
+      ["漏洞追踪器", "https://bugs.mojang.com", "Mojang Jira/Mojira\n用于反馈Bug"],
+      ["基岩版开发者文档", "https://learn.microsoft.com/minecraft/creator/", "了解如何使用附加组件修改 Minecraft。创建皮肤，设计独特的体验，发现最新功能，并发展您作为Minecraft创作者的技能。"],
       ["Feedback", "https://feedback.minecraft.net"],
       ["知识库", "https://feedback.minecraft.net/hc/categories/115000410252-Knowledge-Base"],
       ["远古版MC", "https://classic.minecraft.net", "网页版本"],
       ["基岩版专用服务端", "https://www.minecraft.net/zh-hans/download/server/bedrock"],
       ["壁纸集","https://www.minecraft.net/collectibles/minecraft-collection"],
-      ["服务器列表", "https://findmcserver.com/"],
+      ["服务器列表", "https://findmcserver.com/", "查找独特且友好的官方服务器"],
       ["编程一小时教程", "https://code.org/minecraft", "教育版教程"],
       ["地下城 (Dungeons)", "https://minecraft.net/dungeons", "Minecraft Dungeons\n一款动作/冒险角色扮演类电子游戏，现已停更"],
       ["传奇 (Legends)", "https://minecraft.net/legends", "Minecraft Legends\n一款即时动作战略游戏，现已停更"],
@@ -21,7 +21,7 @@
   },
   {
     "官方购买渠道": [
-      ["基岩版+Java版 (Windows)", "https://www.minecraft.net/zh-hans/store/minecraft-java-bedrock-edition-pc"],
+      ["基岩版+Java版 (Windows)", "https://www.minecraft.net/zh-hans/store/minecraft-java-bedrock-edition-pc", "双版本捆绑售卖"],
       ["基岩版 (Android)", "https://play.google.com/store/apps/details?id=com.mojang.minecraftpe&hl=zh_CN"],
       ["基岩版 (iOS)", "https://apps.apple.com/cn/app/id479516143"],
       ["基岩版 (Xbox)", "https://xbox.com/games/store/-/9MVXMVT8ZKWC"],
@@ -56,7 +56,7 @@
       ["地球资源社区", "https://www.planetminecraft.com"],
       ["基岩版地球资源社区", "https://mcpe-planet.com"],
       ["资源包列表", "https://resourcepack.net"],
-      ["LittleSkin皮肤站", "https://littleskin.cn"],
+      ["LittleSkin皮肤站", "https://littleskin.cn", "精致易用的皮肤站"],
       ["红石皮肤站", "https://mcskin.com.cn/"],
       ["MCSkins.top", "https://mcskins.top"],
       ["Minecraft Shaders", "https://minecraftshader.com/"],
@@ -65,9 +65,9 @@
   },
   {
     "工具箱": [
-      ["NameMC", "https://namemc.com", "通过名称查询皮肤等"],
+      ["NameMC", "https://namemc.com", "用户名历史皮肤查询等"],
       ["筛选皮肤", "https://mcskinsearch.com"],
-      ["MC风格艺术字", "https://textcraft.net"],
+      ["MC风格艺术字", "https://textcraft.net", "Minecraft风格文字Logo生成器"],
       ["渐变颜色生成器", "https://mcg.tuanzi.ink"],
       ["指令生成器(MC百科)", "https://www.mcmod.cn/tools/cbcreator/"],
       ["指令工具(台湾)", "https://new.kukuo.tw/tools/"],
@@ -80,18 +80,18 @@
       ["像素画生成器", "https://rebane2001.com/mapartcraft/zh-Hans"],
       ["地图种子查询", "https://www.mcseeder.com"],
       ["建筑辅助", "https://minecraftshapes.com"],
-      ["超多工具", "https://www.gamergeeks.net", "GamerGeeks"],
+      ["超多工具", "https://www.gamergeeks.net", "GamerGeeks，英文"],
       ["工具网站", "https://minecraft.tools"],
       ["在线工具", "https://mc.metamo.cn/tool/", "元魔幻界"],
       ["皮肤改色器", "https://www.mcskinrecolor.com"],
       ["皮肤编辑器", "https://minecraft.novaskin.me", "Nova Skin"],
-      ["壁纸生成器", "https://wallpapers.novaskin.me", "Nova Skin"],
+      ["壁纸生成器", "https://wallpapers.novaskin.me", "Nova Skin，将自定义皮肤生成壁纸"],
       ["皮肤生成壁纸", "https://www.minepix.app/", "minepix.app"], // 和上面那个应该差不多,区别在于UI和大陆地区的加载速度
       ["皮肤生成头像", "https://mcskins.top/avatar-maker"],
       ["正版玩家信息查询", "https://mcuuid.net"],
       ["Aternos免费开服", "https://aternos.org"],
       ["简幻欢公益面板服", "https://simpfun.cn"],
-      ["3D模型编辑器BlockBench", "https://www.blockbench.net"],
+      ["3D模型编辑器", "https://www.blockbench.net", "建模工具BlockBench"],
       ["数据包生成器", "https://misode.github.io/"],
       ["Midi音乐转结构", "https://dislink.github.io/midi2bdx/", "Midi音乐转为播放音乐的bdump v3结构文件"],
       ["Midi音乐转mcpack", "https://dislink.github.io/midi2mcfunction/", "Midi音乐转为播放音乐的mcpack行为包"],
@@ -100,9 +100,9 @@
       ["文字转粒子画", "https://dislink.github.io/text2mcfunction/", "文字转为粒子画的mcpack行为包"],
       ["mcfunction转结构", "https://dislink.github.io/mcfunction2bdx/", "mcfunction文件转为bdump v3结构文件"],
       ["MCPack清单生成器", "https://mcpack.mcisee.top"],
-      ["装饰性头颅", "https://www.minecraft-heads.com"],
-      ["预览盔甲纹饰", "https://armortrims.com"],
-      ["多彩文字生成器", "https://colorize.fun/minecraft"],
+      ["装饰性头颅", "https://www.minecraft-heads.com", "头颅收集站"],
+      ["盔甲纹饰预览", "https://armortrims.com", "可以预览盔甲锻造纹饰效果"],
+      ["多彩文字生成", "https://colorize.fun/minecraft", "像素风格多彩文本生成器"],
       ["bridge.", "https://bridge-core.app/"],
       ["MCreator", "https://mcreator.net"],
       ["Minecraft Dot", "https://www.minecraft-dot.pictures/"], // 将图片用MC里的方块渲染 ∨w∨👍 -- xs
@@ -112,20 +112,22 @@
   {
     "百科全书": [
       // ["开发者开发百科", "https://minewiki.net"],
-      ["官方基岩版开发者文档", "https://learn.microsoft.com/minecraft/creator/"],
-      ["基岩版开发Wiki", "https://wiki.mcbe-dev.net"],
+      ["官方基岩版开发者文档", "https://learn.microsoft.com/minecraft/creator/", "了解如何使用附加组件修改 Minecraft。创建皮肤，设计独特的体验，发现最新功能，并发展您作为Minecraft创作者的技能。"],
+      ["基岩版开发Wiki", "https://wiki.mcbe-dev.net", "可以获取到各种关于基岩版开发的信息。"],
       ["基岩版文档", "https://bedrock.dev"],
       ["基岩版维基百科", "https://wiki.bedrock.dev"],
       ["插件百科", "https://mineplugin.org"],
-      ["维基百科: 原站", "https://zh.minecraft.wiki"],
-      ["维基百科: 镜像站", "https://wiki.biligame.com/mc/"],
+      ["维基百科: 原站", "https://zh.minecraft.wiki", "完全公开、可自由编辑的中文Minecraft Wiki"],
+      ["维基百科: 镜像站", "https://wiki.biligame.com/mc/", "中文Minecraft Wiki镜像站"],
+      ["玩家社区Wiki", "https://wiki.biligame.com/mcplayer/", "由喜爱Minecraft的中国玩家组成的民间攻略组织"],
       ["MC百科", "https://mcmod.cn", "mcmod.cn"],
-      ["DigMinecraft教程", "https://www.digminecraft.com"],
+      ["DigMinecraft教程", "https://www.digminecraft.com", "通过图片和分步说明来回答您的游戏问题"],
       ["MC开发者中文指南", "https://mouse0w0.github.io/MinecraftDeveloperGuide/"],
       ["基岩版JSONUI文档", "https://mcbeui.netlify.app/"],
-      ["基岩版SAPI文档", "https://projectxero.top/sapi/", "Script API文档"],
+      ["基岩版SAPI文档", "https://projectxero.top/sapi/", "Script API（原Gametest Framework）文档"],
       ["编程一小时教程", "https://code.org/minecraft", "教育版教程"],
-      ["网易我的世界开发指南", "https://mc.163.com/dev/guide.html"]
+      ["网易我的世界开发指南", "https://mc.163.com/dev/guide.html"],
+      ["Wiki.vg", "https://wiki.vg", "英文技术文档，包含网络协议与地图格式文档"]
     ]
   },
   {
@@ -169,15 +171,15 @@
   },
   {
     "快查网站 (可供快速查询的网站)": [
-      ["维基百科: 原站", "https://zh.minecraft.wiki"],
-      ["维基百科: 镜像站", "https://wiki.biligame.com/mc/"],
+      ["维基百科: 原站", "https://zh.minecraft.wiki", "完全公开、可自由编辑的中文Minecraft Wiki"],
+      ["维基百科: 镜像站", "https://wiki.biligame.com/mc/", "中文Minecraft Wiki镜像站"],
       ["CurseForge", "https://www.curseforge.com/minecraft/"],
       ["Modrinth", "https://modrinth.com"],
       ["MC百科", "https://mcmod.cn"],
       ["基岩版ID表", "https://ca.projectxero.top/idlist/#release-vanilla/global/"],
       ["Java版ID表", "http://mcid.lingningyu.cn"],
-      ["基岩版开发Wiki", "https://wiki.mcbe-dev.net"],
-      ["插件百科", "https://mineplugin.org"]
+      ["基岩版开发Wiki", "https://wiki.mcbe-dev.net", "可以获取到各种关于基岩版开发的信息。"],
+      ["插件百科", "https://mineplugin.org", "服务器插件Wiki"],
     ]
   },
   {

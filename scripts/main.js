@@ -359,7 +359,6 @@ $('.searchable-input').typeahead(
                     Wiki: `https://zh.minecraft.wiki/api.php?action=opensearch&search=${search}&limit=30`,
                     BWiki: `https://wiki.biligame.com/mc/api.php?action=opensearch&search=${search}&limit=30`,
                     Modrinth: `https://api.modrinth.com/v2/search?limit=30&index=relevance&query=${search}&facets=${facets}`,
-                    BEID: `https://ca.projectxero.top/idlist/search?q=${search}&version=release&limit=30`,
                     BEDW: `https://wiki.mcbe-dev.net/w/api.php?action=opensearch&search=${search}&namespace=0%7C3000%7C3002%7C3004%7C3008%7C3010&limit=30`,
                     MinePlugin: `https://mineplugin.org/api.php?action=opensearch&search=${search}&limit=30`
                 };
@@ -404,7 +403,7 @@ const pre_list = ((e) => {
     const lineBlocks = [];
     let blocks = JSON.parse($(e).html());
     let dom = '';
-    const importantPattern = /((半价|免费|公益|折扣|限时|特惠|热门|新品|热销|促销|推荐|礼品|[一二两三四五六七八九]折|打折|超值|全新|便宜|披风)|\b(free|off|new|hot|recommend|top|discount|limit|cheap|present|gift|cape)\b)/gi;
+    const importantPattern = /(?<!\.)((半价|免费|公益|折扣|限时|特惠|热门|新品|热销|促销|推荐|礼品|[一二两三四五六七八九]折|打折|超值|全新|便宜|披风)|\b(free|off|new|hot|recommend|top|discount|limit|cheap|present|gift|cape)\b)/gi;
     for (const block of blocks) {
         // 获取分类并处理
         const category = Object.keys(block)[0];
@@ -417,7 +416,7 @@ const pre_list = ((e) => {
         for (const [_title, url, description, autoLang] of block[category]) {
             let template = '|DOM|';
             const title = autoLang ? `al="${_title}">` : `>${_title}`;
-            if (autoLang && description != '') template = `<mdui-tooltip al-aplto="content: ${description};" placement="top">|DOM|</mdui-tooltip>`;
+            if (autoLang && description) template = `<mdui-tooltip al-aplto="content: ${description};" placement="top">|DOM|</mdui-tooltip>`;
             else if (description) template = `<mdui-tooltip content="${description}" placement="top">|DOM|</mdui-tooltip>`;
             // 判断是否为内部链接
             if (url.startsWith('#')) {
@@ -446,7 +445,7 @@ const pre_list = ((e) => {
 const CSForum = [{"简体中文论坛": []}];
 for (const forum of db_forums) {
     if (forum.state == 'up') {
-        CSForum[0]['简体中文论坛'].push([forum.title, forum.url]);
+        CSForum[0]['简体中文论坛'].push([forum.title, forum.url, forum.note.replace(/。$/, '')]);
     };
 };
 
