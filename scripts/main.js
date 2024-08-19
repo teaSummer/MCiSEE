@@ -12,10 +12,9 @@ DOMDeviceList.show();
 
 // 创建超文本标签（并点击）
 const createSuperLabel = ((url, id) => {
-    const a = `<a href="" target="_blank" id="${id}">`;
+    const a = `<a href="${url}" target="_blank" id="${id}" style="display: none;">`;
     $('body').after(a);
     const aElement = $('#' + id);
-    aElement.attr('href', url);
     aElement[0].click();
     aElement.remove();
 });
@@ -51,7 +50,7 @@ const createUpdateLayer = ((abbr, lastVersion, latestVersion, download, device, 
 });
 
 // 更新提示 删除
-const deleteUpdateLayer = function() {
+const deleteUpdateLayer = () => {
     --updateLayerNumber;
     notificationCount = '';
     if (updateLayerNumber) notificationCount = `(${updateLayerNumber})`;
@@ -266,33 +265,27 @@ $('.searchable-prompt-length').change(() => {
 
 
 // 监听版本列表变化
-$('.Modrinth-versions').change(function() {
+$('.Modrinth-versions').change(() => {
     const val = $(this).val();
     if (val.length == 0) $(this).val(['all']);
     if (val.length >= 2 && val[val.length - 1] == 'all') $(this).val(val.slice(0, -1));
 });
 
 // 获取版本列表
-$('.acquire-versions').click(function() {
+$('.acquire-versions').click(() => {
     $(this).attr('loading', true).attr('disabled', true);
     const releaseVersions = [];
-    $.ajax({
-        url: 'https://piston-meta.mojang.com/mc/game/version_manifest.json',
-        type: 'get',
-        cache: true,
-        dataType: 'json',
-        success: ((result) => {
-            for (const v of result.versions) if (v.type == 'release') releaseVersions.push(v.id);
-            let dom = '';
-            for (const rv of releaseVersions) {
-                dom += `<mdui-menu-item class="version-item" value="${rv}"><div slot="custom" class="custom-item"><div>${rv}</div></div></mdui-menu-item>`;
-            };
-            dom += '<mdui-menu-item value="all" hidden><div slot="custom" class="custom-item"><div al="all"></div></div></mdui-menu-item>';
-            $('.Modrinth-versions').html(dom);
-            $('.Modrinth-versions').click();
-            i18n(() => $('.acquire-versions').removeAttr('loading'));
-        })
-    }, 0);
+    $.getJSON('https://piston-meta.mojang.com/mc/game/version_manifest.json').then((result) => {
+        result.versions.forEach(v => v.type == 'release'? releaseVersions.push(v.id): 0);
+        let dom = '';
+        for (const rv of releaseVersions) {
+            dom += `<mdui-menu-item class="version-item" value="${rv}"><div slot="custom" class="custom-item"><div>${rv}</div></div></mdui-menu-item>`;
+        };
+        dom += '<mdui-menu-item value="all" hidden><div slot="custom" class="custom-item"><div al="all"></div></div></mdui-menu-item>';
+        $('.Modrinth-versions').html(dom);
+        $('.Modrinth-versions').click();
+        i18n(() => $('.acquire-versions').removeAttr('loading'));
+    });
 });
 
 
@@ -366,31 +359,21 @@ $('.searchable-input').typeahead(
                 if (url) {
                     // 获取候选词
                     $('.searchable-clear').attr('loading', true);  // 在获取候选词时显示加载动画（进行中）
-                    return $.ajax({
-                        url: url,
-                        type: 'get',
-                        cache: true,
-                        dataType: (() => {
-                            if (abbr == 'Modrinth') return 'json';
-                            else return 'jsonp';
-                        })(),
-                        success: ((result) => {
-                            if (result.length > 1 && Array.isArray(result[1])) {
-                                result = result[1];
-                            };
-                            if (abbr == 'Modrinth') {
-                                let arr = [];
-                                result.hits.map((item) => arr.push(item.title));
-                                result = arr;
-                            };
-                            result = result.slice(0, $('.searchable-prompt-length').val());
-                            $('.searchable-clear').removeAttr('loading');  // 在获取候选词时显示加载动画（已完成）
-                            return asyncResults(result);
-                        }),
-                        error: (() => {
-                            $('.searchable-clear').removeAttr('loading');  // 在获取候选词时显示加载动画（已完成）
-                        })
-                    }, 0);
+                    return $.get(url, void(0), (abbr == 'Modrinth')? 'json': 'jsonp').then((result) => {
+                        if (result.length > 1 && Array.isArray(result[1])) {
+                            result = result[1];
+                        };
+                        if (abbr == 'Modrinth') {
+                            let arr = [];
+                            result.hits.map((item) => arr.push(item.title));
+                            result = arr;
+                        };
+                        result = result.slice(0, $('.searchable-prompt-length').val());
+                        $('.searchable-clear').removeAttr('loading');  // 在获取候选词时显示加载动画（已完成）
+                        return asyncResults(result);
+                    }).catch((e) => {
+                        $('.searchable-clear').removeAttr('loading');  // 在获取候选词时显示加载动画（已完成）
+                    });
                 }
             });
         })
@@ -466,7 +449,7 @@ $(document).ready(() => {
         if (deviceInfo[0] == $('.device-list').val()) $('.device-list').val((deviceInfo[1]));
     });
     $('.device-list').each((i, e) => {
-        $(e).children().click(function() {
+        $(e).children().click(() => {
             const value = $(this).attr('label');
             $('.device-list').val(value);
             deviceChanged();
@@ -477,7 +460,7 @@ $(document).ready(() => {
     // 启动器 初始化
     $('mdui-select.launcher-list').each((i, e) => {
         $(e).val('');
-        $(e).children().click(function() {
+        $(e).children().click(() => {
             const value = $(this).attr('label');
             $('mdui-select.launcher-list').val(value);
             launcherChanged({target: e});
