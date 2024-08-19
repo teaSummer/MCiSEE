@@ -35,6 +35,7 @@
       ["找服网", "https://www.fansmc.com"],
       ["最好的服务器", "https://minecraft-mp.com"],
       ["服务器列表", "https://mcl.ist", "英文"],
+      ["服务器列表(MC百科)", "https://play.mcmod.cn"],
       ["服务器列表(台湾)", "https://www.mc-list.xyz"],
       ["服务器列表(日本)", "https://minecraft.jp"],
       ["网易我的世界官网", "https://mc.163.com"],
@@ -69,7 +70,7 @@
       ["筛选皮肤", "https://mcskinsearch.com"],
       ["MC风格艺术字", "https://textcraft.net", "Minecraft风格文字Logo生成器"],
       ["渐变颜色生成器", "https://mcg.tuanzi.ink"],
-      ["指令生成器(MC百科)", "https://www.mcmod.cn/tools/cbcreator/"],
+      ["CB Creator 指令生成器", "https://www.mcmod.cn/tools/cbcreator/", "From: MC百科(mcmod.cn)"],
       ["指令工具(台湾)", "https://new.kukuo.tw/tools/"],
       ["SMCFcper", "https://smcfcper.off.gs", "MC创作者的新指令工具"],
       ["命令自动补全", "https://mact.mcisee.top"],
@@ -103,10 +104,10 @@
       ["装饰性头颅", "https://www.minecraft-heads.com", "头颅收集站"],
       ["盔甲纹饰预览", "https://armortrims.com", "可以预览盔甲锻造纹饰效果"],
       ["多彩文字生成", "https://colorize.fun/minecraft", "像素风格多彩文本生成器"],
-      ["bridge.", "https://bridge-core.app/"],
-      ["MCreator", "https://mcreator.net"],
-      ["Minecraft Dot", "https://www.minecraft-dot.pictures/"], // 将图片用MC里的方块渲染 ∨w∨👍 -- xs
-      ["MCC客户端控制台","https://mccteam.github.io/"]
+      ["bridge.", "https://bridge-core.app/", "The IDE for Minecraft Add-Ons\nLight-weight, powerful, easy to use!"],
+      ["MCreator", "https://mcreator.net", "MCreator is open source software used to make Minecraft Java Edition mods, Bedrock Edition Add-Ons, and data packs using an intuitive easy-to-learn interface or with an integrated code editor."],
+      ["Minecraft Dot", "https://www.minecraft-dot.pictures/"],
+      ["MCC客户端控制台","https://mccteam.github.io/", "Minecraft Console Client (MCC) is a lightweight open-source Minecraft Java client implemented in C#"]
     ]
   },
   {
@@ -123,7 +124,7 @@
       ["MC百科", "https://mcmod.cn", "mcmod.cn"],
       ["DigMinecraft教程", "https://www.digminecraft.com", "通过图片和分步说明来回答您的游戏问题"],
       ["MC开发者中文指南", "https://mouse0w0.github.io/MinecraftDeveloperGuide/"],
-      ["基岩版JSONUI文档", "https://mcbeui.netlify.app/"],
+      ["基岩版JSONUI文档", "https://mcbeui.netlify.app/", "在线学习如何制作基岩版ui包("],
       ["基岩版SAPI文档", "https://projectxero.top/sapi/", "Script API（原Gametest Framework）文档"],
       ["编程一小时教程", "https://code.org/minecraft", "教育版教程"],
       ["网易我的世界开发指南", "https://mc.163.com/dev/guide.html"],
@@ -160,10 +161,10 @@
       ["MohistMC", "https://mohistmc.com", "优化好、兼容Bukkit、Spigot、Paper的Forge服务端"],
       ["Nukkit (基岩版)", "https://cloudburstmc.org", "支持插件，使用Java开发"],
       ["Paper", "https://papermc.io", "速度快，优化好，安全性高，内置小型反作弊。由PaperMC团队开发，基于Spigot"],
-      ["PocketMine (基岩版)", "https://pmmp.io"],
+      ["PocketMine (基岩版)", "https://pmmp.io", "A highly customisable server software for Minecraft: Bedrock Edition"],
       ["Purpur", "https://purpurmc.org", "极致优化、轻量，全兼容Bukkit架构。基于PutterFish"],
       ["Spigot", "https://www.spigotmc.org", "老牌核心，稳定、更新快、安全性高。由SpigotMC团队开发，基于CraftBukkit"],
-      ["Sponge", "https://spongepowered.org"],
+      ["Sponge", "https://spongepowered.org", "A community-driven open source Minecraft: Java Edition modding platform."],
       ["Tuinity", "https://github.com/Tuinity/Tuinity", "性能好。基于Paper"],
       // == 咳咳,魔法 ==
       // ["Docker 服务器模板", "https://hub.docker.com/r/itzg/minecraft-server/"]
