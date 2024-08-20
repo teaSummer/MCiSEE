@@ -50,7 +50,7 @@ const createUpdateLayer = ((abbr, lastVersion, latestVersion, download, device, 
 });
 
 // 更新提示 删除
-const deleteUpdateLayer = () => {
+const deleteUpdateLayer = function() {
     --updateLayerNumber;
     notificationCount = '';
     if (updateLayerNumber) notificationCount = `(${updateLayerNumber})`;
@@ -265,14 +265,14 @@ $('.searchable-prompt-length').change(() => {
 
 
 // 监听版本列表变化
-$('.Modrinth-versions').change(() => {
+$('.Modrinth-versions').change(function() {
     const val = $(this).val();
     if (val.length == 0) $(this).val(['all']);
     if (val.length >= 2 && val[val.length - 1] == 'all') $(this).val(val.slice(0, -1));
 });
 
 // 获取版本列表
-$('.acquire-versions').click(() => {
+$('.acquire-versions').click(function() {
     $(this).attr('loading', true).attr('disabled', true);
     const releaseVersions = [];
     $.getJSON('https://piston-meta.mojang.com/mc/game/version_manifest.json').then((result) => {
@@ -449,7 +449,7 @@ $(document).ready(() => {
         if (deviceInfo[0] == $('.device-list').val()) $('.device-list').val((deviceInfo[1]));
     });
     $('.device-list').each((i, e) => {
-        $(e).children().click(() => {
+        $(e).children().click(function() {
             const value = $(this).attr('label');
             $('.device-list').val(value);
             deviceChanged();
@@ -460,7 +460,7 @@ $(document).ready(() => {
     // 启动器 初始化
     $('mdui-select.launcher-list').each((i, e) => {
         $(e).val('');
-        $(e).children().click(() => {
+        $(e).children().click(function() {
             const value = $(this).attr('label');
             $('mdui-select.launcher-list').val(value);
             launcherChanged({target: e});
