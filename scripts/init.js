@@ -1,6 +1,7 @@
 // 初始化全局变量
 let searchKeyword = '', searchableAbbr = '';
 
+let hShake;
 let notificationCount = '';
 let visibility = true;
 

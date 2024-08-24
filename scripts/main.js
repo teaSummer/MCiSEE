@@ -406,7 +406,7 @@ const pre_list = ((e) => {
                 // 内部链接
                 content = `<a class="button noicon" href="${url}" onclick="hashChanged();" ${title}</a>`;
                 // 找不到合适的外部链接
-                if (url == '#') content = `<a class="button noicon" ${title}</a>`;
+                if (url == '#') content = `<a class="button nosupport" ${title}</a>`;
             } else {
                 // 外部链接
                 content = `<a class="button" href="${url}" target="_blank" ${title}</a>`;
@@ -414,12 +414,17 @@ const pre_list = ((e) => {
                     content = `<a class="button important" href="${url}" target="_blank" ${title.replace(importantPattern, '<text class="bold">$1</text>')}</a>`;
                 };
             };
-            dom += template.replace('|DOM|', content);
+            dom += template.replace('|DOM|', content);  // 应用模板
         };
         dom += '</details><hr>';
     };
     dom = dom.replace(/<hr>$/, '');
     $(e).html(dom);
+    $('.nosupport').click(function() {
+        clearTimeout(hShake);
+        $(this).addClass('h-shake');
+        hShake = setTimeout(() => $(this).removeClass('h-shake'), 700);
+    });
 });
 
 
