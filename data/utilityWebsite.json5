@@ -47,7 +47,7 @@
       ["导航网", "https://www.mcnav.net", "MCNav"],
       ["下载基岩版", "#基岩版版本库/启动器", "含正版和破解版"],
       ["TITAIKE地图站", "https://www.titaike.cn", "集合国内外优质地图"],
-      ["MCPEDL资源", "https://www.mcpedl.com", "英文"],
+      ["MCPEDL资源", "https://mcpedl.com", "英文"],
       ["地球资源社区", "https://www.planetminecraft.com", ""],
       ["基岩版地球资源社区", "https://mcpe-planet.com", ""],
       ["资源包列表", "https://resourcepack.net", ""],
@@ -146,7 +146,8 @@
       ["MineBBS源", "https://mc.minebbs.com", "MCDL版本库"],
       ["MCAppx源", "https://www.mcappx.com", "Minecraft for Windows版本库"],
       ["甘泉版本库", "https://mcbbk.blmcpia.com", "原像素科技"],
-      ["mcfa版本库 ", "https://bbk.endyun.ltd/main", "Minecraft for Android版本库"],
+      ["地球社区源", "https://mcpe-planet.com/downloads/", "APK下载，英文"],
+      ["mcfa版本库", "https://bbk.endyun.ltd/main", "Minecraft for Android版本库"],
       // ["mcarc版本库", "https://mcarc.github.io", ""], // 页面最新正式版停留于1.19.73且不含独有版本，不再推荐
       ["星月版本库", "https://spectrollay.github.io/minecraft_repository/", "星月Minecraft版本库"],
       // ["星月版本库测试版", "https://spectrollay.github.io/minecraft_repository_test/", "星月Minecraft版本库测试版"],
