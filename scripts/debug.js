@@ -1,5 +1,10 @@
 // 调试模式 (Debug Mode)
-const debugCallback = (e = $('[debugFuncs]')) => (debug.mode ? e.show() : e.hide());
+const debugCallback = (e = $('[debugFuncs]')) => {
+	debug.mode ? e.show() : e.hide();
+	$('#debugMode')[0].checked = debug.mode;
+	$('#debugMode')[0].disabled = !debug.mode;
+	console.log(`[debug] debugMode is now ${debug.mode? "enabled": "disabled"}`);
+};
 const debugChange = ((object) => {
     const handler = {
         defineProperty: (target, property, descriptor) => {
@@ -12,6 +17,7 @@ const debugChange = ((object) => {
 const debug = debugChange({mode: (location.hostname === "127.0.0.1" || location.hostname === "localhost")});
 debugCallback();
 
+$('#debugMode').change(() => debug.mode = $('#debugMode')[0].checked);
 // 点击特效：此处包含外链地址，内容由XiaozhiSans提供。如果您需要使用，应先询问其意见。
 $('#clickEffect').change(() => {
 	if ($('#clickEffect')[0].checked) $.getScript('https://log.xsawa.dev.tc/js/candy.min.js')
@@ -25,12 +31,12 @@ $('#githubRepoProxy').change(() => {
 		try {$('a').each(function() {
 			if (this.href && this.href.startsWith('https://github.com'))
 			this.href = this.href.replace('https://github.com', proxy);
-		})} catch(e) {console.error(e)}
+		}) && console.log(`[debug] githubRepoProxy is now enabled\nproxy url = ${proxy}`)} catch(e) {console.error(e)}
 	} else {
 		try {$('a').each(function() {
 			if (this.href && this.href.startsWith(proxy))
 			this.href = this.href.replace(proxy, 'https://github.com');
-		})} catch(e) {console.error(e)}
+		}) && console.log("[debug] githubRepoProxy is now disabled")} catch(e) {console.error(e)}
 	}
 });
 
