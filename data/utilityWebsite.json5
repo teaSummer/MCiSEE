@@ -34,8 +34,6 @@
     "无类别 (暂未分类)": [
       ["网易我的世界官网", "https://mc.163.com", ""],
       ["Inner Core 模组", "https://icmods.mineprogramming.org", ""],
-      ["LeviLamina", "https://levilamina.liteldev.com", "原LiteLoaderBDS\n轻量、模块化、多功能的BDS模组加载器"],
-      ["Amethyst", "https://github.com/FrederoxDev/Amethyst", "基岩版客户端模组构建器"],
       ["官方壁纸集", "https://www.minecraft.net/collectibles/minecraft-collection", ""],
       ["物理模组官网", "https://minecraftphysicsmod.com/", "Dive into a new world like never seen before. Collapsing caves, interactive Ragdolls, Item physics and much more awaits you!"],
       ["Eaglercraft", "https://eaglercraft.com/", "在线游玩mc java版非官方版\n(需浏览器支持WebGL)"],
@@ -54,7 +52,7 @@
       ["IMC.RE", "https://imc.re", "著名开发团队"],
       ["LittleSkin皮肤站", "https://littleskin.cn", "快速、可靠的 Minecraft 皮肤站"],
       ["红石皮肤站", "https://mcskin.com.cn/", "一个免费、自由的Minecraft皮肤站。五年历史，稳定可靠！"],
-      ["MCSkins.top", "https://mcskins.top", "简单的Minecraft皮肤分享站\n内含一些小工具"],
+      ["MCSkins.top", "https://mcskins.top", "简单的Minecraft皮肤分享站\n内含一些皮肤小工具"],
       ["Minecraft Maps", "https://www.minecraftmaps.com", "This site is dedicated to custom Minecraft saved game worlds or maps as they are more commonly known as."],
       ["Minecraft Shaders", "https://minecraftshader.com/", "MinecraftShader.com offers an extensive collection of mods created for players who want a fresh Minecraft experience."],
       ["9Minecraft", "https://www.9minecraft.net/", "The best resource for Minecraft"],
@@ -113,6 +111,7 @@
       ["装饰性头颅", "https://www.minecraft-heads.com", "头颅收集站"],
       ["盔甲纹饰预览", "https://armortrims.com", "可以预览盔甲锻造纹饰效果"],
       ["多彩文字生成", "https://colorize.fun/minecraft", "像素风格多彩文本生成器"],
+      ["Amethyst", "https://github.com/FrederoxDev/Amethyst", "基岩版客户端模组构建器"],
       ["bridge.", "https://bridge-core.app/", "用于开发附加包的IDE\n轻便、强大、易用！"],
       ["MCreator", "https://mcreator.net", "开源软件，界面直观易学，集成代码编辑器，便于制作模组、数据包和附加包"],
       ["Minecraft Dot", "https://www.minecraft-dot.pictures/", "用Minecraft的方块渲染图片!"],
@@ -161,6 +160,7 @@
       ["基岩版专用服务端", "https://www.minebbs.com/bds/history", "由MineBBS收集"],
       ["基岩版专用预览版服务端", "https://www.minebbs.com/resources/bedrock-dedicated-server-preview.4934/history", "由MineBBS收集"],
       ["BDSX", "https://github.com/bdsx/bdsx", "BDS模组 (由Node.js编写)"],
+      ["LeviLamina", "https://levilamina.liteldev.com", "原LiteLoaderBDS\n轻量、模块化、多功能的BDS模组加载器"],
       ["FastMirror (无极镜像)", "https://www.fastmirror.net", "免费且高速的 MineCraft 服务器核心下载加速镜像，实时同步上游核心构建，由物语云计算提供支持。"],
       ["极星镜像", "https://mirror.polars.cc", "欢迎使用极星云镜像站"],
       ["MCVersions", "https://mcversions.net", "除了提供原版服务端核心外还提供原版客户端核心"],
@@ -195,18 +195,18 @@
     ]
   },
   {
-    "加载器 (模组/光影)": [
-      ["Forge", "https://www.minecraftforge.net", "模组加载器(远古版本起)"],
-      ["NeoForge", "https://neoforged.net", "模组加载器(1.20.1+)"],
+    "加载器 (模组/光影)": [ // a to z
+      ["Canvas", "https://modrinth.com/mod/canvas", "光影加载器(1.14-1.20.2)"],
       ["Fabric", "https://fabricmc.net", "模组加载器(1.14+)"],
-      ["Quilt", "https://quiltmc.org", "模组加载器(1.14+)"],
-      ["LiteLoader", "https://www.liteloader.com", "模组加载器(1.3.2-1.12.2)"],
-      ["Legacy Fabric", "https://legacyfabric.net/", "模组加载器(1.2.5-1.13.2)"],
-      ["Rift", "https://www.curseforge.com/minecraft/mc-mods/rift", "模组加载器(1.13-1.13.2)"],
+      ["Forge", "https://www.minecraftforge.net", "模组加载器(远古版本起)"],
       ["Iris", "https://www.irisshaders.dev", "光影加载器(1.16+)"],
+      ["Legacy Fabric", "https://legacyfabric.net/", "模组加载器(1.2.5-1.13.2)"],
+      ["LiteLoader", "https://www.liteloader.com", "模组加载器(1.3.2-1.12.2)"],
+      ["NeoForge", "https://neoforged.net", "模组加载器(1.20.1+)"],
       ["OptiFine", "https://www.optifine.net", "光影加载器(远古版本-1.20.6)"],
       ["OptiFine(中文)", "https://optifine.cn", "光影加载器(远古版本-1.20.6)，中文官网"],
-      ["Canvas", "https://modrinth.com/mod/canvas", "光影加载器(1.14-1.20.2)"]
+      ["Quilt", "https://quiltmc.org", "模组加载器(1.14+)"],
+      ["Rift", "https://www.curseforge.com/minecraft/mc-mods/rift", "模组加载器(1.13-1.13.2)"],
     ]
   },
   {
