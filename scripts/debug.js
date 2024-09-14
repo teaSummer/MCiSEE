@@ -1,8 +1,15 @@
 // 调试模式 (Debug Mode)
-const debugCallback = (e = $('[debugFuncs]')) => {
-	debug.mode ? e.show() : e.hide();
-	$('#debugMode')[0].checked = debug.mode;
-	$('#debugMode')[0].disabled = !debug.mode;
+const isLocal = location.hostname === "127.0.0.1" || location.hostname === "localhost";
+const debugCallback = () => {
+	if(isLocal) {
+		$('#debugMode').children().show();
+		$('#debugMode').children()[0].disabled = false;
+	} else {
+		$('#debugMode').children().hide();
+		$('#debugMode').children()[0].disabled = true;
+	}
+	debug.mode ? $('#debugFuncs').show() && $('#debugMode').children().show() : $('#debugFuncs').hide();
+	$('#debugMode').children()[0].checked = debug.mode;
 	console.log(`[debug] debugMode is now ${debug.mode? "enabled": "disabled"}`);
 };
 const debugChange = ((object) => {
@@ -14,10 +21,10 @@ const debugChange = ((object) => {
     };
     return new Proxy(object, handler);
 });
-const debug = debugChange({mode: (location.hostname === "127.0.0.1" || location.hostname === "localhost")});
+const debug = debugChange({mode: isLocal});
 debugCallback();
 
-$('#debugMode').change(() => debug.mode = $('#debugMode')[0].checked);
+$('#debugMode').children().change(() => debug.mode = $('#debugMode').children()[0].checked);
 // 点击特效：此处包含外链地址，内容由XiaozhiSans提供。如果您需要使用，应先询问其意见。
 $('#clickEffect').change(() => {
 	if ($('#clickEffect')[0].checked) $.getScript('https://log.xsawa.dev.tc/js/candy.min.js')

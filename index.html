@@ -198,6 +198,10 @@
                         </mdui-tooltip>
                     </mdui-segmented-button-group>
                 </label>
+                <label id="debugMode">
+                    <input type="checkbox" onclick="" disabled>
+                    <text al="debugMode">debugMode</text>
+                </label>
                 <label>
                     <input class="github-proxy" type="checkbox" checked>
                     <text al="GitHubProxy"></text>
@@ -211,12 +215,8 @@
                     <mdui-slider class="inline-block searchable-prompt-length" name="searchable-prompt-length"
                                  value="10" min="0" max="30"></mdui-slider>
                 </label>
-                <span debugFuncs>
+                <span id="debugFuncs">
                 <label al="debugFuncs">debugFuncs</label>
-                <label>
-                    <input id="debugMode" type="checkbox" onclick="" disabled>
-                    <text al="debugMode">debugMode</text>
-                </label>
                 <label>
                     <input id="clickEffect" type="checkbox" onclick="this.disabled = true;">
                     <text al="clickEffect">clickEffect</text>
