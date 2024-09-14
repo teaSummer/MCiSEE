@@ -151,7 +151,8 @@
       ["星月版本库", "https://spectrollay.github.io/minecraft_repository/", "星月Minecraft版本库"],
       // ["星月版本库测试版", "https://spectrollay.github.io/minecraft_repository_test/", "星月Minecraft版本库测试版"],
       // ["Alpha版本库", "https://archive.org/details/MCPEAlpha", "(存档)"], // 需要魔法才能访问
-      ["电脑端启动器", "https://bedrocklauncher.github.io/", "Bedrock Launcher Lite，仅限Windows"]
+      ["电脑端启动器", "https://bedrocklauncher.github.io/", "Bedrock Launcher Lite，仅限Windows"],
+      ["原子资源库", "https://res.nullatom.com/Minecraft/", ""]
     ]
   },
   {
