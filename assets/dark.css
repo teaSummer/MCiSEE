@@ -1,3 +1,8 @@
+.background {
+    transform: scale(110%);
+    filter: saturate(2);
+}
+
 a {
     color: #ff1493;
     text-decoration: none;
@@ -162,17 +167,6 @@ footer {
 
 .ICP a:active {
     color: #5555ff;
-}
-
-.background {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    transform: scale(110%);
-    transform-origin: left;
-    filter: saturate(2);
-    transition-duration: 0s;
 }
 
 .checkbox:checked+label::before {
