@@ -204,8 +204,8 @@
       ["Legacy Fabric", "https://legacyfabric.net/", "模组加载器(1.2.5-1.13.2)"],
       ["LiteLoader", "https://www.liteloader.com", "模组加载器(1.3.2-1.12.2)"],
       ["NeoForge", "https://neoforged.net", "模组加载器(1.20.1+)"],
-      ["OptiFine", "https://www.optifine.net", "光影加载器(远古版本-1.20.6)"],
-      ["OptiFine(中文)", "https://optifine.cn", "光影加载器(远古版本-1.20.6)，中文官网"],
+      ["OptiFine", "https://www.optifine.net", "光影加载器(远古版本起)"],
+      ["OptiFine(中文)", "https://optifine.cn", "光影加载器(远古版本起)，中文官网"],
       ["Quilt", "https://quiltmc.org", "模组加载器(1.14+)"],
       ["Rift", "https://www.curseforge.com/minecraft/mc-mods/rift", "模组加载器(1.13-1.13.2)"],
     ]
