@@ -27,7 +27,7 @@ debugCallback();
 $('#debugMode').children().change(() => debug.mode = $('#debugMode').children()[0].checked);
 // 点击特效：此处包含外链地址，内容由XiaozhiSans提供。如果您需要使用，应先询问其意见。
 $('#clickEffect').change(() => {
-	if ($('#clickEffect')[0].checked) $.getScript('https://log.xsawa.dev.tc/js/candy.min.js')
+	if ($('#clickEffect')[0].checked) $.getScript('//blog.xsawa.us.kg/js/candy.min.js')
 	  .then(console.log('[debug] clickEffect is now enabled!\nif you want to disable it pls refresh the page.'))
 	  .catch(e => console.error(`[debug] ${e}`)); // 打开了就没有退路了awa 除非刷新页面awa
 });
