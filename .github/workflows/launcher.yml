@@ -137,10 +137,10 @@ jobs:
           echo "message<<EOF"$'\n'"$MESSAGE"$'\n'EOF >> $GITHUB_OUTPUT  # For the multi-line output
       - name: Commit & Push
         id: commit_and_push
-        uses: stefanzweifel/git-auto-commit-action@master
+        uses: EndBug/add-and-commit@main
         with:
-          commit_message: ${{ steps.modify.outputs.message }}
-          branch: main
+          default_author: github_actions
+          message: ${{ steps.modify.outputs.message }}
   deploy:
     name: Deploy
     runs-on: ubuntu-latest

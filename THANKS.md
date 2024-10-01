@@ -59,7 +59,7 @@
 
 [Checkout](https://github.com/actions/checkout) 签出仓库
 
-[git-auto-commit Action](https://github.com/stefanzweifel/git-auto-commit-action) 自动提交并推送更改
+[Add & Commit](https://github.com/EndBug/add-and-commit) 提交并推送更改
 
 
 ## 贡献者
@@ -139,7 +139,7 @@ Special thanks to: [GitHub](https://github.com) and [Gitee](https://gitee.com) (
 
 [Checkout](https://github.com/actions/checkout) Checking out a repo
 
-[git-auto-commit Action](https://github.com/stefanzweifel/git-auto-commit-action) Auto commit and push changes
+[Add & Commit](https://github.com/EndBug/add-and-commit) Commit & push changes
 
 
 ## Contributors
