@@ -114,8 +114,8 @@
     {
       "title": "Prism Launcher",
       "abbr": "Prism",
-      "download": "https://github.com/PrismLauncher/PrismLauncher/releases/download/8.4/PrismLauncher-Windows-MSVC-Setup-8.4.exe",
-      "version": "8.4",
+      "download": "https://github.com/PrismLauncher/PrismLauncher/releases/download/9.1/PrismLauncher-Windows-MSVC-Setup-9.1.exe",
+      "version": "9.1",
       "url": "https://github.com/PrismLauncher/PrismLauncher"
     },
     {
@@ -191,8 +191,8 @@
     {
       "title": "Prism Launcher",
       "abbr": "Prism",
-      "download": "https://github.com/PrismLauncher/PrismLauncher/releases/download/8.4/PrismLauncher-macOS-8.4.zip",
-      "version": "8.4",
+      "download": "https://github.com/PrismLauncher/PrismLauncher/releases/download/9.1/PrismLauncher-macOS-9.1.zip",
+      "version": "9.1",
       "url": "https://github.com/PrismLauncher/PrismLauncher"
     },
     {
@@ -241,8 +241,8 @@
     {
       "title": "Prism Launcher",
       "abbr": "Prism",
-      "download": "https://github.com/PrismLauncher/PrismLauncher/releases/download/8.4/PrismLauncher-Linux-x86_64.AppImage",
-      "version": "8.4",
+      "download": "https://github.com/PrismLauncher/PrismLauncher/releases/download/9.1/PrismLauncher-Linux-x86_64.AppImage",
+      "version": "9.1",
       "url": "https://github.com/PrismLauncher/PrismLauncher"
     },
     {
