@@ -77,6 +77,9 @@ jobs:
           # GET Latest Dev ${{ matrix.subtitle }}
           if [ "$LAST_DEV_VERSION" ]; then
             LATEST_DEV_VERSION=`cat releases.json | sed -n '/"tag_name":/p' | sed -n 1p | sed 's/^.*:\s*"v\?\|",$//gi' | sed 's/\./\\\\./g'`
+            if [[ '${{ matrix.subtitle }}' = HMCL && "$LATEST_DEV_VERSION" = release-* ]]; then
+              LATEST_DEV_VERSION=`cat releases.json | sed -n '/"tag_name": "[^r]/p' | sed -n 1p | sed 's/^.*:\s*"v\?\|",$//gi' | sed 's/\./\\\\./g'`
+            fi
             if [ "$LATEST_DEV_VERSION" = "$LATEST_STABLE_VERSION" ]; then
               unset LATEST_DEV_VERSION
             fi
