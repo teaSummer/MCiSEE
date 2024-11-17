@@ -57,12 +57,12 @@
     {
       "title": "Hello Minecraft! Launcher",
       "abbr": "HMCL",
-      "download": "https://github.com/HMCL-dev/HMCL/releases/download/3.5.9.262/HMCL-3.5.10.exe",
+      "download": "https://github.com/HMCL-dev/HMCL/releases/download/3.5.9.263/HMCL-3.5.10.exe",
       "version": "3.5.10",
       "url": "https://github.com/HMCL-dev/HMCL",
       "dev": {
-        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.5.9.262/HMCL-3.5.9.262.exe",
-        "version": "3.5.9.262"
+        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.5.9.263/HMCL-3.5.9.263.exe",
+        "version": "3.5.9.263"
       }
     },
     {
@@ -153,12 +153,12 @@
     {
       "title": "Hello Minecraft! Launcher",
       "abbr": "HMCL",
-      "download": "https://github.com/HMCL-dev/HMCL/releases/download/3.5.9.262/HMCL-3.5.10.jar",
+      "download": "https://github.com/HMCL-dev/HMCL/releases/download/3.5.9.263/HMCL-3.5.10.jar",
       "version": "3.5.10",
       "url": "https://github.com/HMCL-dev/HMCL",
       "dev": {
-        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.5.9.262/HMCL-3.5.9.262.jar",
-        "version": "3.5.9.262"
+        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.5.9.263/HMCL-3.5.9.263.jar",
+        "version": "3.5.9.263"
       }
     },
     {
@@ -210,12 +210,12 @@
     {
       "title": "Hello Minecraft! Launcher",
       "abbr": "HMCL",
-      "download": "https://github.com/HMCL-dev/HMCL/releases/download/3.5.9.262/HMCL-3.5.10.sh",
+      "download": "https://github.com/HMCL-dev/HMCL/releases/download/3.5.9.263/HMCL-3.5.10.sh",
       "version": "3.5.10",
       "url": "https://github.com/HMCL-dev/HMCL",
       "dev": {
-        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.5.9.262/HMCL-3.5.9.262.sh",
-        "version": "3.5.9.262"
+        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.5.9.263/HMCL-3.5.9.263.sh",
+        "version": "3.5.9.263"
       }
     },
     {
