@@ -57,12 +57,12 @@
     {
       "title": "Hello Minecraft! Launcher",
       "abbr": "HMCL",
-      "download": "https://github.com/HMCL-dev/HMCL/releases/download/3.5.9.263/HMCL-3.6.11.exe",
+      "download": "https://github.com/HMCL-dev/HMCL/releases/download/3.6.11.264/HMCL-3.6.11.exe",
       "version": "3.6.11",
       "url": "https://github.com/HMCL-dev/HMCL",
       "dev": {
-        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.5.9.263/HMCL-3.5.9.263.exe",
-        "version": "3.5.9.263"
+        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.6.11.264/HMCL-3.6.11.264.exe",
+        "version": "3.6.11.264"
       }
     },
     {
@@ -153,12 +153,12 @@
     {
       "title": "Hello Minecraft! Launcher",
       "abbr": "HMCL",
-      "download": "https://github.com/HMCL-dev/HMCL/releases/download/3.5.9.263/HMCL-3.6.11.jar",
+      "download": "https://github.com/HMCL-dev/HMCL/releases/download/3.6.11.264/HMCL-3.6.11.jar",
       "version": "3.6.11",
       "url": "https://github.com/HMCL-dev/HMCL",
       "dev": {
-        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.5.9.263/HMCL-3.5.9.263.jar",
-        "version": "3.5.9.263"
+        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.6.11.264/HMCL-3.6.11.264.jar",
+        "version": "3.6.11.264"
       }
     },
     {
@@ -210,12 +210,12 @@
     {
       "title": "Hello Minecraft! Launcher",
       "abbr": "HMCL",
-      "download": "https://github.com/HMCL-dev/HMCL/releases/download/3.5.9.263/HMCL-3.6.11.sh",
+      "download": "https://github.com/HMCL-dev/HMCL/releases/download/3.6.11.264/HMCL-3.6.11.sh",
       "version": "3.6.11",
       "url": "https://github.com/HMCL-dev/HMCL",
       "dev": {
-        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.5.9.263/HMCL-3.5.9.263.sh",
-        "version": "3.5.9.263"
+        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.6.11.264/HMCL-3.6.11.264.sh",
+        "version": "3.6.11.264"
       }
     },
     {
