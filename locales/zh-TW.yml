@@ -1,0 +1,111 @@
+language: zh-TW
+
+data:
+  meta.image.alt: 所見皆是麥塊
+  meta.title: '{meta.image.alt} - MCiSEE'
+  meta.description: 所見皆是麥塊，獲取麥塊資源更簡單！
+  head.title: ${notificationCount} {meta.title}
+  introduction.title: 所見皆是<i>Minecraft</i>
+  introduction.1: 你可以在這裏找到大量的麥塊資源，比如啓動器等等...
+  introduction.2: >-
+    歡迎光臨我們的 <a href="https://github.com/teaSummer/MCiSEE" target="_blank">GitHub 項目</a>
+    {contribute} 或者幫我們點亮 Star!
+  introduction.3: 我們也需要您來提供更多的麥塊資源！
+  BedrockEdition: 基岩版
+  JavaEdition: Java版
+  contribute: 作出貢獻
+  forThisProject: 爲此項目
+  contributeForThisProject: '{forThisProject}{contribute}'
+  device: 設備
+  device.tip: 自動偵測設備，你也可以手動選擇
+  Android.tip: 安卓/鴻蒙 - 手機/平板電腦
+  iOS.tip: 蘋果 - 手機/平板電腦
+  Windows.tip: Windows - PC
+  macOS.tip: 蘋果 - PC
+  Linux.tip: Linux - 包含Linux發行版
+  unsupported: 不支援
+  unknown: 未知
+  unselected: 【請選擇】
+  app: 應用程式
+  launcher: 啓動器
+  launcherOnlyJavaEdition: '{launcher}（<b>{JavaEdition}</b>）'
+  website: 網站
+  searchable: 快速查找
+  utilityWebsite: 實用網站
+  forum: 論壇
+  config: 設定
+  goto: 前往
+  download: 下載
+  downloadedLauncherUpdate: 已下載的啓動器有更新：
+  updatedTo: 新版本：
+  updateArrow: ➔
+  search: 查找
+  searchFrom: ' 從 ${linkSearchFrom} 查找 ....'
+  gotoLauncherWebsite: 前往啓動器網站
+  gotoLauncherWebsite.note: 前往啓動器官方網站或者GitHub開源項目
+  prefixType: 類別
+  mods: 模組
+  plugins: 插件
+  dataPacks: 數據包
+  shaders: 著色器
+  resourcePacks: 材質包
+  modpacks: 整合包
+  prefixVersions: 版本
+  all: 所有
+  acquire: 獲取
+  unfold: 展開...
+  fold: 關閉
+  GitHubProxy: >-
+    GitHub 文件通過 <a href="https://ghproxy.cn" target="_blank">代理加速</a> {download}
+  searchableDirect: '{searchable}：盡可能直接前往詳情頁面'
+  searchablePromptLength: 查找關鍵字長度(0-30)：
+  default: 預設
+  daytime: 白天
+  nighttime: 夜晚
+  classic: 經典
+  systemTheme: 跟隨系統
+  lightTheme: 淡色主题
+  darkTheme: 深色主题
+  earlyTheme: 舊版主题
+  ellipsis: ....
+  startDownloading: 即將開始下載：
+  statistics: 統計
+  visitorCount: 訪客數
+  contributors: 貢獻者
+  starsOverTime: GitHub 星星趨勢
+  ICP: <a href="https://icp.gov.moe/?keyword=20247837" target="_blank">萌ICP備20247837號</a>
+  license.1: 本頁面内容采用
+  license.2: 協議授權
+  content: 目錄
+  content.top: 頂部
+  content.device: '{device}'
+  content.app: '{app}'
+  content.app.launcher: '{launcher}'
+  content.website: '{website}'
+  content.website.searchable: '{searchable}'
+  content.website.utilityWebsite: '{utilityWebsite}'
+  content.website.forum: '{forum}'
+  content.config: '{config}'
+  content.bottom: 底部
+  latest: 最新版
+  latest.note: 盡可能最新的版本
+  release: 發行版
+  release.note: 穩定的版本
+  preRelease: 預發行版
+  preRelease.note: 開發中的版本
+  launcher.release: >-
+    <a class="button download data-download-launcher" href="${linkUrl}"
+    data-backup-href="${linkDownload}" ondragstart="event.dataTransfer.effectAllowed = 'none';"
+    title="{download}{release.note} ${linkVersion}">${downloadSVG}{download}{release} ${linkVersion}</a>
+  launcher.release.latest: >-
+    <a class="button download data-download-launcher" href="${linkUrl}"
+    data-backup-href="${linkDownload}" ondragstart="event.dataTransfer.effectAllowed = 'none';"
+    title="{download}{latest.note}{release.note}">${downloadSVG}{download}{latest}{release}</a>
+  launcher.preRelease: >-
+    <a class="button download data-dev-download-launcher" href="${linkDevUrl}"
+    data-backup-href="${linkDevDownload}" ondragstart="event.dataTransfer.effectAllowed = 'none';"
+    title="{download}{preRelease.note} ${linkDevVersion}">${downloadSVG}{download}{preRelease} ${linkDevVersion}</a>
+  launcher.preRelease.latest: >-
+    <a class="button download data-dev-download-launcher" href="${linkDevUrl}"
+    data-backup-href="${linkDevDownload}" ondragstart="event.dataTransfer.effectAllowed = 'none';"
+    title="{download}{latest.note}{preRelease.note}">${downloadSVG}{download}{latest}{preRelease}</a>

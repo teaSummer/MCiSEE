@@ -24,7 +24,7 @@ al.setDefaultCountry({
     zh: 'zh-CN'
 });
 const i18n = ((callback = () => {}) => {
-    al.setLangProp(['zh-CN.yml','en.yml'], () => {
+    al.setLangProp(['zh-CN.yml','zh-TW.yml','en.yml'], () => {
         al.load(void 0, al.mode.HTML, callback);
     }, {url: true, yaml: true});
 });
