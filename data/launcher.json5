@@ -30,7 +30,7 @@
         "download": "https://github.com/Coloryr/ColorMC.Android/releases/download/A21/colormc-a21-android.zip",
         "version": "A21"
       }
-    }
+    },
   ],
   // ===================================
   // 适用于 苹果手机/苹果平板 的启动器
@@ -41,7 +41,7 @@
       "download": "https://github.com/PojavLauncherTeam/PojavLauncher_iOS/releases/download/v2.2/net.kdt.pojavlauncher-2.2-ios.ipa",
       "version": "2.2",
       "url": "https://github.com/PojavLauncherTeam/PojavLauncher_iOS"
-    }
+    },
   ],
   // ==============================
   // 适用于 Windows电脑 的启动器
@@ -138,7 +138,7 @@
       "download": "https://lz.qaiu.top/parser?url=https://share.feijipan.com/s/kwAt8rhZ",
       "version": "1.0.9",
       "url": "https://gitee.com/Cmbself/PCL1"
-    }
+    },
   ],
   // ==========================
   // 适用于 苹果电脑 的启动器
@@ -201,7 +201,7 @@
       "download": "https://www.salwyrr.com/4/Salwyrr%20Minecraft%20Launcher%204.jar",
       "version": "4",
       "url": "https://www.salwyrr.com"
-    }
+    },
   ],
   // ============================
   // 适用于 Linux系统 的启动器
@@ -251,6 +251,6 @@
       "download": "https://www.salwyrr.com/4/Salwyrr%20Minecraft%20Launcher%204.jar",
       "version": "4",
       "url": "https://www.salwyrr.com"
-    }
-  ]
+    },
+  ],
 }

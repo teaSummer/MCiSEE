@@ -16,7 +16,7 @@
       ["地下城 (Dungeons)", "https://minecraft.net/dungeons", "Minecraft Dungeons\n一款动作/冒险角色扮演类电子游戏，现已停更"],
       ["传奇 (Legends)", "https://minecraft.net/legends", "Minecraft Legends\n一款即时动作战略游戏，现已停更"],
       ["Minecraft Earth", "#", "一款免费增强现实（AR）手游，现已停更\n官网不再维护"],
-      ["故事模式 (Story Mode)", "#", "Minecraft: Story Mode\n一款具有可点选性、叙事性、章节性的电子游戏，现已停更\n官网不再维护"]
+      ["故事模式 (Story Mode)", "#", "Minecraft: Story Mode\n一款具有可点选性、叙事性、章节性的电子游戏，现已停更\n官网不再维护"],
     ]
   },
   {
@@ -27,7 +27,7 @@
       ["基岩版 (Xbox)", "https://xbox.com/games/store/-/9MVXMVT8ZKWC", "Microsoft Xbox"],
       ["地下城/Dungeons (Windows)", "https://store.steampowered.com/app/1672970/Minecraft_Dungeons/", "Valve Steam"],
       ["传奇/Legends (Windows 10 v2004+)", "https://store.steampowered.com/app/1928870/Minecraft_Legends/", "Valve Steam"],
-      ["周边商城", "https://shop.minecraft.net/", "Official Site"]
+      ["周边商城", "https://shop.minecraft.net/", "Official Site"],
     ]
   },
   {
@@ -37,7 +37,7 @@
       ["官方壁纸集", "https://www.minecraft.net/collectibles/minecraft-collection", ""],
       ["物理模组官网", "https://minecraftphysicsmod.com/", "Dive into a new world like never seen before. Collapsing caves, interactive Ragdolls, Item physics and much more awaits you!"],
       ["Eaglercraft", "https://eaglercraft.com/", "在线游玩mc java版非官方版\n(需浏览器支持WebGL)"],
-      ["MC.JS", "https://play.mc.js.cool/", "在线游玩mc java版非官方版\n(需浏览器支持WebGL)"]
+      ["MC.JS", "https://play.mc.js.cool/", "在线游玩mc java版非官方版\n(需浏览器支持WebGL)"],
     ]
   },
   {
@@ -57,7 +57,7 @@
       ["Minecraft Maps", "https://www.minecraftmaps.com", "This site is dedicated to custom Minecraft saved game worlds or maps as they are more commonly known as."],
       ["Minecraft Shaders", "https://minecraftshader.com/", "MinecraftShader.com offers an extensive collection of mods created for players who want a fresh Minecraft experience."],
       ["9Minecraft", "https://www.9minecraft.net/", "The best resource for Minecraft"],
-      ["免费披风站", "https://minecraftcapes.net", "英文"]
+      ["免费披风站", "https://minecraftcapes.net", "英文"],
     ]
   },
   {
@@ -116,7 +116,7 @@
       ["bridge.", "https://bridge-core.app/", "用于开发附加包的IDE\n轻便、强大、易用！"],
       ["MCreator", "https://mcreator.net", "开源软件，界面直观易学，集成代码编辑器，便于制作模组、数据包和附加包"],
       ["Minecraft Dot", "https://www.minecraft-dot.pictures/", "用Minecraft的方块渲染图片!"],
-      ["MCC客户端控制台", "https://mccteam.github.io/", "用C#实现的轻量级开源Java版客户端"]
+      ["MCC客户端控制台", "https://mccteam.github.io/", "用C#实现的轻量级开源Java版客户端"],
     ]
   },
   {
@@ -137,7 +137,7 @@
       ["基岩版SAPI文档", "https://projectxero.top/sapi/", "Script API（原Gametest Framework）文档"],
       ["编程一小时教程", "https://code.org/minecraft", "教育版教程"],
       ["网易我的世界开发指南", "https://mc.163.com/dev/guide.html", ""],
-      ["Wiki.vg", "https://wiki.vg", "英文技术文档，包含网络协议与地图格式文档"]
+      ["Wiki.vg", "https://wiki.vg", "英文技术文档，包含网络协议与地图格式文档"],
     ]
   },
   {
@@ -153,7 +153,7 @@
       // ["星月版本库测试版", "https://spectrollay.github.io/minecraft_repository_test/", "星月Minecraft版本库测试版"],
       // ["Alpha版本库", "https://archive.org/details/MCPEAlpha", "(存档)"], // 需要魔法才能访问
       ["电脑端启动器", "https://bedrocklauncher.github.io/", "Bedrock Launcher Lite，仅限Windows"],
-      ["原子资源库", "https://res.nullatom.com/Minecraft/", ""]
+      ["原子资源库", "https://res.nullatom.com/Minecraft/", ""],
     ]
   },
   {
@@ -180,7 +180,7 @@
       ["Sponge", "https://spongepowered.org", "由社区驱动的开源Java版模组修改平台"],
       ["Tuinity", "https://github.com/Tuinity/Tuinity", "性能好。基于Paper"],
       // == 咳咳,魔法 ==
-      // ["Docker 服务器模板", "https://hub.docker.com/r/itzg/minecraft-server/", ""]
+      // ["Docker 服务器模板", "https://hub.docker.com/r/itzg/minecraft-server/", ""],
     ]
   },
   {
@@ -219,7 +219,7 @@
       ["PMINE工具箱", "https://pmine.org", ""],
       ["FreeDayO工具箱", "https://love-kogasa.github.io/FJST/", ""],
       ["命令自动补全", "https://mact.mcisee.top", ""],
-      ["MCPack清单生成器", "https://mcpack.mcisee.top", ""]
+      ["MCPack清单生成器", "https://mcpack.mcisee.top", ""],
     ]
-  }
+  },
 ]

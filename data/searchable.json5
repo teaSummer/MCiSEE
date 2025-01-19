@@ -42,8 +42,8 @@
   {
     "title": "Java版ID表",
     "abbr": "MCID",
-    "search": "http://mcid.lingningyu.cn/?searchName=<T>",
-    "note": "我的世界方块与物品ID表 JE1.20 - 伶宁域",
+    "search": "http://mcid.lingningyu.cn/search/?searchName=<T>",
+    "note": "我的世界Java版ID表 - 伶宁域",
     "url": "http://mcid.lingningyu.cn"
   },
   {
@@ -58,5 +58,5 @@
     "search": "https://mineplugin.org/index.php?search=<T>&title=%E7%89%B9%E6%AE%8A%3A%E6%90%9C%E7%B4%A2&fulltext=1",
     "note": "Minecraft插件百科",
     "url": "https://mineplugin.org"
-  }
+  },
 ]

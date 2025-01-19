@@ -115,7 +115,7 @@ const launcherChanged = ((event = {target: $('mdui-select.launcher-list')}) => {
             url = downloadMirror(url);
             const removeEmpty = ((version) => {
                 if (version === void 0) {
-                    button.removeAttr('href').removeAttr('title').removeAttr('data-backup-href');
+                    button.removeAttr('href title data-backup-href');
                     button.html('')
                     button.parent().removeAttr('al');
                 };
@@ -353,13 +353,13 @@ $('.searchable-input').typeahead(
                     BWiki: `https://wiki.biligame.com/mc/api.php?action=opensearch&search=${search}&limit=30`,
                     Modrinth: `https://api.modrinth.com/v2/search?limit=30&index=relevance&query=${search}&facets=${facets}`,
                     BEDW: `https://wiki.mcbe-dev.net/w/api.php?action=opensearch&search=${search}&namespace=0%7C3000%7C3002%7C3004%7C3008%7C3010&limit=30`,
-                    MinePlugin: `https://mineplugin.org/api.php?action=opensearch&search=${search}&limit=30`
+                    MinePlugin: `https://mineplugin.org/api.php?action=opensearch&search=${search}&limit=30`,
                 };
                 const url = api[abbr];
                 if (url) {
                     // 获取候选词
                     $('.searchable-clear').attr('loading', true);  // 在获取候选词时显示加载动画（进行中）
-                    return $.get(url, void(0), (abbr == 'Modrinth')? 'json': 'jsonp').then((result) => {
+                    return $.get(url, void(0), (abbr == 'Modrinth') ? 'json': 'jsonp').then((result) => {
                         if (result.length > 1 && Array.isArray(result[1])) {
                             result = result[1];
                         };
@@ -515,7 +515,7 @@ $(document).ready(() => {
         $('.Modrinth-versions').val(['all']);
         // 最后处理
         hashChanged();
-        $('.wait').removeAttr('class').removeAttr('style');
+        $('.wait').removeAttr('class style');
         try { document.querySelector(decodeURI(location.hash)).scrollIntoView(); } catch {};
     });
 

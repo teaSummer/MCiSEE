@@ -17,9 +17,9 @@ const db_forums = [
     {
         title: "最MC",
         url: "http://www.zuimc.com",
-        state: "up",
+        state: "failure",
         createdAt: "2013/04/18",
-        updatedAt: "2024/06/09",
+        updatedAt: "2025/01/19",
         hasICP: "yes",
         hasNetSec: "yes",
         note: "网站处于待出售状态，暂停新用户注册，用户活动基本停止。网站屏蔽了大量机房 IP，存在误伤。",
@@ -41,10 +41,10 @@ const db_forums = [
         url: "https://www.minebbs.com",
         state: "up",
         createdAt: "2018/03/16",
-        updatedAt: "2024/05/07",
+        updatedAt: "2025/01/19",
         hasICP: "yes",
         hasNetSec: "no",
-        note: "综合性MC论坛，以基岩版服务端资源为主要特色，于今年二月初重启Java版，目前Java版服务端资源发展较为迅速。",
+        note: "综合性MC论坛，以基岩版服务端资源为主要特色，于2024年2月重启Java版，目前Java版服务端资源发展较为迅速。",
         reference: [
             {
                 title: "[MineBBS]何为一个成熟的基岩版社区？",
@@ -303,9 +303,9 @@ const db_forums = [
     {
         title: "PixelBBS",
         url: "https://www.pixelbbs.cn",
-        state: "up",
+        state: "close",
         createdAt: "2022/08/12",
-        updatedAt: "2024/05/09",
+        updatedAt: "2025/01/19",
         hasICP: "yes",
         hasNetSec: "no",
         note: "含付费VIP特权。",
@@ -1137,6 +1137,17 @@ const db_forums = [
                 url: "https://www.bilibili.com/opus/1004345554913722373"
             }
         ]
+    },
+        {
+        title: "BBSMC",
+        url: "https://bbsmc.net/",
+        state: "up",
+        createdAt: "2024/11/29",
+        updatedAt: "2025/01/19",
+        hasICP: "yes",
+        hasNetSec: "no",
+        note: "资源社区，使用Modrinth开源网站程序搭建。",
+        reference: []
     },
     {
         title: "Cilbup资源论坛",

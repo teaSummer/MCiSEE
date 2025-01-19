@@ -125,6 +125,7 @@
 以分类作为键，值为一个数组。
 
 在数组内，每项对应的描述：
+
 1. 第一项 - 网站名称。
 2. 第二项 - 网站地址 URL。
 3. 第三项 - 可选，网站简介。
@@ -141,8 +142,8 @@
     ["Minecraft教育版", "https://education.minecraft.net"],
     ["漏洞追踪器(反馈Bug)", "https://bugs.mojang.com"],
     ["基岩版开发者文档", "https://learn.microsoft.com/minecraft/creator/"],
-    ["Feedback", "https://feedback.minecraft.net"]
-  ]
+    ["Feedback", "https://feedback.minecraft.net"],
+  ],
 }
 ```
 
