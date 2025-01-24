@@ -57,12 +57,12 @@
     {
       "title": "Hello Minecraft! Launcher",
       "abbr": "HMCL",
-      "download": "https://github.com/HMCL-dev/HMCL/releases/download/3.6.11.265/HMCL-3.6.11.exe",
+      "download": "https://github.com/HMCL-dev/HMCL/releases/download/3.6.11.266/HMCL-3.6.11.exe",
       "version": "3.6.11",
       "url": "https://github.com/HMCL-dev/HMCL",
       "dev": {
-        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.6.11.265/HMCL-3.6.11.265.exe",
-        "version": "3.6.11.265"
+        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.6.11.266/HMCL-3.6.11.266.exe",
+        "version": "3.6.11.266"
       }
     },
     {
@@ -153,12 +153,12 @@
     {
       "title": "Hello Minecraft! Launcher",
       "abbr": "HMCL",
-      "download": "https://github.com/HMCL-dev/HMCL/releases/download/3.6.11.265/HMCL-3.6.11.jar",
+      "download": "https://github.com/HMCL-dev/HMCL/releases/download/3.6.11.266/HMCL-3.6.11.jar",
       "version": "3.6.11",
       "url": "https://github.com/HMCL-dev/HMCL",
       "dev": {
-        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.6.11.265/HMCL-3.6.11.265.jar",
-        "version": "3.6.11.265"
+        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.6.11.266/HMCL-3.6.11.266.jar",
+        "version": "3.6.11.266"
       }
     },
     {
@@ -210,12 +210,12 @@
     {
       "title": "Hello Minecraft! Launcher",
       "abbr": "HMCL",
-      "download": "https://github.com/HMCL-dev/HMCL/releases/download/3.6.11.265/HMCL-3.6.11.sh",
+      "download": "https://github.com/HMCL-dev/HMCL/releases/download/3.6.11.266/HMCL-3.6.11.sh",
       "version": "3.6.11",
       "url": "https://github.com/HMCL-dev/HMCL",
       "dev": {
-        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.6.11.265/HMCL-3.6.11.265.sh",
-        "version": "3.6.11.265"
+        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.6.11.266/HMCL-3.6.11.266.sh",
+        "version": "3.6.11.266"
       }
     },
     {
