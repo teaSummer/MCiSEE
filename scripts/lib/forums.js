@@ -490,10 +490,10 @@ const db_forums = [
     },
     {
         title: "末影论坛",
-        url: "https://enderbbs.wavemoe.com",
+        url: "https://enderbbs.fun",
         state: "up",
         createdAt: "2023/08/28",
-        updatedAt: "2024/08/20",
+        updatedAt: "2025/01/30",
         hasICP: "no",
         hasNetSec: "no",
         note: "非大陆服务器。",
@@ -591,22 +591,27 @@ const db_forums = [
         ]
     },
     {
-        title: "neo社区",
+        title: "MCNEO光影资源站",
         url: "https://mcneo.cn",
-        state: "down",
+        state: "up",
         createdAt: "2024/02/20",
-        updatedAt: "2024/05/17",
+        updatedAt: "2025/01/17",
         hasICP: "no",
         hasNetSec: "no",
-        note: "非大陆服务器。主营光影材质包，原名PRT幻界轨迹社区。",
+        note: "非大陆服务器。主营光影材质包。",
         reference: [
-            {
-                title: "【minecraft NEO社区】快来白嫖众多光影材质包，patrix,乐高材质包，PTGI光影，全清晰度免费下载！！！",
-                url: "https://www.bilibili.com/video/BV1GJ4m1h7Ly/"
-            },
+            
             {
                 title: " 2024年免费的MC专用内网穿透？MCNeo社区助力小微服务器向上发展！",
                 url: "https://www.bilibili.com/video/BV12r421V79N/"
+            },
+            {
+                title: " 我的世界光影资源下载站：MCNEO光影资源站正式开放，争做国内最好光影站！",
+                url: "https://www.bilibili.com/video/BV1Vm421G7q5/?share_source=copy_web&vd_source=48a2820416758cec7fd4550ca25dbfaf"
+            },
+            {
+                title: " 我的世界光影资源下载站：国内首个MCNEO光影站到底NEO在哪？新在哪？不同在哪？",
+                url: "https://www.bilibili.com/video/BV1gTwqeDEcE/?share_source=copy_web&vd_source=48a2820416758cec7fd4550ca25dbfaf"
             }
 
         ]
@@ -1009,6 +1014,17 @@ const db_forums = [
         reference: []
     },
     {
+        title: "每天BBS综合论坛",
+        url: "https://www.mtbbs.top/",
+        state: "up",
+        createdAt: "2024/05/10",
+        updatedAt: "2025/01/26",
+        hasICP: "in_progress",
+        hasNetSec: "no",
+        note: "非内地服务器。",
+        reference: []
+    },
+    {
         title: "mcwuebbs",
         url: "https://mcbbs.wuenuo.com",
         state: "down",
@@ -1112,6 +1128,17 @@ const db_forums = [
         reference: []
     },
     {
+        title: "Nukkit中文论坛",
+        url: "https://bbs.nukkit.cc/",
+        state: "up",
+        createdAt: "2024/08/28",
+        updatedAt: "2025/01/26",
+        hasICP: "no",
+        hasNetSec: "no",
+        note: "非大陆服务器。",
+        reference: []
+    },
+    {
         title: "Cat BBS",
         url: "https://bbs.catscavern.com/",
         state: "up",
@@ -1177,6 +1204,17 @@ const db_forums = [
         state: "up",
         createdAt: "2024/12/25",
         updatedAt: "2025/01/14",
+        hasICP: "no",
+        hasNetSec: "no",
+        note: "非大陆服务器。",
+        reference: []
+    },
+    {
+        title: "CJSBBS我的世界中文论坛",
+        url: "https://bbs.cjsyun.top/",
+        state: "up",
+        createdAt: "2025/01/21",
+        updatedAt: "2025/01/22",
         hasICP: "no",
         hasNetSec: "no",
         note: "非大陆服务器。",
