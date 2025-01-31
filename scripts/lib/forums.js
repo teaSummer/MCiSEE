@@ -485,6 +485,18 @@ const db_forums = [
             {
                 title: "殷花红的动态",
                 url: "https://www.bilibili.com/opus/1023357820379070512"
+            },
+            {
+                title: "罗总啊_a的动态",
+                url: "https://www.bilibili.com/opus/1024394019887644674"
+            },
+            {
+                title: "老本願的动态",
+                url: "https://www.bilibili.com/opus/1026290520665620483"
+            },
+            {
+                title: "med肥鱼的动态",
+                url: "https://www.bilibili.com/opus/1027412153561251849"
             }
         ]
     },
@@ -1218,6 +1230,17 @@ const db_forums = [
         hasICP: "no",
         hasNetSec: "no",
         note: "非大陆服务器。",
+        reference: []
+    },
+    {
+        title: "红石中继站",
+        url: "https://www.mczwlt.net",
+        state: "up",
+        createdAt: "2025/01/25",
+        updatedAt: "2025/01/31",
+        hasICP: "yes",
+        hasNetSec: "yes",
+        note: "前身为我的世界中文论坛（MCBBS，域名：www.mcbbs.net），于 2024 年 1 月 20 日关闭，现于 2025 年 1 月 31 日转生。",
         reference: []
     }
 ];
