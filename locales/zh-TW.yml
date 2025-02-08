@@ -19,10 +19,10 @@ data:
   device: 設備
   device.tip: 自動偵測設備，你也可以手動選擇
   Android.tip: 安卓/鴻蒙 - 手機/平板電腦
-  iOS.tip: 蘋果 - 手機/平板電腦
+  iOS.tip: iOS - 手機/平板電腦
   Windows.tip: Windows - PC
-  macOS.tip: 蘋果 - PC
-  Linux.tip: Linux - 包含Linux發行版
+  macOS.tip: macOS - PC
+  Linux.tip: Linux - PC
   unsupported: 不支援
   unknown: 未知
   unselected: 【請選擇】

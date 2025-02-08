@@ -21,8 +21,8 @@ data:
   Android.tip: Android/HarmonyOS - Phone/Tablet
   iOS.tip: iOS - Phone/Tablet
   Windows.tip: Windows - PC
-  macOS.tip: Mac - PC
-  Linux.tip: Linux - Include Linux releases
+  macOS.tip: macOS - PC
+  Linux.tip: Linux - PC
   unsupported: Unsupported
   unknown: Unknown
   unselected: '[ Press to select ]'

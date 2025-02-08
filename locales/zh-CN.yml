@@ -19,10 +19,10 @@ data:
   device: 设备
   device.tip: 自动判断，可手动选择
   Android.tip: 安卓/鸿蒙 - 手机/平板
-  iOS.tip: 苹果 - 手机/平板
+  iOS.tip: iOS - 手机/平板
   Windows.tip: Windows - 电脑
-  macOS.tip: 苹果 - 电脑
-  Linux.tip: Linux - 含Linux发行版
+  macOS.tip: macOS - 电脑
+  Linux.tip: Linux - 电脑
   unsupported: 不支持
   unknown: 未知
   unselected: 【待选择】
