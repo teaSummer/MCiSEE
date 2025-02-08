@@ -30,7 +30,7 @@
         "download": "https://github.com/Coloryr/ColorMC.Android/releases/download/A21/colormc-a21-android.zip",
         "version": "A21"
       }
-    }
+    },
   ],
   // ===================================
   // 适用于 苹果手机/苹果平板 的启动器
@@ -41,7 +41,7 @@
       "download": "https://github.com/PojavLauncherTeam/PojavLauncher_iOS/releases/download/v2.2/net.kdt.pojavlauncher-2.2-ios.ipa",
       "version": "2.2",
       "url": "https://github.com/PojavLauncherTeam/PojavLauncher_iOS"
-    }
+    },
   ],
   // ==============================
   // 适用于 Windows电脑 的启动器
@@ -156,7 +156,7 @@
       "download": "https://github.com/Steve-xmh/scl/releases/download/v1.2.0/SharpCraftLauncher-20240216-1.2.0-i686.exe",
       "version": "1.2.0",
       "url": "https://steve-xmh.github.io/scl/"
-    }
+    },
   ],
   // ==========================
   // 适用于 苹果电脑 的启动器
@@ -226,7 +226,7 @@
       "download": "https://github.com/Steve-xmh/scl/releases/download/v1.2.0/SharpCraftLauncher-20240216-1.2.0-universal-darwin.tar.gz",
       "version": "1.2.0",
       "url": "https://steve-xmh.github.io/scl/"
-    }
+    },
   ],
   // ============================
   // 适用于 Linux系统 的启动器
@@ -290,6 +290,6 @@
       "download": "https://github.com/Steve-xmh/scl/releases/download/v1.2.0/SharpCraftLauncher-20240216-1.2.0-linux-x86_64.tar.gz",
       "version": "1.2.0",
       "url": "https://steve-xmh.github.io/scl/"
-    }
-  ]
+    },
+  ],
 }
