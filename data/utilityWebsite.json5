@@ -60,7 +60,8 @@
       ["TeaCon", "https://www.teacon.cn/", "模组开发茶会"],
       ["Minecraft高校联盟", "https://www.mualliance.cn", "旨在联合全国高校 MC 爱好者，共同推动高校 MC 生态发展的公益性组织"],
       ["像素茶艺地图站", "https://pixelmap.minegraph.cn/blog/", "用最简单的方式传播好作品"],
-      ["MCG中文图形站", "https://www.minegraph.cn/", "国内首个《我的世界》图形资源站"]
+      ["MCG中文图形站", "https://www.minegraph.cn/", "国内首个《我的世界》图形资源站"],
+      ["MC原版模组入门教程", "https://icer233.us.kg/VanillaModTutorial/", "数据包/资源包 指南"]
     ]
   },
   {
@@ -118,7 +119,9 @@
       ["MCC客户端控制台", "https://mccteam.github.io/", "用C#实现的轻量级开源Java版客户端"],
       ["3D模型转MC方块格式工具", "https://objtoschematic.com/", "一款将 3D 模型转换为Minecraft方块格式的工具"],
       ["MC像素画工具", "https://autosaved.org/spritecraft", "图片转像素画工具"],
-      ["MC地图艺术工具", "https://rebane2001.com/mapartcraft/", "图片转地图画工具"]
+      ["MC地图艺术工具", "https://rebane2001.com/mapartcraft/", "图片转地图画工具"],
+      ["图形生成器", "https://www.plotz.co.uk/", "生成多种立体图形"],
+      ["梗体中文在线构建", "https://meme.teahouse.team/", "在线构建不同版本梗体中文语言包"]
     ]
   },
   {
