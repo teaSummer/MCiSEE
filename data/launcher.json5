@@ -157,7 +157,43 @@
       "version": "1.0.9",
       "url": "https://github.com/LTCatt/PCL1"
     },
+    {
+      "title": "LunarClient",
+      "abbr": "lunar",
+      "download": "https://download.overwolf.com/installer/prod/3568b3a295e6576da49827711e489a4d/Lunar%20Client%20-%20Installer.exe",
+      "version": "latest",
+      "url": "https://www.lunarclient.com/"
+    },
+    {
+      "title": "BadlionClient",
+      "abbr": "BadLion",
+      "download": "https://client-updates-cdn77.badlion.net/Badlion%20Client%20Setup%204.5.1.exe",
+      "version": "4.5.1",
+      "url": "https://www.badlion.net/"
+    },
+    {
+      "title": "FeatherClient",
+      "abbr": "Feather",
+      "download": "https://launcher.feathercdn.net/dl/Feather%20Launcher%20Setup%202.0.6.exe",
+      "version": "2.0.6",
+      "url": "https://feathermc.com/"
+    },
+    {
+      "title": "SoarClient",
+      "abbr": "Soar",
+      "download": "https://launcher.feathercdn.net/dl/Feather%20Launcher%20Setup%202.0.6.exe",
+      "version": "2.0.6",
+      "url": "https://www.soarclient.com/"
+    },
+    {
+      "title": "CMClient",
+      "abbr": "CM",
+      "download": "https://cdn.cmclient.pl/launcher/win32/CMCLIENT-Windows-1.1.5-x64-Setup.exe",
+      "version": "1.1.5",
+      "url": "https://www.cm-pack.pl"
+    },
   ],
+
   // ==========================
   // 适用于 苹果电脑 的启动器
   // ==========================
@@ -227,6 +263,27 @@
       "version": "4",
       "url": "https://www.salwyrr.com"
     },
+    {
+      "title": "LunarClient",
+      "abbr": "lunar",
+      "download": "https://launcherupdates.lunarclientcdn.com/Lunar%20Client%20v3.3.3-ow.dmg",
+      "version": "3.3.3",
+      "url": "https://www.lunarclient.com/"
+    },
+    {
+      "title": "BadlionClient",
+      "abbr": "BadLion",
+      "download": "https://client-updates-cdn77.badlion.net/Badlion%20Client-4.5.1-arm64.dmg",
+      "version": "4.5.1",
+      "url": "https://www.badlion.net/"
+    },
+    {
+      "title": "CMClient",
+      "abbr": "CM",
+      "download": "https://cdn.cmclient.pl/launcher/darwin/CMCLIENT-Mac-1.1.5-arm64.dmg",
+      "version": "1.1.5",
+      "url": "https://www.cm-pack.pl"
+    },
   ],
   // ============================
   // 适用于 Linux系统 的启动器
@@ -290,6 +347,27 @@
       "download": "https://www.salwyrr.com/4/Salwyrr%20Minecraft%20Launcher%204.jar",
       "version": "4",
       "url": "https://www.salwyrr.com"
+    },
+    {
+      "title": "LunarClient",
+      "abbr": "lunar",
+      "download": "https://launcherupdates.lunarclientcdn.com/Lunar%20Client-3.3.3-ow.AppImage",
+      "version": "3.3.3",
+      "url": "https://www.lunarclient.com/"
+    },
+    {
+      "title": "BadlionClient",
+      "abbr": "BadLion",
+      "download": "https://client-updates-cdn77.badlion.net/BadlionClient",
+      "version": "latest",
+      "url": "https://www.badlion.net/"
+    },
+    {
+      "title": "CMClient",
+      "abbr": "CM",
+      "download": "https://cdn.cmclient.pl/launcher/linux/CMCLIENT-Linux-1.3.0.deb",
+      "version": "1.3.0",
+      "url": "https://www.cm-pack.pl"
     },
   ],
 }
