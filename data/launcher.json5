@@ -104,13 +104,6 @@
       "url": "https://github.com/Hex-Dragon/PCL2/discussions/5342"
     },
     {
-      "title": "LabyMod Launcher",
-      "abbr": "LabyMod",
-      "download": "https://releases.r2.labymod.net/launcher/win32/x64/LabyModLauncherSetup-latest.exe",
-      "version": "latest",
-      "url": "https://labymod.net"
-    },
-    {
       "title": "*中国版* 我的世界启动器",
       "abbr": "我的世界启动器",
       "url": "https://mc.163.com"
@@ -193,13 +186,6 @@
       "url": "https://github.com/Voxelum/x-minecraft-launcher"
     },
     {
-      "title": "LabyMod Launcher",
-      "abbr": "LabyMod",
-      "download": "https://releases.r2.labymod.net/launcher/darwin/x64/LabyMod%20Launcher-latest-x64.dmg",
-      "version": "latest",
-      "url": "https://labymod.net"
-    },
-    {
       "title": "Sharp Craft Launcher",
       "abbr": "SCL",
       "download": "https://github.com/Steve-xmh/scl/releases/download/v1.2.0/SharpCraftLauncher-20240216-1.2.0-universal-darwin.tar.gz",
@@ -262,13 +248,6 @@
       "download": "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.48.11/xmcl-0.48.11-x86_64.AppImage",
       "version": "0.48.11",
       "url": "https://github.com/voxelum/x-minecraft-launcher"
-    },
-    {
-      "title": "LabyMod Launcher",
-      "abbr": "LabyMod",
-      "download": "https://releases.r2.labymod.net/launcher/linux/x64/LabyMod%20Launcher-latest.AppImage",
-      "version": "latest",
-      "url": "https://labymod.net"
     },
     {
       "title": "Sharp Craft Launcher",
