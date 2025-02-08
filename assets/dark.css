@@ -4,18 +4,18 @@
 }
 
 a {
-    color: #ff1493;
+    color: #14deff;
     text-decoration: none;
     transition-duration: 0.2s;
 }
 
 a:hover {
-    color: #ff1491c9;
+    color: #12cce9ce;
     text-decoration: underline;
 }
 
 a:active {
-    color: #ff1491a2;
+    color: #11c6e2a4;
 }
 
 a.button {
