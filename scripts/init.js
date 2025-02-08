@@ -110,4 +110,4 @@ const searchable = read('searchable');
 
 // 各类网站数据
 const utilityWebsite = read('utilityWebsite');
-const otherForum = read('otherForum');
+const forum = read('forum');

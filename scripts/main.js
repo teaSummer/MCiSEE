@@ -429,21 +429,11 @@ const pre_list = ((e) => {
 
 
 
-// 获取正常状态的简体中文论坛
-const CSForum = [{"简体中文论坛": []}];
-for (const forum of db_forums) {
-    if (forum.state == 'up') {
-        CSForum[0]['简体中文论坛'].push([forum.title, forum.url, forum.note.replace(/。$/, '')]);
-    };
-};
-
-
-
 // 页面加载完成事件
 $(document).ready(() => {
     // 网站列表
     $('.utility-website-list').text(JSON.stringify(utilityWebsite));
-    $('.forum-list').text(JSON.stringify([].concat.apply(CSForum, otherForum)));
+    $('.forum-list').text(JSON.stringify(forum));
     // 缓存处理
     const searchableChecked = localStorage.getItem('searchable-checked');
     if (searchableChecked == 'undefined' || searchableChecked == void 0) $('.searchable-list').val('Wiki');
