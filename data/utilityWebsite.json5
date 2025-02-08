@@ -166,6 +166,7 @@
       ["CraftBukkit", "https://getbukkit.org", "更新快，插件核心的开山始祖。由BukkitMC团队开发，现由SpigotMC团队接管"],
       ["Fabric Server", "https://fabricmc.net/use/server/", "Fabric 官方服务端核心"],
       ["MohistMC", "https://mohistmc.com", "优化好、兼容Bukkit、Spigot、Paper的Forge服务端"],
+      ["Allay（基岩版）", "https://docs.allaymc.org", "可靠，快速及富特性的第三方基岩版服务端"],
       ["Nukkit (基岩版)", "https://cloudburstmc.org", "支持插件，使用Java开发"],
       ["Paper", "https://papermc.io", "速度快，优化好，安全性高，内置小型反作弊。由PaperMC团队开发，基于Spigot"],
       ["PocketMine (基岩版)", "https://pmmp.io", "一款高度可定制的基岩版服务器软件"],
