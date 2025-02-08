@@ -56,7 +56,7 @@ data:
   unfold: 展開...
   fold: 關閉
   GitHubProxy: >-
-    GitHub 文件透過 <a href="https://ghproxy.cn" target="_blank">代理加速</a> {download}
+    GitHub 文件透過 <a href="https://ghfast.top" target="_blank">代理加速</a> {download}
   searchableDirect: '{searchable}：盡可能直接前往詳情頁面'
   searchablePromptLength: 查找關鍵字長度(0-30)：
   default: 預設
