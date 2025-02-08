@@ -9,7 +9,7 @@
       ["Feedback", "https://feedback.minecraft.net", ""],
       ["知识库", "https://feedback.minecraft.net/hc/categories/115000410252-Knowledge-Base", ""],
       ["远古版MC", "https://classic.minecraft.net", "网页版本\n(需浏览器支持WebGL)"],
-      ["基岩版专用服务端", "https://www.minecraft.net/zh-hans/download/server/bedrock", ""],
+      ["基岩版专用服务端", "https://www.minecraft.net/download/server/bedrock", ""],
       ["壁纸集", "https://www.minecraft.net/collectibles/minecraft-collection", ""],
       ["服务器列表", "https://findmcserver.com/", "查找独特且友好的官方服务器"],
       ["编程一小时教程", "https://code.org/minecraft", "教育版教程"],
@@ -21,7 +21,8 @@
   },
   {
     "官方购买渠道": [
-      ["基岩版+Java版 (Windows)", "https://www.minecraft.net/zh-hans/store/minecraft-java-bedrock-edition-pc", "双版本捆绑售卖\nOfficial Site"],
+      ["基岩版+Java版 (Windows)", "https://www.minecraft.net/store/minecraft-java-bedrock-edition-pc", "双版本捆绑售卖\nOfficial Site"],
+      ["基岩版+Java版 (Xbox)", "https://www.xbox.com/games/store/minecraft-java-bedrock-edition-for-pc/9nxp44l49shj", "Microsoft Xbox"],
       ["基岩版 (Android)", "https://play.google.com/store/apps/details?id=com.mojang.minecraftpe", "也适用于ChromeOS\nGoogle Play"],
       ["基岩版 (Fire)", "https://www.amazon.com/Mojang-Minecraft-Pocket-Edition/dp/B00992CF6W/", "Amazon Appstore"],
       ["基岩版 (iOS)", "https://apps.apple.com/cn/app/id479516143", "App Store"],
@@ -154,7 +155,7 @@
   {
     "服务端 (无特殊说明均为Java版)": [
       ["MCVersions", "https://mcversions.net", "提供原版服务端核心和客户端核心"],
-      ["官方基岩版专用服务端", "https://www.minecraft.net/zh-hans/download/server/bedrock", "不支持插件"],
+      ["官方基岩版专用服务端", "https://www.minecraft.net/download/server/bedrock", "不支持插件"],
       ["基岩版专用服务端", "https://www.minebbs.com/bds/history", "由MineBBS收集"],
       ["基岩版专用预览版服务端", "https://www.minebbs.com/resources/bedrock-dedicated-server-preview.4934/history", "由MineBBS收集"],
       ["BDSX", "https://github.com/bdsx/bdsx", "BDS模组 (由Node.js编写)"],
