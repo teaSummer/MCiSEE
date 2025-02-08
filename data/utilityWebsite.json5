@@ -98,6 +98,7 @@
       ["简幻欢公益面板服", "https://simpfun.cn", ""],
       ["3D模型编辑器", "https://www.blockbench.net", "建模工具BlockBench"],
       ["数据包生成器", "https://misode.github.io/", ""],
+      ["基岩版图腾生成器", "https://www.mcneko.com/tools/3dtotem/", "将皮肤转换为3D图腾"],
       ["Midi音乐转mcpack", "https://dislink.github.io/midi2mcfunction/", "Midi音乐转为播放音乐的mcpack行为包"],
       ["Midi音乐转瀑布流", "https://dislink.github.io/midi2tiles/", "Midi音乐转为可视化音符瀑布流mcpack行为包"],
       ["图片转像素画", "https://dislink.github.io/img2mcfunction/", "图片转为放置方块的mcpack行为包"],
