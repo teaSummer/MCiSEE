@@ -78,6 +78,10 @@
       "download": "https://contents.baka.zone/Release/BakaXL_Public_Ver_3.5.1.0.exe",
       "version": "3.5.1.0",
       "url": "https://www.bakaxl.com"
+      "dev": {
+        "download": "http://jk-insider.bakaxl.com:8888/job/BakaXL%20Insider%20Parrot/lastSuccessfulBuild/artifact/BakaXL_Public/bin/Jenkins%20Release/BakaXL_Secure/BakaXL.exe",
+        "version": "3.5.2.0"
+      }
     },
     {
       "title": "ColorMC",
