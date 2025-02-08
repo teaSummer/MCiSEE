@@ -40,6 +40,8 @@ jobs:
             url: https://github.com/Voxelum/x-minecraft-launcher
           - subtitle: Prism
             url: https://github.com/PrismLauncher/PrismLauncher
+          - subtitle: PCL2-CE
+            url: https://github.com/PCL-Community/PCL2-CE
     steps:
       - uses: actions/checkout@main
       - name: Handle files
