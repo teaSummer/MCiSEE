@@ -143,6 +143,13 @@
       "version": "1.0.9",
       "url": "https://gitee.com/Cmbself/PCL1"
     },
+    {
+      "title": "Plain Craft Launcher 2 Community Edition",
+      "abbr": "PCL2 社区版（CE）",
+      "download": "https://github.com/PCL-Community/PCL2-CE/releases/download/2.10.2/PCL2_CE.exe",
+      "version": "2.10.2",
+      "url": "https://github.com/Hex-Dragon/PCL2/discussions/5342"
+    },
   ],
   // ==========================
   // 适用于 苹果电脑 的启动器
