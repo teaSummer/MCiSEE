@@ -142,6 +142,18 @@
     ]
   },
   {
+    "辅助类工具 (仅供研究自用)": [
+      ["Luner Client", "https://www.lunarclient.com/", "Java版PVP端启动器"],
+      ["LabyMod", "https://labymod.net/", "Java版客户端启动器"],
+      ["Badlion", "https://www.badlion.net/", "Java版PVP端启动器"],
+      ["Feather Client", "https://feathermc.com/", "Java版PVP端启动器"],
+      ["Soar Client", "https://www.soarclient.com/", "Java版PVP端启动器"],
+      ["CMCLIENT", "https://www.cm-pack.pl/", "Java版PVP端启动器"],
+      ["Horion", "https://horion.download/", "基岩版DLL注入器，仅Windows"],
+      ["Borion", "https://borion-updated.github.io/", "基岩版DLL动态库，仅Windows"]
+    ]
+  },
+  {
     "基岩版版本库/启动器": [
       ["苦力怕论坛源", "https://mcapks.net", "MCAPKS版本库"],
       ["MineBBS源", "https://mc.minebbs.com", "MCDL版本库"],
