@@ -56,7 +56,7 @@ data:
   unfold: More...
   fold: Less
   GitHubProxy: >-
-    Speedup the GitHub with <a href="https://ghproxy.cn" target="_blank">mirror proxy</a>
+    Speedup the GitHub with <a href="https://ghfast.top" target="_blank">mirror proxy</a>
     (for Chinese Mainland)
   searchableDirect: '{searchable}: Auto access to the detail page when possible'
   searchablePromptLength: 'Prompt Words(0-30):'
