@@ -30,7 +30,7 @@
         "download": "https://github.com/Coloryr/ColorMC.Android/releases/download/A21/colormc-a21-android.zip",
         "version": "A21"
       }
-    },
+    }
   ],
   // ===================================
   // 适用于 苹果手机/苹果平板 的启动器
@@ -41,7 +41,7 @@
       "download": "https://github.com/PojavLauncherTeam/PojavLauncher_iOS/releases/download/v2.2/net.kdt.pojavlauncher-2.2-ios.ipa",
       "version": "2.2",
       "url": "https://github.com/PojavLauncherTeam/PojavLauncher_iOS"
-    },
+    }
   ],
   // ==============================
   // 适用于 Windows电脑 的启动器
@@ -164,11 +164,11 @@
     {
       "title": "Hello Minecraft! Launcher",
       "abbr": "HMCL",
-      "download": "https://github.com/HMCL-dev/HMCL/releases/download/3.6.11.266/HMCL-3.6.11.jar",
+      "download": "https://github.com/HMCL-dev/HMCL/releases/download/3.6.11.266/HMCL-3.6.11.sh",
       "version": "3.6.11",
       "url": "https://github.com/HMCL-dev/HMCL",
       "dev": {
-        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.6.11.266/HMCL-3.6.11.266.jar",
+        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.6.11.266/HMCL-3.6.11.266.sh",
         "version": "3.6.11.266"
       }
     },
@@ -212,12 +212,19 @@
       "download": "https://www.salwyrr.com/4/Salwyrr%20Minecraft%20Launcher%204.jar",
       "version": "4",
       "url": "https://www.salwyrr.com"
-    },
+    }
   ],
   // ============================
   // 适用于 Linux系统 的启动器
   // ============================
   "LinuxLauncher": [
+    {
+      "title": "*国际版* Minecraft 启动器",
+      "abbr": "Minecraft 启动器",
+      "download": "https://launcher.mojang.com/download/Minecraft.tar.gz",
+      "version": "latest",
+      "url": "https://www.minecraft.net/zh-hans"
+    },
     {
       "title": "Hello Minecraft! Launcher",
       "abbr": "HMCL",
@@ -231,21 +238,21 @@
     },
     {
       "title": "ColorMC",
-      "download": "https://github.com/Coloryr/ColorMC/releases/download/a34.2025.1.1/colormc-a34.2025.1.1-linux-x64.deb",
+      "download": "https://github.com/Coloryr/ColorMC/releases/download/a34.2025.1.1/colormc-linux-a34-x86_64.AppImage",
       "version": "a34.2025.1.1",
       "url": "https://github.com/Coloryr/ColorMC"
     },
     {
       "title": "X Minecraft Launcher",
       "abbr": "XMCL",
-      "download": "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.48.11/xmcl-0.48.11-arm64.deb",
+      "download": "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.48.11/xmcl-0.48.11-x86_64.AppImage",
       "version": "0.48.11",
       "url": "https://github.com/voxelum/x-minecraft-launcher"
     },
     {
       "title": "LabyMod Launcher",
       "abbr": "LabyMod",
-      "download": "https://releases.r2.labymod.net/launcher/linux/x64/labymodlauncher_latest_amd64.deb",
+      "download": "https://releases.r2.labymod.net/launcher/linux/x64/LabyMod%20Launcher-latest.AppImage",
       "version": "latest",
       "url": "https://labymod.net"
     },
@@ -262,6 +269,6 @@
       "download": "https://www.salwyrr.com/4/Salwyrr%20Minecraft%20Launcher%204.jar",
       "version": "4",
       "url": "https://www.salwyrr.com"
-    },
-  ],
+    }
+  ]
 }
