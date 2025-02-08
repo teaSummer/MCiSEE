@@ -153,15 +153,15 @@ footer {
     font-size: 15px;
 }
 
-.ICP a {
+.ICP a, .credit a {
     color: #7575ff;
 }
 
-.ICP a:hover {
+.ICP a:hover, .credit a:hover {
     color: #9595ff;
 }
 
-.ICP a:active {
+.ICP a:active, .credit a:active {
     color: #5555ff;
 }
 

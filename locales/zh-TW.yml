@@ -6,7 +6,7 @@ data:
   meta.description: 所見皆是麥塊，獲取麥塊資源更簡單！
   head.title: ${notificationCount} {meta.title}
   introduction.title: 所見皆是<i>Minecraft</i>
-  introduction.1: 你可以在這裏找到大量的麥塊資源，比如啓動器等等...
+  introduction.1: 你可以在這裏找到大量的麥塊資源，比如啟動器等等...
   introduction.2: >-
     歡迎光臨我們的 <a href="https://github.com/teaSummer/MCiSEE" target="_blank">GitHub 項目</a>
     {contribute} 或者幫我們點亮 Star!
@@ -19,15 +19,15 @@ data:
   device: 設備
   device.tip: 自動偵測設備，你也可以手動選擇
   Android.tip: 安卓/鴻蒙 - 手機/平板電腦
-  iOS.tip: 蘋果 - 手機/平板電腦
+  iOS.tip: iOS - 手機/平板電腦
   Windows.tip: Windows - PC
-  macOS.tip: 蘋果 - PC
-  Linux.tip: Linux - 包含Linux發行版
+  macOS.tip: macOS - PC
+  Linux.tip: Linux - PC
   unsupported: 不支援
   unknown: 未知
   unselected: 【請選擇】
   app: 應用程式
-  launcher: 啓動器
+  launcher: 啟動器
   launcherOnlyJavaEdition: '{launcher}（<b>{JavaEdition}</b>）'
   website: 網站
   searchable: 快速查找
@@ -36,13 +36,13 @@ data:
   config: 設定
   goto: 前往
   download: 下載
-  downloadedLauncherUpdate: 已下載的啓動器有更新：
+  downloadedLauncherUpdate: 已下載的啟動器有更新：
   updatedTo: 新版本：
   updateArrow: ➔
   search: 查找
   searchFrom: ' 從 ${linkSearchFrom} 查找 ....'
-  gotoLauncherWebsite: 前往啓動器網站
-  gotoLauncherWebsite.note: 前往啓動器官方網站或者GitHub開源項目
+  gotoLauncherWebsite: 前往啟動器網站
+  gotoLauncherWebsite.note: 前往啟動器官方網站或者GitHub開源項目
   prefixType: 類別
   mods: 模組
   plugins: 插件
@@ -56,7 +56,7 @@ data:
   unfold: 展開...
   fold: 關閉
   GitHubProxy: >-
-    GitHub 文件通過 <a href="https://ghproxy.cn" target="_blank">代理加速</a> {download}
+    GitHub 文件透過 <a href="https://ghproxy.cn" target="_blank">代理加速</a> {download}
   searchableDirect: '{searchable}：盡可能直接前往詳情頁面'
   searchablePromptLength: 查找關鍵字長度(0-30)：
   default: 預設
@@ -74,6 +74,7 @@ data:
   contributors: 貢獻者
   starsOverTime: GitHub 星星趨勢
   ICP: <a href="https://icp.gov.moe/?keyword=20247837" target="_blank">萌ICP備20247837號</a>
+  credit: “<a href="https://www.minecraft.net/" target="_blank">Minecraft</a>”以及“我的世界”為美國微軟公司的商標 本站與微軟公司沒有從屬關係
   license.1: 本頁面内容采用
   license.2: 協議授權
   content: 目錄
