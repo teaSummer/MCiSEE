@@ -68,9 +68,9 @@
     {
       "title": "Plain Craft Launcher 2",
       "abbr": "PCL2",
-      "download": "https://ghproxy.cn/https://raw.githubusercontent.com/Hex-Dragon/PCL2/main/最新正式版.zip",
+      "download": "https://github.com/Hex-Dragon/PCL2/raw/refs/heads/main/%E6%9C%80%E6%96%B0%E6%AD%A3%E5%BC%8F%E7%89%88.zip",
       "version": "2.8.13",
-      "url": "https://afdian.com/@LTCat"
+      "url": "https://afdian.com/a/LTCat"
     },
     {
       "title": "BakaXL Launcher",
@@ -116,6 +116,13 @@
       "url": "https://mc.163.com"
     },
     {
+      "title": "Sharp Craft Launcher",
+      "abbr": "SCL",
+      "download": "https://github.com/Steve-xmh/scl/releases/download/v1.2.0/SharpCraftLauncher-20240216-1.2.0-i686.exe",
+      "version": "1.2.0",
+      "url": "https://steve-xmh.github.io/scl/"
+    },
+    {
       "title": "MultiMC",
       "abbr": "MMC",
       "download": "https://files.multimc.org/downloads/mmc-develop-win32.zip",
@@ -148,8 +155,8 @@
       "abbr": "PCL1",
       "download": "https://lz.qaiu.top/parser?url=https://share.feijipan.com/s/kwAt8rhZ",
       "version": "1.0.9",
-      "url": "https://gitee.com/Cmbself/PCL1"
-    }
+      "url": "https://github.com/LTCatt/PCL1"
+    },
   ],
   // ==========================
   // 适用于 苹果电脑 的启动器
@@ -164,11 +171,11 @@
     {
       "title": "Hello Minecraft! Launcher",
       "abbr": "HMCL",
-      "download": "https://github.com/HMCL-dev/HMCL/releases/download/3.6.11.266/HMCL-3.6.11.jar",
+      "download": "https://github.com/HMCL-dev/HMCL/releases/download/3.6.11.266/HMCL-3.6.11.sh",
       "version": "3.6.11",
       "url": "https://github.com/HMCL-dev/HMCL",
       "dev": {
-        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.6.11.266/HMCL-3.6.11.266.jar",
+        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.6.11.266/HMCL-3.6.11.266.sh",
         "version": "3.6.11.266"
       }
     },
@@ -191,6 +198,13 @@
       "download": "https://releases.r2.labymod.net/launcher/darwin/x64/LabyMod%20Launcher-latest-x64.dmg",
       "version": "latest",
       "url": "https://labymod.net"
+    },
+    {
+      "title": "Sharp Craft Launcher",
+      "abbr": "SCL",
+      "download": "https://github.com/Steve-xmh/scl/releases/download/v1.2.0/SharpCraftLauncher-20240216-1.2.0-universal-darwin.tar.gz",
+      "version": "1.2.0",
+      "url": "https://steve-xmh.github.io/scl/"
     },
     {
       "title": "MultiMC",
@@ -219,6 +233,13 @@
   // ============================
   "LinuxLauncher": [
     {
+      "title": "*国际版* Minecraft 启动器",
+      "abbr": "Minecraft 启动器",
+      "download": "https://launcher.mojang.com/download/Minecraft.tar.gz",
+      "version": "latest",
+      "url": "https://www.minecraft.net/zh-hans"
+    },
+    {
       "title": "Hello Minecraft! Launcher",
       "abbr": "HMCL",
       "download": "https://github.com/HMCL-dev/HMCL/releases/download/3.6.11.266/HMCL-3.6.11.sh",
@@ -231,23 +252,30 @@
     },
     {
       "title": "ColorMC",
-      "download": "https://github.com/Coloryr/ColorMC/releases/download/a34.2025.1.1/colormc-a34.2025.1.1-linux-x64.deb",
+      "download": "https://github.com/Coloryr/ColorMC/releases/download/a34.2025.1.1/colormc-linux-a34-x86_64.AppImage",
       "version": "a34.2025.1.1",
       "url": "https://github.com/Coloryr/ColorMC"
     },
     {
       "title": "X Minecraft Launcher",
       "abbr": "XMCL",
-      "download": "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.48.11/xmcl-0.48.11-arm64.deb",
+      "download": "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.48.11/xmcl-0.48.11-x86_64.AppImage",
       "version": "0.48.11",
       "url": "https://github.com/voxelum/x-minecraft-launcher"
     },
     {
       "title": "LabyMod Launcher",
       "abbr": "LabyMod",
-      "download": "https://releases.r2.labymod.net/launcher/linux/x64/labymodlauncher_latest_amd64.deb",
+      "download": "https://releases.r2.labymod.net/launcher/linux/x64/LabyMod%20Launcher-latest.AppImage",
       "version": "latest",
       "url": "https://labymod.net"
+    },
+    {
+      "title": "Sharp Craft Launcher",
+      "abbr": "SCL",
+      "download": "https://github.com/Steve-xmh/scl/releases/download/v1.2.0/SharpCraftLauncher-20240216-1.2.0-linux-x86_64.tar.gz",
+      "version": "1.2.0",
+      "url": "https://steve-xmh.github.io/scl/"
     },
     {
       "title": "Prism Launcher",
