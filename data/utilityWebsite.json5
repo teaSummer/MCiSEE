@@ -150,15 +150,6 @@
       // ["Alpha版本库", "https://archive.org/details/MCPEAlpha", "(存档)"], // 需要魔法才能访问
       ["电脑端启动器", "https://bedrocklauncher.github.io/", "Bedrock Launcher Lite，仅限Windows"],
       ["原子资源库", "https://res.nullatom.com/Minecraft/", ""],
-      ["PCL启动器", "https://github.com/Hex-Dragon/PCL2", ""],
-      ["HMCL启动器", "https://hmcl.huangyuhui.net/", ""],
-      ["BaKaXL启动器", "https://www.bakaxl.com/", ""],
-      ["luner端", "https://www.lunarclient.com/", "pvp端启动器"],
-      ["Labymod", "https://labymod-net.webpkgcache.com/doc/-/labymod.net/", "启动器"],
-      ["badlion", "https://www.badlion.net/", "pvp端启动器"],
-      ["feather端", "https://feathermc.com/", "pvp端启动器"],
-      ["Soar端", "https://www.soarclient.com/", "pvp端启动器"],
-      ["cm端", "https://www.cm-pack.pl/", "pvp端启动器"],
     ]
   },
   {
