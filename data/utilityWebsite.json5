@@ -112,6 +112,7 @@
       ["MCreator", "https://mcreator.net", "开源软件，界面直观易学，集成代码编辑器，便于制作模组、数据包和附加包"],
       ["Minecraft Dot", "https://www.minecraft-dot.pictures/", "用Minecraft的方块渲染图片!"],
       ["MCC客户端控制台", "https://mccteam.github.io/", "用C#实现的轻量级开源Java版客户端"],
+      ["3D模型转MC方块格式工具", "https://objtoschematic.com/", "一款将 3D 模型转换为Minecraft方块格式的工具"]
     ]
   },
   {
