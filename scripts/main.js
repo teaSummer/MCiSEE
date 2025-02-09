@@ -396,9 +396,11 @@ const pre_list = ((e) => {
         else dom += `<details id="${category.replace(/ .+/, '')}"><summary>${category}</summary>`;
         let content;
         // 生成元素
-        for (const [_title, url, description, autoLang] of block[category]) {
+        for (const [_title, url, description, favicon, autoLang] of block[category]) {
             let template = '|DOM|';
-            const title = autoLang ? `al="${_title}">` : `>${_title}`;
+            let icon = '';
+            if (!url.startsWith('#')) icon = "<img src=" + (favicon ? favicon : `https://favicon.im/${url}`) + ' width="16" loading="lazy"/> ';
+            const title = autoLang ? `al="${_title}">${icon}` : `>${icon}${_title}`;
             if (autoLang && description) template = `<mdui-tooltip al-aplto="content: ${description};" placement="top">|DOM|</mdui-tooltip>`;
             else if (description) template = `<mdui-tooltip content="${description}" placement="top">|DOM|</mdui-tooltip>`;
             // 判断是否为内部链接
@@ -504,6 +506,7 @@ $(document).ready(() => {
         $('.Modrinth-projectType').val('mod');
         $('.Modrinth-versions').val(['all']);
         // 最后处理
+        $('a.button img').on('error', (event) => $(event.target).remove());
         hashChanged();
         $('.wait').removeAttr('class style');
         try { document.querySelector(decodeURI(location.hash)).scrollIntoView(); } catch {};
