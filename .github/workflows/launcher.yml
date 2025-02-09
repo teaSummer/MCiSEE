@@ -16,31 +16,31 @@ jobs:
       max-parallel: 1
       matrix:
         include:
-          - attr: HMCL
+          - abbr: HMCL
             url: https://github.com/HMCL-dev/HMCL
-          - attr: HMCL-PE
+          - abbr: HMCL-PE
             url: https://github.com/HMCL-dev/HMCL-PE
-          - attr: PCL2
+          - abbr: PCL2
             url: https://github.com/Hex-Dragon/PCL2
-          - attr: FCL
+          - abbr: FCL
             url: https://github.com/FCL-Team/FoldCraftLauncher
-          - attr: PojavLauncher
+          - abbr: PojavLauncher
             url: https://github.com/PojavLauncherTeam/PojavLauncher
             device: Android
-          - attr: PojavLauncher
+          - abbr: PojavLauncher
             url: https://github.com/PojavLauncherTeam/PojavLauncher_iOS
             device: iOS
-          - attr: ColorMC
+          - abbr: ColorMC
             url: https://github.com/Coloryr/ColorMC
             device: Windows|macOS|Linux
-          - attr: ColorMC
+          - abbr: ColorMC
             url: https://github.com/Coloryr/ColorMC.Android
             device: Android
-          - attr: XMCL
+          - abbr: XMCL
             url: https://github.com/Voxelum/x-minecraft-launcher
-          - attr: Prism
+          - abbr: Prism
             url: https://github.com/PrismLauncher/PrismLauncher
-          - attr: PCL2 社区版
+          - abbr: PCL2 社区版
             url: https://github.com/PCL-Community/PCL2-CE
     steps:
       - uses: actions/checkout@main
@@ -57,17 +57,17 @@ jobs:
           else
             cp data/launcher.json5 launcher.json5
           fi
-      - name: Get ${{ matrix.attr }} version
+      - name: Get ${{ matrix.abbr }} version
         id: get
         run: |
-          # Get Last Stable ${{ matrix.attr }}
-          LAST_STABLE_VERSION=`sed -n '/"${{ matrix.attr }}"/,/"version":/p' launcher.json5 | sed -n '$p' | sed 's/^.*:\s*"v\?\|",$//gi' | sed 's/\./\\\\./g'`
+          # Get Last Stable ${{ matrix.abbr }}
+          LAST_STABLE_VERSION=`sed -n '/"${{ matrix.abbr }}"/,/"version":/p' launcher.json5 | sed -n '$p' | sed 's/^.*:\s*"v\?\|",$//gi' | sed 's/\./\\\\./g'`
           
-          # Get Last Dev ${{ matrix.attr }}
-          LAST_DEV_VERSION=`sed -n '/"${{ matrix.attr }}"/,/}/p' launcher.json5 | sed -n '/"dev":/,/"version":/p' | sed -n '$p' | sed 's/^.*:\s*"v\?\|"$//gi' | sed 's/\./\\\\./g'`
+          # Get Last Dev ${{ matrix.abbr }}
+          LAST_DEV_VERSION=`sed -n '/"${{ matrix.abbr }}"/,/}/p' launcher.json5 | sed -n '/"dev":/,/"version":/p' | sed -n '$p' | sed 's/^.*:\s*"v\?\|"$//gi' | sed 's/\./\\\\./g'`
           
-          # GET Latest Stable ${{ matrix.attr }}
-          if [ '${{ matrix.attr }}' = HMCL ]; then
+          # GET Latest Stable ${{ matrix.abbr }}
+          if [ '${{ matrix.abbr }}' = HMCL ]; then
             LATEST_STABLE_VERSION=`cat releases.json | sed -n '/"tag_name":\s*"release-/p' | sed -n 1p | sed 's/^.*release-\|",$//g' | sed 's/\./\\\\./g'`
           else
             LATEST_STABLE_VERSION=`cat latest.json | jq .tag_name | sed 's/^"v\?\|"$//gi' | sed 's/\./\\\\./g'`
@@ -76,10 +76,10 @@ jobs:
             unset LAST_STABLE_VERSION
           fi
           
-          # GET Latest Dev ${{ matrix.attr }}
+          # GET Latest Dev ${{ matrix.abbr }}
           if [ "$LAST_DEV_VERSION" ]; then
             LATEST_DEV_VERSION=`cat releases.json | sed -n '/"tag_name":/p' | sed -n 1p | sed 's/^.*:\s*"v\?\|",$//gi' | sed 's/\./\\\\./g'`
-            if [[ '${{ matrix.attr }}' = HMCL && "$LATEST_DEV_VERSION" = release-* ]]; then
+            if [[ '${{ matrix.abbr }}' = HMCL && "$LATEST_DEV_VERSION" = release-* ]]; then
               LATEST_DEV_VERSION=`cat releases.json | sed -n '/"tag_name": "[^r]/p' | sed -n 1p | sed 's/^.*:\s*"v\?\|",$//gi' | sed 's/\./\\\\./g'`
             fi
             if [ "$LATEST_DEV_VERSION" = "$LATEST_STABLE_VERSION" ]; then
@@ -112,7 +112,7 @@ jobs:
               sed -i 's/\([/"v-]\)'"$LAST_STABLE_VERSION"'\(\.[a-z]\|["/-]\)/\1'"$LATEST_STABLE_VERSION"'\2/gi' data/launcher.json5
               LAST_STABLE_VERSION=`echo $LAST_STABLE_VERSION | sed 's/\\\\././g'`
               LATEST_STABLE_VERSION=`echo $LATEST_STABLE_VERSION | sed 's/\\\\././g'`
-              CHANGELOG_E='  ${{ matrix.attr }}(stable): '"$LAST_STABLE_VERSION => $LATEST_STABLE_VERSION$DEVICE_STRING"
+              CHANGELOG_E='  ${{ matrix.abbr }}(stable): '"$LAST_STABLE_VERSION => $LATEST_STABLE_VERSION$DEVICE_STRING"
             fi
           fi
           if [ "$LATEST_DEV_VERSION" ]; then
@@ -121,9 +121,9 @@ jobs:
               LAST_DEV_VERSION=`echo $LAST_DEV_VERSION | sed 's/\\\\././g'`
               LATEST_DEV_VERSION=`echo $LATEST_DEV_VERSION | sed 's/\\\\././g'`
               if [ "$CHANGELOG_E" ]; then
-                CHANGELOG_E="${CHANGELOG_E}"'#n  ${{ matrix.attr }}(dev): '"$LAST_DEV_VERSION => $LATEST_DEV_VERSION$DEVICE_STRING"
+                CHANGELOG_E="${CHANGELOG_E}"'#n  ${{ matrix.abbr }}(dev): '"$LAST_DEV_VERSION => $LATEST_DEV_VERSION$DEVICE_STRING"
               else
-                CHANGELOG_E='  ${{ matrix.attr }}(dev): '"$LAST_DEV_VERSION => $LATEST_DEV_VERSION$DEVICE_STRING"
+                CHANGELOG_E='  ${{ matrix.abbr }}(dev): '"$LAST_DEV_VERSION => $LATEST_DEV_VERSION$DEVICE_STRING"
               fi
             fi
           fi
@@ -133,7 +133,7 @@ jobs:
             echo "$CHANGELOG"
             echo ===============================================================
           fi
-          MESSAGE='modify: update ${{ matrix.attr }}
+          MESSAGE='modify: update ${{ matrix.abbr }}
           
           [Auto] Update Launcher Version:
           '"$CHANGELOG
