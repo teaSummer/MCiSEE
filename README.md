@@ -61,7 +61,8 @@ QQ交流群：596520944
 | `abbr`     | String | 可选。简写名称，若不填写此属性，将与 `title` 值保持一致。           |
 | `download` | String | 可选。最新稳定版（正式版）下载地址 URL，优先填写下载源 URL。          |
 | `version`  | String | 可选。最新稳定版版本名/号，可填 `latest`，仅在保持最新且不便自动修改时使用。 |
-| `url`      | String | 可选。GitHub 仓库地址 URL，若没有公开的开源仓库，填写官方网站地址 URL。 |
+| `github`   | String | 可选。GitHub 仓库地址 URL。                         |
+| `url`      | String | 可选。官方网站地址 URL。                              |
 | `dev`      | Object | 可选。开发版信息，见下文，尽量不提供只在 GitHub Actions 中出现的版本。 |
 
 `dev` 是其中的对象，它有以下属性：
@@ -77,12 +78,13 @@ QQ交流群：596520944
 {
   "title": "Hello Minecraft! Launcher",
   "abbr": "HMCL",
-  "download": "https://github.com/HMCL-dev/HMCL/releases/download/release-3.5.8/HMCL-3.5.8.exe",
-  "version": "3.5.8",
-  "url": "https://github.com/HMCL-dev/HMCL",
+  "download": "https://github.com/HMCL-dev/HMCL/releases/download/3.6.11.266/HMCL-3.6.11.exe",
+  "version": "3.6.11",
+  "github": "https://github.com/HMCL-dev/HMCL",
+  "url": "https://hmcl.huangyuhui.net",
   "dev": {
-    "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.5.8.251/HMCL-3.5.8.251.exe",
-    "version": "3.5.8.251"
+    "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.6.11.266/HMCL-3.6.11.266.exe",
+    "version": "3.6.11.266"
   }
 }
 ```
@@ -146,7 +148,7 @@ QQ交流群：596520944
   "官方网站 (©Mojang/©微软)": [
     ["Minecraft", "https://www.minecraft.net"],
     ["Minecraft教育版", "https://education.minecraft.net"],
-    ["漏洞追踪器(反馈Bug)", "https://bugs.mojang.com"],
+    ["漏洞追踪器(反馈Bug)", "https://bugs.mojang.com", "Mojang Jira/Mojira\n用于反馈Bug"],
     ["基岩版开发者文档", "https://learn.microsoft.com/minecraft/creator/"],
     ["Feedback", "https://feedback.minecraft.net"],
   ],

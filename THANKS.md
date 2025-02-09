@@ -39,6 +39,8 @@
 
 [JSON5](https://github.com/json5/json5) 面向人类的JSON
 
+[FaviconExtractor](https://github.com/seadfeng/favicon-downloader) 获取Favicon
+
 ### 页脚/文档/404页面
 
 [Shields.io](https://github.com/badges/shields) 简洁图章图标
@@ -111,6 +113,8 @@ Special thanks to: [GitHub](https://github.com) and [Gitee](https://gitee.com) (
 [AutoLang](https://github.com/TheChuan1503/AutoLang) Web Internationalization JS Lib
 
 [JSON5](https://github.com/json5/json5) JSON for humans
+
+[FaviconExtractor](https://github.com/seadfeng/favicon-downloader) Get Favicon
 
 ### Footer/Documents/404 Page
 
