@@ -7,6 +7,7 @@ class DOMLauncherList {
             abbr: item.title,
             download: "https://www.example.com",
             version: "1.0.x",
+            github: "https://www.example.com",
             url: "https://www.example.com",
             dev: {
                 download: "https://www.example.com",
@@ -15,7 +16,7 @@ class DOMLauncherList {
             ...item
         };
 
-        let download, devDownload, url;
+        let download, devDownload, github,  url;
         const version = item.version;
         const devVersion = item.dev.version;
         try {
@@ -27,6 +28,11 @@ class DOMLauncherList {
             devDownload = new URL(item.dev.download);
         } catch (err) {
             devDownload = {host: item.dev.download};
+        };
+        try {
+            github = new URL(item.github);
+        } catch (err) {
+            github = {host: item.github};
         };
         try {
             url = new URL(item.url);
@@ -42,10 +48,11 @@ class DOMLauncherList {
         const _devDownload = convert(devDownload, 'data-dev-download');
         const _backupDownload = convert(download, 'data-backup-download');
         const _backupDevDownload = convert(devDownload, 'data-backup-dev-download');
+        const _github = convert(github, 'data-github');
         const _url = convert(url, 'data-url');
         const _version = (version == '1.0.x' ? '' : `data-version="${version}"`);
         const _devVersion = (devVersion == '1.0.x.x' ? '' : `data-dev-version="${devVersion}"`);
-        const properties = `${_title} ${_abbr} ${_download} ${_devDownload} ${_version} ${_devVersion} ${_url} ${_backupDownload} ${_backupDevDownload} data-device="${linkDeviceName}"`;
+        const properties = `${_title} ${_abbr} ${_download} ${_devDownload} ${_version} ${_devVersion} ${_github} ${_url} ${_backupDownload} ${_backupDevDownload} data-device="${linkDeviceName}"`;
         return `<mdui-menu-item label="${item.abbr}" ${properties}><div slot="custom" class="custom-item"><div>${item.abbr}</div><div class="secondary">${_title.slice(12, -1)}</div></div></mdui-menu-item>`;
     };
 

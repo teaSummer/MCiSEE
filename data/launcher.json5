@@ -8,24 +8,26 @@
       "abbr": "FCL",
       "download": "https://github.com/FCL-Team/FoldCraftLauncher/releases/download/1.2.0.4/FCL-release-1.2.0.4-all.apk",
       "version": "1.2.0.4",
-      "url": "https://github.com/FCL-Team/FoldCraftLauncher"
+      "github": "https://github.com/FCL-Team/FoldCraftLauncher",
+      "url": "https://fcl-team.github.io"
     },
     {
       "title": "PojavLauncher",
       "download": "https://lz.qaiu.top/parser?url=https://share.feijipan.com/s/YZEkzBPH",
       "version": "gladiolus",
-      "url": "https://github.com/PojavLauncherTeam/PojavLauncher"
+      "github": "https://github.com/PojavLauncherTeam/PojavLauncher",
+      "url": "https://pojavlauncher.app"
     },
     {
       "title": "Hello Minecraft! Launcher:Pocket Edition",
       "abbr": "HMCL-PE",
       "download": "https://github.com/HMCL-dev/HMCL-PE/releases/download/2.0.8/HMCLPE-release.apk",
       "version": "2.0.8",
-      "url": "https://github.com/HMCL-dev/HMCL-PE"
+      "github": "https://github.com/HMCL-dev/HMCL-PE"
     },
     {
       "title": "ColorMC",
-      "url": "https://github.com/Coloryr/ColorMC.Android",
+      "github": "https://github.com/Coloryr/ColorMC.Android",
       "dev": {
         "download": "https://github.com/Coloryr/ColorMC.Android/releases/download/A21/colormc-a21-android.zip",
         "version": "A21"
@@ -35,7 +37,7 @@
       "title": "Zalith Launcher",
       "download": "https://github.com/ZalithLauncher/ZalithLauncher/releases/download/139901/ZalithLauncher-1.3.9.9.apk",
       "version": "1.3.9.9",
-      "url": "https://github.com/ZalithLauncher/ZalithLauncher"
+      "github": "https://github.com/ZalithLauncher/ZalithLauncher"
     },
   ],
   // ===================================
@@ -46,7 +48,8 @@
       "title": "PojavLauncher",
       "download": "https://github.com/PojavLauncherTeam/PojavLauncher_iOS/releases/download/v2.2/net.kdt.pojavlauncher-2.2-ios.ipa",
       "version": "2.2",
-      "url": "https://github.com/PojavLauncherTeam/PojavLauncher_iOS"
+      "github": "https://github.com/PojavLauncherTeam/PojavLauncher_iOS",
+      "url": "https://pojavlauncher.app"
     },
   ],
   // ==============================
@@ -58,14 +61,15 @@
       "abbr": "Minecraft 启动器",
       "download": "https://launcher.mojang.com/download/MinecraftInstaller.exe",
       "version": "latest",
-      "url": "https://www.minecraft.net/zh-hans"
+      "url": "https://www.minecraft.net"
     },
     {
       "title": "Hello Minecraft! Launcher",
       "abbr": "HMCL",
       "download": "https://github.com/HMCL-dev/HMCL/releases/download/3.6.11.266/HMCL-3.6.11.exe",
       "version": "3.6.11",
-      "url": "https://github.com/HMCL-dev/HMCL",
+      "github": "https://github.com/HMCL-dev/HMCL",
+      "url": "https://hmcl.huangyuhui.net",
       "dev": {
         "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.6.11.266/HMCL-3.6.11.266.exe",
         "version": "3.6.11.266"
@@ -76,6 +80,7 @@
       "abbr": "PCL2",
       "download": "https://github.com/Hex-Dragon/PCL2/raw/refs/heads/main/%E6%9C%80%E6%96%B0%E6%AD%A3%E5%BC%8F%E7%89%88.zip",
       "version": "2.8.13",
+      "github": "https://github.com/Hex-Dragon/PCL2",
       "url": "https://afdian.com/a/LTCat"
     },
     {
@@ -83,6 +88,7 @@
       "abbr": "BakaXL",
       "download": "https://contents.baka.zone/Release/BakaXL_Public_Ver_3.5.1.0.exe",
       "version": "3.5.1.0",
+      "github": "https://github.com/BakaXL-Launcher/BakaXL",
       "url": "https://www.bakaxl.com",
       "dev": {
         "download": "http://jk-insider.bakaxl.com:8888/job/BakaXL%20Insider%20Parrot/lastSuccessfulBuild/artifact/BakaXL_Public/bin/Jenkins%20Release/BakaXL_Secure/BakaXL.exe",
@@ -93,21 +99,22 @@
       "title": "ColorMC",
       "download": "https://github.com/Coloryr/ColorMC/releases/download/a34.2025.1.1/colormc-x64.msi",
       "version": "a34.2025.1.1",
-      "url": "https://github.com/Coloryr/ColorMC"
+      "github": "https://github.com/Coloryr/ColorMC"
     },
     {
       "title": "X Minecraft Launcher",
       "abbr": "XMCL",
       "download": "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.48.11/xmcl-0.48.11-win32-x64.zip",
       "version": "0.48.11",
-      "url": "https://github.com/voxelum/x-minecraft-launcher"
+      "github": "https://github.com/voxelum/x-minecraft-launcher",
+      "url": "https://xmcl.app"
     },
     {
       "title": "Plain Craft Launcher 2 Community Edition",
       "abbr": "PCL2 社区版",
       "download": "https://github.com/PCL-Community/PCL2-CE/releases/download/2.10.2/PCL2_CE.exe",
       "version": "2.10.2",
-      "url": "https://github.com/Hex-Dragon/PCL2/discussions/5342"
+      "github": "https://github.com/PCL-Community/PCL2-CE"
     },
     {
       "title": "*中国版* 我的世界启动器",
@@ -119,6 +126,7 @@
       "abbr": "SCL",
       "download": "https://github.com/Steve-xmh/scl/releases/download/v1.2.0/SharpCraftLauncher-20240216-1.2.0-i686.exe",
       "version": "1.2.0",
+      "github": "https://github.com/Steve-xmh/scl",
       "url": "https://steve-xmh.github.io/scl/"
     },
     {
@@ -126,35 +134,30 @@
       "abbr": "MMC",
       "download": "https://files.multimc.org/downloads/mmc-develop-win32.zip",
       "version": "latest",
-      "url": "https://github.com/MultiMC/Launcher"
+      "github": "https://github.com/MultiMC/Launcher",
+      "url": "https://multimc.org"
     },
     {
       "title": "Prism Launcher",
       "abbr": "Prism",
       "download": "https://github.com/PrismLauncher/PrismLauncher/releases/download/9.2/PrismLauncher-Windows-MSVC-Setup-9.2.exe",
       "version": "9.2",
-      "url": "https://github.com/PrismLauncher/PrismLauncher"
-    },
-    {
-      "title": "Salwyrr Launcher",
-      "abbr": "Salwyrr",
-      "download": "https://appsdl-overwolf-com.akamaized.net/prod/apps/ehdhabenpndnlfhfchfacfmnkhmnmigdjjlkeimc/1.0.4/setup.exe",
-      "version": "1.0.4",
-      "url": "https://www.salwyrr.com"
+      "github": "https://github.com/PrismLauncher/PrismLauncher",
+      "url": "https://prismlauncher.org"
     },
     {
       "title": "*国际版* Minecraft 启动器 (旧版)",
       "abbr": "Minecraft 启动器 (旧版)",
       "version": "latest",
       "download": "https://launcher.mojang.com/download/MinecraftInstaller.msi",
-      "url": "https://www.minecraft.net/zh-hans"
+      "url": "https://www.minecraft.net"
     },
     {
       "title": "Plain Craft Launcher 1",
       "abbr": "PCL1",
       "download": "https://lz.qaiu.top/parser?url=https://share.feijipan.com/s/kwAt8rhZ",
       "version": "1.0.9",
-      "url": "https://github.com/LTCatt/PCL1"
+      "github": "https://github.com/LTCatt/PCL1"
     },
   ],
   // ==========================
@@ -165,14 +168,15 @@
       "title": "Minecraft 启动器",
       "download": "https://launcher.mojang.com/download/Minecraft.dmg",
       "version": "latest",
-      "url": "https://www.minecraft.net/zh-hans"
+      "url": "https://www.minecraft.net"
     },
     {
       "title": "Hello Minecraft! Launcher",
       "abbr": "HMCL",
       "download": "https://github.com/HMCL-dev/HMCL/releases/download/3.6.11.266/HMCL-3.6.11.sh",
       "version": "3.6.11",
-      "url": "https://github.com/HMCL-dev/HMCL",
+      "github": "https://github.com/HMCL-dev/HMCL",
+      "url": "https://hmcl.huangyuhui.net",
       "dev": {
         "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.6.11.266/HMCL-3.6.11.266.sh",
         "version": "3.6.11.266"
@@ -182,20 +186,22 @@
       "title": "ColorMC",
       "download": "https://github.com/Coloryr/ColorMC/releases/download/a34.2025.1.1/colormc-a34.2025.1.1-1-x86_64.pkg.tar.zst",
       "version": "a34.2025.1.1",
-      "url": "https://github.com/Coloryr/ColorMC"
+      "github": "https://github.com/Coloryr/ColorMC"
     },
     {
       "title": "X Minecraft Launcher",
       "abbr": "XMCL",
       "download": "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.48.11/xmcl-0.48.11.dmg",
       "version": "0.48.11",
-      "url": "https://github.com/Voxelum/x-minecraft-launcher"
+      "github": "https://github.com/Voxelum/x-minecraft-launcher",
+      "url": "https://xmcl.app"
     },
     {
       "title": "Sharp Craft Launcher",
       "abbr": "SCL",
       "download": "https://github.com/Steve-xmh/scl/releases/download/v1.2.0/SharpCraftLauncher-20240216-1.2.0-universal-darwin.tar.gz",
       "version": "1.2.0",
+      "github": "https://github.com/Steve-xmh/scl",
       "url": "https://steve-xmh.github.io/scl/"
     },
     {
@@ -203,21 +209,16 @@
       "abbr": "MMC",
       "download": "https://files.multimc.org/downloads/mmc-develop-osx64.tar.gz",
       "version": "latest",
-      "url": "https://github.com/MultiMC/Launcher"
+      "github": "https://github.com/MultiMC/Launcher",
+      "url": "https://multimc.org"
     },
     {
       "title": "Prism Launcher",
       "abbr": "Prism",
       "download": "https://github.com/PrismLauncher/PrismLauncher/releases/download/9.2/PrismLauncher-macOS-9.2.zip",
       "version": "9.2",
-      "url": "https://github.com/PrismLauncher/PrismLauncher"
-    },
-    {
-      "title": "Salwyrr Launcher",
-      "abbr": "Salwyrr",
-      "download": "https://www.salwyrr.com/4/Salwyrr%20Minecraft%20Launcher%204.jar",
-      "version": "4",
-      "url": "https://www.salwyrr.com"
+      "github": "https://github.com/PrismLauncher/PrismLauncher",
+      "url": "https://prismlauncher.org"
     },
   ],
   // ============================
@@ -229,14 +230,15 @@
       "abbr": "Minecraft 启动器",
       "download": "https://launcher.mojang.com/download/Minecraft.tar.gz",
       "version": "latest",
-      "url": "https://www.minecraft.net/zh-hans"
+      "url": "https://www.minecraft.net"
     },
     {
       "title": "Hello Minecraft! Launcher",
       "abbr": "HMCL",
       "download": "https://github.com/HMCL-dev/HMCL/releases/download/3.6.11.266/HMCL-3.6.11.sh",
       "version": "3.6.11",
-      "url": "https://github.com/HMCL-dev/HMCL",
+      "github": "https://github.com/HMCL-dev/HMCL",
+      "url": "https://hmcl.huangyuhui.net",
       "dev": {
         "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.6.11.266/HMCL-3.6.11.266.sh",
         "version": "3.6.11.266"
@@ -246,20 +248,22 @@
       "title": "ColorMC",
       "download": "https://github.com/Coloryr/ColorMC/releases/download/a34.2025.1.1/colormc-linux-a34-x86_64.AppImage",
       "version": "a34.2025.1.1",
-      "url": "https://github.com/Coloryr/ColorMC"
+      "github": "https://github.com/Coloryr/ColorMC"
     },
     {
       "title": "X Minecraft Launcher",
       "abbr": "XMCL",
       "download": "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.48.11/xmcl-0.48.11-x86_64.AppImage",
       "version": "0.48.11",
-      "url": "https://github.com/voxelum/x-minecraft-launcher"
+      "github": "https://github.com/voxelum/x-minecraft-launcher",
+      "url": "https://xmcl.app"
     },
     {
       "title": "Sharp Craft Launcher",
       "abbr": "SCL",
       "download": "https://github.com/Steve-xmh/scl/releases/download/v1.2.0/SharpCraftLauncher-20240216-1.2.0-linux-x86_64.tar.gz",
       "version": "1.2.0",
+      "github": "https://github.com/Steve-xmh/scl",
       "url": "https://steve-xmh.github.io/scl/"
     },
     {
@@ -267,14 +271,8 @@
       "abbr": "Prism",
       "download": "https://github.com/PrismLauncher/PrismLauncher/releases/download/9.2/PrismLauncher-Linux-x86_64.AppImage",
       "version": "9.2",
-      "url": "https://github.com/PrismLauncher/PrismLauncher"
+      "github": "https://github.com/PrismLauncher/PrismLauncher",
+      "url": "https://prismlauncher.org"
     },
-    {
-      "title": "Salwyrr Launcher",
-      "abbr": "Salwyrr",
-      "download": "https://www.salwyrr.com/4/Salwyrr%20Minecraft%20Launcher%204.jar",
-      "version": "4",
-      "url": "https://www.salwyrr.com"
-    }
   ]
 }

@@ -41,8 +41,8 @@ data:
   updateArrow: ➔
   search: Search
   searchFrom: ' Search from ${linkSearchFrom} ....'
-  gotoLauncherWebsite: To launcher website
-  gotoLauncherWebsite.note: To GitHub Repo or official website
+  gotoLauncherWebsite: ${linkFavicon}To launcher website
+  gotoLauncherGitHub: ${linkFaviconGH}To GitHub Repo
   prefixType: 'Type: '
   mods: Mods
   plugins: Plugins

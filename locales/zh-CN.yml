@@ -41,8 +41,8 @@ data:
   updateArrow: ➔
   search: 搜索
   searchFrom: ' 从 ${linkSearchFrom} 中搜索 ....'
-  gotoLauncherWebsite: 跳转启动器网站
-  gotoLauncherWebsite.note: 跳转至GitHub仓库或官方网站
+  gotoLauncherWebsite: ${linkFavicon}跳转启动器网站
+  gotoLauncherGitHub: ${linkFaviconGH}跳转至GitHub仓库
   prefixType: 类型
   mods: 模组
   plugins: 插件

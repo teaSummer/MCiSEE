@@ -108,7 +108,7 @@ const launcherChanged = ((event = {target: $('mdui-select.launcher-list')}) => {
     if (title && title != checked.val()) {
         $('.launcher-title').text(title);
     };
-    for (const attribute of ['data-download', 'data-dev-download', 'data-url']) {
+    for (const attribute of ['data-download', 'data-dev-download', 'data-url', 'data-github']) {
         const button = $(`.${attribute}-launcher`);
         let url = checked.attr(attribute);
         if (attribute.endsWith('download')) {
@@ -140,12 +140,11 @@ const launcherChanged = ((event = {target: $('mdui-select.launcher-list')}) => {
                     button.parent().attr('al', 'launcher.preRelease');
                 };
                 removeEmpty(devVersion);
-            };
-        };
+            }
+        }
         button.hide();
-        if (url) {
-            button.attr('href', url).show();
-        };
+        if (attribute == 'data-url') window.linkFavicon = url ? fIconGet(url) : '';
+        if (url) button.attr('href', url).show();
     };
     i18n(() => {
         // 监听启动器下载
@@ -398,7 +397,7 @@ const pre_list = ((e) => {
         for (const [_title, url, description, favicon, autoLang] of block[category]) {
             let template = '|DOM|';
             let icon = '';
-            if (!url.startsWith('#')) icon = '<img src=' + (favicon ? favicon : `https://favicon.im/${url}`) + ' width="16" height="16" loading="lazy"/> ';
+            if (!url.startsWith('#')) icon = fIconGet(url, favicon);
             if (favicon == "") icon = '';
             const title = autoLang ? `al="${_title}">${icon}` : `>${icon}${_title}`;
             if (autoLang && description) template = `<mdui-tooltip al-aplto="content: ${description};" placement="top">|DOM|</mdui-tooltip>`;
