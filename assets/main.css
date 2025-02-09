@@ -391,6 +391,16 @@ pre {
     transition: transform 0.6s linear;
 }
 
+a.button {
+    text-align: center;
+}
+
+a.button img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.1em;
+}
+
 .nosupport {
     cursor: not-allowed !important;
 }
