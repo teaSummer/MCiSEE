@@ -202,11 +202,21 @@ div[id]>*:first-child {
     max-width: calc(min(100vw, 800px) - 4rem);
 }
 
+.utility-website-container {
+    backdrop-filter: blur(8px);
+}
+
+.utility-website-container div.label, .forum-container div.label{
+    display: inline-block;
+}
+
 .to-fold, .to-unfold {
     font-size: 0.8rem;
-    position: relative;
     bottom: 5px;
     right: 1px;
+    top: 1px;
+    padding: 0 5px;
+    border-radius: 5px;
 }
 
 .searchable-input {

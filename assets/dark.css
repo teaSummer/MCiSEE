@@ -175,6 +175,10 @@ footer {
 }
 
 
+.to-fold, .to-unfold {
+    background-color: #0000003f;
+}
+
 .pre-flex {
     background-color: /* #0693 */ #0000003f;
     padding: 12px;

@@ -4,7 +4,7 @@
 }
 
 a {
-    color: #006eff;
+    color: #003366   ;
     text-decoration: none;
     transition-duration: 0.2s;
 }
@@ -170,6 +170,9 @@ footer {
     border-color: #3e97eb;
 }
 
+.to-fold, .to-unfold {
+    background-color: rgba(0, 170, 255, 0.1);
+}
 
 .pre-flex {
     background-color: #0693;
