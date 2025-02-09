@@ -399,7 +399,8 @@ const pre_list = ((e) => {
         for (const [_title, url, description, favicon, autoLang] of block[category]) {
             let template = '|DOM|';
             let icon = '';
-            if (!url.startsWith('#')) icon = "<img src=" + (favicon ? favicon : `https://favicon.im/${url}`) + ' width="16" loading="lazy"/> ';
+            if (!url.startsWith('#')) icon = '<img src=' + (favicon ? favicon : `https://favicon.im/${url}`) + ' width="16" loading="lazy"/> ';
+            if (favicon == "") icon = '';
             const title = autoLang ? `al="${_title}">${icon}` : `>${icon}${_title}`;
             if (autoLang && description) template = `<mdui-tooltip al-aplto="content: ${description};" placement="top">|DOM|</mdui-tooltip>`;
             else if (description) template = `<mdui-tooltip content="${description}" placement="top">|DOM|</mdui-tooltip>`;
