@@ -3,7 +3,7 @@
   {
     "官方网站 (©Mojang/©微软)": [
       ["Minecraft", "https://www.minecraft.net", "《我的世界》/《当个创世神》\n着重于让玩家探索、交互并改变一个动态生成1m³大小方块的世界"],
-      ["Minecraft教育版", "https://education.minecraft.net/", "Minecraft Education\nMinecraft特别为教室使用而设计的教学版本（大陆访问可能会出现404）"],
+      ["Minecraft教育版", "https://education.minecraft.net/", "Minecraft Education\nMinecraft特别为教室使用而设计的教学版本（中国大陆访问可能会出现404）"],
       ["漏洞追踪器", "https://bugs.mojang.com", "Mojang Jira/Mojira\n用于反馈Bug"],
       ["基岩版开发者文档", "https://learn.microsoft.com/minecraft/creator/", "了解如何使用附加组件修改 Minecraft。创建皮肤，设计独特的体验，发现最新功能，并发展您作为Minecraft创作者的技能"],
       ["Feedback", "https://feedback.minecraft.net", ""],
@@ -68,12 +68,12 @@
   {
     "找服玩": [
       ["官方服务器列表", "https://findmcserver.com/", "查找独特且友好的官方服务器"],
-      ["服务器列表(大陆)", "https://www.mclists.cn", "mclists.cn"],
+      ["服务器列表(中国大陆)", "https://www.mclists.cn", "mclists.cn"],
       ["找服网", "https://www.fansmc.com", ""],
       ["最好的服务器", "https://minecraft-mp.com", "Find all the best Minecraft multiplayer servers on Minecraft-mp.com."],
       ["服务器列表", "https://mcl.ist", "英文"],
       ["服务器列表(MC百科)", "https://play.mcmod.cn", "由MC百科(mcmod.cn)收集"],
-      ["服务器列表(台湾)", "https://www.mc-list.xyz", ""],
+      ["服务器列表(中国台湾)", "https://www.mc-list.xyz", ""],
       ["服务器列表(日本)", "https://minecraft.jp", ""]
     ]
   },
