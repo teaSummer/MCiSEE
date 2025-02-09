@@ -210,8 +210,8 @@
       ["基岩版ID表", "https://ca.projectxero.top/idlist/#release-vanilla/global/", ""],
       ["Java版ID表", "http://mcid.lingningyu.cn", ""],
       ["基岩版开发Wiki", "https://wiki.mcbe-dev.net", "可以获取到各种关于基岩版开发的信息"],
-      ["插件百科", "https://mineplugin.org", "服务器插件Wiki"]
-      ["Linkie", "https://linkie.shedaniel.dev/", "快速访问开发 Minecraft Java Edition 时所需要的依赖与映射"]
+      ["插件百科", "https://mineplugin.org", "服务器插件Wiki"],
+      ["Linkie", "https://linkie.shedaniel.dev/", "快速访问Java版开发所需要的依赖与映射"]
     ]
   },
   {
