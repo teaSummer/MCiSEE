@@ -210,7 +210,6 @@ a.button:not(.download)::after {
 .update-layer div {
     opacity: 100%;
     color: white;
-    margin: 6px 9px;
     font-size: 0.85rem;
 }
 
@@ -238,8 +237,6 @@ a.button:not(.download)::after {
 }
 
 .update-layer {
-    --layer-width: 240px;
-    --layer-height: 130px;
     position: fixed;
     width: var(--layer-width);
     height: var(--layer-height);

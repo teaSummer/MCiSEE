@@ -254,9 +254,17 @@ div[id]>*:first-child {
 }
 
 
+.update-layer {
+    --layer-width: 260px;
+    --layer-height: 140px;
+}
+
+.update-layer div {
+    margin: 6px 14px;
+}
+
 .update-layer div:nth-child(2) {
-    margin: -2px 0;
-    margin-left: 25px;
+    margin-left: 35px;
 }
 
 .update-layer div:nth-child(3) {
@@ -424,45 +432,6 @@ a.button img {
     30%, 70% { transform: translate3d(-4px, 0, 0); }
     40%, 60% { transform: translate3d(+4px, 0, 0); }
     50% { transform: translate3d(-4px, 0, 0); }
-}
-
-@media (max-width: 768px) {
-    #目录 {
-        width: calc(26vw);
-        right: calc(-16vw);
-        margin-right: 14px;
-    }
-
-    #目录 dt a {
-        word-break: keep-all;
-        white-space: normal;
-        display: inline-block;
-        width: auto;
-        min-width: 4em;
-    }
-    
-    #目录 dt a {
-        margin-left: -8px;
-    }
-
-    #目录 dd {
-        display: none;  /* 在移动端隐藏dd元素 */
-    }
-}
-
-@media (min-width: 1200px) {
-    .update-layer {
-        --layer-width: 260px !important;
-        --layer-height: 140px !important;
-    }
-
-    .update-layer div {
-        margin: 6px 14px;
-    }
-
-    .update-layer div:nth-child(2) {
-        margin-left: 35px;
-    }
 }
 
 @font-face {
