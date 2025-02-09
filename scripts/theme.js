@@ -54,3 +54,12 @@ $(window.matchMedia('(prefers-color-scheme: dark)')).change((event) => {
     if (event.matches) system = 'dark';
     if ($('.theme').val() == 'system') themeChanged();
 });
+
+// 移动端视图
+const device = browser.parse();
+if (device.device == 'Mobile') {
+    $.ajax({
+        url: 'assets/mobile.css',
+        success: (data) => $('body').append(`<style id="mobile">${data}</style>`)
+    });
+}
