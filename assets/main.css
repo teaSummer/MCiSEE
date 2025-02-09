@@ -317,6 +317,7 @@ main>div {
     opacity: 0%;
     transition: opacity 0.65s !important;
     pointer-events: none;
+    width: 100%;
 }
 
 #目录:hover {
@@ -429,6 +430,23 @@ a.button img {
     #目录 {
         width: calc(26vw);
         right: calc(-16vw);
+        margin-right: 14px;
+    }
+
+    #目录 dt a {
+        word-break: keep-all;
+        white-space: normal;
+        display: inline-block;
+        width: auto;
+        min-width: 4em;
+    }
+    
+    #目录 dt a {
+        margin-left: -8px;
+    }
+
+    #目录 dd {
+        display: none;  /* 在移动端隐藏dd元素 */
     }
 }
 
