@@ -202,11 +202,8 @@ div[id]>*:first-child {
     max-width: calc(min(100vw, 800px) - 4rem);
 }
 
-.utility-website-list{
-    backdrop-filter: blur(9px);
-}
-
-.utility-website-container div.label, .forum-container div.label{
+.utility-website-container div.label,
+.forum-container div.label {
     display: inline-block;
 }
 
