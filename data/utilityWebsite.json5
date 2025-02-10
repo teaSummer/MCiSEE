@@ -197,8 +197,9 @@
       ["Purpur", "https://purpurmc.org", "极致优化、轻量，全兼容Bukkit架构。基于PutterFish"],
       ["Spigot", "https://www.spigotmc.org", "老牌核心，稳定、更新快、安全性高。由SpigotMC团队开发，基于CraftBukkit"],
       ["Sponge", "https://spongepowered.org", "由社区驱动的开源Java版模组修改平台"],
-      ["Tuinity", "https://github.com/Tuinity/Tuinity", "性能好。基于Paper"]
+      ["Tuinity", "https://github.com/Tuinity/Tuinity", "性能好。基于Paper"],
       // ["Docker 服务器模板", "https://hub.docker.com/r/itzg/minecraft-server/", ""], // 需要魔法才能访问
+      ["Leaves", "https://leavesmc.org", "一个旨在修复被破坏的原版特性的Paper分支"]
     ]
   },
   {
