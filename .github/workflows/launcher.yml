@@ -17,38 +17,38 @@ jobs:
       matrix:
         include:
           - abbr: HMCL
-            url: https://github.com/HMCL-dev/HMCL
+            github: https://github.com/HMCL-dev/HMCL
           - abbr: HMCL-PE
-            url: https://github.com/HMCL-dev/HMCL-PE
+            github: https://github.com/HMCL-dev/HMCL-PE
           - abbr: PCL2
-            url: https://github.com/Hex-Dragon/PCL2
+            github: https://github.com/Hex-Dragon/PCL2
           - abbr: FCL
-            url: https://github.com/FCL-Team/FoldCraftLauncher
+            github: https://github.com/FCL-Team/FoldCraftLauncher
           - abbr: PojavLauncher
-            url: https://github.com/PojavLauncherTeam/PojavLauncher
+            github: https://github.com/PojavLauncherTeam/PojavLauncher
             device: Android
           - abbr: PojavLauncher
-            url: https://github.com/PojavLauncherTeam/PojavLauncher_iOS
+            github: https://github.com/PojavLauncherTeam/PojavLauncher_iOS
             device: iOS
           - abbr: ColorMC
-            url: https://github.com/Coloryr/ColorMC
+            github: https://github.com/Coloryr/ColorMC
             device: Windows|macOS|Linux
           - abbr: ColorMC
-            url: https://github.com/Coloryr/ColorMC.Android
+            github: https://github.com/Coloryr/ColorMC.Android
             device: Android
           - abbr: XMCL
-            url: https://github.com/Voxelum/x-minecraft-launcher
+            github: https://github.com/Voxelum/x-minecraft-launcher
           - abbr: Prism
-            url: https://github.com/PrismLauncher/PrismLauncher
+            github: https://github.com/PrismLauncher/PrismLauncher
           - abbr: PCL2 社区版
-            url: https://github.com/PCL-Community/PCL2-CE
+            github: https://github.com/PCL-Community/PCL2-CE
     steps:
       - uses: actions/checkout@main
       - name: Handle files
         id: handle
         run: |
           git pull --rebase
-          API=`echo ${{ matrix.url }} | sed 's/:\/\/github\.com\//:\/\/api.github.com\/repos\//g' | sed 's/$/\/releases/g'`
+          API=`echo ${{ matrix.github }} | sed 's/:\/\/github\.com\//:\/\/api.github.com\/repos\//g' | sed 's/$/\/releases/g'`
           wget -O latest.json $API/latest || echo '{"tag_name":""}' > latest.json
           wget -O releases.json $API
           if [ '${{ matrix.device }}' ]; then
