@@ -6,14 +6,14 @@
     {
       "title": "Fold Craft Launcher",
       "abbr": "FCL",
-      "download": "https://github.com/FCL-Team/FoldCraftLauncher/releases/download/1.2.0.4/FCL-release-1.2.0.4-all.apk",
-      "version": "1.2.0.4",
+      "download": "https://github.com/FCL-Team/FoldCraftLauncher/releases/download/1.2.0.5/FCL-release-1.2.0.5-all.apk",
+      "version": "1.2.0.5",
       "github": "https://github.com/FCL-Team/FoldCraftLauncher",
       "url": "https://fcl-team.github.io"
     },
     {
       "title": "PojavLauncher",
-      "download": "https://lz.qaiu.top/parser?url=https://share.feijipan.com/s/YZEkzBPH",
+      "download": "https://github.com/PojavLauncherTeam/PojavLauncher/releases/download/gladiolus/PojavLauncher.apk",
       "version": "gladiolus",
       "github": "https://github.com/PojavLauncherTeam/PojavLauncher",
       "url": "https://pojavlauncher.app"
@@ -119,6 +119,7 @@
     {
       "title": "*中国版* 我的世界启动器",
       "abbr": "我的世界启动器",
+      "version": "1.14.0.36188",
       "url": "https://mc.163.com"
     },
     {
