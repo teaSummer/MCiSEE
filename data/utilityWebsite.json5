@@ -37,7 +37,7 @@
     "资源板块": [
       ["导航网", "https://www.mcnav.net", "MCNav"],
       ["下载基岩版", "#基岩版版本库/启动器", "含正版和破解版"],
-      ["下载中国版", "https://ianzb.github.io/tool.html?page=2#accordionFlushExample2"],
+      ["下载中国版", "https://www.123pan.com/s/bSslVv-uc3kh", "由Ian_zb收集"],
       ["TITAIKE地图站", "https://www.titaike.cn", "集合国内外优质地图"],
       ["MCPEDL资源", "https://mcpedl.com", "英文"],
       ["地球资源社区", "https://www.planetminecraft.com", ""],
@@ -58,7 +58,7 @@
       ["9Minecraft", "https://www.9minecraft.net/", "The best resource for Minecraft"],
       ["免费披风站", "https://minecraftcapes.net", "英文"],
       ["TeaCon", "https://www.teacon.cn/", "模组开发茶会"],
-      ["Minecraft高校联盟", "https://www.mualliance.cn", "旨在联合全国高校 MC 爱好者，共同推动高校 MC 生态发展的公益性组织"],
+      ["Minecraft高校联盟", "https://www.mualliance.cn", "MUA\n旨在联合全国高校 MC 爱好者，共同推动高校 MC 生态发展的公益性组织"],
       ["像素茶艺地图站", "https://pixelmap.minegraph.cn/blog/", "用最简单的方式传播好作品"],
       ["MCG中文图形站", "https://www.minegraph.cn/", "国内首个《我的世界》图形资源站"],
       ["MC原版模组入门教程", "https://icer233.us.kg/VanillaModTutorial/", "数据包/资源包 指南"],
@@ -175,31 +175,32 @@
     ]
   },
   {
-    "服务端 (无特殊说明均为Java版)": [
-      ["MCVersions", "https://mcversions.net", "提供原版服务端核心和客户端核心"],
+    "服务端": [
+      ["MCVersions", "https://mcversions.net", "Java版，提供原版服务端核心和客户端核心"],
+      ["FastMirror (无极镜像)", "https://www.fastmirror.net", "Java版，免费且高速的服务器核心下载加速镜像，实时同步上游核心构建，由物语云计算提供支持。"],
+      ["极星镜像", "https://mirror.polars.cc", "Java版，极星云镜像站"],
+      ["Akarin", "https://github.com/Akarin-project/Akarin", "Java版，支持多线程。基于Paper，TorchSpigot的后作"],
+      ["Arclight", "https://github.com/IzzelAliz/Arclight", "Java版，A Bukkit server implementation on common mod loaders."],
+      ["CatServer", "https://catmc.org", "Java版，稳定、支持Bukkit和Forge架构的老牌服务端。内含广告"],
+      ["CraftBukkit", "https://getbukkit.org", "Java版，更新快，插件核心的开山始祖。由BukkitMC团队开发，现由SpigotMC团队接管"],
+      ["Fabric Server", "https://fabricmc.net/use/server/", "Java版，Fabric 官方服务端核心"],
+      ["MohistMC", "https://mohistmc.com", "Java版，优化好、兼容Bukkit、Spigot、Paper的Forge服务端"],
+      ["Paper", "https://papermc.io", "Java版，速度快，优化好，安全性高，内置小型反作弊。由PaperMC团队开发，基于Spigot"],
+      ["Purpur", "https://purpurmc.org", "Java版，极致优化、轻量，全兼容Bukkit架构。基于PutterFish"],
+      ["Spigot", "https://www.spigotmc.org", "Java版，老牌核心，稳定、更新快、安全性高。由SpigotMC团队开发，基于CraftBukkit"],
+      ["Sponge", "https://spongepowered.org", "Java版，由社区驱动的开源Java版模组修改平台"],
+      ["Tuinity", "https://github.com/Tuinity/Tuinity", "Java版，性能好。基于Paper"],
+      // ["Java版Docker服务器模板", "https://hub.docker.com/r/itzg/minecraft-server/", ""], // 需要魔法才能访问
+      // ["基岩版Docker服务器模板", "https://hub.docker.com/r/itzg/minecraft-bedrock-server/", ""], // 需要魔法才能访问
       ["官方基岩版专用服务端", "https://www.minecraft.net/download/server/bedrock", "不支持插件"],
       ["基岩版专用服务端", "https://www.minebbs.com/bds/history", "由MineBBS收集"],
       ["基岩版专用预览版服务端", "https://www.minebbs.com/resources/bedrock-dedicated-server-preview.4934/history", "由MineBBS收集"],
-      ["BDSX", "https://github.com/bdsx/bdsx", "BDS模组 (由Node.js编写)"],
-      ["LeviLamina", "https://lamina.levimc.org", "原LiteLoaderBDS\n轻量、模块化、多功能的BDS模组加载器"],
-      ["FastMirror (无极镜像)", "https://www.fastmirror.net", "免费且高速的 MineCraft 服务器核心下载加速镜像，实时同步上游核心构建，由物语云计算提供支持。"],
-      ["极星镜像", "https://mirror.polars.cc", "欢迎使用极星云镜像站"],
-      ["Akarin", "https://github.com/Akarin-project/Akarin", "支持多线程。基于Paper，TorchSpigot的后作"],
-      ["Arclight", "https://github.com/IzzelAliz/Arclight", "A Bukkit server implementation on common mod loaders."],
-      ["CatServer", "https://catmc.org", "稳定、支持Bukkit和Forge架构的老牌服务端。内含广告"],
-      ["CraftBukkit", "https://getbukkit.org", "更新快，插件核心的开山始祖。由BukkitMC团队开发，现由SpigotMC团队接管"],
-      ["Fabric Server", "https://fabricmc.net/use/server/", "Fabric 官方服务端核心"],
-      ["MohistMC", "https://mohistmc.com", "优化好、兼容Bukkit、Spigot、Paper的Forge服务端"],
-      ["Allay（基岩版）", "https://docs.allaymc.org", "可靠，快速及富特性的第三方基岩版服务端"],
-      ["Nukkit (基岩版)", "https://cloudburstmc.org", "支持插件，使用Java开发"],
-      ["Paper", "https://papermc.io", "速度快，优化好，安全性高，内置小型反作弊。由PaperMC团队开发，基于Spigot"],
-      ["PocketMine (基岩版)", "https://pmmp.io", "一款高度可定制的基岩版服务器软件"],
-      ["Purpur", "https://purpurmc.org", "极致优化、轻量，全兼容Bukkit架构。基于PutterFish"],
-      ["Spigot", "https://www.spigotmc.org", "老牌核心，稳定、更新快、安全性高。由SpigotMC团队开发，基于CraftBukkit"],
-      ["Sponge", "https://spongepowered.org", "由社区驱动的开源Java版模组修改平台"],
-      ["Tuinity", "https://github.com/Tuinity/Tuinity", "性能好。基于Paper"],
-      // ["Docker 服务器模板", "https://hub.docker.com/r/itzg/minecraft-server/", ""], // 需要魔法才能访问
-      ["Leaves", "https://leavesmc.org", "一个旨在修复被破坏的原版特性的Paper分支"]
+      ["BDSX", "https://github.com/bdsx/bdsx", "基岩版，BDS模组 (由Node.js编写)"],
+      ["LeviLamina", "https://lamina.levimc.org", "基岩版，原LiteLoaderBDS\n轻量、模块化、多功能的BDS模组加载器"],
+      ["Leaves", "https://leavesmc.org", "Java版，一个旨在修复被破坏的原版特性的Paper分支"],
+      ["PocketMine", "https://pmmp.io", "基岩版，一款高度可定制的基岩版服务器软件"],
+      ["Allay", "https://docs.allaymc.org", "基岩版，可靠，快速及富特性的第三方基岩版服务端"],
+      ["Nukkit", "https://cloudburstmc.org", "基岩版，支持插件，使用Java开发"]
     ]
   },
   {
@@ -262,10 +263,9 @@
   },
   {
     "友情链接[open]": [
-      ["LapisNet", "https://lapis-net.top", ""],
-      ["FDS", "https://fds.moe", ""],
       ["命令自动补全", "https://mact.mcisee.top", ""],
-      ["MCPack清单生成器", "https://mcpack.mcisee.top", ""]
+      ["MCPack清单生成器", "https://mcpack.mcisee.top", ""],
+      ["LapisNet", "https://lapis-net.top", ""]
     ]
   }
 ]
