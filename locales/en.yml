@@ -40,6 +40,7 @@ data:
   updatedTo: 'has been updated:'
   updateArrow: ➔
   search: Search
+  siteSearch: Site Search
   searchFrom: ' Search from ${linkSearchFrom} ....'
   gotoLauncherWebsite: ${linkFavicon}To launcher website
   gotoLauncherGitHub: ${linkFaviconGH}To GitHub Repo

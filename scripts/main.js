@@ -183,6 +183,46 @@ $('.github-proxy').change(proxyChanged);
 // 应用快速查询
 $('.searchable-list').html(DOMSearchableList.list(searchable));
 
+// 站内搜索
+function siteSearch(allow = true) {
+    $('.searchmatch').contents().unwrap();
+    const keyword = $('.searchable-input').val();
+    if (!allow) {
+        if (keyword) location.hash = '全部收起';
+        $('pre a.button').show();
+        return;
+    }
+    location.hash = '-';
+    if (!keyword) {
+        location.hash = '全部收起';
+        $('pre a.button').show();
+        return;
+    }
+    $('pre details').removeAttr('open');
+    $('pre a.button').each(function() {
+        let z = $(this).parent();
+        const title = $(this).find('span').text();
+        const description = z.attr('content') || '';
+        if (description) z = z.parent();
+        const pattern = new RegExp('(' + keyword.replace(/([[\](){}.*+?|^$\\\-])/g, '\\$1') + ')' , 'gi');
+        if (pattern.test(title + description)) {
+            z.attr('open', true);
+            const titleH = $(this).find('span').text().replace(pattern, '<text class="searchmatch">$1</text>');
+            $(this).find('span').html(titleH);
+            $(this).show();
+        } else {
+            $(this).hide();
+        }
+    });
+}
+$('#site-search').click(() => {
+    location.hash = '-';
+    location.hash = '网站';
+    if ($('.searchable-list').val() == 'MCiSEE') return;
+    $('.searchable-list').val('MCiSEE');
+    searchableChanged();
+});
+
 // 监听快速查询选择项
 let countSearchable = 0;
 const searchableChanged = ((event = {target: $('.searchable-list')}) => {
@@ -194,6 +234,7 @@ const searchableChanged = ((event = {target: $('.searchable-list')}) => {
     const note = checked.attr('data-note');
     $('.searchable-label').html(`<a class="searchable-goto gravity-inline" href="${checked.attr('data-url')}" title="${note}" target="_blank"><p al="goto"></p> <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path></svg></a>`);
     localStorage.setItem('searchable-checked', event.target.value);
+    siteSearch(false);
     // 计数器
     ++countSearchable;
     if (countSearchable > 2) $('.searchable-list').click();
@@ -244,6 +285,7 @@ $('.searchable-input').on('input', () => {
             $('.searchable-button').attr('disabled', true);
             $('.searchable-clear' ).attr('hidden'  , true);
         } else $('.searchable-clear').removeAttr('hidden');
+        if (searchableAbbr == 'MCiSEE') siteSearch();
     }, 0);
 });
 
@@ -399,7 +441,7 @@ const pre_list = ((e) => {
             let icon = '';
             if (!url.startsWith('#')) icon = fIconGet(url, favicon);
             if (favicon == "") icon = '';
-            const title = autoLang ? `al="${_title}">${icon}` : `>${icon}${_title}`;
+            const title = autoLang ? `>${icon}<span al="${_title}"></span>` : `>${icon}<span>${_title}</span>`;
             if (autoLang && description) template = `<mdui-tooltip al-aplto="content: ${description};" placement="top">|DOM|</mdui-tooltip>`;
             else if (description) template = `<mdui-tooltip content="${description}" placement="top">|DOM|</mdui-tooltip>`;
             // 判断是否为内部链接
@@ -434,7 +476,7 @@ $(document).ready(() => {
     $('.forum-list').text(JSON.stringify(forum));
     // 缓存处理
     const searchableChecked = localStorage.getItem('searchable-checked');
-    if (searchableChecked == 'undefined' || searchableChecked == void 0) $('.searchable-list').val('Wiki');
+    if (searchableChecked == 'undefined' || searchableChecked == void 0) $('.searchable-list').val('MCiSEE');
     else $('.searchable-list').val(searchableChecked);
     // 设备
     deviceChanged();

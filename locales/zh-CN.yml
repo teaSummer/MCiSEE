@@ -40,6 +40,7 @@ data:
   updatedTo: 已发布新版本：
   updateArrow: ➔
   search: 搜索
+  siteSearch: 站内搜索
   searchFrom: ' 从 ${linkSearchFrom} 中搜索 ....'
   gotoLauncherWebsite: ${linkFavicon}跳转启动器网站
   gotoLauncherGitHub: ${linkFaviconGH}跳转至GitHub仓库

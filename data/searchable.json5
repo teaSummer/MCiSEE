@@ -1,6 +1,11 @@
 // 可供快速查询的站点
 [
   {
+    title: "站内搜索",
+    abbr: "MCiSEE",
+    url: "https://mcisee.top/#网站"
+  },
+  {
     "title": "维基百科: 原站",
     "abbr": "Wiki",
     "search": "https://zh.minecraft.wiki/?search=<T>&title=Special%3A%E6%90%9C%E7%B4%A2&fulltext=search",
@@ -35,9 +40,9 @@
   {
     "title": "基岩版ID表",
     "abbr": "BEID",
-    "search": "https://ca.projectxero.top/idlist/#release-vanilla/global/<T>",
-    "note": "原版 - 正式版 - MCBEID表",
-    "url": "https://ca.projectxero.top/idlist/#release-vanilla/global/"
+    "search": "https://ca.projectxero.top/idlist/#beta-vanilla/global/<T>",
+    "note": "原版 - 测试版 - MCBEID表",
+    "url": "https://ca.projectxero.top/idlist/#beta-vanilla/global/"
   },
   {
     "title": "Java版ID表",

@@ -69,25 +69,29 @@ const read = ((file, isPath = false) => {
 // URL哈希属性监听
 const hashChanged = (() => {
     if (location.hash == '') return;
-    let hash = decodeURI(location.hash).replace('/', '\\/');
+    function toggleDetails(selector, open) {
+        if ($(selector).find('details').length) {
+            $(selector).find('details').attr('open', open);
+            $('.to-fold, .to-unfold').hide();
+            $(open ? '.to-fold' : '.to-unfold').show();
+        } else {
+            $(selector).attr('open', open);
+        }
+    }
+    let hash = decodeURI(location.hash).replace('/', '\\/').replace(/ \(.*/, '');
     const slicedHash = hash.slice(0, -3);
     // 自动展开/收起：<details> 元素
     try {
         // 通过检测哈希属性
-        if (hash == '#全部展开') $('.page-content').find('details:not(.keep)').attr('open', true);
-        if (hash == '#全部收起') $('.page-content').find('details:not(.keep)').attr('open', false);
+        if (hash == '#全部展开') toggleDetails('pre', true);
+        if (hash == '#全部收起') toggleDetails('pre', false);
         if (hash.endsWith('-展开')) {
-            $(slicedHash).find('details').attr('open', true);
-            $(slicedHash).find('.to-fold').show();
-            $(slicedHash).find('.to-unfold').hide();
+            toggleDetails(slicedHash, true);
             location.hash = slicedHash;
-        };
+        }
         if (hash.endsWith('-收起')) {
-            $(slicedHash).find('details:not(.keep)').attr('open', false);
-            $(slicedHash).find('.to-unfold').show();
-            $(slicedHash).find('.to-fold').hide();
-            hash = slicedHash;
-        };
+            toggleDetails(slicedHash, false);
+        }
         // 通过检测 <summary> 元素
         if ($(hash).html().startsWith('<summary>')) $(hash).attr('open', true);
         else $(`${hash}>*:first-child`).addClass('hash');

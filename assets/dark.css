@@ -176,7 +176,7 @@ footer {
 }
 
 
-.to-fold, .to-unfold {
+.to-fold, .to-unfold, .inline-link {
     background-color: #0000003f;
 }
 
@@ -298,8 +298,6 @@ details[open]+hr {
  */
 
 :root {
-    --apple-color-white: #d6d5da;
-
     --mdui-color-surface: 1, 8, 0, 0.2 !important;
     --mdui-color-on-surface-variant-light: 182, 186, 177 !important;
     --mdui-color-surface-container-light: 17, 17, 17, 0.87 !important;

@@ -1,6 +1,6 @@
 .background {
     transform: scale(110%);
-    filter: saturate(1.7);
+    filter: saturate(1.3);
     background-image: url('./image/daylight.webp');
 }
 
@@ -171,7 +171,7 @@ footer {
     border-color: #3e97eb;
 }
 
-.to-fold, .to-unfold {
+.to-fold, .to-unfold, .inline-link {
     background-color: #fff3;
 }
 
