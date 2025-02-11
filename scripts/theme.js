@@ -31,7 +31,7 @@ const themeChanged = (() => {
         case 'classic':
             const classic = `<style id="classic">
     div.background {
-        background-image: url('assets/image/classic.png');
+        background-image: url('assets/image/classic.webp');
         transform: none;
         filter: none;
     }

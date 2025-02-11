@@ -1,6 +1,7 @@
 .background {
     transform: scale(110%);
     filter: saturate(2);
+    background-image: url('./image/dark.webp');
 }
 
 a {
@@ -290,11 +291,6 @@ details[open]+hr {
 
 .tt-suggestion.tt-cursor {
     background-color: #426dd0;
-}
-
-
-.background {
-    background-image: url('image/dark.png');
 }
 
 /*
