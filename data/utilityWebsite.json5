@@ -213,7 +213,7 @@
       ["Java版ID表", "http://mcid.lingningyu.cn", ""],
       ["基岩版开发Wiki", "https://wiki.mcbe-dev.net", "可以获取到各种关于基岩版开发的信息"],
       ["插件百科", "https://mineplugin.org", "服务器插件Wiki"],
-      ["Linkie", "https://linkie.shedaniel.dev/", "快速访问Java版开发所需要的依赖与映射"]
+      ["Linkie", "https://linkie.shedaniel.dev/", "快速查询Java版开发所需要的依赖与映射"]
     ]
   },
   {
@@ -228,6 +228,36 @@
       ["OptiFine", "https://www.optifine.net", "光影加载器(远古版本起)"],
       ["Quilt", "https://quiltmc.org", "模组加载器(1.14+)"],
       ["Rift", "https://www.curseforge.com/minecraft/mc-mods/rift", "模组加载器(1.13-1.13.2)"]
+    ]
+  },
+  {
+    "模组&插件开发": [
+      ["Fabric Wiki", "https://fabricmc.net/wiki/", "Fabric Wiki"],
+      ["Fabric Documentation", "https://docs.fabricmc.net/develop/", "Fabric模组开发文档（1.20.4及以上版本）"],
+      ["Forge Docs", "https://docs.minecraftforge.net/", "Forge模组开发文档（1.12.x~1.21.x）"],
+      ["Forge Community Wiki", "https://forge.gemwire.uk/", "Forge社区开发文档（1.19~1.16）"],
+      ["Architectury Documentation", "https://docs.architectury.dev/", "Architectury工具链模组开发文档"],
+      ["Quilt Developer Wiki", "https://wiki.quiltmc.org/", "Quilt模组开发文档"],
+      ["NeoForged Documentation", "https://docs.neoforged.net/", "NeoForge模组开发文档"],
+      ["Rift Wiki", "https://github.com/DimensionalDevelopment/Rift/wiki/", "Rift模组开发文档"],
+      ["Sinytra Documentation", "https://sinytra.org/docs/", "Sinytra文档"],
+      ["Modded Minecraft Wiki", "https://moddedmc.wiki/", "供模组社区托管和分享自己模组文档的公共平台"],
+      ["Cloth Config Wiki", "https://shedaniel.gitbook.io/cloth-config/", "Cloth Config Wiki"],
+      ["Cursed Legacy Fabric Docs", "https://minecraft-cursed-legacy.github.io/wiki/index.html", "Cursed Legacy Fabric模组开发文档"],
+      ["StationAPI Wiki", "https://github.com/ModificationStation/StationAPI/wiki", "StationAPI文档"],
+      ["PaperMC Docs", "https://docs.papermc.io/", "PaperMC文档"],
+      ["Sponge Documentation", "https://docs.spongepowered.org/", "Sponge文档"],
+      ["Spigot Wiki", "https://www.spigotmc.org/wiki/index/", "Spigot文档"],
+      ["BukkitWiki", "https://bukkit.fandom.com/wiki/Main_Page/", "Bukkit文档"],
+      ["SpongeMixin Wiki", "https://github.com/SpongePowered/Mixin/wiki/", "SpongeMixin文档"],
+      ["MixinExtras Wiki", "https://github.com/LlamaLad7/MixinExtras/wiki/", "MixinExtras文档"],
+      ["MixinSquared Wiki", "https://github.com/Bawnorton/MixinSquared/wiki/", "MixinSquared文档"],
+      ["Parchment", "https://parchmentmc.org/", "Mojmap参数名称修补和javadoc补全附加的映射"],
+      ["Linkie", "https://linkie.shedaniel.dev/", "快速查询Java版开发所需要的依赖与映射"],
+      ["Fabric Template Mod Generator", "https://fabricmc.net/develop/template/", "生成Fabric模组开发模板"],
+      ["NeoForge Mod Generator", "https://neoforged.net/mod-generator/", "生成NeoForge模组开发模板"],
+      ["Architectury Template Generator", "https://generate.architectury.dev/", "生成Architectury工具链模组开发模板"],
+      ["Quilt Mod Generator", "https://quiltmc.org/en/usage/generator/", "生成Quilt模组开发模板"]
     ]
   },
   {
