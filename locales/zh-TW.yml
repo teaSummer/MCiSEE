@@ -5,7 +5,7 @@ data:
   meta.title: '{meta.image.alt} - MCiSEE'
   meta.description: 所見皆是麥塊，獲取麥塊資源更簡單！
   head.title: ${notificationCount} {meta.title}
-  introduction.title: 所見皆是<i>Minecraft</i>
+  introduction.title: 所見皆是麥塊
   introduction.1: 你可以在這裏找到大量的麥塊資源，比如啟動器等等...
   introduction.2: >-
     歡迎光臨我們的 <a href="https://github.com/teaSummer/MCiSEE" target="_blank">GitHub 項目</a>

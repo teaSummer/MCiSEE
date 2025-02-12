@@ -28,7 +28,7 @@ data:
   unselected: '[ Press to select ]'
   app: Apps
   launcher: Launchers
-  launcherOnlyJavaEdition: '{launcher}（<b>{JavaEdition}</b>）'
+  launcherOnlyJavaEdition: '{launcher} (<b>{JavaEdition}</b>)'
   website: Websites
   searchable: Quicker Search
   utilityWebsite: Useful Websites
@@ -107,8 +107,8 @@ data:
   launcher.preRelease: >-
     <a class="button download data-dev-download-launcher" href="${linkDevUrl}"
     data-backup-href="${linkDevDownload}" ondragstart="event.dataTransfer.effectAllowed = 'none';"
-    title="{download} {preRelease.note} ${linkDevVersion}">${downloadSVG} {download} {preRelease} ${linkDevVersion}</a>
+    title="{download} {preRelease.note} ${linkDevVersion}">${downloadSVG}{download} {preRelease} ${linkDevVersion}</a>
   launcher.preRelease.latest: >-
     <a class="button download data-dev-download-launcher" href="${linkDevUrl}"
     data-backup-href="${linkDevDownload}" ondragstart="event.dataTransfer.effectAllowed = 'none';"
-    title="{download} {preRelease.note} {latest.note}">${downloadSVG} {download} {latest} {preRelease}</a>
+    title="{download} {preRelease.note} {latest.note}">${downloadSVG}{download} {latest} {preRelease}</a>
