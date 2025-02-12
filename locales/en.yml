@@ -43,7 +43,7 @@ data:
   siteSearch: Site Search
   searchFrom: ' Search from ${linkSearchFrom} ....'
   gotoLauncherWebsite: ${linkFavicon}To launcher website
-  gotoLauncherGitHub: ${linkFaviconGH}To GitHub Repo
+  gotoLauncherGitHub: ${faviconGH}To GitHub Repo
   prefixType: 'Type: '
   mods: Mods
   plugins: Plugins

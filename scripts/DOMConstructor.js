@@ -1,157 +1,119 @@
+const safeUrl = (url) => {
+    try {
+        return new URL(url);
+    } catch (err) {
+        return;
+    }
+}
+
 class DOMLauncherList {
-    constructor() {};
+    constructor() {}
 
     static item(item) {
         item = {
-            title: "Launcher",
-            abbr: item.title,
-            download: "https://www.example.com",
-            version: "1.0.x",
-            github: "https://www.example.com",
-            url: "https://www.example.com",
+            title: "", // Launcher
+            abbr: item.title, // L
+            download: "", // https://www.example.com
+            version: "", // 1.0.x
+            github: "", // https://github.com/example
+            url: "", // https://www.example.com
             dev: {
-                download: "https://www.example.com",
-                version: "1.0.x.x"
+                download: "", // https://www.example.com
+                version: "" // 1.0.x.x
             },
             ...item
-        };
+        }
+        const download = safeUrl(item.download);
+        const devDownload = safeUrl(item.dev.download);
 
-        let download, devDownload, github,  url;
-        const version = item.version;
-        const devVersion = item.dev.version;
-        try {
-            download = new URL(item.download);
-        } catch (err) {
-            download = {host: item.download};
-        };
-        try {
-            devDownload = new URL(item.dev.download);
-        } catch (err) {
-            devDownload = {host: item.dev.download};
-        };
-        try {
-            github = new URL(item.github);
-        } catch (err) {
-            github = {host: item.github};
-        };
-        try {
-            url = new URL(item.url);
-        } catch (err) {
-            url = {host: item.url};
-        };
-        const convert = ((url, arg) => {
-            return (url == 'https://www.example.com/' || url.host == '') ? '' : `${arg}="${url}"`;
-        });
-        const _title = ((item.title == item.abbr) ? '' : `data-title="${item.title}"`);
-        const _abbr = `data-abbr="${item.abbr}"`;
-        const _download = convert(download, 'data-download');
-        const _devDownload = convert(devDownload, 'data-dev-download');
-        const _backupDownload = convert(download, 'data-backup-download');
-        const _backupDevDownload = convert(devDownload, 'data-backup-dev-download');
-        const _github = convert(github, 'data-github');
-        const _url = convert(url, 'data-url');
-        const _version = (version == '1.0.x' ? '' : `data-version="${version}"`);
-        const _devVersion = (devVersion == '1.0.x.x' ? '' : `data-dev-version="${devVersion}"`);
-        const properties = `${_title} ${_abbr} ${_download} ${_devDownload} ${_version} ${_devVersion} ${_github} ${_url} ${_backupDownload} ${_backupDevDownload} data-device="${linkDeviceName}"`;
-        return `<mdui-menu-item label="${item.abbr}" ${properties}><div slot="custom" class="custom-item"><div>${item.abbr}</div><div class="secondary">${_title.slice(12, -1)}</div></div></mdui-menu-item>`;
-    };
+        const attrList = [
+            ['title', item.title],
+            ['abbr', item.abbr],
+            ['download', download],
+            ['dev-download', devDownload],
+            ['backup-download', download],
+            ['backup-dev-download', devDownload],
+            ['github', safeUrl(item.github)],
+            ['url', safeUrl(item.url)],
+            ['version', item.version],
+            ['dev-version', item.dev.version],
+            ['device', linkDeviceName]
+        ];
+
+        const properties = attrList.map(([attr, value]) => value ? `data-${attr}="${value}"` : '').filter(Boolean).join(' ');
+        return `<mdui-menu-item label="${item.abbr}" ${properties}><div slot="custom" class="custom-item"><div>${item.abbr}</div><div class="secondary">${item.title}</div></div></mdui-menu-item>`;
+    }
 
     static deviceList(target = '') {
         let dom = '';
         for (const [device, _] of supportedDevices) {
             window.linkDeviceName = device;
-            dom += `<mdui-select name="launcher-list" class="launcher-list ${device}" style="/*display: none;" value="?" placement="bottom" variant="outlined" required>${
-                this.list(eval(device + 'Launcher'))
-            }</mdui-select>`;
-        };
+            dom += `<mdui-select name="launcher-list" class="launcher-list ${device}" style="display: none;" value="?" placement="bottom" variant="outlined" required>${
+this.list(eval(device + 'Launcher'))
+}</mdui-select>`;
+        }
         return dom;
-    };
+    }
 
     static list(items = []) {
-        let dom = '';
-        items.forEach((e) => {
-            dom += DOMLauncherList.item(e);
-        });
-        dom += '<mdui-menu-item value="?" disabled hidden><div slot="custom" class="custom-item"><div al="unselected"></div></div></mdui-menu-item>';
-        return dom;
-    };
-};
+        const staticItem = '<mdui-menu-item value="?" disabled hidden><div slot="custom" class="custom-item"><div al="unselected"></div></div></mdui-menu-item>';
+        const itemList = items.map(e => DOMLauncherList.item(e));
+        return itemList.join('') + staticItem;
+    }
+}
 
 class DOMSearchableList {
-    constructor() {};
+    constructor() {}
 
     static item(item) {
         item = {
-            title: "Searchable",
-            abbr: item.title,
-            search: "https://www.example.com",
-            note: "",
-            url: "https://www.example.com",
+            title: "", // Searchable
+            abbr: item.title, // S
+            search: "", // https://www.example.com
+            note: "", // 这是一个网页
+            url: "", // https://www.example.com
             ...item
-        };
+        }
+        const attrList = [
+            ['title', item.title],
+            ['search', safeUrl(item.search)],
+            ['abbr', item.abbr],
+            ['note', item.note],
+            ['url', safeUrl(item.url)]
+        ];
 
-        let search, url;
-        try {
-            search = new URL(item.search);
-        } catch (err) {
-            search = {host: item.search};
-        };
-        try {
-            url = new URL(item.url);
-        } catch (err) {
-            url = {host: item.url};
-        };
-        const convert = ((url, arg) => {
-            return (url == 'https://www.example.com/' || url.host == '') ? '' : `${arg}="${url}"`;
-        });
-        const _title = `data-title="${item.title}"`;
-        const _search = convert(search, 'data-search');
-        const _abbr = `data-abbr="${item.abbr}"`;
-        const _note = `data-note="${item.note}"`;
-        const _url = convert(url, 'data-url');
-        const properties = `${_title} ${_search} ${_abbr} ${_note} ${_url}`;
-        return `<mdui-menu-item value="${item.abbr}" ${properties}><div slot="custom" class="custom-item"><div>${item.title}${item.abbr == '' || item.abbr == item.title ? '' : ` (${item.abbr})`}</div></div></mdui-menu-item>`;
-    };
+        const properties = attrList.map(([attr, value]) => value ? `data-${attr}="${value}"` : '').filter(Boolean).join(' ');
+        const abbrDisplay = item.abbr && item.abbr != item.title ? ` (${item.abbr})` : '';
+        return `<mdui-menu-item value="${item.abbr}" ${properties}><div slot="custom" class="custom-item"><div>${item.title}${abbrDisplay}</div></div></mdui-menu-item>`;
+    }
 
     static list(items = []) {
-        let dom = '';
-        items.forEach((e) => {
-            dom += DOMSearchableList.item(e);
-        });
-        return dom;
-    };
-};
+        return items.map(e => DOMSearchableList.item(e)).join('');
+    }
+}
 
 class DOMDeviceList {
-    constructor() {};
+    constructor() {}
 
     static show() {
-        let dom = '';
-        for (const [device, deviceInfo] of supportedDevices) {
-            dom += `<mdui-menu-item label="${device}"><div slot="custom"><div>${deviceInfo}</div><div class="secondary" al="${device}.tip"></div></div></mdui-menu-item>`;
-        };
-        dom += `<mdui-menu-item value="unsupported" disabled hidden><div slot="custom" class="custom-item"><div al="unsupported"></div></div></mdui-menu-item>
-                <mdui-menu-item value="unknown" selected disabled hidden><div slot="custom" class="custom-item"><div al="unknown"></div></div></mdui-menu-item>`;
-        $('.device-list').html(dom);
-
+        const createMenuItem = (device, deviceInfo) => `<mdui-menu-item label="${device}"><div slot="custom"><div>${deviceInfo}</div><div class="secondary" al="${device}.tip"></div></div></mdui-menu-item>`;
+        let domItems = supportedDevices.map(([device, deviceInfo]) => createMenuItem(device, deviceInfo)).join('');
+        domItems += `<mdui-menu-item value="unsupported" disabled hidden><div slot="custom" class="custom-item"><div al="unsupported"></div></div></mdui-menu-item><mdui-menu-item value="unknown" selected disabled hidden><div slot="custom" class="custom-item"><div al="unknown"></div></div></mdui-menu-item>`;
+        $('.device-list').html(domItems);
         const UA = navigator.userAgent;
         const getDevice = (() => {
             const device = browser.parse();
+            const isDesktop = device.device == 'Desktop';
             switch (device.system) {
                 case 'HarmonyOS':
-                    if (device.device == 'Desktop') return 'unsupported';
-                    return 'Android';
                 case 'iPad':
-                    if (device.device == 'Desktop') return 'unsupported';
-                    return 'iOS';
+                    return isDesktop ? 'unsupported' : 'iOS';
                 case 'Android':
                 case 'iOS':
                 case 'macOS':
-                    if (device.device == 'Desktop') return 'unsupported';
-                    return device.system;
+                    return isDesktop ? 'unsupported' : device.system;
                 case 'Windows':
-                    if (device.device != 'Desktop') return 'unsupported';
-                    return 'Windows';
+                    return isDesktop ? 'Windows' : 'unsupported';
                 case 'Linux':
                 case 'Ubuntu':
                 case 'FreeBSD':
@@ -159,13 +121,13 @@ class DOMDeviceList {
                     return 'Linux';
                 default:
                     return 'unsupported';
-            };
+            }
         });
 
         const toHide = 4;
         $('.device-list').val(getDevice());
         if ($('.device-list')[0].selectedIndex > toHide) {
             $('.app-container').hide();
-        };
-    };
-};
+        }
+    }
+}

@@ -3,7 +3,6 @@ let searchKeyword = '', searchableAbbr = '';
 
 let hShake;
 let notificationCount = '';
-let visibility = true;
 
 const downloadMirrorUrl = 'https://ghfast.top/<T>';
 const fIconUrl = 'https://www.faviconextractor.com/favicon/<T>?larger=true';
@@ -18,7 +17,7 @@ const downloadClick = (() => $('.download').click(function() {
     $('.start-download br').after(`<a href="${this.href}">${filename}</a>`);
     $('.start-download').attr('open', true);
 }));
-const linkFaviconGH = fIconGet('github.com');
+const faviconGH = fIconGet('github.com');
 
 // 国际化 (internationalization)
 al.setLangPropPath('locales');
@@ -40,20 +39,7 @@ const i18n = ((callback = () => {}) => {
 // 不记录历史滚动位置
 if (history.scrollRestoration) {
     history.scrollRestoration = 'manual';
-};
-
-
-// 监听标签页切换事件
-$(document).on('visibilitychange', () => {
-    if (document.visibilityState == 'hidden') {
-        // 当前标签页隐藏时
-        visibility = false;
-    };
-    if (document.visibilityState == 'visible') {
-        // 当前标签页显示时
-        visibility = true;
-    };
-});
+}
 
 
 // 读取 JSON5 文件
@@ -95,7 +81,7 @@ const hashChanged = (() => {
         // 通过检测 <summary> 元素
         if ($(hash).html().startsWith('<summary>')) $(hash).attr('open', true);
         else $(`${hash}>*:first-child`).addClass('hash');
-    } catch {};
+    } catch {}
 });
 $(window).on('hashchange', () => {
     $('.hash').removeClass('hash');
@@ -118,3 +104,6 @@ const searchable = read('searchable');
 // 各类网站数据
 const utilityWebsite = read('utilityWebsite');
 const forum = read('forum');
+
+// 愚人节彩蛋
+import("./apf.js").then(apf => (globalThis.apf = apf, apf.main()));

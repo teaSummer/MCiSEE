@@ -11,14 +11,14 @@ const debugCallback = () => {
 	debug.mode ? $('#debugFuncs').show() && $('#debugMode').children().show() : $('#debugFuncs').hide();
 	$('#debugMode').children()[0].checked = debug.mode;
 	console.log(`[debug] debugMode is now ${debug.mode? "enabled": "disabled"}`);
-};
+}
 const debugChange = ((object) => {
     const handler = {
         defineProperty: (target, property, descriptor) => {
             Reflect.defineProperty(target, property, descriptor);
             debugCallback();
         }
-    };
+    }
     return new Proxy(object, handler);
 });
 const debug = debugChange({mode: isLocal});
@@ -53,4 +53,4 @@ $("#snowEffect").change(() => {
 	.catch(()=>console.error(`[debug] snowEffect is failed to load`)) && (this.disabled = true): false;
 });
 
-export {debug};
+export {debug}

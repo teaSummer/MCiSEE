@@ -43,7 +43,7 @@ data:
   siteSearch: 站內查找
   searchFrom: ' 從 ${linkSearchFrom} 查找 ....'
   gotoLauncherWebsite: ${linkFavicon}前往啟動器網站
-  gotoLauncherGitHub: ${linkFaviconGH}前往GitHub開源項目
+  gotoLauncherGitHub: ${faviconGH}前往GitHub開源項目
   prefixType: 類別
   mods: 模組
   plugins: 插件

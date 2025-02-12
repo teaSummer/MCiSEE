@@ -1,5 +1,5 @@
 // 列出所有已支持的设备
-const supportedDevices = [
+window.supportedDevices = [
     // |   最早名称   |       显示名称       |
     [      'Android',  'Android/HarmonyOS' ],
     [          'iOS',  'iOS/iPad'          ],
@@ -8,7 +8,6 @@ const supportedDevices = [
     [        'Linux',  'Linux'             ],
 ];
 DOMDeviceList.show();
-
 
 // 创建超文本标签（并点击）
 const createSuperLabel = ((url, id) => {
@@ -40,10 +39,10 @@ const createUpdateLayer = ((abbr, lastVersion, latestVersion, download, device, 
         <a class="download" href="${downloadMirror(download)}" data-backup-href="${download}" target="_blank" al="download" ondragstart="event.dataTransfer.effectAllowed = 'none';"></a>
       </div>`;
     $('sidebar').before(dom);
+    const set = ((version, stableOrDev) => {
+        localStorage.setItem(`last-${device}-${abbr}-${stableOrDev}-download`, version);
+    });
     $(`.update-layer-${updateLayerNumber} .download`).click(() => {
-        const set = ((version, stableOrDev) => {
-            localStorage.setItem(`last-${device}-${abbr}-${stableOrDev}-download`, version);
-        });
         set(latestVersion, stableOrDev);
     });
     if (updateLayerNumber) notificationCount = `(${updateLayerNumber})`;
@@ -62,8 +61,8 @@ const deleteUpdateLayer = function() {
         if ($(`.update-layer-${i}`).length) {
             $(`.update-layer-${i}`).removeClass(`update-layer-${i}`).addClass(`update-layer-${i - 1}`);
         } else break;
-    };
-};
+    }
+}
 
 
 // 获取下拉菜单选中项
@@ -72,8 +71,8 @@ const checkedOption = ((selectElement) => {
     if (selectElement.value) {
         if (selectInclude('Wiki') || selectInclude('Launcher')) {
             return $(selectElement).find(`mdui-menu-item[data-abbr="${selectElement.value}"]`);
-        };
-    };
+        }
+    }
     return $( $(selectElement)[0][$(selectElement)[0].selectedIndex] );
 });
 
@@ -87,9 +86,9 @@ const deviceChanged = (() => {
             select.show();
         } catch {
             $('.app-container').hide();
-        };
-    });
-    try { launcherChanged(); } catch {};
+        }
+    })
+    try { launcherChanged(); } catch {}
 });
 
 
@@ -100,52 +99,45 @@ $('div.launcher-list').html(DOMLauncherList.deviceList());
 // 监听启动器选择项
 const launcherChanged = ((event = {target: $('mdui-select.launcher-list')}) => {
     const checked = checkedOption(event.target);
-    const title = checked.attr('data-title');
-    const abbr = checked.attr('data-abbr');
-    const device = checked.attr('data-device');
+    const title = checked.data('title');
+    const abbr = checked.data('abbr');
+    const device = checked.data('device');
     let version, devVersion;
     $('.launcher-title').text('');
     if (title && title != checked.val()) {
         $('.launcher-title').text(title);
-    };
+    }
     for (const attribute of ['data-download', 'data-dev-download', 'data-url', 'data-github']) {
         const button = $(`.${attribute}-launcher`);
         let url = checked.attr(attribute);
-        if (attribute.endsWith('download')) {
+        if (attribute.endsWith('-download')) {
             url = downloadMirror(url);
-            const removeEmpty = ((version) => {
+            const removeEmpty = (version) => {
                 if (version === void 0) {
-                    button.removeAttr('href title data-backup-href');
-                    button.html('')
+                    button.removeAttr('href title data-backup-href').html('');
                     button.parent().removeAttr('al');
-                };
-            });
+                }
+            };
             if (attribute == 'data-download') {
-                version = checked.attr('data-version');
-                window.linkVersion  = version;
-                window.linkUrl      = url;
-                window.linkDownload = checked.attr('data-backup-download');
-                button.parent().attr('al', 'launcher.release.latest');
-                if (version != 'latest') {
-                    button.parent().attr('al', 'launcher.release');
-                };
+                version = checked.data('version');
+                window.linkVersion = version;
+                window.linkUrl = url;
+                window.linkDownload = checked.data('backup-download');
+                button.parent().attr('al', version == 'latest' ? 'launcher.release.latest' : 'launcher.release');
                 removeEmpty(version);
             } else {
-                devVersion = checked.attr('data-dev-version');
-                window.linkDevVersion  = devVersion;
-                window.linkDevUrl      = url;
-                window.linkDevDownload = checked.attr('data-backup-dev-download');
-                button.parent().attr('al', 'launcher.preRelease.latest');
-                if (devVersion != 'latest') {
-                    button.parent().attr('al', 'launcher.preRelease');
-                };
+                const devVersion = checked.data('dev-version');
+                window.linkDevVersion = devVersion;
+                window.linkDevUrl = url;
+                window.linkDevDownload = checked.data('backup-dev-download');
+                button.parent().attr('al', devVersion == 'latest' ? 'launcher.preRelease.latest' : 'launcher.preRelease');
                 removeEmpty(devVersion);
             }
         }
         button.hide();
         if (attribute == 'data-url') window.linkFavicon = url ? fIconGet(url) : '';
         if (url) button.attr('href', url).show();
-    };
+    }
     i18n(() => {
         // 监听启动器下载
         $('.launcher-download .download').click(() => {
@@ -163,19 +155,14 @@ const launcherChanged = ((event = {target: $('mdui-select.launcher-list')}) => {
 
 // 监听代理是否勾选
 const proxyChanged = (() => {
-    localStorage.setItem('github-proxy', $('.github-proxy').is(':checked'));
+    const isChecked = $('.github-proxy').is(':checked');
+    localStorage.setItem('github-proxy', isChecked);
     try {
-        if ($('.github-proxy').is(':checked')) {
-            $('.launcher-download a.button, .update-layer a.download').each((i, e) => {
-                const url = $(e).attr('href');
-                $(e).attr('href', downloadMirror(url));
-            });
-        } else {
-            $('.launcher-download a.button, .update-layer a.download').each((i, e) => {
-                $(e).attr('href', $(e).attr('data-backup-href'));
-            });
-        };
-    } catch {};
+        $('.launcher-download a.button, .update-layer a.download').each((i, e) => {
+            const url = $(e).attr(isChecked ? 'href' : 'data-backup-href');
+            $(e).attr('href', isChecked ? downloadMirror(url) : url);
+        });
+    } catch {}
 });
 $('.github-proxy').change(proxyChanged);
 
@@ -187,13 +174,8 @@ $('.searchable-list').html(DOMSearchableList.list(searchable));
 function siteSearch(allow = true) {
     $('.searchmatch').contents().unwrap();
     const keyword = $('.searchable-input').val();
-    if (!allow) {
-        if (keyword) location.hash = '全部收起';
-        $('pre a.button').show();
-        return;
-    }
-    location.hash = '-';
-    if (!keyword) {
+    if (allow) location.hash = '-';
+    if (!allow || !keyword) {
         location.hash = '全部收起';
         $('pre a.button').show();
         return;
@@ -201,14 +183,15 @@ function siteSearch(allow = true) {
     $('pre details').removeAttr('open');
     $('pre a.button').each(function() {
         let z = $(this).parent();
-        const title = $(this).find('span').text();
+        const span = $(this).find('span');
+        const title = span.text();
         const description = z.attr('content') || '';
         if (description) z = z.parent();
         const pattern = new RegExp('(' + keyword.replace(/([[\](){}.*+?|^$\\\-])/g, '\\$1') + ')' , 'gi');
         if (pattern.test(title + description)) {
             z.attr('open', true);
-            const titleH = $(this).find('span').text().replace(pattern, '<text class="searchmatch">$1</text>');
-            $(this).find('span').html(titleH);
+            const titleH = span.text().replace(pattern, '<text class="searchmatch">$1</text>');
+            span.html(titleH);
             $(this).show();
         } else {
             $(this).hide();
@@ -225,24 +208,23 @@ $('#site-search').click(() => {
 
 // 监听快速查询选择项
 let countSearchable = 0;
-const searchableChanged = ((event = {target: $('.searchable-list')}) => {
-    // 处理“跳转”链接与输入框占位文本
+const searchableChanged = (event = { target: $('.searchable-list') }) => {
+    const e = $(event.target);
     const checked = checkedOption(event.target);
-    searchKeyword = checked.attr('data-search');
-    const abbr = checked.attr('data-abbr');
+    const searchKeyword = checked.data('search');
+    const abbr = checked.data('abbr');
     window.linkSearchFrom = searchableAbbr = abbr;
-    const note = checked.attr('data-note');
-    $('.searchable-label').html(`<a class="searchable-goto gravity-inline" href="${checked.attr('data-url')}" title="${note}" target="_blank"><p al="goto"></p> <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path></svg></a>`);
-    localStorage.setItem('searchable-checked', event.target.value);
+    $('.searchable-label').html(`<a class="searchable-goto gravity-inline" href="${checked.data('url')}" title="${checked.data('note')}" target="_blank"><p al="goto"></p><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path></svg></a>`);
+    localStorage.setItem('searchable-checked', e.val());
     siteSearch(false);
     // 计数器
-    ++countSearchable;
+    countSearchable++;
     if (countSearchable > 2) $('.searchable-list').click();
     // 显示 Modrinth 专用项
     $('.Modrinth').hide();
     if (abbr == 'Modrinth') $('.Modrinth').show();
     i18n();
-});
+};
 $('.searchable-list').change(searchableChanged);
 
 
@@ -250,31 +232,32 @@ $('.searchable-list').change(searchableChanged);
 $('.searchable-form').submit((event) => {
     event.preventDefault();
     const input = $('.searchable-input').val().trim();
+    if (!input) return;
     const search = encodeURI(input);
     let url;
     if (searchableAbbr == 'Modrinth') {
+        if ($('.Modrinth-projectType').val() == '') return;
         const ver = $('.Modrinth-versions').val();
         let versions = '';
         if (ver != 'all' && ver != '?') {
-            versions = '&v=';
-            for (const v of ver) versions += `${v}&v=`;
-            versions = versions.slice(0, -3);
-        };
+            versions = `&v=${ver.join('&v=')}`
+        }
         url = `https://modrinth.com/${$('.Modrinth-projectType').val()}s?q=${search}${versions}`;
-        if ($('.Modrinth-projectType').val() == '') return;
     } else {
         url = searchKeyword.replace(encodeURI('<T>'), search);
         if ($('.searchable-direct').is(':checked') && url.indexOf('&fulltext=') != -1) {
             url = url.replace(/&[^&]*$/, '');
-        };
-    };
-    if (input) createSuperLabel(url, 'searchable-search');
+        }
+    }
+    createSuperLabel(url, 'searchable-search');
 });
 
 // 快速查询 拼写完成校验
 let searchableComposition = true;
-$('.searchable-input').on('compositionstart', () => {searchableComposition = false});
-$('.searchable-input').on('compositionend'  , () => {searchableComposition = true });
+$('.searchable-input').on('compositionstart compositionend', (event) => {
+    searchableComposition = event.type == 'compositionstart' ? false : true;
+});
+
 // 快速查询 监听输入框内容
 $('.searchable-input').on('input', () => {
     setTimeout(() => {
@@ -321,7 +304,7 @@ $('.acquire-versions').click(function() {
         let dom = '';
         for (const rv of releaseVersions) {
             dom += `<mdui-menu-item class="version-item" value="${rv}"><div slot="custom" class="custom-item"><div>${rv}</div></div></mdui-menu-item>`;
-        };
+        }
         dom += '<mdui-menu-item value="all" hidden><div slot="custom" class="custom-item"><div al="all"></div></div></mdui-menu-item>';
         $('.Modrinth-versions').html(dom);
         $('.Modrinth-versions').click();
@@ -337,7 +320,7 @@ const config = ((settings) => {
         if (localStorage.getItem(option) == 'true' ) $('.' + option).attr('checked', true );
         else if (localStorage.getItem(option) == 'false') $('.' + option).attr('checked', false);
         else $('.' + option).val(localStorage.getItem(option));
-    };
+    }
 });
 config({
     'theme': 'system',
@@ -370,24 +353,25 @@ $('.searchable-input').typeahead(
                     let versions = '';
                     if (ver == '?') return;
                     if (ver != 'all') {
-                        versions = ',["versions:';
-                        for (const v of ver) versions += `${v}","versions:`;
-                        versions = versions.slice(0, -12) + '"]';
+                        versions = Array.from(ver).map(v => `versions:${v}`).join(',');
+                        versions = `[${versions}]`;
+                    }
+                    const categoryMap = {
+                        'mod': ['forge', 'fabric', 'quilt', 'liteloader', 'modloader', 'rift', 'neoforge'],
+                        'plugin': ['bukkit', 'spigot', 'paper', 'purpur', 'sponge', 'bungeecord', 'waterfall', 'velocity', 'folia'],
+                        'datapack': ['datapack']
                     };
                     switch (projectType) {
                         case 'mod':
-                            facets = encodeURI(`[["categories:'forge'","categories:'fabric'","categories:'quilt'","categories:'liteloader'","categories:'modloader'","categories:'rift'","categories:'neoforge'"],["project_type:mod"]${versions}]`);
-                            break;
                         case 'plugin':
-                            facets = encodeURI(`[["categories:'bukkit'","categories:'spigot'","categories:'paper'","categories:'purpur'","categories:'sponge'","categories:'bungeecord'","categories:'waterfall'","categories:'velocity'","categories:'folia'"],["project_type:mod"]${versions}]`);
-                            break;
                         case 'datapack':
-                            facets = encodeURI(`[["categories:'datapack'"],["project_type:mod"]${versions}]`);
+                            const categories = categoryMap[projectType].map(category => `categories:'${category}'`);
+                            facets = encodeURI(`[[${categories.join(",")}],["project_type:${projectType}"]${versions}]`);
                             break;
                         default:
                             facets = encodeURI(`[["project_type:${projectType}"]${versions}]`);
-                    };
-                };
+                    }
+                }
                 // API
                 const api = {
                     Wiki: `https://zh.minecraft.wiki/api.php?action=opensearch&search=${search}&limit=30`,
@@ -395,7 +379,7 @@ $('.searchable-input').typeahead(
                     Modrinth: `https://api.modrinth.com/v2/search?limit=30&index=relevance&query=${search}&facets=${facets}`,
                     BEDW: `https://wiki.mcbe-dev.net/w/api.php?action=opensearch&search=${search}&namespace=0%7C3000%7C3002%7C3004%7C3008%7C3010&limit=30`,
                     MinePlugin: `https://mineplugin.org/api.php?action=opensearch&search=${search}&limit=30`,
-                };
+                }
                 const url = api[abbr];
                 if (url) {
                     // 获取候选词
@@ -403,12 +387,12 @@ $('.searchable-input').typeahead(
                     return $.get(url, void(0), (abbr == 'Modrinth') ? 'json': 'jsonp').then((result) => {
                         if (result.length > 1 && Array.isArray(result[1])) {
                             result = result[1];
-                        };
+                        }
                         if (abbr == 'Modrinth') {
                             let arr = [];
                             result.hits.map((item) => arr.push(item.title));
                             result = arr;
-                        };
+                        }
                         result = result.slice(0, $('.searchable-prompt-length').val());
                         $('.searchable-clear').removeAttr('loading');  // 在获取候选词时显示加载动画（已完成）
                         return asyncResults(result);
@@ -453,11 +437,11 @@ const pre_list = ((e) => {
             } else {
                 // 外部链接
                 content = `<a class="button" href="${url}" target="_blank" ${title}</a>`;
-            };
+            }
             dom += template.replace('|DOM|', content);  // 应用模板
-        };
+        }
         dom += '</details><hr>';
-    };
+    }
     dom = dom.replace(/<hr>$/, '');
     $(e).html(dom);
     $('.nosupport').click(function() {
@@ -470,7 +454,7 @@ const pre_list = ((e) => {
 
 
 // 页面加载完成事件
-$(document).ready(() => {
+$(() => {
     // 网站列表
     $('.utility-website-list').text(JSON.stringify(utilityWebsite));
     $('.forum-list').text(JSON.stringify(forum));
@@ -525,21 +509,21 @@ $(document).ready(() => {
                         const latestStableVersion = launcher.version;
                         if (lastStableVersion && lastStableVersion != latestStableVersion) {
                             createUpdateLayer(abbr, lastStableVersion, latestStableVersion, launcher.download, device, deviceInfo, 'release');
-                        };
-                    };
+                        }
+                    }
                     if (launcher.hasOwnProperty('dev')) {
                         const lastDevVersion   = localStorage.getItem(`last-${device}-${abbr}-dev-download`);
                         const latestDevVersion = launcher.dev.version;
                         if (lastDevVersion && lastDevVersion != latestDevVersion) {
                             createUpdateLayer(abbr, lastDevVersion, latestDevVersion, launcher.dev.download, device, deviceInfo, 'preRelease');
-                        };
-                    };
-                };
-            };
+                        }
+                    }
+                }
+            }
             $('.update-layer').click(deleteUpdateLayer);
             downloadClick();
             i18n();
-        };
+        }
         // 默认值初始化
         $('.Modrinth-projectType').val('mod');
         $('.Modrinth-versions').val(['all']);
@@ -547,12 +531,9 @@ $(document).ready(() => {
         $('a.button img').on('error', (event) => $(event.target).remove());
         hashChanged();
         $('.wait').removeAttr('class style');
-        try { document.querySelector(decodeURI(location.hash)).scrollIntoView(); } catch {};
+        try { document.querySelector(decodeURI(location.hash)).scrollIntoView(); } catch {}
     });
 
     // init debug
     import("./debug.js").then(d => globalThis.debug = d.debug);
 });
-
-// 愚人节彩蛋 awa
-import("./apf.js").then(apf => (globalThis.apf = apf, apf.main()));

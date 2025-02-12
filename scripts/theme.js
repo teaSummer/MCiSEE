@@ -6,7 +6,7 @@ const themeChanged = (() => {
         $('.theme').find('mdui-segmented-button[value="system"]').click();
         $('.theme').val('system');
         return;
-    };
+    }
     localStorage.setItem('theme', value);
     switch (value) {
         case 'light':
@@ -26,7 +26,7 @@ const themeChanged = (() => {
             $('[alt="Stars Over Time"]').attr('src', 'https://starchart.cc/teaSummer/MCiSEE.svg?background=%2300000000&axis=%23101010&line=%236b63ff');
             if (system == 'dark') {
                 $('[alt="Stars Over Time"]').attr('src', 'https://starchart.cc/teaSummer/MCiSEE.svg?background=%2300000000&axis=%23ffffff&line=%236b63ff');
-            };
+            }
             break;
         case 'classic':
             const classic = `<style id="classic">
@@ -43,7 +43,7 @@ const themeChanged = (() => {
             if(!$('style#classic').length) $('body').append(classic);
             $('[alt="Stars Over Time"]').attr('src', 'https://starchart.cc/teaSummer/MCiSEE.svg?background=%2300000000&axis=%23101010&line=%236b63ff');
             break;
-    };
+    }
 });
 $('.theme').change(themeChanged);
 themeChanged();
