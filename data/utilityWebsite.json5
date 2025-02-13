@@ -162,7 +162,7 @@
       ["Salwyrr Launcher", "https://www.salwyrr.com", "Java版客户端启动器"],
       ["CMCLIENT", "https://www.cm-pack.pl/", "Java版PVP端启动器"],
       ["Horion", "https://horion.download/", "基岩版DLL注入器，仅Windows"],
-      ["Borion", "https://borion-updated.github.io/", "基岩版DLL动态库，仅Windows"]
+      ["Borion", "https://borion-updated.github.io/", "基岩版DLL动态库，仅Windows"],
       ["Atlas Client", "https://atlasclient.net/", "基岩版，仅Android"]
     ]
   },
