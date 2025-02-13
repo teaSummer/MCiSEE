@@ -117,10 +117,17 @@
       "github": "https://github.com/PCL-Community/PCL2-CE"
     },
     {
+      "title": "LauncherX",
+      "download": "https://corona.studio/launcherx/download",
+      "version": "latest",
+      "github": "https://github.com/Corona-Studio"
+      "url": "https://corona.studio/launcherx/download"
+    },
+    {
       "title": "*中国版* 我的世界启动器",
       "abbr": "我的世界启动器",
       "url": "https://mc.163.com"
-    },
+    }，
     {
       "title": "Sharp Craft Launcher",
       "abbr": "SCL",
