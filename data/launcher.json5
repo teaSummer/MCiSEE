@@ -120,8 +120,7 @@
       "title": "LauncherX",
       "download": "https://corona.studio/launcherx/download",
       "version": "latest",
-      "github": "https://github.com/Corona-Studio",
-      "url": "https://corona.studio/launcherx/download"
+      "url": "https://corona.studio/launcherx"
     },
     {
       "title": "*中国版* 我的世界启动器",
@@ -235,6 +234,12 @@
       "github": "https://github.com/PrismLauncher/PrismLauncher",
       "url": "https://prismlauncher.org"
     },
+    {
+      "title": "LauncherX",
+      "download": "https://corona.studio/launcherx/download",
+      "version": "latest",
+      "url": "https://corona.studio/launcherx"
+    },
   ],
   // ============================
   // 适用于 Linux系统 的启动器
@@ -288,6 +293,12 @@
       "version": "9.2",
       "github": "https://github.com/PrismLauncher/PrismLauncher",
       "url": "https://prismlauncher.org"
+    },
+    {
+      "title": "LauncherX",
+      "download": "https://corona.studio/launcherx/download",
+      "version": "latest",
+      "url": "https://corona.studio/launcherx"
     },
   ]
 }
