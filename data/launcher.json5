@@ -117,6 +117,11 @@
       "github": "https://github.com/PCL-Community/PCL2-CE"
     },
     {
+      "title": "LauncherX",
+      "url": "https://corona.studio/launcherx",
+      "github": "https://github.com/corona-studio/projbobcat"
+    },
+    {
       "title": "*中国版* 我的世界启动器",
       "abbr": "我的世界启动器",
       "url": "https://mc.163.com"
@@ -158,6 +163,12 @@
       "download": "https://lz.qaiu.top/parser?url=https://share.feijipan.com/s/kwAt8rhZ",
       "version": "1.0.9",
       "github": "https://github.com/LTCatt/PCL1"
+    },
+    {
+      "title": "Fluent Launcher",
+      "abbr": "Fluent",
+      "github": "https://github.com/Xcube-Studio/Natsurainko.FluentLauncher",
+      "url": "https://fluentlauncher.natsurainko.work/"
     },
   ],
   // ==========================
@@ -220,6 +231,11 @@
       "github": "https://github.com/PrismLauncher/PrismLauncher",
       "url": "https://prismlauncher.org"
     },
+    {
+      "title": "LauncherX",
+      "url": "https://corona.studio/launcherx",
+      "github": "https://github.com/corona-studio/projbobcat"
+    },
   ],
   // ============================
   // 适用于 Linux系统 的启动器
@@ -273,6 +289,11 @@
       "version": "9.2",
       "github": "https://github.com/PrismLauncher/PrismLauncher",
       "url": "https://prismlauncher.org"
+    },
+    {
+      "title": "LauncherX",
+      "url": "https://corona.studio/launcherx",
+      "github": "https://github.com/corona-studio/projbobcat"
     },
   ]
 }

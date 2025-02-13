@@ -61,6 +61,7 @@
       ["Minecraft高校联盟", "https://www.mualliance.cn", "MUA\n旨在联合全国高校 MC 爱好者，共同推动高校 MC 生态发展的公益性组织"],
       ["像素茶艺地图站", "https://pixelmap.minegraph.cn/blog/", "用最简单的方式传播好作品"],
       ["MCG中文图形站", "https://www.minegraph.cn/", "国内首个《我的世界》图形资源站"],
+      ["MC-NEO光影站", "https://www.neoshader.com/", "全国首个全授权光影站"],
       ["MC原版模组入门教程", "https://icer233.us.kg/VanillaModTutorial/", "数据包/资源包 指南"],
       ["ForgePixel中文皮肤站", "https://forgepixel.com/", "免费获取皮肤/披风 以及免费提供第三方登录服务"]
     ]
@@ -153,12 +154,16 @@
       ["Lunar Client", "https://www.lunarclient.com/", "Java版PVP端启动器"],
       ["LabyMod Launcher", "https://labymod.net/", "Java版客户端启动器"],
       ["Badlion", "https://www.badlion.net/", "Java版PVP端启动器"],
+      ["LiquidBounce", "https://liquidbounce.net/", "Java版客户端启动器"],
+      ["Meteor Client", "https://meteorclient.com/", "Java版PVP端启动器"],
       ["Feather Client", "https://feathermc.com/", "Java版PVP端启动器"],
+      ["Vape", "https://www.vape.gg/", "Java版PVP端启动器"],
       ["Soar Client", "https://www.soarclient.com/", "Java版PVP端启动器"],
       ["Salwyrr Launcher", "https://www.salwyrr.com", "Java版客户端启动器"],
       ["CMCLIENT", "https://www.cm-pack.pl/", "Java版PVP端启动器"],
       ["Horion", "https://horion.download/", "基岩版DLL注入器，仅Windows"],
-      ["Borion", "https://borion-updated.github.io/", "基岩版DLL动态库，仅Windows"]
+      ["Borion", "https://borion-updated.github.io/", "基岩版DLL动态库，仅Windows"],
+      ["Atlas Client", "https://atlasclient.net/", "基岩版，仅Android"]
     ]
   },
   {
