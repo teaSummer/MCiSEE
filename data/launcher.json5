@@ -120,7 +120,8 @@
       "title": "LauncherX",
       "download": "https://corona.studio/launcherx/download",
       "version": "latest",
-      "url": "https://corona.studio/launcherx"
+      "url": "https://corona.studio/launcherx",
+      "github": "https://github.com/corona-studio/projbobcat"
     },
     {
       "title": "*中国版* 我的世界启动器",
@@ -238,7 +239,8 @@
       "title": "LauncherX",
       "download": "https://corona.studio/launcherx/download",
       "version": "latest",
-      "url": "https://corona.studio/launcherx"
+      "url": "https://corona.studio/launcherx",
+      "github": "https://github.com/corona-studio/projbobcat"
     },
   ],
   // ============================
@@ -298,7 +300,8 @@
       "title": "LauncherX",
       "download": "https://corona.studio/launcherx/download",
       "version": "latest",
-      "url": "https://corona.studio/launcherx"
+      "url": "https://corona.studio/launcherx",
+      "github": "https://github.com/corona-studio/projbobcat"
     },
   ]
 }
