@@ -159,6 +159,14 @@
       "version": "1.0.9",
       "github": "https://github.com/LTCatt/PCL1"
     },
+    {
+      "title": "Fluent Launcher",
+      "abbr": "Fluent",
+      "download": "ms-windows-store://pdp/?ProductId=9P4NQQXQ942P&mode=mini",
+      "version": "latest",
+      "github": "https://github.com/Xcube-Studio/Natsurainko.FluentLauncher"
+      "url": "https://fluentlauncher.natsurainko.work/"
+    },
   ],
   // ==========================
   // 适用于 苹果电脑 的启动器
