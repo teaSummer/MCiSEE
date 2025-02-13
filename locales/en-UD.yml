@@ -1,0 +1,82 @@
+language: en-UD
+
+data:
+  meta.alt: ʇɟɐɹɔǝuᴉW ꞁꞁⱯ s,ʇI 'ʍoM
+  meta.title: 'ƎƎSᴉƆW - ʇɟɐɹɔǝuᴉW ꞁꞁⱯ s,ʇI ''ʍoM'
+  meta.description: '¡sǝɔɹnosǝɹ ʇɟɐɹɔǝuᴉW ʇǝᵷ ⅄ꞀISⱯƎ ''ʇɟɐɹɔǝuᴉW ɟo ꞁꞁⱯ'
+  head.title: 'ƎƎSᴉƆW - ʇɟɐɹɔǝuᴉW ꞁꞁⱯ s,ʇI ''ʍoM ${notificationCount}'
+  introduction.title: <i>ʇɟɐɹɔǝuᴉW</i> ꞁꞁⱯ s,ʇI 'ʍoM
+  introduction.1: '¿,,sddⱯ,, ʇnoqɐ ʍoH ˙sɹǝʎɐꞁd ɹoɟ sǝɔɹnosǝɹ ʇɟɐɹɔǝuᴉW ǝɹɐ ǝɹǝH'
+  introduction.2: ɹɐʇs ɐ sn ǝʌᴉᵷ ǝsɐǝꞁԀ ¡<a href="https://github.com/teaSummer/MCiSEE" target="_blank">odǝᴚ qnHʇᴉ⅁</a> ɹoɟ ǝʇnqᴉɹʇuoɔ oʇ ǝɯoɔꞁǝM
+  introduction.3: '¡ǝuoʎɹǝʌǝ ɥʇᴉʍ ᵷuᴉʇsǝɹǝʇuᴉ ǝɹoɯ ǝɹɐɥs puɐ ʎoɾuƎ'
+  contributeForThisProject: 'ʇɔǝɾoɹd sᴉɥʇ oʇ ǝʇnqᴉɹʇuoƆ'
+  device: sǝɔᴉʌǝᗡ
+  device.tip: ɟꞁǝsɹnoʎ ʎq ǝsooɥɔ ɹo 'ʎɟᴉʇuǝpᴉ oʇnⱯ
+  Android.tip: ʇǝꞁqɐ⟘/ǝuoɥԀ - SOʎuoɯɹɐH/pᴉoɹpuⱯ
+  iOS.tip: ʇǝꞁqɐ⟘/ǝuoɥԀ - SOᴉ
+  Windows.tip: ƆԀ - sʍopuᴉM
+  macOS.tip: ƆԀ - SOɔɐɯ
+  Linux.tip: ƆԀ - xnuᴉꞀ
+  unsupported: pǝʇɹoddnsu∩
+  unknown: uʍouʞu∩
+  unselected: '[ ʇɔǝꞁǝs oʇ ssǝɹԀ ]'
+  app: sddⱯ
+  launcher: sɹǝɥɔunɐꞀ
+  launcherOnlyJavaEdition: '(<b>uoᴉʇᴉpƎ ɐʌɐՐ</b>) ɹǝɥɔunɐꞀ'
+  website: sǝʇᴉsqǝM
+  searchable: ɥɔɹɐǝS ɹǝʞɔᴉnꝹ
+  utilityWebsite: sǝʇᴉsqǝM ꞁnɟǝs∩
+  forum: sɯnɹoℲ
+  config: suoᴉʇdO
+  goto: '¡o⅁ ʇsnՐ'
+  download: pɐoꞁuʍoᗡ
+  downloadedLauncherUpdate: ':(pǝpɐoꞁuʍoᗡ) ǝʇɐpd∩ ɹǝɥɔunɐꞀ'
+  updatedTo: ':pǝʇɐpdn uǝǝq sɐɥ'
+  search: ɥɔɹɐǝS
+  siteSearch: ɥɔɹɐǝS ǝʇᴉS
+  searchFrom: '˙˙˙˙ ${linkSearchFrom} ɯoɹɟ ɥɔɹɐǝS '
+  gotoLauncherWebsite: 'ǝʇᴉsqǝʍ ɹǝɥɔunɐꞁ o⟘${linkFavicon}'
+  gotoLauncherGitHub: 'odǝᴚ qnHʇᴉ⅁ o⟘${faviconGH}'
+  prefixType: ' :ǝdʎ⟘'
+  mods: spoW
+  plugins: suᴉᵷnꞁԀ
+  dataPacks: sʞɔɐԀ ɐʇɐᗡ
+  shaders: sɹǝpɐɥS
+  resourcePacks: sʞɔɐԀ ǝɔɹnosǝᴚ
+  modpacks: sʞɔɐdpoW
+  prefixVersions: ' :suoᴉsɹǝɅ'
+  all: ꞁꞁⱯ
+  acquire: ǝɹᴉnbɔⱯ
+  unfold: '˙˙˙ǝɹoW'
+  fold: ssǝꞀ
+  GitHubProxy: (puɐꞁuᴉɐW ǝsǝuᴉɥƆ ɹoɟ) <a href="https://ghfast.top" target="_blank">ʎxoɹd ɹoɹɹᴉɯ</a> ɥʇᴉʍ qnHʇᴉ⅁ ǝɥʇ dnpǝǝdS
+  searchableDirect: 'ǝꞁqᴉssod uǝɥʍ ǝᵷɐd ꞁᴉɐʇǝp ǝɥʇ oʇ ssǝɔɔɐ oʇnⱯ :ɥɔɹɐǝS ɹǝʞɔᴉnꝹ'
+  searchablePromptLength: ':(0Ɛ-0)spɹoM ʇdɯoɹԀ'
+  default: ʇꞁnɐɟǝᗡ
+  daytime: ǝɯᴉʇʎɐᗡ
+  nighttime: ǝɯᴉʇʇɥᵷᴉN
+  classic: ɔᴉssɐꞁƆ
+  systemTheme: ɯǝʇsʎS
+  lightTheme: ǝɯǝɥ⟘ ʇɥᵷᴉꞀ
+  darkTheme: ǝɯǝɥ⟘ ʞɹɐᗡ
+  earlyTheme: ǝɯǝɥ⟘ ʎꞁɹɐƎ
+  ellipsis: '˙˙˙˙'
+  startDownloading: ':ᵷuᴉpɐoꞁuʍop ʇɹɐʇs ꞁꞁᴉʍ ʇI'
+  statistics: sɔᴉʇsᴉʇɐʇS
+  visitorCount: ʇunoƆ ɹoʇᴉsᴉɅ
+  contributors: sɹoʇnqᴉɹʇuoƆ
+  starsOverTime: ǝɯᴉ⟘ ɹǝʌO sɹɐʇS qnHʇᴉ⅁
+  ICP: '${""}'
+  credit: '˙ʇɟosoɹɔᴉW ɹo ᵷuɐɾoW ɥʇᴉʍ pǝʇɐᴉɔossɐ ʇou ǝɹɐ ǝM ˙ǝʇᴉsqǝʍ ʇɟɐɹɔǝuᴉW ꞁɐᴉɔᴉɟɟo uɐ ʇoN'
+  license.1: '📑'
+  license.2: ɹǝpun pǝsuǝɔᴉꞁ sᴉ ǝᵷɐd sᴉɥ⟘
+  content: ʇuǝʇuoƆ
+  top: do⟘
+  bottom: ɯoʇʇoᗺ
+  latest: ʇsǝʇɐꞀ
+  release: ǝꞁqɐʇS
+  preRelease: ʌǝᗡ
+  launcher.release: ${linkVersion} {release} {download}${downloadSVG}
+  launcher.release.latest: {release} {latest} {download}${downloadSVG}
+  launcher.preRelease: ${linkDevVersion} {preRelease} {download}${downloadSVG}
+  launcher.preRelease.latest: {preRelease} {latest} {download}${downloadSVG}

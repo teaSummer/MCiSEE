@@ -18,7 +18,7 @@
 
 QQ交流群：596520944；
 
-~~喵呜，可以赏点钱吗？~~[爱发电](https://afdian.com/a/MCiSEE)
+~~喵呜，网站运营仍需经费，可以赏点钱吗？~~[爱发电](https://afdian.com/a/MCiSEE)
 
 ## 贡献教程
 

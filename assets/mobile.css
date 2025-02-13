@@ -18,7 +18,6 @@ pre a.button {
 }
 
 #目录 {
-    width: calc(26vw);
     right: calc(-16vw);
     margin-right: 14px;
 }

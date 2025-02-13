@@ -248,18 +248,7 @@ a.button:not(.download)::after {
 }
 
 #目录 {
-    padding: 8px;
-    width: calc(8vw);
-    /* height: auto; */
-    max-height: 20px;
-    position: fixed;
-    border-radius: 10px;
-    transition: all 1.2s;
-    top: calc(35vh);
-    right: calc(-6vw);
     background-color: #c0b9ff86;
-    user-select: none;
-    z-index: 999;
 }
 
 #目录 a {

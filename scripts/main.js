@@ -32,7 +32,7 @@ const createUpdateLayer = ((abbr, lastVersion, latestVersion, download, device, 
           <text al="updatedTo"></text>
         </div><div>
           <text class="last-version">${lastVersion}</text>
-          <text al="updateArrow"></text>
+          <text>➔</text>
           <text class="latest-version">${latestVersion}</text>
         </div>
         <div>(${deviceInfo})</div>
@@ -114,8 +114,7 @@ const launcherChanged = ((event = {target: $('mdui-select.launcher-list')}) => {
             url = downloadMirror(url);
             const removeEmpty = (version) => {
                 if (version === void 0) {
-                    button.removeAttr('href title data-backup-href').html('');
-                    button.parent().removeAttr('al');
+                    button.removeAttr('href title data-backup-href al').html('');
                 }
             };
             if (attribute == 'data-download') {
@@ -123,14 +122,16 @@ const launcherChanged = ((event = {target: $('mdui-select.launcher-list')}) => {
                 window.linkVersion = version;
                 window.linkUrl = url;
                 window.linkDownload = checked.data('backup-download');
-                button.parent().attr('al', version == 'latest' ? 'launcher.release.latest' : 'launcher.release');
+                console.log(button.parent())
+                call = version == 'latest' ? 'launcher.release.latest' : 'launcher.release';
+                button.attr('al', call)
                 removeEmpty(version);
             } else {
                 const devVersion = checked.data('dev-version');
                 window.linkDevVersion = devVersion;
                 window.linkDevUrl = url;
                 window.linkDevDownload = checked.data('backup-dev-download');
-                button.parent().attr('al', devVersion == 'latest' ? 'launcher.preRelease.latest' : 'launcher.preRelease');
+                button.attr('al', call)
                 removeEmpty(devVersion);
             }
         }

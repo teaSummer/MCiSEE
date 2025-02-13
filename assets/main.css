@@ -118,7 +118,7 @@ div[id]>*:first-child {
 }
 
 .apf:hover {
-    transform: scale(1.05) rotate(-2deg);
+    transform: scale(1.05) rotate(-1deg);
     transition: transform 0.5s;
 }
 
@@ -327,6 +327,21 @@ div[id]>*:first-child {
 main>div {
     background-color: transparent;
     border-radius: 10px;
+}
+
+#目录 {
+    width: fit-content;
+    /* height: auto; */
+    padding-right: calc(1.3vw);
+    position: fixed;
+    top: calc(35vh);
+    right: calc(-6vw);
+    padding: 8px;
+    max-height: 20px;
+    border-radius: 10px;
+    transition: all 1.2s;
+    user-select: none;
+    z-index: 999;
 }
 
 #目录>dl {

@@ -3,6 +3,7 @@ let searchKeyword = '', searchableAbbr = '';
 
 let hShake;
 let notificationCount = '';
+let checkDate = (date = new Date()) => (date.getDate() == 1 && date.getMonth() + 1 == 4) ? true : false;
 
 const downloadMirrorUrl = 'https://ghfast.top/<T>';
 const fIconUrl = 'https://www.faviconextractor.com/favicon/<T>?larger=true';
@@ -22,16 +23,17 @@ const faviconGH = fIconGet('github.com');
 // 国际化 (internationalization)
 al.setLangPropPath('locales');
 al.setDefaultCountry({
-    en: 'en',
+    en: 'en-US',
     zh: 'zh-CN',
 });
 const i18n = ((callback = () => {}) => {
     al.setLangProp([
         'zh-CN.yml',
         'zh-TW.yml',
-        'en.yml',
+        'en-US.yml',
+        'en-UD.yml',
     ], () => {
-        al.load(void 0, al.mode.HTML, callback);
+        al.load((!checkDate() && !cfg.testMode) ? void 0 : 'en-UD', al.mode.HTML, callback);
     }, {url: true, yaml: true});
 });
 
@@ -106,4 +108,5 @@ const utilityWebsite = read('utilityWebsite');
 const forum = read('forum');
 
 // 愚人节彩蛋
+const cfg = read("scripts/cfg/apf.cfg.json5", true);
 import("./apf.js").then(apf => (globalThis.apf = apf, apf.main()));

@@ -30,13 +30,13 @@
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" al-aplto="content: meta.image.alt;">
+    <meta property="og:image:alt" al-aplto="content: meta.alt;">
     <meta property="og:url" content="https://mcisee.top">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" al-aplto="content: meta.title;">
     <meta name="twitter:description" al-aplto="content: meta.description;">
     <meta name="twitter:image" content="">
-    <meta name="twitter:image:alt" al-aplto="content: meta.image.alt;">
+    <meta name="twitter:image:alt" al-aplto="content: meta.alt;">
     <link rel="stylesheet" href="assets/lib/mdui.css">
     <link rel="stylesheet" href="assets/lib/typeahead.css">
     <link rel="stylesheet" href="assets/main.css">
@@ -57,16 +57,16 @@
 <sidebar id="目录">
     <info al="content"></info>
     <dl>
-        <dt><a href="#顶部" al="content.top"></a></dt>
-        <dt><a href="#设备" al="content.device"></a></dt>
-        <dt><a href="#软件" al="content.app"></a></dt>
-        <dd><a href="#启动器" al="content.app.launcher"></a></dd>
-        <dt><a href="#网站" al="content.website"></a></dt>
-        <dd><a href="#快速查询" al="content.website.searchable"></a></dd>
-        <dd><a href="#实用网站" al="content.website.utilityWebsite"></a></dd>
-        <dd><a href="#论坛" al="content.website.forum"></a></dd>
-        <dt><a href="#配置" al="content.config"></a></dt>
-        <dt><a href="#底部" al="content.bottom"></a></dt>
+        <dt><a href="#顶部" al="top"></a></dt>
+        <dt><a href="#设备" al="device"></a></dt>
+        <dt><a href="#软件" al="app"></a></dt>
+        <dd><a href="#启动器" al="launcher"></a></dd>
+        <dt><a href="#网站" al="website"></a></dt>
+        <dd><a href="#快速查询" al="searchable"></a></dd>
+        <dd><a href="#实用网站" al="utilityWebsite"></a></dd>
+        <dd><a href="#论坛" al="forum"></a></dd>
+        <dt><a href="#配置" al="config"></a></dt>
+        <dt><a href="#底部" al="bottom"></a></dt>
     </dl>
 </sidebar>
 <main class="wait" style="display: none;">
@@ -110,10 +110,12 @@
                     </div>
                     <div class="launcher-download gravity-inline">
                         <div>
-                            <button class="download data-download-launcher" style="display: none;"></button>
+                            <a class="button download data-download-launcher" style="display: none;"
+                               ondragstart="event.dataTransfer.effectAllowed = 'none';"></a>
                         </div>
                         <div>
-                            <button class="download data-dev-download-launcher" style="display: none;"></button>
+                            <a class="button download data-dev-download-launcher" style="display: none;"
+                               ondragstart="event.dataTransfer.effectAllowed = 'none';"></a>
                         </div>
                     </div>
                 </div>
