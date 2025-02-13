@@ -153,12 +153,16 @@
       ["Lunar Client", "https://www.lunarclient.com/", "Java版PVP端启动器"],
       ["LabyMod Launcher", "https://labymod.net/", "Java版客户端启动器"],
       ["Badlion", "https://www.badlion.net/", "Java版PVP端启动器"],
+      ["LiquidBounce", "https://liquidbounce.net/", "Java版客户端启动器"],
+      ["Meteor Client", "https://meteorclient.com/", "Java版PVP端启动器"],
       ["Feather Client", "https://feathermc.com/", "Java版PVP端启动器"],
+      ["Vape", "https://www.vape.gg/", "Java版PVP端启动器"]，
       ["Soar Client", "https://www.soarclient.com/", "Java版PVP端启动器"],
       ["Salwyrr Launcher", "https://www.salwyrr.com", "Java版客户端启动器"],
       ["CMCLIENT", "https://www.cm-pack.pl/", "Java版PVP端启动器"],
       ["Horion", "https://horion.download/", "基岩版DLL注入器，仅Windows"],
       ["Borion", "https://borion-updated.github.io/", "基岩版DLL动态库，仅Windows"]
+      ["Atlas Client", "https://atlasclient.net/", "基岩版，仅Android"]
     ]
   },
   {
