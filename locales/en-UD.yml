@@ -76,7 +76,7 @@ data:
   latest: ʇsǝʇɐꞀ
   release: ǝꞁqɐʇS
   preRelease: ʌǝᗡ
-  launcher.release: ${linkVersion} {release} {download}${downloadSVG}
-  launcher.release.latest: {release} {latest} {download}${downloadSVG}
-  launcher.preRelease: ${linkDevVersion} {preRelease} {download}${downloadSVG}
-  launcher.preRelease.latest: {preRelease} {latest} {download}${downloadSVG}
+  launcher.release: '${linkVersion} {release} {download}${downloadSVG}'
+  launcher.release.latest: '{release} {latest} {download}${downloadSVG}'
+  launcher.preRelease: '${linkDevVersion} {preRelease} {download}${downloadSVG}'
+  launcher.preRelease.latest: '{preRelease} {latest} {download}${downloadSVG}'

@@ -76,7 +76,7 @@ data:
   latest: 最新
   release: 稳定版
   preRelease: 开发版
-  launcher.release: ${downloadSVG}{download}{release} ${linkVersion}
-  launcher.release.latest: ${downloadSVG}{download}{latest}{release}
-  launcher.preRelease: ${downloadSVG}{download}{preRelease} ${linkDevVersion}
-  launcher.preRelease.latest: ${downloadSVG}{download}{latest}{preRelease}
+  launcher.release: '${downloadSVG}{download}{release} ${linkVersion}'
+  launcher.release.latest: '${downloadSVG}{download}{latest}{release}'
+  launcher.preRelease: '${downloadSVG}{download}{preRelease} ${linkDevVersion}'
+  launcher.preRelease.latest: '${downloadSVG}{download}{latest}{preRelease}'
