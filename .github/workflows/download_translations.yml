@@ -2,7 +2,7 @@ name: Download Translations
 
 on:
   schedule:
-    - cron: 0 16 * * 0
+    - cron: 10 16 * * *
   workflow_dispatch:
 
 jobs:
@@ -29,8 +29,11 @@ jobs:
           sudo chmod -R ugo+rwX .
           sed -i ":a;N;s/^        '[a-z][a-z]-[A-Z][A-Z]\.yml',\?\n//g;ta" scripts/init.js
           for TF in $(ls locales); do
-            sed -i -e 's/^/  /g' -e "1ilanguage: `basename $TF .yml`\n\ndata:" locales/$TF
-            sed -i "s/al\.setLangProp(\[/al.setLangProp([\n        '$TF',/g" scripts/init.js
+            if [[ $TF == *.yml ]]; then
+              TL=$(basename $TF .yml)
+              sed -i -e 's/^/  /g' -e "1i# Crowdin: https:\/\/crowdin.com\/project\/mcisee\/$TL\nlanguage: $TL\n\ndata:" locales/$TF
+              sed -i "s/al\.setLangProp(\[/al.setLangProp([\n        '$TF',/g" scripts/init.js
+            fi
           done
           MESSAGE='modify: translations
           

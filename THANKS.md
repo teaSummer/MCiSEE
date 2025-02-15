@@ -63,6 +63,8 @@
 
 [Add & Commit](https://github.com/EndBug/add-and-commit) 提交并推送更改
 
+[Crowdin Action](https://github.com/crowdin/github-action) Crowdin本地化
+
 
 ## 贡献者
 

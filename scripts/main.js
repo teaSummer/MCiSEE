@@ -130,6 +130,7 @@ const launcherChanged = ((event = {target: $('mdui-select.launcher-list')}) => {
                 window.linkDevVersion = devVersion;
                 window.linkDevUrl = url;
                 window.linkDevDownload = checked.data('backup-dev-download');
+                call = version == 'latest' ? 'launcher.preRelease.latest' : 'launcher.preRelease';
                 button.attr('al', call)
                 removeEmpty(devVersion);
             }
