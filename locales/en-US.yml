@@ -2,14 +2,14 @@ language: en-US
 
 data:
   meta.alt: Wow, It's All Minecraft
-  meta.title: 'Wow, It''s All Minecraft - MCiSEE'
+  meta.title: Wow, It's All Minecraft - MCiSEE
   meta.description: All of Minecraft, EASILY get Minecraft resources!
   head.title: '${notificationCount} Wow, It''s All Minecraft - MCiSEE'
   introduction.title: Wow, It's All <i>Minecraft</i>
   introduction.1: Here are Minecraft resources for players. How about "Apps"?
   introduction.2: Welcome to contribute for <a href="https://github.com/teaSummer/MCiSEE" target="_blank">GitHub Repo</a>! Please give us a star
   introduction.3: Enjoy and share more interesting with everyone!
-  contributeForThisProject: 'Contribute to this project'
+  contributeForThisProject: Contribute to this project
   device: Devices
   device.tip: Auto identify, or choose by yourself
   Android.tip: Android/HarmonyOS - Phone/Tablet
@@ -22,7 +22,7 @@ data:
   unselected: '[ Press to select ]'
   app: Apps
   launcher: Launchers
-  launcherOnlyJavaEdition: 'Launcher (<b>Java Edition</b>)'
+  launcherOnlyJavaEdition: Launcher (<b>Java Edition</b>)
   website: Websites
   searchable: Quicker Search
   utilityWebsite: Useful Websites
@@ -30,7 +30,7 @@ data:
   config: Options
   goto: Just Go!
   download: Download
-  downloadedLauncherUpdate: 'Launcher Update (Downloaded):'
+  downloadedLauncherUpdate: 'Downloaded launcher updates:'
   updatedTo: 'has been updated:'
   search: Search
   siteSearch: Site Search

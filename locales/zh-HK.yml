@@ -1,4 +1,4 @@
-language: zh-TW
+language: zh-HK
 
 data:
   meta.alt: 所見皆是麥塊
@@ -31,7 +31,7 @@ data:
   goto: 前往
   download: 下載
   downloadedLauncherUpdate: 已下載的啟動器有更新：
-  updatedTo: 已發布新版本：
+  updatedTo: 已發佈新版本：
   search: 查找
   siteSearch: 站內查找
   searchFrom: ' 從 ${linkSearchFrom} 查找 ....'
@@ -40,8 +40,8 @@ data:
   prefixType: 類型
   mods: 模組
   plugins: 插件
-  dataPacks: 資料包
-  shaders: 著色器
+  dataPacks: 數據包
+  shaders: 着色器
   resourcePacks: 資源包
   modpacks: 整合包
   prefixVersions: 版本
@@ -67,13 +67,13 @@ data:
   contributors: 貢獻者
   starsOverTime: GitHub 星星趨勢
   ICP: <a href="https://icp.gov.moe/?keyword=20247837" target="_blank">萌ICP備20247837號</a>
-  credit: 本站并非Minecraft官方網站，與Mojang和微軟并無從屬關係。
+  credit: 本站並非Minecraft官方網站，與Mojang和微軟亦無從屬關係。
   license.1: 本頁面内容采用
   license.2: 協議授權
   content: 目錄
   top: 頂部
   bottom: 底部
-  latest: 最新版
+  latest: 最新
   release: 發行版
   preRelease: 預發行版
   launcher.release: '${downloadSVG}{download}{release} ${linkVersion}'

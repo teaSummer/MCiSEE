@@ -2,14 +2,14 @@ language: zh-CN
 
 data:
   meta.alt: 所见皆是Minecraft
-  meta.title: '所见皆是Minecraft - MCiSEE'
+  meta.title: 所见皆是Minecraft - MCiSEE
   meta.description: 所见皆是Minecraft，让获取MC资源更加轻便！
   head.title: '${notificationCount} 所见皆是Minecraft - MCiSEE'
   introduction.title: 所见皆是<i>Minecraft</i>
   introduction.1: 玩家们可以从这里挖掘Minecraft常用资源，例如软件等。
   introduction.2: 欢迎各位来 <a href="https://github.com/teaSummer/MCiSEE" target="_blank">GitHub 项目</a> 做出贡献 或 点击 Star
   introduction.3: 这里也需要你们提供更多有趣的资源！
-  contributeForThisProject: '为此项目做出贡献'
+  contributeForThisProject: 为此项目做出贡献
   device: 设备
   device.tip: 自动判断，可手动选择
   Android.tip: 安卓/鸿蒙 - 手机/平板
@@ -22,7 +22,7 @@ data:
   unselected: '【待选择】'
   app: 软件
   launcher: 启动器
-  launcherOnlyJavaEdition: '启动器（<b>Java版</b>）'
+  launcherOnlyJavaEdition: 启动器（<b>Java版</b>）
   website: 网站
   searchable: 快速查询
   utilityWebsite: 实用网站
@@ -30,7 +30,7 @@ data:
   config: 配置
   goto: 跳转
   download: 下载
-  downloadedLauncherUpdate: 您下载过的启动器更新啦：
+  downloadedLauncherUpdate: 已下载的启动器有更新：
   updatedTo: 已发布新版本：
   search: 搜索
   siteSearch: 站内搜索
@@ -50,7 +50,7 @@ data:
   unfold: 展开...
   fold: 收起
   GitHubProxy: GitHub 文件使用 <a href="https://ghfast.top" target="_blank">代理加速</a> 下載
-  searchableDirect: '快速查询：尽可能自动进入详情页'
+  searchableDirect: 快速查询：尽可能自动进入详情页
   searchablePromptLength: 候选词数(0-30)：
   default: 默认
   daytime: 日间

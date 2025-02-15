@@ -2,14 +2,14 @@ language: en-UD
 
 data:
   meta.alt: ʇɟɐɹɔǝuᴉW ꞁꞁⱯ s,ʇI 'ʍoM
-  meta.title: 'ƎƎSᴉƆW - ʇɟɐɹɔǝuᴉW ꞁꞁⱯ s,ʇI ''ʍoM'
+  meta.title: ƎƎSᴉƆW - ʇɟɐɹɔǝuᴉW ꞁꞁⱯ s,ʇI 'ʍoM
   meta.description: '¡sǝɔɹnosǝɹ ʇɟɐɹɔǝuᴉW ʇǝᵷ ⅄ꞀISⱯƎ ''ʇɟɐɹɔǝuᴉW ɟo ꞁꞁⱯ'
   head.title: 'ƎƎSᴉƆW - ʇɟɐɹɔǝuᴉW ꞁꞁⱯ s,ʇI ''ʍoM ${notificationCount}'
   introduction.title: <i>ʇɟɐɹɔǝuᴉW</i> ꞁꞁⱯ s,ʇI 'ʍoM
   introduction.1: '¿,,sddⱯ,, ʇnoqɐ ʍoH ˙sɹǝʎɐꞁd ɹoɟ sǝɔɹnosǝɹ ʇɟɐɹɔǝuᴉW ǝɹɐ ǝɹǝH'
   introduction.2: ɹɐʇs ɐ sn ǝʌᴉᵷ ǝsɐǝꞁԀ ¡<a href="https://github.com/teaSummer/MCiSEE" target="_blank">odǝᴚ qnHʇᴉ⅁</a> ɹoɟ ǝʇnqᴉɹʇuoɔ oʇ ǝɯoɔꞁǝM
   introduction.3: '¡ǝuoʎɹǝʌǝ ɥʇᴉʍ ᵷuᴉʇsǝɹǝʇuᴉ ǝɹoɯ ǝɹɐɥs puɐ ʎoɾuƎ'
-  contributeForThisProject: 'ʇɔǝɾoɹd sᴉɥʇ oʇ ǝʇnqᴉɹʇuoƆ'
+  contributeForThisProject: ʇɔǝɾoɹd sᴉɥʇ oʇ ǝʇnqᴉɹʇuoƆ
   device: sǝɔᴉʌǝᗡ
   device.tip: ɟꞁǝsɹnoʎ ʎq ǝsooɥɔ ɹo 'ʎɟᴉʇuǝpᴉ oʇnⱯ
   Android.tip: ʇǝꞁqɐ⟘/ǝuoɥԀ - SOʎuoɯɹɐH/pᴉoɹpuⱯ
@@ -22,7 +22,7 @@ data:
   unselected: '[ ʇɔǝꞁǝs oʇ ssǝɹԀ ]'
   app: sddⱯ
   launcher: sɹǝɥɔunɐꞀ
-  launcherOnlyJavaEdition: '(<b>uoᴉʇᴉpƎ ɐʌɐՐ</b>) ɹǝɥɔunɐꞀ'
+  launcherOnlyJavaEdition: (<b>uoᴉʇᴉpƎ ɐʌɐՐ</b>) ɹǝɥɔunɐꞀ
   website: sǝʇᴉsqǝM
   searchable: ɥɔɹɐǝS ɹǝʞɔᴉnꝹ
   utilityWebsite: sǝʇᴉsqǝM ꞁnɟǝs∩
@@ -30,7 +30,7 @@ data:
   config: suoᴉʇdO
   goto: '¡o⅁ ʇsnՐ'
   download: pɐoꞁuʍoᗡ
-  downloadedLauncherUpdate: ':(pǝpɐoꞁuʍoᗡ) ǝʇɐpd∩ ɹǝɥɔunɐꞀ'
+  downloadedLauncherUpdate: ':sǝʇɐpdn ɹǝɥɔunɐꞁ pǝpɐoꞁuʍoᗡ'
   updatedTo: ':pǝʇɐpdn uǝǝq sɐɥ'
   search: ɥɔɹɐǝS
   siteSearch: ɥɔɹɐǝS ǝʇᴉS
@@ -50,7 +50,7 @@ data:
   unfold: '˙˙˙ǝɹoW'
   fold: ssǝꞀ
   GitHubProxy: (puɐꞁuᴉɐW ǝsǝuᴉɥƆ ɹoɟ) <a href="https://ghfast.top" target="_blank">ʎxoɹd ɹoɹɹᴉɯ</a> ɥʇᴉʍ qnHʇᴉ⅁ ǝɥʇ dnpǝǝdS
-  searchableDirect: 'ǝꞁqᴉssod uǝɥʍ ǝᵷɐd ꞁᴉɐʇǝp ǝɥʇ oʇ ssǝɔɔɐ oʇnⱯ :ɥɔɹɐǝS ɹǝʞɔᴉnꝹ'
+  searchableDirect: ǝꞁqᴉssod uǝɥʍ ǝᵷɐd ꞁᴉɐʇǝp ǝɥʇ oʇ ssǝɔɔɐ oʇnⱯ :ɥɔɹɐǝS ɹǝʞɔᴉnꝹ
   searchablePromptLength: ':(0Ɛ-0)spɹoM ʇdɯoɹԀ'
   default: ʇꞁnɐɟǝᗡ
   daytime: ǝɯᴉʇʎɐᗡ
