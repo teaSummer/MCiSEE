@@ -122,7 +122,6 @@ const launcherChanged = ((event = {target: $('mdui-select.launcher-list')}) => {
                 window.linkVersion = version;
                 window.linkUrl = url;
                 window.linkDownload = checked.data('backup-download');
-                console.log(button.parent())
                 call = version == 'latest' ? 'launcher.release.latest' : 'launcher.release';
                 button.attr('al', call)
                 removeEmpty(version);
@@ -177,7 +176,7 @@ function siteSearch(allow = true) {
     const keyword = $('.searchable-input').val();
     if (allow) location.hash = '-';
     if (!allow || !keyword) {
-        location.hash = '全部收起';
+        if (allow) location.hash = '全部收起';
         $('pre a.button').show();
         return;
     }
@@ -215,7 +214,8 @@ const searchableChanged = (event = { target: $('.searchable-list') }) => {
     const searchKeyword = checked.data('search');
     const abbr = checked.data('abbr');
     window.linkSearchFrom = searchableAbbr = abbr;
-    $('.searchable-label').html(`<a class="searchable-goto gravity-inline" href="${checked.data('url')}" title="${checked.data('note')}" target="_blank"><p al="goto"></p><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path></svg></a>`);
+    $('.searchable-label').html(`<a class="searchable-goto gravity-inline" href="${checked.data('url')}" title="${checked.data('note') ? checked.data('note') : ''}" target="_blank"><p al="goto"></p>
+    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path></svg></a>`);
     localStorage.setItem('searchable-checked', e.val());
     siteSearch(false);
     // 计数器

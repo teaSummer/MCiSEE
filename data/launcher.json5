@@ -118,8 +118,10 @@
     },
     {
       "title": "LauncherX",
-      "url": "https://corona.studio/launcherx",
-      "github": "https://github.com/corona-studio/projbobcat"
+      "download": "https://github.com/Corona-Studio/ProjBobcat/archive/refs/tags/v1.89.0.zip",
+      "version": "1.89.0",
+      "github": "https://github.com/corona-studio/projbobcat",
+      "url": "https://corona.studio/launcherx"
     },
     {
       "title": "*中国版* 我的世界启动器",
@@ -127,12 +129,15 @@
       "url": "https://mc.163.com"
     },
     {
-      "title": "Sharp Craft Launcher",
-      "abbr": "SCL",
-      "download": "https://github.com/Steve-xmh/scl/releases/download/v1.2.0/SharpCraftLauncher-20240216-1.2.0-i686.exe",
-      "version": "1.2.0",
-      "github": "https://github.com/Steve-xmh/scl",
-      "url": "https://steve-xmh.github.io/scl/"
+      "title": "Fluent Launcher",
+      "download": "https://github.com/Xcube-Studio/Natsurainko.FluentLauncher/releases/download/v2.3.4.0/Natsurainko.FluentLauncher_2.3.4.0.msixbundle",
+      "version": "2.3.4.0",
+      "github": "https://github.com/Xcube-Studio/Natsurainko.FluentLauncher",
+      "url": "https://fluentlauncher.natsurainko.work/",
+      "dev": {
+        "download": "https://github.com/Xcube-Studio/Natsurainko.FluentLauncher/releases/download/pre-release-v2.3.4.1/package.msixbundle",
+        "version": "2.3.4.1"
+      }
     },
     {
       "title": "MultiMC",
@@ -163,12 +168,6 @@
       "download": "https://lz.qaiu.top/parser?url=https://share.feijipan.com/s/kwAt8rhZ",
       "version": "1.0.9",
       "github": "https://github.com/LTCatt/PCL1"
-    },
-    {
-      "title": "Fluent Launcher",
-      "abbr": "Fluent",
-      "github": "https://github.com/Xcube-Studio/Natsurainko.FluentLauncher",
-      "url": "https://fluentlauncher.natsurainko.work/"
     },
   ],
   // ==========================
@@ -208,14 +207,6 @@
       "url": "https://xmcl.app"
     },
     {
-      "title": "Sharp Craft Launcher",
-      "abbr": "SCL",
-      "download": "https://github.com/Steve-xmh/scl/releases/download/v1.2.0/SharpCraftLauncher-20240216-1.2.0-universal-darwin.tar.gz",
-      "version": "1.2.0",
-      "github": "https://github.com/Steve-xmh/scl",
-      "url": "https://steve-xmh.github.io/scl/"
-    },
-    {
       "title": "MultiMC",
       "abbr": "MMC",
       "download": "https://files.multimc.org/downloads/mmc-develop-osx64.tar.gz",
@@ -233,8 +224,10 @@
     },
     {
       "title": "LauncherX",
-      "url": "https://corona.studio/launcherx",
-      "github": "https://github.com/corona-studio/projbobcat"
+      "download": "https://github.com/Corona-Studio/ProjBobcat/archive/refs/tags/v1.89.0.zip",
+      "version": "1.89.0",
+      "github": "https://github.com/corona-studio/projbobcat",
+      "url": "https://corona.studio/launcherx"
     },
   ],
   // ============================
@@ -275,14 +268,6 @@
       "url": "https://xmcl.app"
     },
     {
-      "title": "Sharp Craft Launcher",
-      "abbr": "SCL",
-      "download": "https://github.com/Steve-xmh/scl/releases/download/v1.2.0/SharpCraftLauncher-20240216-1.2.0-linux-x86_64.tar.gz",
-      "version": "1.2.0",
-      "github": "https://github.com/Steve-xmh/scl",
-      "url": "https://steve-xmh.github.io/scl/"
-    },
-    {
       "title": "Prism Launcher",
       "abbr": "Prism",
       "download": "https://github.com/PrismLauncher/PrismLauncher/releases/download/9.2/PrismLauncher-Linux-x86_64.AppImage",
@@ -292,8 +277,10 @@
     },
     {
       "title": "LauncherX",
-      "url": "https://corona.studio/launcherx",
-      "github": "https://github.com/corona-studio/projbobcat"
+      "download": "https://github.com/Corona-Studio/ProjBobcat/archive/refs/tags/v1.89.0.zip",
+      "version": "1.89.0",
+      "github": "https://github.com/corona-studio/projbobcat",
+      "url": "https://corona.studio/launcherx"
     },
   ]
 }

@@ -38,10 +38,14 @@ jobs:
             device: Android
           - abbr: XMCL
             github: https://github.com/Voxelum/x-minecraft-launcher
-          - abbr: Prism
-            github: https://github.com/PrismLauncher/PrismLauncher
           - abbr: PCL2 社区版
             github: https://github.com/PCL-Community/PCL2-CE
+          - abbr: Prism
+            github: https://github.com/PrismLauncher/PrismLauncher
+          - abbr: LauncherX
+            github: https://github.com/corona-studio/projbobcat
+          - abbr: Fluent Launcher
+            github: https://github.com/Xcube-Studio/Natsurainko.FluentLauncher
     steps:
       - uses: actions/checkout@main
       - name: Handle files
