@@ -1,0 +1,10 @@
+"project_id_env": "CROWDIN_PROJECT_ID"
+"api_token_env": "CROWDIN_PERSONAL_TOKEN"
+
+"files": [
+  {
+    "source": "/*.yml",
+    "translation": "/locales/%locale%.yml",
+    "skip_untranslated_files": true
+  }
+]
