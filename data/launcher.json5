@@ -112,8 +112,8 @@
     {
       "title": "Plain Craft Launcher 2 Community Edition",
       "abbr": "PCL2 社区版",
-      "download": "https://github.com/PCL-Community/PCL2-CE/releases/download/2.10.2/PCL2_CE.exe",
-      "version": "2.10.2",
+      "download": "https://github.com/PCL-Community/PCL2-CE/releases/download/2.10.3/PCL2_CE.exe",
+      "version": "2.10.3",
       "github": "https://github.com/PCL-Community/PCL2-CE"
     },
     {
@@ -135,8 +135,8 @@
       "github": "https://github.com/Xcube-Studio/Natsurainko.FluentLauncher",
       "url": "https://fluentlauncher.natsurainko.work/",
       "dev": {
-        "download": "https://github.com/Xcube-Studio/Natsurainko.FluentLauncher/releases/download/pre-release-v2.3.4.1/package.msixbundle",
-        "version": "2.3.4.1"
+        "download": "https://github.com/Xcube-Studio/Natsurainko.FluentLauncher/releases/download/pre-release-vpre-release-v2.3.4.2/package.msixbundle",
+        "version": "pre-release-v2.3.4.2"
       }
     },
     {
