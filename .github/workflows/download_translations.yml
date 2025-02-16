@@ -1,4 +1,5 @@
-name: Download Translations
+name: Translation
+run-name: Download Translations
 
 on:
   schedule:
