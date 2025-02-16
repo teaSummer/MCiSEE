@@ -203,6 +203,7 @@
       ["基岩版专用服务端", "https://www.minebbs.com/bds/history", "由MineBBS收集"],
       ["基岩版专用预览版服务端", "https://www.minebbs.com/resources/bedrock-dedicated-server-preview.4934/history", "由MineBBS收集"],
       ["BDSX", "https://github.com/bdsx/bdsx", "基岩版，BDS模组 (由Node.js编写)"],
+      ["Endstone", "https://endstone.dev", "基岩版，适用于BDS的高层次插件 API，采用 Python 和 C++ 语言编写"],
       ["LeviLamina", "https://lamina.levimc.org", "基岩版，原LiteLoaderBDS\n轻量、模块化、多功能的BDS模组加载器"],
       ["Leaves", "https://leavesmc.org", "Java版，一个旨在修复被破坏的原版特性的Paper分支"],
       ["PocketMine", "https://pmmp.io", "基岩版，一款高度可定制的基岩版服务器软件"],
