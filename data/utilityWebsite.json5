@@ -17,11 +17,7 @@
         "https://bugs.mojang.com",
         "Mojang Jira/Mojira\n用于反馈Bug",
       ],
-      //[
-      //  "基岩版开发者文档",
-      //  "https://learn.microsoft.com/minecraft/creator/",
-      //  "了解如何使用附加组件修改 Minecraft。创建皮肤，设计独特的体验，发现最新功能，并发展您作为Minecraft创作者的技能",
-      //],
+      //["基岩版开发者文档", "https://learn.microsoft.com/minecraft/creator/", "了解如何使用附加组件修改 Minecraft。创建皮肤，设计独特的体验，发现最新功能，并发展您作为Minecraft创作者的技能",],
       ["Feedback", "https://feedback.minecraft.net", ""],
       [
         "知识库",
