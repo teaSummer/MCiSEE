@@ -1,9 +1,9 @@
 // 可供快速查询的站点
 [
   {
-    title: "站内搜索",
-    abbr: "MCiSEE",
-    url: "https://mcisee.top/#网站"
+    "title": "站内搜索",
+    "abbr": "MCiSEE",
+    "url": "https://mcisee.top/#网站"
   },
   {
     "title": "维基百科: 原站",
@@ -52,9 +52,10 @@
     "url": "http://mcid.lingningyu.cn"
   },
   {
-    "title": "基岩版开发Wiki",
+    "title": "基岩版开发维基",
     "abbr": "BEDW",
     "search": "https://wiki.mcbe-dev.net/w/index.php?search=<T>&title=Special%3A%E6%90%9C%E7%B4%A2&ns0=1&ns3000=1&ns3002=1&ns3004=1&ns3008=1&ns3010=1&fulltext=1",
+    "note": "Minecraft基岩版开发Wiki",
     "url": "https://wiki.mcbe-dev.net"
   },
   {

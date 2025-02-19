@@ -5,7 +5,7 @@
       ["Minecraft", "https://www.minecraft.net", "《我的世界》/《当个创世神》\n着重于让玩家探索、交互并改变一个动态生成1m³大小方块的世界"],
       ["Minecraft教育版", "https://education.minecraft.net/", "Minecraft Education\nMinecraft特别为教室使用而设计的教学版本（中国大陆访问可能会出现404）"],
       ["漏洞追踪器", "https://bugs.mojang.com", "Mojang Jira/Mojira\n用于反馈Bug"],
-      // ["基岩版开发者文档", "https://learn.microsoft.com/minecraft/creator/", "了解如何使用附加组件修改 Minecraft。创建皮肤，设计独特的体验，发现最新功能，并发展您作为Minecraft创作者的技能"],
+      ["基岩版开发者文档", "https://learn.microsoft.com/minecraft/creator/", "了解如何使用附加组件修改 Minecraft。创建皮肤，设计独特的体验，发现最新功能，并发展您作为Minecraft创作者的技能"],
       ["Feedback", "https://feedback.minecraft.net", ""],
       ["知识库", "https://feedback.minecraft.net/hc/categories/115000410252-Knowledge-Base", ""],
       ["远古版MC", "https://classic.minecraft.net", "网页版本\n(需浏览器支持WebGL)"],
@@ -151,7 +151,7 @@
     ]
   },
   {
-    "辅助类工具 (仅供研究自用)": [
+    "辅助类 (仅供研究自用)": [
       ["Lunar Client", "https://www.lunarclient.com/", "Java版PVP端启动器"],
       ["LabyMod Launcher", "https://labymod.net/", "Java版客户端启动器"],
       ["Badlion", "https://www.badlion.net/", "Java版PVP端启动器"],
@@ -221,7 +221,7 @@
       ["MC百科", "https://mcmod.cn", ""],
       ["基岩版ID表", "https://ca.projectxero.top/idlist/", ""],
       ["Java版ID表", "http://mcid.lingningyu.cn", ""],
-      ["基岩版开发Wiki", "https://wiki.mcbe-dev.net", "可以获取到各种关于基岩版开发的信息"],
+      ["基岩版开发维基", "https://wiki.mcbe-dev.net", "Minecraft基岩版开发Wiki\n可以获取到各种关于基岩版开发的信息"],
       ["插件百科", "https://mineplugin.org", "服务器插件Wiki"]
     ]
   },
@@ -240,42 +240,38 @@
     ]
   },
   {
-    "模组&插件开发": [
-      ["Fabric Wiki", "https://fabricmc.net/wiki/", "Fabric Wiki"],
-      ["Fabric Documentation", "https://docs.fabricmc.net/develop/", "Fabric模组开发文档(1.20.4+)"],
-      ["Forge Docs", "https://docs.minecraftforge.net/", "Forge模组开发文档(1.12+)"],
-      ["Forge Community Wiki", "https://forge.gemwire.uk/", "Forge社区开发文档(1.16~1.19)"],
-      ["Architectury Documentation", "https://docs.architectury.dev/", "Architectury工具链模组开发文档"],
-      ["Quilt Developer Wiki", "https://wiki.quiltmc.org/", "Quilt模组开发文档"],
-      ["NeoForged Documentation", "https://docs.neoforged.net/", "NeoForge模组开发文档"],
-      ["Rift Wiki", "https://github.com/DimensionalDevelopment/Rift/wiki/", "Rift模组开发文档"],
-      ["Sinytra Documentation", "https://sinytra.org/docs/", "Sinytra文档"],
-      ["Modded Minecraft Wiki", "https://moddedmc.wiki/", "供模组社区托管和分享自己模组文档的公共平台"],
-      ["Cloth Config Wiki", "https://shedaniel.gitbook.io/cloth-config/", "Cloth Config Wiki"],
-      ["Cursed Legacy Fabric Docs", "https://minecraft-cursed-legacy.github.io/wiki/index.html", "Cursed Legacy Fabric模组开发文档"],
-      ["StationAPI Wiki", "https://github.com/ModificationStation/StationAPI/wiki", "StationAPI文档"],
-      ["PaperMC Docs", "https://docs.papermc.io/", "PaperMC文档"],
-      ["Sponge Documentation", "https://docs.spongepowered.org/", "Sponge文档"],
-      ["Spigot Wiki", "https://www.spigotmc.org/wiki/index/", "Spigot文档"],
-      ["BukkitWiki", "https://bukkit.fandom.com/wiki/Main_Page/", "Bukkit文档"],
-      ["SpongeMixin Wiki", "https://github.com/SpongePowered/Mixin/wiki/", "SpongeMixin文档"],
-      ["MixinExtras Wiki", "https://github.com/LlamaLad7/MixinExtras/wiki/", "MixinExtras文档"],
-      ["MixinSquared Wiki", "https://github.com/Bawnorton/MixinSquared/wiki/", "MixinSquared文档"],
+    "开发者狂喜": [
+      ["Fabric维基", "https://fabricmc.net/wiki/", ""],
+      ["Fabric文档", "https://docs.fabricmc.net/develop/", "Fabric模组开发文档(1.20.4+)"],
+      ["Forge文档", "https://docs.minecraftforge.net/", "Forge模组开发文档(1.12+)"],
+      ["Forge社区维基", "https://forge.gemwire.uk/", "Forge社区开发文档(1.16~1.19)"],
+      ["Architectury文档", "https://docs.architectury.dev/", "Architectury工具链模组开发文档"],
+      ["Quilt开发者维基", "https://wiki.quiltmc.org/", ""],
+      ["NeoForged文档", "https://docs.neoforged.net/", ""],
+      ["Rift维基", "https://github.com/DimensionalDevelopment/Rift/wiki/", "Rift模组开发文档"],
+      ["Sinytra文档", "https://sinytra.org/docs/", ""],
+      ["模组Minecraft维基", "https://moddedmc.wiki/", "供模组社区托管和分享自己模组文档的公共平台"],
+      ["Cloth Config维基", "https://shedaniel.gitbook.io/cloth-config/", ""],
+      ["Cursed Legacy Fabric文档", "https://minecraft-cursed-legacy.github.io/wiki/index.html", ""],
+      ["StationAPI维基", "https://github.com/ModificationStation/StationAPI/wiki", ""],
+      ["PaperMC文档", "https://docs.papermc.io/", ""],
+      ["Sponge文档", "https://docs.spongepowered.org/", ""],
+      ["Spigot维基", "https://www.spigotmc.org/wiki/index/", ""],
+      ["Bukkit维基", "https://bukkit.fandom.com/wiki/Main_Page/", "BukkitWiki"],
+      ["SpongeMixin维基", "https://github.com/SpongePowered/Mixin/wiki/", ""],
+      ["MixinExtras维基", "https://github.com/LlamaLad7/MixinExtras/wiki/", ""],
+      ["MixinSquared维基", "https://github.com/Bawnorton/MixinSquared/wiki/", ""],
       ["Parchment", "https://parchmentmc.org/", "Mojmap参数名称修补和javadoc补全附加的映射"],
       ["Linkie", "https://linkie.shedaniel.dev/", "快速查询Java版开发所需要的依赖与映射"],
-      ["Fabric Template Mod Generator", "https://fabricmc.net/develop/template/", "Fabric模组开发模板生成器"],
-      ["NeoForge Mod Generator", "https://neoforged.net/mod-generator/", "NeoForge模组开发模板生成器"],
-      ["Architectury Template Generator", "https://generate.architectury.dev/", "Architectury工具链模组开发模板生成器"],
-      ["Quilt Mod Generator", "https://quiltmc.org/en/usage/generator/", "Quilt模组开发模板生成器"]
-    ]
-  },
-  {
-    "基岩版Addons & 资源包开发": [
-      ["Minecraft Creator tools", "https://mctools.dev/", "快速创建一个模板"],
+      ["Fabric模组模板生成器", "https://fabricmc.net/develop/template/", ""],
+      ["NeoForge模组模板生成器", "https://neoforged.net/mod-generator/", ""],
+      ["Architectury模组模板生成器", "https://generate.architectury.dev/", "Architectury工具链模组开发模板生成器"],
+      ["Quilt模组模板生成器", "https://quiltmc.org/en/usage/generator/", ""],
+      ["基岩版创作者工具", "https://mctools.dev/", "Minecraft Creator Tools\n快速创建附加包模板"],
       ["基岩版官方模板下载", "https://github.com/Mojang/bedrock-samples/releases"],
-      ["基岩版官方脚本API文档", "https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/?view=minecraft-bedrock-stable"],
-      ["基岩版官方实体API Json文档", "https://learn.microsoft.com/en-us/minecraft/creator/reference/content/entityreference/?view=minecraft-bedrock-stable"],
-      ["基岩版官方Molang文档", "https://learn.microsoft.com/en-us/minecraft/creator/reference/content/molangreference/?view=minecraft-bedrock-stable"]
+      ["基岩版官方脚本API文档", "https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/"],
+      ["基岩版官方实体API Json文档", "https://learn.microsoft.com/en-us/minecraft/creator/reference/content/entityreference/"],
+      ["基岩版官方Molang文档", "https://learn.microsoft.com/en-us/minecraft/creator/reference/content/molangreference/"]
     ]
   },
   {
