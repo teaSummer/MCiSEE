@@ -104,8 +104,8 @@
     {
       "title": "X Minecraft Launcher",
       "abbr": "XMCL",
-      "download": "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.49.0/xmcl-0.49.0-win32-x64.zip",
-      "version": "0.49.0",
+      "download": "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.49.1/xmcl-0.49.1-win32-x64.zip",
+      "version": "0.49.1",
       "github": "https://github.com/voxelum/x-minecraft-launcher",
       "url": "https://xmcl.app"
     },
@@ -201,8 +201,8 @@
     {
       "title": "X Minecraft Launcher",
       "abbr": "XMCL",
-      "download": "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.49.0/xmcl-0.49.0.dmg",
-      "version": "0.49.0",
+      "download": "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.49.1/xmcl-0.49.1.dmg",
+      "version": "0.49.1",
       "github": "https://github.com/Voxelum/x-minecraft-launcher",
       "url": "https://xmcl.app"
     },
@@ -262,8 +262,8 @@
     {
       "title": "X Minecraft Launcher",
       "abbr": "XMCL",
-      "download": "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.49.0/xmcl-0.49.0-x86_64.AppImage",
-      "version": "0.49.0",
+      "download": "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.49.1/xmcl-0.49.1-x86_64.AppImage",
+      "version": "0.49.1",
       "github": "https://github.com/voxelum/x-minecraft-launcher",
       "url": "https://xmcl.app"
     },
