@@ -7,7 +7,7 @@ data:
   meta.description: '¡sǝɔɹnosǝɹ ʇɟɐɹɔǝuᴉW ʇǝᵷ ⅄ꞀISⱯƎ ''ʇɟɐɹɔǝuᴉW ɟo ꞁꞁⱯ'
   head.title: 'ƎƎSᴉƆW - ʇɟɐɹɔǝuᴉW ꞁꞁⱯ s,ʇI ''ʍoM ${notificationCount}'
   introduction.title: <i>ʇɟɐɹɔǝuᴉW</i> ꞁꞁⱯ s,ʇI 'ʍoM
-  introduction.1: '¿,,sddⱯ,, ʇnoqɐ ʍoH ˙sɹǝʎɐꞁd ɹoɟ sǝɔɹnosǝɹ ʇɟɐɹɔǝuᴉW ǝɹɐ ǝɹǝH'
+  introduction.1: '¿,,sɹǝɥɔunɐꞀ,, ʇnoqɐ ʍoH ˙sɹǝʎɐꞁd ɹoɟ sǝɔɹnosǝɹ ʇɟɐɹɔǝuᴉW ǝɹɐ ǝɹǝH'
   introduction.2: ɹɐʇs ɐ sn ǝʌᴉᵷ ǝsɐǝꞁԀ ¡<a href="https://github.com/teaSummer/MCiSEE" target="_blank">odǝᴚ qnHʇᴉ⅁</a> ɹoɟ ǝʇnqᴉɹʇuoɔ oʇ ǝɯoɔꞁǝM
   introduction.3: '¡ǝuoʎɹǝʌǝ ɥʇᴉʍ ᵷuᴉʇsǝɹǝʇuᴉ ǝɹoɯ ǝɹɐɥs puɐ ʎoɾuƎ'
   contributeForThisProject: ʇɔǝɾoɹd sᴉɥʇ oʇ ǝʇnqᴉɹʇuoƆ
@@ -35,7 +35,7 @@ data:
   updatedTo: ':pǝʇɐpdn uǝǝq sɐɥ'
   search: ɥɔɹɐǝS
   siteSearch: ɥɔɹɐǝS ǝʇᴉS
-  searchFrom: '˙˙˙˙ ${linkSearchFrom} ɯoɹɟ ɥɔɹɐǝS '
+  searchFrom: ' ˙˙˙˙˙˙ ${linkSearchFrom} ɯoɹɟ ɥɔɹɐǝS'
   gotoLauncherWebsite: 'ǝʇᴉsqǝʍ ɹǝɥɔunɐꞁ o⟘${linkFavicon}'
   gotoLauncherGitHub: 'odǝᴚ qnHʇᴉ⅁ o⟘${faviconGH}'
   prefixType: ' :ǝdʎ⟘'
@@ -61,7 +61,7 @@ data:
   lightTheme: ǝɯǝɥ⟘ ʇɥᵷᴉꞀ
   darkTheme: ǝɯǝɥ⟘ ʞɹɐᗡ
   earlyTheme: ǝɯǝɥ⟘ ʎꞁɹɐƎ
-  ellipsis: '˙˙˙˙'
+  ellipsis: '˙˙˙˙˙˙'
   startDownloading: ':ᵷuᴉpɐoꞁuʍop ʇɹɐʇs ꞁꞁᴉʍ ʇI'
   statistics: sɔᴉʇsᴉʇɐʇS
   visitorCount: ʇunoƆ ɹoʇᴉsᴉɅ

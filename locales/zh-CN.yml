@@ -7,7 +7,7 @@ data:
   meta.description: 所见皆是Minecraft，让获取MC资源更加轻便！
   head.title: '${notificationCount} 所见皆是Minecraft - MCiSEE'
   introduction.title: 所见皆是<i>Minecraft</i>
-  introduction.1: 玩家们可以从这里挖掘Minecraft常用资源，例如软件等。
+  introduction.1: 玩家可以从这里挖掘Minecraft常用资源，例如启动器等。
   introduction.2: 欢迎各位来 <a href="https://github.com/teaSummer/MCiSEE" target="_blank">GitHub 项目</a> 做出贡献 或 点击 Star
   introduction.3: 这里也需要你们提供更多有趣的资源！
   contributeForThisProject: 为此项目做出贡献
@@ -35,7 +35,7 @@ data:
   updatedTo: 已发布新版本：
   search: 搜索
   siteSearch: 站内搜索
-  searchFrom: ' 从 ${linkSearchFrom} 中搜索 ....'
+  searchFrom: ' 从 ${linkSearchFrom} 中搜索 ……'
   gotoLauncherWebsite: '${linkFavicon}跳转启动器网站'
   gotoLauncherGitHub: '${faviconGH}跳转至GitHub仓库'
   prefixType: 类型
@@ -48,7 +48,7 @@ data:
   prefixVersions: 版本
   all: 全部
   acquire: 获取
-  unfold: 展开...
+  unfold: 展开…
   fold: 收起
   GitHubProxy: GitHub 文件使用 <a href="https://ghfast.top" target="_blank">代理加速</a> 下載
   searchableDirect: 快速查询：尽可能自动进入详情页
@@ -61,7 +61,7 @@ data:
   lightTheme: 浅色主题
   darkTheme: 深色主题
   earlyTheme: 早期主题
-  ellipsis: ....
+  ellipsis: '……'
   startDownloading: 即将开始下载：
   statistics: 统计信息
   visitorCount: 访问计数

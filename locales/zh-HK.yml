@@ -7,7 +7,7 @@ data:
   meta.description: 所見皆是麥塊，獲取麥塊資源更簡單！
   head.title: '${notificationCount} 所見皆是麥塊 - MCiSEE'
   introduction.title: 所見皆是麥塊
-  introduction.1: 你可以在這裏找到大量的麥塊資源，比如啟動器等等...
+  introduction.1: 你可以在這裏找到大量的麥塊資源，例如啟動器等。
   introduction.2: 歡迎光臨我們的 <a href="https://github.com/teaSummer/MCiSEE" target="_blank">GitHub 項目</a> 作出貢獻 或者幫我們點亮 Star!
   introduction.3: 我們也需要您來提供更多的麥塊資源！
   contributeForThisProject: 爲此項目作出貢獻
@@ -24,18 +24,18 @@ data:
   app: 應用程式
   launcher: 啟動器
   launcherOnlyJavaEdition: 啟動器（<b>Java版</b>）
-  website: 網站
+  website: 網頁
   searchable: 快速查找
-  utilityWebsite: 實用網站
+  utilityWebsite: 實用網頁
   forum: 論壇
   config: 設定
   goto: 前往
   download: 下載
   downloadedLauncherUpdate: 已下載的啟動器有更新：
   updatedTo: 已發佈新版本：
-  search: 查找
-  siteSearch: 站內查找
-  searchFrom: ' 從 ${linkSearchFrom} 查找 ....'
+  search: 搜尋
+  siteSearch: 站內搜尋
+  searchFrom: ' 從 ${linkSearchFrom} 中搜尋 ......'
   gotoLauncherWebsite: '${linkFavicon}前往啟動器網站'
   gotoLauncherGitHub: '${faviconGH}前往GitHub開源項目'
   prefixType: 類型
@@ -46,7 +46,7 @@ data:
   resourcePacks: 資源包
   modpacks: 整合包
   prefixVersions: 版本
-  all: 所有
+  all: 全部
   acquire: 獲取
   unfold: 展開...
   fold: 關閉
@@ -61,9 +61,9 @@ data:
   lightTheme: 淡色主题
   darkTheme: 深色主题
   earlyTheme: 舊版主题
-  ellipsis: ....
+  ellipsis: '......'
   startDownloading: 即將開始下載：
-  statistics: 統計
+  statistics: 統計資訊
   visitorCount: 訪客數
   contributors: 貢獻者
   starsOverTime: GitHub 星星趨勢

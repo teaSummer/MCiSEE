@@ -7,7 +7,7 @@ data:
   meta.description: All of Minecraft, EASILY get Minecraft resources!
   head.title: '${notificationCount} Wow, It''s All Minecraft - MCiSEE'
   introduction.title: Wow, It's All <i>Minecraft</i>
-  introduction.1: Here are Minecraft resources for players. How about "Apps"?
+  introduction.1: Here are Minecraft resources for players. How about "Launchers"?
   introduction.2: Welcome to contribute for <a href="https://github.com/teaSummer/MCiSEE" target="_blank">GitHub Repo</a>! Please give us a star
   introduction.3: Enjoy and share more interesting with everyone!
   contributeForThisProject: Contribute to this project
@@ -35,7 +35,7 @@ data:
   updatedTo: 'has been updated:'
   search: Search
   siteSearch: Site Search
-  searchFrom: ' Search from ${linkSearchFrom} ....'
+  searchFrom: ' Search from ${linkSearchFrom} ......'
   gotoLauncherWebsite: '${linkFavicon}To launcher website'
   gotoLauncherGitHub: '${faviconGH}To GitHub Repo'
   prefixType: 'Type: '
@@ -61,7 +61,7 @@ data:
   lightTheme: Light Theme
   darkTheme: Dark Theme
   earlyTheme: Early Theme
-  ellipsis: ....
+  ellipsis: '......'
   startDownloading: 'It will start downloading:'
   statistics: Statistics
   visitorCount: Visitor Count
