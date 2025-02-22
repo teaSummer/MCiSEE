@@ -50,7 +50,7 @@ data:
   acquire: 获取
   unfold: 展开…
   fold: 收起
-  GitHubProxy: GitHub 文件使用 <a href="https://ghfast.top" target="_blank">代理加速</a> 下載
+  GitHubProxy: GitHub 文件使用 <a href="https://ghfast.top" target="_blank">代理加速</a> 下载
   searchableDirect: 快速查询：尽可能自动进入详情页
   searchablePromptLength: 候选词数(0-30)：
   default: 默认

@@ -20,7 +20,7 @@ data:
   Linux.tip: Linux - PC
   unsupported: 不支援
   unknown: 未知
-  unselected: '【請選擇】'
+  unselected: '【待選擇】'
   app: 應用程式
   launcher: 啟動器
   launcherOnlyJavaEdition: 啟動器（<b>Java版</b>）

@@ -20,7 +20,7 @@ data:
   Linux.tip: Linux - PC
   unsupported: 不支援
   unknown: 未知
-  unselected: '【請選擇】'
+  unselected: '【待選擇】'
   app: 應用程式
   launcher: 啟動器
   launcherOnlyJavaEdition: 啟動器（<b>Java版</b>）
@@ -29,7 +29,7 @@ data:
   utilityWebsite: 實用網頁
   forum: 論壇
   config: 設定
-  goto: 前往
+  goto: 瀏覽
   download: 下載
   downloadedLauncherUpdate: 已下載的啟動器有更新：
   updatedTo: 已發佈新版本：
