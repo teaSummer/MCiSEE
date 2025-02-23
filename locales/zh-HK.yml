@@ -34,10 +34,10 @@ data:
   downloadedLauncherUpdate: 已下載的啟動器有更新：
   updatedTo: 已發佈新版本：
   search: 搜尋
-  siteSearch: 站內搜尋
+  siteSearch: 頁內搜尋
   searchFrom: ' 從 ${linkSearchFrom} 中搜尋 ......'
-  gotoLauncherWebsite: '${linkFavicon}前往啟動器網站'
-  gotoLauncherGitHub: '${faviconGH}前往GitHub開源項目'
+  gotoLauncherWebsite: '${linkFavicon}瀏覽啟動器網站'
+  gotoLauncherGitHub: '${faviconGH}瀏覽GitHub倉庫'
   prefixType: 類型
   mods: 模組
   plugins: 插件
