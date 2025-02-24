@@ -24,9 +24,9 @@ data:
   app: 應用程式
   launcher: 啟動器
   launcherOnlyJavaEdition: 啟動器（<b>Java版</b>）
-  website: 網頁
+  website: 網站
   searchable: 快速查找
-  utilityWebsite: 實用網頁
+  utilityWebsite: 實用網站
   forum: 論壇
   config: 設定
   goto: 瀏覽
