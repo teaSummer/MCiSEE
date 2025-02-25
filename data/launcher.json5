@@ -118,10 +118,12 @@
     },
     {
       "title": "LauncherX",
-      "download": "https://github.com/Corona-Studio/ProjBobcat/archive/refs/tags/v1.89.0.zip",
+      // 先用着
+      "download": "https://corona.studio/lx/download",
       "version": "1.89.0",
-      "github": "https://github.com/corona-studio/projbobcat",
-      "url": "https://corona.studio/launcherx"
+      // TODO: 待更新
+      // "github": "https://github.com/corona-studio/projbobcat",
+      "url": "https://corona.studio/lx"
     },
     {
       "title": "*中国版* 我的世界启动器",
