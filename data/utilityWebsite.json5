@@ -48,7 +48,7 @@
       ["网易我的世界官网", "https://mc.163.com", ""],
       ["Inner Core 模组", "https://icmods.mineprogramming.org", ""],
       ["Eaglercraft", "https://eaglercraft.com/", "在线游玩mc java版非官方版\n(需浏览器支持WebGL)"],
-      ["MC.JS", "https://play.mc.js.cool/", "在线游玩mc java版非官方版\n(需浏览器支持WebGL)"],
+      ["MC.JS", "https://mc.js.cool/", "在线游玩mc java版非官方版\n(需浏览器支持WebGL)"],
       ["IMC.RE", "https://imc.re", "著名开发团队"],
       ["YSS开发组", "https://yss.minecraft.pe", "YSS开发组由一群热爱Minecraft并想让Minecraft更好的人组成"],
       ["LittleSkin皮肤站", "https://littleskin.cn", "快速、可靠的 Minecraft 皮肤站"],
@@ -128,7 +128,7 @@
       ["网易开发者收益计算", "https://dev.lran.top/", "网易开发者收益计算工具"],
       ["披风编辑器", "https://lraty-li.github.io/Minecraft-Cape-Generator/", "在线下载后可上传png图片，有损，支持各设备浏览器编辑使用"],
       ["服主工具页", "https://tools.sodamc.com/resources/", "基于开源项目birdflop构建的网站，新增Tellraw（基于githubTellraw）,包含大多数服主所用的工具"],
-      ["Sprak中文查看器", "https://sparkcn.site/", "将您的报告链接中的主域替换为 sparkcn.site 即可查看中文版的sprak报告（项目基于spark-viewer）"]
+      ["Spark中文查看器", "https://sparkcn.site/", "将您的报告链接中的主域替换为 sparkcn.site 即可查看中文版的sprak报告（项目基于spark-viewer）"]
     ]
   },
   {
