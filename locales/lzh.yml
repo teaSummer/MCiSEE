@@ -1,0 +1,56 @@
+# Crowdin: https://crowdin.com/project/mcisee/lzh
+language: lzh
+
+data:
+  meta.alt: 万物皆礦藝也
+  meta.title: 万物皆礦藝也 — MCiSEE
+  head.title: '${notificationCount} 万物皆礦藝也 — MCiSEE'
+  introduction.title: 万物皆礦藝也
+  device: 裝置
+  unsupported: 弗受援
+  unknown: 未明
+  unselected: '【候擇】'
+  launcher: 啟者
+  launcherOnlyJavaEdition: 啟者（<b>爪哇版</b>）
+  website: 網頁
+  forum: 館肆
+  config: 置
+  goto: 覽
+  download: 下傳
+  downloadedLauncherUpdate: 已下傳之新啟者：
+  updatedTo: 已公佈新者：
+  search: 尋
+  siteSearch: 尋於頁內
+  searchFrom: ' 尋於${linkSearchFrom}⋯⋯'
+  gotoLauncherWebsite: '${linkFavicon}覽啟者網頁'
+  gotoLauncherGitHub: '${faviconGH}覽GitHub倉庫'
+  prefixType: 類
+  mods: 模組
+  dataPacks: 錄囊
+  shaders: 著色器
+  resourcePacks: 資囊
+  prefixVersions: 版
+  all: 皆
+  acquire: 得
+  unfold: 詳⋯
+  fold: 簡
+  default: 預設
+  daytime: 昼
+  nighttime: 夜
+  classic: 古
+  systemTheme: 隨系統
+  ellipsis: '⋯⋯'
+  startDownloading: 欲始下傳：
+  statistics: 計
+  visitorCount: 計覽
+  ICP: <a href="https://icp.gov.moe/?keyword=20247837" target="_blank">萌ICP備20247837號</a>
+  content: 目錄
+  top: 頂
+  bottom: 底
+  latest: 新
+  release: 完版
+  preRelease: 預版
+  launcher.release: '${downloadSVG}{download}{release}${linkVersion}'
+  launcher.release.latest: '${downloadSVG}{download}{latest}{release}'
+  launcher.preRelease: '${downloadSVG}{download}{preRelease}${linkDevVersion}'
+  launcher.preRelease.latest: '${downloadSVG}{download}{latest}{preRelease}'

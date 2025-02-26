@@ -5,7 +5,6 @@
 "files": [
   {
     "source": "/*.yml",
-    "translation": "/locales/%locale%.yml",
-    "skip_untranslated_files": true
+    "translation": "/locales/%locale%.yml"
   }
 ]

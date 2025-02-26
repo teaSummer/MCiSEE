@@ -31,10 +31,15 @@ const i18n = ((callback = () => {}) => {
         'zh-TW.yml',
         'zh-HK.yml',
         'zh-CN.yml',
+        'lzh.yml',
         'en-US.yml',
         'en-UD.yml',
     ], () => {
-        al.load((!checkDate() && !cfg.testMode) ? void 0 : 'en-UD', al.mode.HTML, callback);
+        if ((checkDate() || cfg.testMode)) {
+            al.load(navigator.language.startsWith('zh') ? 'lzh' : 'en-UD', al.mode.HTML, callback);
+            return;
+        }
+        al.load(void 0, al.mode.HTML, callback);
     }, {url: true, yaml: true});
 });
 
