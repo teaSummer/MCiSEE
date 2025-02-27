@@ -1,81 +1,83 @@
 # Crowdin: https://crowdin.com/project/mcisee/en-US
+language: en-US
 
-meta.alt: Wow, It's All Minecraft
-meta.title: Wow, It's All Minecraft - MCiSEE
-meta.description: All of Minecraft, EASILY get Minecraft resources!
-head.title: '${notificationCount} Wow, It''s All Minecraft - MCiSEE'
-introduction.title: Wow, It's All <i>Minecraft</i>
-introduction.1: Here are Minecraft resources for players. How about "Launchers"?
-introduction.2: Welcome to contribute for <a href="https://github.com/teaSummer/MCiSEE" target="_blank">GitHub Repo</a>! Please give us a star
-introduction.3: Enjoy and share more interesting with everyone!
-contributeForThisProject: Contribute to this project
-device: Devices
-device.tip: Auto identify, or choose by yourself
-Android.tip: Android/HarmonyOS - Phone/Tablet
-iOS.tip: iOS - Phone/Tablet
-Windows.tip: Windows - PC
-macOS.tip: macOS - PC
-Linux.tip: Linux - PC
-unsupported: Unsupported
-unknown: Unknown
-unselected: '[ Press to select ]'
-app: Apps
-launcher: Launchers
-launcherOnlyJavaEdition: Launcher (<b>Java Edition</b>)
-website: Websites
-searchable: Quicker Search
-utilityWebsite: Useful Websites
-forum: Forums
-config: Options
-goto: Just Go!
-download: Download
-downloadedLauncherUpdate: 'Downloaded launcher updates:'
-updatedTo: 'has been updated:'
-search: Search
-siteSearch: Site Search
-searchFrom: ' Search from ${linkSearchFrom} ......'
-gotoLauncherWebsite: '${linkFavicon}To launcher website'
-gotoLauncherGitHub: '${faviconGH}To GitHub Repo'
-prefixType: 'Type: '
-mods: Mods
-plugins: Plugins
-dataPacks: Data Packs
-shaders: Shaders
-resourcePacks: Resource Packs
-modpacks: Modpacks
-prefixVersions: 'Versions: '
-all: All
-acquire: Acquire
-unfold: More...
-fold: Less
-GitHubProxy: Speedup the GitHub with <a href="https://ghfast.top" target="_blank">mirror proxy</a> (for Chinese Mainland)
-searchableDirect: 'Quicker Search: Auto access to the detail page when possible'
-searchablePromptLength: 'Prompt Words(0-30):'
-default: Default
-daytime: Daytime
-nighttime: Nighttime
-classic: Classic
-systemTheme: System
-lightTheme: Light Theme
-darkTheme: Dark Theme
-earlyTheme: Early Theme
-ellipsis: '......'
-startDownloading: 'It will start downloading:'
-statistics: Statistics
-visitorCount: Visitor Count
-contributors: Contributors
-starsOverTime: GitHub Stars Over Time
-ICP: '${""}'
-credit: Not an official Minecraft website. We are not associated with Mojang or Microsoft.
-license.1: This page is licensed under
-license.2: '📑'
-content: Content
-top: Top
-bottom: Bottom
-latest: Latest
-release: Stable
-preRelease: Dev
-launcher.release: '${downloadSVG}{download} {release} ${linkVersion}'
-launcher.release.latest: '${downloadSVG}{download} {latest} {release}'
-launcher.preRelease: '${downloadSVG}{download} {preRelease} ${linkDevVersion}'
-launcher.preRelease.latest: '${downloadSVG}{download} {latest} {preRelease}'
+data:
+  meta.alt: Wow, It's All Minecraft
+  meta.title: Wow, It's All Minecraft - MCiSEE
+  meta.description: All of Minecraft, EASILY get Minecraft resources!
+  head.title: '${notificationCount} Wow, It''s All Minecraft - MCiSEE'
+  introduction.title: Wow, It's All <i>Minecraft</i>
+  introduction.1: Here are Minecraft resources for players. How about "Launchers"?
+  introduction.2: Welcome to contribute for <a href="https://github.com/teaSummer/MCiSEE" target="_blank">GitHub Repo</a>! Please give us a star
+  introduction.3: Enjoy and share more interesting with everyone!
+  contributeForThisProject: Contribute to this project
+  device: Devices
+  device.tip: Auto identify, or choose by yourself
+  Android.tip: Android/HarmonyOS - Phone/Tablet
+  iOS.tip: iOS - Phone/Tablet
+  Windows.tip: Windows - PC
+  macOS.tip: macOS - PC
+  Linux.tip: Linux - PC
+  unsupported: Unsupported
+  unknown: Unknown
+  unselected: '[ Press to select ]'
+  app: Apps
+  launcher: Launchers
+  launcherOnlyJavaEdition: Launcher (<b>Java Edition</b>)
+  website: Websites
+  searchable: Quicker Search
+  utilityWebsite: Useful Websites
+  forum: Forums
+  config: Options
+  goto: Just Go!
+  download: Download
+  downloadedLauncherUpdate: 'Downloaded launcher updates:'
+  updatedTo: 'has been updated:'
+  search: Search
+  siteSearch: Site Search
+  searchFrom: ' Search from ${linkSearchFrom} ......'
+  gotoLauncherWebsite: '${linkFavicon}To launcher website'
+  gotoLauncherGitHub: '${faviconGH}To GitHub Repo'
+  prefixType: 'Type: '
+  mods: Mods
+  plugins: Plugins
+  dataPacks: Data Packs
+  shaders: Shaders
+  resourcePacks: Resource Packs
+  modpacks: Modpacks
+  prefixVersions: 'Versions: '
+  all: All
+  acquire: Acquire
+  unfold: More...
+  fold: Less
+  GitHubProxy: Speedup the GitHub with <a href="https://ghfast.top" target="_blank">mirror proxy</a> (for Chinese Mainland)
+  searchableDirect: 'Quicker Search: Auto access to the detail page when possible'
+  searchablePromptLength: 'Prompt Words(0-30):'
+  default: Default
+  daytime: Daytime
+  nighttime: Nighttime
+  classic: Classic
+  systemTheme: System
+  lightTheme: Light Theme
+  darkTheme: Dark Theme
+  earlyTheme: Early Theme
+  ellipsis: '......'
+  startDownloading: 'It will start downloading:'
+  statistics: Statistics
+  visitorCount: Visitor Count
+  contributors: Contributors
+  starsOverTime: GitHub Stars Over Time
+  ICP: '${""}'
+  credit: Not an official Minecraft website. We are not associated with Mojang or Microsoft.
+  license.1: This page is licensed under
+  license.2: '📑'
+  content: Content
+  top: Top
+  bottom: Bottom
+  latest: Latest
+  release: Stable
+  preRelease: Dev
+  launcher.release: '${downloadSVG}{download} {release} ${linkVersion}'
+  launcher.release.latest: '${downloadSVG}{download} {latest} {release}'
+  launcher.preRelease: '${downloadSVG}{download} {preRelease} ${linkDevVersion}'
+  launcher.preRelease.latest: '${downloadSVG}{download} {latest} {preRelease}'

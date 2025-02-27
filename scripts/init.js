@@ -26,24 +26,21 @@ al.setDefaultCountry({
     en: 'en-US',
     zh: 'zh-CN',
 });
-const languages = [
-    // Crowdin
-    'en-UD',
-    'en-US',
-    'lzh',
-    'zh-CN',
-    'zh-HK',
-    'zh-TW',
-];
-for (const l of languages) {
-    al.httpGet('locales/' + l + '.yml', (r) => al.lang[l] = jsyaml.load(r))
-}
 const i18n = ((callback = () => {}) => {
-    if ((checkDate() || cfg.testMode)) {
-        al.load(navigator.language.startsWith('zh') ? 'lzh' : 'en-UD', al.mode.HTML, callback);
-        return;
-    }
-    al.load(void 0, al.mode.HTML, callback);
+    al.setLangProp([
+        'zh-TW.yml',
+        'zh-HK.yml',
+        'zh-CN.yml',
+        'lzh.yml',
+        'en-US.yml',
+        'en-UD.yml',
+    ], () => {
+        if ((checkDate() || cfg.testMode)) {
+            al.load(navigator.language.startsWith('zh') ? 'lzh' : 'en-UD', al.mode.HTML, callback);
+            return;
+        }
+        al.load(void 0, al.mode.HTML, callback);
+    }, {url: true, yaml: true});
 });
 
 
