@@ -35,12 +35,25 @@ const languages = [
     'zh-HK',
     'zh-TW',
 ];
-al.current(languages, {url: true, yaml: true})
+let goingapf = false;
+al.current(languages, {url: true, yaml: true});
 const i18n = ((callback = () => {}) => {
-    if ((checkDate() || cfg.testMode)) {
-        al.setLangProp(['en-UD', 'lzh'], () => {
-            al.load(al.mode.HTML, callback, navigator.language.startsWith('zh') ? 'lzh' : 'en-UD');
-        }, {url: true, yaml: true});
+    if (isapf) {
+        const apflang = navigator.language.startsWith('zh') ? 'lzh' : 'en-UD';
+        if (!goingapf) {
+            al.current(languages, {url: true, yaml: true}, apflang, () => {
+                goingapf = true;
+                al.load(al.mode.HTML, callback, apflang);
+            });
+        } else {
+            al.load(al.mode.HTML, callback, apflang);
+        }
+        if (apflang == 'en-UD') {
+            $('body').append('<style id="transform">main, footer {transform: rotate(180deg);}</style>');
+        }
+        if (apflang == 'lzh') {
+            $('body').append('<style id="verticalDigits">body {writing-mode: vertical-rl;}</style>');
+        }
         return;
     }
     al.load(al.mode.HTML, callback);
@@ -118,4 +131,5 @@ const forum = read('forum');
 
 // 愚人节彩蛋
 const cfg = read("scripts/cfg/apf.cfg.json5", true);
+let isapf = checkDate() || cfg.testMode;
 import("./apf.js").then(apf => (globalThis.apf = apf, apf.main()));
