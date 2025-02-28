@@ -29,13 +29,13 @@ jobs:
         id: handle
         run: |
           sudo chmod -R ugo+rwX .
-          sed -i ":a;N;s/^        '\([a-z][a-z]-[A-Z][A-Z]\|lzh\)\.yml',\?\n//g;ta" scripts/init.js
-          for TF in $(ls locales); do
+          sed -i ":a;N;s/^    '\([a-z][a-z]-[A-Z][A-Z]\|lzh\)',\?\n//g;ta" scripts/init.js
+          for TF in $(ls -r locales); do
             if [[ $TF == *.yml ]]; then
               if [[ $(sed -n '$=' locales/$TF) -ge 10 ]]; then
                 TL=$(basename $TF .yml)
                 sed -i -e 's/^/  /g' -e "1i# Crowdin: https:\/\/crowdin.com\/project\/mcisee\/$TL\nlanguage: $TL\n\ndata:" locales/$TF
-                sed -i "s/al\.setLangProp(\[/al.setLangProp([\n        '$TF',/g" scripts/init.js
+                sed -i "s/\/\/ Crowdin/\/\/ Crowdin\n    '$TL',/g" scripts/init.js
               else
                 rm locales/$TF
               fi

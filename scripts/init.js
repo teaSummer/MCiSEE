@@ -21,26 +21,29 @@ const downloadClick = (() => $('.download').click(function() {
 const faviconGH = fIconGet('github.com');
 
 // 国际化 (internationalization)
-al.setLangPropPath('locales');
+al.setLangPropPath('locales/%%.yml');
 al.setDefaultCountry({
     en: 'en-US',
     zh: 'zh-CN',
 });
+const languages = [
+    // Crowdin
+    'en-UD',
+    'en-US',
+    'lzh',
+    'zh-CN',
+    'zh-HK',
+    'zh-TW',
+];
+al.current(languages, {url: true, yaml: true})
 const i18n = ((callback = () => {}) => {
-    al.setLangProp([
-        'zh-TW.yml',
-        'zh-HK.yml',
-        'zh-CN.yml',
-        'lzh.yml',
-        'en-US.yml',
-        'en-UD.yml',
-    ], () => {
-        if ((checkDate() || cfg.testMode)) {
-            al.load(navigator.language.startsWith('zh') ? 'lzh' : 'en-UD', al.mode.HTML, callback);
-            return;
-        }
-        al.load(void 0, al.mode.HTML, callback);
-    }, {url: true, yaml: true});
+    if ((checkDate() || cfg.testMode)) {
+        al.setLangProp(['en-UD', 'lzh'], () => {
+            al.load(al.mode.HTML, callback, navigator.language.startsWith('zh') ? 'lzh' : 'en-UD');
+        }, {url: true, yaml: true});
+        return;
+    }
+    al.load(al.mode.HTML, callback);
 });
 
 
