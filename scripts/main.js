@@ -57,7 +57,7 @@ const deleteUpdateLayer = function() {
 
     const number = Number($(this).attr('class').split('update-layer-')[1]);
     $(`.update-layer-${number}`).remove();
-    for (let i = number + 1; i < 1000; ++i) {
+    for (let i = number + 1;; ++i) {
         if ($(`.update-layer-${i}`).length) {
             $(`.update-layer-${i}`).removeClass(`update-layer-${i}`).addClass(`update-layer-${i - 1}`);
         } else break;

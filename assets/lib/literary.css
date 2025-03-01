@@ -1,0 +1,96 @@
+* {
+    min-width: 0 !important;
+    margin: 0 !important;
+}
+
+body {
+    writing-mode: vertical-rl;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+mdui-slider {
+    writing-mode: lr;
+}
+
+.article img {
+    max-width: 90px;
+}
+
+.update-layer {
+    --layer-width: 130px;
+    --layer-height: 220px;
+    top: initial;
+    bottom: 5px;
+}
+
+.update-layer-1 {
+    top: unset !important;
+    right: 5px;
+}
+
+.update-layer-2 {
+    right: calc(var(--layer-width) + 10px) !important;
+}
+
+.update-layer-3 {
+    right: calc(var(--layer-width) * 2 + 15px) !important;
+}
+
+mdui-select,
+mdui-text-field {
+    width: 60px !important;
+}
+
+.apf:hover {
+    transform: none;
+}
+
+pre details {
+    display: inline;
+}
+
+summary {
+    position: relative;
+    padding-top: 10px;
+}
+
+summary::before {
+    display: block;
+    transform: rotate(180deg);
+    margin-top: -15px;
+}
+
+details[open]>summary::before {
+    transform: rotate(270deg);
+}
+
+#目录 {
+    right: -15px;
+    max-width: 50px;
+    max-height: none;
+}
+
+#目录:hover {
+    right: -7px;
+    max-width: 2000px;
+}
+
+a.button {
+    padding: 10px 4px;
+    display: block;
+}
+
+a.button img {
+    vertical-align: baseline;
+}
+
+mdui-tooltip {
+    top: 50%;
+    position: relative;
+}
+
+footer {
+    position: relative;
+    z-index: -1;
+}

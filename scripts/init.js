@@ -3,7 +3,7 @@ let searchKeyword = '', searchableAbbr = '';
 
 let hShake;
 let notificationCount = '';
-let checkDate = (date = new Date()) => (date.getDate() == 1 && date.getMonth() + 1 == 4) ? true : false;
+const checkDate = (date = new Date()) => (date.getDate() == 1 && date.getMonth() + 1 == 4) ? true : false;
 
 const downloadMirrorUrl = 'https://ghfast.top/<T>';
 const fIconUrl = 'https://www.faviconextractor.com/favicon/<T>?larger=true';
@@ -45,15 +45,22 @@ const i18n = ((callback = () => {}) => {
                 goingapf = true;
                 al.load(al.mode.HTML, callback, apflang);
             });
-        } else {
-            al.load(al.mode.HTML, callback, apflang);
+            if (apflang == 'en-UD') {
+                $('head').append('<style id="upside-down">main, .update-layer, footer {transform: rotate(180deg);}</style>');
+            }
+            if (apflang == 'lzh') {
+                $('mdui-tooltip').attr('placement', 'right');
+                $.ajax({
+                    url: 'assets/lib/literary.css',
+                    dataType: 'text',
+                    success: (css) => {
+                        $('head').append(`<style id="literary">${css}</style>`);
+                    }
+                });
+            }
+            return;
         }
-        if (apflang == 'en-UD') {
-            $('body').append('<style id="transform">main, footer {transform: rotate(180deg);}</style>');
-        }
-        if (apflang == 'lzh') {
-            $('body').append('<style id="verticalDigits">body {writing-mode: vertical-rl;}</style>');
-        }
+        al.load(al.mode.HTML, callback, apflang);
         return;
     }
     al.load(al.mode.HTML, callback);
@@ -82,8 +89,11 @@ const hashChanged = (() => {
     function toggleDetails(selector, open) {
         if ($(selector).find('details').length) {
             $(selector).find('details').attr('open', open);
-            $('.to-fold, .to-unfold').hide();
-            $(open ? '.to-fold' : '.to-unfold').show();
+            if (selector == 'pre') {
+                selector = $(selector).parent();
+            }
+            $(selector).find('.to-fold, .to-unfold').hide();
+            $(selector).find(open ? '.to-fold' : '.to-unfold').show();
         } else {
             $(selector).attr('open', open);
         }

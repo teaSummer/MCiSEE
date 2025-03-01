@@ -122,6 +122,12 @@ div[id]>*:first-child {
     transition: transform 0.5s;
 }
 
+#give-up {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
 .bold {
     font-weight: bold;
 }

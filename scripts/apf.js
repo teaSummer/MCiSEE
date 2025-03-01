@@ -1,22 +1,18 @@
-const addClass = (target = new Element()) => {
-    target.classList.add('apf');
-}
-const style = '<style id="neverapf">.apf:hover {transform: none;} main, footer {transform: none;} body {writing-mode: horizontal-tb;;}</style>',
-giveUpBtn = '<a id="gub" class="button download" herf="#" onclick="apf.giveUp();" style="position: fixed; bottom: 0; right: 0;">你干嘛~</a>'
-const main = (eles = document.querySelectorAll(".page-content *")) => {
+const giveUpBtn = '<a id="give-up" class="button noicon">你干嘛~</a>'
+const main = (e = $('.page-content *')) => {
     if (isapf) {
-        eles.forEach(ele => addClass(ele));
-        $("body").append('<mdui-snackbar placement="bottom" class="aiyoo" closeable>哎哟~~</mdui-snackbar>')
-        document.body.appendChild(document.createRange().createContextualFragment(giveUpBtn));
+        $(e).addClass('apf');
+        $('body').append('<mdui-snackbar placement="bottom" class="aiyoo" closeable>哎哟~~</mdui-snackbar>' + giveUpBtn);
+        $('#give-up').click(giveUp);
     }
 }
 const giveUp = () => {
+    $('.page-content *').removeClass('apf');
     $('.aiyoo').attr('open', true);
-    $('#gub').remove();
-    document.querySelector('html').appendChild(document.createRange().createContextualFragment(style));
-    checkDate = () => false;
+    $('#give-up, #upside-down, #literary').remove();
+    $('mdui-tooltip').attr('placement', 'top');
     isapf = false;
-    setTimeout(i18n);
+    i18n();
 }
 
 export {main, giveUp}

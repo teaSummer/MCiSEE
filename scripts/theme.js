@@ -60,6 +60,6 @@ const device = browser.parse();
 if (device.device == 'Mobile') {
     $.ajax({
         url: 'assets/mobile.css',
-        success: (data) => $('body').append(`<style id="mobile">${data}</style>`)
+        success: (data) => $('head').append(`<style id="mobile">${data}</style>`)
     });
 }
