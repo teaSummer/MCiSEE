@@ -128,7 +128,8 @@
       ["网易开发者收益计算", "https://dev.lran.top/", "网易开发者收益计算工具"],
       ["披风编辑器", "https://lraty-li.github.io/Minecraft-Cape-Generator/", "在线下载后可上传png图片，有损，支持各设备浏览器编辑使用"],
       ["服主工具页", "https://tools.sodamc.com/resources/", "基于开源项目birdflop构建的网站，新增Tellraw（基于githubTellraw）,包含大多数服主所用的工具"],
-      ["Spark中文查看器", "https://sparkcn.site/", "将您的报告链接中的主域替换为 sparkcn.site 即可查看中文版的sprak报告（项目基于spark-viewer）"]
+      ["Spark中文查看器", "https://sparkcn.site/", "将您的报告链接中的主域替换为 sparkcn.site 即可查看中文版的sprak报告（项目基于spark-viewer）"],
+      ["ColorBlock 指令生成器", "https://mc.ecylt.top/", "生成精彩的 ColorBlock Mod 实现的粒子特效指令"]
     ]
   },
   {
