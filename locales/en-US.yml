@@ -10,7 +10,9 @@ data:
   introduction.1: Here are Minecraft resources for players. How about "Launchers"?
   introduction.2: Welcome to contribute for <a href="https://github.com/teaSummer/MCiSEE" target="_blank">GitHub Repo</a>! Please give us a star
   introduction.3: Enjoy and share more interesting with everyone!
-  contributeForThisProject: Contribute to this project
+  announcement.1: 'Welcome to QQ Group: <a href="https://qm.qq.com/q/EBKhjsGRbM" target="_blank">596520944</a>'
+  announcement.2: Meow! We need money to run the website. Could you donate for it?
+  afdian: Afdian
   device: Devices
   device.tip: Auto identify, or choose by yourself
   Android.tip: Android/HarmonyOS - Phone/Tablet
@@ -67,6 +69,8 @@ data:
   visitorCount: Visitor Count
   contributors: Contributors
   starsOverTime: GitHub Stars Over Time
+  thankDonation: Thanks for Donation
+  contributeForThisProject: Contribute to this project
   ICP: '${""}'
   credit: Not an official Minecraft website. We are not associated with Mojang or Microsoft.
   license.1: This page is licensed under

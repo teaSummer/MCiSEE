@@ -10,7 +10,9 @@ data:
   introduction.1: '¿,,sɹǝɥɔunɐꞀ,, ʇnoqɐ ʍoH ˙sɹǝʎɐꞁd ɹoɟ sǝɔɹnosǝɹ ʇɟɐɹɔǝuᴉW ǝɹɐ ǝɹǝH'
   introduction.2: ɹɐʇs ɐ sn ǝʌᴉᵷ ǝsɐǝꞁԀ ¡<a href="https://github.com/teaSummer/MCiSEE" target="_blank">odǝᴚ qnHʇᴉ⅁</a> ɹoɟ ǝʇnqᴉɹʇuoɔ oʇ ǝɯoɔꞁǝM
   introduction.3: '¡ǝuoʎɹǝʌǝ ɥʇᴉʍ ᵷuᴉʇsǝɹǝʇuᴉ ǝɹoɯ ǝɹɐɥs puɐ ʎoɾuƎ'
-  contributeForThisProject: ʇɔǝɾoɹd sᴉɥʇ oʇ ǝʇnqᴉɹʇuoƆ
+  announcement.1: <a href="https://qm.qq.com/q/EBKhjsGRbM" target="_blank">߈߈‎60ᘔϛ96ϛ</a> :dnoɹ⅁ ꝹꝹ oʇ ǝɯoɔꞁǝM
+  announcement.2: '¿ʇᴉ ɹoɟ ǝʇɐuop noʎ pꞁnoƆ ˙ǝʇᴉsqǝʍ ǝɥʇ unɹ oʇ ʎǝuoɯ pǝǝu ǝM ¡ʍoǝW'
+  afdian: uɐᴉpɟⱯ
   device: sǝɔᴉʌǝᗡ
   device.tip: ɟꞁǝsɹnoʎ ʎq ǝsooɥɔ ɹo 'ʎɟᴉʇuǝpᴉ oʇnⱯ
   Android.tip: ʇǝꞁqɐ⟘/ǝuoɥԀ - SOʎuoɯɹɐH/pᴉoɹpuⱯ
@@ -67,6 +69,8 @@ data:
   visitorCount: ʇunoƆ ɹoʇᴉsᴉɅ
   contributors: sɹoʇnqᴉɹʇuoƆ
   starsOverTime: ǝɯᴉ⟘ ɹǝʌO sɹɐʇS qnHʇᴉ⅁
+  thankDonation: uoᴉʇɐuoᗡ ɹoɟ sʞuɐɥ⟘
+  contributeForThisProject: ʇɔǝɾoɹd sᴉɥʇ oʇ ǝʇnqᴉɹʇuoƆ
   ICP: '${""}'
   credit: '˙ʇɟosoɹɔᴉW ɹo ᵷuɐɾoW ɥʇᴉʍ pǝʇɐᴉɔossɐ ʇou ǝɹɐ ǝM ˙ǝʇᴉsqǝʍ ʇɟɐɹɔǝuᴉW ꞁɐᴉɔᴉɟɟo uɐ ʇoN'
   license.1: '📑'

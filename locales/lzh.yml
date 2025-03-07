@@ -6,13 +6,14 @@ data:
   meta.title: 万物皆礦藝也 — MCiSEE
   head.title: '${notificationCount} 万物皆礦藝也 — MCiSEE'
   introduction.title: 万物皆礦藝也
+  announcement.1: 迎入QQ群：<a href="https://qm.qq.com/q/EBKhjsGRbM" target="_blank">五九六五二〇九四四</a>
   device: 裝置
   unsupported: 弗受援
   unknown: 未明
   unselected: '【候擇】'
   launcher: 啟者
   launcherOnlyJavaEdition: 啟者（<b>爪哇版</b>）
-  website: 網頁
+  website: 網
   forum: 館肆
   config: 置
   goto: 覽
@@ -22,7 +23,7 @@ data:
   search: 尋
   siteSearch: 尋於頁內
   searchFrom: ' 尋於${linkSearchFrom}⋯⋯'
-  gotoLauncherWebsite: '${linkFavicon}覽啟者網頁'
+  gotoLauncherWebsite: '${linkFavicon}覽啟者網'
   gotoLauncherGitHub: '${faviconGH}覽GitHub倉庫'
   prefixType: 類
   mods: 模組

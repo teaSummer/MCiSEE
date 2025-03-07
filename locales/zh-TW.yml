@@ -10,7 +10,9 @@ data:
   introduction.1: 你可以在這裏找到大量的麥塊資源，例如啟動器等。
   introduction.2: 歡迎光臨我們的 <a href="https://github.com/teaSummer/MCiSEE" target="_blank">GitHub 項目</a> 作出貢獻 或者幫我們點亮 Star!
   introduction.3: 我們也需要您來提供更多的麥塊資源！
-  contributeForThisProject: 爲此項目作出貢獻
+  announcement.1: 歡迎加入QQ群：<a href="https://qm.qq.com/q/EBKhjsGRbM" target="_blank">596520944</a>
+  announcement.2: 喵嗚，網站運營仍需經費，可以賞點錢嗎？
+  afdian: 愛發電
   device: 裝置
   device.tip: 自動偵測裝置，你也可以手動選擇
   Android.tip: 安卓/鴻蒙 - 手機/平板電腦
@@ -67,6 +69,8 @@ data:
   visitorCount: 訪客數
   contributors: 貢獻者
   starsOverTime: GitHub 星星趨勢
+  thankDonation: 發電感謝
+  contributeForThisProject: 爲此項目作出貢獻
   ICP: <a href="https://icp.gov.moe/?keyword=20247837" target="_blank">萌ICP備20247837號</a>
   credit: 本站並非Minecraft官方網站，與Mojang和微軟亦無從屬關係。
   license.1: 本頁面内容采用
