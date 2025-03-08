@@ -13,6 +13,14 @@ mdui-slider {
     writing-mode: lr;
 }
 
+.announcement-bar {
+    left: 0;
+    width: 2vw;
+    height: 100%;
+    line-height: 2vw;
+    z-index: 1000;
+}
+
 .article img {
     max-width: 90px;
 }
@@ -93,4 +101,11 @@ mdui-tooltip {
 footer {
     position: relative;
     z-index: -1;
+}
+
+@keyframes announcement {
+    0% { left: 4vh; opacity: 0; }
+    15% { left: 0; opacity: 1; }
+    75% { left: 0; opacity: 1; }
+    100% { left: -2.5vh; opacity: 0; }
 }

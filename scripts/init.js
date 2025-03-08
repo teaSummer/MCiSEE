@@ -3,12 +3,12 @@ let searchKeyword = '', searchableAbbr = '';
 
 let hShake;
 let notificationCount = '';
-const checkDate = (date = new Date()) => (date.getDate() == 1 && date.getMonth() + 1 == 4) ? true : false;
 
 const downloadMirrorUrl = 'https://ghfast.top/<T>';
 const fIconUrl = 'https://www.faviconextractor.com/favicon/<T>?larger=true';
 const ghRepoMirrorUrl = '';
 
+const checkDate = (date = new Date()) => (date.getDate() == 1 && date.getMonth() + 1 == 4) ? true : false;
 const fIconGet = ((url, p) => '<img src="' + (p ? p : fIconUrl.replace('<T>', url.replace(/https?:\/\//, '').replace(/\/.*/, ''))) + '" width="16" height="16" loading="lazy"/> ')
 const downloadSVG = '<span class="svg right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M320 336h76c55 0 100-21.21 100-75.6s-53-73.47-96-75.6C391.11 99.74 329 48 256 48c-69 0-113.44 45.79-128 91.2-60 5.7-112 35.88-112 98.4S70 336 136 336h56M192 400.1l64 63.9 64-63.9M256 224v224.03" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="56"></path></svg></span>';
 const downloadMirror = ((url) => $('.github-proxy').is(':checked') && String(url).startsWith('https://github.com/') ? downloadMirrorUrl.replace('<T>', url) : url); // 针对中国大陆地区 | for Chinese Mainland
@@ -39,7 +39,7 @@ let goingapf = false;
 al.current(languages, {url: true, yaml: true});
 const i18n = ((callback = () => {}) => {
     if (isapf) {
-        const apflang = navigator.language.startsWith('zh') ? 'lzh' : 'en-UD';
+        const apflang = al.getUserLang().startsWith('zh-') ? 'lzh' : 'en-UD';
         if (!goingapf) {
             al.current(languages, {url: true, yaml: true}, apflang, () => {
                 goingapf = true;
@@ -67,6 +67,23 @@ const i18n = ((callback = () => {}) => {
 });
 
 
+// 公告栏
+const announcement_init = (() => {
+    $('.announcement-bar li').removeAttr('class').each((i, e) => $(e).addClass(`announcement-${i + 1}`));
+});
+const announcement_switch = (() => {
+    setInterval(function() {
+        for (let i = 1;; ++i) {
+            if ($(`.announcement-${i}`).length) {
+                let z = i - 1;
+                if (z < 1) z = $(`.announcement-bar li`).length + 1;
+                $(`.announcement-${i}`).removeClass(`announcement-${i}`).addClass(`announcement-${z}`);
+            } else break;
+        }
+    }, 5000);
+});
+
+
 // 不记录历史滚动位置
 if (history.scrollRestoration) {
     history.scrollRestoration = 'manual';
@@ -76,7 +93,7 @@ if (history.scrollRestoration) {
 // 读取 JSON5 文件
 const read = ((file, isPath = false) => {
     return JSON5.parse($.ajax({
-        url: isPath? file: `data/${file}.json5`,
+        url: isPath ? file : `data/${file}.json5`,
         dataType: 'json',
         async: false
     }).responseText);
@@ -103,8 +120,8 @@ const hashChanged = (() => {
     // 自动展开/收起：<details> 元素
     try {
         // 通过检测哈希属性
-        if (hash == '#全部展开') toggleDetails('pre', true);
-        if (hash == '#全部收起') toggleDetails('pre', false);
+        if (hash == '#全部展开') toggleDetails('pre, footer', true);
+        if (hash == '#全部收起') toggleDetails('pre, footer', false);
         if (hash.endsWith('-展开')) {
             toggleDetails(slicedHash, true);
             location.hash = slicedHash;
@@ -143,3 +160,64 @@ const forum = read('forum');
 const cfg = read("scripts/cfg/apf.cfg.json5", true);
 let isapf = checkDate() || cfg.testMode;
 import("./apf.js").then(apf => (globalThis.apf = apf, apf.main()));
+
+// 版本
+const getVersion = ((content, type) => {
+    const s = '| ' + type + ' = ';
+    if (content.indexOf(s) == -1) return '';
+    return content.split(s)[1].split('\n')[0].replace(/^ *= */, '');
+});
+$.ajax({
+    url: 'https://zh.minecraft.wiki/index.php?title=Template:Version&action=raw', // Chinese Minecraft Wiki, CC BY-NC-SA 3.0
+    async: true,
+    success: (r => {
+        const result = r.split('-->')[1].split('}}\n}}')[0].trim();
+        const version = {
+            java: getVersion(result, 'java'),
+            javaSnap: getVersion(result, 'java-snap'),
+            bedrock: getVersion(result, 'bedrock'),
+            bedrockBeta: getVersion(result, 'bedrock-beta')
+        };
+        let w = 'minecraft.wiki'
+        const l = al.getUserLang().split('-')[0];
+        const wiki = {cs: {},
+            de: {java: '$', javaSnap: '$', bedrock: 'Bedrock_Edition_$', bedrockBeta: 'Bedrock_Edition_beta_$'},
+            en: {java: 'Java_Edition_$', javaSnap: 'Java_Edition_$', bedrock: 'Bedrock_Edition_$', bedrockBeta: 'Bedrock_Edition_beta_$'},
+            el: {},
+            es: {java: 'Java_Edition_$', javaSnap: 'Java_Edition_$', bedrock: 'Bedrock_Edition_$', bedrockBeta: 'Bedrock_Edition_beta_$'},
+            fr: {java: 'Édition_Java_$', javaSnap: 'Édition_Java_$', bedrock: 'Édition_Bedrock_$', bedrockBeta: 'Édition_Bedrock_bêta_$'},
+            hu: {},
+            id: {},
+            it: {java: 'Java_Edition_$', javaSnap: 'Java_Edition_$', bedrock: 'Bedrock_Edition_$', bedrockBeta: 'Bedrock_Edition_beta_$'},
+            ja: {java: 'Java_Edition_$', javaSnap: 'Java_Edition_$', bedrock: 'Bedrock_Edition_$', bedrockBeta: 'Bedrock_Edition_beta_$'},
+            ko: {java: 'Java_Edition_$', javaSnap: 'Java_Edition_$', bedrock: 'Bedrock_Edition_$', bedrockBeta: 'Bedrock_Edition_베타_$'},
+            lzh: {},
+            nl: {java: '$', javaSnap: '$', bedrock: 'Bedrockeditie_$', bedrockBeta: 'Bedrockeditie_$'},
+            pl: {},
+            pt: {java: 'Edição_Java_$', javaSnap: 'Edição_Java_$', bedrock: 'Edição_Bedrock_$', bedrockBeta: 'Edição_Bedrock_beta_$'},
+            ru: {java: '$_(Java_Edition)', javaSnap: '$_(Java_Edition)', bedrock: '$_(Bedrock_Edition)', bedrockBeta: 'Beta_$_(Bedrock_Edition)'},
+            th: {java: 'รุ่น_Java_$', javaSnap: 'รุ่น_Java_$', bedrock: 'รุ่น_Bedrock_$', bedrockBeta: 'รุ่น_Bedrock_beta_$'},
+            tr: {},
+            uk: {java: '$_(Java_Edition)', javaSnap: '$_(Java_Edition)', bedrock: '$_(Bedrock_Edition)', bedrockBeta: 'Beta_$_(Bedrock_Edition)'},
+            zh: {java: 'Java版$', javaSnap: '$', bedrock: '基岩版$', bedrockBeta: '基岩版$'},
+        }
+        if (Object.keys(wiki).indexOf(l) != -1 && l != 'en') w = l + '.minecraft.wiki';
+        else l = 'en';
+        w = 'href="https://' + w + '/w/';
+        const q = ((v) => {
+            if (!wiki[l] || !wiki[l][v]) return '';
+            return w + wiki[l][v].replace('$', version[v]) + '"';
+        });
+        if (version.javaSnap) {
+            version.javaSnap = `&nbsp;&nbsp;<text al="news.development"></text><a ${q('javaSnap')} target="_blank">${version.javaSnap}</a>`;
+        }
+        if (version.bedrockBeta) {
+            version.bedrockBeta = `&nbsp;&nbsp;<text al="news.beta"></text><a ${q('bedrockBeta')} target="_blank">${version.bedrockBeta}</a>`;
+        }
+        version.java = `<text al="news.release"></text><a ${q('java')} target="_blank">${version.java}</a>${version.javaSnap}`;
+        version.bedrock = `<text al="news.release"></text><a ${q('bedrock')} target="_blank">${version.bedrock}</a>${version.bedrockBeta}`;
+        const news = `<li><text al="news.java"></text>${version.java}</li><li><text al="news.bedrock"></text>${version.bedrock}</li>`;
+        $('.announcement-bar li:nth-child(2)').after(news);
+        i18n(announcement_init);
+    })
+});

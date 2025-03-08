@@ -117,6 +117,36 @@ div[id]>*:first-child {
     white-space: nowrap;
 }
 
+.announcement-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: max(4vh, max-content);
+    background-color: rgba(214, 213, 218, 0.2);
+    line-height: 4vh;
+    text-align: center;
+    margin: auto;
+    font-size: 14px;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.announcement-bar ul {
+    list-style: none;
+}
+
+.announcement-bar li {
+    position: relative;
+}
+
+.announcement-bar li.announcement-1 {
+    animation: announcement 5s ease-out forwards;
+}
+
+.announcement-bar li:not(.announcement-1) {
+    display: none;
+}
+
 .apf:hover {
     transform: scale(1.05) rotate(-1deg);
     transition: transform 0.5s;
@@ -196,7 +226,7 @@ div[id]>*:first-child {
 }
 
 .article h3 {
-    margin: 16px 0;
+    margin: 0.5em 0;
 }
 
 .article h3:first-child {
@@ -407,6 +437,10 @@ summary::before {
     transform: rotate(90deg);
 }
 
+summary.noicon::before {
+    display: none;
+}
+
 details {
     max-height: 1em;
     transition: max-height 2s;
@@ -461,6 +495,13 @@ a.button img {
     color: var(--apple-color-white);
 }
 
+
+@keyframes announcement {
+    0% { top: 4vh; opacity: 0; }
+    15% { top: 0; opacity: 1; }
+    75% { top: 0; opacity: 1; }
+    100% { top: -2.5vh; opacity: 0; }
+}
 
 @keyframes h-shake {
     10%, 90% { transform: translate3d(-1px, 0, 0); }

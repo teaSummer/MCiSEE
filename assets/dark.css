@@ -53,6 +53,10 @@ a.button.important:hover {
     text-decoration-color: var(--apple-color-white);
 }
 
+.announcement-bar {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
 hr {
     background-color: #cfc9c2;
     height: 1px;
@@ -303,7 +307,7 @@ details+hr {
     background-color: rgba(255, 255, 255, 0.3);
 }
 
-text, h1, h2, h3, h4, h5, h6, p, input {
+text, h1, h2, h3, h4, h5, h6, p, input, .announcement-bar {
     color: var(--apple-color-white);
 }
 

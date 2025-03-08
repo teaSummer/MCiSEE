@@ -496,6 +496,9 @@ $(() => {
     $('.searchable-args .arg:not([multiple])').each((i, e) => {
         $(e).children().click(() => $(e).click());
     });
+    // 公告栏
+    announcement_init();
+    announcement_switch();
     // 国际化 (internationalization) 准备进行
     i18n(() => {
         // 启动器 初始化

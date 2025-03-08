@@ -16,9 +16,9 @@
 
 **注意：请确保您 Fork 的仓库为最新，可通过自己仓库页面的【Sync fork】更新后再提交 PR！旧版仓库的合并会带来很多麻烦，感谢您的支持！**
 
-QQ交流群：596520944；
+QQ交流群：[596520944](https://qm.qq.com/q/EBKhjsGRbM)
 
-~~喵呜，网站运营仍需经费，可以赏点钱吗？~~[爱发电](https://afdian.com/a/MCiSEE)
+<small>喵呜，网站运营仍需经费，可以赏点钱吗？</small> [爱发电](https://afdian.com/a/MCiSEE)
 
 ## 贡献教程
 

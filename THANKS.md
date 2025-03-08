@@ -7,6 +7,8 @@
 
 诚心感谢所有贡献以及支持我们的个人/组织/项目等。
 
+感谢[籽岷](https://space.bilibili.com/686127)叔的宣传与支持。
+
 排名不分先后。
 
 
@@ -14,7 +16,7 @@
 
 | 人员                                                  | 捐献  |
 |-----------------------------------------------------|-----|
-| GitHub: [baiyuncode](https://github.com/baiyuncode) | 服务器 |
+| GitHub: [baiyun1123](https://github.com/baiyun1123) | 服务器 |
 
 
 ## 依赖/引用的项目
@@ -83,6 +85,8 @@
 <summary>English</summary>
 
 Thank you to all the people/organizations/projects that have contributed or supported us.
+
+Thank Uncle [Zi Min](https://space.bilibili.com/686127) for publicity and support.
 
 The list is in no particular order.
 

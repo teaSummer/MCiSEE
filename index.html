@@ -54,6 +54,24 @@
 
 <body class="page-body">
 <div class="background"></div>
+<div class="announcement-bar">
+    <ul>
+        <li al="announcement.1"></li>
+        <li>
+            <small>
+                <text al="announcement.2"></text>
+                <a href="https://afdian.com/a/MCiSEE" target="_blank" al="afdian"></a>
+            </small>
+        </li>
+        <li>
+            <text class="inline" al="introduction.2"></text>
+            <svg id="star" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16" data-view-component="true"
+                 fill="currentColor" class="octicon octicon-star d-inline-block mr-2">
+                <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"></path>
+            </svg>
+        </li>
+    </ul>
+</div>
 <sidebar id="目录">
     <info al="content"></info>
     <dl>
@@ -207,15 +225,15 @@
                     <input type="checkbox" onclick="" disabled>
                     <text al="debugMode">debugMode</text>
                 </label>
-                <label>
+                <label id="gitHubProxy">
                     <input class="github-proxy" type="checkbox" checked>
                     <text al="GitHubProxy"></text>
                 </label>
-                <label>
+                <label id="searchableDirect">
                     <input class="searchable-direct" type="checkbox" checked>
                     <text al="searchableDirect"></text>
                 </label>
-                <label style="display: flex; align-items: center;">
+                <label id="searchablePromptLength" style="display: flex; align-items: center;">
                     <text al="searchablePromptLength"></text>
                     <mdui-slider class="inline-block searchable-prompt-length" name="searchable-prompt-length"
                                  value="10" min="0" max="30"></mdui-slider>
@@ -249,20 +267,45 @@
             <h2 al="statistics"></h2>
             <hr>
             <div class="article">
-                <h3 al="visitorCount"></h3>
-                <p style="text-align: center;">
-                    <img src="https://visitor-badge.laobi.icu/badge?page_id=teaSummer.MCiSEE" alt="Visitor Count">
-                </p>
+                <h3 class="inline-block" al="visitorCount"></h3>
+                <div id="访问计数" class="inline">
+                    <a class="to-unfold" href="#访问计数-展开" style="display: none;" al="unfold"></a>
+                    <a class="to-fold" href="#访问计数-收起" al="fold"></a>
+                    <details style="text-align: center;" open>
+                        <summary class="noicon"></summary>
+                        <img src="https://visitor-badge.laobi.icu/badge?page_id=teaSummer.MCiSEE" alt="Visitor Count">
+                    </details>
+                </div>
 
-                <h3 al="contributors"></h3>
-                <p style="text-align: center;">
-                    <img src="https://contrib.rocks/image?repo=teaSummer/MCiSEE" alt="Contributors">
-                </p>
+                <!-- <h3 class="inline-block" al="thankDonation"></h3>
+                <div id="发电感谢" class="inline">
+                    <a class="to-unfold" href="#发电感谢-展开" al="unfold"></a>
+                    <a class="to-fold" href="#发电感谢-收起" style="display: none;" al="fold"></a>
+                    <details style="text-align: center;">
+                        <summary class="noicon"></summary>
+                        <img src="https://visitor-badge.laobi.icu/badge?page_id=teaSummer.MCiSEE" alt="Visitor Count">
+                    </details>
+                </div> -->
 
-                <h3 al="starsOverTime"></h3>
-                <p style="text-align: center;">
-                    <img src="https://starchart.cc/teaSummer/MCiSEE.svg?variant=adaptive" alt="Stars Over Time">
-                </p>
+                <h3 class="inline-block" al="contributors"></h3>
+                <div id="贡献者" class="inline">
+                    <a class="to-unfold" href="#贡献者-展开" al="unfold"></a>
+                    <a class="to-fold" href="#贡献者-收起" style="display: none;" al="fold"></a>
+                    <details style="text-align: center;">
+                        <summary class="noicon"></summary>
+                        <img src="https://contrib.rocks/image?repo=teaSummer/MCiSEE" alt="Contributors">
+                    </details>
+                </div>
+
+                <h3 class="inline-block" al="starsOverTime"></h3>
+                <div id="GitHub星星历史图" class="inline">
+                    <a class="to-unfold" href="#GitHub星星历史图-展开" al="unfold"></a>
+                    <a class="to-fold" href="#GitHub星星历史图-收起" style="display: none;" al="fold"></a>
+                    <details style="text-align: center;">
+                        <summary class="noicon"></summary>
+                        <img src="https://starchart.cc/teaSummer/MCiSEE.svg?variant=adaptive" alt="Stars Over Time">
+                    </details>
+                </div>
             </div>
             <hr>
             <p class="ICP" al="ICP"></p>
