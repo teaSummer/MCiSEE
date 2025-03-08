@@ -13,6 +13,11 @@ data:
   announcement.1: 'Welcome to QQ Group: <a href="https://qm.qq.com/q/EBKhjsGRbM" target="_blank">596520944</a>'
   announcement.2: Meow! We need money to run the website. Could you donate for it?
   afdian: Afdian
+  news.java: 'Recent updates in Java Edition:'
+  news.bedrock: 'Recent updates in Bedrock Edition:'
+  news.release: Release 
+  news.development: Development 
+  news.beta: Beta 
   device: Devices
   device.tip: Auto identify, or choose by yourself
   Android.tip: Android/HarmonyOS - Phone/Tablet

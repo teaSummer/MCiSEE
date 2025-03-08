@@ -13,6 +13,11 @@ data:
   announcement.1: 歡迎加入QQ羣：<a href="https://qm.qq.com/q/EBKhjsGRbM" target="_blank">596520944</a>
   announcement.2: 喵嗚，網站運營仍需經費，可以賞點錢嗎？
   afdian: 愛發電
+  news.java: Java版最近更新：
+  news.bedrock: 基岩版最近更新：
+  news.release: 正式版
+  news.development: 開發版本
+  news.beta: 測試版
   device: 裝置
   device.tip: 自動偵測裝置，你也可以手動選擇
   Android.tip: 安卓/鴻蒙 - 手機/平板電腦

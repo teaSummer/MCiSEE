@@ -7,6 +7,11 @@ data:
   head.title: '${notificationCount} 万物皆礦藝也 — MCiSEE'
   introduction.title: 万物皆礦藝也
   announcement.1: 迎入QQ群：<a href="https://qm.qq.com/q/EBKhjsGRbM" target="_blank">五九六五二〇九四四</a>
+  news.java: 爪哇版近版：
+  news.bedrock: 基石版近版：
+  news.release: 行版
+  news.development: 預版
+  news.beta: 測版
   device: 裝置
   unsupported: 弗受援
   unknown: 未明
@@ -44,7 +49,7 @@ data:
   startDownloading: 欲始下傳：
   statistics: 計
   visitorCount: 計覽
-  ICP: <a href="https://icp.gov.moe/?keyword=20247837" target="_blank">萌ICP備20247837號</a>
+  ICP: <a href="https://icp.gov.moe/?keyword=20247837" target="_blank">萌ICP備二〇二四七八三七號</a>
   content: 目錄
   top: 頂
   bottom: 底
