@@ -69,10 +69,10 @@ const i18n = ((callback = () => {}) => {
 
 
 // 公告栏
-const announcement_init = (() => {
+const announcementInit = (() => {
     $('.announcement-bar li').removeAttr('class').each((i, e) => $(e).addClass(`announcement-${i + 1}`));
 });
-const announcement_switch = (() => {
+const announcementSwitch = (() => {
     setInterval(function() {
         for (let i = 1;; ++i) {
             if ($(`.announcement-${i}`).length) {
@@ -179,9 +179,10 @@ $.ajax({
             bedrock: getVersion(result, 'bedrock'),
             bedrockBeta: getVersion(result, 'bedrock-beta')
         };
-        let w = 'minecraft.wiki'
-        const l = al.getUserLang().split('-')[0];
-        const wiki = {cs: {},
+        let w = 'minecraft.wiki';
+        let l = al.getUserLang().split('-')[0];
+        const wiki = {
+            cs: {},
             de: {java: '$', javaSnap: '$', bedrock: 'Bedrock_Edition_$', bedrockBeta: 'Bedrock_Edition_beta_$'},
             en: {java: 'Java_Edition_$', javaSnap: 'Java_Edition_$', bedrock: 'Bedrock_Edition_$', bedrockBeta: 'Bedrock_Edition_beta_$'},
             el: {},
@@ -200,25 +201,24 @@ $.ajax({
             th: {java: 'รุ่น_Java_$', javaSnap: 'รุ่น_Java_$', bedrock: 'รุ่น_Bedrock_$', bedrockBeta: 'รุ่น_Bedrock_beta_$'},
             tr: {},
             uk: {java: '$_(Java_Edition)', javaSnap: '$_(Java_Edition)', bedrock: '$_(Bedrock_Edition)', bedrockBeta: 'Beta_$_(Bedrock_Edition)'},
-            zh: {java: 'Java版$', javaSnap: '$', bedrock: '基岩版$', bedrockBeta: '基岩版$'},
-        }
+            zh: {java: 'Java版$', javaSnap: '$', bedrock: '基岩版$', bedrockBeta: '基岩版$'}
+        };
         if (Object.keys(wiki).indexOf(l) != -1 && l != 'en') w = l + '.minecraft.wiki';
         else l = 'en';
-        w = 'href="https://' + w + '/w/';
-        const q = ((v) => {
+        const link = ((v) => {
             if (!wiki[l] || !wiki[l][v]) return '';
-            return w + wiki[l][v].replace('$', version[v]) + '"';
+            return `<a href="https://${w}/w/` + wiki[l][v].replace('$', version[v]) + `" target="_blank">${version[v]}</a>`;
         });
         if (version.javaSnap) {
-            version.javaSnap = `&nbsp;&nbsp;<text al="news.development"></text><a ${q('javaSnap')} target="_blank">${version.javaSnap}</a>`;
+            version.javaSnap = '&nbsp;&nbsp;<text al="news.development"></text>' + link("javaSnap");
         }
         if (version.bedrockBeta) {
-            version.bedrockBeta = `&nbsp;&nbsp;<text al="news.beta"></text><a ${q('bedrockBeta')} target="_blank">${version.bedrockBeta}</a>`;
+            version.bedrockBeta = '&nbsp;&nbsp;<text al="news.beta"></text>' + link("bedrockBeta");
         }
-        version.java = `<text al="news.release"></text><a ${q('java')} target="_blank">${version.java}</a>${version.javaSnap}`;
-        version.bedrock = `<text al="news.release"></text><a ${q('bedrock')} target="_blank">${version.bedrock}</a>${version.bedrockBeta}`;
+        version.java = '<text al="news.release"></text>' + link("java") + version.javaSnap;
+        version.bedrock = '<text al="news.release"></text>' + link("bedrock") + version.bedrockBeta;
         const news = `<li><text al="news.java"></text>${version.java}</li><li><text al="news.bedrock"></text>${version.bedrock}</li>`;
         $('.announcement-bar li:nth-child(2)').after(news);
-        i18n(announcement_init);
+        i18n(announcementInit);
     })
 });

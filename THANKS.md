@@ -21,7 +21,7 @@
 
 ## 依赖/引用的项目
 
-额外感谢 [GitHub](https://github.com)、[Gitee](https://gitee.com) 代码托管网站！
+使用了 [GitHub](https://github.com)、[Gitee](https://gitee.com) 代码托管网站。
 
 ### 网站主体
 
@@ -95,12 +95,12 @@ The list is in no particular order.
 
 | Person                                              | Donation |
 |-----------------------------------------------------|----------|
-| GitHub: [baiyuncode](https://github.com/baiyuncode) | A server |
+| GitHub: [baiyun1123](https://github.com/baiyun1123) | A server |
 
 
 ## Dependent/Referenced Projects
 
-Special thanks to: [GitHub](https://github.com) and [Gitee](https://gitee.com) (Code Hosting Websites).
+Using [GitHub](https://github.com) and [Gitee](https://gitee.com) (Code Hosting Websites).
 
 ### Main Website
 

@@ -212,7 +212,7 @@ let countSearchable = 0;
 const searchableChanged = (event = { target: $('.searchable-list') }) => {
     const e = $(event.target);
     const checked = checkedOption(event.target);
-    const searchKeyword = checked.data('search');
+    searchKeyword = checked.data('search');
     const abbr = checked.data('abbr');
     window.linkSearchFrom = searchableAbbr = abbr;
     $('.searchable-label').html(`<a class="searchable-goto gravity-inline" href="${checked.data('url')}" title="${checked.data('note') ? checked.data('note') : ''}" target="_blank"><p al="goto"></p>
@@ -246,6 +246,7 @@ $('.searchable-form').submit((event) => {
         }
         url = `https://modrinth.com/${$('.Modrinth-projectType').val()}s?q=${search}${versions}`;
     } else {
+        if (!searchKeyword) return;
         url = searchKeyword.replace(encodeURI('<T>'), search);
         if ($('.searchable-direct').is(':checked') && url.indexOf('&fulltext=') != -1) {
             url = url.replace(/&[^&]*$/, '');
@@ -497,8 +498,8 @@ $(() => {
         $(e).children().click(() => $(e).click());
     });
     // 公告栏
-    announcement_init();
-    announcement_switch();
+    announcementInit();
+    announcementSwitch();
     // 国际化 (internationalization) 准备进行
     i18n(() => {
         // 启动器 初始化
