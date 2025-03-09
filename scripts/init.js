@@ -31,6 +31,7 @@ const languages = [
     'en-UD',
     'en-US',
     'lzh',
+    'pt-BR',
     'zh-CN',
     'zh-HK',
     'zh-TW',
