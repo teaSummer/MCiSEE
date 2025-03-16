@@ -97,8 +97,8 @@
     },
     {
       "title": "ColorMC",
-      "download": "https://github.com/Coloryr/ColorMC/releases/download/a34.2025.1.1/colormc-x64.msi",
-      "version": "a34.2025.1.1",
+      "download": "https://github.com/Coloryr/ColorMC/releases/download/a35.2025.3.16/colormc-x64.msi",
+      "version": "a35.2025.3.16",
       "github": "https://github.com/Coloryr/ColorMC"
     },
     {
@@ -196,8 +196,8 @@
     },
     {
       "title": "ColorMC",
-      "download": "https://github.com/Coloryr/ColorMC/releases/download/a34.2025.1.1/colormc-a34.2025.1.1-1-x86_64.pkg.tar.zst",
-      "version": "a34.2025.1.1",
+      "download": "https://github.com/Coloryr/ColorMC/releases/download/a35.2025.3.16/colormc-a35.2025.3.16-1-x86_64.pkg.tar.zst",
+      "version": "a35.2025.3.16",
       "github": "https://github.com/Coloryr/ColorMC"
     },
     {
@@ -257,8 +257,8 @@
     },
     {
       "title": "ColorMC",
-      "download": "https://github.com/Coloryr/ColorMC/releases/download/a34.2025.1.1/colormc-linux-a34-x86_64.AppImage",
-      "version": "a34.2025.1.1",
+      "download": "https://github.com/Coloryr/ColorMC/releases/download/a35.2025.3.16/colormc-linux-a34-x86_64.AppImage",
+      "version": "a35.2025.3.16",
       "github": "https://github.com/Coloryr/ColorMC"
     },
     {
