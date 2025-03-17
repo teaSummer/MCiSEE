@@ -137,8 +137,8 @@
       "github": "https://github.com/Xcube-Studio/Natsurainko.FluentLauncher",
       "url": "https://fluentlauncher.natsurainko.work/",
       "dev": {
-        "download": "https://github.com/Xcube-Studio/Natsurainko.FluentLauncher/releases/download/pre-release-v2.3.4.3/package.msixbundle",
-        "version": "pre-release-v2.3.4.3"
+        "download": "https://github.com/Xcube-Studio/Natsurainko.FluentLauncher/releases/download/pre-release-v2.3.4.4/package.msixbundle",
+        "version": "pre-release-v2.3.4.4"
       }
     },
     {
