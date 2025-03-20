@@ -540,6 +540,9 @@ $(() => {
         try { document.querySelector(decodeURI(location.hash)).scrollIntoView(); } catch {}
     });
 
+    // init clean url
+    import('./module/clean-url.js');
+
     // init debug
     import("./debug.js").then(d => globalThis.debug = d.debug);
 });
