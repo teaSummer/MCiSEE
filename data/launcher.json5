@@ -120,7 +120,7 @@
       "title": "LauncherX",
       // 先用着
       "download": "https://corona.studio/lx/download",
-      "version": "1.89.0",
+      "version": "2.0.0",
       // TODO: 待更新
       // "github": "https://github.com/corona-studio/projbobcat",
       "url": "https://corona.studio/lx"
@@ -226,8 +226,8 @@
     },
     {
       "title": "LauncherX",
-      "download": "https://github.com/Corona-Studio/ProjBobcat/archive/refs/tags/v1.89.0.zip",
-      "version": "1.89.0",
+      "download": "https://github.com/Corona-Studio/ProjBobcat/archive/refs/tags/v2.0.0.zip",
+      "version": "2.0.0",
       "github": "https://github.com/corona-studio/projbobcat",
       "url": "https://corona.studio/launcherx"
     },
@@ -279,8 +279,8 @@
     },
     {
       "title": "LauncherX",
-      "download": "https://github.com/Corona-Studio/ProjBobcat/archive/refs/tags/v1.89.0.zip",
-      "version": "1.89.0",
+      "download": "https://github.com/Corona-Studio/ProjBobcat/archive/refs/tags/v2.0.0.zip",
+      "version": "2.0.0",
       "github": "https://github.com/corona-studio/projbobcat",
       "url": "https://corona.studio/launcherx"
     },
