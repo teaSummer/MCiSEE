@@ -240,7 +240,9 @@
       ["NeoForge", "https://neoforged.net", "模组加载器(1.20.1+)"],
       ["OptiFine", "https://www.optifine.net", "光影加载器(远古版本起)"],
       ["Quilt", "https://quiltmc.org", "模组加载器(1.14+)"],
-      ["Rift", "https://www.curseforge.com/minecraft/mc-mods/rift", "模组加载器(1.13-1.13.2)"]
+      ["Rift", "https://www.curseforge.com/minecraft/mc-mods/rift", "模组加载器(1.13-1.13.2)"],
+      ["Oculus", "https://www.curseforge.com/minecraft/mc-mods/oculus", "光影加载器(1.16.5-1.20.1部分版本)"],
+      ["Embeddium", "https://www.curseforge.com/minecraft/mc-mods/embeddium", "光影加载器(1.16.5-1.21.4部分版本)"]
     ]
   },
   {

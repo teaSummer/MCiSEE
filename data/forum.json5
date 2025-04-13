@@ -5,12 +5,13 @@
       ["网易我的世界论坛", "https://mc.netease.com", "由网易运营的我的世界中国版论坛，内嵌于客户端中。目前已禁止客户端以外的用户发帖，且 180 天前的帖子不可见。网易的游戏论坛业务已迁移至网易大神，网易我的世界论坛已基本停止运营。"],
       ["MineBBS", "https://www.minebbs.com", "综合性MC论坛，以基岩版服务端资源为主要特色，于2024年2月重启Java版，目前Java版服务端资源发展较为迅速。"],
       ["九域资源社区", "https://bbs.mc9y.net", "主营服务器插件。"],
-      ["苦力怕论坛", "https://klpbbs.com", "主营基岩版，含Java版。"],
+      ["苦力怕论坛", "https://klpbbs.com", "主营基岩版，含部分Java版内容的 Minecraft 中文社区。"],
       ["我的世界教育版中文论坛", "https://www.mceebbs.com", "非中国大陆服务器。"],
       ["我的世界UTC论坛", "https://bbs.mcutc.cn", "主要发布 Minecraft 衍生资源。"],
-      ["HiMCBBS", "https://www.himcbbs.com", "主营Java版，含基岩版。"],
+      ["HiMCBBS", "https://www.himcbbs.com", "主营Java版，含部分基岩版内容的 Minecraft 中文社区。"],
       ["红石中继站", "https://www.mczwlt.net", "前身为我的世界中文论坛（MCBBS，域名：www.mcbbs.net），于 2024 年 1 月 20 日关闭，现于 2025 年 1 月 31 日转生。"],
-      ["SodaMC", "https://sodamc.com/", "综合性MC资源社区。"]
+      ["SodaMC", "https://sodamc.com/", "综合性MC资源社区。"],
+      ["BBSMC", "https://bbsmc.net/", "我的世界资源社区论坛。"]
     ]
   },
   {
