@@ -8,7 +8,7 @@
 诚心感谢所有贡献以及支持我们的个人/组织/项目等。
 
 感谢[籽岷](https://space.bilibili.com/686127)叔的宣传与支持。
-
+（籽岷的GitHub：[zimin1983](https://github.com/zimin1983)）
 排名不分先后。
 
 
