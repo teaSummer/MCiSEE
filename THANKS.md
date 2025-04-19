@@ -90,6 +90,8 @@ Thank you to all the people/organizations/projects that have contributed or supp
 
 Thank Uncle [Zi Min](https://space.bilibili.com/686127) for publicity and support.
 
+（Zi Min's GitHub：[zimin1983](https://github.com/zimin1983)）
+
 The list is in no particular order.
 
 
