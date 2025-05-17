@@ -113,7 +113,7 @@ jobs:
           fi
           if [ "$LATEST_STABLE_VERSION" ]; then
             if [ "$LAST_STABLE_VERSION" != "$LATEST_STABLE_VERSION" ]; then
-              sed -i 's/\([/"v-]\)'"$LAST_STABLE_VERSION"'\(\.[a-z]\|["/-]\)/\1'"$LATEST_STABLE_VERSION"'\2/gi' data/launcher.json5
+              sed -i 's/\([/"v_-]\)'"$LAST_STABLE_VERSION"'\(\.[a-z]\|["/-]\)/\1'"$LATEST_STABLE_VERSION"'\2/gi' data/launcher.json5
               LAST_STABLE_VERSION=`echo $LAST_STABLE_VERSION | sed 's/\\\\././g'`
               LATEST_STABLE_VERSION=`echo $LATEST_STABLE_VERSION | sed 's/\\\\././g'`
               CHANGELOG_E='  ${{ matrix.abbr }}(stable): '"$LAST_STABLE_VERSION => $LATEST_STABLE_VERSION$DEVICE_STRING"
@@ -121,7 +121,7 @@ jobs:
           fi
           if [ "$LATEST_DEV_VERSION" ]; then
             if [ "$LAST_DEV_VERSION" != "$LATEST_DEV_VERSION" ]; then
-              sed -i 's/\([/"v-]\)'"$LAST_DEV_VERSION"'\(\.[a-z]\|["/-]\)/\1'"$LATEST_DEV_VERSION"'\2/gi' data/launcher.json5
+              sed -i 's/\([/"v_-]\)'"$LAST_DEV_VERSION"'\(\.[a-z]\|["/-]\)/\1'"$LATEST_DEV_VERSION"'\2/gi' data/launcher.json5
               LAST_DEV_VERSION=`echo $LAST_DEV_VERSION | sed 's/\\\\././g'`
               LATEST_DEV_VERSION=`echo $LATEST_DEV_VERSION | sed 's/\\\\././g'`
               if [ "$CHANGELOG_E" ]; then
