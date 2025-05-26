@@ -543,6 +543,8 @@ $(() => {
     // init clean url
     import('./module/clean-url.js');
 
+    import('./module/search-param-helper.js');
+
     // init debug
     import("./debug.js").then(d => globalThis.debug = d.debug);
 });
