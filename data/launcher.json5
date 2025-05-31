@@ -66,13 +66,13 @@
     {
       "title": "Hello Minecraft! Launcher",
       "abbr": "HMCL",
-      "download": "https://github.com/HMCL-dev/HMCL/releases/download/3.6.12.278/HMCL-3.6.12.exe",
+      "download": "https://github.com/HMCL-dev/HMCL/releases/download/3.6.12.279/HMCL-3.6.12.exe",
       "version": "3.6.12",
       "github": "https://github.com/HMCL-dev/HMCL",
       "url": "https://hmcl.huangyuhui.net",
       "dev": {
-        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.6.12.278/HMCL-3.6.12.278.exe",
-        "version": "3.6.12.278"
+        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.6.12.279/HMCL-3.6.12.279.exe",
+        "version": "3.6.12.279"
       }
     },
     {
@@ -190,13 +190,13 @@
     {
       "title": "Hello Minecraft! Launcher",
       "abbr": "HMCL",
-      "download": "https://github.com/HMCL-dev/HMCL/releases/download/3.6.12.278/HMCL-3.6.12.sh",
+      "download": "https://github.com/HMCL-dev/HMCL/releases/download/3.6.12.279/HMCL-3.6.12.sh",
       "version": "3.6.12",
       "github": "https://github.com/HMCL-dev/HMCL",
       "url": "https://hmcl.huangyuhui.net",
       "dev": {
-        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.6.12.278/HMCL-3.6.12.278.sh",
-        "version": "3.6.12.278"
+        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.6.12.279/HMCL-3.6.12.279.sh",
+        "version": "3.6.12.279"
       }
     },
     {
@@ -251,13 +251,13 @@
     {
       "title": "Hello Minecraft! Launcher",
       "abbr": "HMCL",
-      "download": "https://github.com/HMCL-dev/HMCL/releases/download/3.6.12.278/HMCL-3.6.12.sh",
+      "download": "https://github.com/HMCL-dev/HMCL/releases/download/3.6.12.279/HMCL-3.6.12.sh",
       "version": "3.6.12",
       "github": "https://github.com/HMCL-dev/HMCL",
       "url": "https://hmcl.huangyuhui.net",
       "dev": {
-        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.6.12.278/HMCL-3.6.12.278.sh",
-        "version": "3.6.12.278"
+        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.6.12.279/HMCL-3.6.12.279.sh",
+        "version": "3.6.12.279"
       }
     },
     {
