@@ -54,6 +54,7 @@ const languages = [
     'zh-CN',
     'zh-HK',
     'zh-TW',
+    'en-UD',
 ];
 let goingapf = false;
 al.current(languages, {url: true, yaml: true});
