@@ -14,8 +14,8 @@
       ["壁纸集", "https://www.minecraft.net/collectibles/minecraft-collection", ""],
       ["服务器列表", "https://findmcserver.com/", "查找独特且友好的官方服务器"],
       ["编程一小时教程", "https://code.org/minecraft", "教育版教程"],
-      ["地下城 (Dungeons)", "https://minecraft.net/dungeons", "Minecraft Dungeons\n一款动作/冒险角色扮演类电子游戏，现已停更"],
-      ["传奇 (Legends)", "https://minecraft.net/legends", "Minecraft Legends\n一款即时动作战略游戏，现已停更"],
+      ["地下城 (Dungeons)", "https://www.minecraft.net/about-dungeons", "Minecraft Dungeons\n一款动作/冒险角色扮演类电子游戏，现已停更"],
+      ["传奇 (Legends)", "https://www.minecraft.net/about-legends", "Minecraft Legends\n一款即时动作战略游戏，现已停更"],
       ["Minecraft Earth", "#", "一款免费增强现实（AR）手游，现已停更\n官网不再维护"],
       ["故事模式 (Story Mode)", "#", "Minecraft: Story Mode\n一款具有可点选性、叙事性、章节性的电子游戏，现已停更\n官网不再维护"]
     ]
@@ -234,17 +234,17 @@
   {
     "加载器 (模组/光影)": [
       ["Canvas", "https://modrinth.com/mod/canvas", "光影加载器(1.14-1.20.5)"],
+      ["Embeddium", "https://modrinth.com/mod/embeddium", "光影加载器(1.16.5-1.21.4)"],
       ["Fabric", "https://fabricmc.net", "模组加载器(1.14+)"],
       ["Forge", "https://www.minecraftforge.net", "模组加载器(远古版本起)"],
       ["Iris", "https://www.irisshaders.dev", "光影加载器(1.16+)"],
       ["Legacy Fabric", "https://legacyfabric.net/", "模组加载器(1.2.5-1.13.2)"],
       ["LiteLoader", "https://www.liteloader.com", "模组加载器(1.3.2-1.12.2)"],
       ["NeoForge", "https://neoforged.net", "模组加载器(1.20.1+)"],
-      ["OptiFine", "https://www.optifine.net", "光影加载器(远古版本起)"],
+      ["Oculus", "https://modrinth.com/mod/oculus", "光影加载器(1.16.5-1.20.1)"],
+      ["OptiFine", "https://www.optifine.net", "光影加载器(远古版本-1.21.4)"],
       ["Quilt", "https://quiltmc.org", "模组加载器(1.14+)"],
-      ["Rift", "https://www.curseforge.com/minecraft/mc-mods/rift", "模组加载器(1.13-1.13.2)"],
-      ["Oculus", "https://www.curseforge.com/minecraft/mc-mods/oculus", "光影加载器(1.16.5-1.20.1部分版本)"],
-      ["Embeddium", "https://www.curseforge.com/minecraft/mc-mods/embeddium", "光影加载器(1.16.5-1.21.4部分版本)"]
+      ["Rift", "https://www.curseforge.com/minecraft/mc-mods/rift", "模组加载器(1.13-1.13.2)"]
     ]
   },
   {
@@ -276,7 +276,7 @@
       ["Architectury模组模板生成器", "https://generate.architectury.dev/", "Architectury工具链模组开发模板生成器"],
       ["Quilt模组模板生成器", "https://quiltmc.org/en/usage/generator/", ""],
       ["基岩版创作者工具", "https://mctools.dev/", "Minecraft Creator Tools\n快速创建附加包模板"],
-      ["基岩版官方模板下载", "https://github.com/Mojang/bedrock-samples/releases"],
+      ["基岩版官方模板", "https://github.com/Mojang/bedrock-samples"],
       ["基岩版官方脚本API文档", "https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/"],
       ["基岩版官方实体API Json文档", "https://learn.microsoft.com/en-us/minecraft/creator/reference/content/entityreference/"],
       ["基岩版官方Molang文档", "https://learn.microsoft.com/en-us/minecraft/creator/reference/content/molangreference/"]

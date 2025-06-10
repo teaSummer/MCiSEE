@@ -20,6 +20,25 @@ const downloadClick = (() => $('.download').click(function() {
 }));
 const faviconGH = fIconGet('github.com');
 
+
+// 配置初始化
+const config = ((settings) => {
+    for (const [option, defaultVal] of Object.entries(settings)) {
+        if (localStorage.getItem(option) == null) localStorage.setItem(option, defaultVal);
+        if (localStorage.getItem(option) == 'true' ) $('.' + option).attr('checked', true );
+        else if (localStorage.getItem(option) == 'false') $('.' + option).attr('checked', false);
+        else $('.' + option).val(localStorage.getItem(option));
+    }
+});
+config({
+    'theme': 'system',
+    'github-proxy': (navigator.language == 'zh-CN' ? true : false),
+    'searchable-direct': true,
+    'searchable-prompt-length': 10,
+    'clean-url': true
+});
+
+
 // 国际化 (internationalization)
 al.setLangPropPath('locales/%%.yml');
 al.setDefaultCountry({
@@ -158,9 +177,9 @@ const utilityWebsite = read('utilityWebsite');
 const forum = read('forum');
 
 // 愚人节彩蛋
-const cfg = read("scripts/cfg/apf.cfg.json5", true);
+const cfg = read("scripts/config/apf.cfg.json5", true);
 let isapf = checkDate() || cfg.testMode;
-import("./apf.js").then(apf => (globalThis.apf = apf, apf.main()));
+import("./module/apf.js").then(apf => (globalThis.apf = apf, apf.main()));
 
 // 版本
 const getVersion = ((content, type) => {
