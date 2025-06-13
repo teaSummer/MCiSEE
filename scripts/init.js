@@ -21,24 +21,6 @@ const downloadClick = (() => $('.download').click(function() {
 const faviconGH = fIconGet('github.com');
 
 
-// 配置初始化
-const config = ((settings) => {
-    for (const [option, defaultVal] of Object.entries(settings)) {
-        if (localStorage.getItem(option) == null) localStorage.setItem(option, defaultVal);
-        if (localStorage.getItem(option) == 'true' ) $('.' + option).attr('checked', true );
-        else if (localStorage.getItem(option) == 'false') $('.' + option).attr('checked', false);
-        else $('.' + option).val(localStorage.getItem(option));
-    }
-});
-config({
-    'theme': 'system',
-    'github-proxy': (navigator.language == 'zh-CN' ? true : false),
-    'searchable-direct': true,
-    'searchable-prompt-length': 10,
-    'clean-url': true
-});
-
-
 // 国际化 (internationalization)
 al.setLangPropPath('locales/%%.yml');
 al.setDefaultCountry({

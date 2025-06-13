@@ -1,23 +1,18 @@
 /**
  * MCiSEE Clean URL Module
- * @author LateDream
  */
 (function() {
-	'use strict';
-	const checkbox = document.querySelector('.clean-url');
-	let cleanUrl = JSON.parse(localStorage.getItem('clean-url')) || false;
+    'use strict';
+    $('.clean-url').click(function() {
+        localStorage.setItem('clean-url', this.checked);
+        if (this.checked) cleanUrlFunc(true);
+    });
 
-	checkbox.addEventListener('click', () => {
-		localStorage.setItem('clean-url', checkbox.checked);
-		const cleanUrlFunc = () => {
-			history.replaceState(null, null, location.href.split('#')[0].replace('index.html', ''));
-		}
-		if(checkbox.checked) {
-			window.addEventListener('hashchange', cleanUrlFunc);
-			cleanUrlFunc();
-		} else location.reload();
-		// window.removeEventListener('hashchange', cleanUrlFunc); // not work
-	});
-
-	if(cleanUrl) {checkbox.click();}
+    const cleanUrlFunc = (always) => {
+        if (localStorage.getItem('clean-url') == 'true' || always == true) {
+            history.replaceState(null, null, location.href.split('#')[0].replace('index.html', ''));
+        }
+    }
+    window.addEventListener('hashchange', cleanUrlFunc);
+    cleanUrlFunc();
 })();
