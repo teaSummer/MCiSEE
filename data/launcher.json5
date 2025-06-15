@@ -39,6 +39,15 @@
       "version": "1.4.0.6",
       "github": "https://github.com/ZalithLauncher/ZalithLauncher"
     },
+    {
+      "title": "Angel Aura Amethyst",
+      "github": "https://github.com/AngelAuraMC/Amethyst-Android",
+      "url": "https://wiki.angelauramc.dev/wiki",
+      "dev":{
+        "download": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/15660924693/artifacts/3330366203",
+        "version": "1.0"
+      }
+    },
   ],
   // ===================================
   // 适用于 苹果手机/苹果平板 的启动器
@@ -50,6 +59,15 @@
       "version": "2.2",
       "github": "https://github.com/PojavLauncherTeam/PojavLauncher_iOS",
       "url": "https://pojavlauncher.app"
+    },
+    {
+      "title": "Angel Aura Amethyst",
+      "github": "https://github.com/AngelAuraMC/Amethyst-iOS",
+      "url": "https://wiki.angelauramc.dev/wiki",
+      "dev":{
+        "download": "https://github.com/AngelAuraMC/Amethyst-iOS/actions/runs/15523376984/artifacts/3284565553",
+        "version": "1.0"
+      }
     },
   ],
   // ==============================
