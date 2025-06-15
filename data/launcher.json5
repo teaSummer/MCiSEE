@@ -40,7 +40,7 @@
       "github": "https://github.com/ZalithLauncher/ZalithLauncher"
     },
   ],
-  // ===================================
+  // =====！==============================
   // 适用于 苹果手机/苹果平板 的启动器
   // ===================================
   "iOSLauncher": [
@@ -50,6 +50,9 @@
       "version": "2.2",
       "github": "https://github.com/PojavLauncherTeam/PojavLauncher_iOS",
       "url": "https://pojavlauncher.app"
+    },
+    {
+      "title": ""
     },
   ],
   // ==============================
