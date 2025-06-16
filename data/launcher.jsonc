@@ -47,7 +47,7 @@
         "download": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/15660924693/artifacts/3330366203",
         "version": "1.0"
       }
-    },
+    }
   ],
   // ===================================
   // 适用于 苹果手机/苹果平板 的启动器
@@ -68,7 +68,7 @@
         "download": "https://github.com/AngelAuraMC/Amethyst-iOS/actions/runs/15523376984/artifacts/3284565553",
         "version": "1.0"
       }
-    },
+    }
   ],
   // ==============================
   // 适用于 Windows电脑 的启动器
@@ -89,8 +89,8 @@
       "github": "https://github.com/HMCL-dev/HMCL",
       "url": "https://hmcl.huangyuhui.net",
       "dev": {
-        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.6.12.281/HMCL-3.6.12.281.exe",
-        "version": "3.6.12.281"
+        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.6.12.280/HMCL-3.6.12.280.exe",
+        "version": "3.6.12.280"
       }
     },
     {
@@ -193,7 +193,7 @@
       "download": "https://lz.qaiu.top/parser?url=https://share.feijipan.com/s/kwAt8rhZ",
       "version": "1.0.9",
       "github": "https://github.com/LTCatt/PCL1"
-    },
+    }
   ],
   // ==========================
   // 适用于 苹果电脑 的启动器
@@ -213,8 +213,8 @@
       "github": "https://github.com/HMCL-dev/HMCL",
       "url": "https://hmcl.huangyuhui.net",
       "dev": {
-        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.6.12.281/HMCL-3.6.12.281.sh",
-        "version": "3.6.12.281"
+        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.6.12.280/HMCL-3.6.12.280.sh",
+        "version": "3.6.12.280"
       }
     },
     {
@@ -253,7 +253,7 @@
       "version": "2.0.0",
       "github": "https://github.com/corona-studio/projbobcat",
       "url": "https://corona.studio/launcherx"
-    },
+    }
   ],
   // ============================
   // 适用于 Linux系统 的启动器
@@ -274,8 +274,8 @@
       "github": "https://github.com/HMCL-dev/HMCL",
       "url": "https://hmcl.huangyuhui.net",
       "dev": {
-        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.6.12.281/HMCL-3.6.12.281.sh",
-        "version": "3.6.12.281"
+        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.6.12.280/HMCL-3.6.12.280.sh",
+        "version": "3.6.12.280"
       }
     },
     {
@@ -306,6 +306,6 @@
       "version": "2.0.0",
       "github": "https://github.com/corona-studio/projbobcat",
       "url": "https://corona.studio/launcherx"
-    },
+    }
   ]
 }

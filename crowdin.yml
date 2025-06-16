@@ -6,7 +6,7 @@
 
 "files": [
   {
-    "source": "/*.yml",
-    "translation": "/locales/%locale%.yml"
+    "source": "/*.json",
+    "translation": "/locales/%locale%.json"
   }
 ]

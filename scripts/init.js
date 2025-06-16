@@ -22,7 +22,7 @@ const faviconGH = fIconGet('github.com');
 
 
 // 国际化 (internationalization)
-al.setLangPropPath('locales/%%.yml');
+al.setLangPropPath('locales/%%.json');
 al.setDefaultCountry({
     en: 'en-US',
     zh: 'zh-CN',
@@ -39,12 +39,12 @@ const languages = [
     'en-UD',
 ];
 let goingapf = false;
-al.current(languages, {url: true, yaml: true});
+al.current(languages, {url: true});
 const i18n = ((callback = () => {}) => {
     if (isapf) {
         const apflang = al.getUserLang().startsWith('zh-') ? 'lzh' : 'en-UD';
         if (!goingapf) {
-            al.current(languages, {url: true, yaml: true}, apflang, () => {
+            al.current(languages, {url: true}, apflang, () => {
                 goingapf = true;
                 al.load(al.mode.HTML, callback, apflang);
             });
@@ -93,10 +93,10 @@ if (history.scrollRestoration) {
 }
 
 
-// 读取 JSON5 文件
+// 读取 jsonc 文件
 const read = ((file, isPath = false) => {
-    return JSON5.parse($.ajax({
-        url: isPath ? file : `data/${file}.json5`,
+    return JSONC.parse($.ajax({
+        url: isPath ? file : `data/${file}.jsonc`,
         dataType: 'json',
         async: false
     }).responseText);
@@ -160,7 +160,7 @@ const utilityWebsite = read('utilityWebsite');
 const forum = read('forum');
 
 // 愚人节彩蛋
-const cfg = read("scripts/config/apf.cfg.json5", true);
+const cfg = read("scripts/config/apf.cfg.jsonc", true);
 let isapf = checkDate() || cfg.testMode;
 import("./module/apf.js").then(apf => (globalThis.apf = apf, apf.main()));
 

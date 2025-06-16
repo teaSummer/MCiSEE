@@ -21,10 +21,10 @@
 
 | 文件名                                                                           | 数据含义             | 文件                                                                       |
 |-------------------------------------------------------------------------------|------------------|--------------------------------------------------------------------------|
-| [![](assets/icon/doc/link-16.svg)](#launcherjson5) launcher.json5             | 启动器列表（**Java版**） | [查看![](assets/icon/doc/link-external-16.svg)](data/launcher.json5)       |
-| [![](assets/icon/doc/link-16.svg)](#forumjson5) forum.json5                   | 论坛列表             | [查看![](assets/icon/doc/link-external-16.svg)](data/forum.json5)          |
-| [![](assets/icon/doc/link-16.svg)](#searchablejson5) searchable.json5         | 可供快速查询的站点列表      | [查看![](assets/icon/doc/link-external-16.svg)](data/searchable.json5)     |
-| [![](assets/icon/doc/link-16.svg)](#utilityWebsitejson5) utilityWebsite.json5 | 实用网站列表           | [查看![](assets/icon/doc/link-external-16.svg)](data/utilityWebsite.json5) |
+| [![](assets/icon/doc/link-16.svg)](#launcherjsonc) launcher.jsonc             | 启动器列表（**Java版**） | [查看![](assets/icon/doc/link-external-16.svg)](data/launcher.jsonc)       |
+| [![](assets/icon/doc/link-16.svg)](#forumjsonc) forum.jsonc                   | 论坛列表             | [查看![](assets/icon/doc/link-external-16.svg)](data/forum.jsonc)          |
+| [![](assets/icon/doc/link-16.svg)](#searchablejsonc) searchable.jsonc         | 可供快速查询的站点列表      | [查看![](assets/icon/doc/link-external-16.svg)](data/searchable.jsonc)     |
+| [![](assets/icon/doc/link-16.svg)](#utilityWebsitejsonc) utilityWebsite.jsonc | 实用网站列表           | [查看![](assets/icon/doc/link-external-16.svg)](data/utilityWebsite.jsonc) |
 
 打开文件后，你将看到一些常量，例如 AndroidLauncher 等。
 
@@ -34,7 +34,7 @@
 
 下面详细介绍了每个文件的数据。
 
-## launcher.json5
+## launcher.jsonc
 
 对象有以下属性：
 
@@ -57,7 +57,7 @@
 
 示例如下：
 
-``` json5
+``` jsonc
 {
   "title": "Hello Minecraft! Launcher",
   "abbr": "HMCL",
@@ -76,13 +76,13 @@
 
 ---
 
-## forum.json5
+## forum.jsonc
 
-参见段落 [utilityWebsite.json5](#utilityWebsitejson5)。
+参见段落 [utilityWebsite.jsonc](#utilityWebsitejsonc)。
 
 ---
 
-## searchable.json5
+## searchable.jsonc
 
 对象有以下属性：
 
@@ -96,7 +96,7 @@
 
 示例如下：
 
-``` json5
+``` jsonc
 {
   "title": "维基百科: 原站",
   "abbr": "Wiki",
@@ -108,7 +108,7 @@
 
 ---
 
-## utilityWebsite.json5
+## utilityWebsite.jsonc
 
 **请勿**提供仅限单一模组的网站。
 
@@ -126,7 +126,7 @@
 
 示例如下：
 
-``` json5
+``` jsonc
 {
   "官方网站 (©Mojang/©微软)": [
 	["Minecraft", "https://www.minecraft.net"],
@@ -158,6 +158,6 @@
 3. `国内知名第三方` 限制 **6个/设备**，`国外第三方` 限制 **3个/设备**。
 4. 对于 `version` 属性，应优先考虑 GitHub 仓库的相应 Tag，其次是官方的相应版本名/号。
 5. 另外，由于 `PCL2` 快照版本尚未公开，**请勿**提供其 `dev` 属性。
-6. 由于特殊原因，辅助类启动器请在 [utilityWebsite.json5](data/utilityWebsite.json5) 中提供。
+6. 由于特殊原因，辅助类启动器请在 [utilityWebsite.jsonc](data/utilityWebsite.jsonc) 中提供。
 
 感谢您的贡献。历史的长河将会为您留名。

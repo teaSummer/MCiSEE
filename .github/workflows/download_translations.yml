@@ -31,10 +31,10 @@ jobs:
           sudo chmod -R ugo+rwX .
           sed -i ":a;N;s/^    '\([a-z][a-z]-[A-Z][A-Z]\|lzh\)',\?\n//g;ta" scripts/init.js
           for TF in $(ls -r locales); do
-            if [[ $TF == *.yml ]]; then
-              if [[ $(sed -n '$=' locales/$TF) -ge 10 ]]; then
-                TL=$(basename $TF .yml)
-                sed -i -e 's/^/  /g' -e "1i# Crowdin: https:\/\/crowdin.com\/project\/mcisee\/$TL\nlanguage: $TL\n\ndata:" locales/$TF
+            if [[ $TF == *.json ]]; then
+              if [[ $(sed -n '$=' locales/$TF) -ge 12 ]]; then
+                TL=$(basename $TF .json)
+                sed -i -e "s/^  {/{/g" -e '2i\  "language": "'$TL'",\n  "data": {' -e '$a}' locales/$TF
                 sed -i "s/\/\/ Crowdin/\/\/ Crowdin\n    '$TL',/g" scripts/init.js
               else
                 rm locales/$TF
