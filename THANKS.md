@@ -41,7 +41,7 @@
 
 [AutoLang](https://github.com/TheChuan1503/AutoLang) 前端国际化库
 
-[jsonc](https://github.com/jsonc/jsonc) 面向人类的JSON
+[jsonc](https://github.com/wellwelwel/jsonc.min) 更快更安全的JSON和JSONC
 
 [FaviconExtractor](https://github.com/seadfeng/favicon-downloader) 获取Favicon
 
@@ -122,7 +122,7 @@ Using [GitHub](https://github.com) and [Gitee](https://gitee.com) (Code Hosting 
 
 [AutoLang](https://github.com/TheChuan1503/AutoLang) Web Internationalization JS Lib
 
-[jsonc](https://github.com/jsonc/jsonc) JSON for humans
+[jsonc](https://github.com/wellwelwel/jsonc.min) Faster and safer JSON and JSONC
 
 [FaviconExtractor](https://github.com/seadfeng/favicon-downloader) Get Favicon
 

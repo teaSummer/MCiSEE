@@ -42,8 +42,7 @@
     {
       "title": "Angel Aura Amethyst",
       "github": "https://github.com/AngelAuraMC/Amethyst-Android",
-      "url": "https://wiki.angelauramc.dev/wiki",
-      "dev":{
+      "dev": {
         "download": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/15660924693/artifacts/3330366203",
         "version": "1.0"
       }
@@ -63,8 +62,7 @@
     {
       "title": "Angel Aura Amethyst",
       "github": "https://github.com/AngelAuraMC/Amethyst-iOS",
-      "url": "https://wiki.angelauramc.dev/wiki",
-      "dev":{
+      "dev": {
         "download": "https://github.com/AngelAuraMC/Amethyst-iOS/actions/runs/15523376984/artifacts/3284565553",
         "version": "1.0"
       }

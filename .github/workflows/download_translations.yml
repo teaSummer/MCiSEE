@@ -34,7 +34,7 @@ jobs:
             if [[ $TF == *.json ]]; then
               if [[ $(sed -n '$=' locales/$TF) -ge 12 ]]; then
                 TL=$(basename $TF .json)
-                sed -i -e "s/^  {/{/g" -e '2i\  "language": "'$TL'",\n  "data": {' -e '$a}' locales/$TF
+                sed -i -e '2i\  "language": "'$TL'",\n  "data": {' -e 's/^}/  }/g' -e '$a}' locales/$TF
                 sed -i "s/\/\/ Crowdin/\/\/ Crowdin\n    '$TL',/g" scripts/init.js
               else
                 rm locales/$TF
