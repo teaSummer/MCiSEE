@@ -128,9 +128,9 @@
     {
       "title": "Plain Craft Launcher 2 Community Edition",
       "abbr": "PCL2 社区版",
-      "download": "https://github.com/PCL-Community/PCL2-CE/releases/download/2.11.7/PCL2_CE_Release_x64.exe",
+      "download": "https://github.com/PCL-Community/PCL2-CE/releases/download/2.11.8/PCL2_CE_Release_x64.exe",
       // 太美的 pcl2ce开发组你们能不能别改文件名了 (╬▔皿▔)╯
-      "version": "2.11.7",
+      "version": "2.11.8",
       "github": "https://github.com/PCL-Community/PCL2-CE",
       "dev": {
         "download": "https://github.com/PCL-Community/PCL2-CE/releases/download/2.11.3-beta.2/PCL2_CE_Beta_x64.exe",
