@@ -15,7 +15,7 @@ jobs:
       - name: Crowdin pull
         uses: crowdin/github-action@master
         with:
-          upload_sources: false
+          upload_sources: true
           download_translations: true
           create_pull_request: false
           push_translations: false
