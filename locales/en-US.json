@@ -89,6 +89,7 @@
     "launcher.release.latest": "${downloadSVG}{download} {latest} {release}",
     "launcher.preRelease": "${downloadSVG}{download} {preRelease} ${linkDevVersion}",
     "launcher.preRelease.latest": "${downloadSVG}{download} {latest} {preRelease}",
-    "cleanUrl": "Clean URL Anchor"
+    "cleanUrl": "Clean URL Anchor",
+    "rainyun-sponsor": "Sponsor by Rainyun"
   }
 }
