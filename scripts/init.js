@@ -62,7 +62,7 @@ const languages = [
     'zh-CN',
     'zh-HK',
     'zh-TW',
-    'en-UD',
+    'af-ZA',
 ];
 let goingapf = false;
 al.current(languages, {url: true});
