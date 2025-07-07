@@ -7,18 +7,19 @@
 
 诚心感谢所有贡献以及支持我们的个人/组织/项目等。
 
-感谢[籽岷](https://space.bilibili.com/686127)叔的宣传与支持。
-
-（籽岷的GitHub：[zimin1983](https://github.com/zimin1983)）
+感谢[籽岷](https://space.bilibili.com/686127)叔的宣传与支持，以及[雨云赞助](https://www.rainyun.com/baiyun_)服务器。
 
 排名不分先后。
 
 
 ## 发电感谢
 
-| 人员                                                  | 捐献  |
-|-----------------------------------------------------|-----|
-| GitHub: [baiyun1123](https://github.com/baiyun1123) | 服务器 |
+| 人员                                                                       | 捐献     |
+|--------------------------------------------------------------------------|--------|
+| GitHub：[baiyun1123](https://github.com/baiyun1123)                       | 服务器    |
+| 爱发电：[huang](https://afdian.com/u/e97cd43e7a8b11ed950252540025c377)       | ￥5.00  |
+| 爱发电：[梦淹***](https://afdian.com/u/c673ffbe0f8d11f0bede52540025c377)       | ￥5.00  |
+| 爱发电：[爱发电用户_2bffb](https://afdian.com/u/2bffb67a59ad11f0b79352540025c377) | ￥28.20 |
 
 
 ## 依赖/引用的项目
@@ -88,18 +89,19 @@
 
 Thank you to all the people/organizations/projects that have contributed or supported us.
 
-Thank Uncle [Zi Min](https://space.bilibili.com/686127) for publicity and support.
-
-（Zi Min's GitHub：[zimin1983](https://github.com/zimin1983)）
+Thank Uncle [Zi Min](https://space.bilibili.com/686127) for publicity and support, and Rainyun's sponsorship server.
 
 The list is in no particular order.
 
 
 ## Thanks for Donation
 
-| Person                                              | Donation |
-|-----------------------------------------------------|----------|
-| GitHub: [baiyun1123](https://github.com/baiyun1123) | A server |
+| Person                                                                       | Donation |
+|------------------------------------------------------------------------------|----------|
+| GitHub: [baiyun1123](https://github.com/baiyun1123)                          | A server |
+| Afdian: [huang](https://afdian.com/u/e97cd43e7a8b11ed950252540025c377)       | ￥5.00    |
+| Afdian: [梦淹***](https://afdian.com/u/c673ffbe0f8d11f0bede52540025c377)       | ￥5.00    |
+| Afdian: [爱发电用户_2bffb](https://afdian.com/u/2bffb67a59ad11f0b79352540025c377) | ￥28.20   |
 
 
 ## Dependent/Referenced Projects

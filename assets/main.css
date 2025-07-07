@@ -482,6 +482,14 @@ a.button img {
     margin-right: 0.1em;
 }
 
+.rainyun {
+    color: #37b5c1;
+}
+
+.rainyun:hover {
+    color: #31a2ad;
+}
+
 .nosupport {
     cursor: not-allowed !important;
 }

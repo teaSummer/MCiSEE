@@ -4,16 +4,6 @@
 
 ![](https://img.shields.io/badge/license-CC--BY--SA--4.0-green) ![](https://img.shields.io/github/stars/teaSummer/MCiSEE) ![](https://visitor-badge.laobi.icu/badge?page_id=teaSummer.MCiSEE)
 
-<a href="https://www.rainyun.com/baiyun_" target="_blank" rel="noopener" 
-   style="display: inline-flex; align-items: center; padding: 8px 15px; background: linear-gradient(135deg, #6a9eff 0%, #1e5dff 100%); border-radius: 8px; text-decoration: none; color: white; font-family: Arial, sans-serif; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: all 0.3s ease;">
-  <img src="https://app.rainyun.com/favicon.ico" 
-       alt="雨云云计算" 
-       width="32" 
-       height="32"
-       style="margin-right: 10px;">
-  <span style="font-weight: bold; font-size: 16px;">雨云赞助</span>
-</a>
-
 **所见皆是*Minecraft*，让获取MC资源更加轻便！**
 
 **欢迎点击 “Star” 按钮来支持我们的编写。**
