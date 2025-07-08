@@ -31,6 +31,7 @@ const languages = [
     // Crowdin
     'en-UD',
     'en-US',
+    'it-IT',
     'lzh',
     'pt-BR',
     'zh-CN',
