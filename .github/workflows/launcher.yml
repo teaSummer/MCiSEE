@@ -33,9 +33,6 @@ jobs:
           - abbr: ColorMC
             github: https://github.com/Coloryr/ColorMC
             device: Windows|macOS|Linux
-          - abbr: ColorMC
-            github: https://github.com/Coloryr/ColorMC.Android
-            device: Android
           - abbr: XMCL
             github: https://github.com/Voxelum/x-minecraft-launcher
           - abbr: PCL2 社区版
