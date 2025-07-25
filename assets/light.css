@@ -146,7 +146,7 @@ footer {
     font-size: 14px;
     margin-top: 1.5rem;
     text-align: center;
-    background-image: linear-gradient(transparent, rgba(220, 239, 255, 0.6));
+    background-image: linear-gradient(transparent, rgba(220, 219, 240, 0.5));
 }
 
 .tip {
@@ -155,11 +155,11 @@ footer {
 }
 
 .ICP a, .credit a {
-    color: #7575ff;
+    color: #6000ff;
 }
 
 .ICP a:hover, .credit a:hover {
-    color: #9595ff;
+    color: #8000cc;
 }
 
 .ICP a:active, .credit a:active {
