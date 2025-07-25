@@ -75,7 +75,6 @@
     "starsOverTime": "ǝɯᴉ⟘ ɹǝʌO sɹɐʇS qnHʇᴉ⅁",
     "thankDonation": "uoᴉʇɐuoᗡ ɹoɟ sʞuɐɥ⟘",
     "contributeForThisProject": "ʇɔǝɾoɹd sᴉɥʇ oʇ ǝʇnqᴉɹʇuoƆ",
-    "ICP": "",
     "credit": "˙ʇɟosoɹɔᴉW ɹo ᵷuɐɾoW ɥʇᴉʍ pǝʇɐᴉɔossɐ ʇou ǝɹɐ ǝM ˙ǝʇᴉsqǝʍ ʇɟɐɹɔǝuᴉW ꞁɐᴉɔᴉɟɟo uɐ ʇoN",
     "license.1": "📑",
     "license.2": "ɹǝpun pǝsuǝɔᴉꞁ sᴉ ǝᵷɐd sᴉɥ⟘",
@@ -90,6 +89,8 @@
     "launcher.preRelease": "${linkDevVersion} {preRelease} {download}${downloadSVG}",
     "launcher.preRelease.latest": "{preRelease} {latest} {download}${downloadSVG}",
     "cleanUrl": "ɹoɥɔuⱯ Ꞁᴚ∩ uɐǝꞁƆ",
-    "rainyunSponsor": "pǝɹosuodS unʎuᴉɐᴚ"
+    "rainyunSponsor": "pǝɹosuodS unʎuᴉɐᴚ",
+    "moeICP": "",
+    "ICP": ""
   }
 }

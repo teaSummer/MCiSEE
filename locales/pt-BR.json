@@ -75,7 +75,6 @@
     "starsOverTime": "GitHub Gráfico histórico das estrelas\n",
     "thankDonation": "Obrigado pela doação",
     "contributeForThisProject": "Contribuir para esse projeto",
-    "ICP": "",
     "credit": "ESTE SITE NÃO É O SITE OFICIAL DE Minecraft, E MOJANG NÃO TEM RELAÇÃO DE SUBORDINAÇÃO COM A MICROSOFT.",
     "license.1": "O conteúdo dessa página é baseado em",
     "license.2": "Compartilhamento de protocolo",
@@ -88,6 +87,8 @@
     "launcher.release": "${downloadSVG}{download}{release}${linkVersion}",
     "launcher.release.latest": "${downloadSVG}{download}{latest}{release}",
     "launcher.preRelease": "${downloadSVG}{download}{preRelease}${linkDevVersion}",
-    "launcher.preRelease.latest": "${downloadSVG}{download}{latest}{preRelease}"
+    "launcher.preRelease.latest": "${downloadSVG}{download}{latest}{preRelease}",
+    "moeICP": "",
+    "ICP": ""
   }
 }

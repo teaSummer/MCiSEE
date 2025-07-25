@@ -75,7 +75,6 @@
     "starsOverTime": "GitHub Stars Over Time",
     "thankDonation": "Thanks for Donation",
     "contributeForThisProject": "Contribute to this project",
-    "ICP": "",
     "credit": "Not an official Minecraft website. We are not associated with Mojang or Microsoft.",
     "license.1": "This page is licensed under",
     "license.2": "📑",
@@ -90,6 +89,8 @@
     "launcher.preRelease": "${downloadSVG}{download} {preRelease} ${linkDevVersion}",
     "launcher.preRelease.latest": "${downloadSVG}{download} {latest} {preRelease}",
     "cleanUrl": "Clean URL Anchor",
-    "rainyunSponsor": "Rainyun Sponsored"
+    "rainyunSponsor": "Rainyun Sponsored",
+    "moeICP": "",
+    "ICP": ""
   }
 }

@@ -75,7 +75,6 @@
     "starsOverTime": "GitHub 星星趨勢",
     "thankDonation": "發電感謝",
     "contributeForThisProject": "爲此項目作出貢獻",
-    "ICP": "<a href=\"https://icp.gov.moe/?keyword=20247837\" target=\"_blank\">萌ICP備20247837號</a>",
     "credit": "本站並非Minecraft官方網站，與Mojang和微軟亦無從屬關係。",
     "license.1": "本頁面内容采用",
     "license.2": "協議授權",
@@ -90,6 +89,8 @@
     "launcher.preRelease": "${downloadSVG}{download}{preRelease} ${linkDevVersion}",
     "launcher.preRelease.latest": "${downloadSVG}{download}{latest}{preRelease}",
     "cleanUrl": "清理網址錨點",
-    "rainyunSponsor": "雨雲贊助"
+    "rainyunSponsor": "雨雲贊助",
+    "moeICP": "<a href=\"https://icp.gov.moe/?keyword=20247837\" target=\"_blank\">萌ICP備20247837號</a>",
+    "ICP": "<a href=\"https://beian.miit.gov.cn\" target=\"_blank\">湘ICP備2025132402號</a>"
   }
 }

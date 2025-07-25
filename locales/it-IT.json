@@ -75,7 +75,6 @@
     "starsOverTime": "Grafico della storia delle stelle di GitHub",
     "thankDonation": "Grazie per la donazione",
     "contributeForThisProject": "Contribuire a questo progetto",
-    "ICP": "<a href=\"https://icp.gov.moe/?keyword=20247837\" target=\"_blank\">Numero di registrazione ICP 20247837</a>",
     "credit": "Questo sito non è il sito ufficiale di Minecraft. Non siamo associati né a Mojang né a Microsoft.",
     "license.1": "Questa pagina è sotto licenza",
     "license.2": "Condivisione della licenza",
@@ -90,6 +89,8 @@
     "launcher.preRelease": "${downloadSVG}{download}{preRelease} ${linkDevVersion}",
     "launcher.preRelease.latest": "${downloadSVG}{download}{latest}{preRelease}",
     "cleanUrl": "Rimuovere i frammenti anchor dagli URL",
-    "rainyunSponsor": "Sponsorizzato da Rainyun"
+    "rainyunSponsor": "Sponsorizzato da Rainyun",
+    "moeICP": "",
+    "ICP": ""
   }
 }
