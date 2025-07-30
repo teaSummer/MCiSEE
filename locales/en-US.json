@@ -91,6 +91,7 @@
     "cleanUrl": "Clean URL Anchor",
     "rainyunSponsor": "Rainyun Sponsored",
     "moeICP": "",
-    "ICP": ""
+    "ICP": "",
+    "checkUpdate": "Check for launcher updates"
   }
 }
