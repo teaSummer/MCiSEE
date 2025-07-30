@@ -330,6 +330,13 @@ div[id]>*:first-child {
     font-size: 15px;
 }
 
+.update-layer .close {
+    position: absolute;
+    right: 7px;
+    top: 4px;
+    cursor: pointer;
+}
+
 .update-layer .last-version {
     margin: -2px 0;
     color: #aaaaaa;

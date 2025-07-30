@@ -21,6 +21,7 @@ const createSuperLabel = ((url, id) => {
 // 更新提示 创建
 let updateLayerNumber = 0;
 const createUpdateLayer = ((abbr, lastVersion, latestVersion, download, device, deviceInfo, flag) => {
+    if (localStorage.getItem('check-update') == 'false') return;
     ++updateLayerNumber;
     const stableOrDev = ((flag == 'release') ? 'stable' : 'dev');
     const dom = `
@@ -36,7 +37,8 @@ const createUpdateLayer = ((abbr, lastVersion, latestVersion, download, device, 
           <text class="latest-version">${latestVersion}</text>
         </div>
         <div>(${deviceInfo})</div>
-        <a class="download" href="${downloadMirror(download)}" data-backup-href="${download}" target="_blank" al="download" ondragstart="event.dataTransfer.effectAllowed = 'none';"></a>
+        <span class="close">❌</span>
+        <a class="download" href="${downloadMirror(download)}" data-backup-href="${download}" al="download" ondragstart="event.dataTransfer.effectAllowed = 'none';"></a>
       </div>`;
     $('sidebar').before(dom);
     const set = ((version, stableOrDev) => {
@@ -49,13 +51,14 @@ const createUpdateLayer = ((abbr, lastVersion, latestVersion, download, device, 
 });
 
 // 更新提示 删除
-const deleteUpdateLayer = function() {
+const deleteUpdateLayer = function(all) {
     --updateLayerNumber;
+    if (all == true && updateLayerNumber) deleteUpdateLayer(true);
     notificationCount = '';
     if (updateLayerNumber) notificationCount = `(${updateLayerNumber})`;
     i18n();
 
-    const number = Number($(this).attr('class').split('update-layer-')[1]);
+    const number = all == true ? 1 : Number($(this).parent().attr('class').split('update-layer-')[1]);
     $(`.update-layer-${number}`).remove();
     for (let i = number + 1;; ++i) {
         if ($(`.update-layer-${i}`).length) {
@@ -166,6 +169,15 @@ const proxyChanged = (() => {
     } catch {}
 });
 $('.github-proxy').change(proxyChanged);
+
+
+// 检查更新是否勾选
+const checkUpdateChanged = (() => {
+    const isChecked = $('.check-update').is(':checked');
+    localStorage.setItem('check-update', isChecked);
+    if (!isChecked) deleteUpdateLayer(true);
+});
+$('.check-update').change(checkUpdateChanged);
 
 
 // 应用快速查询
@@ -328,6 +340,7 @@ const config = ((settings) => {
 config({
     'theme': 'system',
     'github-proxy': (navigator.language == 'zh-CN' ? true : false),
+    'check-update': true,
     'searchable-direct': true,
     'searchable-prompt-length': 10,
     'clean-url': true
@@ -344,7 +357,7 @@ $('.searchable-input').typeahead(
     {
         name: 'searchable-prompt',
         async: true,
-        limit: 100,  // 当前实际限制为 30
+        limit: 100,  // 实际限制 30
         source: ((query, syncResults, asyncResults) => {
             setTimeout(() => {
                 if (!searchableComposition) return;
@@ -369,7 +382,7 @@ $('.searchable-input').typeahead(
                         case 'mod':
                         case 'plugin':
                         case 'datapack':
-                            const categories = categoryMap[projectType].map(category => `categories:'${category}'`);
+                            const categories = categoryMap[projectType].map(category => `"categories:${category}"`);
                             facets = encodeURI(`[[${categories.join(",")}],["project_type:${projectType}"]${versions}]`);
                             break;
                         default:
@@ -379,22 +392,29 @@ $('.searchable-input').typeahead(
                 // API
                 const api = {
                     Wiki: `https://zh.minecraft.wiki/api.php?action=opensearch&search=${search}&limit=30`,
-                    BWiki: `https://wiki.biligame.com/mc/api.php?action=opensearch&search=${search}&limit=30`,
+                    BWiki: `/r/request/BWiki?action=opensearch&search=${search}&limit=30`,
                     Modrinth: `https://api.modrinth.com/v2/search?limit=30&index=relevance&query=${search}&facets=${facets}`,
-                    BEDW: `https://wiki.mcbe-dev.net/w/api.php?action=opensearch&search=${search}&namespace=0%7C3000%7C3002%7C3004%7C3008%7C3010&limit=30`,
-                    MinePlugin: `https://mineplugin.org/api.php?action=opensearch&search=${search}&limit=30`,
+                    MCMOD: `/r/request/MCMOD/search_api.php?key=${search}`,
+                    BEID: `/r/request/BEID?q=${search}&limit=30`,
+                    // BEDW: `https://wiki.mcbe-dev.net/w/api.php?action=opensearch&search=${search}&namespace=0%7C3000%7C3002%7C3004%7C3008%7C3010&limit=30`,
+                    MinePlugin: `/r/request/MinePlugin?action=opensearch&search=${search}&limit=30`,
                 }
                 const url = api[abbr];
                 if (url) {
                     // 获取候选词
                     $('.searchable-clear').attr('loading', true);  // 在获取候选词时显示加载动画（进行中）
-                    return $.get(url, void(0), (abbr == 'Modrinth') ? 'json': 'jsonp').then((result) => {
+                    return $.get(url, void 0, 'json').then((result) => {
                         if (result.length > 1 && Array.isArray(result[1])) {
                             result = result[1];
                         }
                         if (abbr == 'Modrinth') {
                             let arr = [];
                             result.hits.map((item) => arr.push(item.title));
+                            result = arr;
+                        }
+                        if (abbr == 'BEID') {
+                            let arr = [];
+                            result.data.result.map((item) => arr.push(item.value + " - " + item.key));
                             result = arr;
                         }
                         result = result.slice(0, $('.searchable-prompt-length').val());
@@ -527,7 +547,7 @@ $(() => {
                     }
                 }
             }
-            $('.update-layer').click(deleteUpdateLayer);
+            $('.update-layer .close, .update-layer .download').click(deleteUpdateLayer);
             downloadClick();
             i18n();
         }

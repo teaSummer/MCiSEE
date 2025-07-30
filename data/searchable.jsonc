@@ -27,7 +27,7 @@
   },
   {
     "title": "Modrinth",
-    "search": "",
+    "search": "", //
     "url": "https://modrinth.com"
   },
   {
@@ -40,9 +40,9 @@
   {
     "title": "基岩版ID表",
     "abbr": "BEID",
-    "search": "https://ca.projectxero.top/idlist/#beta-vanilla/global/<T>",
+    "search": "https://idlist.projectxero.top/#beta-vanilla/global/<T>",
     "note": "原版 - 测试版 - MCBEID表",
-    "url": "https://ca.projectxero.top/idlist/#beta-vanilla/global/"
+    "url": "https://idlist.projectxero.top/#beta-vanilla/global/"
   },
   {
     "title": "Java版ID表",

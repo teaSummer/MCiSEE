@@ -18,18 +18,10 @@ jobs:
         include:
           - abbr: HMCL
             github: https://github.com/HMCL-dev/HMCL
-          - abbr: HMCL-PE
-            github: https://github.com/HMCL-dev/HMCL-PE
           - abbr: PCL2
             github: https://github.com/Hex-Dragon/PCL2
           - abbr: FCL
             github: https://github.com/FCL-Team/FoldCraftLauncher
-          - abbr: PojavLauncher
-            github: https://github.com/PojavLauncherTeam/PojavLauncher
-            device: Android
-          - abbr: PojavLauncher
-            github: https://github.com/PojavLauncherTeam/PojavLauncher_iOS
-            device: iOS
           - abbr: ColorMC
             github: https://github.com/Coloryr/ColorMC
             device: Windows|macOS|Linux
