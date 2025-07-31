@@ -44,7 +44,7 @@ const createUpdateLayer = ((abbr, lastVersion, latestVersion, download, device, 
     const set = ((version, stableOrDev) => {
         localStorage.setItem(`last-${device}-${abbr}-${stableOrDev}-download`, version);
     });
-    $(`.update-layer-${updateLayerNumber} .download`).click(() => {
+    $(`.update-layer-${updateLayerNumber} .download, .update-layer-${updateLayerNumber} .close`).click(() => {
         set(latestVersion, stableOrDev);
     });
     if (updateLayerNumber) notificationCount = `(${updateLayerNumber})`;
@@ -259,6 +259,7 @@ $('.searchable-form').submit((event) => {
         url = `https://modrinth.com/${$('.Modrinth-projectType').val()}s?q=${search}${versions}`;
     } else {
         if (!searchKeyword) return;
+        if (searchableAbbr == 'BEID') search = search.split('%20-%20').slice(0, -1).join('%20-%20');
         url = searchKeyword.replace(encodeURI('<T>'), search);
         if ($('.searchable-direct').is(':checked') && url.indexOf('&fulltext=') != -1) {
             url = url.replace(/&[^&]*$/, '');
@@ -395,7 +396,7 @@ $('.searchable-input').typeahead(
                     BWiki: `/r/request/BWiki?action=opensearch&search=${search}&limit=30`,
                     Modrinth: `https://api.modrinth.com/v2/search?limit=30&index=relevance&query=${search}&facets=${facets}`,
                     MCMOD: `/r/request/MCMOD/search_api.php?key=${search}`,
-                    BEID: `/r/request/BEID?q=${search}&limit=30`,
+                    BEID: `/r/request/BEID?q=${search}&limit=60`,
                     // BEDW: `https://wiki.mcbe-dev.net/w/api.php?action=opensearch&search=${search}&namespace=0%7C3000%7C3002%7C3004%7C3008%7C3010&limit=30`,
                     MinePlugin: `/r/request/MinePlugin?action=opensearch&search=${search}&limit=30`,
                 }
@@ -415,7 +416,7 @@ $('.searchable-input').typeahead(
                         if (abbr == 'BEID') {
                             let arr = [];
                             result.data.result.map((item) => arr.push(item.value + " - " + item.key));
-                            result = arr;
+                            result = [...new Set(arr)];
                         }
                         result = result.slice(0, $('.searchable-prompt-length').val());
                         $('.searchable-clear').removeAttr('loading');  // 在获取候选词时显示加载动画（已完成）
