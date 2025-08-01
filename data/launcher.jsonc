@@ -42,6 +42,7 @@
     },
     {
       "title": "Angel Aura Amethyst",
+      "abbr": "Amethyst",
       "github": "https://github.com/AngelAuraMC/Amethyst-Android",
       "dev": {
         "download": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/15660924693/artifacts/3330366203",
@@ -62,6 +63,7 @@
     },
     {
       "title": "Angel Aura Amethyst",
+      "abbr": "Amethyst",
       "github": "https://github.com/AngelAuraMC/Amethyst-iOS",
       "dev": {
         "download": "https://github.com/AngelAuraMC/Amethyst-iOS/actions/runs/15523376984/artifacts/3284565553",
@@ -74,8 +76,7 @@
   // ==============================
   "WindowsLauncher": [
     {
-      "title": "*国际版* Minecraft 启动器",
-      "abbr": "Minecraft 启动器",
+      "title": "Minecraft Launcher",
       "download": "https://launcher.mojang.com/download/MinecraftInstaller.exe",
       "version": "latest",
       "url": "https://www.minecraft.net"
@@ -148,9 +149,10 @@
       "url": "https://corona.studio/lx"
     },
     {
-      "title": "*中国版* 我的世界启动器",
-      "abbr": "我的世界启动器",
-      "url": "https://mc.163.com"
+      "title": "我的世界启动器",
+      "url": "https://mc.163.com",
+      "download": "https://loadingbaycn.webapp.163.com/app/v1/download_client/windows/mkt-x19-official/url",
+      "version": "latest"
     },
     {
       "title": "Fluent Launcher",
@@ -180,8 +182,7 @@
       "url": "https://prismlauncher.org"
     },
     {
-      "title": "*国际版* Minecraft 启动器 (旧版)",
-      "abbr": "Minecraft 启动器 (旧版)",
+      "title": "Minecraft Launcher (旧版)",
       "version": "latest",
       "download": "https://launcher.mojang.com/download/MinecraftInstaller.msi",
       "url": "https://www.minecraft.net"
@@ -199,7 +200,7 @@
   // ==========================
   "macOSLauncher": [
     {
-      "title": "Minecraft 启动器",
+      "title": "Minecraft Launcher",
       "download": "https://launcher.mojang.com/download/Minecraft.dmg",
       "version": "latest",
       "url": "https://www.minecraft.net"
@@ -259,8 +260,7 @@
   // ============================
   "LinuxLauncher": [
     {
-      "title": "*国际版* Minecraft 启动器",
-      "abbr": "Minecraft 启动器",
+      "title": "Minecraft Launcher",
       "download": "https://launcher.mojang.com/download/Minecraft.tar.gz",
       "version": "latest",
       "url": "https://www.minecraft.net"
