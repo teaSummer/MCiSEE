@@ -26,14 +26,6 @@
       "github": "https://github.com/HMCL-dev/HMCL-PE"
     },
     {
-      "title": "ColorMC",
-      "github": "https://github.com/Coloryr/ColorMC.Android",
-      "dev": {
-        "download": "https://github.com/Coloryr/ColorMC.Android/releases/download/A21/colormc-a21-android.zip",
-        "version": "A21"
-      }
-    },
-    {
       "title": "Zalith Launcher",
       "download": "https://github.com/ZalithLauncher/ZalithLauncher/releases/download/140600/ZalithLauncher-1.4.0.6.apk",
       "version": "1.4.0.6",
@@ -115,7 +107,7 @@
     },
     {
       "title": "ColorMC",
-      "download": "https://github.com/Coloryr/ColorMC/releases/download/a36.2025.4.15-1/colormc-x64.msi",
+      "download": "https://github.com/Coloryr/ColorMC/releases/download/a36.2025.4.15-1/colormc-windows-a36-x86_64.zip",
       "version": "a36.2025.4.15-1",
       "github": "https://github.com/Coloryr/ColorMC"
     },
@@ -219,7 +211,7 @@
     },
     {
       "title": "ColorMC",
-      "download": "https://github.com/Coloryr/ColorMC/releases/download/a36.2025.4.15-1/colormc-a36.2025.4.15-1-1-x86_64.pkg.tar.zst",
+      "download": "https://github.com/Coloryr/ColorMC/releases/download/a36.2025.4.15-1/colormc-macos-a36-x86_64.zip",
       "version": "a36.2025.4.15-1",
       "github": "https://github.com/Coloryr/ColorMC"
     },
@@ -279,7 +271,7 @@
     },
     {
       "title": "ColorMC",
-      "download": "https://github.com/Coloryr/ColorMC/releases/download/a36.2025.4.15-1/colormc-linux-a34-x86_64.AppImage",
+      "download": "https://github.com/Coloryr/ColorMC/releases/download/a36.2025.4.15-1/colormc-linux-a36-x86_64.AppImage",
       "version": "a36.2025.4.15-1",
       "github": "https://github.com/Coloryr/ColorMC"
     },
