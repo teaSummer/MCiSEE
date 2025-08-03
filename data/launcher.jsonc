@@ -133,11 +133,9 @@
     },
     {
       "title": "LauncherX",
-      // 先用着
       "download": "https://corona.studio/lx/download",
       "version": "2.0.0",
-      // TODO: 待更新
-      // "github": "https://github.com/corona-studio/projbobcat",
+      "github": "https://github.com/corona-studio/projbobcat",
       "url": "https://corona.studio/lx"
     },
     {
@@ -148,7 +146,7 @@
     },
     {
       "title": "Fluent Launcher",
-      "download": "https://github.com/Xcube-Studio/Natsurainko.FluentLauncher/releases/download/v2.3.7.0/Natsurainko.FluentLauncher_2.3.4.0.msixbundle",
+      "download": "https://github.com/Xcube-Studio/Natsurainko.FluentLauncher/releases/download/v2.3.7.0/Natsurainko.FluentLauncher_2.3.7.0.msixbundle",
       "version": "2.3.7.0",
       "github": "https://github.com/Xcube-Studio/Natsurainko.FluentLauncher",
       "url": "https://fluentlauncher.natsurainko.work/",
@@ -164,6 +162,18 @@
       "version": "latest",
       "github": "https://github.com/MultiMC/Launcher",
       "url": "https://multimc.org"
+    },
+    {
+      "title": "Betacraft Launcher",
+      "abbr": "Betacraft",
+      "download": "https://github.com/betacraftuk/betacraft-launcher/releases/download/1.09_17/launcher-1.09_17.exe",
+      "version": "1.09_17",
+      "github": "https://github.com/betacraftuk/betacraft-launcher",
+      "url": "https://betacraft.uk",
+      "dev": {
+        "download": "https://github.com/betacraftuk/betacraft-launcher/releases/download/1.09_17-rc2/launcher-1.09_17-rc2.exe",
+        "version": "1.09_17-rc2"
+      }
     },
     {
       "title": "Prism Launcher",
@@ -232,6 +242,18 @@
       "url": "https://multimc.org"
     },
     {
+      "title": "Betacraft Launcher",
+      "abbr": "Betacraft",
+      "download": "https://github.com/betacraftuk/betacraft-launcher/releases/download/1.09_17/BetaCraft-Launcher-macOS.zip",
+      "version": "1.09_17",
+      "github": "https://github.com/betacraftuk/betacraft-launcher",
+      "url": "https://betacraft.uk",
+      "dev": {
+        "download": "https://github.com/betacraftuk/betacraft-launcher/releases/download/1.09_17-rc2/BetaCraft-Launcher-macOS.zip",
+        "version": "1.09_17-rc2"
+      }
+    },
+    {
       "title": "Prism Launcher",
       "abbr": "Prism",
       "download": "https://github.com/PrismLauncher/PrismLauncher/releases/download/9.4/PrismLauncher-macOS-9.4.zip",
@@ -284,19 +306,31 @@
       "url": "https://xmcl.app"
     },
     {
+      "title": "LauncherX",
+      "download": "https://github.com/Corona-Studio/ProjBobcat/archive/refs/tags/v2.0.0.zip",
+      "version": "2.0.0",
+      "github": "https://github.com/corona-studio/projbobcat",
+      "url": "https://corona.studio/launcherx"
+    },
+    {
+      "title": "Betacraft Launcher",
+      "abbr": "Betacraft",
+      "download": "https://github.com/betacraftuk/betacraft-launcher/releases/download/1.09_17/launcher-1.09_17.jar",
+      "version": "1.09_17",
+      "github": "https://github.com/betacraftuk/betacraft-launcher",
+      "url": "https://betacraft.uk",
+      "dev": {
+        "download": "https://github.com/betacraftuk/betacraft-launcher/releases/download/1.09_17-rc2/launcher-1.09_17-rc2.jar",
+        "version": "1.09_17-rc2"
+      }
+    },
+    {
       "title": "Prism Launcher",
       "abbr": "Prism",
       "download": "https://github.com/PrismLauncher/PrismLauncher/releases/download/9.4/PrismLauncher-Linux-x86_64.AppImage",
       "version": "9.4",
       "github": "https://github.com/PrismLauncher/PrismLauncher",
       "url": "https://prismlauncher.org"
-    },
-    {
-      "title": "LauncherX",
-      "download": "https://github.com/Corona-Studio/ProjBobcat/archive/refs/tags/v2.0.0.zip",
-      "version": "2.0.0",
-      "github": "https://github.com/corona-studio/projbobcat",
-      "url": "https://corona.studio/launcherx"
     }
   ]
 }

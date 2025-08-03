@@ -24,6 +24,9 @@ QQ交流群：[596520944](https://qm.qq.com/q/EBKhjsGRbM)
 
 请参阅 [CONTRIBUTING.md](CONTRIBUTING.md) 文件。
 
+## API文档
+请参阅 [API_DOCS.md](API_DOCS.md) 文件。
+
 ## 感谢
 
 详见 [THANKS.md](THANKS.md) 文件。
