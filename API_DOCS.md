@@ -3,8 +3,15 @@
 ## 1. 启动器下载/跳转/信息获取
 
 ### 接口
+
+```http
+GET /r/launcher HTTP/1.1
+Host: mcisee.top
 ```
-GET /r/launcher
+
+```http
+POST /r/launcher HTTP/1.1
+Host: mcisee.top
 ```
 
 [Apifox 文档](https://mcisee.apifox.cn)
@@ -18,12 +25,12 @@ GET /r/launcher
 | `name`<br>`n`      | string        | 否  | 启动器名称，可填别名<br>示例值：`HMCL`                                                                                                                               |
 | `device`<br>`d`    | enum\<string> | 否  | 设备，可仅填首字母<br>枚举值：<br>`Android` `HarmonyOS` `iOS` `iPad` `Windows` `macOS` `Linux`<br>默认值：`Windows`<br>示例值：`Linux`                                      |
 | `operation`<br>`o` | enum\<string> | 否  | 要执行的操作<br>枚举值：<br>`stable`（下载稳定版）<br>`dev`（下载开发版）<br>`github`（跳转GitHub仓库）<br>`url`（跳转网站）<br>`info`（获取信息）<br>`list`（列出所有）<br>默认值：`stable`<br>示例值：`info` |
-| `nomirror`         | boolean       | 否  | 禁用镜像地址<br>默认值：`false`<br>示例值：`true`                                                                                                                    |
+| `nomirror`         | boolean       | 否  | 是否禁用镜像地址<br>默认值：`false`<br>示例值：`true`                                                                                                                    |
 
 ### 请求示例
 * 获取官启信息：https://mcisee.top/r/launcher?name=MCL&operation=info
 * 下载FCL：https://mcisee.top/r/launcher?n=fcl&d=a
-* 列出macOS上的启动器，不含镜像地址：https://mcisee.top/r/launcher?d=m&o=list&nomirror
+* 列出macOS上的启动器，不含镜像地址：https://mcisee.top/r/launcher?d=m&o=list&nomirror=true
 * 列出所有设备上的HMCL：https://mcisee.top/r/launcher?n=hmcl&o=list
 
 ### 返回响应
