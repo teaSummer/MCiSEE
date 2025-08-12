@@ -439,10 +439,12 @@ const pre_list = ((e) => {
     for (const block of blocks) {
         // 获取分类并处理
         const category = Object.keys(block)[0];
+        const toolCount = block[category].length;
+        
         if (category.endsWith('[open]')) {
-            dom += `<details class="keep" id="${category.replace('[open]', '').replace(/ .+/, '')}" open><summary>${category.replace('[open]', '')}</summary>`;
+            dom += `<details class="keep" id="${category.replace('[open]', '').replace(/ .+/, '')}" data-tool-count="${toolCount}" open><summary>${category.replace('[open]', '')}</summary>`;
         }
-        else dom += `<details id="${category.replace(/ .+/, '')}"><summary>${category}</summary>`;
+        else dom += `<details id="${category.replace(/ .+/, '')}" data-tool-count="${toolCount}"><summary>${category}</summary>`;
         let content;
         // 生成元素
         for (const [_title, url, description, favicon, autoLang] of block[category]) {
@@ -469,12 +471,54 @@ const pre_list = ((e) => {
     }
     dom = dom.replace(/<hr>$/, '');
     $(e).html(dom);
+    
+    // 设置自适应高度
+    setAdaptiveDetailsHeight(e);
+    
     $('.nosupport').click(function() {
         clearTimeout(hShake);
         $(this).addClass('h-shake');
         hShake = setTimeout(() => $(this).removeClass('h-shake'), 700);
     });
 });
+
+// 设置 details 元素自适应高度
+function setAdaptiveDetailsHeight(container) {
+    $(container).find('details').each(function() {
+        const $details = $(this);
+        const toolCount = parseInt($details.attr('data-tool-count')) || 0;
+        
+        // 计算基础高度：summary 高度 + 工具按钮高度 * 行数 + 间距
+        const summaryHeight = 2.5; // em
+        const buttonHeight = 2.8; // em，包括 margin
+        const padding = 1; // em
+        
+        // 根据屏幕宽度计算每行工具数量
+        let toolsPerRow = 3; // 默认桌面端
+        const screenWidth = window.innerWidth;
+        
+        if (screenWidth <= 480) {
+            toolsPerRow = 1;
+        } else if (screenWidth <= 768) {
+            toolsPerRow = 2;
+        } else if (screenWidth <= 1024) {
+            toolsPerRow = 3;
+        } else {
+            toolsPerRow = Math.floor(screenWidth / 300); // 动态计算
+        }
+        
+        const rows = Math.ceil(toolCount / toolsPerRow);
+        const calculatedHeight = summaryHeight + (rows * buttonHeight) + padding;
+        
+        // 设置 CSS 自定义属性
+        $details[0].style.setProperty('--calculated-height', `${calculatedHeight}em`);
+    });
+    
+    // 监听窗口大小变化
+    $(window).off('resize.adaptiveDetails').on('resize.adaptiveDetails', function() {
+        setAdaptiveDetailsHeight(container);
+    });
+}
 
 
 

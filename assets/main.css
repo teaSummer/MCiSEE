@@ -450,16 +450,18 @@ summary.noicon::before {
 
 details {
     max-height: 1em;
-    transition: max-height 2s;
+    transition: max-height 0.5s ease-in-out;
+    overflow: hidden;
 }
 
 details a.button {
     opacity: 0%;
     pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
 }
 
 details[open] {
-    max-height: 2000px;
+    max-height: var(--calculated-height, 50em);
 }
 
 details[open] a.button {
