@@ -493,8 +493,8 @@ function setAdaptiveDetailsHeight(container) {
         const buttonHeight = 2.8; // em，包括 margin
         const padding = 1; // em
         
-        // 根据屏幕宽度计算每行工具数量
-        let toolsPerRow = 3; // 默认桌面端
+        // 根据屏幕宽度和容器宽度计算每行工具数量
+        let toolsPerRow = 3; // 默认值
         const screenWidth = window.innerWidth;
         
         if (screenWidth <= 480) {
@@ -504,7 +504,29 @@ function setAdaptiveDetailsHeight(container) {
         } else if (screenWidth <= 1024) {
             toolsPerRow = 3;
         } else {
-            toolsPerRow = Math.floor(screenWidth / 300); // 动态计算
+            // 桌面端：更精确的计算
+            // 获取页面内容区域的实际宽度
+            const pageContent = document.querySelector('.page-content');
+            const containerWidth = pageContent ? pageContent.offsetWidth : screenWidth;
+            
+            // 考虑按钮的实际尺寸：
+            // - 按钮基础宽度约 120px (根据内容自适应)
+            // - margin: 6px (左右各6px，总共12px)
+            // - 额外间距和padding
+            const buttonTotalWidth = 144; // 120px + 12px margin + 12px 额外间距
+            const availableWidth = containerWidth - 32; // 减去容器的padding
+            
+            toolsPerRow = Math.max(1, Math.floor(availableWidth / buttonTotalWidth));
+            
+            // 限制最大值，避免按钮过于分散
+            toolsPerRow = Math.min(toolsPerRow, 6);
+            
+            // 针对常见分辨率的优化
+            if (screenWidth >= 1920) {
+                toolsPerRow = Math.min(toolsPerRow, 5); // 4K显示器不要太分散
+            } else if (screenWidth >= 1440) {
+                toolsPerRow = Math.min(toolsPerRow, 4); // 2K显示器
+            }
         }
         
         const rows = Math.ceil(toolCount / toolsPerRow);
