@@ -436,8 +436,8 @@ summary::-webkit-details-marker {
 summary::before {
     content: '';
     position: absolute;
-    width: 1em;
-    height: 1em;
+    width: 1rem;
+    height: 1rem;
     margin: 0.2em 0 0 -1.2em;
     background-size: 100% 100%;
     transition: transform 0.2s, background-image 0.6s;
@@ -461,7 +461,7 @@ details a.button {
 }
 
 details[open] {
-    max-height: var(--calculated-height, 50em);
+    max-height: var(--calculated-height, 50rem);
 }
 
 details[open] a.button {
