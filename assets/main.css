@@ -426,7 +426,7 @@ summary {
     user-select: none;
     outline: none;
     display: block; /* 用于隐藏默认的小三角 */
-    margin-left: 1.5em;
+    margin-left: 3rem;
 }
 
 summary::-webkit-details-marker {
@@ -449,7 +449,7 @@ summary.noicon::before {
 }
 
 details {
-    max-height: 1em;
+    max-height: 3rem;
     transition: max-height 0.5s ease-in-out;
     overflow: hidden;
 }
