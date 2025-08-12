@@ -426,7 +426,7 @@ summary {
     user-select: none;
     outline: none;
     display: block; /* 用于隐藏默认的小三角 */
-    margin-left: 3rem;
+    margin-left: 1.5rem;
 }
 
 summary::-webkit-details-marker {
