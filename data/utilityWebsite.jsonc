@@ -215,6 +215,7 @@
       ["Endstone", "https://endstone.dev", "基岩版，适用于BDS的高层次插件 API，采用 Python 和 C++ 语言编写"],
       ["LeviLamina", "https://lamina.levimc.org", "基岩版，原LiteLoaderBDS\n轻量、模块化、多功能的BDS模组加载器"],
       ["Leaves", "https://leavesmc.org", "Java版，一个旨在修复被破坏的原版特性的Paper分支"],
+      ["Leaf", "https://www.leafmc.one/zh/", "一个 Paper 分支, 专注于寻找性能优化, Vanilla, 稳定之间的平衡, 为大型网络, 密集和高承载量场景设计"],
       ["PocketMine", "https://pmmp.io", "基岩版，一款高度可定制的基岩版服务器软件"],
       ["Allay", "https://docs.allaymc.org", "基岩版，可靠，快速及富特性的第三方基岩版服务端"],
       ["Nukkit", "https://cloudburstmc.org", "基岩版，支持插件，使用Java开发"]
