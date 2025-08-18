@@ -25,7 +25,7 @@ Host: mcisee.top
 | `name`<br>`n`      | string        | 否  | 启动器名称，可填别名<br>示例值：`HMCL`                                                                                                                               |
 | `device`<br>`d`    | enum\<string> | 否  | 设备，可仅填首字母<br>枚举值：<br>`Android` `HarmonyOS` `iOS` `iPad` `Windows` `macOS` `Linux`<br>默认值：`Windows`<br>示例值：`Linux`                                      |
 | `operation`<br>`o` | enum\<string> | 否  | 要执行的操作<br>枚举值：<br>`stable`（下载稳定版）<br>`dev`（下载开发版）<br>`github`（跳转GitHub仓库）<br>`url`（跳转网站）<br>`info`（获取信息）<br>`list`（列出所有）<br>默认值：`stable`<br>示例值：`info` |
-| `nomirror`         | boolean       | 否  | 是否禁用镜像地址<br>默认值：`false`<br>示例值：`true`                                                                                                                    |
+| `nomirror`         | boolean       | 否  | 是否禁用镜像地址<br>默认值：`false`<br>示例值：`true`                                                                                                                  |
 
 ### 请求示例
 * 获取官启信息：https://mcisee.top/r/launcher?name=MCL&operation=info
