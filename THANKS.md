@@ -103,6 +103,7 @@ The list is in no particular order.
 | Afdian: [huang](https://afdian.com/u/e97cd43e7a8b11ed950252540025c377)       | ￥5.00    |
 | Afdian: [梦淹***](https://afdian.com/u/c673ffbe0f8d11f0bede52540025c377)       | ￥5.00    |
 | Afdian: [爱发电用户_2bffb](https://afdian.com/u/2bffb67a59ad11f0b79352540025c377) | ￥28.20   |
+| Afdian: [上官泓文](https://afdian.com/u/0e85d804166211ed858852540025c377)        | ￥54.00   |
 
 
 ## Dependent/Referenced Projects
