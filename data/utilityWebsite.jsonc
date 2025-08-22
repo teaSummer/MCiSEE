@@ -159,20 +159,20 @@
     ]
   },
   {
-    "辅助类 (仅供研究自用)": [
-      ["Lunar Client", "https://www.lunarclient.com/", "Java版PVP端启动器"],
-      ["LabyMod Launcher", "https://labymod.net/", "Java版客户端启动器"],
-      ["Badlion", "https://www.badlion.net/", "Java版PVP端启动器"],
-      ["LiquidBounce", "https://liquidbounce.net/", "Java版客户端启动器"],
-      ["Meteor Client", "https://meteorclient.com/", "Java版PVP端启动器"],
-      ["Feather Client", "https://feathermc.com/", "Java版PVP端启动器"],
-      ["Vape", "https://www.vape.gg/", "Java版PVP端启动器"],
-      ["Soar Client", "https://www.soarclient.com/", "Java版PVP端启动器"],
-      ["Salwyrr Launcher", "https://www.salwyrr.com", "Java版客户端启动器"],
-      ["CMCLIENT", "https://www.cm-pack.pl/", "Java版PVP端启动器"],
-      ["Horion", "https://horion.download/", "基岩版DLL注入器，仅Windows"],
-      ["Borion", "https://borion-updated.github.io/", "基岩版DLL动态库，仅Windows"],
-      ["Atlas Client", "https://atlasclient.net/", "基岩版，仅Android"]
+    "PVP/辅助/作弊端 (仅供学习交流)": [
+      ["Lunar Client", "https://www.lunarclient.com/", "Java版，PVP客户端启动器"],
+      ["LabyMod Launcher", "https://labymod.net/", "Java版，辅助客户端启动器"],
+      ["Badlion", "https://www.badlion.net/", "Java版，PVP客户端启动器"],
+      ["LiquidBounce", "https://liquidbounce.net/", "Java版，作弊客户端启动器"],
+      ["Meteor Client", "https://meteorclient.com/", "Java版，作弊客户端启动器"],
+      ["Feather Client", "https://feathermc.com/", "Java版，PVP客户端启动器"],
+      ["Vape", "https://www.vape.gg/", "Java版，作弊客户端启动器"],
+      ["Soar Client", "https://www.soarclient.com/", "Java版，PVP客户端启动器"],
+      ["Salwyrr Launcher", "https://www.salwyrr.com", "Java版，辅助客户端启动器"],
+      ["CMCLIENT", "https://www.cm-pack.pl/", "Java版，PVP客户端启动器"],
+      ["Horion", "https://horion.download/", "基岩版，DLL注入器，仅限Windows"],
+      ["Borion", "https://borion-updated.github.io/", "基岩版，DLL动态库，仅限Windows"],
+      ["Atlas Client", "https://atlasclient.net/", "基岩版，辅助客户端启动器，仅限Android"]
     ]
   },
   {
@@ -186,8 +186,8 @@
       // ["mcarc版本库", "https://mcarc.github.io", ""], // 页面最新正式版停留于1.19.73且不含独有版本，不再推荐
       ["星月版本库", "https://mcarc.spectrollay.com/minecraft_repository/", "星月Minecraft版本库"],
       // ["Alpha版本库", "https://archive.org/details/MCPEAlpha", "(存档)"], // 需要魔法才能访问
-      ["电脑端启动器", "https://bedrocklauncher.github.io/", "Bedrock Launcher Lite，仅限Windows"],
-      ["原子资源库", "https://res.nullatom.com/Minecraft/", ""]
+      ["原子资源库", "https://res.nullatom.com/Minecraft/", ""],
+      ["电脑端启动器", "https://bedrocklauncher.github.io/", "Bedrock Launcher Lite，仅限Windows"]
     ]
   },
   {
@@ -253,7 +253,7 @@
     ]
   },
   {
-    "开发者狂喜": [
+    "开发者专用": [
       ["Fabric维基", "https://fabricmc.net/wiki/", ""],
       ["Fabric文档", "https://docs.fabricmc.net/develop/", "Fabric模组开发文档(1.20.4+)"],
       ["Forge文档", "https://docs.minecraftforge.net/", "Forge模组开发文档(1.12+)"],
