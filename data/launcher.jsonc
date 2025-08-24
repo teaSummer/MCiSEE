@@ -127,8 +127,8 @@
       "version": "2.12.3",
       "github": "https://github.com/PCL-Community/PCL2-CE",
       "dev": {
-        "download": "https://github.com/PCL-Community/PCL2-CE/releases/download/2.12.3-beta.2/PCL2_CE_Beta_x64.exe",
-        "version": "2.12.3-beta.2"
+        "download": "https://github.com/PCL-Community/PCL2-CE/releases/download/2.13.0-beta.1/PCL2_CE_Beta_x64.exe",
+        "version": "2.13.0-beta.1"
       }
     },
     {
