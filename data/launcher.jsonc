@@ -146,8 +146,8 @@
     },
     {
       "title": "Fluent Launcher",
-      "download": "https://github.com/Xcube-Studio/Natsurainko.FluentLauncher/releases/download/v2.3.7.0/Natsurainko.FluentLauncher_2.3.7.0.msixbundle",
-      "version": "2.3.7.0",
+      "download": "https://github.com/Xcube-Studio/Natsurainko.FluentLauncher/releases/download/v2.3.8.0/Natsurainko.FluentLauncher_2.3.8.0.msixbundle",
+      "version": "2.3.8.0",
       "github": "https://github.com/Xcube-Studio/Natsurainko.FluentLauncher",
       "url": "https://fluentlauncher.natsurainko.work/",
       "dev": {
