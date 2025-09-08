@@ -27,9 +27,16 @@
     },
     {
       "title": "Zalith Launcher",
-      "download": "https://github.com/ZalithLauncher/ZalithLauncher/releases/download/140700/ZalithLauncher-1.4.0.7.apk",
-      "version": "1.4.0.7",
+      "download": "https://github.com/ZalithLauncher/ZalithLaunche2r/releases/download/140700/ZalithLauncher-1.4.0.7.apk",
+      "version": "1.4.0.8",
       "github": "https://github.com/ZalithLauncher/ZalithLauncher",
+      "url": "https://zalithlauncher.cn/"
+    },
+    {
+      "title": "Zalith Launcher 2",
+      "download": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.0.0_beta-20250908a/ZalithLauncher-2.0.0_beta-20250908a.apk",
+      "version": "2.0.0_beta-20250908a",
+      "github": "https://github.com/ZalithLauncher/ZalithLauncher2",
       "url": "https://zalithlauncher.cn/"
     },
     {
