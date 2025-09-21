@@ -223,5 +223,8 @@ $.ajax({
         const news = `<li><text al="news.java"></text>${version.java}</li><li><text al="news.bedrock"></text>${version.bedrock}</li>`;
         $('.announcement-bar li:nth-child(2)').after(news);
         i18n(announcementInit);
-    })
+    }),
+    error: () => {
+        i18n(announcementInit);
+    }
 });

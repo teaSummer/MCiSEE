@@ -426,7 +426,7 @@ summary {
     user-select: none;
     outline: none;
     display: block; /* 用于隐藏默认的小三角 */
-    margin-left: 1.5em;
+    margin-left: 1.5rem;
 }
 
 summary::-webkit-details-marker {
@@ -436,8 +436,8 @@ summary::-webkit-details-marker {
 summary::before {
     content: '';
     position: absolute;
-    width: 1em;
-    height: 1em;
+    width: 1rem;
+    height: 1rem;
     margin: 0.2em 0 0 -1.2em;
     background-size: 100% 100%;
     transition: transform 0.2s, background-image 0.6s;
@@ -449,17 +449,19 @@ summary.noicon::before {
 }
 
 details {
-    max-height: 1em;
-    transition: max-height 2s;
+    max-height: 3rem;
+    transition: max-height 0.5s ease-in-out;
+    overflow: hidden;
 }
 
 details a.button {
     opacity: 0%;
     pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
 }
 
 details[open] {
-    max-height: 2000px;
+    max-height: var(--calculated-height, 50rem);
 }
 
 details[open] a.button {
@@ -489,11 +491,11 @@ a.button img {
     margin-right: 0.1em;
 }
 
-.rainyun {
+.sponsor {
     color: #37b5c1;
 }
 
-.rainyun:hover {
+.sponsor:hover {
     color: #31a2ad;
 }
 
