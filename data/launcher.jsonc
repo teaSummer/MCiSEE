@@ -34,10 +34,14 @@
     },
     {
       "title": "Zalith Launcher 2",
-      "download": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.0.0_beta-20250908a/ZalithLauncher-2.0.0_beta-20250908a.apk",
-      "version": "2.0.0_beta-20250908a",
+      // "download": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.0.0_beta-20250908a/ZalithLauncher-2.0.0_beta-20250908a.apk",
+      // "version": "2.0.0_beta-20250920a",
       "github": "https://github.com/ZalithLauncher/ZalithLauncher2",
       "url": "https://zalithlauncher.cn/"
+      "dev": {
+        "download": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.0.0_beta-20250920a/ZalithLauncher-2.0.0_beta-20250920a.apk",
+        "version": "2.0.0_beta-20250920a"
+      }
     },
     {
       "title": "Angel Aura Amethyst",
