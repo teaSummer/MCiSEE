@@ -22,11 +22,13 @@ jobs:
             github: https://github.com/Hex-Dragon/PCL2
           - abbr: FCL
             github: https://github.com/FCL-Team/FoldCraftLauncher
+          - abbr: XMCL
+            github: https://github.com/Voxelum/x-minecraft-launcher
+          - abbr: Zalith Launcher 2
+            github: https://github.com/ZalithLauncher/ZalithLauncher2
           - abbr: ColorMC
             github: https://github.com/Coloryr/ColorMC
             device: Windows|macOS|Linux
-          - abbr: XMCL
-            github: https://github.com/Voxelum/x-minecraft-launcher
           - abbr: PCL2 社区版
             github: https://github.com/PCL-Community/PCL2-CE
           - abbr: Betacraft
@@ -104,7 +106,7 @@ jobs:
           fi
           if [ "$LATEST_STABLE_VERSION" ]; then
             if [ "$LAST_STABLE_VERSION" != "$LATEST_STABLE_VERSION" ]; then
-              sed -i '/beta/!s/\([/"v_-]\)'"$LAST_STABLE_VERSION"'\(\.[a-z]\|["/-]\)/\1'"$LATEST_STABLE_VERSION"'\2/gi' data/launcher.jsonc
+              sed -i '/beta./!s/\([/"v_-]\)'"$LAST_STABLE_VERSION"'\(\.[a-z]\|["/-]\)/\1'"$LATEST_STABLE_VERSION"'\2/gi' data/launcher.jsonc
               LAST_STABLE_VERSION=`echo $LAST_STABLE_VERSION | sed 's/\\\\././g'`
               LATEST_STABLE_VERSION=`echo $LATEST_STABLE_VERSION | sed 's/\\\\././g'`
               CHANGELOG_E='  ${{ matrix.abbr }}(stable): '"$LAST_STABLE_VERSION => $LATEST_STABLE_VERSION$DEVICE_STRING"
