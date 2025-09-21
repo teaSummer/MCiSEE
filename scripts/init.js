@@ -5,7 +5,7 @@ let hShake;
 let notificationCount = '';
 
 const downloadMirrorUrl = 'https://ghfast.top/<T>';
-const fIconUrl = 'https://favicon.pub/api/<T>?s=16';
+const fIconUrl = 'https://www.faviconextractor.com/favicon/<T>?larger=true';
 const ghRepoMirrorUrl = '';
 
 const checkDate = (date = new Date()) => (date.getDate() == 1 && date.getMonth() + 1 == 4) ? true : false;
