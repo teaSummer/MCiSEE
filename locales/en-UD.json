@@ -89,7 +89,6 @@
     "launcher.preRelease": "${linkDevVersion} {preRelease} {download}${downloadSVG}",
     "launcher.preRelease.latest": "{preRelease} {latest} {download}${downloadSVG}",
     "cleanUrl": "ɹoɥɔuⱯ Ꞁᴚ∩ uɐǝꞁƆ",
-    "moeICP": "",
     "ICP": "",
     "checkUpdate": "sǝʇɐpdn ɹǝɥɔunɐꞁ ɹoɟ ʞɔǝɥƆ"
   }

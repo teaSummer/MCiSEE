@@ -72,7 +72,6 @@
     "launcher.release.latest": "${downloadSVG}{download}{latest}{release}",
     "launcher.preRelease": "${downloadSVG}{download}{preRelease}${linkDevVersion}",
     "launcher.preRelease.latest": "${downloadSVG}{download}{latest}{preRelease}",
-    "moeICP": "<a href=\"https://icp.gov.moe/?keyword=20247837\" target=\"_blank\">萌ICP備二〇二四七八三七號</a>",
     "ICP": "<a href=\"https://beian.miit.gov.cn\" target=\"_blank\">湘ICP備二〇二五一三二四〇二號</a>"
   }
 }
