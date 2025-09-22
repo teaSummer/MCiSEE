@@ -88,7 +88,6 @@
     "launcher.release.latest": "${downloadSVG}{download}{latest}{release}",
     "launcher.preRelease": "${downloadSVG}{download}{preRelease}${linkDevVersion}",
     "launcher.preRelease.latest": "${downloadSVG}{download}{latest}{preRelease}",
-    "moeICP": "",
     "ICP": ""
   }
 }

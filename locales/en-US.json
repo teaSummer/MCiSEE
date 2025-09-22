@@ -89,7 +89,6 @@
     "launcher.preRelease": "${downloadSVG}{download} {preRelease} ${linkDevVersion}",
     "launcher.preRelease.latest": "${downloadSVG}{download} {latest} {preRelease}",
     "cleanUrl": "Clean URL Anchor",
-    "moeICP": "",
     "ICP": "",
     "checkUpdate": "Check for launcher updates"
   }
