@@ -89,7 +89,6 @@
     "launcher.preRelease": "${downloadSVG}{download}{preRelease} ${linkDevVersion}",
     "launcher.preRelease.latest": "${downloadSVG}{download}{latest}{preRelease}",
     "cleanUrl": "清理网址锚点",
-    "moeICP": "<a href=\"https://icp.gov.moe/?keyword=20247837\" target=\"_blank\">萌ICP备20247837号</a>",
     "ICP": "<a href=\"https://beian.miit.gov.cn\" target=\"_blank\">湘ICP备2025132402号</a>",
     "checkUpdate": "检查启动器更新"
   }
