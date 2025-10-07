@@ -199,9 +199,10 @@ function siteSearch(allow = true) {
         const span = $(this).find('span');
         const title = span.text();
         const description = z.attr('content') || '';
+        const link = keyword.includes('.') && keyword.length > 4 ? z.find('a').attr('href') : '';
         if (description) z = z.parent();
         const pattern = new RegExp('(' + keyword.replace(/([[\](){}.*+?|^$\\\-])/g, '\\$1') + ')' , 'gi');
-        if (pattern.test(title + description)) {
+        if (pattern.test(title + description + link)) {
             z.attr('open', true);
             const titleH = span.text().replace(pattern, '<text class="searchmatch">$1</text>');
             span.html(titleH);
