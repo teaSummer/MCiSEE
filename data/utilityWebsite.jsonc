@@ -155,7 +155,8 @@
       ["基岩版JSONUI文档", "https://mcbeui.netlify.app/", "在线学习如何制作基岩版ui包"],
       ["基岩版SAPI文档", "https://projectxero.top/sapi/", "Script API（原Gametest Framework）文档"],
       ["编程一小时教程", "https://code.org/minecraft", "教育版教程"],
-      ["网易我的世界开发指南", "https://mc.163.com/dev/guide.html", ""]
+      ["网易我的世界开发指南", "https://mc.163.com/dev/guide.html", ""],
+      ["NitWikit笨蛋mc开服教程", "https://nitwikit.8aka.cn", "mc开服教程文档，包含基岩版与JAVA版新手教程"]
     ]
   },
   {
