@@ -7,7 +7,7 @@
       "title": "Fold Craft Launcher",
       "abbr": "FCL",
       "download": "https://github.com/FCL-Team/FoldCraftLauncher/releases/download/1.2.6.8/FCL-release-1.2.6.8-all.apk",
-      "version": "1.2.6.8",
+      "version": "1.2.7.3",
       "github": "https://github.com/FCL-Team/FoldCraftLauncher",
       "url": "https://fcl-team.github.io"
     },
@@ -27,6 +27,7 @@
     },
     {
       "title": "Zalith Launcher",
+      "abbr": "zl1",
       "download": "https://github.com/ZalithLauncher/ZalithLauncher/releases/download/141100/ZalithLauncher-1.4.1.1.apk",
       "version": "1.4.1.1",
       "github": "https://github.com/ZalithLauncher/ZalithLauncher",
@@ -34,8 +35,9 @@
     },
     {
       "title": "Zalith Launcher 2",
-      "download": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.0.0_beta-20251118a/ZalithLauncher-2.0.0_beta-20251118a.apk",
-      "version": "2.0.0_beta-20251118a",
+      "abbr": "zl2",
+      "download": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.0.0_beta-20251206a/ZalithLauncher-2.0.0_beta-20251206a.apk",
+      "version": "2.0.0_beta-20251206a",
       "github": "https://github.com/ZalithLauncher/ZalithLauncher2",
       "url": "https://zalithlauncher.cn/"
     },
