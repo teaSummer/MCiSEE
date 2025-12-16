@@ -24,7 +24,9 @@ jobs:
             github: https://github.com/FCL-Team/FoldCraftLauncher
           - abbr: XMCL
             github: https://github.com/Voxelum/x-minecraft-launcher
-          - abbr: Zalith Launcher 2
+          - abbr: zl1
+            github: https://github.com/ZalithLauncher/ZalithLauncher
+          - abbr: zl2
             github: https://github.com/ZalithLauncher/ZalithLauncher2
           - abbr: ColorMC
             github: https://github.com/Coloryr/ColorMC
@@ -83,10 +85,10 @@ jobs:
               unset LATEST_DEV_VERSION
             fi
           fi
-          
+
           # Remove Needless Files
           rm latest.json releases.json launcher.jsonc
-          
+
           # Output
           echo "last_stable_version=$LAST_STABLE_VERSION" >> $GITHUB_OUTPUT
           echo "last_dev_version=$LAST_DEV_VERSION" >> $GITHUB_OUTPUT
