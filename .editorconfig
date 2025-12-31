@@ -1,0 +1,12 @@
+root = true
+
+[*]
+insert_final_newline = true
+
+[*.{json,yml}]
+indent_style = space
+indent_size = 2
+
+[*.{css,scss,js,ts,vue}]
+indent_size = 4
+indent_style = tab

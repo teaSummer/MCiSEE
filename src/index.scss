@@ -1,0 +1,88 @@
+@mixin light {
+	color-scheme: light;
+
+	--text-color: #fff;
+	--primary-color: #1f6feb;
+	--primary-hover-color: #1258c5;
+	--primary-active-color: #367eed;
+	--secondary-color: #3e97eb;
+	--border-color: #30363d;
+	--muted-color: #6a1111;
+	--background-color: rgba(255, 255, 255, 0.05);
+
+	--background: url('https://mcisee.top/assets/image/daylight.webp');
+}
+
+@mixin dark {
+	color-scheme: dark;
+
+	--text-color: #fff;
+	--primary-color: #075457;
+	--primary-hover-color: #07545788;
+	--primary-active-color: #075457cc;
+	--secondary-color: #fff5;
+	--border-color: #bfb9b1;
+	--muted-color: #91eeee;
+	--background-color: rgba(0, 0, 0, 0.05);
+
+	--background: url('https://mcisee.top/assets/image/dark.webp');
+}
+
+@mixin classic {
+	@include light();
+	--background: url('https://mcisee.top/assets/image/classic.webp');
+}
+
+:root {
+	@include light();
+	@media (prefers-color-scheme: dark) {
+		@include dark();
+	}
+}
+
+html {
+	&.classic {
+		@include classic();
+	}
+	&.dark {
+		@include dark();
+	}
+	&.light {
+		@include light();
+	}
+}
+
+a {
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+body {
+	margin: 0;
+	background-image: var(--background);
+	background-color: var(--background-color);
+	backdrop-filter: blur(10px);
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#app {
+	width: 100vw;
+	height: 100vh;
+}
+
+footer {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 100vh;
+	width: 100%;
+	height: 40px;
+	text-align: right;
+	opacity: 0.8;
+	font-size: 0.8rem;
+	p {
+		margin: 0;
+		margin-bottom: 0.25rem;
+	}
+}

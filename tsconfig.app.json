@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@views/*": ["src/views/*"],
+      "@store/*": ["src/store/*"],
+    },
+
+    "strict": true,
+    "composite": true,
+
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+
+    "lib": [
+      "ESNext",
+      "DOM",
+    ],
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.vue",
+  ],
+}
