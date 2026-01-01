@@ -39,7 +39,7 @@ onBeforeMount(async() => {
 </script>
 
 <template>
-	<span :class="$style['search-panel']">
+	<span :class="$style['search-panel']" :style="typeof isHome === 'undefined' || !isHome? { border: 'none' }: null">
 		<div v-if="typeof isHome === 'boolean' && isHome" :class="{
 				[$style['search-select']]: true,
 				[$style.active]: showSearchSelectPopup
