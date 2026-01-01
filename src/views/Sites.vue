@@ -15,6 +15,18 @@ const getFavicon = (url: string) => {
 const route = useRoute();
 const searchKeywords = computed(() => route.query.s?.toString() || '');
 
+const filterSites = (keyword: string, category: string, type?: 'category' | 'site'): any => {
+	if(type === 'category')
+		return sites.value.find(c => c.category === category)?.sites.filter(
+			site => site.name.toLowerCase().includes(keyword.trim().toLowerCase())
+		) || [];
+	else if(type === 'site') return sites.value.find(c => c.category === category)?.sites.filter(
+			site => site.name.toLowerCase().includes(keyword.trim().toLowerCase()) ||
+					site.desc?.toLowerCase().includes(keyword.trim().toLowerCase())
+		) || [];
+	else return sites.value;
+}
+
 onBeforeMount(async() => {
 	const formatHelper = await import('@utils/format-helper');
 	const raw_data = await (await fetch('https://mcisee.top/data/utilityWebsite.jsonc')).text();
@@ -25,11 +37,11 @@ onBeforeMount(async() => {
 <template>
 	<main class="sites">
 		<template v-for="(category, i) in sites" :key="category.category">
-			<div v-if="category.sites.find(site => site.name.toLowerCase().includes(searchKeywords.trim().toLowerCase()))" class="site-category">
+			<div v-if="filterSites(searchKeywords, category.category, 'category').length" class="site-category">
 				<h2 :id="category.category" class="category-name">{{ category.category }}</h2>
 				<div class="site-list">
 					<template v-for="site in category.sites" :key="site.name">
-						<SiteItem v-if="site.name.toLowerCase().includes(searchKeywords.trim().toLowerCase())" :site="{
+						<SiteItem v-if="filterSites(searchKeywords, category.category, 'site').includes(site)" :site="{
 							...site,
 							icon: getFavicon(site.url)
 						}" />
