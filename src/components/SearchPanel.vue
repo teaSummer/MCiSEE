@@ -11,7 +11,7 @@ const showSearchSelectPopup = ref(false);
 
 const searchForm = reactive({
 	from: 'local',
-	keywords: ''
+	keywords: router.currentRoute.value.query.s?.toString() || ''
 });
 
 const getSearch = (str: string) => {
@@ -21,7 +21,7 @@ const getSearch = (str: string) => {
 const search = () => {
 	if(!searchForm.keywords) return;
 	searchForm.from === 'local'?
-		router.push({name: 'Search', query: {q: searchForm.keywords}}):
+		router.push({name: 'sites', query: {s: searchForm.keywords}}):
 		open(getSearch(searchForm.from)?.search?.replace(
 			'<T>', encodeURIComponent(searchForm.keywords)
 		), '_blank', 'noopener');

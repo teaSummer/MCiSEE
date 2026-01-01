@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ref, onBeforeMount } from 'vue';
+import { ref, computed, onBeforeMount } from 'vue';
+import { useRoute } from 'vue-router';
 import * as jsonc from 'jsonc-parser';
 import SiteItem from '@comps/SiteItem.vue';
 
@@ -11,6 +12,9 @@ const getFavicon = (url: string) => {
 	return `https://www.faviconextractor.com/favicon/${url.split('/')[2]}?larger=true`;
 }
 
+const route = useRoute();
+const searchKeywords = computed(() => route.query.s?.toString() || '');
+
 onBeforeMount(async() => {
 	const formatHelper = await import('@utils/format-helper');
 	const raw_data = await (await fetch('https://mcisee.top/data/utilityWebsite.jsonc')).text();
@@ -20,15 +24,19 @@ onBeforeMount(async() => {
 
 <template>
 	<main class="sites">
-		<div class="site-category" v-for="(category, i) in sites" :key="category.category">
-			<h2 :id="category.category" class="category-name">{{ category.category }}</h2>
-			<div class="site-list">
-				<SiteItem v-for="site in category.sites" :key="site.name" :site="{
-					...site,
-					icon: getFavicon(site.url)
-				}" />
+		<template v-for="(category, i) in sites" :key="category.category">
+			<div v-if="category.sites.find(site => site.name.toLowerCase().includes(searchKeywords.trim().toLowerCase()))" class="site-category">
+				<h2 :id="category.category" class="category-name">{{ category.category }}</h2>
+				<div class="site-list">
+					<template v-for="site in category.sites" :key="site.name">
+						<SiteItem v-if="site.name.toLowerCase().includes(searchKeywords.trim().toLowerCase())" :site="{
+							...site,
+							icon: getFavicon(site.url)
+						}" />
+					</template>
+				</div>
 			</div>
-		</div>
+		</template>
 	</main>
 </template>
 
