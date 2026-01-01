@@ -10,6 +10,8 @@
 	--muted-color: #6a1111;
 	--background-color: rgba(255, 255, 255, 0.05);
 
+	--nav-background: linear-gradient(90deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.12));
+
 	--background: url('https://mcisee.top/assets/image/daylight.webp');
 }
 
@@ -24,6 +26,8 @@
 	--border-color: #bfb9b1;
 	--muted-color: #91eeee;
 	--background-color: rgba(0, 0, 0, 0.05);
+
+	--nav-background: linear-gradient(90deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.32));
 
 	--background: url('https://mcisee.top/assets/image/dark.webp');
 }
@@ -81,10 +85,20 @@ nav {
 	display: flex;
 	align-items: center;
 	gap: 1rem;
-	padding: 0 1rem;
-	background-color: var(--primary-color);
-	>* {
+	padding: 0 1rem 0.2rem 1rem;
+	background: var(--nav-background);
+	backdrop-filter: blur(10px);
+	z-index: 10;
+	.logo-panel {
+		font-size: 1.2rem;
+		font-weight: bold;
+	}
+	a {
 		color: var(--text-color);
+		&:hover {
+			opacity: 0.8;
+			text-decoration: none;
+		}
 	}
 }
 
