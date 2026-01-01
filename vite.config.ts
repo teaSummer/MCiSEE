@@ -15,12 +15,31 @@ export default<UserConfig> {
 	plugins: [vue()],
 	build: {
 		modulePreload: true,
-		rollupOptions: {
+		rolldownOptions: {
 			output: {
-				manualChunks: {
-					vue: ['vue'],
-					'vue-router': ['vue-router'],
-					jsonc: ['jsonc-parser'],
+				advancedChunks: {
+					groups: [
+						{
+							name: 'vue-bundled',
+							test: /node_modules\/(vue|vue-router|pinia)/
+						},
+						{
+							name: 'font-awesome',
+							test: /node_modules\/@fortawesome/
+						},
+						{
+							name: 'jsonc-parser',
+							test: /node_modules\/jsonc-parser/
+						},
+						{
+							name: 'utils-bundled',
+							test: /src\/utils/
+						},
+						{
+							name: 'stores-bundled',
+							test: /src\/store/
+						}
+					]
 				}
 			}
 		}
