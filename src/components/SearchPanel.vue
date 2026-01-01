@@ -28,7 +28,7 @@ const search = () => {
 }
 
 defineProps<{
-	'is-home'?: boolean
+	isHome?: boolean
 }>();
 
 onBeforeMount(async() => {
@@ -40,7 +40,7 @@ onBeforeMount(async() => {
 
 <template>
 	<span :class="$style['search-panel']">
-		<div v-if="!$props['is-home']" :class="{
+		<div v-if="typeof isHome === 'boolean' && isHome" :class="{
 				[$style['search-select']]: true,
 				[$style.active]: showSearchSelectPopup
 			}"
@@ -55,7 +55,7 @@ onBeforeMount(async() => {
 			</span>
 		</div>
 		<input :class="$style['search-input']" type="text"
-			   :style="$props['is-home']? { 'border-radius': '8px 0 0 8px' }: null"
+			   :style="typeof isHome === 'undefined' || !isHome? { 'border-radius': '8px 0 0 8px' }: null"
 			   :placeholder="searchForm.from === 'local' ?
 			   $t('siteSearch') : $t('searchFrom', {
 				   linkSearchFrom: getSearch(searchForm.from)?.abbr! ||

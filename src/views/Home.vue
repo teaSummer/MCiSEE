@@ -10,14 +10,14 @@ const { t: $t } = useI18nStore();
 			<img class="logo" src="/images/mcisee-uwu.png" :alt="$t('meta.alt')"
 				:title="$t('meta.title')" />
 		</span>
-		<search-panel :is-home="true" />
+		<search-panel :isHome="true" />
 	</main>
 </template>
 
 <style scoped lang="scss">
 main {
 	width: 50%;
-	height: 80%;
+	height: 80vh;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
@@ -30,8 +30,8 @@ main {
 }
 .title-panel {
 	display: block;
-	width: auto;
-	height: 30%;
+	width: 30%;
+	height: auto;
 	.logo {
 		width: 100%;
 		height: 100%;
