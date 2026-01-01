@@ -1,4 +1,4 @@
-import { createApp } from 'vue';
+import { createApp, defineAsyncComponent } from 'vue';
 import { createPinia } from 'pinia';
 import App from './App.vue';
 import router from './router';
@@ -14,8 +14,11 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 
 library.add(fas, fab, far);
 
+const SearchPanel = defineAsyncComponent(() => import('@comps/SearchPanel.vue'));
+
 const app = createApp(App);
 app.component('fa-icon', FontAwesomeIcon);
+app.component('search-panel', SearchPanel);
 app.use(router);
 app.use(createPinia());
 app.mount('#app');
@@ -26,5 +29,6 @@ i18nStore.init();
 declare module 'vue' {
 	export interface GlobalComponents {
 		'fa-icon': typeof import('@fortawesome/vue-fontawesome').FontAwesomeIcon;
+		'search-panel': typeof SearchPanel;
 	}
 }
