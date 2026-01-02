@@ -25,5 +25,6 @@
   "include": [
     "src/**/*.ts",
     "src/**/*.vue",
+    "components.d.ts"
   ],
 }

@@ -1,6 +1,7 @@
+import path from 'path';
 import type { UserConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import path from 'path';
+import Components from 'unplugin-vue-components/vite';
 
 export default<UserConfig> {
 	resolve: {
@@ -12,7 +13,11 @@ export default<UserConfig> {
 			'@utils': path.resolve(__dirname, 'src/utils'),
 		},
 	},
-	plugins: [vue()],
+	plugins: [vue(), Components({
+		dts: true,
+		dirs: ['src/components'],
+		deep: true,
+	})],
 	build: {
 		modulePreload: true,
 		rolldownOptions: {
@@ -24,8 +29,8 @@ export default<UserConfig> {
 							test: /node_modules\/(vue|vue-router|pinia)/
 						},
 						{
-							name: 'font-awesome',
-							test: /node_modules\/@fortawesome/
+							name: 'ov-icons',
+							test: /node_modules\/oh-vue-icons/
 						},
 						{
 							name: 'jsonc-parser',

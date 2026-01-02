@@ -2,6 +2,7 @@
 	color-scheme: light;
 
 	--text-color: #fff;
+	--text-hover-color: #fffa;
 	--primary-color: #1f6feb;
 	--primary-hover-color: #1258c5;
 	--primary-active-color: #367eed;
@@ -33,8 +34,18 @@
 }
 
 @mixin classic {
-	@include light();
+	@include dark();
 	--background: url('https://mcisee.top/assets/image/classic.webp');
+}
+
+@keyframes dropdown-popup {
+	0% {opacity: 0; transform: translateX(-60%) translateY(-10px);}
+	100% {opacity: 1; transform: translateX(-60%) translateY(0);}
+}
+
+@keyframes dropdown-hide {
+	0% {opacity: 1; transform: translateX(-60%) translateY(0);}
+	100% {display: none; opacity: 0; transform: translateX(-60%) translateY(-10px);}
 }
 
 :root {
@@ -45,13 +56,13 @@
 }
 
 html {
-	&.classic {
+	&[data-theme='classic'] {
 		@include classic();
 	}
-	&.dark {
+	&[data-theme='dark'] {
 		@include dark();
 	}
-	&.light {
+	&[data-theme='light'] {
 		@include light();
 	}
 }
@@ -65,7 +76,7 @@ a {
 
 body {
 	margin: 0;
-	overflow-x: hidden;
+	overflow: hidden;
 	background-image: var(--background);
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -83,20 +94,108 @@ nav {
 	width: 100%;
 	height: 40px;
 	display: flex;
+	justify-content: space-between;
 	align-items: center;
-	gap: 1rem;
-	padding: 0 1rem 0.2rem 1rem;
 	background: var(--nav-background);
 	backdrop-filter: blur(10px);
 	z-index: 10;
-	.logo-panel {
-		font-size: 1.2rem;
-		font-weight: bold;
+	>* {
+		height: 100%;
+		width: fit-content;
+	}
+	.title-panel {
+		padding-left: 1.2rem;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		.title {
+			font-size: 1.2rem;
+			font-weight: bold;
+		}
+	}
+	.action-panel {
+		.icon-button {
+			position: relative;
+			padding: 0 0.7rem;
+			font-size: 1.2rem;
+			height: 100%;
+			color: var(--text-color);
+			background: none;
+			border: none;
+			cursor: pointer;
+			transition: color 0.2s;
+			&:not(:first-child)::before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+				width: 1px;
+				height: 70%;
+				background-color: var(--border-color);
+			}
+			&:hover {
+				color: var(--text-hover-color);
+			}
+			&.dropdown {
+				>.angle {
+					transition: transform 0.2s;
+				}
+				&:hover>.angle {
+					transform: rotate(90deg);
+				}
+				&:hover>.dropdown-content {
+					display: block;
+					animation: dropdown-popup 0.2s ease-in-out forwards;
+				}
+				>.dropdown-content {
+					animation: dropdown-hide 0.2s ease-in-out forwards;
+					position: absolute;
+					top: 100%;
+					left: 0;
+					width: 180px;
+					transform: translateX(-60%);
+					border-radius: 0 0 8px 8px;
+					border: 1px solid var(--border-color);
+					// border-top: none;
+					background-color: var(--primary-color);
+					z-index: 10;
+					ul {
+						list-style-type: none;
+						padding: 0;
+						margin: 0;
+					}
+					li {
+						height: fit-content;
+						cursor: pointer;
+						font-size: 1rem;
+						transition: background-color 0.2s;
+						a {
+							display: block;
+							padding: 0.5rem 1rem;
+						}
+						&:hover {
+							background-color: #233;
+						}
+						&.active {
+							a {
+								color: var(--text-color);
+								font-weight: bold;
+							}
+						}
+						&:last-child {
+							border-radius: 0 0 8px 8px;
+						}
+					}
+				}
+			}
+		}
 	}
 	a {
 		color: var(--text-color);
+		transition: color 0.2s;
 		&:hover {
-			opacity: 0.8;
+			color: var(--text-hover-color);
 			text-decoration: none;
 		}
 	}
@@ -104,7 +203,11 @@ nav {
 
 #app {
 	width: 100vw;
-	min-height: 100vh;
+	height: 100vh;
+}
+
+main {
+	overflow: auto;
 }
 
 footer {

@@ -24,7 +24,7 @@ const handleTouchEnd = (e: TouchEvent) => {
 		</span>
 		<search-panel :isHome="true" />
 		<div class="explore-hint" @click="browseSites">
-			<fa-icon icon="angle-up" />
+			<v-icon name="pr-angle-up" />
 			<span>Explore More...</span>
 		</div>
 	</main>

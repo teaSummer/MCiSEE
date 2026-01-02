@@ -54,11 +54,11 @@ onBeforeMount(async() => {
 
 <style lang="scss" scoped>
 .sites {
-	width: 80%;
-	height: 100%;
-	margin: auto;
+	width: 100%;
+	height: 90%;
 	.site-category {
-		width: 100%;
+		width: 80%;
+		margin: auto;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;

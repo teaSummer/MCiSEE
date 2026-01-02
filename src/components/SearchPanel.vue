@@ -51,7 +51,7 @@ onBeforeMount(async() => {
 					'https://mcisee.top/assets/icon/favicon.ico':
 					`https://www.faviconextractor.com/favicon/${getSearch(searchForm.from)!.url.split('/')[2]}?larger=true`"
 					draggable="false" />
-				<fa-icon :class="$style['angle']" icon="angle-right" />
+				<v-icon :class="$style['angle']" name="pr-angle-right" />
 			</span>
 		</div>
 		<input :class="$style['search-input']" type="text"
@@ -63,7 +63,7 @@ onBeforeMount(async() => {
 			   })" v-model="searchForm.keywords" @keyup.enter="search" />
 		<button :class="$style['search-button']" type="submit" :aria-label="$t('search')"
 				:title="$t('search')" @click="search">
-			<fa-icon icon="search" />
+			<v-icon name="pr-search" />
 		</button>
 		<div :class="$style['search-select-popup']" v-if="showSearchSelectPopup">
 			<dl :class="$style['search-select-list']">
