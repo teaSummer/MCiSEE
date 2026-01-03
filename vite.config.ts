@@ -8,7 +8,7 @@ const getHashFromGit = () => {
 	let h = 'unknown';
 	try {
 		h = fs.readFileSync('./.git/refs/heads/next', 'utf-8').trim().slice(0, 7);
-	} catch {}
+	} catch (e) { console.warn('Failed to get git hash:', e); }
 	return h;
 }
 

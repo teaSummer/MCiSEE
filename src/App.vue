@@ -79,7 +79,7 @@ const deployedHash = deployed_hash;
 	<router-view />
 	<footer>
 		<span class="footer-left">
-			<p v-if="isPreview">Deploy from commit
+			<p v-if="isPreview && deployedHash !== 'unknown'">Deploy from commit
 				<a :href="`https://github.com/LateDreamXD/mcisee-next/commit/${deployedHash}`" 
 				   target="_blank" rel="noopenner"><code>{{ deployedHash }}</code></a>
 			</p>
