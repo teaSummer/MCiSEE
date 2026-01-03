@@ -31,10 +31,6 @@ export default<UserConfig> {
 							test: /node_modules\/(vue|vue-router|pinia)/
 						},
 						{
-							name: 'vue-mcisee-plugin',
-							test: /src\/plugins\/core/
-						},
-						{
 							name: 'ov-icons',
 							test: /node_modules\/oh-vue-icons/
 						},
@@ -49,6 +45,10 @@ export default<UserConfig> {
 						{
 							name: 'stores-bundled',
 							test: /src\/store/
+						},
+						{
+							name: 'vue-mcisee-plugin',
+							test: /src\/plugins\/core/
 						}
 					]
 				}
