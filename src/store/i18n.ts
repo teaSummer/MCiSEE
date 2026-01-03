@@ -6,14 +6,16 @@ export const useI18nStore = defineStore('i18n', {
 		translations: {} as Record<string, string>
 	}),
 	getters: {
+		/** get current language code */
 		getCurrentLanguage: (state) => state.language,
 		getTranslation: (state) => (key: string) => {
 			return state.translations?.[key] || '';
 		}
 	},
 	actions: {
-		setLanguage(language: string) {
-			this.language = language;
+		/** set current language code */
+		setLanguage(code: string) {
+			this.language = code;
 			this.init();
 		},
 		async getTranslations() {
@@ -35,6 +37,14 @@ export const useI18nStore = defineStore('i18n', {
 			try {await this.getTranslations();} catch {}
 			document.documentElement.lang = this.language;
 		},
+		/**
+		 * get translated string
+		 * @param key translation key
+		 * @param values placeholder values
+		 * @returns translated string
+		 * @example
+		 * $t('language.zh-CN'); // '简体中文 (中国大陆)'
+		 */
 		t(key: string, values?: Record<string, string>) {
 			let translation = this.getTranslation(key);
 			if(values)

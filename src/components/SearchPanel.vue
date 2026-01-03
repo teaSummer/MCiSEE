@@ -2,9 +2,7 @@
 import * as jsonc from 'jsonc-parser';
 import { ref, reactive, onBeforeMount } from 'vue';
 import { useRouter } from 'vue-router';
-import { useI18nStore } from '@store/i18n';
 
-const { t: $t } = useI18nStore();
 const router = useRouter();
 const searchExternal = ref([] as Searchable[]);
 const showSearchSelectPopup = ref(false);

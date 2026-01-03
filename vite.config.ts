@@ -11,6 +11,7 @@ export default<UserConfig> {
 			'@views': path.resolve(__dirname, 'src/views'),
 			'@store': path.resolve(__dirname, 'src/store'),
 			'@utils': path.resolve(__dirname, 'src/utils'),
+			'@plugins': path.resolve(__dirname, 'src/plugins'),
 		},
 	},
 	plugins: [vue(), Components({
@@ -23,10 +24,15 @@ export default<UserConfig> {
 		rolldownOptions: {
 			output: {
 				advancedChunks: {
+					maxSize: 512 * 1024,
 					groups: [
 						{
 							name: 'vue-bundled',
 							test: /node_modules\/(vue|vue-router|pinia)/
+						},
+						{
+							name: 'vue-mcisee-plugin',
+							test: /src\/plugins\/core/
 						},
 						{
 							name: 'ov-icons',

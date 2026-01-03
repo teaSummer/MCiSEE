@@ -1,11 +1,7 @@
 <script setup lang="ts">
-import { computed } from 'vue';
-import { useCoreStore } from './store/core';
-import { useI18nStore } from './store/i18n';
-const i18nStore = useI18nStore();
-const { t: $t } = i18nStore;
-const coreStore = useCoreStore();
-const theme = computed(() => coreStore.getTheme);
+import { computed, inject } from 'vue';
+const stores = inject<McISee.Stores>('stores')!;
+const theme = computed(() => stores.coreStore.getTheme);
 
 const getThemeIcon = (theme: string) => {
 	switch(theme) {
@@ -24,24 +20,24 @@ const getThemeIcon = (theme: string) => {
 const getThemeLocal = (theme: string) => {
 	switch(theme) {
 		case 'auto':
-			return $t('systemTheme');
+			return stores.i18nStore.t('systemTheme');
 		case 'dark':
-			return $t('darkTheme');
+			return stores.i18nStore.t('darkTheme');
 		case 'light':
-			return $t('lightTheme');
+			return stores.i18nStore.t('lightTheme');
 		case 'classic':
-			return $t('earlyTheme');
+			return stores.i18nStore.t('earlyTheme');
 		default:
 			return '';
 	}
 }
 
 const switchTheme = () => {
-	const availableThemes = coreStore.getAvailableThemes;
+	const availableThemes = stores.coreStore.getAvailableThemes;
 	const currentThemeIndex = availableThemes.indexOf(theme.value);
 	const nextThemeIndex = (currentThemeIndex + 1) % availableThemes.length;
 	const nextTheme = availableThemes[nextThemeIndex] as 'auto' | 'light' | 'dark' | 'classic';
-	coreStore.setTheme(nextTheme);
+	stores.coreStore.setTheme(nextTheme);
 }
 </script>
 
@@ -59,11 +55,11 @@ const switchTheme = () => {
 				<v-icon class="angle" name="fa-angle-right" />
 				<div class="dropdown-content">
 					<ul>
-						<template v-for="(show, language) in coreStore.getAvailableLanguages" :key="language">
-							<li v-if="show || i18nStore.getCurrentLanguage === language"
-								:class="{ active: i18nStore.getCurrentLanguage === language }">
+						<template v-for="(show, language) in $core.getAvailableLanguages" :key="language">
+							<li v-if="show || $i18n.getCurrentLanguage === language"
+								:class="{ active: $i18n.getCurrentLanguage === language }">
 								<a :href="language" role="button"
-									@click.prevent="i18nStore.setLanguage(language)">
+									@click.prevent="$i18n.setLanguage(language)">
 									{{ $t(`language.${language}`) }}
 								</a>
 							</li>

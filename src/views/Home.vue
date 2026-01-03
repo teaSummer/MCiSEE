@@ -1,9 +1,6 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router';
-import { useI18nStore } from '@store/i18n';
-
 const router = useRouter();
-const { t: $t } = useI18nStore();
 
 const browseSites = () => router.push({ name: 'sites' });
 const handleWheel = (e: WheelEvent) => e.deltaY > 0 && browseSites();
