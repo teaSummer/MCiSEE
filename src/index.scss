@@ -58,12 +58,18 @@
 html {
 	&[data-theme='classic'] {
 		@include classic();
+		.category-name {
+			color: #000;
+		}
 	}
 	&[data-theme='dark'] {
 		@include dark();
 	}
 	&[data-theme='light'] {
 		@include light();
+		.category-name {
+			text-shadow: 2px 2px 8px #fff;
+		}
 	}
 }
 
