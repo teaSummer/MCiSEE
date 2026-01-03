@@ -11,6 +11,11 @@ const routes: RouteRecordRaw[] = [
 		name: 'sites',
 		component: () => import('@views/Sites.vue')
 	},
+	{
+		path: '/:pathMatch(.*)*',
+		name: 'not-found',
+		component: () => import('@views/NotFound.vue')
+	}
 ];
 
 export default createRouter({
