@@ -1,9 +1,21 @@
 import path from 'path';
+import fs from 'fs';
 import type { UserConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import Components from 'unplugin-vue-components/vite';
 
+const getHashFromGit = () => {
+	let h = 'unknown';
+	try {
+		h = fs.readFileSync('./.git/refs/heads/next', 'utf-8').trim().slice(0, 7);
+	} catch {}
+	return h;
+}
+
 export default<UserConfig> {
+	define: {
+		deployed_hash: JSON.stringify(getHashFromGit())
+	},
 	resolve: {
 		alias: {
 			'@': path.resolve(__dirname, 'src'),

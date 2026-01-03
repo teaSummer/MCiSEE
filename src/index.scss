@@ -39,12 +39,12 @@
 }
 
 @keyframes dropdown-popup {
-	0% {opacity: 0; transform: translateX(-60%) translateY(-10px);}
-	100% {opacity: 1; transform: translateX(-60%) translateY(0);}
+	0% {display: block; opacity: 0; transform: translateX(-60%) translateY(-10px);}
+	100% {display: block; opacity: 1; transform: translateX(-60%) translateY(0);}
 }
 
 @keyframes dropdown-hide {
-	0% {opacity: 1; transform: translateX(-60%) translateY(0);}
+	0% {display: block; opacity: 1; transform: translateX(-60%) translateY(0);}
 	100% {display: none; opacity: 0; transform: translateX(-60%) translateY(-10px);}
 }
 
@@ -78,6 +78,14 @@ a {
 	&:hover {
 		text-decoration: underline;
 	}
+}
+
+code {
+	padding: 0.2em 0.4em;
+	font-size: 0.8em;
+	font-family: 'Cascadia Code', 'Fira Code', 'Courier New', Courier, monospace;
+	border-radius: 4px;
+	background-color: rgba(45, 55, 55, 0.4);
 }
 
 body {
@@ -155,6 +163,7 @@ nav {
 					animation: dropdown-popup 0.2s ease-in-out forwards;
 				}
 				>.dropdown-content {
+					display: none;
 					animation: dropdown-hide 0.2s ease-in-out forwards;
 					position: absolute;
 					top: 100%;
@@ -222,9 +231,16 @@ footer {
 	top: 100vh;
 	width: 100%;
 	height: 40px;
-	text-align: right;
 	opacity: 0.8;
 	font-size: 0.8rem;
+	.footer-left {
+		text-align: left;
+		float: left;
+	}
+	.footer-right {
+		text-align: right;
+		float: right;
+	}
 	p {
 		margin: 0;
 		margin-bottom: 0.25rem;

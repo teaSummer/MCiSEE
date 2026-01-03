@@ -39,6 +39,9 @@ const switchTheme = () => {
 	const nextTheme = availableThemes[nextThemeIndex] as 'auto' | 'light' | 'dark' | 'classic';
 	stores.coreStore.setTheme(nextTheme);
 }
+
+const isPreview = import.meta.env.VITE_IS_PREVIEW;
+const deployedHash = deployed_hash;
 </script>
 
 <template>
@@ -75,7 +78,16 @@ const switchTheme = () => {
 	</nav>
 	<router-view />
 	<footer>
-		<p v-html="$t('ICP')"></p>
-		<p>{{ $t('credit') }}</p>
+		<span class="footer-left">
+			<p v-if="isPreview">Deploy from commit
+				<a :href="`https://github.com/LateDreamXD/mcisee-next/commit/${deployedHash}`" 
+				   target="_blank" rel="noopenner"><code>{{ deployedHash }}</code></a>
+			</p>
+			<p v-if="isPreview">This is a preview version, doesn't means final quality.</p>
+		</span>
+		<span class="footer-right">
+			<p v-html="$t('ICP')" />
+			<p v-text="$t('credit')" />
+		</span>
 	</footer>
 </template>
