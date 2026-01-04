@@ -40,8 +40,15 @@ const switchTheme = () => {
 	stores.coreStore.setTheme(nextTheme);
 }
 
-const isPreview = import.meta.env.VITE_IS_PREVIEW;
-const deployedHash = deployed_hash;
+const isPreview = JSON.parse(import.meta.env.VITE_IS_PREVIEW) as boolean;
+const buildInfoStr = computed(() => {
+	const deployedSHA = import.meta.env.VERCEL_GIT_COMMIT_SHA?.trim()?.slice(0, 7);
+	const isVercel = import.meta.env.VERCEL === '1';
+	let str = `Build at ${new Date(import.meta.env.VITE_BUILD_TIMESTAMP).toISOString()} `;
+	deployedSHA && (str += `with commit <a href="https://github.com/LateDreamXD/mcisee-next/commit/${deployedSHA}" target="_blank" rel="noopener"><code>${deployedSHA}</code></a>`);
+	isVercel && (str += ` on Vercel`);
+	return str;
+});
 </script>
 
 <template>
@@ -79,10 +86,7 @@ const deployedHash = deployed_hash;
 	<router-view />
 	<footer>
 		<span class="footer-left">
-			<p v-if="isPreview && deployedHash !== 'unknown'">Deploy from commit
-				<a :href="`https://github.com/LateDreamXD/mcisee-next/commit/${deployedHash}`" 
-				   target="_blank" rel="noopenner"><code>{{ deployedHash }}</code></a>
-			</p>
+			<p v-if="isPreview" v-html="buildInfoStr" />
 			<p v-if="isPreview">This is a preview version, doesn't means final quality.</p>
 		</span>
 		<span class="footer-right">

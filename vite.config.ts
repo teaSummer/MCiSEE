@@ -1,20 +1,14 @@
 import path from 'path';
-import fs from 'fs';
 import type { UserConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import Components from 'unplugin-vue-components/vite';
 
-const getHashFromGit = () => {
-	let h = 'unknown';
-	try {
-		h = fs.readFileSync('./.git/refs/heads/next', 'utf-8').trim().slice(0, 7);
-	} catch (e) { console.warn('Failed to get git hash:', e); }
-	return h;
-}
-
 export default<UserConfig> {
+	appType: 'spa',
+	envPrefix: ['VITE_', 'VERCEL_GIT_'],
 	define: {
-		deployed_hash: JSON.stringify(getHashFromGit())
+		'import.meta.env.VERCEL': JSON.stringify(process.env.VERCEL),
+		'import.meta.env.VITE_BUILD_TIMESTAMP': JSON.stringify(Date.now())
 	},
 	resolve: {
 		alias: {
