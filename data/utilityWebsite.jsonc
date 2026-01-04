@@ -1,1192 +1,1285 @@
 // 实用网站列表
 [
-    {
-        "category": "官方网站 (©Mojang/©微软)",
-        "sites": [
-            {
-                "name": "Minecraft",
-                "url": "https://www.minecraft.net",
-                "desc": "《我的世界》/《当个创世神》\n着重于让玩家探索、交互并改变一个动态生成1m³大小方块的世界"
-            },
-            {
-                "name": "Minecraft教育版",
-                "url": "https://education.minecraft.net/",
-                "desc": "Minecraft Education\nMinecraft特别为教室使用而设计的教学版本（中国大陆访问可能会出现404）"
-            },
-            {
-                "name": "漏洞追踪器",
-                "url": "https://bugs.mojang.com",
-                "desc": "Mojang Jira/Mojira\n用于反馈Bug"
-            },
-            {
-                "name": "漏洞追踪器（存档）",
-                "url": "https://bugs-legacy.mojang.com",
-                "desc": "仅用于存档旧版Mojira，已停止支持。"
-            },
-            {
-                "name": "基岩版开发者文档",
-                "url": "https://learn.microsoft.com/minecraft/creator/",
-                "desc": "了解如何使用附加组件修改 Minecraft。创建皮肤，设计独特的体验，发现最新功能，并发展您作为Minecraft创作者的技能"
-            },
-            {
-                "name": "Feedback",
-                "url": "https://feedback.minecraft.net"
-            },
-            {
-                "name": "知识库",
-                "url": "https://feedback.minecraft.net/hc/categories/115000410252-Knowledge-Base"
-            },
-            {
-                "name": "远古版MC",
-                "url": "https://classic.minecraft.net",
-                "desc": "网页版本\n(需浏览器支持WebGL)"
-            },
-            {
-                "name": "基岩版专用服务端",
-                "url": "https://www.minecraft.net/download/server/bedrock"
-            },
-            {
-                "name": "壁纸集",
-                "url": "https://www.minecraft.net/collectibles/minecraft-collection"
-            },
-            {
-                "name": "服务器列表",
-                "url": "https://findmcserver.com/",
-                "desc": "查找独特且友好的官方服务器"
-            },
-            {
-                "name": "编程一小时教程",
-                "url": "https://code.org/minecraft",
-                "desc": "教育版教程"
-            },
-            {
-                "name": "地下城 (Dungeons)",
-                "url": "https://www.minecraft.net/about-dungeons",
-                "desc": "Minecraft Dungeons\n一款动作/冒险角色扮演类电子游戏，现已停更"
-            },
-            {
-                "name": "传奇 (Legends)",
-                "url": "https://www.minecraft.net/about-legends",
-                "desc": "Minecraft Legends\n一款即时动作战略游戏，现已停更"
-            },
-            {
-                "name": "Minecraft Earth",
-                "url": "#",
-                "desc": "一款免费增强现实（AR）手游，现已停更\n官网不再维护"
-            },
-            {
-                "name": "故事模式 (Story Mode)",
-                "url": "#",
-                "desc": "Minecraft: Story Mode\n一款具有可点选性、叙事性、章节性的电子游戏，现已停更\n官网不再维护"
-            }
-        ]
-    },
-    {
-        "category": "官方购买渠道",
-        "sites": [
-            {
-                "name": "基岩版+Java版 (Windows)",
-                "url": "https://www.minecraft.net/store/minecraft-java-bedrock-edition-pc",
-                "desc": "双版本捆绑售卖\nOfficial Site"
-            },
-            {
-                "name": "基岩版+Java版 (Xbox)",
-                "url": "https://www.xbox.com/games/store/minecraft-java-bedrock-edition-for-pc/9nxp44l49shj",
-                "desc": "Microsoft Xbox"
-            },
-            {
-                "name": "基岩版 (Android)",
-                "url": "https://play.google.com/store/apps/details?id=com.mojang.minecraftpe",
-                "desc": "也适用于ChromeOS\nGoogle Play"
-            },
-            {
-                "name": "基岩版 (Fire)",
-                "url": "https://www.amazon.com/Mojang-Minecraft-Pocket-Edition/dp/B00992CF6W/",
-                "desc": "Amazon Appstore"
-            },
-            {
-                "name": "基岩版 (iOS)",
-                "url": "https://apps.apple.com/cn/app/id479516143",
-                "desc": "App Store"
-            },
-            {
-                "name": "基岩版 (Nintendo)",
-                "url": "https://www.nintendo.com/us/store/products/minecraft-106679/",
-                "desc": "Nintendo Store"
-            },
-            {
-                "name": "基岩版 (Xbox)",
-                "url": "https://xbox.com/games/store/-/9MVXMVT8ZKWC",
-                "desc": "Microsoft Xbox"
-            },
-            {
-                "name": "地下城/Dungeons (Windows)",
-                "url": "https://store.steampowered.com/app/1672970/Minecraft_Dungeons/",
-                "desc": "Valve Steam"
-            },
-            {
-                "name": "传奇/Legends (Windows)",
-                "url": "https://store.steampowered.com/app/1928870/Minecraft_Legends/",
-                "desc": "Valve Steam"
-            },
-            {
-                "name": "周边商城",
-                "url": "https://shop.minecraft.net/",
-                "desc": "Official Site"
-            }
-        ]
-    },
-    {
-        "category": "资源板块",
-        "sites": [
-            {
-                "name": "地球资源社区",
-                "url": "https://www.planetminecraft.com"
-            },
-            {
-                "name": "基岩版地球资源社区",
-                "url": "https://mcpe-planet.com"
-            },
-            {
-                "name": "MCPEDL资源",
-                "url": "https://mcpedl.com",
-                "desc": "英文"
-            },
-            {
-                "name": "下载基岩版",
-                "url": "#基岩版版本库/启动器",
-                "desc": "含正版和破解版"
-            },
-            {
-                "name": "下载中国版",
-                "url": "https://www.123pan.com/s/bSslVv-uc3kh",
-                "desc": "由Ian_zb收集"
-            },
-            {
-                "name": "MCPELIFE",
-                "url": "https://mcpelife.com/"
-            },
-            {
-                "name": "TITAIKE地图站",
-                "url": "https://www.titaike.cn",
-                "desc": "集合国内外优质地图"
-            },
-            {
-                "name": "资源包列表",
-                "url": "https://resourcepack.net"
-            },
-            {
-                "name": "网易我的世界官网",
-                "url": "https://mc.163.com"
-            },
-            {
-                "name": "官方壁纸集",
-                "url": "https://www.minecraft.net/collectibles/minecraft-collection"
-            },
-            {
-                "name": "McIcons图标库",
-                "url": "https://mcicons.ccleaf.com",
-                "desc": "由ccLeaf驱动，涵盖各类图标，可制作材质和皮肤"
-            },
-            {
-                "name": "Inner Core 模组",
-                "url": "https://icmods.mineprogramming.org"
-            },
-            {
-                "name": "Eaglercraft",
-                "url": "https://eaglercraft.com/",
-                "desc": "在线游玩mc java版非官方版\n(需浏览器支持WebGL)"
-            },
-            {
-                "name": "MC.JS",
-                "url": "https://mc.js.cool/",
-                "desc": "在线游玩mc java版非官方版\n(需浏览器支持WebGL)"
-            },
-            {
-                "name": "IMC.RE",
-                "url": "https://imc.re",
-                "desc": "著名开发团队"
-            },
-            {
-                "name": "YSS开发组",
-                "url": "https://yss.minecraft.pe",
-                "desc": "YSS开发组由一群热爱Minecraft并想让Minecraft更好的人组成"
-            },
-            {
-                "name": "LittleSkin皮肤站",
-                "url": "https://littleskin.cn",
-                "desc": "快速、可靠的 Minecraft 皮肤站"
-            },
-            {
-                "name": "红石皮肤站",
-                "url": "https://mcskin.com.cn/",
-                "desc": "一个免费、自由的Minecraft皮肤站。五年历史，稳定可靠！"
-            },
-            {
-                "name": "MCSkins.top",
-                "url": "https://mcskins.top",
-                "desc": "简单的Minecraft皮肤分享站\n内含一些皮肤小工具"
-            },
-            {
-                "name": "Minecraft Maps",
-                "url": "https://www.minecraftmaps.com",
-                "desc": "This site is dedicated to custom Minecraft saved game worlds or maps as they are more commonly known as."
-            },
-            {
-                "name": "Minecraft Shaders",
-                "url": "https://minecraftshader.com/",
-                "desc": "MinecraftShader.com offers an extensive collection of mods created for players who want a fresh Minecraft experience."
-            },
-            {
-                "name": "9Minecraft",
-                "url": "https://www.9minecraft.net/",
-                "desc": "The best resource for Minecraft"
-            },
-            {
-                "name": "免费披风站",
-                "url": "https://minecraftcapes.net",
-                "desc": "英文"
-            },
-            {
-                "name": "TeaCon",
-                "url": "https://www.teacon.cn/",
-                "desc": "模组开发茶会"
-            },
-            {
-                "name": "Minecraft高校联盟",
-                "url": "https://www.mualliance.cn",
-                "desc": "MUA\n旨在联合全国高校 MC 爱好者，共同推动高校 MC 生态发展的公益性组织"
-            },
-            {
-                "name": "像素茶艺地图站",
-                "url": "https://pixelmap.minegraph.cn/blog/",
-                "desc": "用最简单的方式传播好作品"
-            },
-            {
-                "name": "MCG中文图形站",
-                "url": "https://www.minegraph.cn/",
-                "desc": "国内首个《我的世界》图形资源站"
-            },
-            {
-                "name": "MC-NEO光影站",
-                "url": "https://www.neoshader.com/",
-                "desc": "全国首个全授权光影站"
-            },
-            {
-                "name": "MC原版模组入门教程",
-                "url": "https://icer233.us.kg/VanillaModTutorial/",
-                "desc": "数据包/资源包 指南"
-            },
-            {
-                "name": "ForgePixel中文皮肤站",
-                "url": "https://forgepixel.com/",
-                "desc": "免费获取皮肤/披风 以及免费提供第三方登录服务"
-            },
-            {
-                "name": "GTMC",
-                "url": "https://techmc.wiki",
-                "desc": "系统性的技术向MC理论归档"
-            },
-            {
-                "name": "FCL第三方下载站",
-                "url": "https://foldcraftlauncher.cn/",
-                "desc": "安全，可靠，快速的fcl下载与安卓JAVA相关资源获取站。"
-            }
-        ]
-    },
-    {
-        "category": "找服玩",
-        "sites": [
-            {
-                "name": "官方服务器列表",
-                "url": "https://findmcserver.com/",
-                "desc": "查找独特且友好的官方服务器"
-            },
-            {
-                "name": "服务器列表(中国大陆)",
-                "url": "https://www.mclists.cn"
-            },
-            {
-                "name": "找服网",
-                "url": "https://www.fansmc.com"
-            },
-            {
-                "name": "最好的服务器",
-                "url": "https://minecraft-mp.com",
-                "desc": "Find all the best Minecraft multiplayer servers on Minecraft-mp.com."
-            },
-            {
-                "name": "服务器列表",
-                "url": "https://mcl.ist",
-                "desc": "英文"
-            },
-            {
-                "name": "服务器列表(MC百科)",
-                "url": "https://play.mcmod.cn",
-                "desc": "由MC百科(mcmod.cn)收集"
-            },
-            {
-                "name": "服务器列表(中国台湾)",
-                "url": "https://www.mc-list.xyz"
-            },
-            {
-                "name": "服务器列表(日本)",
-                "url": "https://minecraft.jp"
-            }
-        ]
-    },
-    {
-        "category": "工具箱",
-        "sites": [
-            {
-                "name": "NameMC",
-                "url": "https://namemc.com",
-                "desc": "用户名历史皮肤查询等"
-            },
-            {
-                "name": "筛选皮肤",
-                "url": "https://mcskinsearch.com"
-            },
-            {
-                "name": "MC风格艺术字",
-                "url": "https://textcraft.net",
-                "desc": "Minecraft风格文字Logo生成器"
-            },
-            {
-                "name": "渐变色文字生成器",
-                "url": "https://mcg.tuanzi.ink"
-            },
-            {
-                "name": "CB Creator 指令生成器",
-                "url": "https://www.mcmod.cn/tools/cbcreator/",
-                "desc": "由MC百科(mcmod.cn)制作"
-            },
-            {
-                "name": "RE:SMCFcper",
-                "url": "https://recper.lapis-net.top",
-                "desc": "MC创作者之新的命令工具"
-            },
-            {
-                "name": "命令自动补全",
-                "url": "https://mact.mcisee.top"
-            },
-            {
-                "name": "地图转换器",
-                "url": "https://www.chunker.app"
-            },
-            {
-                "name": "地图查看网站",
-                "url": "https://www.chunkbase.com"
-            },
-            {
-                "name": "图片生成地图",
-                "url": "https://mc-map.djfun.de"
-            },
-            {
-                "name": "MC地图艺术工具",
-                "url": "https://rebane2001.com/mapartcraft/",
-                "desc": "图片转地图画工具"
-            },
-            {
-                "name": "地图种子查询",
-                "url": "https://www.mcseeder.com"
-            },
-            {
-                "name": "建筑辅助",
-                "url": "https://minecraftshapes.com"
-            },
-            {
-                "name": "超多工具",
-                "url": "https://www.gamergeeks.net",
-                "desc": "GamerGeeks，英文"
-            },
-            {
-                "name": "工具网站",
-                "url": "https://minecraft.tools"
-            },
-            {
-                "name": "在线工具",
-                "url": "https://mc.metamo.cn/tool/",
-                "desc": "元魔幻界"
-            },
-            {
-                "name": "皮肤改色器",
-                "url": "https://www.mcskinrecolor.com"
-            },
-            {
-                "name": "皮肤生成壁纸",
-                "url": "https://www.minepix.app/",
-                "desc": "minepix.app"
-            },
-            {
-                "name": "皮肤生成头像",
-                "url": "https://mcskins.top/avatar-maker"
-            },
-            {
-                "name": "正版玩家信息查询",
-                "url": "https://mcuuid.net"
-            },
-            {
-                "name": "Aternos免费开服",
-                "url": "https://aternos.org"
-            },
-            {
-                "name": "简幻欢公益面板服",
-                "url": "https://simpfun.cn"
-            },
-            {
-                "name": "3D模型编辑器",
-                "url": "https://www.blockbench.net",
-                "desc": "建模工具BlockBench"
-            },
-            {
-                "name": "数据包生成器",
-                "url": "https://misode.github.io/"
-            },
-            {
-                "name": "基岩版3D图腾生成器",
-                "url": "https://www.mcneko.com/tools/3dtotem/",
-                "desc": "将皮肤转换为3D图腾"
-            },
-            {
-                "name": "Midi音乐转mcpack",
-                "url": "https://dislink.github.io/midi2mcfunction/",
-                "desc": "Midi音乐转为播放音乐的mcpack行为包"
-            },
-            {
-                "name": "Midi音乐转瀑布流",
-                "url": "https://dislink.github.io/midi2tiles/",
-                "desc": "Midi音乐转为可视化音符瀑布流mcpack行为包"
-            },
-            {
-                "name": "图片转像素画",
-                "url": "https://dislink.github.io/img2mcfunction/",
-                "desc": "图片转为放置方块的mcpack行为包"
-            },
-            {
-                "name": "文字转粒子画",
-                "url": "https://dislink.github.io/text2mcfunction/",
-                "desc": "文字转为粒子画的mcpack行为包"
-            },
-            {
-                "name": "mcfunction转结构",
-                "url": "https://dislink.github.io/mcfunction2bdx/",
-                "desc": "mcfunction文件转为bdump v3结构文件"
-            },
-            {
-                "name": "MCPack清单生成器",
-                "url": "https://mcpack.mcisee.top"
-            },
-            {
-                "name": "装饰性头颅",
-                "url": "https://www.minecraft-heads.com",
-                "desc": "头颅收集站"
-            },
-            {
-                "name": "盔甲纹饰预览",
-                "url": "https://armortrims.com",
-                "desc": "可以预览盔甲锻造纹饰效果"
-            },
-            {
-                "name": "多彩文字生成",
-                "url": "https://colorize.fun/minecraft",
-                "desc": "像素风格多彩文本生成器"
-            },
-            {
-                "name": "Amethyst",
-                "url": "https://github.com/FrederoxDev/Amethyst",
-                "desc": "基岩版客户端模组构建器"
-            },
-            {
-                "name": "bridge.",
-                "url": "https://bridge-core.app/",
-                "desc": "用于开发附加包的IDE\n轻便、强大、易用！"
-            },
-            {
-                "name": "MCreator",
-                "url": "https://mcreator.net",
-                "desc": "开源软件，界面直观易学，集成代码编辑器，便于制作模组、数据包和附加包"
-            },
-            {
-                "name": "Minecraft Dot",
-                "url": "https://www.minecraft-dot.pictures/",
-                "desc": "用Minecraft的方块渲染图片!"
-            },
-            {
-                "name": "MCC客户端控制台",
-                "url": "https://mccteam.github.io/",
-                "desc": "用C#实现的轻量级开源Java版客户端"
-            },
-            {
-                "name": "3D模型转MC方块格式工具",
-                "url": "https://objtoschematic.com/",
-                "desc": "一款将 3D 模型转换为Minecraft方块格式的工具"
-            },
-            {
-                "name": "MC像素画工具",
-                "url": "https://autosaved.org/spritecraft",
-                "desc": "图片转像素画工具"
-            },
-            {
-                "name": "图形生成器",
-                "url": "https://www.plotz.co.uk/",
-                "desc": "生成多种立体图形"
-            },
-            {
-                "name": "梗体中文在线构建",
-                "url": "https://meme.teahouse.team/",
-                "desc": "在线构建不同版本梗体中文语言包"
-            },
-            {
-                "name": "网易开发者收益计算",
-                "url": "https://dev.lran.top/",
-                "desc": "网易开发者收益计算工具"
-            },
-            {
-                "name": "披风编辑器",
-                "url": "https://lraty-li.github.io/Minecraft-Cape-Generator/",
-                "desc": "在线下载后可上传png图片，有损，支持各设备浏览器编辑使用"
-            },
-            {
-                "name": "服主工具页",
-                "url": "https://tools.sodamc.com/resources/",
-                "desc": "基于开源项目birdflop构建的网站，新增Tellraw（基于githubTellraw）,包含大多数服主所用的工具"
-            },
-            {
-                "name": "Spark中文查看器",
-                "url": "https://sparkcn.site/",
-                "desc": "将您的报告链接中的主域替换为 sparkcn.site 即可查看中文版的sprak报告（项目基于spark-viewer）"
-            },
-            {
-                "name": "ColorBlock 指令生成器",
-                "url": "https://mc.ecylt.top/",
-                "desc": "生成精彩的 ColorBlock Mod 实现的粒子特效指令"
-            },
-            {
-                "name": "Arnis",
-                "url": "https://github.com/louis-e/arnis",
-                "desc": "Generate any location from the real world in Minecraft Java Edition with a high level of detail."
-            },
-            {
-                "name": "若依 Minecraft 服务器管理框架",
-                "url": "https://github.com/pilgrimage233/Minecraft-Rcon-Manage",
-                "desc": "专为Minecraft服务器主打造的全能管理方案"
-            },
-            {
-                "name": "SlopeCraft",
-                "url": "http://github.com/SlopeCraft/SlopeCraft",
-                "desc": "MC地图画生成器"
-            },
-            {
-                "name": "Scriptirc基于AI编写Bukkit脚本插件",
-                "url": "https://scriptirc.io/chat",
-                "desc": "基于 AI+Scriptirc 生成Bukkit服务器插件"
-            }
-        ]
-    },
-    {
-        "category": "百科全书",
-        "sites": [
-            {
-                "name": "官方基岩版开发者文档",
-                "url": "https://learn.microsoft.com/minecraft/creator/",
-                "desc": "了解如何使用附加组件修改 Minecraft。创建皮肤，设计独特的体验，发现最新功能，并发展您作为Minecraft创作者的技能"
-            },
-            {
-                "name": "基岩版开发Wiki",
-                "url": "https://wiki.mcbe-dev.net",
-                "desc": "可以获取到各种关于基岩版开发的信息"
-            },
-            {
-                "name": "基岩版文档",
-                "url": "https://bedrock.dev"
-            },
-            {
-                "name": "基岩版维基百科",
-                "url": "https://wiki.bedrock.dev",
-                "desc": "This wiki is a knowledge-sharing website for technical features of Minecraft Bedrock, containing documentation, tutorials, and general how-to information."
-            },
-            {
-                "name": "插件百科",
-                "url": "https://mineplugin.org"
-            },
-            {
-                "name": "维基百科: 原站",
-                "url": "https://zh.minecraft.wiki",
-                "desc": "完全公开、可自由编辑的中文Minecraft Wiki"
-            },
-            {
-                "name": "维基百科: 镜像站",
-                "url": "https://wiki.biligame.com/mc/",
-                "desc": "中文Minecraft Wiki镜像站\n哔哩哔哩游戏维基"
-            },
-            {
-                "name": "玩家社区Wiki",
-                "url": "https://wiki.biligame.com/mcplayer/",
-                "desc": "由喜爱Minecraft的中国玩家组成的民间攻略组织"
-            },
-            {
-                "name": "MC百科",
-                "url": "https://mcmod.cn",
-                "desc": "mcmod.cn"
-            },
-            {
-                "name": "DigMinecraft教程",
-                "url": "https://www.digminecraft.com",
-                "desc": "通过图片和分步说明来回答您的游戏问题"
-            },
-            {
-                "name": "MC开发者中文指南",
-                "url": "https://mouse0w0.github.io/MinecraftDeveloperGuide/",
-                "desc": "跟着大佬的脚步学习如何开发mc"
-            },
-            {
-                "name": "基岩版JSONUI文档",
-                "url": "https://mcbeui.netlify.app/",
-                "desc": "在线学习如何制作基岩版ui包"
-            },
-            {
-                "name": "基岩版SAPI文档",
-                "url": "https://projectxero.top/sapi/",
-                "desc": "Script API（原Gametest Framework）文档"
-            },
-            {
-                "name": "编程一小时教程",
-                "url": "https://code.org/minecraft",
-                "desc": "教育版教程"
-            },
-            {
-                "name": "网易我的世界开发指南",
-                "url": "https://mc.163.com/dev/guide.html"
-            },
-            {
-                "name": "NitWikit笨蛋mc开服教程",
-                "url": "https://nitwikit.8aka.cn",
-                "desc": "mc开服教程文档，包含基岩版与JAVA版新手教程"
-            }
-        ]
-    },
-    {
-        "category": "PVP/辅助/作弊端 (仅供学习交流)",
-        "sites": [
-            {
-                "name": "Lunar Client",
-                "url": "https://www.lunarclient.com/",
-                "desc": "Java版，PVP客户端启动器"
-            },
-            {
-                "name": "LabyMod Launcher",
-                "url": "https://labymod.net/",
-                "desc": "Java版，辅助客户端启动器"
-            },
-            {
-                "name": "Badlion",
-                "url": "https://www.badlion.net/",
-                "desc": "Java版，PVP客户端启动器"
-            },
-            {
-                "name": "LiquidBounce",
-                "url": "https://liquidbounce.net/",
-                "desc": "Java版，作弊客户端启动器"
-            },
-            {
-                "name": "Meteor Client",
-                "url": "https://meteorclient.com/",
-                "desc": "Java版，作弊客户端启动器"
-            },
-            {
-                "name": "Feather Client",
-                "url": "https://feathermc.com/",
-                "desc": "Java版，PVP客户端启动器"
-            },
-            {
-                "name": "Vape",
-                "url": "https://www.vape.gg/",
-                "desc": "Java版，作弊客户端启动器"
-            },
-            {
-                "name": "Soar Client",
-                "url": "https://www.soarclient.com/",
-                "desc": "Java版，PVP客户端启动器"
-            },
-            {
-                "name": "Salwyrr Launcher",
-                "url": "https://www.salwyrr.com",
-                "desc": "Java版，辅助客户端启动器"
-            },
-            {
-                "name": "CMCLIENT",
-                "url": "https://www.cm-pack.pl/",
-                "desc": "Java版，PVP客户端启动器"
-            },
-            {
-                "name": "Horion",
-                "url": "https://horion.download/",
-                "desc": "基岩版，DLL注入器，仅限Windows"
-            },
-            {
-                "name": "Borion",
-                "url": "https://borion-updated.github.io/",
-                "desc": "基岩版，DLL动态库，仅限Windows"
-            },
-            {
-                "name": "Atlas Client",
-                "url": "https://atlasclient.net/",
-                "desc": "基岩版，辅助客户端启动器，仅限Android"
-            }
-        ]
-    },
-    {
-        "category": "基岩版版本库/启动器",
-        "sites": [
-            {
-                "name": "苦力怕论坛源",
-                "url": "https://mcapks.net",
-                "desc": "MCAPKS版本库"
-            },
-            {
-                "name": "MineBBS源",
-                "url": "https://mcbedl.com",
-                "desc": "MCDL版本库"
-            },
-            {
-                "name": "MCAppx源",
-                "url": "https://www.mcappx.com",
-                "desc": "Minecraft for Windows版本库"
-            },
-            {
-                "name": "甘泉版本库",
-                "url": "http://mcbbk.blmcpia.com",
-                "desc": "原像素科技"
-            },
-            {
-                "name": "MCPELIFE源",
-                "url": "https://mcpelife.com/"
-            },
-            {
-                "name": "地球社区源",
-                "url": "https://mcpe-planet.com/downloads/",
-                "desc": "APK下载，英文"
-            },
-            {
-                "name": "mcfa版本库",
-                "url": "https://bbk.endyun.ltd/main",
-                "desc": "Minecraft for Android版本库"
-            },
-            {
-                "name": "星月版本库",
-                "url": "https://mcarc.spectrollay.com/minecraft_repository/",
-                "desc": "星月Minecraft版本库"
-            },
-            {
-                "name": "原子资源库",
-                "url": "https://res.nullatom.com/Minecraft/"
-            },
-            {
-                "name": "电脑端启动器",
-                "url": "https://bedrocklauncher.github.io/",
-                "desc": "Bedrock Launcher Lite，仅限Windows"
-            }
-        ]
-    },
-    {
-        "category": "服务端",
-        "sites": [
-            {
-                "name": "MCVersions",
-                "url": "https://mcversions.net",
-                "desc": "Java版，提供原版服务端核心和客户端核心"
-            },
-            {
-                "name": "FastMirror (无极镜像)",
-                "url": "https://www.fastmirror.net",
-                "desc": "Java版，免费且高速的服务器核心下载加速镜像，实时同步上游核心构建，由物语云计算提供支持。"
-            },
-            {
-                "name": "极星镜像",
-                "url": "https://mirror.polars.cc",
-                "desc": "Java版，极星云镜像站"
-            },
-            {
-                "name": "Akarin",
-                "url": "https://github.com/Akarin-project/Akarin",
-                "desc": "Java版，支持多线程。基于Paper，TorchSpigot的后作"
-            },
-            {
-                "name": "Arclight",
-                "url": "https://github.com/IzzelAliz/Arclight",
-                "desc": "Java版，A Bukkit server implementation on common mod loaders."
-            },
-            {
-                "name": "CatServer",
-                "url": "https://catmc.org",
-                "desc": "Java版，稳定、支持Bukkit和Forge架构的老牌服务端。内含广告"
-            },
-            {
-                "name": "CraftBukkit",
-                "url": "https://getbukkit.org",
-                "desc": "Java版，更新快，插件核心的开山始祖。由BukkitMC团队开发，现由SpigotMC团队接管"
-            },
-            {
-                "name": "Fabric Server",
-                "url": "https://fabricmc.net/use/server/",
-                "desc": "Java版，Fabric 官方服务端核心"
-            },
-            {
-                "name": "MohistMC",
-                "url": "https://mohistmc.com",
-                "desc": "Java版，优化好、兼容Bukkit、Spigot、Paper的Forge服务端"
-            },
-            {
-                "name": "Paper",
-                "url": "https://papermc.io",
-                "desc": "Java版，速度快，优化好，安全性高，内置小型反作弊。由PaperMC团队开发，基于Spigot"
-            },
-            {
-                "name": "Purpur",
-                "url": "https://purpurmc.org",
-                "desc": "Java版，极致优化、轻量，全兼容Bukkit架构。基于PutterFish"
-            },
-            {
-                "name": "Spigot",
-                "url": "https://www.spigotmc.org",
-                "desc": "Java版，老牌核心，稳定、更新快、安全性高。由SpigotMC团队开发，基于CraftBukkit"
-            },
-            {
-                "name": "Sponge",
-                "url": "https://spongepowered.org",
-                "desc": "Java版，由社区驱动的开源Java版模组修改平台"
-            },
-            {
-                "name": "Tuinity",
-                "url": "https://github.com/Tuinity/Tuinity",
-                "desc": "Java版，性能好。基于Paper"
-            },
-            {
-                "name": "官方基岩版专用服务端",
-                "url": "https://www.minecraft.net/download/server/bedrock",
-                "desc": "不支持插件"
-            },
-            {
-                "name": "基岩版专用服务端",
-                "url": "https://www.minebbs.com/bds/history",
-                "desc": "由MineBBS收集"
-            },
-            {
-                "name": "基岩版专用预览版服务端",
-                "url": "https://www.minebbs.com/resources/bedrock-dedicated-server-preview.4934/history",
-                "desc": "由MineBBS收集"
-            },
-            {
-                "name": "BDSX",
-                "url": "https://github.com/bdsx/bdsx",
-                "desc": "基岩版，BDS模组 (由Node.js编写)"
-            },
-            {
-                "name": "Endstone",
-                "url": "https://endstone.dev",
-                "desc": "基岩版，适用于BDS的高层次插件 API，采用 Python 和 C++ 语言编写"
-            },
-            {
-                "name": "LeviLamina",
-                "url": "https://lamina.levimc.org",
-                "desc": "基岩版，原LiteLoaderBDS\n轻量、模块化、多功能的BDS模组加载器"
-            },
-            {
-                "name": "Leaves",
-                "url": "https://leavesmc.org",
-                "desc": "Java版，一个旨在修复被破坏的原版特性的Paper分支"
-            },
-            {
-                "name": "Leaf",
-                "url": "https://www.leafmc.one/zh/",
-                "desc": "JAVA版，一个 Paper 分支, 专注于寻找性能优化, Vanilla, 稳定之间的平衡, 为大型网络, 密集和高承载量场景设计"
-            },
-            {
-                "name": "Luminol",
-                "url": "https://luminolsuki.moe/",
-                "desc": "JAVA版，致力于推动 Folia 生态的创新 为现代 Minecraft 服务端生态提供高性能解决方案"
-            },
-            {
-                "name": "PocketMine",
-                "url": "https://pmmp.io",
-                "desc": "基岩版，一款高度可定制的基岩版服务器软件"
-            },
-            {
-                "name": "Allay",
-                "url": "https://docs.allaymc.org",
-                "desc": "基岩版，可靠，快速及富特性的第三方基岩版服务端"
-            },
-            {
-                "name": "Nukkit",
-                "url": "https://cloudburstmc.org",
-                "desc": "基岩版，支持插件，使用Java开发"
-            }
-        ]
-    },
-    {
-        "category": "快查网站 (可供快速查询的网站)",
-        "sites": [
-            {
-                "name": "维基百科: 原站",
-                "url": "https://zh.minecraft.wiki",
-                "desc": "完全公开、可自由编辑的中文Minecraft Wiki"
-            },
-            {
-                "name": "维基百科: 镜像站",
-                "url": "https://wiki.biligame.com/mc/",
-                "desc": "中文Minecraft Wiki镜像站"
-            },
-            {
-                "name": "CurseForge",
-                "url": "https://www.curseforge.com/minecraft/",
-                "desc": "Minecraft Mods on CurseForge - The Home for the Best Minecraft Mods"
-            },
-            {
-                "name": "Modrinth",
-                "url": "https://modrinth.com",
-                "desc": "Discover, play, and share Minecraft content through our open-source platform built for the community."
-            },
-            {
-                "name": "MC百科",
-                "url": "https://mcmod.cn"
-            },
-            {
-                "name": "基岩版ID表",
-                "url": "https://ca.projectxero.top/idlist/"
-            },
-            {
-                "name": "Java版ID表",
-                "url": "http://mcid.lingningyu.cn"
-            },
-            {
-                "name": "基岩版开发维基",
-                "url": "https://wiki.mcbe-dev.net",
-                "desc": "Minecraft基岩版开发Wiki\n可以获取到各种关于基岩版开发的信息"
-            },
-            {
-                "name": "插件百科",
-                "url": "https://mineplugin.org",
-                "desc": "服务器插件Wiki"
-            }
-        ]
-    },
-    {
-        "category": "加载器 (模组/光影)",
-        "sites": [
-            {
-                "name": "Canvas",
-                "url": "https://modrinth.com/mod/canvas",
-                "desc": "光影加载器(1.14-1.20.5)"
-            },
-            {
-                "name": "Embeddium",
-                "url": "https://modrinth.com/mod/embeddium",
-                "desc": "光影加载器(1.16.5-1.21.4)"
-            },
-            {
-                "name": "Fabric",
-                "url": "https://fabricmc.net",
-                "desc": "模组加载器(1.14+)"
-            },
-            {
-                "name": "Forge",
-                "url": "https://www.minecraftforge.net",
-                "desc": "模组加载器(远古版本起)"
-            },
-            {
-                "name": "Iris",
-                "url": "https://www.irisshaders.dev",
-                "desc": "光影加载器(1.16+)"
-            },
-            {
-                "name": "Legacy Fabric",
-                "url": "https://legacyfabric.net/",
-                "desc": "模组加载器(1.2.5-1.13.2)"
-            },
-            {
-                "name": "LiteLoader",
-                "url": "https://www.liteloader.com",
-                "desc": "模组加载器(1.3.2-1.12.2)"
-            },
-            {
-                "name": "NeoForge",
-                "url": "https://neoforged.net",
-                "desc": "模组加载器(1.20.1+)"
-            },
-            {
-                "name": "Oculus",
-                "url": "https://modrinth.com/mod/oculus",
-                "desc": "光影加载器(1.16.5-1.20.1)"
-            },
-            {
-                "name": "OptiFine",
-                "url": "https://www.optifine.net",
-                "desc": "光影加载器(远古版本-1.21.4)"
-            },
-            {
-                "name": "Quilt",
-                "url": "https://quiltmc.org",
-                "desc": "模组加载器(1.14+)"
-            },
-            {
-                "name": "Rift",
-                "url": "https://www.curseforge.com/minecraft/mc-mods/rift",
-                "desc": "模组加载器(1.13-1.13.2)"
-            }
-        ]
-    },
-    {
-        "category": "开发者专用",
-        "sites": [
-            {
-                "name": "Fabric维基",
-                "url": "https://fabricmc.net/wiki/"
-            },
-            {
-                "name": "Fabric文档",
-                "url": "https://docs.fabricmc.net/develop/",
-                "desc": "Fabric模组开发文档(1.20.4+)"
-            },
-            {
-                "name": "Forge文档",
-                "url": "https://docs.minecraftforge.net/",
-                "desc": "Forge模组开发文档(1.12+)"
-            },
-            {
-                "name": "Forge社区维基",
-                "url": "https://forge.gemwire.uk/",
-                "desc": "Forge社区开发文档(1.16~1.19)"
-            },
-            {
-                "name": "Architectury文档",
-                "url": "https://docs.architectury.dev/",
-                "desc": "Architectury工具链模组开发文档"
-            },
-            {
-                "name": "Quilt开发者维基",
-                "url": "https://wiki.quiltmc.org/"
-            },
-            {
-                "name": "NeoForged文档",
-                "url": "https://docs.neoforged.net/"
-            },
-            {
-                "name": "Rift维基",
-                "url": "https://github.com/DimensionalDevelopment/Rift/wiki/",
-                "desc": "Rift模组开发文档"
-            },
-            {
-                "name": "Sinytra文档",
-                "url": "https://sinytra.org/docs/"
-            },
-            {
-                "name": "模组Minecraft维基",
-                "url": "https://moddedmc.wiki/",
-                "desc": "供模组社区托管和分享自己模组文档的公共平台"
-            },
-            {
-                "name": "Cloth Config维基",
-                "url": "https://shedaniel.gitbook.io/cloth-config/"
-            },
-            {
-                "name": "Cursed Legacy Fabric文档",
-                "url": "https://minecraft-cursed-legacy.github.io/wiki/index.html"
-            },
-            {
-                "name": "StationAPI维基",
-                "url": "https://github.com/ModificationStation/StationAPI/wiki"
-            },
-            {
-                "name": "PaperMC文档",
-                "url": "https://docs.papermc.io/"
-            },
-            {
-                "name": "Sponge文档",
-                "url": "https://docs.spongepowered.org/"
-            },
-            {
-                "name": "Spigot维基",
-                "url": "https://www.spigotmc.org/wiki/index/"
-            },
-            {
-                "name": "Bukkit维基",
-                "url": "https://bukkit.fandom.com/wiki/Main_Page/",
-                "desc": "BukkitWiki"
-            },
-            {
-                "name": "SpongeMixin维基",
-                "url": "https://github.com/SpongePowered/Mixin/wiki/"
-            },
-            {
-                "name": "MixinExtras维基",
-                "url": "https://github.com/LlamaLad7/MixinExtras/wiki/"
-            },
-            {
-                "name": "MixinSquared维基",
-                "url": "https://github.com/Bawnorton/MixinSquared/wiki/"
-            },
-            {
-                "name": "Parchment",
-                "url": "https://parchmentmc.org/",
-                "desc": "Mojmap参数名称修补和javadoc补全附加的映射"
-            },
-            {
-                "name": "Linkie",
-                "url": "https://linkie.shedaniel.dev/",
-                "desc": "快速查询Java版开发所需要的依赖与映射"
-            },
-            {
-                "name": "Fabric模组模板生成器",
-                "url": "https://fabricmc.net/develop/template/"
-            },
-            {
-                "name": "NeoForge模组模板生成器",
-                "url": "https://neoforged.net/mod-generator/"
-            },
-            {
-                "name": "Architectury模组模板生成器",
-                "url": "https://generate.architectury.dev/",
-                "desc": "Architectury工具链模组开发模板生成器"
-            },
-            {
-                "name": "Quilt模组模板生成器",
-                "url": "https://quiltmc.org/en/usage/generator/"
-            },
-            {
-                "name": "基岩版创作者工具",
-                "url": "https://mctools.dev/",
-                "desc": "Minecraft Creator Tools\n快速创建附加包模板"
-            },
-            {
-                "name": "基岩版官方模板",
-                "url": "https://github.com/Mojang/bedrock-samples"
-            },
-            {
-                "name": "基岩版官方脚本API文档",
-                "url": "https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/"
-            },
-            {
-                "name": "基岩版官方实体API Json文档",
-                "url": "https://learn.microsoft.com/en-us/minecraft/creator/reference/content/entityreference/"
-            },
-            {
-                "name": "基岩版官方Molang文档",
-                "url": "https://learn.microsoft.com/en-us/minecraft/creator/reference/content/molangreference/"
-            }
-        ]
-    },
-    {
-        "category": "友情链接",
-        "sites": [
-            {
-                "name": "命令自动补全",
-                "url": "https://mact.mcisee.top"
-            },
-            {
-                "name": "LapisNet",
-                "url": "https://lapis-net.top"
-            }
-        ]
-    }
+  {
+    "category": "官方网站 (©Mojang/©微软)",
+    "sites": [
+      {
+        "name": "Minecraft",
+        "url": "https://www.minecraft.net",
+        "desc": "《我的世界》/《当个创世神》\n着重于让玩家探索、交互并改变一个动态生成1m³大小方块的世界"
+      },
+      {
+        "name": "Minecraft教育版",
+        "url": "https://education.minecraft.net/",
+        "desc": "Minecraft Education\nMinecraft特别为教室使用而设计的教学版本（中国大陆访问可能会出现404）"
+      },
+      {
+        "name": "漏洞追踪器",
+        "url": "https://bugs.mojang.com",
+        "desc": "Mojang Jira/Mojira\n用于反馈Bug"
+      },
+      {
+        "name": "漏洞追踪器（存档）",
+        "url": "https://bugs-legacy.mojang.com",
+        "desc": "仅用于存档旧版Mojira，已停止支持。"
+      },
+      {
+        "name": "基岩版开发者文档",
+        "url": "https://learn.microsoft.com/minecraft/creator/",
+        "desc": "了解如何使用附加组件修改 Minecraft。创建皮肤，设计独特的体验，发现最新功能，并发展您作为Minecraft创作者的技能"
+      },
+      {
+        "name": "Feedback",
+        "url": "https://feedback.minecraft.net"
+      },
+      {
+        "name": "知识库",
+        "url": "https://feedback.minecraft.net/hc/categories/115000410252-Knowledge-Base"
+      },
+      {
+        "name": "远古版MC",
+        "url": "https://classic.minecraft.net",
+        "desc": "网页版本\n(需浏览器支持WebGL)"
+      },
+      {
+        "name": "基岩版专用服务端",
+        "url": "https://www.minecraft.net/download/server/bedrock"
+      },
+      {
+        "name": "壁纸集",
+        "url": "https://www.minecraft.net/collectibles/minecraft-collection"
+      },
+      {
+        "name": "服务器列表",
+        "url": "https://findmcserver.com/",
+        "desc": "查找独特且友好的官方服务器"
+      },
+      {
+        "name": "Microsoft MakeCode",
+        "url": "https://minecraft.makecode.com",
+        "desc": "Minecraft积木编程/代码编程工具"
+      },
+      {
+        "name": "编程一小时教程",
+        "url": "https://code.org/minecraft",
+        "desc": "教育版教程"
+      },
+      {
+        "name": "地下城 (Dungeons)",
+        "url": "https://www.minecraft.net/about-dungeons",
+        "desc": "Minecraft Dungeons\n一款动作/冒险角色扮演类电子游戏，现已停更"
+      },
+      {
+        "name": "传奇 (Legends)",
+        "url": "https://www.minecraft.net/about-legends",
+        "desc": "Minecraft Legends\n一款即时动作战略游戏，现已停更"
+      },
+      {
+        "name": "Minecraft Earth",
+        "url": "#",
+        "desc": "一款免费增强现实（AR）手游，现已停更\n官网不再维护"
+      },
+      {
+        "name": "故事模式 (Story Mode)",
+        "url": "#",
+        "desc": "Minecraft: Story Mode\n一款具有可点选性、叙事性、章节性的电子游戏，现已停更\n官网不再维护"
+      }
+    ]
+  },
+  {
+    "category": "官方购买渠道",
+    "sites": [
+      {
+        "name": "基岩版+Java版 (Windows)",
+        "url": "https://www.minecraft.net/store/minecraft-java-bedrock-edition-pc",
+        "desc": "双版本捆绑售卖\nOfficial Site"
+      },
+      {
+        "name": "基岩版+Java版 (Xbox)",
+        "url": "https://www.xbox.com/games/store/minecraft-java-bedrock-edition-for-pc/9nxp44l49shj",
+        "desc": "Microsoft Xbox"
+      },
+      {
+        "name": "基岩版 (Android)",
+        "url": "https://play.google.com/store/apps/details?id=com.mojang.minecraftpe",
+        "desc": "也适用于ChromeOS\nGoogle Play"
+      },
+      {
+        "name": "基岩版 (Fire)",
+        "url": "https://www.amazon.com/Mojang-Minecraft-Pocket-Edition/dp/B00992CF6W/",
+        "desc": "Amazon Appstore"
+      },
+      {
+        "name": "基岩版 (iOS)",
+        "url": "https://apps.apple.com/cn/app/id479516143",
+        "desc": "App Store"
+      },
+      {
+        "name": "基岩版 (Nintendo)",
+        "url": "https://www.nintendo.com/us/store/products/minecraft-106679/",
+        "desc": "Nintendo Store"
+      },
+      {
+        "name": "基岩版 (Xbox)",
+        "url": "https://xbox.com/games/store/-/9MVXMVT8ZKWC",
+        "desc": "Microsoft Xbox"
+      },
+      {
+        "name": "地下城/Dungeons (Windows)",
+        "url": "https://store.steampowered.com/app/1672970/Minecraft_Dungeons/",
+        "desc": "Valve Steam"
+      },
+      {
+        "name": "传奇/Legends (Windows)",
+        "url": "https://store.steampowered.com/app/1928870/Minecraft_Legends/",
+        "desc": "Valve Steam"
+      },
+      {
+        "name": "周边商城",
+        "url": "https://shop.minecraft.net/",
+        "desc": "Official Site"
+      }
+    ]
+  },
+  {
+    "category": "资源板块",
+    "sites": [
+      {
+        "name": "地球资源社区",
+        "url": "https://www.planetminecraft.com"
+      },
+      {
+        "name": "基岩版地球资源社区",
+        "url": "https://mcpe-planet.com"
+      },
+      {
+        "name": "MCPEDL资源",
+        "url": "https://mcpedl.com",
+        "desc": "英文"
+      },
+      {
+        "name": "下载基岩版",
+        "url": "#基岩版版本库/启动器",
+        "desc": "含正版和破解版"
+      },
+      {
+        "name": "下载中国版",
+        "url": "https://www.123pan.com/s/bSslVv-uc3kh",
+        "desc": "由Ian_zb收集"
+      },
+      {
+        "name": "MCPELIFE",
+        "url": "https://mcpelife.com/"
+      },
+      {
+        "name": "TITAIKE地图站",
+        "url": "https://www.titaike.cn",
+        "desc": "集合国内外优质地图"
+      },
+      {
+        "name": "资源包列表",
+        "url": "https://resourcepack.net"
+      },
+      {
+        "name": "网易我的世界官网",
+        "url": "https://mc.163.com"
+      },
+      {
+        "name": "官方壁纸集",
+        "url": "https://www.minecraft.net/collectibles/minecraft-collection"
+      },
+      {
+        "name": "McIcons图标库",
+        "url": "https://mcicons.ccleaf.com",
+        "desc": "由ccLeaf驱动，涵盖各类图标，可制作材质和皮肤"
+      },
+      {
+        "name": "Inner Core 模组",
+        "url": "https://icmods.mineprogramming.org"
+      },
+      {
+        "name": "Eaglercraft",
+        "url": "https://eaglercraft.com/",
+        "desc": "在线游玩mc java版非官方版\n(需浏览器支持WebGL)"
+      },
+      {
+        "name": "MC.JS",
+        "url": "https://mc.js.cool/",
+        "desc": "在线游玩mc java版非官方版\n(需浏览器支持WebGL)"
+      },
+      {
+        "name": "IMC.RE",
+        "url": "https://imc.re",
+        "desc": "著名开发团队"
+      },
+      {
+        "name": "YSS开发组",
+        "url": "https://yss.minecraft.pe",
+        "desc": "YSS开发组由一群热爱Minecraft并想让Minecraft更好的人组成"
+      },
+      {
+        "name": "LittleSkin皮肤站",
+        "url": "https://littleskin.cn",
+        "desc": "快速、可靠的 Minecraft 皮肤站，提供第三方登录服务"
+      },
+      {
+        "name": "红石皮肤站",
+        "url": "https://mcskin.com.cn/",
+        "desc": "一个免费、自由的Minecraft皮肤站"
+      },
+      {
+        "name": "MCSkins.top",
+        "url": "https://mcskins.top",
+        "desc": "简单的Minecraft皮肤站\n内含一些皮肤工具"
+      },
+      {
+        "name": "MinecraftSkins.net",
+        "url": "https://www.minecraftskins.net",
+        "desc": "皮肤站"
+      },
+      {
+        "name": "Skindex",
+        "url": "https://www.minecraftskins.com",
+        "desc": "皮肤站"
+      },
+      {
+        "name": "SkinMC",
+        "url": "https://skinmc.net",
+        "desc": "皮肤站，兼纳服务器列表和ID查询\n内含头像、披风和不死图腾制作器"
+      },
+      {
+        "name": "McSounds",
+        "url": "https://o.xbottle.top/mcsounds",
+        "desc": "音效收集网站"
+      },
+      {
+        "name": "ForgePixel中文皮肤站",
+        "url": "https://forgepixel.com/",
+        "desc": "免费获取皮肤/披风，提供第三方登录服务"
+      },
+      {
+        "name": "Minecraft Maps",
+        "url": "https://www.minecraftmaps.com",
+        "desc": "This site is dedicated to custom Minecraft saved game worlds or maps as they are more commonly known as."
+      },
+      {
+        "name": "Minecraft Shaders",
+        "url": "https://minecraftshader.com/",
+        "desc": "MinecraftShader.com offers an extensive collection of mods created for players who want a fresh Minecraft experience."
+      },
+      {
+        "name": "9Minecraft",
+        "url": "https://www.9minecraft.net/",
+        "desc": "The best resource for Minecraft"
+      },
+      {
+        "name": "免费披风站",
+        "url": "https://minecraftcapes.net",
+        "desc": "英文"
+      },
+      {
+        "name": "TeaCon",
+        "url": "https://www.teacon.cn/",
+        "desc": "模组开发茶会"
+      },
+      {
+        "name": "Minecraft高校联盟",
+        "url": "https://www.mualliance.cn",
+        "desc": "MUA\n旨在联合全国高校 MC 爱好者，共同推动高校 MC 生态发展的公益性组织"
+      },
+      {
+        "name": "像素茶艺地图站",
+        "url": "https://pixelmap.minegraph.cn/blog/",
+        "desc": "用最简单的方式传播好作品"
+      },
+      {
+        "name": "MCG中文图形站",
+        "url": "https://www.minegraph.cn/",
+        "desc": "国内首个《我的世界》图形资源站"
+      },
+      {
+        "name": "MC-NEO光影站",
+        "url": "https://www.neoshader.com/",
+        "desc": "全国首个全授权光影站"
+      },
+      {
+        "name": "MC原版模组入门教程",
+        "url": "https://icer233.us.kg/VanillaModTutorial/",
+        "desc": "数据包/资源包 指南"
+      },
+      {
+        "name": "GTMC",
+        "url": "https://techmc.wiki",
+        "desc": "系统性的技术向MC理论归档"
+      },
+      {
+        "name": "FCL第三方下载站",
+        "url": "https://foldcraftlauncher.cn/",
+        "desc": "安全，可靠，快速的fcl下载与安卓JAVA相关资源获取站。"
+      }
+    ]
+  },
+  {
+    "category": "找服玩",
+    "sites": [
+      {
+        "name": "findmcserver.com",
+        "url": "https://findmcserver.com/",
+        "desc": "查找独特且友好的官方服务器，面向全球"
+      },
+      {
+        "name": "mclists.cn",
+        "url": "https://mclists.cn",
+        "desc": "面向中国大陆"
+      },
+      {
+        "name": "fansmc.com",
+        "url": "https://www.fansmc.com",
+        "desc": "不定期推荐优质在线服务器，面向中国大陆"
+      },
+      {
+        "name": "minecraft-mp.cpm",
+        "url": "https://minecraft-mp.com",
+        "desc": "最佳多人游戏服务器列表，面向全球"
+      },
+      {
+        "name": "minerank.com",
+        "url": "https://www.minerank.com/",
+        "desc": "实时最佳人气服务器列表，面向全球"
+      },
+      {
+        "name": "mcl.ist",
+        "url": "https://mcl.ist",
+        "desc": "英文，面向全球"
+      },
+      {
+        "name": "mczfw.com",
+        "url": "https://www.mczfw.com",
+        "desc": "找服网，面向全球"
+      },
+      {
+        "name": "play.mcmod.cn",
+        "url": "https://play.mcmod.cn",
+        "desc": "一个专注于提高玩家体验的服务器列表，面向中国大陆"
+      },
+      {
+        "name": "mc-list.xyz",
+        "url": "https://www.mc-list.xyz",
+        "desc": "面向台湾"
+      },
+      {
+        "name": "minecraft.jp",
+        "url": "https://minecraft.jp",
+        "desc": "面向日本"
+      }
+    ]
+  },
+  {
+    "category": "工具箱",
+    "sites": [
+      {
+        "name": "NameMC",
+        "url": "https://namemc.com",
+        "desc": "用户名历史皮肤查询等"
+      },
+      {
+        "name": "筛选皮肤",
+        "url": "https://mcskinsearch.com"
+      },
+      {
+        "name": "MC风格艺术字",
+        "url": "https://textcraft.net",
+        "desc": "Minecraft风格文字Logo生成器"
+      },
+      {
+        "name": "渐变色文字生成器",
+        "url": "https://mcg.tuanzi.ink"
+      },
+      {
+        "name": "CB Creator 指令生成器",
+        "url": "https://www.mcmod.cn/tools/cbcreator/",
+        "desc": "由MC百科(mcmod.cn)制作"
+      },
+      {
+        "name": "日志分析工具",
+        "url": "https://mclo.gs",
+        "desc": "mclogs"
+      },
+      {
+        "name": "地图转换器",
+        "url": "https://www.chunker.app"
+      },
+      {
+        "name": "地图查看网站",
+        "url": "https://www.chunkbase.com"
+      },
+      {
+        "name": "图片生成地图",
+        "url": "https://mc-map.djfun.de"
+      },
+      {
+        "name": "MC地图艺术工具",
+        "url": "https://rebane2001.com/mapartcraft/",
+        "desc": "图片转地图画工具"
+      },
+      {
+        "name": "地图种子查询",
+        "url": "https://www.mcseeder.com"
+      },
+      {
+        "name": "建筑辅助",
+        "url": "https://minecraftshapes.com"
+      },
+      {
+        "name": "超多工具",
+        "url": "https://www.gamergeeks.net",
+        "desc": "GamerGeeks，英文"
+      },
+      {
+        "name": "工具网站",
+        "url": "https://minecraft.tools"
+      },
+      {
+        "name": "在线工具",
+        "url": "https://mc.metamo.cn/tool/",
+        "desc": "元魔幻界"
+      },
+      {
+        "name": "皮肤改色器",
+        "url": "https://www.mcskinrecolor.com"
+      },
+      {
+        "name": "皮肤生成壁纸",
+        "url": "https://www.minepix.app/",
+        "desc": "minepix.app"
+      },
+      {
+        "name": "皮肤生成头像",
+        "url": "https://mcskins.top/avatar-maker"
+      },
+      {
+        "name": "皮肤生成大头照",
+        "url": "https://mccag.cn"
+      },
+      {
+        "name": "皮肤生成动图",
+        "url": "https://mcgif.cn",
+        "desc": "转gif，让皮肤动起来"
+      },
+      {
+        "name": "正版玩家信息查询",
+        "url": "https://mcuuid.net"
+      },
+      {
+        "name": "Aternos免费开服",
+        "url": "https://aternos.org"
+      },
+      {
+        "name": "简幻欢公益面板服",
+        "url": "https://simpfun.cn"
+      },
+      {
+        "name": "3D模型编辑器",
+        "url": "https://www.blockbench.net",
+        "desc": "建模工具BlockBench"
+      },
+      {
+        "name": "数据包生成器",
+        "url": "https://misode.github.io/"
+      },
+      {
+        "name": "数据包制作",
+        "url": "https://www.sandclocks.cn",
+        "desc": "图形化自定义一个数据包"
+      },
+      {
+        "name": "3D图腾生成器",
+        "url": "https://www.mcneko.com/tools/3dtotem/",
+        "desc": "将皮肤转换为基岩版的3D不死图腾"
+      },
+      {
+        "name": "Midi音乐转mcpack",
+        "url": "https://dislink.github.io/midi2mcfunction/",
+        "desc": "Midi音乐转为播放音乐的mcpack行为包"
+      },
+      {
+        "name": "Midi音乐转瀑布流",
+        "url": "https://dislink.github.io/midi2tiles/",
+        "desc": "Midi音乐转为可视化音符瀑布流mcpack行为包"
+      },
+      {
+        "name": "PixilArt",
+        "url": "https://www.pixilart.com",
+        "desc": "像素画制作工具，含诸多像素画"
+      },
+      {
+        "name": "图片转像素画",
+        "url": "https://dislink.github.io/img2mcfunction/",
+        "desc": "图片转为放置方块的mcpack行为包"
+      },
+      {
+        "name": "文字转粒子画",
+        "url": "https://dislink.github.io/text2mcfunction/",
+        "desc": "文字转为粒子画的mcpack行为包"
+      },
+      {
+        "name": "mcfunction转结构",
+        "url": "https://dislink.github.io/mcfunction2bdx/",
+        "desc": "mcfunction文件转为bdump v3结构文件"
+      },
+      {
+        "name": "MCPack清单生成器",
+        "url": "https://mcpack.mcisee.top"
+      },
+      {
+        "name": "装饰性头颅",
+        "url": "https://www.minecraft-heads.com",
+        "desc": "头颅收集站"
+      },
+      {
+        "name": "盔甲纹饰预览",
+        "url": "https://armortrims.com",
+        "desc": "可以预览盔甲锻造纹饰效果"
+      },
+      {
+        "name": "多彩文字生成",
+        "url": "https://colorize.fun/minecraft",
+        "desc": "像素风格多彩文本生成器"
+      },
+      {
+        "name": "3D方块文本生成器",
+        "url": "https://3dtext.easecation.net/"
+      },
+      {
+        "name": "方块字标志牌生成器",
+        "url": "https://kqakqakqa.github.io/utf-block-sign-art/",
+        "desc": "生成大号字体告示牌"
+      },
+      {
+        "name": "Amethyst",
+        "url": "https://github.com/FrederoxDev/Amethyst",
+        "desc": "基岩版客户端模组构建器"
+      },
+      {
+        "name": "MCSManager",
+        "url": "https://www.mcsmanager.com",
+        "desc": "开源，易用，分布式架构的游戏服务器管理面板"
+      },
+      {
+        "name": "服务器包生成器",
+        "url": "https://serverpackcreator.de",
+        "desc": "通过整合包生成服务器包"
+      },
+      {
+        "name": "服务器工具",
+        "url": "https://mctools.org",
+        "desc": "内含服务器MOTD、监听、白名单、配置工具"
+      },
+      {
+        "name": "服务器状态查询",
+        "url": "https://mcstatus.io",
+        "desc": "支持API查询"
+      },
+      {
+        "name": "/tellraw生成器",
+        "url": "https://www.minecraftjson.com/",
+        "desc": "仅限Java版"
+      },
+      {
+        "name": "盔甲架生成器",
+        "url": "https://haselkern.com/Minecraft-ArmorStand/",
+        "desc": "仅限Java版"
+      },
+      {
+        "name": "bridge.",
+        "url": "https://bridge-core.app/",
+        "desc": "用于开发附加包的IDE\n轻便、强大、易用！"
+      },
+      {
+        "name": "MCreator",
+        "url": "https://mcreator.net",
+        "desc": "开源软件，界面直观易学，集成代码编辑器，便于制作模组、数据包和附加包"
+      },
+      {
+        "name": "Minecraft Dot",
+        "url": "https://www.minecraft-dot.pictures/",
+        "desc": "用Minecraft的方块渲染图片!"
+      },
+      {
+        "name": "MCC客户端控制台",
+        "url": "https://mccteam.github.io/",
+        "desc": "用C#实现的轻量级开源Java版客户端"
+      },
+      {
+        "name": "3D模型转MC方块格式工具",
+        "url": "https://objtoschematic.com/",
+        "desc": "一款将 3D 模型转换为Minecraft方块格式的工具"
+      },
+      {
+        "name": "MC像素画工具",
+        "url": "https://autosaved.org/spritecraft",
+        "desc": "图片转像素画工具"
+      },
+      {
+        "name": "图形生成器",
+        "url": "https://www.plotz.co.uk/",
+        "desc": "生成多种立体图形"
+      },
+      {
+        "name": "梗体中文在线构建",
+        "url": "https://meme.teahouse.team/",
+        "desc": "在线构建不同版本梗体中文语言包"
+      },
+      {
+        "name": "网易开发者收益计算",
+        "url": "https://dev.lran.top/",
+        "desc": "网易开发者收益计算工具"
+      },
+      {
+        "name": "披风编辑器",
+        "url": "https://lraty-li.github.io/Minecraft-Cape-Generator/",
+        "desc": "在线下载后可上传png图片，有损，支持各设备浏览器编辑使用"
+      },
+      {
+        "name": "服主工具页",
+        "url": "https://tools.sodamc.com/resources/",
+        "desc": "基于开源项目birdflop构建的网站，新增Tellraw（基于githubTellraw）,包含大多数服主所用的工具"
+      },
+      {
+        "name": "Spark中文查看器",
+        "url": "https://sparkcn.site/",
+        "desc": "将您的报告链接中的主域替换为 sparkcn.site 即可查看中文版的sprak报告（项目基于spark-viewer）"
+      },
+      {
+        "name": "ColorBlock 指令生成器",
+        "url": "https://mc.ecylt.top/",
+        "desc": "生成精彩的 ColorBlock Mod 实现的粒子特效指令"
+      },
+      {
+        "name": "Arnis",
+        "url": "https://github.com/louis-e/arnis",
+        "desc": "Generate any location from the real world in Minecraft Java Edition with a high level of detail."
+      },
+      {
+        "name": "若依 Minecraft 服务器管理框架",
+        "url": "https://github.com/pilgrimage233/Minecraft-Rcon-Manage",
+        "desc": "专为Minecraft服务器主打造的全能管理方案"
+      },
+      {
+        "name": "SlopeCraft",
+        "url": "http://github.com/SlopeCraft/SlopeCraft",
+        "desc": "MC地图画生成器"
+      },
+      {
+        "name": "Scriptirc基于AI编写Bukkit脚本插件",
+        "url": "https://scriptirc.io/chat",
+        "desc": "基于 AI+Scriptirc 生成Bukkit服务器插件"
+      }
+    ]
+  },
+  {
+    "category": "百科全书",
+    "sites": [
+      {
+        "name": "官方基岩版开发者文档",
+        "url": "https://learn.microsoft.com/minecraft/creator/",
+        "desc": "了解如何使用附加组件修改 Minecraft。创建皮肤，设计独特的体验，发现最新功能，并发展您作为Minecraft创作者的技能"
+      },
+      {
+        "name": "基岩版开发Wiki",
+        "url": "https://wiki.mcbe-dev.net",
+        "desc": "可以获取到各种关于基岩版开发的信息"
+      },
+      {
+        "name": "基岩版文档",
+        "url": "https://bedrock.dev"
+      },
+      {
+        "name": "基岩版维基百科",
+        "url": "https://wiki.bedrock.dev",
+        "desc": "This wiki is a knowledge-sharing website for technical features of Minecraft Bedrock, containing documentation, tutorials, and general how-to information."
+      },
+      {
+        "name": "插件百科",
+        "url": "https://mineplugin.org"
+      },
+      {
+        "name": "维基百科: 原站",
+        "url": "https://zh.minecraft.wiki",
+        "desc": "完全公开、可自由编辑的中文Minecraft Wiki"
+      },
+      {
+        "name": "维基百科: 镜像站",
+        "url": "https://wiki.biligame.com/mc/",
+        "desc": "中文Minecraft Wiki镜像站\n哔哩哔哩游戏维基"
+      },
+      {
+        "name": "玩家社区Wiki",
+        "url": "https://wiki.biligame.com/mcplayer/",
+        "desc": "由喜爱Minecraft的中国玩家组成的民间攻略组织"
+      },
+      {
+        "name": "MC百科",
+        "url": "https://mcmod.cn",
+        "desc": "mcmod.cn"
+      },
+      {
+        "name": "DigMinecraft教程",
+        "url": "https://www.digminecraft.com",
+        "desc": "通过图片和分步说明来回答您的游戏问题"
+      },
+      {
+        "name": "MC开发者中文指南",
+        "url": "https://mouse0w0.github.io/MinecraftDeveloperGuide/",
+        "desc": "跟着大佬的脚步学习如何开发mc"
+      },
+      {
+        "name": "基岩版JSONUI文档",
+        "url": "https://mcbeui.netlify.app/",
+        "desc": "在线学习如何制作基岩版ui包"
+      },
+      {
+        "name": "基岩版SAPI文档",
+        "url": "https://projectxero.top/sapi/",
+        "desc": "Script API（原Gametest Framework）文档"
+      },
+      {
+        "name": "编程一小时教程",
+        "url": "https://code.org/minecraft",
+        "desc": "教育版教程"
+      },
+      {
+        "name": "网易我的世界开发指南",
+        "url": "https://mc.163.com/dev/guide.html"
+      },
+      {
+        "name": "NitWikit笨蛋mc开服教程",
+        "url": "https://nitwikit.8aka.cn",
+        "desc": "mc开服教程文档，包含基岩版与JAVA版新手教程"
+      }
+    ]
+  },
+  {
+    "category": "PVP/辅助/作弊端 (仅供学习交流)",
+    "sites": [
+      {
+        "name": "Lunar Client",
+        "url": "https://www.lunarclient.com/",
+        "desc": "Java版，PVP客户端启动器"
+      },
+      {
+        "name": "LabyMod Launcher",
+        "url": "https://labymod.net/",
+        "desc": "Java版，辅助客户端启动器"
+      },
+      {
+        "name": "Badlion",
+        "url": "https://www.badlion.net/",
+        "desc": "Java版，PVP客户端启动器"
+      },
+      {
+        "name": "LiquidBounce",
+        "url": "https://liquidbounce.net/",
+        "desc": "Java版，作弊客户端启动器"
+      },
+      {
+        "name": "Meteor Client",
+        "url": "https://meteorclient.com/",
+        "desc": "Java版，作弊客户端启动器"
+      },
+      {
+        "name": "Feather Client",
+        "url": "https://feathermc.com/",
+        "desc": "Java版，PVP客户端启动器"
+      },
+      {
+        "name": "Vape",
+        "url": "https://www.vape.gg/",
+        "desc": "Java版，作弊客户端启动器"
+      },
+      {
+        "name": "Soar Client",
+        "url": "https://www.soarclient.com/",
+        "desc": "Java版，PVP客户端启动器"
+      },
+      {
+        "name": "Salwyrr Launcher",
+        "url": "https://www.salwyrr.com",
+        "desc": "Java版，辅助客户端启动器"
+      },
+      {
+        "name": "CMCLIENT",
+        "url": "https://www.cm-pack.pl/",
+        "desc": "Java版，PVP客户端启动器"
+      },
+      {
+        "name": "Horion",
+        "url": "https://horion.download/",
+        "desc": "基岩版，DLL注入器，仅限Windows"
+      },
+      {
+        "name": "Borion",
+        "url": "https://borion-updated.github.io/",
+        "desc": "基岩版，DLL动态库，仅限Windows"
+      },
+      {
+        "name": "Atlas Client",
+        "url": "https://atlasclient.net/",
+        "desc": "基岩版，辅助客户端启动器，仅限Android"
+      }
+    ]
+  },
+  {
+    "category": "基岩版版本库/启动器",
+    "sites": [
+      {
+        "name": "苦力怕论坛源",
+        "url": "https://mcapks.net",
+        "desc": "MCAPKS版本库"
+      },
+      {
+        "name": "MineBBS源",
+        "url": "https://mcbedl.com",
+        "desc": "MCDL版本库"
+      },
+      {
+        "name": "MCAppx源",
+        "url": "https://www.mcappx.com",
+        "desc": "Minecraft for Windows版本库"
+      },
+      {
+        "name": "甘泉版本库",
+        "url": "http://mcbbk.blmcpia.com",
+        "desc": "原像素科技"
+      },
+      {
+        "name": "MCPELIFE源",
+        "url": "https://mcpelife.com/"
+      },
+      {
+        "name": "地球社区源",
+        "url": "https://mcpe-planet.com/downloads/",
+        "desc": "APK下载，英文"
+      },
+      {
+        "name": "mcfa版本库",
+        "url": "https://bbk.endyun.ltd/main",
+        "desc": "Minecraft for Android版本库"
+      },
+      {
+        "name": "星月版本库",
+        "url": "https://mcarc.spectrollay.com/minecraft_repository/",
+        "desc": "星月Minecraft版本库"
+      },
+      {
+        "name": "原子资源库",
+        "url": "https://res.nullatom.com/Minecraft/"
+      },
+      {
+        "name": "电脑端启动器",
+        "url": "https://bedrocklauncher.github.io/",
+        "desc": "Bedrock Launcher Lite，仅限Windows"
+      }
+    ]
+  },
+  {
+    "category": "服务端",
+    "sites": [
+      {
+        "name": "MCVersions",
+        "url": "https://mcversions.net",
+        "desc": "Java版，提供原版服务端核心和客户端核心"
+      },
+      {
+        "name": "FastMirror (无极镜像)",
+        "url": "https://www.fastmirror.net",
+        "desc": "Java版，免费且高速的服务器核心下载加速镜像，实时同步上游核心构建，由物语云计算提供支持。"
+      },
+      {
+        "name": "极星镜像",
+        "url": "https://mirror.polars.cc",
+        "desc": "Java版，极星云镜像站"
+      },
+      {
+        "name": "Akarin",
+        "url": "https://github.com/Akarin-project/Akarin",
+        "desc": "Java版，支持多线程。基于Paper，TorchSpigot的后作"
+      },
+      {
+        "name": "Arclight",
+        "url": "https://github.com/IzzelAliz/Arclight",
+        "desc": "Java版，A Bukkit server implementation on common mod loaders."
+      },
+      {
+        "name": "CatServer",
+        "url": "https://catmc.org",
+        "desc": "Java版，稳定、支持Bukkit和Forge架构的老牌服务端。内含广告"
+      },
+      {
+        "name": "CraftBukkit",
+        "url": "https://getbukkit.org",
+        "desc": "Java版，更新快，插件核心的开山始祖。由BukkitMC团队开发，现由SpigotMC团队接管"
+      },
+      {
+        "name": "Fabric Server",
+        "url": "https://fabricmc.net/use/server/",
+        "desc": "Java版，Fabric 官方服务端核心"
+      },
+      {
+        "name": "MohistMC",
+        "url": "https://mohistmc.com",
+        "desc": "Java版，优化好、兼容Bukkit、Spigot、Paper的Forge服务端"
+      },
+      {
+        "name": "Paper",
+        "url": "https://papermc.io",
+        "desc": "Java版，速度快，优化好，安全性高，内置小型反作弊。由PaperMC团队开发，基于Spigot"
+      },
+      {
+        "name": "Purpur",
+        "url": "https://purpurmc.org",
+        "desc": "Java版，极致优化、轻量，全兼容Bukkit架构。基于PutterFish"
+      },
+      {
+        "name": "Spigot",
+        "url": "https://www.spigotmc.org",
+        "desc": "Java版，老牌核心，稳定、更新快、安全性高。由SpigotMC团队开发，基于CraftBukkit"
+      },
+      {
+        "name": "Sponge",
+        "url": "https://spongepowered.org",
+        "desc": "Java版，由社区驱动的开源Java版模组修改平台"
+      },
+      {
+        "name": "Tuinity",
+        "url": "https://github.com/Tuinity/Tuinity",
+        "desc": "Java版，性能好。基于Paper"
+      },
+      {
+        "name": "官方基岩版专用服务端",
+        "url": "https://www.minecraft.net/download/server/bedrock",
+        "desc": "不支持插件"
+      },
+      {
+        "name": "基岩版专用服务端",
+        "url": "https://www.minebbs.com/bds/history",
+        "desc": "由MineBBS收集"
+      },
+      {
+        "name": "基岩版专用预览版服务端",
+        "url": "https://www.minebbs.com/resources/bedrock-dedicated-server-preview.4934/history",
+        "desc": "由MineBBS收集"
+      },
+      {
+        "name": "BDSX",
+        "url": "https://github.com/bdsx/bdsx",
+        "desc": "基岩版，BDS模组 (由Node.js编写)"
+      },
+      {
+        "name": "Endstone",
+        "url": "https://endstone.dev",
+        "desc": "基岩版，适用于BDS的高层次插件 API，采用 Python 和 C++ 语言编写"
+      },
+      {
+        "name": "LeviLamina",
+        "url": "https://lamina.levimc.org",
+        "desc": "基岩版，原LiteLoaderBDS\n轻量、模块化、多功能的BDS模组加载器"
+      },
+      {
+        "name": "Leaves",
+        "url": "https://leavesmc.org",
+        "desc": "Java版，一个旨在修复被破坏的原版特性的Paper分支"
+      },
+      {
+        "name": "Leaf",
+        "url": "https://www.leafmc.one/zh/",
+        "desc": "JAVA版，一个 Paper 分支, 专注于寻找性能优化, Vanilla, 稳定之间的平衡, 为大型网络, 密集和高承载量场景设计"
+      },
+      {
+        "name": "Luminol",
+        "url": "https://luminolsuki.moe/",
+        "desc": "JAVA版，致力于推动 Folia 生态的创新 为现代 Minecraft 服务端生态提供高性能解决方案"
+      },
+      {
+        "name": "PocketMine",
+        "url": "https://pmmp.io",
+        "desc": "基岩版，一款高度可定制的基岩版服务器软件"
+      },
+      {
+        "name": "Allay",
+        "url": "https://docs.allaymc.org",
+        "desc": "基岩版，可靠，快速及富特性的第三方基岩版服务端"
+      },
+      {
+        "name": "Nukkit",
+        "url": "https://cloudburstmc.org",
+        "desc": "基岩版，支持插件，使用Java开发"
+      }
+    ]
+  },
+  {
+    "category": "快查网站 (可供快速查询的网站)",
+    "sites": [
+      {
+        "name": "维基百科: 原站",
+        "url": "https://zh.minecraft.wiki",
+        "desc": "完全公开、可自由编辑的中文Minecraft Wiki"
+      },
+      {
+        "name": "维基百科: 镜像站",
+        "url": "https://wiki.biligame.com/mc/",
+        "desc": "中文Minecraft Wiki镜像站"
+      },
+      {
+        "name": "CurseForge",
+        "url": "https://www.curseforge.com/minecraft/",
+        "desc": "Minecraft Mods on CurseForge - The Home for the Best Minecraft Mods"
+      },
+      {
+        "name": "Modrinth",
+        "url": "https://modrinth.com",
+        "desc": "Discover, play, and share Minecraft content through our open-source platform built for the community."
+      },
+      {
+        "name": "MC百科",
+        "url": "https://mcmod.cn"
+      },
+      {
+        "name": "基岩版ID表",
+        "url": "https://ca.projectxero.top/idlist/"
+      },
+      {
+        "name": "Java版ID表",
+        "url": "http://mcid.lingningyu.cn"
+      },
+      {
+        "name": "基岩版开发维基",
+        "url": "https://wiki.mcbe-dev.net",
+        "desc": "Minecraft基岩版开发Wiki\n可以获取到各种关于基岩版开发的信息"
+      },
+      {
+        "name": "插件百科",
+        "url": "https://mineplugin.org",
+        "desc": "服务器插件Wiki"
+      }
+    ]
+  },
+  {
+    "category": "加载器 (模组/光影)",
+    "sites": [
+      {
+        "name": "Canvas",
+        "url": "https://modrinth.com/mod/canvas",
+        "desc": "光影加载器(1.14-1.20.5)"
+      },
+      {
+        "name": "Embeddium",
+        "url": "https://modrinth.com/mod/embeddium",
+        "desc": "光影加载器(1.16.5-1.21.4)"
+      },
+      {
+        "name": "Fabric",
+        "url": "https://fabricmc.net",
+        "desc": "模组加载器(1.14+)"
+      },
+      {
+        "name": "Forge",
+        "url": "https://www.minecraftforge.net",
+        "desc": "模组加载器(远古版本起)"
+      },
+      {
+        "name": "Iris",
+        "url": "https://www.irisshaders.dev",
+        "desc": "光影加载器(1.16+)"
+      },
+      {
+        "name": "Legacy Fabric",
+        "url": "https://legacyfabric.net/",
+        "desc": "模组加载器(1.2.5-1.13.2)"
+      },
+      {
+        "name": "LiteLoader",
+        "url": "https://www.liteloader.com",
+        "desc": "模组加载器(1.3.2-1.12.2)"
+      },
+      {
+        "name": "NeoForge",
+        "url": "https://neoforged.net",
+        "desc": "模组加载器(1.20.1+)"
+      },
+      {
+        "name": "Oculus",
+        "url": "https://modrinth.com/mod/oculus",
+        "desc": "光影加载器(1.16.5-1.20.1)"
+      },
+      {
+        "name": "OptiFine",
+        "url": "https://www.optifine.net",
+        "desc": "光影加载器(远古版本-1.21.4)"
+      },
+      {
+        "name": "Quilt",
+        "url": "https://quiltmc.org",
+        "desc": "模组加载器(1.14+)"
+      },
+      {
+        "name": "Rift",
+        "url": "https://www.curseforge.com/minecraft/mc-mods/rift",
+        "desc": "模组加载器(1.13-1.13.2)"
+      }
+    ]
+  },
+  {
+    "category": "开发者专用",
+    "sites": [
+      {
+        "name": "Fabric维基",
+        "url": "https://fabricmc.net/wiki/"
+      },
+      {
+        "name": "Fabric文档",
+        "url": "https://docs.fabricmc.net/develop/",
+        "desc": "Fabric模组开发文档(1.20.4+)"
+      },
+      {
+        "name": "Forge文档",
+        "url": "https://docs.minecraftforge.net/",
+        "desc": "Forge模组开发文档(1.12+)"
+      },
+      {
+        "name": "Forge社区维基",
+        "url": "https://forge.gemwire.uk/",
+        "desc": "Forge社区开发文档(1.16~1.19)"
+      },
+      {
+        "name": "Architectury文档",
+        "url": "https://docs.architectury.dev/",
+        "desc": "Architectury工具链模组开发文档"
+      },
+      {
+        "name": "Quilt开发者维基",
+        "url": "https://wiki.quiltmc.org/"
+      },
+      {
+        "name": "NeoForged文档",
+        "url": "https://docs.neoforged.net/"
+      },
+      {
+        "name": "Rift维基",
+        "url": "https://github.com/DimensionalDevelopment/Rift/wiki/",
+        "desc": "Rift模组开发文档"
+      },
+      {
+        "name": "Sinytra文档",
+        "url": "https://sinytra.org/docs/"
+      },
+      {
+        "name": "模组Minecraft维基",
+        "url": "https://moddedmc.wiki/",
+        "desc": "供模组社区托管和分享自己模组文档的公共平台"
+      },
+      {
+        "name": "Cloth Config维基",
+        "url": "https://shedaniel.gitbook.io/cloth-config/"
+      },
+      {
+        "name": "Cursed Legacy Fabric文档",
+        "url": "https://minecraft-cursed-legacy.github.io/wiki/index.html"
+      },
+      {
+        "name": "StationAPI维基",
+        "url": "https://github.com/ModificationStation/StationAPI/wiki"
+      },
+      {
+        "name": "PaperMC文档",
+        "url": "https://docs.papermc.io/"
+      },
+      {
+        "name": "Sponge文档",
+        "url": "https://docs.spongepowered.org/"
+      },
+      {
+        "name": "Spigot维基",
+        "url": "https://www.spigotmc.org/wiki/index/"
+      },
+      {
+        "name": "Bukkit维基",
+        "url": "https://bukkit.fandom.com/wiki/Main_Page/",
+        "desc": "BukkitWiki"
+      },
+      {
+        "name": "SpongeMixin维基",
+        "url": "https://github.com/SpongePowered/Mixin/wiki/"
+      },
+      {
+        "name": "MixinExtras维基",
+        "url": "https://github.com/LlamaLad7/MixinExtras/wiki/"
+      },
+      {
+        "name": "MixinSquared维基",
+        "url": "https://github.com/Bawnorton/MixinSquared/wiki/"
+      },
+      {
+        "name": "Parchment",
+        "url": "https://parchmentmc.org/",
+        "desc": "Mojmap参数名称修补和javadoc补全附加的映射"
+      },
+      {
+        "name": "Linkie",
+        "url": "https://linkie.shedaniel.dev/",
+        "desc": "快速查询Java版开发所需要的依赖与映射"
+      },
+      {
+        "name": "Fabric模组模板生成器",
+        "url": "https://fabricmc.net/develop/template/"
+      },
+      {
+        "name": "NeoForge模组模板生成器",
+        "url": "https://neoforged.net/mod-generator/"
+      },
+      {
+        "name": "Architectury模组模板生成器",
+        "url": "https://generate.architectury.dev/",
+        "desc": "Architectury工具链模组开发模板生成器"
+      },
+      {
+        "name": "Quilt模组模板生成器",
+        "url": "https://quiltmc.org/en/usage/generator/"
+      },
+      {
+        "name": "基岩版创作者工具",
+        "url": "https://mctools.dev/",
+        "desc": "Minecraft Creator Tools\n快速创建附加包模板"
+      },
+      {
+        "name": "基岩版官方模板",
+        "url": "https://github.com/Mojang/bedrock-samples"
+      },
+      {
+        "name": "基岩版官方脚本API文档",
+        "url": "https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/"
+      },
+      {
+        "name": "基岩版官方实体API Json文档",
+        "url": "https://learn.microsoft.com/en-us/minecraft/creator/reference/content/entityreference/"
+      },
+      {
+        "name": "基岩版官方Molang文档",
+        "url": "https://learn.microsoft.com/en-us/minecraft/creator/reference/content/molangreference/"
+      }
+    ]
+  },
+  {
+    "category": "友情链接",
+    "sites": [
+      {
+        "name": "命令自动补全",
+        "url": "https://mact.mcisee.top"
+      },
+      {
+        "name": "LapisNet",
+        "url": "https://lapis-net.top"
+      }
+    ]
+  }
 ]

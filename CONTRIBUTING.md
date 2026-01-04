@@ -133,33 +133,28 @@
 
 ``` jsonc
 {
-    "category": "官方网站 (©Mojang/©微软)",
-    "sites": [
-        {
-            "name": "Minecraft",
-            "url": "https://www.minecraft.net",
-            "desc": "《我的世界》/《当个创世神》\n着重于让玩家探索、交互并改变一个动态生成1m³大小方块的世界"
-        },
-        {
-            "name": "Minecraft教育版",
-            "url": "https://education.minecraft.net/",
-            "desc": "Minecraft Education\nMinecraft特别为教室使用而设计的教学版本（中国大陆访问可能会出现404）"
-        },
-        {
-            "name": "漏洞追踪器",
-            "url": "https://bugs.mojang.com",
-            "desc": "Mojang Jira/Mojira\n用于反馈Bug"
-        },
-        {
-            "name": "基岩版开发者文档",
-            "url": "https://learn.microsoft.com/minecraft/creator/",
-            "desc": "了解如何使用附加组件修改 Minecraft。创建皮肤，设计独特的体验，发现最新功能，并发展您作为Minecraft创作者的技能"
-        },
-        {
-            "name": "Feedback",
-            "url": "https://feedback.minecraft.net"
-        }
-    ]
+  "category": "官方网站 (©Mojang/©微软)",
+  "sites": [
+    {
+      "name": "Minecraft",
+      "url": "https://www.minecraft.net",
+      "desc": "《我的世界》/《当个创世神》\n着重于让玩家探索、交互并改变一个动态生成1m³大小方块的世界"
+    },
+    {
+      "name": "漏洞追踪器",
+      "url": "https://bugs.mojang.com",
+      "desc": "Mojang Jira/Mojira\n用于反馈Bug"
+    },
+    {
+      "name": "基岩版开发者文档",
+      "url": "https://learn.microsoft.com/minecraft/creator/",
+      "desc": "了解如何使用附加组件修改 Minecraft。创建皮肤，设计独特的体验，发现最新功能，并发展您作为Minecraft创作者的技能"
+    },
+    {
+      "name": "Feedback",
+      "url": "https://feedback.minecraft.net"
+    }
+  ]
 }
 ```
 
