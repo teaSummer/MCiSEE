@@ -28,9 +28,8 @@ const filterSites = (keyword: string, category: string, type?: 'category' | 'sit
 }
 
 onBeforeMount(async() => {
-	const formatHelper = await import('@utils/format-helper');
 	const raw_data = await (await fetch('https://mcisee.top/data/utilityWebsite.jsonc')).text();
-	sites.value = formatHelper.convertToV2(jsonc.parse(raw_data));
+	sites.value = jsonc.parse(raw_data);
 });
 </script>
 
