@@ -1,17 +1,28 @@
 @mixin light {
 	color-scheme: light;
 
-	--text-color: #fff;
-	--text-hover-color: #fffa;
+	--text-color: #000;
+	--text-hover-color: #000a;
+	--text-link-color: #1f6feb;
+	--text-link-hover-color: #1258c5;
 	--primary-color: #1f6feb;
 	--primary-hover-color: #1258c5;
 	--primary-active-color: #367eed;
 	--secondary-color: #3e97eb;
 	--border-color: #30363d;
+	--box-shadow-color: rgba(255, 255, 255, 0.5);
 	--muted-color: #6a1111;
 	--background-color: rgba(255, 255, 255, 0.05);
 
-	--nav-background: linear-gradient(90deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.12));
+	--inverse-text-color: #fff;
+	--inverse-text-hover-color: #fff5;
+	--inverse-text-link-color: #ebef6f;
+	--inverse-text-link-hover-color: #f5f204;
+
+	--dropdown-content-background-color: #fcfcfc;
+	--dropdown-content-item-hover-color: rgb(185, 185, 185);
+
+	--nav-background: linear-gradient(90deg, rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0.9));
 
 	--background: url('https://mcisee.top/assets/image/daylight.webp');
 }
@@ -20,6 +31,7 @@
 	color-scheme: dark;
 
 	--text-color: #fff;
+	--text-hover-color: #fffa;
 	--primary-color: #075457;
 	--primary-hover-color: #07545788;
 	--primary-active-color: #075457cc;
@@ -27,6 +39,12 @@
 	--border-color: #bfb9b1;
 	--muted-color: #91eeee;
 	--background-color: rgba(0, 0, 0, 0.05);
+
+	--inverse-text-color: #000;
+	--inverse-text-hover-color: #0005;
+
+	--dropdown-content-background-color: #233333;
+	--dropdown-content-item-hover-color: rgb(104, 104, 104);
 
 	--nav-background: linear-gradient(90deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.32));
 
@@ -58,8 +76,16 @@
 html {
 	&[data-theme='classic'] {
 		@include classic();
-		.category-name {
-			color: #000;
+		.category-name, .explore-hint {
+			color: var(--inverse-text-color);
+		}
+		footer {
+			a {
+				color: var(--inverse-text-link-color);
+				&:hover {
+					color: var(--inverse-text-link-hover-color);
+				}
+			}
 		}
 	}
 	&[data-theme='dark'] {
@@ -70,12 +96,25 @@ html {
 		.category-name {
 			text-shadow: 2px 2px 8px #fff;
 		}
+		.footer-left, .explore-hint {
+			color: var(--inverse-text-color);
+		}
+		.footer-right {
+			a {
+				color: var(--inverse-text-link-color);
+				&:hover {
+					color: var(--inverse-text-link-hover-color);
+				}
+			}
+		}
 	}
 }
 
-a {
+a:not(.site-list a):not(nav a) {
+	color: var(--text-link-color);
 	text-decoration: none;
 	&:hover {
+		color: var(--text-link-hover-color);
 		text-decoration: underline;
 	}
 }
@@ -112,6 +151,7 @@ nav {
 	align-items: center;
 	background: var(--nav-background);
 	backdrop-filter: blur(10px);
+	box-shadow: 0 2px 10px var(--box-shadow-color);
 	z-index: 10;
 	>* {
 		height: 100%;
@@ -173,7 +213,7 @@ nav {
 					border-radius: 0 0 8px 8px;
 					border: 1px solid var(--border-color);
 					// border-top: none;
-					background-color: var(--primary-color);
+					background-color: var(--dropdown-content-background-color);
 					z-index: 10;
 					ul {
 						list-style-type: none;
@@ -188,13 +228,15 @@ nav {
 						a {
 							display: block;
 							padding: 0.5rem 1rem;
+							color: var(--text-color);
 						}
 						&:hover {
-							background-color: #233;
+							background-color: var(--dropdown-content-item-hover-color);
 						}
 						&.active {
+							background-color: var(--dropdown-content-item-hover-color);
 							a {
-								color: var(--text-color);
+								color: var(--inverse-text-link-hover-color);
 								font-weight: bold;
 							}
 						}
@@ -207,11 +249,11 @@ nav {
 		}
 	}
 	a {
+		text-decoration: none;
 		color: var(--text-color);
 		transition: color 0.2s;
 		&:hover {
 			color: var(--text-hover-color);
-			text-decoration: none;
 		}
 	}
 }
