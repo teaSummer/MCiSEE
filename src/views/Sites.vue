@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ref, onBeforeMount } from 'vue';
+import { ref, computed, onBeforeMount } from 'vue';
+import { useRoute } from 'vue-router';
 import * as jsonc from 'jsonc-parser';
 import SiteItem from '@comps/SiteItem.vue';
 
@@ -11,34 +12,52 @@ const getFavicon = (url: string) => {
 	return `https://www.faviconextractor.com/favicon/${url.split('/')[2]}?larger=true`;
 }
 
+const route = useRoute();
+const searchKeywords = computed(() => route.query.s?.toString() || '');
+
+const filterSites = (keyword: string, category: string, type?: 'category' | 'site'): any => {
+	if(type === 'category')
+		return sites.value.find(c => c.category === category)?.sites.filter(
+			site => site.name.toLowerCase().includes(keyword.trim().toLowerCase())
+		) || [];
+	else if(type === 'site') return sites.value.find(c => c.category === category)?.sites.filter(
+			site => site.name.toLowerCase().includes(keyword.trim().toLowerCase()) ||
+					site.desc?.toLowerCase().includes(keyword.trim().toLowerCase())
+		) || [];
+	else return sites.value;
+}
+
 onBeforeMount(async() => {
-	const formatHelper = await import('@utils/format-helper');
 	const raw_data = await (await fetch('https://mcisee.top/data/utilityWebsite.jsonc')).text();
-	sites.value = formatHelper.convertToV2(jsonc.parse(raw_data));
+	sites.value = jsonc.parse(raw_data);
 });
 </script>
 
 <template>
 	<main class="sites">
-		<div class="site-category" v-for="(category, i) in sites" :key="category.category">
-			<h2 :id="category.category" class="category-name">{{ category.category }}</h2>
-			<div class="site-list">
-				<SiteItem v-for="site in category.sites" :key="site.name" :site="{
-					...site,
-					icon: getFavicon(site.url)
-				}" />
+		<template v-for="(category, i) in sites" :key="category.category">
+			<div v-if="filterSites(searchKeywords, category.category, 'category').length" class="site-category">
+				<h2 :id="category.category" class="category-name">{{ category.category }}</h2>
+				<div class="site-list">
+					<template v-for="site in category.sites" :key="site.name">
+						<SiteItem v-if="filterSites(searchKeywords, category.category, 'site').includes(site)" :site="{
+							...site,
+							icon: getFavicon(site.url)
+						}" />
+					</template>
+				</div>
 			</div>
-		</div>
+		</template>
 	</main>
 </template>
 
 <style lang="scss" scoped>
 .sites {
-	width: 80%;
-	height: 100%;
-	margin: auto;
+	width: 100%;
+	height: 90%;
 	.site-category {
-		width: 100%;
+		width: 80%;
+		margin: auto;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;

@@ -2,5 +2,19 @@
   "trailingSlash": false,
   "rewrites": [
     {"source": "/:path*", "destination": "/index.html"}
+  ],
+  "framework": "vite",
+  "installCommand": "pnpm install",
+  "buildCommand": "pnpm build",
+  "headers": [
+    {
+      "source": "/images/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
   ]
 }

@@ -1,16 +1,28 @@
 @mixin light {
 	color-scheme: light;
 
-	--text-color: #fff;
+	--text-color: #000;
+	--text-hover-color: #000a;
+	--text-link-color: #1f6feb;
+	--text-link-hover-color: #1258c5;
 	--primary-color: #1f6feb;
 	--primary-hover-color: #1258c5;
 	--primary-active-color: #367eed;
 	--secondary-color: #3e97eb;
 	--border-color: #30363d;
+	--box-shadow-color: rgba(255, 255, 255, 0.5);
 	--muted-color: #6a1111;
 	--background-color: rgba(255, 255, 255, 0.05);
 
-	--nav-background: linear-gradient(90deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.12));
+	--inverse-text-color: #fff;
+	--inverse-text-hover-color: #fff5;
+	--inverse-text-link-color: #ebef6f;
+	--inverse-text-link-hover-color: #f5f204;
+
+	--dropdown-content-background-color: #fcfcfc;
+	--dropdown-content-item-hover-color: rgb(185, 185, 185);
+
+	--nav-background: linear-gradient(90deg, rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0.9));
 
 	--background: url('https://mcisee.top/assets/image/daylight.webp');
 }
@@ -19,6 +31,7 @@
 	color-scheme: dark;
 
 	--text-color: #fff;
+	--text-hover-color: #fffa;
 	--primary-color: #075457;
 	--primary-hover-color: #07545788;
 	--primary-active-color: #075457cc;
@@ -27,14 +40,30 @@
 	--muted-color: #91eeee;
 	--background-color: rgba(0, 0, 0, 0.05);
 
+	--inverse-text-color: #000;
+	--inverse-text-hover-color: #0005;
+
+	--dropdown-content-background-color: #233333;
+	--dropdown-content-item-hover-color: rgb(104, 104, 104);
+
 	--nav-background: linear-gradient(90deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.32));
 
 	--background: url('https://mcisee.top/assets/image/dark.webp');
 }
 
 @mixin classic {
-	@include light();
+	@include dark();
 	--background: url('https://mcisee.top/assets/image/classic.webp');
+}
+
+@keyframes dropdown-popup {
+	0% {display: block; opacity: 0; transform: translateX(-60%) translateY(-10px);}
+	100% {display: block; opacity: 1; transform: translateX(-60%) translateY(0);}
+}
+
+@keyframes dropdown-hide {
+	0% {display: block; opacity: 1; transform: translateX(-60%) translateY(0);}
+	100% {display: none; opacity: 0; transform: translateX(-60%) translateY(-10px);}
 }
 
 :root {
@@ -45,27 +74,62 @@
 }
 
 html {
-	&.classic {
+	&[data-theme='classic'] {
 		@include classic();
+		.category-name, .explore-hint {
+			color: var(--inverse-text-color);
+		}
+		footer {
+			a {
+				color: var(--inverse-text-link-color);
+				&:hover {
+					color: var(--inverse-text-link-hover-color);
+				}
+			}
+		}
 	}
-	&.dark {
+	&[data-theme='dark'] {
 		@include dark();
 	}
-	&.light {
+	&[data-theme='light'] {
 		@include light();
+		.category-name {
+			text-shadow: 2px 2px 8px #fff;
+		}
+		.footer-left, .explore-hint {
+			color: var(--inverse-text-color);
+		}
+		.footer-right {
+			a {
+				color: var(--inverse-text-link-color);
+				&:hover {
+					color: var(--inverse-text-link-hover-color);
+				}
+			}
+		}
 	}
 }
 
-a {
+a:not(.site-list a):not(nav a) {
+	color: var(--text-link-color);
 	text-decoration: none;
 	&:hover {
+		color: var(--text-link-hover-color);
 		text-decoration: underline;
 	}
 }
 
+code {
+	padding: 0.2em 0.4em;
+	font-size: 0.8em;
+	font-family: 'Cascadia Code', 'Fira Code', 'Courier New', Courier, monospace;
+	border-radius: 4px;
+	background-color: rgba(45, 55, 55, 0.4);
+}
+
 body {
 	margin: 0;
-	overflow-x: hidden;
+	overflow: hidden;
 	background-image: var(--background);
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -83,28 +147,124 @@ nav {
 	width: 100%;
 	height: 40px;
 	display: flex;
+	justify-content: space-between;
 	align-items: center;
-	gap: 1rem;
-	padding: 0 1rem 0.2rem 1rem;
 	background: var(--nav-background);
 	backdrop-filter: blur(10px);
+	box-shadow: 0 2px 10px var(--box-shadow-color);
 	z-index: 10;
-	.logo-panel {
-		font-size: 1.2rem;
-		font-weight: bold;
+	>* {
+		height: 100%;
+		width: fit-content;
+	}
+	.title-panel {
+		padding-left: 1.2rem;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		.title {
+			font-size: 1.2rem;
+			font-weight: bold;
+		}
+	}
+	.action-panel {
+		.icon-button {
+			position: relative;
+			padding: 0 0.7rem;
+			font-size: 1.2rem;
+			height: 100%;
+			color: var(--text-color);
+			background: none;
+			border: none;
+			cursor: pointer;
+			transition: color 0.2s;
+			&:not(:first-child)::before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+				width: 1px;
+				height: 70%;
+				background-color: var(--border-color);
+			}
+			&:hover {
+				color: var(--text-hover-color);
+			}
+			&.dropdown {
+				>.angle {
+					transition: transform 0.2s;
+				}
+				&:hover>.angle {
+					transform: rotate(90deg);
+				}
+				&:hover>.dropdown-content {
+					display: block;
+					animation: dropdown-popup 0.2s ease-in-out forwards;
+				}
+				>.dropdown-content {
+					display: none;
+					animation: dropdown-hide 0.2s ease-in-out forwards;
+					position: absolute;
+					top: 100%;
+					left: 0;
+					width: 180px;
+					transform: translateX(-60%);
+					border-radius: 0 0 8px 8px;
+					border: 1px solid var(--border-color);
+					// border-top: none;
+					background-color: var(--dropdown-content-background-color);
+					z-index: 10;
+					ul {
+						list-style-type: none;
+						padding: 0;
+						margin: 0;
+					}
+					li {
+						height: fit-content;
+						cursor: pointer;
+						font-size: 1rem;
+						transition: background-color 0.2s;
+						a {
+							display: block;
+							padding: 0.5rem 1rem;
+							color: var(--text-color);
+						}
+						&:hover {
+							background-color: var(--dropdown-content-item-hover-color);
+						}
+						&.active {
+							background-color: var(--dropdown-content-item-hover-color);
+							a {
+								color: var(--inverse-text-link-hover-color);
+								font-weight: bold;
+							}
+						}
+						&:last-child {
+							border-radius: 0 0 8px 8px;
+						}
+					}
+				}
+			}
+		}
 	}
 	a {
+		text-decoration: none;
 		color: var(--text-color);
+		transition: color 0.2s;
 		&:hover {
-			opacity: 0.8;
-			text-decoration: none;
+			color: var(--text-hover-color);
 		}
 	}
 }
 
 #app {
 	width: 100vw;
-	min-height: 100vh;
+	height: 100vh;
+}
+
+main {
+	overflow: auto;
 }
 
 footer {
@@ -113,9 +273,16 @@ footer {
 	top: 100vh;
 	width: 100%;
 	height: 40px;
-	text-align: right;
 	opacity: 0.8;
 	font-size: 0.8rem;
+	.footer-left {
+		text-align: left;
+		float: left;
+	}
+	.footer-right {
+		text-align: right;
+		float: right;
+	}
 	p {
 		margin: 0;
 		margin-bottom: 0.25rem;

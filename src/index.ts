@@ -1,34 +1,10 @@
-import { createApp, defineAsyncComponent } from 'vue';
-import { createPinia } from 'pinia';
-import App from './App.vue';
+import { createApp } from 'vue';
 import router from './router';
-import { useI18nStore } from './store/i18n';
+import McISeePlugin from './plugins/core';
+import App from './App.vue';
 
 import './index.scss';
 
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { far } from '@fortawesome/free-regular-svg-icons';
-import { fas } from '@fortawesome/free-solid-svg-icons';
-import { fab } from '@fortawesome/free-brands-svg-icons';
-
-library.add(fas, fab, far);
-
-const SearchPanel = defineAsyncComponent(() => import('@comps/SearchPanel.vue'));
-
 const app = createApp(App);
-app.component('fa-icon', FontAwesomeIcon);
-app.component('search-panel', SearchPanel);
-app.use(router);
-app.use(createPinia());
-app.mount('#app');
 
-const i18nStore = useI18nStore();
-i18nStore.init();
-
-declare module 'vue' {
-	export interface GlobalComponents {
-		'fa-icon': typeof import('@fortawesome/vue-fontawesome').FontAwesomeIcon;
-		'search-panel': typeof SearchPanel;
-	}
-}
+app.use(router).use(McISeePlugin).mount('#app');

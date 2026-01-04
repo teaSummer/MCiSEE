@@ -9,6 +9,7 @@ defineProps<{
 }>();
 const open = (url: string) => {
 	if(url === '#') return;
+	else if(url.startsWith('#')) return location.hash = url.slice(1);
 	return window.open(url, '_blank', 'noopener');
 }
 </script>

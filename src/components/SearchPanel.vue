@@ -2,16 +2,14 @@
 import * as jsonc from 'jsonc-parser';
 import { ref, reactive, onBeforeMount } from 'vue';
 import { useRouter } from 'vue-router';
-import { useI18nStore } from '@store/i18n';
 
-const { t: $t } = useI18nStore();
 const router = useRouter();
 const searchExternal = ref([] as Searchable[]);
 const showSearchSelectPopup = ref(false);
 
 const searchForm = reactive({
 	from: 'local',
-	keywords: ''
+	keywords: router.currentRoute.value.query.s?.toString() || ''
 });
 
 const getSearch = (str: string) => {
@@ -21,7 +19,7 @@ const getSearch = (str: string) => {
 const search = () => {
 	if(!searchForm.keywords) return;
 	searchForm.from === 'local'?
-		router.push({name: 'Search', query: {q: searchForm.keywords}}):
+		router.push({name: 'sites', query: {s: searchForm.keywords}}):
 		open(getSearch(searchForm.from)?.search?.replace(
 			'<T>', encodeURIComponent(searchForm.keywords)
 		), '_blank', 'noopener');
@@ -51,7 +49,7 @@ onBeforeMount(async() => {
 					'https://mcisee.top/assets/icon/favicon.ico':
 					`https://www.faviconextractor.com/favicon/${getSearch(searchForm.from)!.url.split('/')[2]}?larger=true`"
 					draggable="false" />
-				<fa-icon :class="$style['angle']" icon="angle-right" />
+				<v-icon :class="$style['angle']" name="pr-angle-right" />
 			</span>
 		</div>
 		<input :class="$style['search-input']" type="text"
@@ -63,7 +61,7 @@ onBeforeMount(async() => {
 			   })" v-model="searchForm.keywords" @keyup.enter="search" />
 		<button :class="$style['search-button']" type="submit" :aria-label="$t('search')"
 				:title="$t('search')" @click="search">
-			<fa-icon icon="search" />
+			<v-icon name="pr-search" />
 		</button>
 		<div :class="$style['search-select-popup']" v-if="showSearchSelectPopup">
 			<dl :class="$style['search-select-list']">
