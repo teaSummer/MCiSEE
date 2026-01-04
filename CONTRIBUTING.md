@@ -112,29 +112,54 @@
 
 **请勿**提供仅限单一模组的网站。
 
-以分类作为键，值为一个数组。
+对象有以下属性：
 
-在数组内，每项对应的描述：
+| 属性键名称      | 属性值类型  | 属性值描述     |
+|------------|--------|-----------|
+| `category` | String | 网站分类。     |
+| `sites`    | Array  | 属于该分类的网站。 |
 
-1. 第一项 - 网站名称。
-2. 第二项 - 网站地址 URL。
-3. 第三项 - 可选，网站简介。
-4. 第四项 - 可选，网站图标，默认调用API获取。
-5. 第五项 - 可选，填 `true` 会将 `网站名称` 和 `网站简介` 视为语言文件中的键。
+`sites` 是其中的数组，由具有以下属性的对象构成：
 
-如果分类后面有 `[open]`，则该分类默认展开。
+| 属性键名称      | 属性值类型   | 属性值描述                                        |
+|------------|---------|----------------------------------------------|
+| `name`     | String  | 网站名称。                                        |
+| `url`      | String  | 网站地址 URL。                                    |
+| `desc`     | String  | 可选。网站简介。                                     |
+| `icon`     | String  | 可选。网站图标。若不填写此属性，则调用API获取。                    |
+| `autoLang` | Boolean | 可选。若为 `true`，则将 `name` 和 `desc` 的值视为语言文件中的键。 |
 
 示例如下：
 
 ``` jsonc
 {
-  "官方网站 (©Mojang/©微软)": [
-	["Minecraft", "https://www.minecraft.net"],
-	["Minecraft教育版", "https://education.minecraft.net"],
-	["漏洞追踪器(反馈Bug)", "https://bugs.mojang.com", "Mojang Jira/Mojira\n用于反馈Bug"],
-	["基岩版开发者文档", "https://learn.microsoft.com/minecraft/creator/"],
-	["Feedback", "https://feedback.minecraft.net"],
-  ],
+    "category": "官方网站 (©Mojang/©微软)",
+    "sites": [
+        {
+            "name": "Minecraft",
+            "url": "https://www.minecraft.net",
+            "desc": "《我的世界》/《当个创世神》\n着重于让玩家探索、交互并改变一个动态生成1m³大小方块的世界"
+        },
+        {
+            "name": "Minecraft教育版",
+            "url": "https://education.minecraft.net/",
+            "desc": "Minecraft Education\nMinecraft特别为教室使用而设计的教学版本（中国大陆访问可能会出现404）"
+        },
+        {
+            "name": "漏洞追踪器",
+            "url": "https://bugs.mojang.com",
+            "desc": "Mojang Jira/Mojira\n用于反馈Bug"
+        },
+        {
+            "name": "基岩版开发者文档",
+            "url": "https://learn.microsoft.com/minecraft/creator/",
+            "desc": "了解如何使用附加组件修改 Minecraft。创建皮肤，设计独特的体验，发现最新功能，并发展您作为Minecraft创作者的技能"
+        },
+        {
+            "name": "Feedback",
+            "url": "https://feedback.minecraft.net"
+        }
+    ]
 }
 ```
 

@@ -439,32 +439,26 @@ const pre_list = ((e) => {
     let dom = '';
     for (const block of blocks) {
         // 获取分类并处理
-        const category = Object.keys(block)[0];
-        const toolCount = block[category].length;
-        
-        if (category.endsWith('[open]')) {
-            dom += `<details class="keep" id="${category.replace('[open]', '').replace(/ .+/, '')}" data-tool-count="${toolCount}" open><summary>${category.replace('[open]', '')}</summary>`;
-        }
-        else dom += `<details id="${category.replace(/ .+/, '')}" data-tool-count="${toolCount}"><summary>${category}</summary>`;
+        dom += `<details id="${block.category.replace(/ .+/, '')}" data-tool-count="${block.sites.length}"><summary>${block.category}</summary>`;
         let content;
         // 生成元素
-        for (const [_title, url, description, favicon, autoLang] of block[category]) {
+        for (const site of block.sites) {
             let template = '|DOM|';
             let icon = '';
-            if (!url.startsWith('#')) icon = fIconGet(url, favicon);
-            if (favicon == "") icon = '';
-            const title = autoLang ? `>${icon}<span al="${_title}"></span>` : `>${icon}<span>${_title}</span>`;
-            if (autoLang && description) template = `<mdui-tooltip al-aplto="content: ${description};" placement="top">|DOM|</mdui-tooltip>`;
-            else if (description) template = `<mdui-tooltip content="${description}" placement="top">|DOM|</mdui-tooltip>`;
+            if (!site.url.startsWith('#')) icon = fIconGet(site.url, site.icon);
+            if (site.icon == "") icon = '';
+            const title = site.autoLang ? `>${icon}<span al="${site.name}"></span>` : `>${icon}<span>${site.name}</span>`;
+            if (site.autoLang && site.desc) template = `<mdui-tooltip al-aplto="content: ${site.desc};" placement="top">|DOM|</mdui-tooltip>`;
+            else if (site.desc) template = `<mdui-tooltip content="${site.desc}" placement="top">|DOM|</mdui-tooltip>`;
             // 判断是否为内部链接
-            if (url.startsWith('#')) {
+            if (site.url.startsWith('#')) {
                 // 内部链接
-                content = `<a class="button noicon" href="${url}" onclick="hashChanged();" ${title}</a>`;
+                content = `<a class="button noicon" href="${site.url}" onclick="hashChanged();" ${title}</a>`;
                 // 找不到合适的外部链接
-                if (url == '#') content = `<a class="button nosupport" ${title}</a>`;
+                if (site.url == '#') content = `<a class="button nosupport" ${title}</a>`;
             } else {
                 // 外部链接
-                content = `<a class="button" href="${url}" target="_blank" ${title}</a>`;
+                content = `<a class="button" href="${site.url}" target="_blank" ${title}</a>`;
             }
             dom += template.replace('|DOM|', content);  // 应用模板
         }

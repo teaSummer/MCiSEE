@@ -1,32 +1,98 @@
 [
-  {
-    "简体中文论坛": [
-      // 请在此处填写知名且未爆雷的论坛，避免出现不良论坛
-      ["网易我的世界论坛", "https://mc.netease.com", "由网易运营的我的世界中国版论坛，内嵌于客户端中。目前已禁止客户端以外的用户发帖，且 180 天前的帖子不可见。网易的游戏论坛业务已迁移至网易大神，网易我的世界论坛已基本停止运营。"],
-      ["MineBBS", "https://www.minebbs.com", "综合性MC论坛，以基岩版服务端资源为主要特色，于2024年2月重启Java版，目前Java版服务端资源发展较为迅速。"],
-      ["九域资源社区", "https://bbs.mc9y.net", "主营服务器插件。"],
-      ["苦力怕论坛", "https://klpbbs.com", "主营基岩版，含部分Java版内容的 Minecraft 中文社区。"],
-      ["我的世界教育版中文论坛", "https://www.mceebbs.com", "非中国大陆服务器。"],
-      ["我的世界UTC论坛", "https://bbs.mcutc.cn", "主要发布 Minecraft 衍生资源。"],
-      ["HiMCBBS", "https://www.himcbbs.com", "主营Java版，含部分基岩版内容的 Minecraft 中文社区。"],
-      ["红石中继站", "https://www.mczwlt.net", "前身为我的世界中文论坛（MCBBS，域名：www.mcbbs.net），于 2024 年 1 月 20 日关闭，现于 2025 年 1 月 31 日转生。"],
-      ["SodaMC", "https://sodamc.com/", "综合性MC资源社区。"],
-      ["BBSMC", "https://bbsmc.net/", "我的世界资源社区论坛。"]
-    ]
-  },
-  {
-    "其他论坛": [
-      ["国际论坛", "https://www.minecraftforum.net"],
-      ["中国香港社区", "https://www.minecraft-hk.com", "交流最新資訊、專業教學、遊戲伺服器、相關資源及心得分享"],
-      ["中国台湾巴哈姆特论坛", "https://forum.gamer.com.tw/A.php?bsn=18673", "最新資訊及情報分享、精華好文查找、創作交流討論"],
-      ["基岩版中国台湾中文网", "https://forum.mcpe.tw"],
-      ["韩国论坛", "https://www.koreaminecraft.net"],
-      ["日本论坛", "https://forum.civa.jp"]
-    ]
-  },
-  {
-    "友情链接[open]": [
-      ["新兴我的世界论坛晋级赛", "https://mcbbs.rip"]
-    ]
-  }
+    {
+        "category": "简体中文论坛",
+        // 请在此处填写知名且未爆雷的论坛，避免出现不良论坛
+        "sites": [
+            {
+                "name": "网易我的世界论坛",
+                "url": "https://mc.netease.com",
+                "desc": "由网易运营的我的世界中国版论坛，内嵌于客户端中。目前已禁止客户端以外的用户发帖，且 180 天前的帖子不可见。网易的游戏论坛业务已迁移至网易大神，网易我的世界论坛已基本停止运营。"
+            },
+            {
+                "name": "MineBBS",
+                "url": "https://www.minebbs.com",
+                "desc": "综合性MC论坛，以基岩版服务端资源为主要特色，于2024年2月重启Java版，目前Java版服务端资源发展较为迅速。"
+            },
+            {
+                "name": "九域资源社区",
+                "url": "https://bbs.mc9y.net",
+                "desc": "主营服务器插件。"
+            },
+            {
+                "name": "苦力怕论坛",
+                "url": "https://klpbbs.com",
+                "desc": "主营基岩版，含部分Java版内容的 Minecraft 中文社区。"
+            },
+            {
+                "name": "我的世界教育版中文论坛",
+                "url": "https://www.mceebbs.com",
+                "desc": "非中国大陆服务器。"
+            },
+            {
+                "name": "我的世界UTC论坛",
+                "url": "https://bbs.mcutc.cn",
+                "desc": "主要发布 Minecraft 衍生资源。"
+            },
+            {
+                "name": "HiMCBBS",
+                "url": "https://www.himcbbs.com",
+                "desc": "主营Java版，含部分基岩版内容的 Minecraft 中文社区。"
+            },
+            {
+                "name": "红石中继站",
+                "url": "https://www.mczwlt.net",
+                "desc": "前身为我的世界中文论坛（MCBBS，域名：www.mcbbs.net），于 2024 年 1 月 20 日关闭，现于2025 年 1 月 31 日转生。"
+            },
+            {
+                "name": "SodaMC",
+                "url": "https://sodamc.com/",
+                "desc": "综合性MC资源社区。"
+            },
+            {
+                "name": "BBSMC",
+                "url": "https://bbsmc.net/",
+                "desc": "我的世界资源社区论坛。"
+            }
+        ]
+    },
+    {
+        "category": "其他论坛",
+        "sites": [
+            {
+                "name": "国际论坛",
+                "url": "https://www.minecraftforum.net"
+            },
+            {
+                "name": "中国香港社区",
+                "url": "https://www.minecraft-hk.com",
+                "desc": "交流最新資訊、專業教學、遊戲伺服器、相關資源及心得分享"
+            },
+            {
+                "name": "中国台湾巴哈姆特论坛",
+                "url": "https://forum.gamer.com.tw/A.php?bsn=18673",
+                "desc": "最新資訊及情報分享、精華好文查找、創作交流討論"
+            },
+            {
+                "name": "基岩版中国台湾中文网",
+                "url": "https://forum.mcpe.tw"
+            },
+            {
+                "name": "韩国论坛",
+                "url": "https://www.koreaminecraft.net"
+            },
+            {
+                "name": "日本论坛",
+                "url": "https://forum.civa.jp"
+            }
+        ]
+    },
+    {
+        "category": "友情链接",
+        "sites": [
+            {
+                "name": "新兴我的世界论坛晋级赛",
+                "url": "https://mcbbs.rip"
+            }
+        ]
+    }
 ]
