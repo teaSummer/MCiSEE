@@ -6,8 +6,9 @@ import { OhVueIcon, addIcons } from 'oh-vue-icons';
 import * as FaIcon from 'oh-vue-icons/icons/fa';
 import * as PrIcon from 'oh-vue-icons/icons/pr';
 import { IoLanguage } from 'oh-vue-icons/icons/io';
+import { LaSlashSolid } from 'oh-vue-icons/icons/la';
 
-addIcons(...Object.values(FaIcon), ...Object.values(PrIcon), IoLanguage);
+addIcons(...Object.values(FaIcon), ...Object.values(PrIcon), IoLanguage, LaSlashSolid);
 
 const SearchPanel = defineAsyncComponent(() => import('@comps/SearchPanel.vue'));
 
