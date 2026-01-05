@@ -128,7 +128,7 @@
 | `name`     | String  | 网站名称。                                        |
 | `url`      | String  | 网站地址 URL。                                    |
 | `desc`     | String  | 可选。网站简介。                                     |
-| `icon`     | String  | 可选。网站图标。若不填写此属性，则调用API获取。                    |
+| `icon`     | String  | 可选。网站图标。若不填写此属性，则调用 API 获取。                  |
 | `autoLang` | Boolean | 可选。若为 `true`，则将 `name` 和 `desc` 的值视为语言文件中的键。 |
 
 示例如下：

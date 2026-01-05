@@ -6,25 +6,20 @@
 
 **所见皆是*Minecraft*，让获取MC资源更加轻便！**
 
-**欢迎点击 “Star” 按钮来支持我们的编写。**
+**欢迎点击“Star”按钮来支持我们的编写。**
 
 **玩家们可以从这里挖掘Minecraft常用资源，例如软件等。这里也需要你们提供更多有趣的资源！**
 
 本项目展示的网站内容均收集自互联网，不代表参与本项目的任何个人或组织的观点。
 
-欢迎各位对此项目做出贡献，教程可在下方查看，Fork 后进行修改，感谢每一位贡献者的 PR！
-
-**注意：请确保您 Fork 的仓库为最新，可通过自己仓库页面的【Sync fork】更新后再提交 PR！旧版仓库的合并会带来很多麻烦，感谢您的支持！**
+欢迎各位对此项目做出贡献，另请参阅 [CONTRIBUTING.md](CONTRIBUTING.md) 文件。
 
 QQ交流群：[596520944](https://qm.qq.com/q/EBKhjsGRbM)
 
 喵呜，网站运营仍需经费，可以赏点钱吗？ [爱发电](https://afdian.com/a/MCiSEE)
 
-## 贡献教程
+## API 文档
 
-请参阅 [CONTRIBUTING.md](CONTRIBUTING.md) 文件。
-
-## API文档
 请参阅 [API_DOCS.md](API_DOCS.md) 文件。
 
 ## 感谢
