@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref, computed, onBeforeMount } from 'vue';
 import { useRoute } from 'vue-router';
-import * as jsonc from 'jsonc-parser';
 import SiteItem from '@comps/SiteItem.vue';
 
 const sites = ref<SitesDataV2[]>([]);
@@ -28,8 +27,8 @@ const filterSites = (keyword: string, category: string, type?: 'category' | 'sit
 }
 
 onBeforeMount(async() => {
-	const raw_data = await (await fetch('https://mcisee.top/data/utilityWebsite.jsonc')).text();
-	sites.value = jsonc.parse(raw_data);
+	const raw_data = await (await fetch('https://mcisee.top/data/utilityWebsite.json')).text();
+	sites.value = JSON.parse(raw_data);
 });
 </script>
 

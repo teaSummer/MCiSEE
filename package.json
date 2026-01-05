@@ -10,7 +10,6 @@
   "author": "晚梦",
   "license": "ARR",
   "dependencies": {
-    "jsonc-parser": "^3.3.1",
     "pinia": "^3.0.4",
     "vue": "^3.5.26",
     "vue-router": "^4.6.4"

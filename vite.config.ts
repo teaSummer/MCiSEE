@@ -41,10 +41,6 @@ export default<UserConfig> {
 							test: /node_modules\/oh-vue-icons/
 						},
 						{
-							name: 'jsonc-parser',
-							test: /node_modules\/jsonc-parser/
-						},
-						{
 							name: 'utils-bundled',
 							test: /src\/utils/
 						},

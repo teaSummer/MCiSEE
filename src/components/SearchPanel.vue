@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import * as jsonc from 'jsonc-parser';
 import { ref, reactive, onBeforeMount } from 'vue';
 import { useRouter } from 'vue-router';
 
@@ -30,8 +29,8 @@ defineProps<{
 }>();
 
 onBeforeMount(async() => {
-	searchExternal.value = await jsonc.parse(
-		await (await fetch('https://mcisee.top/data/searchable.jsonc')).text()
+	searchExternal.value = await JSON.parse(
+		await (await fetch('https://mcisee.top/data/searchable.json')).text()
 	);
 });
 </script>
