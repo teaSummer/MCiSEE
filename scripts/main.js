@@ -433,20 +433,24 @@ $('.searchable-input').typeahead(
 
 
 // 生成网站details板块
-const pre_list = ((e) => {
+const generateWebsites = ((e) => {
     const lineBlocks = [];
     let blocks = JSON.parse($(e).html());
     let dom = '';
     for (const block of blocks) {
         // 获取分类并处理
-        dom += `<details id="${block.category.replace(/ .+/, '')}" data-tool-count="${block.sites.length}"><summary>${block.category}</summary>`;
+        if (block.category == '友情链接') {
+            dom += `<details class="keep" id="${block.category.replace(/ .+/, '')}" data-tool-count="${block.sites.length}" open><summary>${block.category}</summary>`;
+        } else {
+            dom += `<details id="${block.category.replace(/ .+/, '')}" data-tool-count="${block.sites.length}"><summary>${block.category}</summary>`;
+        }
         let content;
         // 生成元素
         for (const site of block.sites) {
             let template = '|DOM|';
             let icon = '';
             if (!site.url.startsWith('#')) icon = fIconGet(site.url, site.icon);
-            if (site.icon == "") icon = '';
+            if (site.icon == '') icon = '';
             const title = site.autoLang ? `>${icon}<span al="${site.name}"></span>` : `>${icon}<span>${site.name}</span>`;
             if (site.autoLang && site.desc) template = `<mdui-tooltip al-aplto="content: ${site.desc};" placement="top">|DOM|</mdui-tooltip>`;
             else if (site.desc) template = `<mdui-tooltip content="${site.desc}" placement="top">|DOM|</mdui-tooltip>`;
@@ -576,7 +580,7 @@ $(() => {
     let checkedUpdates = false;
     // 快速查询
     searchableChanged();
-    $('.pre-flex').each((i, e) => pre_list(e));
+    $('.pre-flex').each((i, e) => generateWebsites(e));
     $('.searchable-args .arg:not([multiple])').each((i, e) => {
         $(e).children().click(() => $(e).click());
     });
