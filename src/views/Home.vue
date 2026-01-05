@@ -47,6 +47,9 @@ main {
 	justify-content: center;
 	align-items: center;
 	position: relative;
+	@media screen and (max-width: 768px) {
+		width: 80%;
+	}
 }
 .container {
 	width: 100%;

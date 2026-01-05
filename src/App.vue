@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, inject, h } from 'vue';
+import { ref, computed, inject, h } from 'vue';
 import { OhVueIcon } from 'oh-vue-icons';
 const stores = inject<McISee.Stores>('stores')!;
 const theme = computed(() => stores.coreStore.getTheme);
@@ -47,7 +47,12 @@ const switchTheme = () => {
 	const nextTheme = availableThemes[nextThemeIndex] as 'auto' | 'light' | 'dark' | 'classic';
 	stores.coreStore.setTheme(nextTheme);
 }
+const switchMobileMenu = () => {
+	isShowMobileMenu.value = !isShowMobileMenu.value;
+}
 
+const isMobile = computed(() => window.innerWidth <= 768);
+const isShowMobileMenu = ref(false);
 const isPreview = JSON.parse(import.meta.env.VITE_IS_PREVIEW) as boolean;
 const buildInfoStr = computed(() => {
 	const deployedSHA = import.meta.env.VERCEL_GIT_COMMIT_SHA?.trim()?.slice(0, 7);
@@ -60,12 +65,12 @@ const buildInfoStr = computed(() => {
 </script>
 
 <template>
-	<nav>
+	<nav class="header-panel">
 		<div class="title-panel">
 			<router-link to="/">
 				<span class="title" v-html="$t('introduction.title')"></span>
 			</router-link>
-			<search-panel v-if="$route.name !== 'home'" />
+			<search-panel v-if="$route.name !== 'home' && !isMobile" />
 		</div>
 		<div class="action-panel">
 			<button class="icon-button dropdown">
@@ -88,6 +93,9 @@ const buildInfoStr = computed(() => {
 			<button class="theme-button icon-button" @click="switchTheme" :title="getThemeLocal(theme)" :aria-label="getThemeLocal(theme)">
 				<component :is="getThemeIcon(theme)" />
 			</button>
+			<button v-if="isMobile" class="theme-button icon-button" @click="switchMobileMenu" :title="$t('menu')">
+				<v-icon name="fa-bars" />
+			</button>
 		</div>
 	</nav>
 	<router-view />
@@ -101,4 +109,11 @@ const buildInfoStr = computed(() => {
 			<p v-text="$t('credit')" />
 		</span>
 	</footer>
+	<nav v-if="isMobile && isShowMobileMenu" class="mobile-menu" @click.self="switchMobileMenu">
+		<ul>
+			<li>
+				<search-panel />
+			</li>
+		</ul>
+	</nav>
 </template>
