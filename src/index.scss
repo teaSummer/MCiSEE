@@ -178,7 +178,7 @@ nav.header-panel {
 			border: none;
 			cursor: pointer;
 			transition: color 0.2s;
-			&:not(:first-child)::before {
+			&:not(:last-child)::after {
 				content: '';
 				position: absolute;
 				top: 50%;
