@@ -1,4 +1,3 @@
-// 可供快速查询的站点
 [
   {
     "title": "站内搜索",
@@ -27,7 +26,7 @@
   },
   {
     "title": "Modrinth",
-    "search": "", //
+    "search": "",
     "url": "https://modrinth.com"
   },
   {

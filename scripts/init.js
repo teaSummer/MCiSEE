@@ -94,10 +94,10 @@ if (history.scrollRestoration) {
 }
 
 
-// 读取 jsonc 文件
+// 读取 JSON 文件
 const read = ((file, isPath = false) => {
-    return JSONC.parse($.ajax({
-        url: isPath ? file : `data/${file}.jsonc`,
+    return JSON.parse($.ajax({
+        url: isPath ? file : `data/${file}.json`,
         dataType: 'json',
         async: false
     }).responseText);
@@ -161,7 +161,7 @@ const utilityWebsite = read('utilityWebsite');
 const forum = read('forum');
 
 // 愚人节彩蛋
-const cfg = read("scripts/config/apf.cfg.jsonc", true);
+const cfg = read("scripts/config/apf.cfg.json", true);
 let isapf = checkDate() || cfg.testMode;
 import("./module/apf.js").then(apf => (globalThis.apf = apf, apf.main()));
 

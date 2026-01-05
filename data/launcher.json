@@ -1,7 +1,4 @@
 {
-  // =====================================================
-  // 适用于 安卓手机/鸿蒙手机/安卓平板/鸿蒙平板 的启动器
-  // =====================================================
   "AndroidLauncher": [
     {
       "title": "Fold Craft Launcher",
@@ -51,9 +48,6 @@
       }
     }
   ],
-  // ===================================
-  // 适用于 苹果手机/苹果平板 的启动器
-  // ===================================
   "iOSLauncher": [
     {
       "title": "PojavLauncher",
@@ -72,9 +66,6 @@
       }
     }
   ],
-  // ==============================
-  // 适用于 Windows电脑 的启动器
-  // ==============================
   "WindowsLauncher": [
     {
       "title": "Minecraft Launcher",
@@ -132,7 +123,6 @@
       "title": "Plain Craft Launcher 2 Community Edition",
       "abbr": "PCL2 社区版",
       "download": "https://github.com/PCL-Community/PCL2-CE/releases/download/2.13.3/PCL2_CE_Release_x64.exe",
-      // 太美的 pcl2ce开发组你们能不能别改文件名了 (╬▔皿▔)╯
       "version": "2.13.3",
       "github": "https://github.com/PCL-Community/PCL2-CE",
       "dev": {
@@ -206,9 +196,6 @@
       "github": "https://github.com/LTCatt/PCL1"
     }
   ],
-  // ==========================
-  // 适用于 苹果电脑 的启动器
-  // ==========================
   "macOSLauncher": [
     {
       "title": "Minecraft Launcher",
@@ -278,9 +265,6 @@
       "url": "https://corona.studio/launcherx"
     }
   ],
-  // ============================
-  // 适用于 Linux系统 的启动器
-  // ============================
   "LinuxLauncher": [
     {
       "title": "Minecraft Launcher",

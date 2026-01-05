@@ -1,17 +1,16 @@
-// 实用网站列表
 [
   {
     "category": "官方网站 (©Mojang/©微软)",
     "sites": [
       {
-        "name": "Minecraft",
+        "name": "Minecraft.net",
         "url": "https://www.minecraft.net",
-        "desc": "《我的世界》/《当个创世神》\n着重于让玩家探索、交互并改变一个动态生成1m³大小方块的世界"
+        "desc": "官网，可查看不同游戏和新闻等"
       },
       {
-        "name": "Minecraft教育版",
-        "url": "https://education.minecraft.net/",
-        "desc": "Minecraft Education\nMinecraft特别为教室使用而设计的教学版本（中国大陆访问可能会出现404）"
+        "name": "游戏选购",
+        "url": "https://www.minecraft.net/choose-your-game",
+        "desc": "官网，可选择游戏及平台\n适用于Minecraft双版本、地下城/Dungeons、传奇/Legends"
       },
       {
         "name": "漏洞追踪器",
@@ -22,6 +21,11 @@
         "name": "漏洞追踪器（存档）",
         "url": "https://bugs-legacy.mojang.com",
         "desc": "仅用于存档旧版Mojira，已停止支持。"
+      },
+      {
+        "name": "Minecraft教育版",
+        "url": "https://education.minecraft.net/",
+        "desc": "Minecraft Education\nMinecraft特别为教室使用而设计的教学版本（中国大陆访问可能会出现404）"
       },
       {
         "name": "基岩版开发者文档",
@@ -37,13 +41,19 @@
         "url": "https://feedback.minecraft.net/hc/categories/115000410252-Knowledge-Base"
       },
       {
+        "name": "软件下载",
+        "url": "https://www.minecraft.net/download",
+        "desc": "包含多平台启动器和服务器软件"
+      },
+      {
         "name": "远古版MC",
         "url": "https://classic.minecraft.net",
         "desc": "网页版本\n(需浏览器支持WebGL)"
       },
       {
-        "name": "基岩版专用服务端",
-        "url": "https://www.minecraft.net/download/server/bedrock"
+        "name": "周边产品选购",
+        "url": "https://minecraftshop.com",
+        "desc": "官方商店"
       },
       {
         "name": "壁纸集",
@@ -65,16 +75,6 @@
         "desc": "教育版教程"
       },
       {
-        "name": "地下城 (Dungeons)",
-        "url": "https://www.minecraft.net/about-dungeons",
-        "desc": "Minecraft Dungeons\n一款动作/冒险角色扮演类电子游戏，现已停更"
-      },
-      {
-        "name": "传奇 (Legends)",
-        "url": "https://www.minecraft.net/about-legends",
-        "desc": "Minecraft Legends\n一款即时动作战略游戏，现已停更"
-      },
-      {
         "name": "Minecraft Earth",
         "url": "#",
         "desc": "一款免费增强现实（AR）手游，现已停更\n官网不再维护"
@@ -83,61 +83,6 @@
         "name": "故事模式 (Story Mode)",
         "url": "#",
         "desc": "Minecraft: Story Mode\n一款具有可点选性、叙事性、章节性的电子游戏，现已停更\n官网不再维护"
-      }
-    ]
-  },
-  {
-    "category": "官方购买渠道",
-    "sites": [
-      {
-        "name": "基岩版+Java版 (Windows)",
-        "url": "https://www.minecraft.net/store/minecraft-java-bedrock-edition-pc",
-        "desc": "双版本捆绑售卖\nOfficial Site"
-      },
-      {
-        "name": "基岩版+Java版 (Xbox)",
-        "url": "https://www.xbox.com/games/store/minecraft-java-bedrock-edition-for-pc/9nxp44l49shj",
-        "desc": "Microsoft Xbox"
-      },
-      {
-        "name": "基岩版 (Android)",
-        "url": "https://play.google.com/store/apps/details?id=com.mojang.minecraftpe",
-        "desc": "也适用于ChromeOS\nGoogle Play"
-      },
-      {
-        "name": "基岩版 (Fire)",
-        "url": "https://www.amazon.com/Mojang-Minecraft-Pocket-Edition/dp/B00992CF6W/",
-        "desc": "Amazon Appstore"
-      },
-      {
-        "name": "基岩版 (iOS)",
-        "url": "https://apps.apple.com/cn/app/id479516143",
-        "desc": "App Store"
-      },
-      {
-        "name": "基岩版 (Nintendo)",
-        "url": "https://www.nintendo.com/us/store/products/minecraft-106679/",
-        "desc": "Nintendo Store"
-      },
-      {
-        "name": "基岩版 (Xbox)",
-        "url": "https://xbox.com/games/store/-/9MVXMVT8ZKWC",
-        "desc": "Microsoft Xbox"
-      },
-      {
-        "name": "地下城/Dungeons (Windows)",
-        "url": "https://store.steampowered.com/app/1672970/Minecraft_Dungeons/",
-        "desc": "Valve Steam"
-      },
-      {
-        "name": "传奇/Legends (Windows)",
-        "url": "https://store.steampowered.com/app/1928870/Minecraft_Legends/",
-        "desc": "Valve Steam"
-      },
-      {
-        "name": "周边商城",
-        "url": "https://shop.minecraft.net/",
-        "desc": "Official Site"
       }
     ]
   },
@@ -526,10 +471,6 @@
         "name": "mcfunction转结构",
         "url": "https://dislink.github.io/mcfunction2bdx/",
         "desc": "mcfunction文件转为bdump v3结构文件"
-      },
-      {
-        "name": "MCPack清单生成器",
-        "url": "https://mcpack.mcisee.top"
       },
       {
         "name": "装饰性头颅",
@@ -956,19 +897,19 @@
         "desc": "Java版，性能好。基于Paper"
       },
       {
-        "name": "官方基岩版专用服务端",
+        "name": "官方最新BDS",
         "url": "https://www.minecraft.net/download/server/bedrock",
-        "desc": "不支持插件"
+        "desc": "原生基岩版专用服务端，不支持插件"
       },
       {
-        "name": "基岩版专用服务端",
+        "name": "BDS列表",
         "url": "https://www.minebbs.com/bds/history",
-        "desc": "由MineBBS收集"
+        "desc": "基岩版专用服务端，由MineBBS收集"
       },
       {
-        "name": "基岩版专用预览版服务端",
+        "name": "预览版BDS列表",
         "url": "https://www.minebbs.com/resources/bedrock-dedicated-server-preview.4934/history",
-        "desc": "由MineBBS收集"
+        "desc": "基岩版专用服务端（预览版），由MineBBS收集"
       },
       {
         "name": "BDSX",

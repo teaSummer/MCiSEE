@@ -19,12 +19,12 @@
 
 `data` 目录下的文件列表：
 
-| 文件名                                                                           | 数据含义             | 文件                                                                       |
-|-------------------------------------------------------------------------------|------------------|--------------------------------------------------------------------------|
-| [![](assets/icon/doc/link-16.svg)](#launcherjsonc) launcher.jsonc             | 启动器列表（**Java版**） | [查看![](assets/icon/doc/link-external-16.svg)](data/launcher.jsonc)       |
-| [![](assets/icon/doc/link-16.svg)](#forumjsonc) forum.jsonc                   | 论坛列表             | [查看![](assets/icon/doc/link-external-16.svg)](data/forum.jsonc)          |
-| [![](assets/icon/doc/link-16.svg)](#searchablejsonc) searchable.jsonc         | 可供快速查询的站点列表      | [查看![](assets/icon/doc/link-external-16.svg)](data/searchable.jsonc)     |
-| [![](assets/icon/doc/link-16.svg)](#utilityWebsitejsonc) utilityWebsite.jsonc | 实用网站列表           | [查看![](assets/icon/doc/link-external-16.svg)](data/utilityWebsite.jsonc) |
+| 文件名                                                                         | 数据含义             | 文件                                                                      |
+|-----------------------------------------------------------------------------|------------------|-------------------------------------------------------------------------|
+| [![](assets/icon/doc/link-16.svg)](#launcherjson) launcher.json             | 启动器列表（**Java版**） | [查看![](assets/icon/doc/link-external-16.svg)](data/launcher.json)       |
+| [![](assets/icon/doc/link-16.svg)](#forumjson) forum.json                   | 论坛列表             | [查看![](assets/icon/doc/link-external-16.svg)](data/forum.json)          |
+| [![](assets/icon/doc/link-16.svg)](#searchablejson) searchable.json         | 可供快速查询的站点列表      | [查看![](assets/icon/doc/link-external-16.svg)](data/searchable.json)     |
+| [![](assets/icon/doc/link-16.svg)](#utilityWebsitejson) utilityWebsite.json | 实用网站列表           | [查看![](assets/icon/doc/link-external-16.svg)](data/utilityWebsite.json) |
 
 打开文件后，你将看到一些常量，例如 AndroidLauncher 等。
 
@@ -34,7 +34,7 @@
 
 下面详细介绍了每个文件的数据。
 
-## launcher.jsonc
+## launcher.json
 
 对象有以下属性：
 
@@ -57,7 +57,7 @@
 
 示例如下：
 
-``` jsonc
+``` json
 {
   "title": "Hello Minecraft! Launcher",
   "abbr": "HMCL",
@@ -76,13 +76,15 @@
 
 ---
 
-## forum.jsonc
+## forum.json
 
-参见段落 [utilityWebsite.jsonc](#utilityWebsitejsonc)。
+**请勿**提供不知名或已爆雷的论坛，以避免出现不良论坛。
+
+参见段落 [utilityWebsite.json](#utilityWebsitejson)。
 
 ---
 
-## searchable.jsonc
+## searchable.json
 
 对象有以下属性：
 
@@ -96,7 +98,7 @@
 
 示例如下：
 
-``` jsonc
+``` json
 {
   "title": "维基百科: 原站",
   "abbr": "Wiki",
@@ -108,7 +110,7 @@
 
 ---
 
-## utilityWebsite.jsonc
+## utilityWebsite.json
 
 **请勿**提供仅限单一模组的网站。
 
@@ -131,7 +133,7 @@
 
 示例如下：
 
-``` jsonc
+``` json
 {
   "category": "官方网站 (©Mojang/©微软)",
   "sites": [
@@ -144,11 +146,6 @@
       "name": "漏洞追踪器",
       "url": "https://bugs.mojang.com",
       "desc": "Mojang Jira/Mojira\n用于反馈Bug"
-    },
-    {
-      "name": "基岩版开发者文档",
-      "url": "https://learn.microsoft.com/minecraft/creator/",
-      "desc": "了解如何使用附加组件修改 Minecraft。创建皮肤，设计独特的体验，发现最新功能，并发展您作为Minecraft创作者的技能"
     },
     {
       "name": "Feedback",
@@ -169,14 +166,13 @@
 1. 启动器：见下文。
 2. 实用网站：无序/按相关程度排序。
 3. 论坛：按创建时间降序。
-4. 其它：按受欢迎程度升序。
+4. 其他数据请按受欢迎程度升序。
 
-若要修改启动器列表，指导如下：
+启动器列表修改指导如下：
 
-1. 可以提供 `更适合旧设备` 的启动器（限制 **2个/设备**）。
-2. 下拉菜单从上到下排序：`官方` > `国内知名第三方` > `网易` > `国外第三方` > `更适合旧设备`。
-3. 对于 `version` 属性，应优先考虑 GitHub 仓库的相应 Tag，其次是官方的相应版本名/号。
-4. 另外，由于 `PCL2` 快照版本尚未公开，**请勿**提供其 `dev` 属性。
-5. 由于特殊原因，辅助类启动器请在 [utilityWebsite.jsonc](data/utilityWebsite.jsonc) 中提供。
+1. 下拉菜单从上到下排序：`官方` > `国内知名第三方` > `网易` > `国外第三方` > `更适合旧设备`。
+2. 对于 `version` 属性，应优先考虑 GitHub 仓库的相应 tag，其次是官方的相应版本名/号。
+3. 因为 `PCL2` 的快照版本尚未公开，**请勿**提供其 `dev` 属性。
+4. 由于特殊原因，辅助类启动器请在 [utilityWebsite.json](data/utilityWebsite.json) 中提供。
 
 感谢您的贡献。历史的长河将会为您留名。
