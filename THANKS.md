@@ -2,12 +2,11 @@
 
 <img align="right" alt="MCiSEE" src="https://mcisee.top/assets/icon/appiconRound.png" title="MCiSEE" width="64">
 
-<details><br>
-<summary>简体中文</summary>
+<details><summary>简体中文</summary><br>
 
 诚心感谢所有贡献以及支持我们的个人/组织/项目等。
 
-感谢[籽岷](https://space.bilibili.com/686127)叔的宣传与支持，以及[007IDC](https://www.007idc.cn/aff/RIWDQNQO)的赞助服务器。
+感谢[籽岷](https://space.bilibili.com/686127)叔的宣传与支持<!--，以及[007IDC](https://www.007idc.cn/aff/RIWDQNQO)的赞助服务器-->。
 
 排名不分先后。
 
@@ -21,6 +20,7 @@
 | 爱发电：[梦淹***](https://afdian.com/u/c673ffbe0f8d11f0bede52540025c377)       | ￥5.00  |
 | 爱发电：[爱发电用户_2bffb](https://afdian.com/u/2bffb67a59ad11f0b79352540025c377) | ￥28.20 |
 | 爱发电：[上官泓文](https://afdian.com/u/0e85d804166211ed858852540025c377)        | ￥54.00 |
+| 爱发电：[透明小伞](https://afdian.com/u/f55d404e22a911ecb18f52540025c377)        | ￥5.00  |
 
 
 ## 依赖/引用的项目
@@ -83,12 +83,11 @@
 
 
 
-<details><br>
-<summary>English</summary>
+<details><summary>English</summary><br>
 
 Thank you to all the people/organizations/projects that have contributed or supported us.
 
-Thank Uncle [Zi Min](https://space.bilibili.com/686127) for publicity and support, and [007IDC](https://www.007idc.cn/aff/RIWDQNQO)'s sponsored server.
+Thank Uncle [Zi Min](https://space.bilibili.com/686127) for publicity and support<!--, and [007IDC](https://www.007idc.cn/aff/RIWDQNQO)'s sponsored server-->.
 
 The list is in no particular order.
 
@@ -102,6 +101,7 @@ The list is in no particular order.
 | Afdian: [梦淹***](https://afdian.com/u/c673ffbe0f8d11f0bede52540025c377)       | ￥5.00    |
 | Afdian: [爱发电用户_2bffb](https://afdian.com/u/2bffb67a59ad11f0b79352540025c377) | ￥28.20   |
 | Afdian: [上官泓文](https://afdian.com/u/0e85d804166211ed858852540025c377)        | ￥54.00   |
+| Afdian: [透明小伞](https://afdian.com/u/f55d404e22a911ecb18f52540025c377)        | ￥5.00    |
 
 
 ## Dependent/Referenced Projects
