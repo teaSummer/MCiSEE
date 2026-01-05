@@ -17,11 +17,11 @@ const getThemeIcon = (theme: string) => {
 			return rendererIcon('fa-history');
 		case 'auto':
 		default:
-			return h(OhVueIcon, { label: 'auto' }, [
+			return h(OhVueIcon, { label: 'auto' }, { default: () => [
 				rendererIcon('fa-sun', { clipPath: 'polygon(0 0, 100% 0, 0 100%)' }),
 				rendererIcon('fa-moon', { clipPath: 'polygon(100% 0, 100% 100%, 0 100%)' }),
 				rendererIcon('la-slash-solid')
-			]);
+			]});
 	}
 }
 
