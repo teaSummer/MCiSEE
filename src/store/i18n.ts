@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia';
+import { fetchData } from '@/utils/fetch-data';
 
 export const useI18nStore = defineStore('i18n', {
 	state: () => ({
@@ -27,10 +28,10 @@ export const useI18nStore = defineStore('i18n', {
 			this.init();
 		},
 		async getTranslations() {
-			const main_res = await fetch(`https://mcisee.top/locales/${this.language}.json`);
-			if(main_res.status === 404) return 404;
-			const fallback_res = await fetch(`https://mcisee.top/locales/${this.fallbackLanguage}.json`);
-			if(main_res.ok && fallback_res.ok) this.translations = {
+			const main_data = await fetchData(`${this.language}.json`, 'locales');
+			if(main_data.status === 404) return 404;
+			const fallback_data = await fetchData(`${this.fallbackLanguage}.json`, 'locales');
+			if(main_data.ok && fallback_data.ok) this.translations = {
 				'language.lzh': '文言 (華夏)',
 				'language.zh-CN': '简体中文 (中国大陆)',
 				'language.zh-HK': '繁體中文 (中国香港)',
@@ -39,8 +40,8 @@ export const useI18nStore = defineStore('i18n', {
 				'language.en-US': 'English',
 				'language.it-IT': 'Italiano',
 				'language.pt-BR': 'Português (Brasil)',
-				...(await fallback_res.json())?.data,
-				...(await main_res.json())?.data
+				...fallback_data?.data,
+				...main_data?.data
 			};
 		},
 		async init() {
