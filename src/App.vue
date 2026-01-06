@@ -57,8 +57,10 @@ const isPreview = JSON.parse(import.meta.env.VITE_IS_PREVIEW) as boolean;
 const buildInfoStr = computed(() => {
 	const deployedSHA = import.meta.env.VERCEL_GIT_COMMIT_SHA?.trim()?.slice(0, 7);
 	const isVercel = import.meta.env.VERCEL === '1';
+	const repo = isVercel? `${import.meta.env.VERCEL_GIT_REPO_OWNER}/${import.meta.env.VERCEL_GIT_REPO_SLUG}`: 'LateDreamXD/mcisee-next';
+	const branch = isVercel? import.meta.env.VERCEL_GIT_COMMIT_REF?.trim(): 'next';
 	let str = `Build at ${new Date(import.meta.env.VITE_BUILD_TIMESTAMP).toISOString()} `;
-	deployedSHA && (str += `with commit <a href="https://github.com/LateDreamXD/mcisee-next/commit/${deployedSHA}" target="_blank" rel="noopener"><code>${deployedSHA}</code></a>`);
+	deployedSHA && (str += `with commit <a href="https://github.com/${repo}/tree/${branch}/commit/${deployedSHA}" target="_blank" rel="noopener"><code>${deployedSHA}</code></a>`);
 	isVercel && (str += ` on Vercel`);
 	return str;
 });
