@@ -29,9 +29,8 @@ export const useI18nStore = defineStore('i18n', {
 		},
 		async getTranslations() {
 			const main_data = await fetchData(`${this.language}.json`, 'locales');
-			if(main_data.status === 404) return 404;
 			const fallback_data = await fetchData(`${this.fallbackLanguage}.json`, 'locales');
-			if(main_data.ok && fallback_data.ok) this.translations = {
+			this.translations = {
 				'language.lzh': '文言 (華夏)',
 				'language.zh-CN': '简体中文 (中国大陆)',
 				'language.zh-HK': '繁體中文 (中国香港)',
