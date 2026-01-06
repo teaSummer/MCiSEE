@@ -7,6 +7,8 @@ interface ViteTypeOptions {
 interface ImportMetaEnv {
 	readonly VITE_IS_PREVIEW: string;
 	readonly VITE_BUILD_TIMESTAMP: string;
+
+	readonly VITE_DATA_ENDPOINT: string;
 	
 	// https://vercel.com/docs/environment-variables/system-environment-variables
 	readonly VERCEL?: string;
