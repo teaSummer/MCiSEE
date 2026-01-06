@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, reactive, onBeforeMount } from 'vue';
 import { useRouter } from 'vue-router';
+import { fetchData } from '@/utils/fetch-data';
 
 const router = useRouter();
 const searchExternal = ref([] as Searchable[]);
@@ -29,9 +30,7 @@ defineProps<{
 }>();
 
 onBeforeMount(async() => {
-	searchExternal.value = await JSON.parse(
-		await (await fetch('https://mcisee.top/data/searchable.json')).text()
-	);
+	searchExternal.value = await fetchData('searchable.json');
 });
 </script>
 
@@ -46,7 +45,7 @@ onBeforeMount(async() => {
 			<span :class="$style['current-engine']">
 				<img :class="$style['icon']" :src="searchForm.from === 'local'?
 					'https://mcisee.top/assets/icon/favicon.ico':
-					`https://www.faviconextractor.com/favicon/${getSearch(searchForm.from)!.url.split('/')[2]}?larger=true`"
+					`https://www.faviconextractor.com/favicon/${getSearch(searchForm.from)?.url?.split('/')[2]}?larger=true`"
 					draggable="false" />
 				<v-icon :class="$style['angle']" name="pr-angle-right" />
 			</span>
@@ -75,7 +74,7 @@ onBeforeMount(async() => {
 						<button type="button"
 							@click="searchForm.from = s.abbr || s.title; showSearchSelectPopup = false;">
 							<img :class="$style['icon']"
-								:src="`https://www.faviconextractor.com/favicon/${s.url.split('/')[2]}?larger=true`"
+								:src="s.url? `https://www.faviconextractor.com/favicon/${s.url.split('/')[2]}?larger=true`: '/images/ODLS.png'"
 								draggable="false" />
 							{{ s.abbr || s.title }}
 						</button>
