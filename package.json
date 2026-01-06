@@ -1,5 +1,6 @@
 {
   "name": "mcisee-next",
+  "version": "latedream",
   "type": "module",
   "private": true,
   "scripts": {
@@ -7,7 +8,18 @@
     "build": "vite build",
     "preview": "vite preview"
   },
-  "author": "晚梦",
+  "author": {
+    "name": "晚梦",
+    "email": "xiaozhisans@qq.com",
+    "url": "https://about.latedream.cn"
+  },
+  "contributors": [
+    {
+      "name": "teaSummer",
+      "email": "dxlls520@gmail.com",
+      "url": "https://github.com/teaSummer"
+    }
+  ],
   "license": "ARR",
   "dependencies": {
     "pinia": "^3.0.4",
