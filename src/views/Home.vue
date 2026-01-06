@@ -14,7 +14,7 @@ const handleTouchEnd = (e: TouchEvent) => {
 </script>
 
 <template>
-	<main @wheel="handleWheel" @touchstart="handleTouchStart" @touchend="handleTouchEnd">
+	<main @wheel.self="handleWheel" @touchstart.self="handleTouchStart" @touchend.self="handleTouchEnd">
 		<span class="title-panel">
 			<img class="logo" src="/images/mcisee-uwu.png" :alt="$t('meta.alt')"
 				:title="$t('meta.title')" />
