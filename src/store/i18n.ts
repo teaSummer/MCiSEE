@@ -2,12 +2,15 @@ import { defineStore } from 'pinia';
 
 export const useI18nStore = defineStore('i18n', {
 	state: () => ({
-		language: navigator.language || 'en-US',
+		language: navigator.language || 'zh-CN',
+		fallbackLanguage: 'zh-CN',
 		translations: {} as Record<string, string>
 	}),
 	getters: {
 		/** get current language code */
 		getCurrentLanguage: (state) => state.language,
+		/** get fallback language code */
+		getFallbackLanguage: (state) => state.fallbackLanguage,
 		getTranslation: (state) => (key: string) => {
 			return state.translations?.[key] || '';
 		}
@@ -18,10 +21,16 @@ export const useI18nStore = defineStore('i18n', {
 			this.language = code;
 			this.init();
 		},
+		/** set fallback language code */
+		setFallbackLanguage(code: string) {
+			this.fallbackLanguage = code;
+			this.init();
+		},
 		async getTranslations() {
-			const response = await fetch(`https://mcisee.top/locales/${this.language}.json`);
-			if(response.status === 404) return 404;
-			if(response.ok) this.translations = {
+			const main_res = await fetch(`https://mcisee.top/locales/${this.language}.json`);
+			if(main_res.status === 404) return 404;
+			const fallback_res = await fetch(`https://mcisee.top/locales/${this.fallbackLanguage}.json`);
+			if(main_res.ok && fallback_res.ok) this.translations = {
 				'language.lzh': '文言 (華夏)',
 				'language.zh-CN': '简体中文 (中国大陆)',
 				'language.zh-HK': '繁體中文 (中国香港)',
@@ -30,7 +39,8 @@ export const useI18nStore = defineStore('i18n', {
 				'language.en-US': 'English',
 				'language.it-IT': 'Italiano',
 				'language.pt-BR': 'Português (Brasil)',
-				...(await response.json())?.data
+				...(await fallback_res.json())?.data,
+				...(await main_res.json())?.data
 			};
 		},
 		async init() {
