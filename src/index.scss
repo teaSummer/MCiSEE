@@ -57,13 +57,13 @@
 }
 
 @keyframes dropdown-popup {
-	0% {display: block; opacity: 0; transform: translateX(-60%) translateY(-10px);}
-	100% {display: block; opacity: 1; transform: translateX(-60%) translateY(0);}
+	0% {display: block; opacity: 0; transform: translateY(-10px);}
+	100% {display: block; opacity: 1; transform: translateY(0);}
 }
 
 @keyframes dropdown-hide {
-	0% {display: block; opacity: 1; transform: translateX(-60%) translateY(0);}
-	100% {display: none; opacity: 0; transform: translateX(-60%) translateY(-10px);}
+	0% {display: block; opacity: 1; transform: translateY(0);}
+	100% {display: none; opacity: 0; transform: translateY(-10px);}
 }
 
 :root {
@@ -276,8 +276,8 @@ footer {
 	opacity: 0.8;
 	font-size: 0.8rem;
 	.footer-left {
-		text-align: right;
-		float: right;
+		text-align: left;
+		float: left;
 	}
 	.footer-right {
 		text-align: right;
