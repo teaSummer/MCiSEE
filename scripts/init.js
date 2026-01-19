@@ -8,7 +8,18 @@ const downloadMirrorUrl = 'https://ghfast.top/<T>';
 const fIconUrl = 'https://www.faviconextractor.com/favicon/<T>?larger=true';
 const ghRepoMirrorUrl = '';
 
-const checkDate = (date = new Date()) => (date.getDate() == 1 && date.getMonth() + 1 == 4) ? true : false;
+/**
+ * 检查日期是否为当前日期
+ * @param {string | Date} date 日期字符串或日期对象
+ * @param {boolean | undefined} onlyMonth 是否仅检查月份
+ * @param {Date | undefined} now 当前日期对象
+ * @returns {boolean} 是否为当前日期
+ */
+const checkDate = (date, onlyMonth = false, now = new Date()) => {
+    if(typeof date == 'string') date = new Date(date);
+    if(onlyMonth) return (date.getMonth() + 1 == now.getMonth() + 1);
+    return (date.getDate() == now.getDate() && date.getMonth() + 1 == now.getMonth() + 1);
+};
 const fIconGet = ((url, p) => '<img src="' + (p ? p : fIconUrl.replace('<T>', url.replace(/https?:\/\//, '').replace(/\/.*/, ''))) + '" width="16" height="16" loading="lazy"/> ')
 const downloadSVG = '<span class="svg right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M320 336h76c55 0 100-21.21 100-75.6s-53-73.47-96-75.6C391.11 99.74 329 48 256 48c-69 0-113.44 45.79-128 91.2-60 5.7-112 35.88-112 98.4S70 336 136 336h56M192 400.1l64 63.9 64-63.9M256 224v224.03" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="56"></path></svg></span>';
 const downloadMirror = ((url) => $('.github-proxy').is(':checked') && String(url).startsWith('https://github.com/') ? downloadMirrorUrl.replace('<T>', url) : url); // 针对中国大陆地区 | for Chinese Mainland
@@ -162,8 +173,38 @@ const forum = read('forum');
 
 // 愚人节彩蛋
 const cfg = read("scripts/config/apf.cfg.json", true);
-let isapf = checkDate() || cfg.testMode;
+let isapf = checkDate('4/1') || cfg.testMode;
 import("./module/apf.js").then(apf => (globalThis.apf = apf, apf.main()));
+
+// 粒子效果
+(async() => {
+    const Particle = (await import("./module/particle.js")).default;
+
+    /** @type {null | import("./module/particle.js").default} */
+    let particle = null;
+
+    function initParticle() {
+        // snow
+        if(checkDate('11', true) || checkDate('12', true) || checkDate('1', true))
+            particle = new Particle('snow', {images: [
+                'assets/res/particles/snow0.png',
+                'assets/res/particles/snow1.png',
+                'assets/res/particles/snow2.png'
+            ], number: 64});
+    }
+
+    $(() => {const snowCheckbox = document.getElementById('let-it-snow');
+    snowCheckbox.checked && initParticle();
+    snowCheckbox.addEventListener('change', () => {
+        if (snowCheckbox.checked) {
+            initParticle();
+        } else {
+            particle && particle.destroy();
+            particle = null;
+        }
+    });});
+    
+})();
 
 // 版本
 const getVersion = ((content, type) => {
