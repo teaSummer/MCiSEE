@@ -7,7 +7,7 @@ export default class Particle {
 	 * @param {object} param1 粒子效果参数
 	 * @param {number | undefined} param1.speed 粒子移动速度
 	 * @param {string[]} param1.images 粒子图片数组
-	 * @param {number | undefined} param1.number 粒子数量 (大于30按30计算)
+	 * @param {number | undefined} param1.number 粒子数量
 	 */
 	constructor(id, { speed = 30, images, number = 64 }) {
 		this.id = id;
@@ -34,12 +34,12 @@ export default class Particle {
 			});
 		}
 		this.animate();
+		this.node.id = this.id;
 		document.body.appendChild(this.node);
 	}
 
 	createContainer() {
 		const node = document.createElement('div');
-		node.id = this.id;
 		this.node = node;
 		const shadowRoot = node.attachShadow({ mode: 'open' });
 		shadowRoot.innerHTML = `
