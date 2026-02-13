@@ -25,8 +25,8 @@
     {
       "title": "Zalith Launcher",
       "abbr": "zl1",
-      "download": "https://github.com/ZalithLauncher/ZalithLauncher/releases/download/141200/ZalithLauncher-141200.apk",
-      "version": "141200",
+      "download": "https://github.com/ZalithLauncher/ZalithLauncher/releases/download/141200/ZalithLauncher-1.4.1.2.apk",
+      "version": "1.4.1.2",
       "github": "https://github.com/ZalithLauncher/ZalithLauncher",
       "url": "https://zalithlauncher.cn/"
     },
@@ -76,13 +76,13 @@
     {
       "title": "Hello Minecraft! Launcher",
       "abbr": "HMCL",
-      "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.9.2/HMCL-3.9.2.exe",
-      "version": "3.9.2",
+      "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.10.3/HMCL-3.10.3.exe",
+      "version": "3.10.3",
       "github": "https://github.com/HMCL-dev/HMCL",
       "url": "https://hmcl.huangyuhui.net",
       "dev": {
-        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.10.3/HMCL-3.10.3.exe",
-        "version": "3.10.3"
+        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.11.0.326/HMCL-3.11.0.326.exe",
+        "version": "3.11.0.326"
       }
     },
     {
@@ -122,7 +122,7 @@
     {
       "title": "Plain Craft Launcher 2 Community Edition",
       "abbr": "PCL2 社区版",
-      "download": "https://github.com/PCL-Community/PCL2-CE/releases/download/2.14.2/PCL2_CE_Release_x64.exe",
+      "download": "https://github.com/PCL-Community/PCL2-CE/releases/download/v2.14.2/PCL2_CE_Release_x64.exe",
       "version": "2.14.2",
       "github": "https://github.com/PCL-Community/PCL2-CE",
       "dev": {
@@ -206,12 +206,12 @@
     {
       "title": "Hello Minecraft! Launcher",
       "abbr": "HMCL",
-      "download": "https://github.com/HMCL-dev/HMCL/releases/download/release-3.6.18/HMCL-3.6.18.sh",
-      "version": "3.6.18",
+      "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.10.3/HMCL-3.10.3.sh",
+      "version": "3.10.3",
       "github": "https://github.com/HMCL-dev/HMCL",
       "url": "https://hmcl.huangyuhui.net",
       "dev": {
-        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.8.1/HMCL-3.8.1.sh",
+        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.11.0.326/HMCL-3.11.0.326.sh",
         "version": "3.8.1"
       }
     },
@@ -275,13 +275,13 @@
     {
       "title": "Hello Minecraft! Launcher",
       "abbr": "HMCL",
-      "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.9.2/HMCL-3.9.2.sh",
-      "version": "3.9.2",
+      "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.10.3/HMCL-3.10.3.sh",
+      "version": "3.10.3",
       "github": "https://github.com/HMCL-dev/HMCL",
       "url": "https://hmcl.huangyuhui.net",
       "dev": {
-        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.10.3/HMCL-3.10.3.sh",
-        "version": "3.10.3"
+        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.11.0.326/HMCL-3.11.0.326.sh",
+        "version": "3.11.0.326"
       }
     },
     {

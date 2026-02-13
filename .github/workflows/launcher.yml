@@ -24,8 +24,8 @@ jobs:
             github: https://github.com/FCL-Team/FoldCraftLauncher
           - abbr: XMCL
             github: https://github.com/Voxelum/x-minecraft-launcher
-          - abbr: zl1
-            github: https://github.com/ZalithLauncher/ZalithLauncher
+          # - abbr: zl1
+          #   github: https://github.com/ZalithLauncher/ZalithLauncher
           - abbr: zl2
             github: https://github.com/ZalithLauncher/ZalithLauncher2
           - abbr: ColorMC
