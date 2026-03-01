@@ -458,6 +458,11 @@
         "desc": "将皮肤转换为基岩版的3D不死图腾"
       },
       {
+        "name": "基岩版唱片替换工具",
+        "url": "https://www.mcneko.com/tools/cdpack/",
+        "desc": "将原版唱片替换成自己的音乐"
+      },
+      {
         "name": "Midi音乐转mcpack",
         "url": "https://dislink.github.io/midi2mcfunction/",
         "desc": "Midi音乐转为播放音乐的mcpack行为包"

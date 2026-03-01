@@ -3,8 +3,8 @@
     {
       "title": "Fold Craft Launcher",
       "abbr": "FCL",
-      "download": "https://github.com/FCL-Team/FoldCraftLauncher/releases/download/1.2.8.5/FCL-release-1.2.8.5-all.apk",
-      "version": "1.2.8.5",
+      "download": "https://github.com/FCL-Team/FoldCraftLauncher/releases/download/1.2.8.8/FCL-release-1.2.8.8-all.apk",
+      "version": "1.2.8.8",
       "github": "https://github.com/FCL-Team/FoldCraftLauncher",
       "url": "https://fcl-team.github.io"
     },
@@ -33,8 +33,8 @@
     {
       "title": "Zalith Launcher 2",
       "abbr": "zl2",
-      "download": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.0.3/ZalithLauncher-2.0.3.apk",
-      "version": "2.0.3",
+      "download": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.1.1/ZalithLauncher-2.1.1.apk",
+      "version": "2.1.1",
       "github": "https://github.com/ZalithLauncher/ZalithLauncher2",
       "url": "https://zalithlauncher.cn/"
     },
@@ -81,15 +81,15 @@
       "github": "https://github.com/HMCL-dev/HMCL",
       "url": "https://hmcl.huangyuhui.net",
       "dev": {
-        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.11.0.326/HMCL-3.11.0.326.exe",
-        "version": "3.11.0.326"
+        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.11.2/HMCL-3.11.2.exe",
+        "version": "3.11.2"
       }
     },
     {
       "title": "Plain Craft Launcher 2",
       "abbr": "PCL2",
       "download": "https://github.com/Hex-Dragon/PCL2/raw/refs/heads/main/%E6%9C%80%E6%96%B0%E6%AD%A3%E5%BC%8F%E7%89%88.zip",
-      "version": "2.11.2",
+      "version": "2.12.2",
       "github": "https://github.com/Hex-Dragon/PCL2",
       "url": "https://afdian.com/a/LTCat"
     },
@@ -107,23 +107,23 @@
     },
     {
       "title": "ColorMC",
-      "download": "https://github.com/Coloryr/ColorMC/releases/download/a36.2025.4.15-1/colormc-windows-a36-x86_64.zip",
-      "version": "a36.2025.4.15-1",
+      "download": "https://github.com/Coloryr/ColorMC/releases/download/ersion-40-202602028/colormc-windows-a36-x86_64.zip",
+      "version": "ersion-40-202602028",
       "github": "https://github.com/Coloryr/ColorMC"
     },
     {
       "title": "X Minecraft Launcher",
       "abbr": "XMCL",
-      "download": "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.54.3/xmcl-0.54.3-win32-x64.zip",
-      "version": "0.54.3",
+      "download": "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.54.4/xmcl-0.54.4-win32-x64.zip",
+      "version": "0.54.4",
       "github": "https://github.com/voxelum/x-minecraft-launcher",
       "url": "https://xmcl.app"
     },
     {
       "title": "Plain Craft Launcher 2 Community Edition",
       "abbr": "PCL2 社区版",
-      "download": "https://github.com/PCL-Community/PCL2-CE/releases/download/v2.14.2/PCL2_CE_Release_x64.exe",
-      "version": "2.14.2",
+      "download": "https://github.com/PCL-Community/PCL2-CE/releases/download/v2.14.3/PCL2_CE_Release_x64.exe",
+      "version": "2.14.3",
       "github": "https://github.com/PCL-Community/PCL2-CE",
       "dev": {
         "download": "https://github.com/PCL-Community/PCL2-CE/releases/download/v2.14.0-beta.4/PCL2_CE_Beta_x64.exe",
@@ -177,8 +177,8 @@
     {
       "title": "Prism Launcher",
       "abbr": "Prism",
-      "download": "https://github.com/PrismLauncher/PrismLauncher/releases/download/10.0.2/PrismLauncher-Windows-MSVC-Setup-10.0.2.exe",
-      "version": "10.0.2",
+      "download": "https://github.com/PrismLauncher/PrismLauncher/releases/download/10.0.5/PrismLauncher-Windows-MSVC-Setup-10.0.5.exe",
+      "version": "10.0.5",
       "github": "https://github.com/PrismLauncher/PrismLauncher",
       "url": "https://prismlauncher.org"
     },
@@ -211,14 +211,14 @@
       "github": "https://github.com/HMCL-dev/HMCL",
       "url": "https://hmcl.huangyuhui.net",
       "dev": {
-        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.11.0.326/HMCL-3.11.0.326.sh",
+        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.11.2/HMCL-3.11.2.sh",
         "version": "3.8.1"
       }
     },
     {
       "title": "ColorMC",
-      "download": "https://github.com/Coloryr/ColorMC/releases/download/a36.2025.4.15-1/colormc-macos-a36-x86_64.zip",
-      "version": "a36.2025.4.15-1",
+      "download": "https://github.com/Coloryr/ColorMC/releases/download/ersion-40-202602028/colormc-macos-a36-x86_64.zip",
+      "version": "ersion-40-202602028",
       "github": "https://github.com/Coloryr/ColorMC"
     },
     {
@@ -252,8 +252,8 @@
     {
       "title": "Prism Launcher",
       "abbr": "Prism",
-      "download": "https://github.com/PrismLauncher/PrismLauncher/releases/download/10.0.2/PrismLauncher-macOS-10.0.2.zip",
-      "version": "10.0.2",
+      "download": "https://github.com/PrismLauncher/PrismLauncher/releases/download/10.0.5/PrismLauncher-macOS-10.0.5.zip",
+      "version": "10.0.5",
       "github": "https://github.com/PrismLauncher/PrismLauncher",
       "url": "https://prismlauncher.org"
     },
@@ -280,21 +280,21 @@
       "github": "https://github.com/HMCL-dev/HMCL",
       "url": "https://hmcl.huangyuhui.net",
       "dev": {
-        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.11.0.326/HMCL-3.11.0.326.sh",
-        "version": "3.11.0.326"
+        "download": "https://github.com/HMCL-dev/HMCL/releases/download/v3.11.2/HMCL-3.11.2.sh",
+        "version": "3.11.2"
       }
     },
     {
       "title": "ColorMC",
-      "download": "https://github.com/Coloryr/ColorMC/releases/download/a36.2025.4.15-1/colormc-linux-a36-x86_64.AppImage",
-      "version": "a36.2025.4.15-1",
+      "download": "https://github.com/Coloryr/ColorMC/releases/download/ersion-40-202602028/colormc-linux-a36-x86_64.AppImage",
+      "version": "ersion-40-202602028",
       "github": "https://github.com/Coloryr/ColorMC"
     },
     {
       "title": "X Minecraft Launcher",
       "abbr": "XMCL",
-      "download": "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.54.3/xmcl-0.54.3-x86_64.AppImage",
-      "version": "0.54.3",
+      "download": "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.54.4/xmcl-0.54.4-x86_64.AppImage",
+      "version": "0.54.4",
       "github": "https://github.com/voxelum/x-minecraft-launcher",
       "url": "https://xmcl.app"
     },
@@ -320,8 +320,8 @@
     {
       "title": "Prism Launcher",
       "abbr": "Prism",
-      "download": "https://github.com/PrismLauncher/PrismLauncher/releases/download/10.0.2/PrismLauncher-Linux-x86_64.AppImage",
-      "version": "10.0.2",
+      "download": "https://github.com/PrismLauncher/PrismLauncher/releases/download/10.0.5/PrismLauncher-Linux-x86_64.AppImage",
+      "version": "10.0.5",
       "github": "https://github.com/PrismLauncher/PrismLauncher",
       "url": "https://prismlauncher.org"
     }
