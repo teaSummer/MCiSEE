@@ -3,7 +3,7 @@
   "data": {
     "meta.alt": "Tudo o que se vê é Minecraft",
     "meta.title": "Tudo o que se vê é Minecraft",
-    "meta.description": "TUDO O QUE SE VÊ É MINECRAFT, FACILITAR A OBTENÇÃO DE RECURSOS DE MC!\n",
+    "meta.description": "TUDO O QUE SE VÊ É MINECRAFT, FACILITAR A OBTENÇÃO DE RECURSOS DE MC!",
     "head.title": "${notificationCount} Tudo o que se vê é Minecraft",
     "introduction.title": "Tudo o que se vê é <i>Minecraft</i>",
     "introduction.1": "O jogador pode desde aqui escavar Minecraft frequentemente usando recursos, por exemplo, começar etc.",
@@ -67,10 +67,8 @@
     "lightTheme": "Tema claro",
     "darkTheme": "Tema escuro",
     "earlyTheme": "Tema iniciar",
-    "ellipsis": ". . . . . .",
     "startDownloading": "A transferência vai começar:",
     "statistics": "Estatísticas",
-    "visitorCount": "Número de visitas",
     "contributors": "Contribuintes",
     "starsOverTime": "GitHub Gráfico histórico das estrelas\n",
     "thankDonation": "Obrigado pela doação",
@@ -88,6 +86,8 @@
     "launcher.release.latest": "${downloadSVG}{download}{latest}{release}",
     "launcher.preRelease": "${downloadSVG}{download}{preRelease}${linkDevVersion}",
     "launcher.preRelease.latest": "${downloadSVG}{download}{latest}{preRelease}",
-    "ICP": ""
+    "cleanUrl": "Limpar URL",
+    "ICP": "",
+    "checkUpdate": "Verificar atualizações do inicializador"
   }
 }
