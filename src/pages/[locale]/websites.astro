@@ -1,0 +1,32 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { SiteSearch } from '@/components/websites/SiteSearch';
+import { getUtilityWebsites } from '@/lib/data';
+import { importTranslations, t } from '@/i18n/utils';
+import { defaultLocale, locales } from '@/i18n/config';
+import type { Locale } from '@/i18n/config';
+
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale } }));
+}
+
+const locale = (Astro.params.locale as Locale) ?? defaultLocale;
+const translations = await importTranslations(locale);
+const categories = getUtilityWebsites();
+---
+
+<Layout
+  title={`${t(translations, 'utilityWebsite')} - MCiSEE`}
+  description={t(translations, 'meta.description')}
+  locale={locale}
+  translations={translations}
+  navCurrent="websites"
+>
+  <div class="border-b border-border/50 bg-muted/30 py-8">
+    <div class="mx-auto max-w-6xl px-4">
+      <h1 class="text-3xl font-bold">{t(translations, 'utilityWebsite')}</h1>
+      <p class="mt-2 text-muted-foreground">{t(translations, 'searchableDirect')}</p>
+    </div>
+  </div>
+  <SiteSearch client:load categories={categories} translations={translations} />
+</Layout>

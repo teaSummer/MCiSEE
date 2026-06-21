@@ -1,0 +1,39 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { ThemeSettings } from '@/components/settings/ThemeSettings';
+import { GeneralSettings } from '@/components/settings/GeneralSettings';
+import AboutSection from '@/components/settings/AboutSection.astro';
+import { importTranslations, t } from '@/i18n/utils';
+import { defaultLocale, locales } from '@/i18n/config';
+import type { Locale } from '@/i18n/config';
+
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale } }));
+}
+
+const locale = (Astro.params.locale as Locale) ?? defaultLocale;
+const translations = await importTranslations(locale);
+---
+
+<Layout
+  title={`${t(translations, 'config')} - MCiSEE`}
+  description={t(translations, 'meta.description')}
+  locale={locale}
+  translations={translations}
+  navCurrent="settings"
+>
+  <div class="border-b border-border/50 bg-muted/30 py-8">
+    <div class="mx-auto max-w-4xl px-4">
+      <h1 class="text-3xl font-bold">{t(translations, 'config')}</h1>
+    </div>
+  </div>
+  <div class="mx-auto max-w-4xl px-4 py-8">
+    <div class="grid gap-6 md:grid-cols-2">
+      <ThemeSettings client:load translations={translations} />
+      <GeneralSettings client:load translations={translations} />
+    </div>
+    <div class="mt-6">
+      <AboutSection translations={translations} />
+    </div>
+  </div>
+</Layout>

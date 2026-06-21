@@ -1,0 +1,17 @@
+---
+import type { Translations } from '@/i18n/utils';
+import { t } from '@/i18n/utils';
+
+export interface Props {
+  translations: Translations;
+}
+
+const { translations } = Astro.props;
+---
+
+<section class="rounded-xl border border-border bg-card p-6 shadow-sm">
+  <h3 class="mb-4 text-lg font-semibold">{t(translations, 'meta.title')}</h3>
+  <p class="text-muted-foreground" set:html={t(translations, 'introduction.1')} />
+  <p class="mt-4 text-muted-foreground" set:html={t(translations, 'introduction.2')} />
+  <p class="mt-4 text-sm text-muted-foreground" set:html={t(translations, 'credit')} />
+</section>

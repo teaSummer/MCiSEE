@@ -1,0 +1,34 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { ForumList } from '@/components/forums/ForumList';
+import { getForums } from '@/lib/data';
+import { importTranslations, t } from '@/i18n/utils';
+import { defaultLocale, locales } from '@/i18n/config';
+import type { Locale } from '@/i18n/config';
+
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale } }));
+}
+
+const locale = (Astro.params.locale as Locale) ?? defaultLocale;
+const translations = await importTranslations(locale);
+const categories = getForums();
+---
+
+<Layout
+  title={`${t(translations, 'forum')} - MCiSEE`}
+  description={t(translations, 'meta.description')}
+  locale={locale}
+  translations={translations}
+  navCurrent="forums"
+>
+  <div class="border-b border-border/50 bg-muted/30 py-8">
+    <div class="mx-auto max-w-6xl px-4">
+      <h1 class="text-3xl font-bold">{t(translations, 'forum')}</h1>
+      <p class="mt-2 text-muted-foreground">{t(translations, 'introduction.3')}</p>
+    </div>
+  </div>
+  <div class="mx-auto max-w-6xl px-4 py-8">
+    <ForumList client:load categories={categories} />
+  </div>
+</Layout>

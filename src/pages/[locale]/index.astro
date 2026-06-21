@@ -1,0 +1,32 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Hero from '@/components/home/Hero.astro';
+import { Announcement } from '@/components/home/Announcement';
+import DeviceEntry from '@/components/home/DeviceEntry.astro';
+import { QuickSearch } from '@/components/search/QuickSearch';
+import { getSearchables } from '@/lib/data';
+import { importTranslations, t } from '@/i18n/utils';
+import { defaultLocale, locales } from '@/i18n/config';
+import type { Locale } from '@/i18n/config';
+
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale } }));
+}
+
+const locale = (Astro.params.locale as Locale) ?? defaultLocale;
+const translations = await importTranslations(locale);
+const searchables = getSearchables();
+---
+
+<Layout
+  title={t(translations, 'meta.title')}
+  description={t(translations, 'meta.description')}
+  locale={locale}
+  translations={translations}
+  navCurrent="home"
+>
+  <Hero translations={translations} />
+  <Announcement client:load translations={translations} />
+  <QuickSearch client:load searchables={searchables} translations={translations} locale={locale} />
+  <DeviceEntry translations={translations} />
+</Layout>

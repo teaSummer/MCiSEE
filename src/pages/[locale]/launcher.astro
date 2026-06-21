@@ -1,0 +1,42 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { LauncherPageClient } from '@/components/launcher/LauncherPageClient';
+import { supportedDevices, getAllLaunchers } from '@/lib/data';
+import { importTranslations, t } from '@/i18n/utils';
+import { defaultLocale, locales } from '@/i18n/config';
+import type { Locale } from '@/i18n/config';
+import type { Device } from '@/types/data';
+
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale } }));
+}
+
+const locale = (Astro.params.locale as Locale) ?? defaultLocale;
+const translations = await importTranslations(locale);
+
+const rawDevice = Astro.url.searchParams.get('device');
+const initialDevice = rawDevice as Device | null;
+const launchersByDevice = getAllLaunchers();
+---
+
+<Layout
+  title={`${t(translations, 'launcher')} - MCiSEE`}
+  description={t(translations, 'meta.description')}
+  locale={locale}
+  translations={translations}
+  navCurrent="launcher"
+>
+  <div class="border-b border-border/50 bg-muted/30 py-8">
+    <div class="mx-auto max-w-6xl px-4">
+      <h1 class="text-3xl font-bold">{t(translations, 'launcher')}</h1>
+      <p class="mt-2 text-muted-foreground" set:html={t(translations, 'launcherOnlyJavaEdition')} />
+    </div>
+  </div>
+  <LauncherPageClient
+    client:load
+    devices={supportedDevices}
+    launchersByDevice={launchersByDevice}
+    initialDevice={initialDevice}
+    translations={translations}
+  />
+</Layout>

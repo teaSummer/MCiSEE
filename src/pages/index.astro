@@ -1,0 +1,27 @@
+---
+import { defaultLocale, locales } from '@/i18n/config';
+
+const supportedLocales = locales;
+---
+
+<script is:inline define:vars={{ supportedLocales, defaultLocale }}>
+  const navLangs = (navigator.languages || [navigator.language || defaultLocale]);
+  let matched = defaultLocale;
+  for (const lang of navLangs) {
+    const exact = supportedLocales.find((l) => l.toLowerCase() === lang.toLowerCase());
+    if (exact) {
+      matched = exact;
+      break;
+    }
+    const base = lang.toLowerCase().split('-')[0];
+    const fuzzy = supportedLocales.find((l) => l.toLowerCase().startsWith(base + '-'));
+    if (fuzzy) {
+      matched = fuzzy;
+      break;
+    }
+  }
+  const target = '/' + matched + '/';
+  if (window.location.pathname !== target) {
+    window.location.replace(target + window.location.search + window.location.hash);
+  }
+</script>

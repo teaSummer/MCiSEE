@@ -1,0 +1,46 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  canonical?: string;
+}
+
+const { title, description, image, canonical } = Astro.props;
+const site = Astro.site?.toString().replace(/\/$/, '') ?? 'https://mcisee.top';
+const ogImage = image ? (image.startsWith('http') ? image : `${site}${image}`) : '';
+---
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>{title}</title>
+{description && <meta name="description" content={description} />}
+
+<link rel="manifest" href="/manifest.json" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="application-name" content="MCiSEE" />
+<meta name="apple-mobile-web-app-title" content="MCiSEE" />
+<meta name="theme-color" content="#92c3fe" />
+<meta name="msapplication-navbutton-color" content="#92c3fe" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="msapplication-starturl" content="/" />
+<link rel="shortcut icon" sizes="128x128" href="/assets/icon/favicon.ico" type="image/x-icon" />
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/icon/appiconRound.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="192x192" href="/assets/icon/appiconRound.png" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content={title} />
+{description && <meta property="og:description" content={description} />}
+{ogImage && <meta property="og:image" content={ogImage} />}
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content={title} />
+{canonical && <meta property="og:url" content={canonical} />}
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+{description && <meta name="twitter:description" content={description} />}
+{ogImage && <meta name="twitter:image" content={ogImage} />}
+{canonical && <link rel="canonical" href={canonical} />}

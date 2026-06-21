@@ -1,0 +1,54 @@
+---
+import type { Locale } from '@/i18n/config';
+import { defaultLocale } from '@/i18n/config';
+import { importTranslations, t } from '@/i18n/utils';
+
+export interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const translations = await importTranslations(locale);
+---
+
+<footer class="border-t border-border/50 bg-muted/30 py-12 mt-12">
+  <div class="mx-auto max-w-7xl px-4">
+    <div class="grid gap-8 md:grid-cols-2">
+      <div>
+        <h3 class="mb-4 text-lg font-semibold" set:html={t(translations, 'contributors')} />
+        <a href="https://github.com/teaSummer/MCiSEE/graphs/contributors" target="_blank" rel="noopener noreferrer">
+          <img
+            src="https://contrib.rocks/image?repo=teaSummer/MCiSEE"
+            alt={t(translations, 'contributors')}
+            loading="lazy"
+            class="rounded-lg"
+          />
+        </a>
+      </div>
+      <div>
+        <h3 class="mb-4 text-lg font-semibold" set:html={t(translations, 'starsOverTime')} />
+        <a href="https://starchart.cc/teaSummer/MCiSEE" target="_blank" rel="noopener noreferrer">
+          <img
+            src="https://starchart.cc/teaSummer/MCiSEE.svg?variant=adaptive"
+            alt={t(translations, 'starsOverTime')}
+            loading="lazy"
+            class="rounded-lg"
+          />
+        </a>
+      </div>
+    </div>
+
+    <div class="mt-8 flex flex-col items-center gap-2 text-center text-sm text-muted-foreground">
+      <p set:html={t(translations, 'ICP')} />
+      <p>
+        <a href="https://github.com/teaSummer/MCiSEE" target="_blank" rel="noopener noreferrer" class="hover:text-foreground">GitHub</a>
+        {' | '}
+        <a href="https://github.com/teaSummer/MCiSEE#贡献教程" target="_blank" rel="noopener noreferrer" set:html={t(translations, 'contributeForThisProject')} />
+        {' | '}
+        <a href="https://afdian.com/a/MCiSEE" target="_blank" rel="noopener noreferrer" set:html={t(translations, 'afdian')} />
+      </p>
+      <p set:html={t(translations, 'license.1') + ' <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC-SA 4.0</a> ' + t(translations, 'license.2')} />
+      <p set:html={t(translations, 'credit')} />
+    </div>
+  </div>
+</footer>

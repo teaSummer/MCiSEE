@@ -1,0 +1,42 @@
+---
+import '@/styles/global.css';
+import SEO from '@/components/seo/SEO.astro';
+import { Navbar } from '@/components/layout/Navbar';
+import { ThemeProvider } from '@/components/theme/ThemeProvider';
+import { I18nProvider } from '@/components/i18n/I18nProvider';
+import Footer from '@/components/layout/Footer.astro';
+import { SnowEffect } from '@/components/effects/SnowEffect';
+import type { Locale } from '@/i18n/config';
+import type { Translations } from '@/i18n/utils';
+
+export interface Props {
+  title: string;
+  description?: string;
+  locale: Locale;
+  translations: Translations;
+  navCurrent?: string;
+}
+
+const { title, description, locale, translations, navCurrent } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site).toString();
+---
+
+<!DOCTYPE html>
+<html lang={locale} dir="auto">
+  <head>
+    <SEO title={title} description={description} canonical={canonical} />
+  </head>
+  <body class="min-h-screen bg-background text-foreground antialiased">
+    <div class="background-layer" aria-hidden="true"></div>
+    <ThemeProvider client:load>
+      <I18nProvider translations={translations}>
+        <Navbar client:load locale={locale} current={navCurrent} translations={translations} />
+        <main class="pt-16">
+          <slot />
+        </main>
+        <Footer locale={locale} />
+      </I18nProvider>
+    </ThemeProvider>
+    <SnowEffect client:only="react" />
+  </body>
+</html>

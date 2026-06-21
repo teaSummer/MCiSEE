@@ -1,0 +1,29 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { importTranslations, t } from '@/i18n/utils';
+import { defaultLocale } from '@/i18n/config';
+
+const locale = Astro.currentLocale ?? defaultLocale;
+const translations = await importTranslations(locale);
+---
+
+<Layout
+  title={`${t(translations, 'notFound.title')} - MCiSEE`}
+  description={t(translations, 'meta.description')}
+  locale={locale}
+  translations={translations}
+>
+  <div class="flex min-h-[60vh] flex-col items-center justify-center px-4 py-20 text-center">
+    <h1 class="text-6xl font-bold tracking-tight text-primary md:text-8xl">404</h1>
+    <p class="mt-4 text-2xl font-semibold">{t(translations, 'notFound.title')}</p>
+    <p class="mt-2 max-w-md text-muted-foreground">
+      {t(translations, 'notFound.description')}
+    </p>
+    <a
+      href={`/${locale}/`}
+      class="mt-8 inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+    >
+      {t(translations, 'notFound.backHome')}
+    </a>
+  </div>
+</Layout>

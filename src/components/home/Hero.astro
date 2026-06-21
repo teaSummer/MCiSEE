@@ -1,0 +1,44 @@
+---
+import type { Translations } from '@/i18n/utils';
+import { t } from '@/i18n/utils';
+import { defaultLocale } from '@/i18n/config';
+
+export interface Props {
+  translations: Translations;
+}
+
+const { translations } = Astro.props;
+const locale = Astro.currentLocale ?? defaultLocale;
+---
+
+<section class="relative overflow-hidden py-20 md:py-32">
+  <div class="mx-auto max-w-4xl px-4 text-center">
+    <h1
+      class="mb-6 text-4xl font-bold tracking-tight md:text-6xl"
+      set:html={t(translations, 'introduction.title')}
+    />
+    <p class="mb-4 text-lg text-muted-foreground" set:html={t(translations, 'introduction.1')} />
+    <p class="mb-8 text-lg text-muted-foreground" set:html={t(translations, 'introduction.2')} />
+    <p class="text-muted-foreground" set:html={t(translations, 'introduction.3')} />
+
+    <div class="mt-8 flex justify-center gap-4">
+      <a
+        href="https://github.com/teaSummer/MCiSEE"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+      >
+        <svg viewBox="0 0 16 16" fill="currentColor" class="h-4 w-4">
+          <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z" />
+        </svg>
+        Star on GitHub
+      </a>
+      <a
+        href={`/${locale}/launcher`}
+        class="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-5 py-2.5 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
+      >
+        {t(translations, 'launcher')}
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,45 @@
+---
+import { supportedDevices } from '@/lib/data';
+import type { Translations } from '@/i18n/utils';
+import { t } from '@/i18n/utils';
+import { defaultLocale } from '@/i18n/config';
+import { Smartphone, Monitor, Laptop } from 'lucide-react';
+
+export interface Props {
+  translations: Translations;
+}
+
+const { translations } = Astro.props;
+const locale = Astro.currentLocale ?? defaultLocale;
+
+const iconMap: Record<string, typeof Smartphone> = {
+  Android: Smartphone,
+  iOS: Smartphone,
+  Windows: Monitor,
+  macOS: Laptop,
+  Linux: Laptop,
+};
+---
+
+<section class="mx-auto max-w-6xl px-4 py-12">
+  <h2 class="mb-8 text-center text-2xl font-semibold">{t(translations, 'device')}</h2>
+  <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+    {
+      supportedDevices.map((device) => {
+        const Icon = iconMap[device.key] ?? Monitor;
+        return (
+          <a
+            href={`/${locale}/launcher?device=${device.key}`}
+            class="group flex flex-col items-center gap-3 rounded-xl border border-border bg-card p-6 text-card-foreground shadow-sm transition-all hover:border-primary/50 hover:shadow-md"
+          >
+            <Icon className="h-8 w-8 text-primary transition-transform group-hover:scale-110" />
+            <div class="text-center">
+              <div class="font-medium">{device.label}</div>
+              <div class="text-sm text-muted-foreground">{t(translations, device.tipKey)}</div>
+            </div>
+          </a>
+        );
+      })
+    }
+  </div>
+</section>
