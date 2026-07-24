@@ -634,4 +634,22 @@ $(() => {
 
     // init debug
     import("./module/debug.js").then(d => globalThis.debug = d.debug);
+
+    // UWU
+    (async () => {
+        const uwu = await import('./module/uwu.js');
+        const settingItem = document.getElementById('uwu');
+        if(localStorage.uwu == 1) {
+            settingItem.toggleAttribute('checked');
+            uwu.apply();
+        }
+
+        settingItem.addEventListener('change', () => {
+            let status = 1, action = 'apply';
+            if(settingItem.hasAttribute('checked'))
+                status = 0, action = 'cancel';
+            localStorage.uwu = status;
+            uwu[action]();
+        });
+    })();
 });
