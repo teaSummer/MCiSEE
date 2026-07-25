@@ -17,17 +17,18 @@ UWU_LOGO.children('img').css({
 	// width: '100%',
 	height: '100%'
 });
-const tooltip = UWU_LOGO.children('sup');
-tooltip.hide();
-UWU_LOGO.mouseenter(() => tooltip.fadeToggle('fast'))
-		.mouseleave(() => tooltip.fadeToggle('fast'));
 
 export const apply = () => {
 	$('html').addClass('uwu');
 	$('.introduction').css({ position: 'relative', width: '100%' }).append(UWU_LOGO);
+
+	const tooltip = UWU_LOGO.children('sup');
+	tooltip.hide();
+	UWU_LOGO.mouseenter(() => tooltip.fadeToggle('fast'))
+			.mouseleave(() => tooltip.fadeToggle('fast'));
 }
 
 export const cancel = () => {
 	$('html').removeClass('uwu');
-	UWU_LOGO.remove();
+	$('.introduction').children('.uwu-logo').remove();
 }

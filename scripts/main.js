@@ -646,7 +646,7 @@ $(() => {
 
         settingItem.addEventListener('change', () => {
             let status = 1, action = 'apply';
-            if(settingItem.hasAttribute('checked'))
+            if(!settingItem.checked)
                 status = 0, action = 'cancel';
             localStorage.uwu = status;
             uwu[action]();
