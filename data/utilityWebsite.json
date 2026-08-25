@@ -288,6 +288,11 @@
         "desc": "实时最佳人气服务器列表，面向全球"
       },
       {
+        "name": "ServerBuddy",
+        "url": "https://serverbuddy.net/",
+        "desc": "全球 Java/基岩版服务器发现平台，提供实时状态、玩家数历史、在线率、MOTD 与版本历史"
+      },
+      {
         "name": "mcl.ist",
         "url": "https://mcl.ist",
         "desc": "面向全球"
