@@ -140,6 +140,14 @@
       "url": "https://corona.studio/lx"
     },
     {
+      "title": "Axolotl Launcher",
+      "abbr": "Axolotl",
+      "download": "https://github.com/Mystic-Stars/Axolotl/releases/download/v1.8.14/Axolotl.Launcher_1.8.14_x64-setup.exe",
+      "version": "1.8.14",
+      "github": "https://github.com/Mystic-Stars/Axolotl",
+      "url": "https://axlmc.org"
+    },
+    {
       "title": "我的世界启动器",
       "url": "https://mc.163.com",
       "download": "https://loadingbaycn.webapp.163.com/app/v1/download_client/windows/mkt-x19-official/url",
@@ -265,6 +273,14 @@
       "version": "2.1.0",
       "github": "https://github.com/corona-studio/projbobcat",
       "url": "https://corona.studio/launcherx"
+    },
+    {
+      "title": "Axolotl Launcher",
+      "abbr": "Axolotl",
+      "download": "https://github.com/Mystic-Stars/Axolotl/releases/download/v1.8.14/Axolotl.Launcher_1.8.14_universal.dmg",
+      "version": "1.8.14",
+      "github": "https://github.com/Mystic-Stars/Axolotl",
+      "url": "https://axlmc.org"
     }
   ],
   "LinuxLauncher": [
@@ -306,6 +322,14 @@
       "version": "2.1.0",
       "github": "https://github.com/corona-studio/projbobcat",
       "url": "https://corona.studio/launcherx"
+    },
+    {
+      "title": "Axolotl Launcher",
+      "abbr": "Axolotl",
+      "download": "https://github.com/Mystic-Stars/Axolotl/releases/download/v1.8.14/Axolotl.Launcher_1.8.14_amd64.AppImage",
+      "version": "1.8.14",
+      "github": "https://github.com/Mystic-Stars/Axolotl",
+      "url": "https://axlmc.org"
     },
     {
       "title": "Betacraft Launcher",
