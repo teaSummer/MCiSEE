@@ -513,6 +513,11 @@
         "desc": "可以预览盔甲锻造纹饰效果"
       },
       {
+        "name": "盔甲纹饰生成器",
+        "url": "https://armortrimgenerator.com/zh-cn/",
+        "desc": "在自己的皮肤上3D预览全部18种盔甲纹饰与10种纹饰材料\n可逐件搭配，支持导出图片和分享链接，免费免注册"
+      },
+      {
         "name": "多彩文字生成",
         "url": "https://colorize.fun/minecraft",
         "desc": "像素风格多彩文本生成器"
