@@ -645,6 +645,11 @@
         "name": "MCSift 下界传送门坐标计算器",
         "url": "https://mcsift.com/tools/portal-calculator/",
         "desc": "独立粉丝工具：按原版主世界与下界的 8:1 规则换算 X/Z 坐标；不读取存档，结果需在游戏内核对。"
+      },
+      {
+        "name": "AvaKraft 旗帜设计工具",
+        "url": "https://avakraft.com/",
+        "desc": "独立 Minecraft Java 版 1.21.11 旗帜设计工具：选择底色并叠加至多六层图案，查看材料清单和织布机步骤；免费、无需登录。"
       }
     ]
   },
