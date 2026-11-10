@@ -90,6 +90,7 @@
   {
     "category": "资源板块",
     "sites": [
+  
       {
         "name": "地球资源社区",
         "url": "https://www.planetminecraft.com"
@@ -322,6 +323,11 @@
   {
     "category": "工具箱",
     "sites": [
+        {
+      "name": "MCToolLab",
+      "url": "https://mctoollab.com/",
+      "desc": "免费的 Minecraft 在线工具箱，提供皮肤编辑、基岩版皮肤包制作、资源包处理、像素画生成与命令工具，浏览器本地处理文件，无需注册。"
+    },
       {
         "name": "NameMC",
         "url": "https://namemc.com",
