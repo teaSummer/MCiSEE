@@ -653,6 +653,11 @@
         "desc": "独立粉丝工具：按原版主世界与下界的 8:1 规则换算 X/Z 坐标；不读取存档，结果需在游戏内核对。"
       },
       {
+        "name": "Minecraft 附魔计算器",
+        "url": "https://enchantmentcalculator.online/",
+        "desc": "免费网页工具，无需登录。查询 Minecraft Java 版 26.3 的附魔台概率和完整附魔组合，或计算铁砧附魔顺序以节省经验等级。"
+      },
+      {
         "name": "AvaKraft 旗帜设计工具",
         "url": "https://avakraft.com/",
         "desc": "独立 Minecraft Java 版 1.21.11 旗帜设计工具：选择底色并叠加至多六层图案，查看材料清单和织布机步骤；免费、无需登录。"
