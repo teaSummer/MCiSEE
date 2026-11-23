@@ -9,8 +9,6 @@
 > 
 > 资源站是一种接力，下一代会比我们做的更好。我们希望Minecraft与资源共享精神永恒传承。
 
-本项目展示的网站内容均收集自互联网，不代表参与本项目的任何个人或组织的观点。
-
 欢迎各位对此项目做出贡献，另请参阅 [CONTRIBUTING.md](CONTRIBUTING.md) 文件。
 
 QQ交流群：[596520944](https://qm.qq.com/q/EBKhjsGRbM)
@@ -53,3 +51,6 @@ QQ交流群：[596520944](https://qm.qq.com/q/EBKhjsGRbM)
 开源协议：[GPL-3.0 license](LICENSE)
 
 知识共享协议：[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+本项目展示的网站内容均收集自互联网，不代表参与本项目的任何个人或组织的观点。
+
