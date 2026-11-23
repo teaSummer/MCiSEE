@@ -4,11 +4,10 @@
 
 ![](https://img.shields.io/badge/license-CC--BY--SA--4.0-green) ![](https://img.shields.io/github/stars/teaSummer/MCiSEE)
 
-**所见皆是*Minecraft*，让获取MC资源更加轻便！**
-
-**欢迎点击“Star”按钮来支持我们的编写。**
-
-**玩家们可以从这里挖掘Minecraft常用资源，例如软件等。这里也需要你们提供更多有趣的资源！**
+> [!NOTE]
+> 该项目目前处于放缓更新状态。
+> 
+> 资源站是一种接力，下一代会比我们做的更好。我们希望Minecraft与资源共享精神永恒传承。
 
 本项目展示的网站内容均收集自互联网，不代表参与本项目的任何个人或组织的观点。
 
