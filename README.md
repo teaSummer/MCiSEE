@@ -15,10 +15,6 @@ QQ交流群：[596520944](https://qm.qq.com/q/EBKhjsGRbM)
 
 喵呜，网站运营仍需经费，可以赏点钱吗？ [爱发电](https://afdian.com/a/MCiSEE)
 
-## API 文档
-
-请参阅 [API_DOCS.md](API_DOCS.md) 文件。
-
 ## 感谢
 
 诚心感谢所有贡献以及支持我们的个人/组织/项目等。
@@ -53,4 +49,3 @@ QQ交流群：[596520944](https://qm.qq.com/q/EBKhjsGRbM)
 知识共享协议：[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 本项目展示的网站内容均收集自互联网，不代表参与本项目的任何个人或组织的观点。
-
