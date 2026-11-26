@@ -179,6 +179,11 @@
                 "desc": "一个免费、自由的Minecraft皮肤站"
             },
             {
+                "name": "SpriteSkin 皮肤编辑器",
+                "url": "https://spriteskin.com/minecraft-skin-designer",
+                "desc": "在浏览器中绘制 64×64 皮肤，可预览并导出 PNG，无需登录"
+            },
+            {
                 "name": "MCSkins.top",
                 "url": "https://mcskins.top",
                 "desc": "简单的Minecraft皮肤站\n内含一些皮肤工具"
